@@ -1,0 +1,13 @@
+{
+  "lienDetails": [
+    {
+      "lienStartDate": "17-01-2025",
+      "lienAmt": "123",
+      "lienReasonCode": "999",
+      "lienReason": "OTHERS",
+      "lienRemarks": ""
+    }
+  ],
+  "successOrFailure": "S",
+  "errorMessage": null
+}

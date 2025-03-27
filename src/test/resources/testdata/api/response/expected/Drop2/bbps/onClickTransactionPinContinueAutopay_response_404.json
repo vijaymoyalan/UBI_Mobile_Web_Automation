@@ -1,0 +1,8 @@
+{
+    "timestamp": "2024-12-20T07:03:15.512+00:00",
+    "path": "/bbps-bff-mobile/api/v1/onClickTransactionPinContinueAutopay1",
+    "status": 404,
+    "error": "Not Found",
+    "message": null,
+    "requestId": "2d0f6655-3841"
+}

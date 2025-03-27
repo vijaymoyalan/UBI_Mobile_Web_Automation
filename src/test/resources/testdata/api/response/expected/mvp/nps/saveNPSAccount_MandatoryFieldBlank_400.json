@@ -1,0 +1,15 @@
+{
+   "errorId": "9ae03bf5-48cc-47c1-82b5-05fb1c436350",
+   "errorAt": "2025-01-28T12:31:21",
+   "errorLocation": "null",
+   "error": null,
+   "errors": [
+      {
+         "code": "NPS_RECORD_NOT_FOUND",
+         "message": "Record not found.",
+         "values": null,
+         "origmesg": null,
+         "errors": null
+      }
+   ]
+}

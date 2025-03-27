@@ -1,0 +1,16 @@
+{
+  "success": true,
+  "errorDetails": null,
+  "data": [
+    {
+      "walletNo": "R000110100121461",
+      "cardNo": "6522029815943464",
+      "accountStatus": "A",
+      "walletBalance": "214.31",
+      "closureFlag": "N",
+      "descriptionFlag": "This card is ncmc enabled.",
+      "lienAmount": "25.91",
+      "custName": "VENNAPU MERY"
+    }
+  ]
+}

@@ -1,0 +1,1004 @@
+{
+    "addressType": "communication",
+    "communicationAddress": {
+        "title": "MS",
+        "street": "",
+        "area": "HUZUR",
+        "city": "BHOPAL",
+        "state": "MADHYA PRADESH",
+        "pinCode": "462022"
+    },
+    "otherAddress": {
+        "title": "",
+        "pinCode": 0,
+        "city": "",
+        "state": "",
+        "addressLine1": "",
+        "addressLine2": ""
+    },
+    "businessName": "RUPALI PAL",
+    "businessPan": "APUPA0390L",
+    "businessAddress": {
+        "addrType": null,
+        "addrLine1": "78 PREM NAGAR BDA ROAD",
+        "addrLine2": "HUZUR",
+        "addrLine3": "",
+        "addrLine4": null,
+        "pinCode": null,
+        "cityName": "BHOPAL",
+        "stateName": "MADHYA PRADESH",
+        "countryCode": null
+    },
+    "businessEmail": "rupalipal71@gmail.com",
+    "gst": [],
+    "natureOfBusiness": "UNEMPLOYED",
+    "selectedData": null,
+    "expectedAnnualTurnOver": [
+        {
+            "code": "POS_AT001",
+            "value": "Less than ₹10L",
+            "displayOrder": 1.0
+        },
+        {
+            "code": "POS_AT002",
+            "value": "₹10L to ₹20L",
+            "displayOrder": 2.0
+        },
+        {
+            "code": "POS_AT003",
+            "value": "₹20L to ₹50L",
+            "displayOrder": 3.0
+        },
+        {
+            "code": "POS_AT004",
+            "value": "₹50L to ₹80L",
+            "displayOrder": 4.0
+        },
+        {
+            "code": "POS_AT005",
+            "value": "₹80L to ₹1.5Cr",
+            "displayOrder": 5.0
+        },
+        {
+            "code": "POS_AT006",
+            "value": "Above ₹1.5Cr",
+            "displayOrder": 6.0
+        }
+    ],
+    "expectedAnnualSalesViaCard": [
+        {
+            "code": "POS_AT001",
+            "value": "Less than ₹10L",
+            "displayOrder": 1.0
+        },
+        {
+            "code": "POS_AT002",
+            "value": "₹10L to ₹20L",
+            "displayOrder": 2.0
+        },
+        {
+            "code": "POS_AT003",
+            "value": "₹20L to ₹50L",
+            "displayOrder": 3.0
+        },
+        {
+            "code": "POS_AT004",
+            "value": "₹50L to ₹80L",
+            "displayOrder": 4.0
+        },
+        {
+            "code": "POS_AT005",
+            "value": "₹80L to ₹1.5Cr",
+            "displayOrder": 5.0
+        },
+        {
+            "code": "POS_AT006",
+            "value": "Above ₹1.5Cr",
+            "displayOrder": 6.0
+        }
+    ],
+    "refMasterNatureOfBusinessList": [
+        {
+            "code": "3412",
+            "value": "A1 RENT-A-CAR"
+        },
+        {
+            "code": "5699",
+            "value": "ACCESSORY AND APPAREL STORES - MISCELLANEOUS"
+        },
+        {
+            "code": "8931",
+            "value": "ACCOUNTING, AUDITING AND BOOKKEEPING SERVICES"
+        },
+        {
+            "code": "7311",
+            "value": "ADVERTISING SERVICES"
+        },
+        {
+            "code": "3364",
+            "value": "AGENCY RENT-A-CAR"
+        },
+        {
+            "code": "0763",
+            "value": "AGRICULTURAL COOPERATIVES"
+        },
+        {
+            "code": "7623",
+            "value": "AIR CONDITIONING AND REFRIGERATION REPAIR SHOPS"
+        },
+        {
+            "code": "4511",
+            "value": "AIRLINES, AIR CARRIERS"
+        },
+        {
+            "code": "5697",
+            "value": "ALTERATIONS, MENDING, SEAMSTRESSES, TAILORS"
+        },
+        {
+            "code": "7996",
+            "value": "AMUSEMENT PARKS, CARNIVALS, CIRCUS, FORTUNE TELLERS"
+        },
+        {
+            "code": "5932",
+            "value": "ANTIQUE SHOPS - SALES, REPAIRS, RESTORATION SERVICES"
+        },
+        {
+            "code": "7998",
+            "value": "AQUARIUMS, DOLPHINARIUMS, AND SEAQUARIUMS"
+        },
+        {
+            "code": "8911",
+            "value": "ARCHITECTURAL, ENGINEERING, AND SURVEYING SERVICES"
+        },
+        {
+            "code": "5971",
+            "value": "ART DEALERS AND GALLERIES"
+        },
+        {
+            "code": "5970",
+            "value": "ARTIST SUPPLY STORES, CRAFT SHOPS"
+        },
+        {
+            "code": "8641",
+            "value": "ASSOCIATIONS-CIVIC, SOCIAL, AND FRATERNAL"
+        },
+        {
+            "code": "6011",
+            "value": "AUTOMATED CASH DISBURSEMENTS - CUSTOMER FINANCIAL INSTITUTION"
+        },
+        {
+            "code": "8675",
+            "value": "AUTOMOBILE ASSOCIATIONS"
+        },
+        {
+            "code": "7512",
+            "value": "AUTOMOBILE RENTAL AGENCY - AUTO RENTALS & LEASING"
+        },
+        {
+            "code": "7531",
+            "value": "AUTOMOTIVE BODY REPAIR SHOPS"
+        },
+        {
+            "code": "7535",
+            "value": "AUTOMOTIVE PAINT SHOPS"
+        },
+        {
+            "code": "5533",
+            "value": "AUTOMOTIVE PARTS, ACCESSORIES STORES"
+        },
+        {
+            "code": "7538",
+            "value": "AUTOMOTIVE SERVICE SHOPS - NON-DEALER"
+        },
+        {
+            "code": "5532",
+            "value": "AUTOMOTIVE TIRE STORES"
+        },
+        {
+            "code": "5462",
+            "value": "BAKERIES"
+        },
+        {
+            "code": "7929",
+            "value": "BANDS, ORCHESTRAS, AND MISCELLANEOUS ENTERTAINERS"
+        },
+        {
+            "code": "7230",
+            "value": "BEAUTY AND BARBER SHOPS - SALONS"
+        },
+        {
+            "code": "5940",
+            "value": "BICYCLE SHOPS - SALES AND SERVICE"
+        },
+        {
+            "code": "5942",
+            "value": "BOOK STORES"
+        },
+        {
+            "code": "5192",
+            "value": "BOOKS, PERIODICALS AND NEWSPAPERS"
+        },
+        {
+            "code": "4784",
+            "value": "BRIDGE AND ROAD FEES, TOLLS"
+        },
+        {
+            "code": "4131",
+            "value": "BUS LINES"
+        },
+        {
+            "code": "7399",
+            "value": "BUSINESS SERVICES"
+        },
+        {
+            "code": "7278",
+            "value": "BUYING/SHOPPING CLUBS - SERVICES"
+        },
+        {
+            "code": "4899",
+            "value": "CABLE, SATELLITE AND OTHER PAY TELEVISION, RADIO, STREAMING SERVICES"
+        },
+        {
+            "code": "5946",
+            "value": "CAMERA AND PHOTOGRAPHIC SUPPLY STORES"
+        },
+        {
+            "code": "5441",
+            "value": "CANDY, NUT, CONFECTIONERY STORES"
+        },
+        {
+            "code": "5511",
+            "value": "CAR AND TRUCK DEALERS NEW AND USED SALES SERVICE REPAIRS PARTS AND LEASING"
+        },
+        {
+            "code": "5521",
+            "value": "CAR AND TRUCK DEALERS USED ONLY SALES SERVICE REPAIRS PARTS AND LEASING"
+        },
+        {
+            "code": "7542",
+            "value": "CAR WASHES"
+        },
+        {
+            "code": "1750",
+            "value": "CARPENTRY CONTRACTORS"
+        },
+        {
+            "code": "7217",
+            "value": "CARPET AND UPHOLSTERY CLEANING"
+        },
+        {
+            "code": "5811",
+            "value": "CATERERS"
+        },
+        {
+            "code": "8398",
+            "value": "CHARITABLE SOCIAL SERVICE ORGANIZATIONS"
+        },
+        {
+            "code": "5169",
+            "value": "CHEMICALS AND ALLIED PRODUCTS"
+        },
+        {
+            "code": "8351",
+            "value": "CHILD CARE SERVICES"
+        },
+        {
+            "code": "5641",
+            "value": "CHILDRENS AND INFANTS WEAR STORES"
+        },
+        {
+            "code": "5993",
+            "value": "CIGAR STORES AND STANDS"
+        },
+        {
+            "code": "7349",
+            "value": "CLEANING AND MAINTENANCE - JANITORIAL SERVICES"
+        },
+        {
+            "code": "7631",
+            "value": "CLOCK, JEWELRY, AND WATCH REPAIR SHOPS"
+        },
+        {
+            "code": "7296",
+            "value": "CLOTHING RENTAL - COSTUMES, UNIFORMS, FORMAL WEAR"
+        },
+        {
+            "code": "8220",
+            "value": "COLLEGES, UNIVERSITIES, PROFESSIONAL SCHOOLS, AND JUNIOR COLLEGES"
+        },
+        {
+            "code": "7333",
+            "value": "COMMERCIAL ART, GRAPHICS, PHOTOGRAPHY"
+        },
+        {
+            "code": "5046",
+            "value": "COMMERCIAL EQUIPMENT"
+        },
+        {
+            "code": "5139",
+            "value": "COMMERCIAL FOOTWEAR"
+        },
+        {
+            "code": "7941",
+            "value": "COMMERCIAL SPORTS - PROFESSIONAL SPORTS CLUBS, ATHLETIC FIELDS AND SPORTS PROMOTERS"
+        },
+        {
+            "code": "7379",
+            "value": "COMPUTER MAIN./REPAIR/SERVICES NOT ELSEWHERE CLASSIFIED"
+        },
+        {
+            "code": "4816",
+            "value": "COMPUTER NETWORK/INFORMATION SERVICES"
+        },
+        {
+            "code": "7372",
+            "value": "COMPUTER PROGRAMMING, DATA PROCESSING AND INTEGRATED SYSTEMS DESIGN SERVICES"
+        },
+        {
+            "code": "5734",
+            "value": "COMPUTER SOFTWARE STORES"
+        },
+        {
+            "code": "5045",
+            "value": "COMPUTERS AND COMPUTER PERIPHERAL EQUIPMENT AND SOFTWARE"
+        },
+        {
+            "code": "1771",
+            "value": "CONCRETE WORK CONTRACTORS"
+        },
+        {
+            "code": "5039",
+            "value": "CONSTRUCTION MATERIALS, BUILDING MATERIALS/BRICKS"
+        },
+        {
+            "code": "7392",
+            "value": "CONSULTING, MANAGEMENT, AND PUBLIC RELATIONS SVCS"
+        },
+        {
+            "code": "1799",
+            "value": "CONTRACTORS, SPECIAL TRADE-NOT ELSEWHERE CLASSIFIED"
+        },
+        {
+            "code": "5977",
+            "value": "COSMETIC STORES"
+        },
+        {
+            "code": "4215",
+            "value": "COURIER SERVICES - AIR AND GROUND, FREIGHT FORWARDER"
+        },
+        {
+            "code": "5950",
+            "value": "CRYSTAL AND GLASSWARE STORES"
+        },
+        {
+            "code": "5451",
+            "value": "DAIRY PRODUCTS STORES"
+        },
+        {
+            "code": "7911",
+            "value": "DANCE HALLS, SCHOOLS, AND STUDIOS - MUSIC/DANCE SCHOOL"
+        },
+        {
+            "code": "8021",
+            "value": "DENTISTS AND ORTHODONTISTS"
+        },
+        {
+            "code": "5311",
+            "value": "DEPARTMENT STORES"
+        },
+        {
+            "code": "5817",
+            "value": "DIGITAL GOODS – SOFTWARE APPLICATIONS (EXCLUDING GAMES)"
+        },
+        {
+            "code": "5960",
+            "value": "DIRECT MARKETING, INSURANCE SERVICES"
+        },
+        {
+            "code": "5310",
+            "value": "DISCOUNT STORES"
+        },
+        {
+            "code": "8011",
+            "value": "DOCTORS AND PHYSICIANS"
+        },
+        {
+            "code": "5963",
+            "value": "DOOR-TO-DOOR SALES"
+        },
+        {
+            "code": "5813",
+            "value": "DRINKING PLACES - ALCOHOLIC BEVERAGES, BARS, TAVERNS, NIGHTCLUBS, COCKTAIL LOUNGES AND DISCOTHEQUES"
+        },
+        {
+            "code": "5912",
+            "value": "DRUG STORES AND PHARMACIES"
+        },
+        {
+            "code": "5122",
+            "value": "DRUGS, DRUG PROPRIETARIES, AND DRUGGISTS SUPPLIES"
+        },
+        {
+            "code": "7216",
+            "value": "DRY CLEANERS"
+        },
+        {
+            "code": "5099",
+            "value": "DURABLE GOODS"
+        },
+        {
+            "code": "5309",
+            "value": "DUTY FREE STORES"
+        },
+        {
+            "code": "5812",
+            "value": "EATING PLACES, RESTAURANTS"
+        },
+        {
+            "code": "7629",
+            "value": "ELECTRICAL AND SMALL APPLIANCE REPAIR SHOPS"
+        },
+        {
+            "code": "1731",
+            "value": "ELECTRICAL CONTRACTORS"
+        },
+        {
+            "code": "5065",
+            "value": "ELECTRICAL PARTS AND EQUIPMENT"
+        },
+        {
+            "code": "7622",
+            "value": "ELECTRONIC REPAIR SHOPS"
+        },
+        {
+            "code": "5732",
+            "value": "ELECTRONICS STORES"
+        },
+        {
+            "code": "7361",
+            "value": "EMPLOYMENT AGENCIES AND TEMPORARY HELP SERVICES"
+        },
+        {
+            "code": "7394",
+            "value": "EQUIPMENT RENTAL & LEASING SVCS - FURNITURE/TOOL RENTAL"
+        },
+        {
+            "code": "7342",
+            "value": "EXTERMINATING AND DISINFECTING SERVICES"
+        },
+        {
+            "code": "5949",
+            "value": "FABRIC, NEEDLEWORK, PIECE GOODS, AND SEWING STORES"
+        },
+        {
+            "code": "5651",
+            "value": "FAMILY CLOTHING STORES"
+        },
+        {
+            "code": "0823",
+            "value": "FARM EQUIPMENT"
+        },
+        {
+            "code": "5814",
+            "value": "FAST FOOD RESTAURANTS"
+        },
+        {
+            "code": "6012",
+            "value": "FINANCIAL INSTITUTIONS - MERCHANDISE SERVICES AND DEBT REPAYMENT"
+        },
+        {
+            "code": "5718",
+            "value": "FIREPLACE, FIREPLACE SCREENS & ACCESSORIES STORES"
+        },
+        {
+            "code": "5713",
+            "value": "FLOOR COVERING STORES"
+        },
+        {
+            "code": "5193",
+            "value": "FLORIST SUPPLIES, NURSERY STOCK & FLOWERS"
+        },
+        {
+            "code": "5992",
+            "value": "FLORISTS"
+        },
+        {
+            "code": "5422",
+            "value": "FREEZER, LOCKER MEAT PROVISIONERS, FISH/MEAT/CHICKEN FEED"
+        },
+        {
+            "code": "4214",
+            "value": "FREIGHT CARRIER, TRUCKING - LCL/LNG DIST, MOVING/STORAGE"
+        },
+        {
+            "code": "5983",
+            "value": "FUEL DEALERS - FUEL OIL, WOOD, COAL, AND LIQUEFIED PETROLEUM"
+        },
+        {
+            "code": "7641",
+            "value": "FURNITURE - REUPHOLSTERY AND REPAIR, REFINISHING"
+        },
+        {
+            "code": "5712",
+            "value": "FURNITURE, HOME FURNISHINGS AND EQUIPMENT STORES EXCEPT APPLIANCES"
+        },
+        {
+            "code": "5681",
+            "value": "FURRIERS AND FUR SHOPS"
+        },
+        {
+            "code": "5945",
+            "value": "GAME, TOY, AND HOBBY SHOPS"
+        },
+        {
+            "code": "1520",
+            "value": "GENERAL CONTRACTORS/RESIDENTIAL AND COMMERCIAL BUILDINGS"
+        },
+        {
+            "code": "5947",
+            "value": "GIFT, CARD, NOVELTY AND SOUVENIR SHOPS - HANDICRAFTS/HANDLOOM PRODUCTS"
+        },
+        {
+            "code": "5231",
+            "value": "GLASS, PAINT, WALLPAPER STORES"
+        },
+        {
+            "code": "9399",
+            "value": "GOVERNMENT SERVICES"
+        },
+        {
+            "code": "5411",
+            "value": "GROCERY STORES AND SUPERMARKETS"
+        },
+        {
+            "code": "5072",
+            "value": "HARDWARE EQUIPMENT AND SUPPLIES"
+        },
+        {
+            "code": "5251",
+            "value": "HARDWARE STORES"
+        },
+        {
+            "code": "7251",
+            "value": "HAT CLEANING SHOPS, SHOE REPAIR SHOPS, SHOE SHINE"
+        },
+        {
+            "code": "7298",
+            "value": "HEALTH AND BEAUTY SPAS"
+        },
+        {
+            "code": "5975",
+            "value": "HEARING AIDS - SALES, SERVICE, SUPPLY STORES"
+        },
+        {
+            "code": "1711",
+            "value": "HEATING, PLUMBING, AIR CONDITIONING CONTRACTORS"
+        },
+        {
+            "code": "5200",
+            "value": "HOME SUPPLY WAREHOUSE STORES, SUPPLY OF LIGHTING, FURNITURE, ETC."
+        },
+        {
+            "code": "8062",
+            "value": "HOSPITALS"
+        },
+        {
+            "code": "5722",
+            "value": "HOUSEHOLD APPLIANCE STORES"
+        },
+        {
+            "code": "5085",
+            "value": "INDUSTRIAL SUPPLIES"
+        },
+        {
+            "code": "7375",
+            "value": "INFORMATION RETRIEVAL SERVICES"
+        },
+        {
+            "code": "1740",
+            "value": "INSULATION, MASONRY, PLASTER, STONEWORK, TILESET CONTRACTORS"
+        },
+        {
+            "code": "6300",
+            "value": "INSURANCE SALES, UNDERWRITING, AND PREMIUMS"
+        },
+        {
+            "code": "5944",
+            "value": "JEWELRY STORES - WATCHES, CLOCKS, AND SILVERWARE STORES"
+        },
+        {
+            "code": "3055",
+            "value": "LAB (BOLIVIA)"
+        },
+        {
+            "code": "7210",
+            "value": "LAUNDRY CLEANING AND GARMENT SERVICES - DRY CLEANERS"
+        },
+        {
+            "code": "7211",
+            "value": "LAUNDRY SERVICES - FAMILY AND COMMERCIAL"
+        },
+        {
+            "code": "5948",
+            "value": "LEATHER GOODS AND LUGGAGE STORES"
+        },
+        {
+            "code": "4121",
+            "value": "LIMOUSINES AND TAXICABS"
+        },
+        {
+            "code": "4111",
+            "value": "LOCAL AND SUBURBAN COMMUTER PASSENGER TRANSPORTATION INCLUDING FERRIES"
+        },
+        {
+            "code": "7011",
+            "value": "LODGING - HOTELS, MOTELS, RESORTS, CENTRAL RESERVATION SERVICES, HOTELS/ASHRAMS/INNS"
+        },
+        {
+            "code": "5211",
+            "value": "LUMBER AND BUILDING MATERIALS STORES"
+        },
+        {
+            "code": "6010",
+            "value": "MANUAL CASH DISBURSEMENTS - CUSTOMER FINANCIAL INSTITUTION"
+        },
+        {
+            "code": "8071",
+            "value": "MEDICAL AND DENTAL LABORATORIES"
+        },
+        {
+            "code": "8099",
+            "value": "MEDICAL SERVICES AND HEALTH PRACTITIONERS"
+        },
+        {
+            "code": "5047",
+            "value": "MEDICAL, DENTAL, OPHTHALMIC AND HOSPITAL EQUIPMENT AND SUPPLIES"
+        },
+        {
+            "code": "7997",
+            "value": "MEMBERSHIP CLUBS, SPORTS, RECREATION, ATHLETIC COUNTRY CLUBS, PRIVATE GOLF COURSES, GYM, PHYSICAL FITNESS"
+        },
+        {
+            "code": "5611",
+            "value": "MENS AND BOYS CLOTHING AND ACCESSORIES STORES"
+        },
+        {
+            "code": "5691",
+            "value": "MENS AND WOMENS CLOTHING STORES"
+        },
+        {
+            "code": "5137",
+            "value": "MENS/WOMENS/CHILDRENS UNIFORMS/COMMERCIAL CLOTHING"
+        },
+        {
+            "code": "5051",
+            "value": "METAL SERVICE CENTERS AND OFFICES"
+        },
+        {
+            "code": "5499",
+            "value": "MISC FOOD STORE-CONVENIENCE, MARKET, SPECIALTY, VENDING MACHINES, PICKLES"
+        },
+        {
+            "code": "5599",
+            "value": "MISC/AUTO/AIRCRAFT/FARM EQUIP NOT ELSEWHERE CLASSIFIED"
+        },
+        {
+            "code": "5999",
+            "value": "MISCELLANEOUS AND SPECIALTY RETAIL STORES"
+        },
+        {
+            "code": "5399",
+            "value": "MISCELLANEOUS GENERAL MERCHANDISE AND STEEL"
+        },
+        {
+            "code": "5719",
+            "value": "MISCELLANEOUS HOUSE FURNISHING SPECIALTY SHOPS"
+        },
+        {
+            "code": "2741",
+            "value": "MISCELLANEOUS PUBLISHING AND PRINTING"
+        },
+        {
+            "code": "7699",
+            "value": "MISCELLANEOUS REPAIR SHOPS AND RELATED SERVICES"
+        },
+        {
+            "code": "5271",
+            "value": "MOBILE HOME DEALERS"
+        },
+        {
+            "code": "4829",
+            "value": "MONEY TRANSFER MERCHANT"
+        },
+        {
+            "code": "7832",
+            "value": "MOTION PICTURE THEATERS"
+        },
+        {
+            "code": "5592",
+            "value": "MOTOR HOME DEALERS"
+        },
+        {
+            "code": "5013",
+            "value": "MOTOR VEHICLE SUPPLIES AND NEW PARTS"
+        },
+        {
+            "code": "0557",
+            "value": "MOTORCYCLE SHOPS AND DEALERS"
+        },
+        {
+            "code": "5571",
+            "value": "MOTORCYCLE SHOPS AND DEALERS"
+        },
+        {
+            "code": "5733",
+            "value": "MUSIC STORES - INSTRUMENTS, PIANOS, SHEET MUSIC"
+        },
+        {
+            "code": "5994",
+            "value": "NEWS DEALERS AND NEWSSTANDS"
+        },
+        {
+            "code": "5199",
+            "value": "NONDURABLE GOODS (NOT ELSEWHERE CLASSIFIED)"
+        },
+        {
+            "code": "5261",
+            "value": "NURSERIES AND LAWN AND GARDEN SUPPLY STORES, FERTILIZERS, PESTICIDES"
+        },
+        {
+            "code": "8050",
+            "value": "NURSING AND PERSONAL CARE FACILITIES"
+        },
+        {
+            "code": "5021",
+            "value": "OFFICE AND COMMERCIAL FURNITURE"
+        },
+        {
+            "code": "5044",
+            "value": "OFFICE PHOTOGRAPHIC, PHOTOCOPY & MICROFILM EQUIPMENT"
+        },
+        {
+            "code": "5943",
+            "value": "OFFICE, SCHOOL SUPPLY, AND STATIONERY STORES"
+        },
+        {
+            "code": "8043",
+            "value": "OPTICIANS, OPTICAL GOODS AND EYEGLASSES"
+        },
+        {
+            "code": "8042",
+            "value": "OPTOMETRISTS AND OPHTHALMOLOGISTS"
+        },
+        {
+            "code": "8699",
+            "value": "ORGANIZATIONS, MEMBERSHIP-NOT ELSEWHERE CLASSIFIED"
+        },
+        {
+            "code": "8661",
+            "value": "ORGANIZATIONS, RELIGIOUS, TEMPLES"
+        },
+        {
+            "code": "5976",
+            "value": "ORTHOPEDIC GOODS - ARTIFICIAL LIMB STORES, PROSTHETIC DEVICES"
+        },
+        {
+            "code": "7299",
+            "value": "OTHER SERVICES (NOT ELSEWHERE CLASSIFIED)"
+        },
+        {
+            "code": "5921",
+            "value": "PACKAGE STORES - BEER, WINE, LIQUOR"
+        },
+        {
+            "code": "5198",
+            "value": "PAINTS, VARNISHES AND SUPPLIES"
+        },
+        {
+            "code": "7523",
+            "value": "PARKING LOTS, PARKING METERS, AND GARAGES"
+        },
+        {
+            "code": "4112",
+            "value": "PASSENGER/RAILWAYS"
+        },
+        {
+            "code": "5933",
+            "value": "PAWN SHOPS"
+        },
+        {
+            "code": "5995",
+            "value": "PET SHOPS - PET FOODS AND SUPPLIES"
+        },
+        {
+            "code": "5541",
+            "value": "PETROL BUNKS, SERVICE STATIONS WITH OR WITHOUT ANCILLARY SERVICE"
+        },
+        {
+            "code": "5172",
+            "value": "PETROLEUM AND PETROLEUM PRODUCTS"
+        },
+        {
+            "code": "7395",
+            "value": "PHOTO DEVELOPING - PHOTOFINISHING LABORATORIES"
+        },
+        {
+            "code": "7221",
+            "value": "PHOTOGRAPHIC STUDIOS"
+        },
+        {
+            "code": "3554",
+            "value": "PINEHURST RESORT"
+        },
+        {
+            "code": "5074",
+            "value": "PLUMBING AND HEATING EQUIPMENT AND SUPPLIES"
+        },
+        {
+            "code": "5094",
+            "value": "PRECIOUS STONES AND METALS, WATCHES AND JEWELRY"
+        },
+        {
+            "code": "8999",
+            "value": "PROFESSIONAL SERVICES-NOT ELSEWHERE CLASSIFIED"
+        },
+        {
+            "code": "4225",
+            "value": "PUBLIC WAREHOUSING - FARM, REFRIGERATED GOODS, HHG STORAGE"
+        },
+        {
+            "code": "7338",
+            "value": "QUICK COPY, REPRODUCTION AND BLUEPRINTING SERVICES - PHOTOCOPYING SERVICES"
+        },
+        {
+            "code": "6513",
+            "value": "REAL ESTATE AGENTS AND MANAGERS - RENTALS"
+        },
+        {
+            "code": "7999",
+            "value": "RECREATION SERVICES"
+        },
+        {
+            "code": "7032",
+            "value": "RECREATIONAL AND SPORTING CAMPS"
+        },
+        {
+            "code": "5973",
+            "value": "RELIGIOUS GOODS STORES"
+        },
+        {
+            "code": "1761",
+            "value": "ROOFING AND SIDING, SHEET METAL WORK CONTRACTORS"
+        },
+        {
+            "code": "2842",
+            "value": "SANITATION, POLISHING & SPECIALTY CLEANING PREP"
+        },
+        {
+            "code": "8299",
+            "value": "SCHOOLS AND EDUCATIONAL SERVICES"
+        },
+        {
+            "code": "8244",
+            "value": "SCHOOLS, BUSINESS AND SECRETARIAL"
+        },
+        {
+            "code": "8241",
+            "value": "SCHOOLS, CORRESPONDENCE"
+        },
+        {
+            "code": "8211",
+            "value": "SCHOOLS, ELEMENTARY AND SECONDARY"
+        },
+        {
+            "code": "8249",
+            "value": "SCHOOLS, TRADE AND VOCATIONAL"
+        },
+        {
+            "code": "5931",
+            "value": "SECOND HAND STORES - USED MERCHANDISE STORES"
+        },
+        {
+            "code": "6211",
+            "value": "SECURITIES - BROKERS/DEALERS"
+        },
+        {
+            "code": "7393",
+            "value": "SECURITY SERVICES/DETECTIVE AGENCIES"
+        },
+        {
+            "code": "5661",
+            "value": "SHOE STORES"
+        },
+        {
+            "code": "5941",
+            "value": "SPORTING GOODS STORES"
+        },
+        {
+            "code": "5655",
+            "value": "SPORTS APPAREL, RIDING APPAREL STORES"
+        },
+        {
+            "code": "5111",
+            "value": "STATIONERY/OFFICE SUPPLIES/PRINTING & WRITING PAPER"
+        },
+        {
+            "code": "9311",
+            "value": "TAX PAYMENTS"
+        },
+        {
+            "code": "7276",
+            "value": "TAX PREPARATION SERVICE"
+        },
+        {
+            "code": "4812",
+            "value": "TELECOMMUNICATION EQUIPMENT INCLUDING TELEPHONE SALES"
+        },
+        {
+            "code": "4814",
+            "value": "TELECOMMUNICATION SERVICES INCLUDING PREPAID/RECURRING PHONE SERVICES LOCAL AND LONG DISTANCE CALLS CREDIT CARD CALLS"
+        },
+        {
+            "code": "5998",
+            "value": "TENT AND AWNING SHOPS"
+        },
+        {
+            "code": "8734",
+            "value": "TESTING LABORATORIES (NON-MEDICAL)"
+        },
+        {
+            "code": "7534",
+            "value": "TIRE RETREADING AND REPAIR SHOPS"
+        },
+        {
+            "code": "7991",
+            "value": "TOURIST ATTRACTIONS AND EXHIBITS"
+        },
+        {
+            "code": "4789",
+            "value": "TRANSPORTATION SERVICES"
+        },
+        {
+            "code": "4722",
+            "value": "TRAVEL AGENCIES AND TOUR OPERATORS"
+        },
+        {
+            "code": "4900",
+            "value": "UTILITIES - ELECTRICITY, GAS, HEATING OIL, SANITARY, WATER, COOKING GAS"
+        },
+        {
+            "code": "5331",
+            "value": "VARIETY STORES, KIRANA STORES"
+        },
+        {
+            "code": "0742",
+            "value": "VETERINARY SERVICES"
+        },
+        {
+            "code": "7994",
+            "value": "VIDEO GAME ARCADES/ESTABLISHMENTS"
+        },
+        {
+            "code": "7692",
+            "value": "WELDING REPAIR"
+        },
+        {
+            "code": "5698",
+            "value": "WIG AND TOUPEE SHOPS"
+        },
+        {
+            "code": "5631",
+            "value": "WOMENS ACCESSORY AND SPECIALTY STORES, NOVELTIES / IMITATION JEWELLERY"
+        },
+        {
+            "code": "5621",
+            "value": "WOMENS READY TO WEAR STORES, READYMADE GARMENTS"
+        }
+    ],
+    "emailMobDetails": {
+        "registerMobileNumber": "9920594215",
+        "alternateMobileNumber": "",
+        "emailAddress": "rupalipal71@gmail.com"
+    },
+    "gstFetchedFromCBS": false
+}

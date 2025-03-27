@@ -1,0 +1,15 @@
+{
+    "errorId": "202e2cce-fefb-4420-8ae6-a438972b4f0a",
+    "errorAt": "2025-02-04T12:07:30.669664683",
+    "errorLocation": null,
+    "error": null,
+    "errors": [
+        {
+            "code": "BAD_REQUEST",
+            "message": "Something went wrong. Please try again later.",
+            "values": null,
+            "origmesg": null,
+            "errors": null
+        }
+    ]
+}

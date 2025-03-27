@@ -1,0 +1,1 @@
+{"errorId":"152b0e0e-839c-46b9-af4f-ffcec6c77933","errorAt":"2024-12-20T13:37:52.715740578","errorLocation":null,"error":null,"errors":[{"code":"400","message":"500 Internal Server Error from POST http://bbps-complaint-service.biz-bbps-sit.svc.cluster.local:8080/registerComplaint","values":null,"origmesg":null,"errors":null}]}

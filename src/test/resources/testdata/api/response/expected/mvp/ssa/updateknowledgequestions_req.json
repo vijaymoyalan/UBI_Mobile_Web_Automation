@@ -1,0 +1,22 @@
+{
+    "deviceid": "84183225a98f55c6",
+    "simdata": "84183225a98f55c601|0|1",
+    "cif": "634743268",
+    "questions": [
+        {
+            "id": "0",
+            "answer": "simba",
+            "question": "What is the name of your first pet?"
+        },
+        {
+            "id": "1",
+            "answer": "rajkot",
+   	         "question": "In what city were you married?"
+        },
+        {
+            "id": "2",
+            "answer": "simba",
+            "question": "What was the name of your first pet?"
+        }
+    ]
+}

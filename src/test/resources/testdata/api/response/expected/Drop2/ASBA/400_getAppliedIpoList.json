@@ -1,0 +1,9 @@
+{
+  "errorId": "25d32299-fe5d-4584-9f90-a7f50fcacac8",
+  "errorAt": "2025-02-12T11:41:29.11380557",
+  "error": {
+    "code": "BAD_REQUEST",
+    "title": "pan: string [qwert] does not match pattern ^[A-Z]{5}[0-9]{4}[A-Z]$",
+    "description": null
+  }
+}

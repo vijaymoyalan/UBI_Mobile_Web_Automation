@@ -1,0 +1,9 @@
+{
+  "errorId": "f65d61b9-3d65-4898-9004-1bc107a2166d",
+  "errorAt": "2025-02-12T14:01:11.862548098",
+  "error": {
+    "code": "BAD_REQUEST",
+    "title": "pan: string [23456] does not match pattern ^[A-Z]{5}[0-9]{4}[A-Z]$",
+    "description": null
+  }
+}

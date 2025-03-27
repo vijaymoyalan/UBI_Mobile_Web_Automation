@@ -1,0 +1,1 @@
+{"errorId":"a651cc82-b8bd-4d9e-984d-a31a5c171b74","errorAt":"2024-12-27T14:26:39.577962296","errorLocation":null,"error":null,"errors":[{"code":"BAD_REQUEST","message":"channelId: string [M11B] does not match pattern ^(MB)$","values":null,"origmesg":null,"errors":null}]}

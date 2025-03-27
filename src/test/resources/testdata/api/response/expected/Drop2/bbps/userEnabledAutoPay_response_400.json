@@ -1,0 +1,15 @@
+{
+    "errorId": "b9909ee3-3633-4688-87f1-26534debace4",
+    "errorAt": "2024-12-19T16:18:49.326768153",
+    "errorLocation": null,
+    "error": null,
+    "errors": [
+        {
+            "code": "400",
+            "message": "404 Not Found from POST http://bbps-biller-management-service.biz-bbps-sit.svc.cluster.local:8080/bbps/updateLinkedBillerDetail/HGA2A4142AAAAAAAHMQ3",
+            "values": null,
+            "origmesg": null,
+            "errors": null
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+  "errorId": "2bf924ff-0f87-496a-927f-20c0a28e0eb9",
+  "errorAt": "2025-01-25T16:15:45.294730203",
+  "error": {
+    "code": "NOT_FOUND",
+    "title": "404 NOT_FOUND \"No static resource asbaservice/fetchDematList123455.\"",
+    "description": null
+  }
+}

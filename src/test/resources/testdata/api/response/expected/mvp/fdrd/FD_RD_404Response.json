@@ -1,0 +1,8 @@
+{
+    "timestamp": "2024-12-06T11:46:47.446+00:00",
+    "path": "/app/customer/api/v1/getCustomerByCIF1",
+    "status": 404,
+    "error": "Not Found",
+    "message": null,
+    "requestId": "eb5127cf-6161"
+}

@@ -1,0 +1,17 @@
+{
+    "errorId": "387fe10e-a400-4931-a51b-ca7a52c183a3",
+    "errorAt": "2024-12-13T12:50:26.872327926",
+    "errorLocation": null,
+    "error": null,
+    "errors": [
+        {
+            "code": "400",
+            "message": "400 Bad Request from POST http://gs-business-query-service.biz-gov-schemes-sit.svc.cluster.local:8080/govt-schemes/retrieveEnrollmentDetails",
+            "values": null,
+            "origmesg": null,
+            "errors": null
+        
+}
+    
+]
+}

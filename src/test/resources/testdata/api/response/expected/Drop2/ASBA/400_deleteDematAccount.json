@@ -1,0 +1,9 @@
+{
+  "errorId": "a8ae6cd9-09e1-475e-aa01-1059768a7266",
+  "errorAt": "2025-02-13T06:38:04.33543072",
+  "error": {
+    "code": "400 BAD_REQUEST",
+    "title": "DEMAT_ACCOUNT_NOT_FOUND",
+    "description": "Demat Account Not Found"
+  }
+}

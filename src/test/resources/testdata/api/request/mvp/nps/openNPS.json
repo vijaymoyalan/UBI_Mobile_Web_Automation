@@ -1,0 +1,17 @@
+{
+    "cif": "634761880",
+    "applNum": "929762160547",
+    "source": {
+        "acctNum": "635302010013125"
+    },
+    "tier1contribution": {
+        "amount": 500.00,
+        "remarks": "",
+        "prans":""
+    },
+    "tier2contribution": {
+        "amount": 2000.00,
+        "remarks": "",
+        "prans":""
+    }
+}

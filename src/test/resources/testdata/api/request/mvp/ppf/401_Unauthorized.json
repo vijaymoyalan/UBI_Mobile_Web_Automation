@@ -1,0 +1,11 @@
+{
+    "httpCode": "401",
+    "httpMessage": "Unauthorized",
+    "errorLocation": "gateway",
+    "errors": [
+        {
+            "code": "ERR_GW_00001",
+            "message": "Error validating access token: Session has expired"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "billerid": "RELI00000MUM03",
+    "short_name": "ElectricityProvider1",
+    "authenticators": [
+        {
+            "parameter_name": "Consumer Number",
+            "value": "212345678"
+        }
+    ],
+    "customer": {
+        "mobile": "9800000000",
+        "email": "mayan.trivedi@billdesk.com"
+    },
+    "metadata": {
+        "agent": {
+            "agentid": "UN01UN02INB000000001"
+        },
+        "device": {
+            "init_channel": "InternetBanking",
+            "ip": "124.124.1.1",
+            "mac": "11-AC-58-21-1B-AA"
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+  "data": {
+    "cif": "254061641",
+    "channel": "MOB",
+    "customerConsumptionStatuses": [
+      {
+        "mode": "NEFT",
+        "balanceDailyTrnLimit": 1000000,
+        "consumedDailyTrnLimit": 0
+      },
+      {
+        "mode": "OVERALL",
+        "balanceDailyTrnLimit": 999768,
+        "consumedDailyTrnLimit": 232
+      },
+      {
+        "mode": "IMPS",
+        "balanceDailyTrnLimit": 500000,
+        "consumedDailyTrnLimit": 0
+      },
+      {
+        "mode": "RTGS",
+        "balanceDailyTrnLimit": 1000000,
+        "consumedDailyTrnLimit": 0
+      },
+      {
+        "mode": "WITHINBANK",
+        "balanceDailyTrnLimit": 999899,
+        "consumedDailyTrnLimit": 101
+      }
+    ],
+    "date": "2024-11-28T12:17:34.232+00:00"
+  },
+  "errorMessage": null,
+  "success": true
+}

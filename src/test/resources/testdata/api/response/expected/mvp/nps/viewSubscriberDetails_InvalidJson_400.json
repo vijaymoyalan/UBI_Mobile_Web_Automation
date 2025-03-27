@@ -1,0 +1,15 @@
+{
+   "errorId": "ece7d809-bc0b-4596-813c-8745c95df833",
+   "errorAt": "2025-01-30T18:11:33",
+   "errorLocation": "null",
+   "error": null,
+   "errors": [
+      {
+         "code": "ERR_NS_00152",
+         "message": "PRAN not found.",
+         "values": null,
+         "origmesg": null,
+         "errors": null
+      }
+   ]
+}

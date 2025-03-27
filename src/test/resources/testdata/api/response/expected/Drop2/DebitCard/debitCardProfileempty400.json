@@ -1,0 +1,9 @@
+{
+  "errorId": "eb66c8b2-37a5-4166-ab5e-4a55a07eb9fc",
+  "errorAt": "2024-11-28T13:29:46.765631235",
+  "error": {
+    "code": "BAD_REQUEST",
+    "result": "400 BAD_REQUEST \"No request body\"",
+    "data": null
+  }
+}

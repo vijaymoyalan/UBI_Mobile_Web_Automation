@@ -1,0 +1,1 @@
+{"errorId":"06682e96-5553-47a4-9bc5-455e0d6d035d","errorAt":"2025-02-12T10:40:34.706381915","error":{"code":"ERR_INTERNAL_SERVER","result":"An unexpected error occurred: 500 Internal Server Error from GET http://cust-acct-qry-svc.biz-customer-uat.svc.cluster.local:8080/customer/api/v1/getCustomerByCIF/0","data":null}}

@@ -1,0 +1,15 @@
+{
+    "correlationId": "a858aa78-4bde-46bb-a3f1-9159463cf41f_243356508",
+    "code": "00",
+    "result": "SUCCESS",
+    "data": null,
+    "errorMessage": null,
+    "checksum": null,
+    "errorDesc": null,
+    "upiLimit": "100000",
+    "upiCode": null,
+    "upiResult": null,
+    "acctType": "SAVINGS",
+    "txnId": null,
+    "createdDateTime": "2025-01-13T14:57:55.887583635"
+}

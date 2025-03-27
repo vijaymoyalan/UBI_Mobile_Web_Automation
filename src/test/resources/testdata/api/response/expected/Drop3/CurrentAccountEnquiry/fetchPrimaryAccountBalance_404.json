@@ -1,0 +1,8 @@
+{
+    "timestamp": "2025-02-05T06:50:31.208+00:00",
+    "path": "/msme/v1/businessServices/fetchPrimaryAccountBalancesdsd",
+    "status": 404,
+    "error": "Not Found",
+    "message": null,
+    "requestId": "3e06d399-1026"
+}

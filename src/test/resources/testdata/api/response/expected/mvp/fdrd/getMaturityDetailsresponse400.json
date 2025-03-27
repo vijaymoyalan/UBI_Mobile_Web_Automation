@@ -1,0 +1,15 @@
+{
+    "errorId": "0676ce47-6a32-45f3-be5b-cb0d41b13b07",
+    "errorAt": "2024-12-26T11:47:00.571499327",
+    "errorLocation": null,
+    "error": null,
+    "errors": [
+        {
+            "code": "ERR_GE_1999",
+            "message": "source/cif: expected minLength: 1, actual: 0, source/acctNum: expected minLength: 1, actual: 0",
+            "values": null,
+            "origmesg": null,
+            "errors": null
+        }
+    ]
+}

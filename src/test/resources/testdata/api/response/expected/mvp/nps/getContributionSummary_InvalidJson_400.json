@@ -1,0 +1,15 @@
+{
+   "errorId": "46beefbb-4a68-475e-82a7-795d20c26f29",
+   "errorAt": "2025-01-30T17:38:36",
+   "errorLocation": "null",
+   "error": null,
+   "errors": [
+      {
+         "code": "ERR_NS_00131",
+         "message": "Please provide valid input to open the NPS account",
+         "values": null,
+         "origmesg": null,
+         "errors": null
+      }
+   ]
+}

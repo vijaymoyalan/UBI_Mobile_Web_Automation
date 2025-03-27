@@ -1,0 +1,2989 @@
+{
+	"MFAPage": [
+		{
+			"name": "SelectEnglish",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"English\"]"
+		},
+		{
+			"name": "ContinueButton",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "Symbol",
+			"locator": "xpath",
+			"value": "(//android.widget.TextView[@text=\"󰄱\"])[1]"
+		},
+		{
+			"name": "AllowPermission",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@resource-id=\"com.android.permissioncontroller:id/permission_allow_foreground_only_button\"]"
+
+		},
+		{
+			"name": "AllowPermissionAgain",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@resource-id=\"com.android.permissioncontroller:id/permission_allow_button\"]"
+		},
+		{
+			"name": "Symbol2",
+			"locator": "xpath",
+			"value": "//android.widget.CheckBox[contains(@content-desc,\"select checkbox\")]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.widget.Button/android.widget.TextView"
+		},
+		{
+			"name": "DownloadTC",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"button-text\"]"
+		},
+		{
+			"name": "PermissionAllowDTC",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@resource-id=\"com.android.permissioncontroller:id/permission_allow_button\"]"
+		},
+		{
+			"name": "LetsGetStarted",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"onStartPress-text\"]"
+		},
+		{
+			"name": "AllowDTC",
+			"locator": "xpath",
+			"value": "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup[2]"
+		},
+		{
+			"name": "ChooseSim1",
+			"locator": "xpath",
+			"value": "(//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]//descendant::android.view.ViewGroup)[1]"
+		},
+		{
+			"name": "ContinueSim2",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "ContinueSimButton",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "Icon",
+			"locator": "xpath",
+			"value": ""
+		},
+		{
+			"name": "EnterLoginPin1",
+			"locator": "xpath",
+			"value": "//android.widget.EditText[@content-desc=\"Enter digit 1\"]"			  
+		},
+		{
+			"name": "EnterLoginPin2",
+			"locator": "xpath",
+			"value": "//android.widget.EditText[@content-desc=\"Enter digit 2\"]"
+		},
+		{
+			"name": "EnterLoginPin3",
+			"locator": "xpath",
+			"value": "//android.widget.EditText[@content-desc=\"Enter digit 3\"]"
+		},
+		{
+			"name": "EnterLoginPin4",
+			"locator": "xpath",
+			"value": "//android.widget.EditText[@content-desc=\"Enter digit 4\"]"
+		},
+		{
+			"name": "AllowPermissionBefore",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@resource-id=\"com.android.permissioncontroller:id/permission_allow_button\"]"
+
+		}
+	],
+	
+
+	"DashboardPage": [
+		{
+			"name": "Accounts",
+			"locator": "xpath",
+			"value": "//android.view.View[@content-desc=\"Accounts tab 2 of 5\"]"
+		},
+		{
+			"name": "Lifestyle",
+			"locator": "xpath",
+			"value": "//android.view.View[@content-desc=\"Lifestyle tab 5 of 5\"]"
+		},
+		{
+			"name": "Payments",
+			"locator": "xpath",
+			"value": "//android.view.View[@content-desc=\"Payments\"]/com.horcrux.svg.SvgView/com.horcrux.svg.l/com.horcrux.svg.l"
+		},
+		{
+			"name": "DepositsTab",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Deposits\"]"
+		},
+		{
+			"name": "InvestandInsureTab",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Invest and Insure\"]"
+		},
+		{
+			"name": "InvestandInsureViewAll",
+			"locator": "xpath",
+			"value": "(//android.view.ViewGroup[@content-desc=\"View All\"])[2]/android.widget.TextView"
+		},
+		
+		{
+			"name": "Home",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@text=\"Home\"]"
+		},
+		{
+			"name": "DepositTabFirstBox",
+			"locator": "xpath",
+			"value": "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.widget.HorizontalScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup"
+		},
+		{
+			"name": "ViewMoreText",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"View More\"]"
+		},
+		{
+			"name": "AccountServices",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Account Services\"]"
+		},
+		
+		{
+			"name": "UBIIconFirstBox",
+			"locator": "xpath",
+			"value": "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.widget.HorizontalScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/com.horcrux.svg.SvgView[1]/com.horcrux.svg.l/com.horcrux.svg.u"
+		},
+		{
+			"name": "Recharge&BillPay",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Recharge & Bill Pay\"]"
+		},
+		{
+			"name": "FingerPrint",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Skip\"]"
+		},
+		{
+			"name": "AddNew",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"+ Add New\"]"
+		}
+	],
+
+	"DepositPage": [
+		{
+			"name": "AddAccount",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@content-desc=\"Add account\"]"
+		},
+		{
+			"name": "FixedDeposit",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[@content-desc=\"Fixed Deposit\"]"
+		},
+	
+		{
+			"name": "AccountsAfterLogin",
+			"locator": "xpath",
+			"value": "//android.view.View[@content-desc=\"Accounts\"]"
+		}
+	],
+	"AddNewAccountPage": [
+			{
+				"name": "Fixed Deposit",
+				"locator": "xpath",
+				"value": "//android.view.ViewGroup[@content-desc=\"Fixed Deposit\"]"
+			},
+			{
+				"name": "SSA Icon",
+				"locator": "xpath",
+				"value":"//android.widget.TextView[@resource-id=\"textId\" and @text=\"Sukanya Samridhi Account\"]"
+			},
+			{
+				"name": "PMJJBYInsurance",
+				"locator": "xpath",
+				"value":"//android.view.ViewGroup[contains(@content-desc,\"PMJJBY Insurance\")]"
+			}
+	],
+	"FDDetailsPage": [
+		{
+			"name": "EnterFDName",
+			"locator": "xpath",
+			"value": "//android.widget.EditText[@resource-id=\"floatingTextinput\"]"
+		},
+		{
+				"name": "EnterAmount",
+				"locator": "xpath",
+				"value": "//android.widget.EditText[@resource-id=\"amount\"]"
+		},
+		{
+					"name": "3Years",
+					"locator": "xpath",
+					"value": "(//com.horcrux.svg.SvgView[@content-desc=\"tenure not selected\"])[3]/com.horcrux.svg.v/com.horcrux.svg.v/com.horcrux.svg.d0"
+		},
+		{
+			"name": "SelectTenure",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Select Tenure\"]"
+		},
+		{
+			"name": "EnterAmount",
+			"locator": "xpath",
+			"value": "//android.widget.EditText[@resource-id=\"amount\"]"
+		},
+		{
+			"name": "SelectMaturity",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[@content-desc=\"Fixed Deposit\"]"
+		},
+		{
+			"name": "SelectInterestPayout",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Select Interest Payout\"]"
+		},
+		{
+				"name": "SelectPeriod",
+				"locator": "xpath",
+				"value": "//android.view.ViewGroup[@content-desc=\"Select Period\"]"
+		},
+		{
+				"name": "SelectFirstElement",
+				"locator": "xpath",
+				"value": "//android.view.ViewGroup[@resource-id=\"onPressList\"]"
+		},
+		{
+				"name": "AddNominee",
+				"locator": "xpath",
+				"value": "//com.horcrux.svg.SvgView[@content-desc=\"add nominee on switch button\"]/com.horcrux.svg.v/com.horcrux.svg.a0/com.horcrux.svg.d0"
+		},
+		{
+				"name": "Continue",
+				"locator": "xpath",
+				"value": "//android.widget.TextView[@resource-id=\"solidButtonClick-text\"]"
+		},
+		{
+			"name": "CustomRadioButton",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Custom\"]"
+		},
+		{
+			"name": "TextFixedDepositDetails",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Fixed Deposit Details\"]"
+		},
+		{
+			"name": "ClickOnArrow",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@text=\"󰅀\"]"
+		},
+		{
+			"name": "CurrentAccount",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[@content-desc=\"Ibm's Current Account, xxxxx 50034\"]"
+		}
+	],
+	"FDReviewPage": [
+		{
+				"name": "Checkbox",
+				"locator": "xpath",
+				"value": "//android.widget.TextView[@text=\"󰄱\"]"
+		},
+		{
+				"name": "AcceptButton",
+				"locator": "xpath",
+				"value": "//android.widget.TextView[@resource-id=\"btnAccept-text\"]"
+		},
+		{
+				"name": "Submit",
+				"locator": "xpath",
+				"value": "//android.widget.Button[@content-desc=\"Submit\"]"
+		},
+		{
+				"name": "TPIN",
+				"locator": "xpath",
+				 "value": "//android.widget.TextView[@text=\"4-digit Transaction Pin (TPIN) \"]"
+		},
+		{
+					"name": "TpinText",
+					"locator": "xpath",
+					"value": "//android.widget.EditText"
+		},
+		{
+				"name": "SubmitButton",
+				"locator": "xpath",
+				"value": "//android.widget.TextView[@resource-id=\"button-text\"]"
+		}
+		
+	],
+	"GeneralService": [
+		{
+			"name": "MyProfileIcon",
+			"locator": "xpath",
+			"value": "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]"
+		},
+		{
+			"name": "MyProfilePicture",
+			"locator": "xpath",
+			"value": "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup[1]"
+		},
+		{
+			"name": "CustomerName",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Umesh Singh Lunthi\"]"
+		},
+		
+		
+		{
+			"name": "MobileNumber",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"8591856866\"]"
+		},
+		{
+			"name": "MobileNumberText",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Mobile Number\"]"
+		},
+		{
+			"name": "CKYC",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"20041715466928\"]"
+		},
+		{
+			"name": "PAN",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"XXXXXX 336K\"]"
+		},
+		{
+			"name": "Aadhar",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"XXXXXXXX 0220\"]"
+		},
+		{
+			"name": "Email",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"SACHINVGHORPADE@GMAIL.COM\"]"
+		},
+		{
+			"name": "KYCStatus",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Status N\"]"
+		},
+		{
+			"name": "AppVersion",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Version 2.0.2\"]"
+		},
+		{
+			"name": "TermsAndConditions",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Terms and Conditions\"]"
+		},
+		{
+			"name": "DownloadTermsAndConditionsButton",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"btnDownload-text\"]"
+		},
+		{
+			"name": "ToastMessage",
+			"locator": "xpath",
+			"value": "//(android.widget.Toast)[1]"
+		},
+		{
+			"name": "CloseButtonOnTermsAndConditions",
+			"locator": "xpath",
+			"value": "//com.horcrux.svg.a0/com.horcrux.svg.d0"
+		},
+		{
+			"name": "ViewAddressLink",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"View\"]"
+		},
+		{
+			"name": "CommunicationAddress",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Near Sagun Hospital Marol Mumbai,Maharashtra,India - 275101\"]"
+		},
+		{
+			"name": "ProductVisibleDropdown",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[@resource-id=\"product_visible\"]"
+		},
+		{
+			"name": "FinancialYearDropdown",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@text=\"Financial Year \"]"
+		},
+		
+		{
+			"name": "Customise",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Customise\"]"
+		},
+		
+		{
+			"name": "Edit",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Edit\"]"
+		},
+		
+		{
+			"name": "RemoveQuickTaskRow1",
+			"locator": "xpath",
+			"value": "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/com.horcrux.svg.SvgView/com.horcrux.svg.l/com.horcrux.svg.q/com.horcrux.svg.u"
+		},
+		
+		{
+			"name": "RemoveQuickTaskRow2",
+			"locator": "xpath",
+			"value": "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/com.horcrux.svg.SvgView/com.horcrux.svg.l/com.horcrux.svg.q/com.horcrux.svg.u"
+		},
+		
+		{
+			"name": "RemoveQuickTaskRow3",
+			"locator": "xpath",
+			"value": "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/com.horcrux.svg.SvgView/com.horcrux.svg.l/com.horcrux.svg.q/com.horcrux.svg.u"
+		},
+		
+		{
+			"name": "RemoveQuickTaskRow4",
+			"locator": "xpath",
+			"value": "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/com.horcrux.svg.SvgView/com.horcrux.svg.l/com.horcrux.svg.q/com.horcrux.svg.u"
+		},
+		
+		{
+			"name": "RemoveQuickTaskRow5",
+			"locator": "xpath",
+			"value": "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[5]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/com.horcrux.svg.SvgView/com.horcrux.svg.l/com.horcrux.svg.q/com.horcrux.svg.u"
+		},
+		
+		{
+			"name": "RemoveQuickTaskRow6",
+			"locator": "xpath",
+			"value": "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[6]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/com.horcrux.svg.SvgView/com.horcrux.svg.l/com.horcrux.svg.q/com.horcrux.svg.u"
+		},
+		
+		{
+			"name": "AddQuickTaskRow1",
+			"locator": "xpath",
+			"value": "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/com.horcrux.svg.SvgView/com.horcrux.svg.l/com.horcrux.svg.q/com.horcrux.svg.u"
+		},
+
+		{
+			"name": "AddQuickTaskRow2",
+			"locator": "xpath",
+			"value": "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/com.horcrux.svg.SvgView/com.horcrux.svg.l/com.horcrux.svg.q/com.horcrux.svg.u"
+		},
+		{
+			"name": "AddQuickTaskRow3",
+			"locator": "xpath",
+			"value": "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/com.horcrux.svg.SvgView/com.horcrux.svg.l/com.horcrux.svg.q/com.horcrux.svg.u"
+		},
+		{
+			"name": "AddQuickTaskRow4",
+			"locator": "xpath",
+			"value": "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/com.horcrux.svg.SvgView/com.horcrux.svg.l/com.horcrux.svg.q/com.horcrux.svg.u"
+		},
+		
+		{
+			"name": "AddQuickTaskRow5",
+			"locator": "xpath",
+			"value": "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[5]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/com.horcrux.svg.SvgView/com.horcrux.svg.l/com.horcrux.svg.q/com.horcrux.svg.u"
+		},
+		{
+			"name": "AddQuickTaskRow6",
+			"locator": "xpath",
+			"value": "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[6]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/com.horcrux.svg.SvgView/com.horcrux.svg.l/com.horcrux.svg.q/com.horcrux.svg.u"
+		},
+		{
+			"name": "AddQuickTaskRow7",
+			"locator": "xpath",
+			"value": "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[7]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/com.horcrux.svg.SvgView/com.horcrux.svg.l/com.horcrux.svg.q/com.horcrux.svg.u"
+		},
+		{
+			"name": "AddQuickTaskRow8",
+			"locator": "xpath",
+			"value": "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[8]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/com.horcrux.svg.SvgView/com.horcrux.svg.l/com.horcrux.svg.q/com.horcrux.svg.u"
+		},
+		{
+			"name": "AddQuickTaskRow9",
+			"locator": "xpath",
+			"value": "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[5]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/com.horcrux.svg.SvgView/com.horcrux.svg.l/com.horcrux.svg.q/com.horcrux.svg.u"
+		},
+		{
+			"name": "AddQuickTaskRow10",
+			"locator": "xpath",
+			"value": "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[6]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/com.horcrux.svg.SvgView/com.horcrux.svg.l/com.horcrux.svg.q/com.horcrux.svg.u"
+		},
+		{
+			"name": "AddQuickTaskRow11",
+			"locator": "xpath",
+			"value": "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[7]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/com.horcrux.svg.SvgView/com.horcrux.svg.l/com.horcrux.svg.q/com.horcrux.svg.u"
+		},
+		{
+			"name": "AddQuickTaskRow12",
+			"locator": "xpath",
+			"value": "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[8]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/com.horcrux.svg.SvgView/com.horcrux.svg.l/com.horcrux.svg.q/com.horcrux.svg.u"
+		},
+		{
+			"name": "AddQuickTaskRow13",
+			"locator": "xpath",
+			"value": "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[9]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/com.horcrux.svg.SvgView/com.horcrux.svg.l/com.horcrux.svg.q/com.horcrux.svg.u"
+		},
+		{
+			"name": "AddQuickTaskRow14",
+			"locator": "xpath",
+			"value": "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[10]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/com.horcrux.svg.SvgView/com.horcrux.svg.l/com.horcrux.svg.q/com.horcrux.svg.u"
+		},
+		{
+			"name": "FY23_24",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"FY 23-24\"]"
+		},
+		
+			{
+			"name": "FirstCardDepositTab",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[@resource-id=\"card\"]/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]"
+		},
+			
+		{
+			"name": "LogoutButton",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"handleOnClickTest-text\"]"
+		},
+	
+		{
+			"name": "BalanceCertificate",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Balance Certificate\"]"
+		},
+		{
+			"name": "SearchEditBox",
+			"locator": "xpath",
+			"value": "//android.widget.EditText[@resource-id=\"searchBarTestId\"]"
+		},
+		{
+			"name": "BackArrowBalCertPDF",
+			"locator": "xpath",
+			"value": "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.widget.FrameLayout[1]/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout[4]/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ImageView"
+		},
+		{
+			"name": "SearchIconOnBalanceCertificate",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[@resource-id=\"searchTouchableTestID\"]"
+		},		
+		{
+			"name": "RuppesSymbol",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and starts-with(@text, \"₹\")]"
+		},
+		{
+			"name": "InterestAmountCreditRuppesSymbol",
+			"locator": "xpath",
+			"value": "(//android.widget.TextView[@resource-id=\"textId\" and starts-with(@text, \"₹\")])[2]"
+		},
+		{
+			"name": "SavingsAccountxxx0199",
+			"locator": "xpath",
+			"value":"//android.widget.TextView[@resource-id=\"textId\" and contains(@text, \"xxxx 0199\")]"			
+		},
+		{
+			"name": "Trasactions_Count_1_10",
+			"locator": "xpath",
+			"value":"//android.widget.TextView[@resource-id=\"textId\" and @text=\"1-10 transactions\"]"			
+			
+		},
+		{
+			"name": "Trasactions_Count_1_50_Of_584",
+			"locator": "xpath",
+			"value":"//android.widget.TextView[@resource-id=\"textId\" and @text=\"1-50 of 584 transactions\"]"			
+			
+		},
+		{
+			"name": "DepositAccountxxxx0044",
+			"locator": "xpath",
+			"value":"//android.widget.TextView[@resource-id=\"textId\" and contains(@text, \"xxxx 0044\")]"			
+			
+		},
+		
+		{
+			"name": "LoanAccountxxxx0051",
+			"locator": "xpath",
+			"value":"//android.widget.TextView[@resource-id=\"textId\" and contains(@text, \"xxxx 0051\")]"			
+			
+		},
+		
+		{
+			"name": "26447XXXX_DownloadBalanceCertificate_PDF_File_Name",
+			"locator": "xpath",
+			"value":"//android.widget.TextView[contains(text(), \"26447XXXX_DownloadBalanceCertificate\")]"			
+			
+		},
+		
+		
+		{
+			"name": "calenderIcon",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[@resource-id=\"onIconPress\"]/android.view.ViewGroup/com.horcrux.svg.SvgView/com.horcrux.svg.v/com.horcrux.svg.a0/com.horcrux.svg.d0"
+		},
+		{
+			"name": "firstDayOfMonth",
+			"locator": "xpath",
+			"value": "(//android.widget.TextView[@text=\"1\"])[1]"
+		},
+		{
+			"name": "firstDay",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@text=\"1\"]"
+		},
+		
+		
+		
+		{
+			"name": "generateButton",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"button-text\"]"
+		},
+				
+		{
+			"name": "downloadButton",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"checked1-text\"]"
+		},
+		
+		{
+			"name": "emailButtonOnStatement",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Email\"]"
+		},
+		
+		
+		
+		{
+			"name": "downloadButtonOnStatement",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Download\"]"
+		},
+		
+		
+					
+			
+		{
+			"name": "backButtonCalender",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[@content-desc=\"Go To Previous Month\"]/com.horcrux.svg.SvgView/com.horcrux.svg.v/com.horcrux.svg.v/com.horcrux.svg.d0"
+		},
+		{
+			"name": "FileDownloadToastMessage",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"File Downloaded Successfully\"]"
+		},
+		{
+			"name": "CustomerId",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Customer Id : 264479335\"]"
+		},	
+		{
+			"name": "GoToHomeButton",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[contains(@text, \"Go to Home\") ]"
+		},
+		
+		{
+			"name": "SavingsAccountxxx0207",
+			"locator": "xpath",
+			"value":"//android.widget.TextView[@resource-id=\"textId\" and contains(@text, \"xxxx 0207\")]"	
+		},
+		{
+			"name": "SavingsAccountxxx5500",
+			"locator": "xpath",
+			"value":"//android.widget.TextView[@resource-id=\"textId\" and contains(@text, \"xxxx 5500\")]"	
+		},
+		{
+			"name": "LastMonthCard",
+			"locator": "xpath",
+			"value":"//android.widget.TextView[@resource-id=\"textId\" and @text=\" Last month\"]"	
+		},
+				
+		{
+			"name": "CustomCard",
+			"locator": "xpath",
+			"value":"//android.widget.TextView[@resource-id=\"textId\" and @text=\" Custom\"]"	
+		},	
+		
+			
+		
+		{
+			"name": "DetailsTab",
+			"locator": "xpath",
+			"value":"//android.widget.TextView[@resource-id=\"textId\" and @text=\"Details\"]"	
+		},
+		{
+			"name": "CustomerNameOnSavingsAccount",
+			"locator": "xpath",
+			"value":"//android.widget.TextView[@resource-id=\"textId\" and @text=\"Umesh Singh Lunthi\"]"	
+		},
+		{
+			"name": "SavingsAccountWholeNumber5500",
+			"locator": "xpath",
+			"value":"//android.widget.TextView[@resource-id=\"textId\" and @text=\"760102010005500\"]"				         
+		},
+		{
+			"name": "SavingsAccountWholeNumberDetailsPage5500",
+			"locator": "xpath",
+			"value":"//android.widget.TextView[@resource-id=\"textId\" and @text=\"76010 20100 05500\"]"				         
+		},
+		
+		
+		{
+			"name": "EyeIconToUnhideACNumber",
+			"locator": "xpath",
+			"value":"//android.view.ViewGroup[@resource-id=\"onPressableTest\"]/com.horcrux.svg.SvgView/com.horcrux.svg.l/com.horcrux.svg.l/com.horcrux.svg.u"	
+		},
+		{
+			"name": "AccountName",
+			"locator": "xpath",
+			"value":"//android.widget.TextView[@resource-id=\"textId\" and @text=\"Ayesha's Saving Account\"]"	
+		},
+		{
+			"name": "BankName",
+			"locator": "xpath",
+			"value":"//android.widget.TextView[@resource-id=\"textId\" and @text=\"Union Bank Of India\"]"	
+		},
+		{
+			"name": "AccountType",
+			"locator": "xpath",
+			"value":"//android.widget.TextView[@resource-id=\"textId\" and @text=\"Savings\"]"	
+		},
+		{
+			"name": "FreezeStatus",
+			"locator": "xpath",
+			"value":"//android.widget.TextView[@resource-id=\"textId\" and @text=\"Not Frozen\"]"	
+		},
+		{
+			"name": "IFSCCode",
+			"locator": "xpath",
+			"value":"//android.widget.TextView[@resource-id=\"textId\" and @text=\"UBIN0576018\"]"	
+		},
+		{
+			"name": "BranchName",
+			"locator": "xpath",
+			"value":"//android.widget.TextView[@resource-id=\"textId\" and @text=\"Savina Kheda\"]"	
+		},
+		{
+			"name": "BranchAddress",
+			"locator": "xpath",
+			"value":"//android.widget.TextView[@resource-id=\"textId\" and @text=\"Moti Tower 194, Sector 11,next To Aravali Gas, Hiran Magri,\"]"	
+		},
+		{
+			"name": "DepositInterestCertificate",
+			"locator": "xpath",
+			"value":"//android.widget.TextView[@resource-id=\"textId\" and @text=\"Dep. Interest Certificate\"]"	
+		},
+		{
+			"name": "TDSCertificate",
+			"locator": "xpath",
+			"value":"//android.widget.TextView[@resource-id=\"textId\" and @text=\"TDS Certificate\"]"	
+		},
+		
+		{
+			"name": "ConsolidatedDeposits",
+			"locator": "xpath",
+			"value":"//android.widget.TextView[@resource-id=\"textId\" and @text=\"Consolidated Deposits\"]"	
+		},
+		{
+			"name": "PreviousFinancialYear",
+			"locator": "xpath",
+			"value":"//android.view.View[@content-desc=\"Current Financial Year, Previous Financial Year, Custom, Select Start Date and End Date\"]/android.view.ViewGroup[2]/android.widget.RadioButton/android.view.ViewGroup"	
+		},
+		{
+			"name": "PasswordEditBox",
+			"locator": "xpath",
+			"value":"//android.widget.EditText"	
+		},
+		
+		{
+			"name": "ShowPasswordCheckebox",
+			"locator": "xpath",
+			"value":"//android.widget.CheckBox"	
+		},
+		{
+			"name": "OkButtonOnPasswordPrompt",
+			"locator": "xpath",
+			"value":"//android.widget.TextView[@text=\"OK\"]"	
+		},
+		{
+			"name": "File_Name_PDF",
+			"locator": "xpath",
+			"value":"//android.widget.TextView"			
+			
+		},
+		{
+			"name": "DownloadSuccessfulMessageText",
+			"locator": "xpath",
+			"value":"//android.widget.TextView[@resource-id=\"textId\" and @text=\"Your password consists of the first 4 characters of your first name in upper case (without spaces) followed by date and month (DDMM) of your birth. In case if name is less than 4 characters, please add remaining characters from last name to make it 4 characters\"]"		
+			
+		},
+		{
+			"name": "OkayButtonOnDownloadSuccessfulMessage",
+			"locator": "xpath",
+			"value":"(//android.widget.Button[@class=\"android.widget.Button\"])[1]"		
+			
+		},
+		{
+			"name": "LoanInterestCertificate",
+			"locator": "xpath",
+			"value":"//android.widget.TextView[@resource-id=\"textId\" and @text=\"Loan Interest Certificate\"]"		
+			
+		},
+		{
+			"name": "ConsolidatedLoansSelection",
+			"locator": "xpath",
+			"value":"//android.widget.TextView[@resource-id=\"textId\" and @text=\"Consolidated Loans\"]"		
+			
+		},
+		{
+			"name": "InterestAmountDebit",
+			"locator": "xpath",
+			"value":"(//android.widget.TextView[@resource-id=\"textId\" and starts-with(@text, \"₹\")])[1]"		
+			
+		}		
+],
+"RegisterForVyomPage": [
+		{
+				"name": "DebitCardDropdown",
+				"locator": "xpath",
+				"value": "(//android.widget.TextView[@text=\"󰅀\"])[1]"
+		},
+		{
+				"name": "DebitCardNumberText",
+				"locator": "xpath",
+				"value": "//android.widget.Button[@resource-id=\"textInput00\"]"
+		},
+		{
+				"name": "ExpiryDateText",
+				"locator": "xpath",
+				"value": "//android.widget.Button[@resource-id=\"textInput01\"]"
+		},
+		{
+				"name": "ATMPINText",
+				"locator": "xpath",
+				 "value": "//android.widget.Button[@resource-id=\"textInput02\"]"
+		},
+		{
+					"name": "ValidateButton",
+					"locator": "xpath",
+					"value": "//android.widget.Button[@content-desc=\"Validate\"]"
+		},
+		{
+				"name": "ErrorMessageDebitCardNumber",
+				"locator": "xpath",
+				"value": "(//android.widget.TextView[@resource-id=\"textId\"])[6]"
+		}
+		
+	],
+	
+	"InvestAndInsure":[
+		{
+			"name":"AllInvestments",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[contains(@content-desc,\"All Investments\")]"
+		},
+		{
+			"name":"SukanyaSamriddhiYojana",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[contains(@content-desc,\"SSA\")]"
+		},
+		{
+			"name":"PMJJBYInsurance",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[contains(@content-desc,\"PMJJBY\")]"
+		},
+		{
+			"name":"Investments&Stocks",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[@content-desc=\"Investments & Stocks\"]"
+		},
+		{
+			"name":"PMSBYInsurance",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[contains(@content-desc,\"PMSBY\")]"
+		}
+	],	
+	"AccountsPage": [
+		{
+			"name": "AccountsInvestandInsureTab",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Invest and Insure\"]"
+		},
+		{
+			"name": "InvestandInsureAddAccount",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@content-desc=\"Add account\"]"
+		},
+		{
+			"name": "SSAAddNewAccount",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Add New Account\"]"
+
+		},
+		{
+			"name": "SSA Icon",
+			"locator": "xpath",
+			"value":"//android.widget.TextView[@resource-id=\"textId\" and @text=\"Sukanya Samridhi Account\"]"
+		},
+		{
+			"name": "GovtSchemeSSA",
+			"locator": "xpath",
+			"value":"//android.widget.TextView[@resource-id=\"textId\" and @text=\"Sukanya Samridhhi Scheme\"]"
+		},
+		{
+				"name": "ClickonExistingSSA",
+				"locator": "xpath",
+				"value":"//android.widget.TextView[@content-desc=\"rupees â‚¹2,250.00\"]"
+		},
+		{
+				"name": "PMJJBYInsurance",
+				"locator": "xpath",
+				"value":"//android.view.ViewGroup[@content-desc=\"PMJJBY Insurance\"]"
+		}
+	],	
+	
+   "SSABranchPage": [
+        {
+            "locator": "xpath",
+            "name": "SSADebitAccDropdown",
+            "value": "//android.view.ViewGroup[contains(@content-desc,\"Select Account\")]/com.horcrux.svg.SvgView/com.horcrux.svg.v/com.horcrux.svg.a0/com.horcrux.svg.d0"
+        },
+        {
+            "locator": "xpath",
+            "name": "SSADebitAccSelection",
+            "value": "//android.widget.Button[contains(@content-desc,\"VIJAY's Savings Account\")]"
+        },
+        {
+            "locator": "xpath",
+            "name": "EnterInitialAmount",
+            "value": "//android.widget.EditText[@resource-id=\"amountTextInput\"]"
+        },
+        {
+            "locator": "xpath",
+            "name": "ChangePreferredBranch",
+            "value": "//android.widget.Button[@content-desc=\"Change\"]"
+        },
+        {
+            "locator": "xpath",
+            "name": "ClickOnPreferredBranchTextBox",
+            "value": "//android.view.ViewGroup[@content-desc=\"Enter Pin Code / Branch Name / Area \"]/android.view.ViewGroup/android.view.ViewGroup[2]"
+        },
+        {
+            "locator": "xpath",
+            "name": "EnterPinCode",
+            "value": "//android.widget.EditText[@resource-id=\"inputText\"]"
+        },
+        {
+        	"locator":"xpath",
+        	"name": "SelectPreferredBranch",
+        	"value": "//android.widget.TextView[contains(@resource-id,'textId') and contains(@text,'BADLAPUR (WEST)')]"
+        },
+        {
+        	"locator":"xpath",
+        	"name": "ContinueButton",
+        	"value": ".//android.widget.Button[@content-desc=\"Continue\"]"
+        },
+        {
+			"name":"SearchIcon",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[@content-desc=\"Enter Pin Code / Branch Name / Area421503show\"]"
+		}
+        ],
+    "SSAGirlDetailPage": [
+        {
+        	"locator":"xpath",
+        	"name": "GirlChildName",
+        	"value": "//android.view.ViewGroup[@content-desc=\"Name of Girl Child , Name of Girl Childshow\"]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.EditText"
+        },
+        {
+        	"locator":"xpath",
+        	"name": "DOB",
+        	"value": "//android.view.ViewGroup[@content-desc=\"Date of Birth\"]/android.view.ViewGroup/android.widget.Button"
+        },
+        {
+        	"locator":"xpath",
+        	"name": "DOBSelection",
+        	"value": "//android.widget.Button[contains(@content-desc,\"today\")]/android.widget.TextView"
+        },
+        {
+			"name": "Relationship",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Apply Now\"]"
+		},
+		{
+			"name": "BirthOrder",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Apply Now\"]"
+		},
+		{
+			"name": "BirthType",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Apply Now\"]"
+		},
+		{
+	
+	     	"name": "BirthTypeSelection",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[@content-desc=\"Single\"]/android.view.ViewGroup"
+		},
+
+		{
+			"name": "EnterGirlChildAddress",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@text=\"󰄲\"]"
+		},
+
+		{
+			"name": "PinCode",
+			"locator": "xpath",
+			"value": "//android.widget.EditText[@resource-id=\"pinCode\"]"
+		},
+		
+		{
+			"name": "AddressLine1",
+			"locator": "xpath",
+			"value": "//android.widget.EditText[@resource-id=\"address1\"]"
+		},
+		
+		{
+			"name": "AddressLine2",
+			"locator": "xpath",
+			"value": "//android.widget.EditText[@resource-id=\"address2\"]"
+		},
+		{
+			"name": "AddressLine3",
+			"locator": "xpath",
+			"value": "//android.widget.EditText[@resource-id=\"address3\"]"
+		},
+		{
+			"name": "ContinueButton",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "UploadBirthCertificate",
+			"locator": "xpath",
+			"value":"//android.view.ViewGroup[contains(@content-desc,\"Upload Birth Certificate\")]"
+		},
+		{
+			"name": "MobileDocSelection",
+			"locator": "xpath",
+			"value":"//android.view.ViewGroup[@content-desc=\"Browse Phone\"]"
+		},
+	
+		{
+			"name": "MobileDocSelection",
+			"locator": "xpath",
+			"value":"//androidx.drawerlayout.widget.DrawerLayout/android.widget.ScrollView/android.widget.FrameLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.view.ViewGroup/android.widget.GridView/androidx.cardview.widget.CardView[2]"
+		},
+		{
+			"name": "UploadLegalGurdianCertificate",
+			"locator": "xpath",
+			"value":"//android.view.ViewGroup[@content-desc=\"accessibility_hints.girl_child_name_hint\"]/android.view.ViewGroup[5]"
+		},
+		{
+			"name": "CameraTakePhoto",
+			"locator": "xpath",
+			"value":"//android.view.ViewGroup[@content-desc=\"Take Photo\"]"
+		},
+		{
+			"name": "CameraTakePhoto",
+			"locator": "xpath",
+			"value":"//android.view.ViewGroup[@content-desc=\"Take Photo\"]"
+		},
+		{
+			"name": "GirlChildName",
+			"locator": "xpath",
+			"value":"//android.widget.TextView[@resource-id=\"textId\" and contains(@text,\"Name should contain 2-40 characters\")]"
+		},
+		{
+			"name": "GirlChildNameTextBox",
+			"locator": "xpath",
+			"value":"//android.widget.EditText[@resource-id=\"girlChildName\"]"
+		},
+		{
+			"name": "RelationshipSelection",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[@content-desc=\"Others\"]/android.view.ViewGroup"
+		},
+		{
+			"name": "BirthOrderFirstChild",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[@content-desc=\"First Child\"]/android.view.ViewGroup"
+		},
+		{
+			"name": "BirthType",
+			"locator": "xpath",
+			"value": "(//android.widget.Button[@resource-id=\"onIconPress\"])[4]"
+		},
+		{
+			"name": "EnterGirlChildAddress",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@text=\"ó°„²\"]"
+		}
+	],
+	 "SSASubmitPage":[
+		{
+			"name": "Review",
+			"locator": "xpath",
+			"value":"//android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[6]"
+		},
+		{
+			"name": "DeclarationTerm&Conditions",
+			"locator": "xpath",
+			"value":"//android.widget.Button[@content-desc=\"checkbox\"]"
+		},
+		{
+			"name": "Term&ConditionsIAccept",
+			"locator": "xpath",
+			"value":"//android.widget.Button[@content-desc=\"I accept\"]"
+		},
+		{
+			"name": "Submit",
+			"locator": "xpath",
+			"value":"//android.widget.Button[@content-desc=\"Submit\"]"
+		},
+    	{
+			"name": "SSAAcknowledgementLetter",
+			"locator": "xpath",
+			"value":"//android.view.ViewGroup[contains(@content-desc,\"SSA Acknowledgement Letter\")]/android.view.ViewGroup/android.view.ViewGroup"
+		},
+		{
+			"name": "SSAAcknowledgementDownloadOK",
+			"locator": "xpath",
+			"value":"//android.widget.Button[@content-desc=\"Ok\"]"
+		},
+		{
+			"locator": "xpath",
+			"name": "HomeButton",
+			"value":"//android.widget.Button[@content-desc=\"Home\"]"
+		}
+    ],
+    "SSADetailPage": [
+        {
+        	"name": "SSADebitAccount",
+            "locator": "xpath",
+            "value": "//android.widget.Button[@content-desc=\"Apply Now\"]"
+        }
+    ],
+    "ExistingSSAPage":[
+		{
+				"name": "RequestTab",
+				"locator": "xpath",
+				"value":"//android.widget.TextView[@resource-id=\"textId\" and @text=\"Requests\"]"
+		}
+	],
+    "SSASummaryPage": [
+        {
+        	"name": "ApplyNowbutton",
+            "locator": "xpath",
+            "value": "//android.widget.Button[@content-desc=\"Apply Now\"]"
+        },
+		{
+			"name": "ExistingSSAMessagetitle",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"You have reached the maximum no of SSA!\"]"
+		},
+		{
+			"name": "ExistingSSAMessage",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"You currently have 2 SSA accounts, To open additional account please visit your branch\"]"
+		},
+		{
+			"name": "ExistingSSAPopupOkButton",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Okay\"]"
+		}
+    ],
+    "RequestDetailPage":
+	[
+		{
+					"name": "AccountTransferOption",
+					"locator": "xpath",
+					"value":"//android.view.ViewGroup[@content-desc=\"Account Transfer\"]"
+		},
+		{
+					"name": "AccTransferTitle",
+					"locator": "xpath",
+					"value":"//android.widget.TextView[@resource-id=\"textId\" and @text=\"Account Transfer\"]"
+		},
+		{
+					"name": "AccTransferMessage",
+					"locator": "xpath",
+					"value":"//android.widget.TextView[@resource-id=\"textId\" and @text=\"Please visit your Preferred Branch\"]"
+		},
+		{
+					"name": "AccTransferPopupOkButton",
+					"locator": "xpath",
+					"value":"//android.widget.Button[@content-desc=\"Ok\"]"
+		},
+		{
+					"name": "ClosureOption",
+					"locator": "xpath",
+					"value":"//android.widget.TextView[@resource-id=\"textId\" and @text=\"Sukanya Samriddhi Account Closure\"]"
+		},
+		{
+					"name": "DownloadSSAStatementOption",
+					"locator": "xpath",
+					"value":"//android.view.ViewGroup[@content-desc=\"Download SSA Account Statement\"]"
+		},
+		{
+					"name": "CurrentMonthStatement",
+					"locator": "xpath",
+					"value":"//android.view.ViewGroup[@content-desc=\"Download SSA Account Statement\"]"
+		},
+		{
+					"name": "LastMonthStatement",
+					"locator": "xpath",
+					"value":"//android.widget.TextView[@resource-id=\"textId\" and @text=\"Last Month\"]"
+		},
+		{
+					"name": "LastThreeMonthsStatement",
+					"locator": "xpath",
+					"value":"//android.widget.TextView[@resource-id=\"textId\" and @text=\"Last 3 Months\"]"
+		},
+		{
+					"name": "LastSixMonthsStatement",
+					"locator": "xpath",
+					"value":"//android.widget.TextView[@resource-id=\"textId\" and @text=\"Last 6 Months\"]"
+		},
+		{
+					"name": "CurrentFinancialStatement",
+					"locator": "xpath",
+					"value":"//android.widget.TextView[@resource-id=\"textId\" and @text=\"Current Financial Year\"]"
+		},
+		{
+					"name": "LastFinancialStatement",
+					"locator": "xpath",
+					"value":"//android.widget.TextView[@resource-id=\"textId\" and @text=\"Last Financial Year\"]"
+		},
+		{
+					"name": "Custom",
+					"locator": "xpath",
+					"value":"//android.widget.TextView[@resource-id=\"textId\" and @text=\"Custom\"]"
+		},
+		{
+					"name": "ClosurePopupTitle",
+					"locator": "xpath",
+					"value":"//android.widget.TextView[@resource-id=\"textId\" and @text=\"Sukanya Samriddhi Account Closure\"]"
+		},
+		{
+					"name": "ClosurePopupMessage",
+					"locator": "xpath",
+					"value":"//android.widget.TextView[@resource-id=\"textId\" and @text=\"Please visit your Preferred Branch\"]"
+		},
+		{
+					"name": "ClosurePopupOkButton",
+					"locator": "xpath",
+					"value":"//android.widget.Button[@content-desc=\"Ok\"]"
+		},
+		{
+					"name": "StatementEmailIdButton",
+					"locator": "xpath",
+					"value":"//android.widget.Button[@content-desc=\"Ok\"]"
+		},
+		{
+					"name": "StatementDownloadButton",
+					"locator": "xpath",
+					"value":"//android.widget.Button[@content-desc=\"Ok\"]"
+		}
+	],
+    
+    "Lifestyle":[
+    	{
+    		"name": "Consent",
+    		"locator": "xpath",
+    		"value": "//android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.widget.Button/android.widget.TextView"
+    		
+		},
+		{
+			"name": "Recharge",
+    		"locator": "xpath",
+    		"value": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.widget.TextView[@text=\"Recharge\"]"
+		},
+		{
+			"name": "Travel",
+    		"locator": "xpath",
+    		"value": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.widget.TextView[@text=\"Travel\"]"
+		},
+		{
+			"name": "Order",
+    		"locator": "xpath",
+    		"value": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.TextView"
+		},
+		{
+			"name": "Gift",
+    		"locator": "xpath",
+    		"value": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup/android.widget.TextView"
+		},
+		{
+			"name": "Donations",
+    		"locator": "xpath",
+    		"value": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.widget.TextView"
+		},
+		{
+			"name": "Mobile",
+    		"locator": "xpath",
+    		"value": "//android.view.ViewGroup[@content-desc=\"Mobile\"]"
+		},
+		{
+			"name": "SavingAccount",
+    		"locator": "xpath",
+    		"value": "//android.view.ViewGroup[contains(@content-desc,\"(Savings Account)\")]/android.widget.TextView[3]"
+		},
+		{
+			"name": "PayRecharge",
+    		"locator": "xpath",
+    		"value": "//android.view.ViewGroup/android.view.ViewGroup[4]/android.widget.TextView"
+		},   
+		{
+			"name": "SelectAccount",
+    		"locator": "xpath",
+    		"value": "//android.view.ViewGroup[contains(@content-desc,\"Select Account,\")]"
+		},
+		{
+			"name": "SavingAccount",
+    		"locator": "xpath",
+    		"value": "//android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.Button[contains(@content-desc,\"VIJAY's Savings Account,  (xxxxx 22239)\")]"
+		},
+		{
+			"name": "RechargePay",
+    		"locator": "xpath",
+    		"value": "//android.widget.Button[@content-desc=\"Pay\"]"
+		},
+		{
+			"name": "TPIN",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@text=\"4 digit Transaction PIN \"]"
+		},
+		
+		{
+			"name": "TpinText",
+			"locator": "xpath",
+			"value": "//android.widget.EditText"
+		},
+		{
+			"name": "TPINContinue",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "Bus",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[@content-desc=\"Bus\"]"
+		}
+	],
+	"LifestyleTravelBus":[
+		{
+			"name": "onBusPage",
+			"locator": "xpath",
+			"value": "//android.webkit.WebView/android.view.View/android.view.View[1]/android.widget.TextView"
+		}, 
+		{
+			"name": "FromCity",
+			"locator": "xpath",
+			"value": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.widget.TextView[1]"
+		},  
+		{
+			"name": "FromCitySearch",
+			"locator": "xpath",
+			"value": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[2]/android.widget.EditText"
+		}, 
+		{
+			"name": "FromCitySearchResult",
+			"locator": "xpath",
+			"value": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[3]/android.widget.TextView"
+		},
+		{
+			"name": "ToCity",
+			"locator": "xpath",
+			"value": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.widget.TextView[2]"
+		},
+		{
+			"name": "ToCitySearch",
+			"locator": "xpath",
+			"value": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[2]/android.widget.EditText"
+		},
+		{
+			"name": "ToCitySearchResult",
+			"locator": "xpath",
+			"value": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[4]/android.widget.TextView"
+		},
+		{
+			"name": "TravelDate",
+			"locator": "xpath",
+			"value": "//android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.widget.TextView[3]"
+		},
+		{
+			"name": "SearchBuses",
+			"locator": "xpath",
+			"value": "//android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.widget.Button"
+		}, 
+		{
+			"name": "BusSelection",
+			"locator": "xpath",
+			"value": "//android.widget.LinearLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[3]/android.view.View[1]"
+		}
+	],
+	"LifestyleGiftOrder":[
+		{
+			"name": "onGiftCardPage",
+			"locator": "xpath",
+			"value": "//android.webkit.WebView/android.view.View/android.view.View[1]/android.widget.TextView"
+		},
+		{
+			"name": "SwiggyMoneyVoucher",
+			"locator": "xpath",
+			"value": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]"
+		},
+		{
+			"name": "SearchGiftCard",
+			"locator": "xpath",
+			"value": "//android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[2]/android.view.View[1]/android.widget.EditText"
+		},
+		{
+			"name": "SearchGiftCardBox",
+			"locator": "xpath",
+			"value": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[2]/android.widget.EditText"
+		},
+		{
+			"name": "SelectGiftCardOption",
+			"locator": "xpath",
+			"value": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[3]"
+		},
+		{
+			"name": "SelectAmountTextBox",
+			"locator": "xpath",
+			"value": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[3]/android.widget.EditText"	  
+		},
+		
+		{
+			"name": "EnterAmountTextBox",
+			"locator": "xpath",
+			"value": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[2]/android.view.View[2]/android.widget.EditText[@text=\"Enter amount\"]"		  
+		}, 
+		{
+			"name": "SendAsGift",
+			"locator": "xpath",
+			"value": "//android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[2]/android.view.View[5]/android.widget.Button[2]"
+		},
+		{
+			"name": "ReceiverNameText",
+			"locator": "xpath",
+			"value": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.widget.EditText[1]"
+		},
+		{
+			"name": "EnterReceiverName",
+			"locator": "xpath",
+			"value": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[2]/android.widget.EditText[1]"
+		},
+		{
+			"name": "ReceiverMobileNumber",
+			"locator": "xpath",
+			"value": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[2]/android.widget.EditText[2]"
+		},
+		{
+			"name": "EnterReceiverMobileNumber",
+			"locator": "xpath",
+			"value": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.widget.EditText[2]"
+		},
+		{
+			"name": "ReceiverEmail",
+			"locator": "xpath",
+			"value": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.widget.EditText[3]"
+		},
+		{
+			"name": "ReceiverMessage",
+			"locator": "xpath",
+			"value": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[2]/android.widget.EditText[4]"
+		} 
+		
+		
+		
+	],
+	"LifestyleMobileRecharge":[
+		{
+			"name": "EnterMobileNumber",
+			"locator": "xpath",
+			"value": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[2]/android.view.View/android.widget.EditText"
+		},
+		{
+			"name": "SuggestedPlansPack",
+			"locator": "xpath",
+			"value": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[2]/android.view.View[1]/android.widget.Button[2]"
+		},
+		{
+			"name": "Recharge",
+			"locator": "xpath",
+			"value": "//android.view.View[3]/android.view.View/android.widget.Button"
+		}
+	],
+	"BharatPayGas":[
+		{
+			"name": "Gas",
+			"locator": "xpath",			
+			"value": "//android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[@content-desc=\"Gas\"]"
+		},
+		{
+			"name": "Search",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.EditText[@resource-id=\"searchBarTestId\"]"
+		},
+		{
+			"name": "SelectBiller",
+			"locator": "xpath",
+			"value": "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.TextView[@text=\"Mahanagar Gas Limited\"]"
+		},
+		{
+			"name": "CANumber",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[contains(@content-desc,\"CA Number\")]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.EditText"
+		},
+		{
+			"name": "PendingBillsCheckBox",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@resource-id=\"checkBoxIconView\"]"
+		},
+		{
+			"name": "AmountText",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[contains(@content-desc,\"Amount\")]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.EditText"
+		},
+		{
+			"name": "SelectAccount",
+    		"locator": "xpath",
+    		"value": "//android.view.ViewGroup[contains(@content-desc,\"Select Account,\")]"
+		},
+		{
+			"name": "SavingAccount",
+    		"locator": "xpath",
+    		"value": "//android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.Button[contains(@content-desc,\"VIJAY's Savings Account,\")]"
+		},
+		{
+			"name": "Continue",
+			"locator": "xpath",
+			"value": "//android.widget.Button[contains(@content-desc,\"Continue\")]"
+		},
+		{
+			"name": "ContinuePayment",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "TPIN",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@text=\"4 digit Transaction PIN \"]"
+		},
+		{
+			"name": "TpinText",
+			"locator": "xpath",
+			"value": "//android.widget.EditText"
+		},
+		{
+			"name": "TPINContinue",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "PaymentConfirmation",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView"
+		},
+		{
+			"name": "DownloadClick",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Download\"]"
+		},
+		{
+			"name": "AllowAccess",
+			"locator": "xpath",
+			"value": "//android.widget.LinearLayout[2]/android.widget.Button[1]"
+		},
+		{
+			"name": "ReceiptDownload",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[@content-desc=\"Receipt downloaded successfully\"]/android.widget.TextView"
+		}
+	],
+	
+	"BharatPayElectricity":[
+		{
+			"name": "Electricity",
+			"locator": "xpath",			
+			"value": "//android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[@content-desc=\"Electricity\"]"
+		},
+		{
+			"name": "Search",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.EditText[@resource-id=\"searchBarTestId\"]"
+		},
+		{
+			"name": "SelectBiller",
+			"locator": "xpath",
+			"value": "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.TextView[@text=\"Adani Electricity Mumbai Limited\"]"
+		},
+		{
+			"name": "ConsumerNumber",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[contains(@content-desc,\"Consumer number\")]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.EditText"
+		},
+		{
+			"name": "PendingBillsCheckBox",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@resource-id=\"checkBoxIconView\"]"
+		},
+		{
+			"name": "Continue",
+			"locator": "xpath",
+			"value": "//android.widget.Button[contains(@content-desc,\"Continue\")]"
+		},
+		{
+			"name": "ContinuePayment",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "TPIN",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@text=\"4 digit Transaction PIN \"]"
+		},
+		{
+			"name": "TpinText",
+			"locator": "xpath",
+			"value": "//android.widget.EditText"
+		},
+		{
+			"name": "TPINContinue",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "PaymentConfirmation",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView"
+		},
+		{
+			"name": "PaymentAmount",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView[2]"
+		},		
+		{
+			"name": "PaymentBillerDetailsName",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView[2]"
+		},
+		{
+			"name": "PaymentBillerDetailsConsumerID",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView[2]"
+		},
+		{
+			"name": "PaymentTransactionID",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[3]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView[2]"
+		},
+		{
+			"name": "PaymentID",
+			"locator": "xpath",
+			"value": "android.view.ViewGroup[3]/android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView[2]"
+		},
+		{
+			"name": "PaymentBBPSRefNo",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[3]/android.view.ViewGroup[3]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView[2]"
+		},
+		{
+			"name": "TechnicalAlert",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Okay\"]"
+		}
+		
+	],
+	"BharatPayWater":[
+		{
+			"name": "Water",
+			"locator": "xpath",			
+			"value": "//android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[@content-desc=\"Water\"]"
+		},
+		{
+			"name": "Search",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.EditText[@resource-id=\"searchBarTestId\"]"
+		},
+		{
+			"name": "SelectBiller",
+			"locator": "xpath",
+			"value": " //android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.TextView[contains(@text,\"Pimpri Chinchwad\")]"
+		},
+		{
+			"name": "ConsumerID",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[contains(@content-desc,\"Consumer id\")]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.EditText"
+		},
+		{
+			"name": "PendingBillsCheckBox",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@resource-id=\"checkBoxIconView\"]"
+		},
+		{
+			"name": "Continue",
+			"locator": "xpath",
+			"value": "//android.widget.Button[contains(@content-desc,\"Continue\")]"
+		},
+		{
+			"name": "AmountTextBox",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[@content-desc=\"100.00\"]/android.view.ViewGroup[2]/android.widget.TextView"
+		},
+		{
+			"name": "ContinuePayment",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "TPIN",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@text=\"4 digit Transaction PIN \"]"
+		},
+		{
+			"name": "TpinText",
+			"locator": "xpath",
+			"value": "//android.widget.EditText"
+		},
+		{
+			"name": "TPINContinue",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "ContinuePayment",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "TPIN",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@text=\"4 digit Transaction PIN \"]"
+		},
+		{
+			"name": "TpinText",
+			"locator": "xpath",
+			"value": "//android.widget.EditText"
+		},
+		{
+			"name": "TPINContinue",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "PaymentConfirmation",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView"
+		}
+	],
+	"BharatPayCableTV":[
+		{
+			"name": "CableTV",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[@content-desc=\"Cable TV\"]"
+		},
+		{
+			"name": "Search",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.EditText[@resource-id=\"searchBarTestId\"]"
+		},
+		{
+			"name": "SelectBiller",
+			"locator": "xpath",
+			"value": "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.TextView[contains(@text,\"Hathway Digital\")]"
+		},
+		{
+			"name": "ConsumerID",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[contains(@content-desc,\"Account No\")]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.EditText"
+		},
+		{
+			"name": "PendingBillsCheckBox",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@resource-id=\"checkBoxIconView\"]"
+		},
+		{
+			"name": "Continue",
+			"locator": "xpath",
+			"value": "//android.widget.Button[contains(@content-desc,\"Continue\")]"
+		},
+		{
+			"name": "ContinuePayment",
+			"locator": "xpath",
+			"value": "//android.widget.Button[contains(@content-desc,\"Continue\")]"
+		},
+		{
+			"name": "TPIN",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@text=\"4 digit Transaction PIN \"]"
+		},
+		{
+			"name": "TpinText",
+			"locator": "xpath",
+			"value": "//android.widget.EditText"
+		},
+		{
+			"name": "TPINContinue",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "ContinuePayment",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "PaymentConfirmation",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView"
+		}
+	],
+	"BharatPayBroadband":[
+		{
+			"name": "Broadband",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[@content-desc=\"Broadband Postpaid\"]"
+		},
+		{
+			"name": "Search",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.EditText[@resource-id=\"searchBarTestId\"]"
+		},
+		{
+			"name": "SelectBiller",
+			"locator": "xpath",
+			"value": "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.TextView[contains(@text,\"Connect Broadband\")]"
+		},
+		{
+			"name": "DirectoryNumber",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[contains(@content-desc,\"Directory\")]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.EditText"
+		},
+		{
+			"name": "PendingBillsCheckBox",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@resource-id=\"checkBoxIconView\"]"
+		},
+		{
+			"name": "Continue",
+			"locator": "xpath",
+			"value": "//android.widget.Button[contains(@content-desc,\"Continue\")]"
+		},
+		{
+			"name": "ContinuePayment",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "TPIN",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@text=\"4 digit Transaction PIN \"]"
+		},
+		{
+			"name": "TpinText",
+			"locator": "xpath",
+			"value": "//android.widget.EditText"
+		},
+		{
+			"name": "TPINContinue",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "ContinuePayment",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "TPIN",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@text=\"4 digit Transaction PIN \"]"
+		},
+		{
+			"name": "TpinText",
+			"locator": "xpath",
+			"value": "//android.widget.EditText"
+		},
+		{
+			"name": "TPINContinue",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "PaymentConfirmation",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView"
+		}
+	],
+	"BharatPayLandline":[
+		{
+			"name": "LandlinePostpaid",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[@content-desc=\"Landline Postpaid\"]"
+		},
+		{
+			"name": "Search",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.EditText[@resource-id=\"searchBarTestId\"]"
+		},
+		{
+			"name": "SelectBiller",
+			"locator": "xpath",
+			"value": "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.TextView[contains(@text,\"Mahanagar Telephone Nigam\")]"
+		},
+		{
+			"name": "TelephoneNumber",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[contains(@content-desc,\"Telephone Number\")]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.EditText"
+					 
+		},
+		{
+			"name": "AccountNumber",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[contains(@content-desc,\"Account Number\")]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.EditText"
+					 
+		},
+		{
+			"name": "PendingBillsCheckBox",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@resource-id=\"checkBoxIconView\"]"
+		},
+		{
+			"name": "Continue",
+			"locator": "xpath",
+			"value": "//android.widget.Button[contains(@content-desc,\"Continue\")]"
+		},
+		{
+			"name": "ContinuePayment",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "TPIN",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@text=\"4 digit Transaction PIN \"]"
+		},
+		{
+			"name": "TpinText",
+			"locator": "xpath",
+			"value": "//android.widget.EditText"
+		},
+		{
+			"name": "TPINContinue",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "ContinuePayment",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "PaymentConfirmation",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView"
+		}
+	],
+	"BharatPayDTH":[
+		{
+			"name": "DTH",
+			"locator": "xpath",
+			"value": "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[@content-desc=\"DTH\"]"
+		},
+		{
+			"name": "Search",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.EditText[@resource-id=\"searchBarTestId\"]"
+		},
+		{
+			"name": "SelectBiller",
+			"locator": "xpath",
+			"value": "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.TextView[contains(@text,\"Tata Sky Limited\")]"
+		},
+		{
+			"name": "SubscriberNumber",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[contains(@content-desc,\"Subscriber\")]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.EditText"
+		},
+		{
+			"name": "Continue",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "ContinuePayment",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "TPIN",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@text=\"4 digit Transaction PIN \"]"
+		},
+		{
+			"name": "TpinText",
+			"locator": "xpath",
+			"value": "//android.widget.EditText"
+		},
+		{
+			"name": "TPINContinue",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "ContinuePayment",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "TPIN",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@text=\"4 digit Transaction PIN \"]"
+		},
+		{
+			"name": "TpinText",
+			"locator": "xpath",
+			"value": "//android.widget.EditText"
+		},
+		{
+			"name": "TPINContinue",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "PaymentConfirmation",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView"
+		}
+	],
+	"BharatPayRecharge":[
+		{
+			"name": "RechargeSection",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Recharge\"]"
+		}
+	],
+	"BharatPayFastag":[
+		{
+			"name": "Fastag",
+			"locator": "xpath",
+			"value": "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[@content-desc=\"Fastag\"]"
+		},
+		{
+			"name": "Search",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.EditText[@resource-id=\"searchBarTestId\"]"
+		},
+		{
+			"name": "SelectBiller",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[contains(@content-desc,\"Indian Highways Management Company\") and @resource-id=\"continueButton\"]"
+		},
+		{
+			"name": "VehicleNumber",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[contains(@content-desc,\"Vehicle\")]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.EditText"
+		},
+		{
+			"name": "Continue",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "ContinuePayment",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "TPIN",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@text=\"4 digit Transaction PIN \"]"
+		},
+		{
+			"name": "TpinText",
+			"locator": "xpath",
+			"value": "//android.widget.EditText"
+		},
+		{
+			"name": "TPINContinue",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "ContinuePayment",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "TPIN",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@text=\"4 digit Transaction PIN \"]"
+		},
+		{
+			"name": "TpinText",
+			"locator": "xpath",
+			"value": "//android.widget.EditText"
+		},
+		{
+			"name": "TPINContinue",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "PaymentConfirmation",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView"
+		},
+		{
+			"name": "PaymentAmount",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView[2]"
+		},		
+		{
+			"name": "PaymentBillerDetailsName",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView[2]"
+		},
+		{
+			"name": "PaymentBillerDetailsConsumerID",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView[2]"
+		},
+		{
+			"name": "PaymentTransactionID",
+			"locator": "xpath",
+			"value": "android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView[2]"
+		},
+		{
+			"name": "PaymentBBPSRefNo",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView[2]"
+		},
+		{
+			"name": "PaymentID",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[3]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView[2]"
+		},
+		{
+			"name": "TechnicalAlert",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Okay\"]"
+		},
+		{
+			"name": "ProviderList",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView[2]"
+		},
+		{
+			"name": "TextBoxField",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[contains(@content-desc,\"Vehicle Registration Number\")]/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView"
+		},
+		{
+			"name": "DropDownAccount",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[contains(@content-desc,\"Select Account\")]/android.widget.TextView[1]"
+		},
+		{
+			"name": "SavingAccount",
+			"locator": "xpath",
+			"value": "//android.widget.Button[contains(@content-desc,\"VIJAY's Savings Account\")]"
+		}
+	],
+	"BharatPaySubscription":[
+		{
+			"name": "Subscription",
+			"locator": "xpath",
+			"value": "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[@content-desc=\"Subscription\"]"
+		},
+		{
+			"name": "Search",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.EditText[@resource-id=\"searchBarTestId\"]"
+		},
+		{
+			"name": "SelectBiller",
+			"locator": "xpath",
+			"value": "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.TextView[contains(@text,\"IBADAT\")]"
+		},
+		{
+			"name": "EmailID",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[contains(@content-desc,\"EMAIL ID\")]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.EditText"
+		},
+		{
+			"name": "Continue",
+			"locator": "xpath",
+			"value": "//android.widget.Button[contains(@content-desc,\"Continue\")]"
+		},
+		{
+			"name": "ContinuePayment",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "TPIN",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@text=\"4 digit Transaction PIN \"]"
+		},
+		{
+			"name": "TpinText",
+			"locator": "xpath",
+			"value": "//android.widget.EditText"
+		},
+		{
+			"name": "TPINContinue",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "PaymentConfirmation",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView"
+		}
+	],
+	"BharatPayFinancial":[
+		{
+			"name": "FinancialSection",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\"][@text=\"Financial Services\"]"
+		}
+	],
+	"BharatPayFinancialCreditCard":[
+		{
+			"name": "CreditCard",
+			"locator": "xpath",
+			"value": "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[@content-desc=\"Credit Card\"]"
+		},
+		{
+			"name": "Search",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.EditText[@resource-id=\"searchBarTestId\"]"
+		},
+		{
+			"name": "SelectBiller",
+			"locator": "xpath",
+			"value": "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.TextView[contains(@text,\"BoB Credit\")]"
+		},
+		{
+			"name": "RegisterMobileNo",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[contains(@content-desc,\"Registered Mobile Number\")]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.EditText"
+		},
+		{
+			"name": "CCNumber",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[contains(@content-desc,\"Last 4 digits\")]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.EditText"
+		},
+		{
+			"name": "PendingBillsCheckBox",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@resource-id=\"checkBoxIconView\"]"
+		},
+		{
+			"name": "Continue",
+			"locator": "xpath",
+			"value": "//android.widget.Button[contains(@content-desc,\"Continue\")]"
+		},
+		{
+			"name": "ContinuePayment",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "TPIN",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@text=\"4 digit Transaction PIN \"]"
+		},
+		{
+			"name": "TpinText",
+			"locator": "xpath",
+			"value": "//android.widget.EditText"
+		},
+		{
+			"name": "TPINContinue",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "PaymentConfirmation",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView"
+		}
+	],
+	"BharatPayFinancialRecurringDeposit":[
+		{
+			"name": "RecurringDeposit",
+			"locator": "xpath",
+			"value": "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[@content-desc=\"Recurring Deposit\"]"
+		},
+		{
+			"name": "Search",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.EditText[@resource-id=\"searchBarTestId\"]"
+		},
+		{
+			"name": "SelectBiller",
+			"locator": "xpath",
+			"value": "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.TextView[contains(@text,\"Sakthi\")]"
+		},
+		{
+			"name": "SubscriptionID",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[contains(@content-desc,\"Subscription\")]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.EditText"
+		},
+		{
+			"name": "PendingBillsCheckBox",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@resource-id=\"checkBoxIconView\"]"
+		},
+		{
+			"name": "Continue",
+			"locator": "xpath",
+			"value": "//android.widget.Button[contains(@content-desc,\"Continue\")]"
+		},
+		{
+			"name": "ContinuePayment",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "TPIN",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@text=\"4 digit Transaction PIN \"]"
+		},
+		{
+			"name": "TpinText",
+			"locator": "xpath",
+			"value": "//android.widget.EditText"
+		},
+		{
+			"name": "TPINContinue",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "ContinuePayment",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "TPIN",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@text=\"4 digit Transaction PIN \"]"
+		},
+		{
+			"name": "TpinText",
+			"locator": "xpath",
+			"value": "//android.widget.EditText"
+		},
+		{
+			"name": "TPINContinue",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "PaymentConfirmation",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView"
+		}
+	],
+	
+	"BharatPayFinancialMunicipalTaxes":[
+		{
+			"name": "MunicipalTaxes",
+			"locator": "xpath",
+			"value": "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[@content-desc=\"Municipal Taxes\"]"
+		},
+		{
+			"name": "Search",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.EditText[@resource-id=\"searchBarTestId\"]"
+		},
+		{
+			"name": "SelectBiller",
+			"locator": "xpath",
+			"value": "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.TextView[contains(@text,\"Gulbarga\")]"
+		},
+		{
+			"name": "PropertyID",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[contains(@content-desc,\"Property\")]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.EditText"
+		},
+		{
+			"name": "PendingBillsCheckBox",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@resource-id=\"checkBoxIconView\"]"
+		},
+		{
+			"name": "Continue",
+			"locator": "xpath",
+			"value": "//android.widget.Button[contains(@content-desc,\"Continue\")]"
+		},
+		{
+			"name": "ContinuePayment",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "TPIN",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@text=\"4 digit Transaction PIN \"]"
+		},
+		{
+			"name": "TpinText",
+			"locator": "xpath",
+			"value": "//android.widget.EditText"
+		},
+		{
+			"name": "TPINContinue",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "ContinuePayment",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "TPIN",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@text=\"4 digit Transaction PIN \"]"
+		},
+		{
+			"name": "TpinText",
+			"locator": "xpath",
+			"value": "//android.widget.EditText"
+		},
+		{
+			"name": "TPINContinue",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "PaymentConfirmation",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView"
+		}
+	],
+	"BharatPayOthers":[
+		{
+			"name": "OthersServices",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\"][@text=\"Others\"]"
+		}
+	],
+	"BharatPayOthersHousingSociety":[
+		{
+			"name": "HousingSociety",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[@content-desc=\"Housing Society\"]"
+		},
+		{
+			"name": "Search",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.EditText[@resource-id=\"searchBarTestId\"]"
+		},
+		{
+			"name": "SelectBiller",
+			"locator": "xpath",
+			"value": "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.TextView[contains(@text,\"SAFAL PARISAR\")]"
+		},
+		{
+			"name": "FlatNo",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[contains(@content-desc,\"Flat\")]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.EditText"
+		},
+		{
+			"name": "Block",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[contains(@content-desc,\"Block\")]/android.view.ViewGroup/android.view.ViewGroup[2]"
+		},
+		{
+			"name": "PendingBillsCheckBox",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@resource-id=\"checkBoxIconView\"]"
+		},
+		{
+			"name": "Continue",
+			"locator": "xpath",
+			"value": "//android.widget.Button[contains(@content-desc,\"Continue\")]"
+		},
+		{
+			"name": "ContinuePayment",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "TPIN",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@text=\"4 digit Transaction PIN \"]"
+		},
+		{
+			"name": "TpinText",
+			"locator": "xpath",
+			"value": "//android.widget.EditText"
+		},
+		{
+			"name": "TPINContinue",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "PaymentConfirmation",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView"
+		}
+	],
+	"BharatPayPage":[
+		{
+			"name": "Complaints",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView[1]"
+		},
+		{
+			"name": "ComplaintsPage",
+			"locator":"xpath",
+			"value":"//android.view.View[@content-desc=\"Register Complaint\"]/android.view.ViewGroup/android.widget.TextView"
+		},
+		{
+			"name": "TrackComplaintsTab",
+			"locator":"xpath",
+			"value":"//android.view.View[@content-desc=\"Track Complaint\"]"
+		}
+	],
+	"BharatPayPageComplaints":[
+		{
+			"name": "Complaints",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView[1]"
+		},
+		{
+			"name": "ComplaintReason",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[@content-desc=\"Complaint Reason\"]/android.view.ViewGroup"
+		},
+		{
+			"name": "ComplaintReasonSelection",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[@content-desc=\"Amount deducted multiple times\"]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView"
+		},
+		{
+			"name": "EnterBBPSPaymentID",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[contains(@content-desc,\"Enter BBPS Payment ID\")]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.EditText"
+		},
+		{
+			"name": "EnterRemarks",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[contains(@content-desc,\"Remarks\")]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.EditText"
+		},
+		{
+			"name": "RaiseComplaint",
+			"locator":"xpath",
+			"value":"//android.widget.Button[@content-desc=\"Raise Complaint\"]"
+		},
+		{
+			"name": "ConfirmationPage",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[2]/android.widget.TextView[2]"
+		},
+		{
+			"name": "BillPayments",
+			"locator": "xpath",
+			"value": "//android.widget.Button[contains(@content-desc,\"Bill Payments\")]"
+		}	
+	],
+"BharatPayTrackComplaints":[
+		{
+			"name": "ComplaintsID",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[contains(@content-desc,\"Complaint ID\")]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.EditText"
+		},	
+		{
+			"name": "SubmitTrackComplaint",
+			"locator":"xpath",
+			"value":"//android.widget.Button[contains(@content-desc,\"Submit\")]"
+		},
+		{
+			"name": "Duration",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[@content-desc=\"Duration\"]/android.view.ViewGroup[1]"
+		},
+		{
+        	"name": "StartDate",
+        	"locator":"xpath",
+        	"value": "//android.view.ViewGroup[contains(@content-desc,\" Start Date\")]"
+        },
+        {
+        	"name": "EndDate",
+        	"locator":"xpath",
+        	"value": "//android.view.ViewGroup[contains(@content-desc,\" End Date\")]"
+        },
+        {
+        	"locator":"xpath",
+        	"name": "DateSelection",
+        	"value": "//android.widget.Button[contains(@content-desc,\"today\")]/android.widget.TextView"
+        }
+	],
+"PMJJBY":[
+		{
+			"name": "ApplyNow",
+			"locator":"xpath",
+			"value":"//android.widget.Button[@content-desc=\"Apply Now\"]"
+		},
+		{
+			"name": "Terms&Conditions",
+			"locator":"xpath",
+			"value":"//android.widget.Button[@content-desc=\"I accept\"]"
+		},
+		{
+			"name": "ChangeNominee",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[@content-desc=\"Change\"]/android.widget.TextView"
+		},
+		{
+			"name": "NomineeName",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[contains(@content-desc,\"Nominee Name , Nominee Name\")]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.EditText"
+		},
+		{
+			"name": "NomineeDOB",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[contains(@content-desc,\"Date of Birth\")]/android.view.ViewGroup/android.widget.Button"
+		},
+		{
+			"name": "NomineeDOBYear",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[starts-with(@content-desc,\"202\")]/android.widget.TextView"
+		},
+		{
+			"name": "PreviousYear",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[@content-desc=\"Previous\"]"
+		},
+		{
+			"name": "NomineeYear",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[@index=\"14\"]"
+		},
+		{
+			"name": "NomineeMonth",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[@index=\"16\"]"
+		},
+		{
+			"name": "NomineeDay",
+			"locator":"xpath",
+			"value":"//android.widget.Button[contains(@content-desc,\"23\")]/android.widget.TextView"
+		},
+		{
+			"name": "Relationship",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[contains(@content-desc,\"Relationship\")]"
+		},
+		{
+			"name": "NomineeRelationship",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[4]"
+		},
+		{
+			"name": "Submit",
+			"locator":"xpath",
+			"value":"//android.widget.Button[@content-desc=\"Submit\"]"
+		},
+		{
+			"name": "Confirm&Pay",
+			"locator":"xpath",
+			"value":"//android.widget.Button[@content-desc=\"Confirm and Pay\"]"
+		},
+		{
+			"name": "TPIN",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@text=\"4 digit Transaction PIN \"]"
+		},
+		{
+			"name": "TpinText",
+			"locator": "xpath",
+			"value": "//android.widget.EditText"
+		},
+		{
+			"name": "TPINContinue",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "StartDate",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[4]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.widget.TextView[1]"
+		},
+		{
+			"name": "EndDate",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[4]/android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.widget.TextView[1]"
+		},
+		{
+			"name": "SumAssured",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[4]/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView[1]"
+		},
+		{
+			"name": "Premium",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[4]/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.widget.TextView[1]"
+		},
+		{
+			"name": "PaymentConfirmation",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView"
+		}
+	],
+"FisdomPage": [
+		{
+			"name": "Declaration",
+			"locator": "xpath",
+			"value": "(//android.widget.TextView[@text=\"󰄱\"])[1]"
+		},
+		{
+			"name": "Continue",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		}, 
+		{
+			"name": "FisdomLogin",
+			"locator": "xpath",
+			"value": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.TextView[1]"
+		},
+		{
+			"name": "LoginPin1",
+			"locator": "xpath",
+			"value": "//android.widget.LinearLayout/android.view.ViewGroup/android.widget.EditText"
+		},
+		{
+			"name": "LoginPin2",
+			"locator": "xpath",
+			"value": "android.widget.LinearLayout/android.view.ViewGroup/android.widget.TextView[2]"
+		},
+		{
+			"name": "LoginPin3",
+			"locator": "xpath",
+			"value": "android.widget.LinearLayout/android.view.ViewGroup/android.widget.TextView[3]"
+		},
+		{
+			"name": "LoginPin4",
+			"locator": "xpath",
+			"value": "android.widget.LinearLayout/android.view.ViewGroup/android.widget.TextView[4]"
+		}
+	],
+"BharatPayPrepaid": [
+		{
+			"name": "MobilePrepaid",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[@content-desc=\"Mobile Prepaid\"]"
+		},
+		{
+			"name": "AllowPermission",
+			"locator": "xpath",
+			"value": "//android.widget.Button[1][@resource-id=\"com.android.permissioncontroller:id/permission_allow_button\"]"
+		},
+		{
+			"name": "Search",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[contains(@content-desc,\"Enter a name or a phone number\")]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.EditText"
+		}, 
+		{
+			"name": "EnteredNumber",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[contains(@content-desc,\"8369434012\")][2]"
+		},
+		{
+			"name": "SelectPlan",
+			"locator": "xpath",
+			"value": "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.widget.RadioButton"
+		},
+		{
+			"name": "Continue",
+			"locator": "xpath",
+			"value": " //android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "Submit",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Submit button\"]"
+		},
+		{
+			"name": "TPIN",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@text=\"4 digit Transaction PIN \"]"
+		},
+		{
+			"name": "TpinText",
+			"locator": "xpath",
+			"value": "//android.widget.EditText"
+		},
+		{
+			"name": "TPINContinue",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		}
+	],
+"PMSBY": [
+		{
+			"name": "ApplyNow",
+			"locator":"xpath",
+			"value":"//android.widget.Button[@content-desc=\"Apply Now\"]"
+		},
+		{
+			"name": "Terms&Conditions",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.widget.TextView"
+		},
+		{
+			"name": "DownloadT&C",
+			"locator":"xpath",
+			"value":"//android.widget.Button[@content-desc=\"Download T&C\"]"
+		},
+		{
+			"name": "AllowPermission",
+			"locator":"xpath",
+			"value":"//android.widget.Button[@resource-id=\"com.android.permissioncontroller:id/permission_allow_button\"]"
+		},
+		{
+			"name": "T&CAccept",
+			"locator":"xpath",
+			"value":"//android.widget.Button[@content-desc=\"I accept\"]"
+		},
+		{
+			"name": "AccountName",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[contains(@content-desc,\"Account Name\")]/android.view.ViewGroup"
+		},
+		{
+			"name": "SelectAccount",
+			"locator":"xpath",
+			"value":"//android.widget.TextView[1][@text=\"Select an Account\"]"
+		},
+		{
+			"name": "CustomerName",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[2]/android.widget.TextView[2]"
+		},
+		{
+			"name": "ChangeNominee",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[@content-desc=\"Change\"]/android.widget.TextView"
+		},
+		{
+			"name": "NomineeName",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[contains(@content-desc,\"Nominee Name , Nominee Name\")]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.EditText"
+		},
+		{
+			"name": "NomineeDOB",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[contains(@content-desc,\"Date of Birth\")]/android.view.ViewGroup/android.widget.Button"
+		},
+		{
+			"name": "NomineeDOBYear",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[starts-with(@content-desc,\"202\")]/android.widget.TextView"
+		},
+		{
+			"name": "PreviousYear",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[@content-desc=\"Previous\"]"
+		},
+		{
+			"name": "NomineeYear",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[@index=\"14\"]"
+		},
+		{
+			"name": "NomineeMonth",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[@index=\"16\"]"
+		},
+		{
+			"name": "NomineeDay",
+			"locator":"xpath",
+			"value":"//android.widget.Button[contains(@content-desc,\"23\")]/android.widget.TextView"
+		},
+		{
+			"name": "Relationship",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[contains(@content-desc,\"Relationship\")]"
+		},
+		{
+			"name": "NomineeRelationship",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[4]"
+		},
+		{
+			"name": "TextField",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[6]/android.view.ViewGroup[1]/android.widget.TextView"
+		},
+		{
+			"name": "YRadioButton",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[6]/android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.widget.TextView"
+		},
+		{
+			"name": "NRadioButton",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[6]/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.widget.TextView"
+		},
+		{
+			"name": "ButtonField",
+			"locator":"xpath",
+			"value":"//android.widget.Button[@content-desc=\"Submit\"]/android.widget.TextView"
+		},
+		{
+			"name": "NoForSpeciallyAbled",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[6]/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.widget.RadioButton"
+		},
+		{
+			"name": "SubmitForm",
+			"locator":"xpath",
+			"value":"//android.widget.Button[@content-desc=\"Submit\"]"
+		},
+		{
+			"name": "Confirm&Pay",
+			"locator":"xpath",
+			"value":"//android.widget.Button[@content-desc=\"Confirm and Pay\"]"
+		},
+		{
+			"name": "TPIN",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@text=\"4 digit Transaction PIN \"]"
+		},
+		{
+			"name": "TpinText",
+			"locator": "xpath",
+			"value": "//android.widget.EditText"
+		},
+		{
+			"name": "TPINContinue",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		}
+	]
+}		

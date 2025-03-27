@@ -1,0 +1,1 @@
+{"errorId":"1acb99a9-e430-4abe-b8dc-1464d4e80b00","errorAt":"2024-12-27T14:26:39.989980886","errorLocation":null,"error":null,"errors":[{"code":"BAD_REQUEST","message":"#: required key [channelId] not found, #: required key [cif] not found","values":null,"origmesg":null,"errors":null}]}

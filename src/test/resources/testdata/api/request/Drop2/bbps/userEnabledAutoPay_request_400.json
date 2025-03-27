@@ -1,0 +1,15 @@
+{
+    "cif1":"264479335",
+    "billerAccountId":"HGA2A4142AAAAAAAHMQ3",
+    "autopay_status": "N",
+    "metadata": {
+        "agent": {
+            "agentid": "UN01UN02INB000000001"
+        },
+        "device": {
+            "init_channel": "InternetBanking",
+            "ip": "124.124.1.1",
+            "mac": "11-AC-58-21-1B-AA"
+        }
+    }
+}

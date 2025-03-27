@@ -1,0 +1,16 @@
+{
+  "data": [
+    {
+      "ifscCode": "SBIN0001594",
+      "activeFlag": true,
+      "bankName": "STATE BANK OF INDIA",
+      "branchCity": ".",
+      "branchName": "MAROL (MRL)(1594)",
+      "branchState": ".",
+      "id": "c53ba2b3-166d-4cac-a776-49a6cc28dc31",
+      "unionBankFlag": null
+    }
+  ],
+  "errorDetails": null,
+  "success": true
+}

@@ -1,0 +1,13 @@
+{
+    "response": {
+        "message": "Perfect ! Your Customer ID is now verified.",
+        "accounts": [
+            "566802070000723",
+            "520111000025867",
+            "635302010013118",
+            "520111123620135"
+        ],
+        "cif": "634743268"
+    },
+    "respcode": "200"
+}

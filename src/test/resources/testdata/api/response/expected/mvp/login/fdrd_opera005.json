@@ -1,0 +1,9 @@
+{
+    "deviceid": "OPERA005",
+    "simdata": "OPERA00501|0|1",
+    "loginpin": "ed946f65d2c785d90e827c5ffd879ce3b49c68d4c88013074176a7e73bc58bcf",
+    "sessionexpiry": 30,
+    "allowedfailure": 3,
+    "loginpinexpiry": 1000,
+    "loginwithbiometric": false
+}

@@ -1,0 +1,19 @@
+{
+  "chqdet": [
+    {
+      "solId": "47380",
+      "chequeNumber": "",
+      "chequeDate": "",
+      "chequeAmount": "152",
+      "chequeStatus": "R"
+    },
+    {
+      "solId": "47380",
+      "chequeNumber": "",
+      "chequeDate": "",
+      "chequeAmount": "754",
+      "chequeStatus": "R"
+    }
+  ],
+  "successOrFailure": "S"
+}

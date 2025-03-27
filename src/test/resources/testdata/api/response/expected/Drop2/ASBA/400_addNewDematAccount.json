@@ -1,0 +1,9 @@
+{
+  "errorId": "e30538a3-fcae-4071-a908-e44826d18540",
+  "errorAt": "2025-02-12T12:33:20.294186001",
+  "error": {
+    "code": "BAD_REQUEST",
+    "title": "Validation failed for argument at index 0 in method: public reactor.core.publisher.Mono<com.ubi.dbp.investments.asba.model.AddDematAccountResponse> com.ubi.dbp.investments.asba.controller.BffAsbaController.addNewDematAccount(com.ubi.dbp.investments.asba.model.request.AddDematAccountRequest,java.lang.String) throws java.lang.Exception, with 2 error(s): [Field error in object 'addDematAccountRequest' on field 'dpId': rejected value [!@#$%^&*(*&^T^&]; codes [Pattern.addDematAccountRequest.dpId,Pattern.dpId,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [addDematAccountRequest.dpId,dpId]; arguments []; default message [dpId],[Ljakarta.validation.constraints.Pattern$Flag;@3743926b,^[a-zA-Z0-9]+$]; default message [ should be only alpha numeric]] [Field error in object 'addDematAccountRequest' on field 'clientId': rejected value [%^&*()(*&^%$]; codes [Pattern.addDematAccountRequest.clientId,Pattern.clientId,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [addDematAccountRequest.clientId,clientId]; arguments []; default message [clientId],[Ljakarta.validation.constraints.Pattern$Flag;@3743926b,^[a-zA-Z0-9]+$]; default message [ should be only alpha numeric]] ",
+    "description": null
+  }
+}

@@ -1,0 +1,19 @@
+{
+    "code": "00",
+    "result": "SUCCESS",
+    "data": "",
+    "checksum": null,
+    "errorDesc": null,
+    "uidaiTxnDetails": {
+        "ts": "2025-01-13T14:57:49.927+05:30",
+        "txnid": "UBIf0465350fe904fec9682225fe44caf44"
+    },
+    "credsDetails": {
+        "atmpinFormat": "FORMAT3|FORMAT2",
+        "otpFormat": "NUM",
+        "otpLength": "6",
+        "atmLength": "4",
+        "dLength": "4",
+        "dType": "NUM"
+    }
+}

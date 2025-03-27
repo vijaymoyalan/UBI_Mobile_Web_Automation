@@ -1,0 +1,15 @@
+{
+  "errorId": "bea2733c-12ea-4d28-96fd-c1c833b281da",
+  "errorAt": "2025-02-05T12:21:18.368466919",
+  "errorLocation": null,
+  "error": null,
+  "errors": [
+    {
+      "code": "METHOD_NOT_ALLOWED",
+      "message": "Method Not Allowed",
+      "values": null,
+      "origmesg": null,
+      "errors": null
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "success": true,
+  "errorDetails": null,
+  "acctNum": "000110100121461",
+  "data": [
+    {
+      "cardAccNum": "3536050100000183",
+      "domAtmLimit": "2000",
+      "intlAtmLimit": "5000",
+      "ecafFlag": "Y",
+      "domPosTotalLmt": "5000",
+      "intlPosTotalLmt": "5000",
+      "domEcomTotLmt": "5000",
+      "intlEcomTotLmt": "5000",
+      "domContactLessTotLimit": "5000",
+      "intlContactLessTotLimit": "5000",
+      "nfcTxnDet": {
+        "domesticFlag": "N",
+        "internationalFlag": "N"
+      },
+      "ecomTxnDet": {
+        "domesticFlag": "Y",
+        "internationalFlag": "Y"
+      },
+      "atmTxnDet": {
+        "domesticFlag": "N",
+        "internationalFlag": "N"
+      },
+      "posTxnDetails": {
+        "domesticFlag": "N",
+        "internationalFlag": "N"
+      },
+      "cardDetails": {
+        "cardType": "Visa Debit",
+        "cardStatus": "Active",
+        "pinOffSet": "7391            ",
+        "totalWithdrawalLimit": "50000",
+        "offlineWithdrawalLimit": "0",
+        "totalCCALimit": "0",
+        "offlineCCALimit": "0",
+        "aggregateLimit": "50000",
+        "offlineAggregateLimit": "0",
+        "expirationDate": "2807",
+        "effectiveDate": "0000",
+        "secondaryCardData": null,
+        "isVirtual": false,
+        "isNcmc": true
+      },
+      "atmSegmentInfo": {
+        "usageLimit": "9999",
+        "totalWithdrawalLimit": "25000",
+        "offlineWithdrawalLimit": "0",
+        "totalCCALimit": "0",
+        "offlineCCALimit": "0",
+        "depositCreditLimit": "0",
+        "issuerTransactionProfile": "                "
+      },
+      "cafPosSegmentInfo": {
+        "totalPurchaseLimit": "50000",
+        "offlinePurchaseLimit": "0",
+        "totalCCALimit": "0",
+        "offlineCCALimit": "0",
+        "totalWithdrawalLimit": "50000",
+        "offlineWithdrawalLimit": "0",
+        "usageLimit": "9999",
+        "totalRefundLimit": "0",
+        "offlineRefundLimit": "0",
+        "reasonCode": " ",
+        "issuerTransactionProfile": "                "
+      }
+    }
+  ]
+}

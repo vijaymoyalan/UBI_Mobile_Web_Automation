@@ -1,0 +1,22 @@
+{
+   "cif": "273026378",
+   "accountNumber": "553902010008422",
+   "transactionId": "487764676914",
+   "customerName": "UMA CHANUMOLU",
+   "contributionAmountTierI": 1257.00,
+   "contributionAmountTierII": 22548.00,
+   "debitAccountNumber": "553902010008422",
+   "tierIRemarks": "Investment 1",
+   "tierIIRemarks": "Investment 2",
+   "status": null,
+   "paymentTxnId": null,
+   "openingDate": "2025-01-10T18:24:00.738",
+   "contributionCharges": 86.3700,
+   "gstAmount": 51.5466,
+   "totalAmountDebited": 24143,
+   "paymentTxnDate": "2025-01-10T18:24:00.761",
+   "pran": "110159502785",
+   "oneTimeRegistrationCharges": 200,
+   "methodOfReceivingCard": "Physical PRAN Card along with Welcome Kit",
+   "welcomeKitAmount": 40.00
+}

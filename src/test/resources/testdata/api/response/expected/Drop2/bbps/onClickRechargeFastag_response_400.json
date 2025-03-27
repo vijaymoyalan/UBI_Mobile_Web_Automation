@@ -1,0 +1,15 @@
+{
+    "errorId": "b8a09690-5167-4a99-82d2-bbd6b1a020ea",
+    "errorAt": "2024-12-18T17:34:12.657977823",
+    "errorLocation": null,
+    "error": null,
+    "errors": [
+        {
+            "code": "400",
+            "message": "Cannot invoke \"com.ubi.bbps.model.request.Recharge.getCif()\" because the return value of \"com.ubi.bbps.model.request.RechargeFrontEndRequest.getRecharge()\" is null",
+            "values": null,
+            "origmesg": null,
+            "errors": null
+        }
+    ]
+}

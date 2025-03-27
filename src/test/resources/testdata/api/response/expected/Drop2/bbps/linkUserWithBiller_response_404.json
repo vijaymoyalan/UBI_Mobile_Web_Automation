@@ -1,0 +1,8 @@
+{
+    "timestamp": "2024-12-20T11:06:29.457+00:00",
+    "path": "/bbps-bff-mobile/api/v1/linkUserWithBiller1",
+    "status": 404,
+    "error": "Not Found",
+    "message": null,
+    "requestId": "63b24918-4409"
+}

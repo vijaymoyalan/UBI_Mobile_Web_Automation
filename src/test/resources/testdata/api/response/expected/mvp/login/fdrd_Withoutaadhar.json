@@ -1,0 +1,10 @@
+{
+    "deviceid": "WITHOUTAADHAR",
+    "simdata": "WITHOUTAADHAR01|0|1",
+    "loginpin": "2580",
+    "sessionexpiry": 30,
+    "allowedfailure": 3,
+    "loginpinexpiry": 90,
+    "logininactivity": "120",
+    "loginwithbiometric": false
+}

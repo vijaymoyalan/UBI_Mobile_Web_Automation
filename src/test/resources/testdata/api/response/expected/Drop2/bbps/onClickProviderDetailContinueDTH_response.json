@@ -1,0 +1,87 @@
+{
+    "header_details": {
+        "service_provider_name": "Tata Sky Limited",
+        "service_provider_logo_url": "https://payments.billdesk.com/hg/images/billerlogo/TATASKY00NAT01.gif"
+    },
+    "payment_details": {
+        "account_details": [
+            {
+                "bank_logo_url": "/wps/wcm/myconnect/805214a1-7bad-4982-a563-9331e5d5593a/ubihome_logo_without+backgroud.png?MOD=AJPERES",
+                "account_holder_name": "UMESH SINGH LUNTHI",
+                "account_type": "SBA",
+                "account_number": "681302010001096",
+                "depositAmount": 0.0
+            },
+            {
+                "bank_logo_url": "/wps/wcm/myconnect/805214a1-7bad-4982-a563-9331e5d5593a/ubihome_logo_without+backgroud.png?MOD=AJPERES",
+                "account_holder_name": "UMESH SINGH LUNTHI",
+                "account_type": "SBA",
+                "account_number": "9509829201",
+                "depositAmount": 0.0
+            },
+            {
+                "bank_logo_url": "/wps/wcm/myconnect/805214a1-7bad-4982-a563-9331e5d5593a/ubihome_logo_without+backgroud.png?MOD=AJPERES",
+                "account_holder_name": "UMESH SINGH LUNTHI",
+                "account_type": "SBA",
+                "account_number": "7200167834",
+                "depositAmount": 0.0
+            },
+            {
+                "bank_logo_url": "/wps/wcm/myconnect/805214a1-7bad-4982-a563-9331e5d5593a/ubihome_logo_without+backgroud.png?MOD=AJPERES",
+                "account_holder_name": "UMESH SINGH LUNTHI",
+                "account_type": "SBA",
+                "account_number": "7376806051",
+                "depositAmount": 0.0
+            },
+            {
+                "bank_logo_url": "/wps/wcm/myconnect/805214a1-7bad-4982-a563-9331e5d5593a/ubihome_logo_without+backgroud.png?MOD=AJPERES",
+                "account_holder_name": "UMESH SINGH LUNTHI",
+                "account_type": "SBA",
+                "account_number": "7379465275",
+                "depositAmount": 0.0
+            },
+            {
+                "bank_logo_url": "/wps/wcm/myconnect/805214a1-7bad-4982-a563-9331e5d5593a/ubihome_logo_without+backgroud.png?MOD=AJPERES",
+                "account_holder_name": "UMESH SINGH LUNTHI",
+                "account_type": "CAA",
+                "account_number": "760101010050101",
+                "depositAmount": 2302736.4
+            },
+            {
+                "bank_logo_url": "/wps/wcm/myconnect/805214a1-7bad-4982-a563-9331e5d5593a/ubihome_logo_without+backgroud.png?MOD=AJPERES",
+                "account_holder_name": "UMESH SINGH LUNTHI",
+                "account_type": "SBA",
+                "account_number": "760102010005500",
+                "depositAmount": 10440.24
+            },
+            {
+                "bank_logo_url": "/wps/wcm/myconnect/805214a1-7bad-4982-a563-9331e5d5593a/ubihome_logo_without+backgroud.png?MOD=AJPERES",
+                "account_holder_name": "UMESH SINGH LUNTHI",
+                "account_type": "SBA",
+                "account_number": "760102010002101",
+                "depositAmount": 7.28
+            },
+            {
+                "bank_logo_url": "/wps/wcm/myconnect/805214a1-7bad-4982-a563-9331e5d5593a/ubihome_logo_without+backgroud.png?MOD=AJPERES",
+                "account_holder_name": "UMESH SINGH LUNTHI",
+                "account_type": "SBA",
+                "account_number": "441002010063745",
+                "depositAmount": 8308.0
+            },
+            {
+                "bank_logo_url": "/wps/wcm/myconnect/805214a1-7bad-4982-a563-9331e5d5593a/ubihome_logo_without+backgroud.png?MOD=AJPERES",
+                "account_holder_name": "UMESH SINGH LUNTHI",
+                "account_type": "SBA",
+                "account_number": "307102070000199",
+                "depositAmount": 1.042730539E7
+            }
+        ],
+        "registered_number": "9028255474",
+        "customer_name": "Rohit"
+    },
+    "dthdetails": {
+        "customerParamName": "Subscriber Number",
+        "customerParamValue": "9028255474",
+        "customerName": "Rohit"
+    }
+}

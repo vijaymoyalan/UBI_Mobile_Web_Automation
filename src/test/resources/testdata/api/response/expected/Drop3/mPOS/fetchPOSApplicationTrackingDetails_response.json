@@ -1,0 +1,29 @@
+{
+    "trackingDetails": {
+        "status": []
+    },
+    "applicationDetails": {
+        "applSubmissionDate": null,
+        "status": null,
+        "shipmentNumber": null,
+        "settlementAccountNum": null,
+        "mid": null,
+        "tid": "",
+        "shipmentAddr": {
+            "addressType": null,
+            "addressline1": null,
+            "addressline2": null,
+            "addressline3": null,
+            "addressline4": null,
+            "postoffice": null,
+            "cityCode": null,
+            "city": null,
+            "districtCode": null,
+            "district": null,
+            "subDistrict": null,
+            "stateCode": null,
+            "state": null,
+            "addressPincode": null
+        }
+    }
+}

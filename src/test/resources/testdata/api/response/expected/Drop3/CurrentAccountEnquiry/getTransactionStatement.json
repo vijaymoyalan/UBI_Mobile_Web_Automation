@@ -1,0 +1,26 @@
+{
+  "totalTransactions": 2,
+  "transactions": {
+    "2024-01-29": [
+      {
+        "transactionparticular": "UPIAR/439509157289/DR/DILIP KU/UBIN/9450733017@ybl",
+        "amount": 1960.0,
+        "creditDebitFlag": "D",
+        "transactionId": "S5520965",
+        "postedDateTime": "2024-01-29T08:48:22",
+        "balAmount": 14.01
+      },
+      {
+        "transactionparticular": "ATM Usage Charges",
+        "amount": 24.78,
+        "creditDebitFlag": "D",
+        "transactionId": "S1755704",
+        "postedDateTime": "2024-01-29T03:49:47",
+        "balAmount": 1974.01
+      }
+    ]
+  },
+  "page": 0,
+  "size": 2,
+  "totalPages": 1
+}

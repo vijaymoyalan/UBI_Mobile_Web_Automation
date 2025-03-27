@@ -1,0 +1,110 @@
+[
+    {
+        "id": null,
+        "cif": "634444396",
+        "acctNum": "510101007081413",
+        "name": "RUPALI PAL",
+        "nickName": null,
+        "acctStatus": {
+            "statusFlg": "A",
+            "freezeCode": ""
+        },
+        "acctBals": null,
+        "scheme": {
+            "code": "CAGEN",
+            "name": null,
+            "type": "CAA"
+        },
+        "bankInfo": {
+            "id": null,
+            "bankId": null,
+            "branchSolId": "30780",
+            "name": null,
+            "branchId": "530786",
+            "branchName": null,
+            "workingDays": null,
+            "workingHrs": null,
+            "address": null
+        },
+        "nominee": null,
+        "acctOpenDate": null,
+        "subscriptionCode": null,
+        "acctType": null,
+        "operatingInstruction": "017",
+        "openingDate": null,
+        "interestRate": null,
+        "activeFlag": null
+    },
+    {
+        "id": null,
+        "cif": "634444396",
+        "acctNum": "127331100000052",
+        "name": "RUPALI PAL",
+        "nickName": null,
+        "acctStatus": {
+            "statusFlg": "A",
+            "freezeCode": ""
+        },
+        "acctBals": null,
+        "scheme": {
+            "code": "SODGN",
+            "name": null,
+            "type": "ODA"
+        },
+        "bankInfo": {
+            "id": null,
+            "bankId": null,
+            "branchSolId": "12731",
+            "name": null,
+            "branchId": "812731",
+            "branchName": null,
+            "workingDays": null,
+            "workingHrs": null,
+            "address": null
+        },
+        "nominee": null,
+        "acctOpenDate": null,
+        "subscriptionCode": null,
+        "acctType": null,
+        "operatingInstruction": "001",
+        "openingDate": null,
+        "interestRate": null,
+        "activeFlag": null
+    },
+    {
+        "id": null,
+        "cif": "634444396",
+        "acctNum": "319101010032536",
+        "name": "RUPALI PAL",
+        "nickName": null,
+        "acctStatus": {
+            "statusFlg": "A",
+            "freezeCode": ""
+        },
+        "acctBals": null,
+        "scheme": {
+            "code": "UCCAN",
+            "name": null,
+            "type": "CAA"
+        },
+        "bankInfo": {
+            "id": null,
+            "bankId": null,
+            "branchSolId": "31910",
+            "name": null,
+            "branchId": "531910",
+            "branchName": null,
+            "workingDays": null,
+            "workingHrs": null,
+            "address": null
+        },
+        "nominee": null,
+        "acctOpenDate": null,
+        "subscriptionCode": null,
+        "acctType": null,
+        "operatingInstruction": "001",
+        "openingDate": null,
+        "interestRate": null,
+        "activeFlag": null
+    }
+]

@@ -1,0 +1,8 @@
+{
+  "timestamp": "2025-02-05T07:01:09.033+00:00",
+  "path": "/msme/v1/generalservice/getTransactionsdsStatement",
+  "status": 404,
+  "error": "Not Found",
+  "message": null,
+  "requestId": "92ad0862-1050"
+}

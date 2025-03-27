@@ -1,0 +1,9 @@
+{
+    "statusCode": 200,
+    "response": {
+        "cif": "634444396",
+        "isEligiblle": true,
+        "maxQuantity": 100
+    },
+    "message": "Data fetched"
+}

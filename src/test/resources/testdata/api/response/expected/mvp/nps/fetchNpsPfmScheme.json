@@ -1,0 +1,44 @@
+{
+    "pfmSchemeDetails": [
+        {
+            "pfmId": "PFM014",
+            "schemeId": "SM014001",
+            "tierType": "Tier I",
+            "id": "637c8bcd-968d-4eb8-a1d5-effbc7d6f17b",
+            "activeFlag": true,
+            "channel": null,
+            "schemeName": "NPS Trust A/C - DSP Pension Fund Managers Private Limited Scheme E - Tier I",
+            "schemetype": "E"
+        },
+        {
+            "pfmId": "PFM014",
+            "schemeId": "SM014002",
+            "tierType": "Tier I",
+            "id": "810c820b-89d9-48f3-92b5-a21173c0d2dc",
+            "activeFlag": true,
+            "channel": null,
+            "schemeName": "NPS Trust A/C - DSP Pension Fund Managers Private Limited Scheme C - Tier I",
+            "schemetype": "C"
+        },
+        {
+            "pfmId": "PFM014",
+            "schemeId": "SM014003",
+            "tierType": "Tier I",
+            "id": "20cfad71-b385-4c3f-83de-b5a404823688",
+            "activeFlag": true,
+            "channel": null,
+            "schemeName": "NPS Trust A/C - DSP Pension Fund Managers Private Limited Scheme G - Tier I",
+            "schemetype": "G"
+        },
+        {
+            "pfmId": "PFM014",
+            "schemeId": "SM014004",
+            "tierType": "Tier I",
+            "id": "0a634186-583d-4f0c-81a9-12066595e65c",
+            "activeFlag": true,
+            "channel": null,
+            "schemeName": "NPS Trust A/C - DSP Pension Fund Managers Private Limited Scheme A - Tier I",
+            "schemetype": "A"
+        }
+    ]
+}

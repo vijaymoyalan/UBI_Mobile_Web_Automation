@@ -1,0 +1,15 @@
+{
+    "errorId": "8bca5a5d-e0ca-4d91-abc9-da84eb379675",
+    "errorAt": "2024-12-27T16:54:20.068404765",
+    "errorLocation": "cbs-account-query-service",
+    "errors": [
+        {
+            "code": "ERR_AC_1114",
+            "message": "Selected account is not found in the record.",
+            "errors": {
+                "ErrorCode": "114",
+                "ErrorMessage": "Account not Found"
+            }
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "errorId": "09332757-7bf9-462d-bbfd-327cf661fc9e",
+    "errorAt": "2024-12-13T12:50:25.667168605",
+    "errorLocation": null,
+    "error": null,
+    "errors": [
+        {
+            "code": "BAD_REQUEST",
+            "message": "schemeCode: string [PMJ22JBY] does not match pattern ^(PMJJBY|PMSBY)$, channelId: string [1MB] does not match pattern ^(MB)$",
+            "values": null,
+            "origmesg": null,
+            "errors": null
+        
+}
+    
+]
+}

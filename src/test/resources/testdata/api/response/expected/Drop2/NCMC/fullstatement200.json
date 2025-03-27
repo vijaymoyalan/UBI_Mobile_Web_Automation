@@ -1,0 +1,12 @@
+{
+  "success": true,
+  "errorDetails": null,
+  "traceId": null,
+  "statusCode": "SUCCESS",
+  "statusDescription": "Transactions fetched successfully",
+  "totalTransaction": 0,
+  "txnDetails": [],
+  "page": 1,
+  "size": 50,
+  "totalPages": 0
+}

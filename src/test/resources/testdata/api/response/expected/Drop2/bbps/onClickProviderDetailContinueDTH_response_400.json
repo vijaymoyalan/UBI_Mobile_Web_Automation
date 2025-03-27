@@ -1,0 +1,15 @@
+{
+    "errorId": "02749068-43f3-4b53-8b9e-a9741bc6a9b0",
+    "errorAt": "2024-12-19T11:21:03.015256963",
+    "errorLocation": null,
+    "error": null,
+    "errors": [
+        {
+            "code": null,
+            "message": null,
+            "values": null,
+            "origmesg": null,
+            "errors": null
+        }
+    ]
+}

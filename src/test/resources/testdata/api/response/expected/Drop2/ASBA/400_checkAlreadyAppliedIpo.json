@@ -1,0 +1,9 @@
+{
+  "errorId": "1fc4a408-996d-4b3d-96b2-1e45866e3da1",
+  "errorAt": "2025-01-23T09:18:18.534734466",
+  "error": {
+    "code": "400 BAD_REQUEST",
+    "title": "APPLIED IPO DOES NOT EXISTS",
+    "description": "Applied Ipo does not exists"
+  }
+}

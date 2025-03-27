@@ -1,0 +1,15 @@
+{
+    "errorId": "f4ed3e46-2ae4-4bd0-9dda-cab7ccc4921d",
+    "errorAt": "2024-12-18T17:13:09.134067344",
+    "errorLocation": null,
+    "error": null,
+    "errors": [
+        {
+            "code": "400",
+            "message": "Cannot invoke \"com.ubi.bbps.model.request.Utility.getCif()\" because the return value of \"com.ubi.bbps.model.request.UtilityFrontEndRequest.getUtility()\" is null",
+            "values": null,
+            "origmesg": null,
+            "errors": null
+        }
+    ]
+}

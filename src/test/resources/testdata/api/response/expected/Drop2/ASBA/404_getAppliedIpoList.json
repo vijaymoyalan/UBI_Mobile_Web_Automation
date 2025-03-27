@@ -1,0 +1,9 @@
+{
+  "errorId": "9d9e6abd-34d9-4338-9b29-05351f44a9e9",
+  "errorAt": "2025-02-12T11:53:56.922820681",
+  "error": {
+    "code": "NOT_FOUND",
+    "title": "404 NOT_FOUND \"No static resource asbaservice/getAppliedIpoList1234.\"",
+    "description": null
+  }
+}

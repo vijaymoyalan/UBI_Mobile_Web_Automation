@@ -1,0 +1,54 @@
+{
+  "dematAccountDetailsResponseList": [
+    {
+      "name": "shahman",
+      "dpId": "1234567812545661",
+      "clientId": "0",
+      "depositoryType": "CDSL",
+      "pan": "DSJPK9933C"
+    },
+    {
+      "name": " UAT",
+      "dpId": "1234567891234567",
+      "clientId": "0",
+      "depositoryType": "CDSL",
+      "pan": "DSJPK9933C"
+    },
+    {
+      "name": "CDSL3333",
+      "dpId": "3333333333333333",
+      "clientId": "0",
+      "depositoryType": "CDSL",
+      "pan": "DSJPK9933C"
+    },
+    {
+      "name": "Jalja UAT",
+      "dpId": "4567809879078789",
+      "clientId": "0",
+      "depositoryType": "CDSL",
+      "pan": "DSJPK9933C"
+    },
+    {
+      "name": "Testing 1",
+      "dpId": "9898989898989898",
+      "clientId": "0",
+      "depositoryType": "CDSL",
+      "pan": "DSJPK9933C"
+    },
+    {
+      "name": "Yup",
+      "dpId": "IN121212",
+      "clientId": "22222222",
+      "depositoryType": "NSDL",
+      "pan": "DSJPK9933C"
+    },
+    {
+      "name": "Jalja UAT",
+      "dpId": "4567809879078787",
+      "clientId": "0",
+      "depositoryType": "Sgajs",
+      "pan": "DSJPK9933C"
+    }
+  ],
+  "errorDetails": null
+}

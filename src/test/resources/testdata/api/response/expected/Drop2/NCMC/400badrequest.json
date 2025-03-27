@@ -1,0 +1,9 @@
+{
+  "errorId": "04776d72-ced7-485d-a4c6-d944ec3d4acf",
+  "errorAt": "2024-12-11T22:51:25.997568836",
+  "error": {
+    "code": "BAD_REQUEST",
+    "result": "400 BAD_REQUEST \"Failed to read HTTP message\"",
+    "data": null
+  }
+}

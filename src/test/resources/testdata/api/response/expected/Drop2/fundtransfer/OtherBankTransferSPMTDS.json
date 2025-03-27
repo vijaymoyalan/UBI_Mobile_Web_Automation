@@ -1,0 +1,26 @@
+{
+  "data": {
+    "cif": "254061641",
+    "referenceNumber": "YFUD373965",
+    "amount": 223,
+    "creditAccountNumber": "123456043",
+    "debitAccountNumber": "441002010058664",
+    "creditAccountName": null,
+    "debitAccountName": "HARMANJIT SINGH SO RANJIT SINGH",
+    "frequency": "MONTHLY",
+    "mode": "NEFT",
+    "numberOfTransfer": 3,
+    "initialNumberOfTransfers": "3",
+    "remarks": "TEST RECURRING NEFT",
+    "scheduleDate": "2025-06-05T00:00:00",
+    "scheduleType": "RECURRING",
+    "siStartDate": "2025-06-05T09:33:50.534",
+    "siEndDate": "2025-08-05T09:33:50.534",
+    "status": "SCHEDULED",
+    "trnxTimestamp": "2024-12-04T21:18:49.970735527"
+  },
+  "success": true,
+  "errorMessage": null,
+  "kafkaStatus": "COMPLETED",
+  "correlationId": null
+}

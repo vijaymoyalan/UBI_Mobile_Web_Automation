@@ -1,0 +1,1 @@
+{"errorId":"e069f749-b90c-4091-9c3a-4f7b1727948c","errorAt":"2025-02-12T15:39:03.938327951","error":{"code":"400","title":"","description":"cif: expected minLength: 1, actual: 0, cif: string [] does not match pattern ^\\d+$"}}

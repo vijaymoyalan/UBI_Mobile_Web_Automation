@@ -1,0 +1,8 @@
+{
+    "timestamp": "2024-12-09T07:08:53.970+00:00",
+    "path": "/app/customer/api/v1/getPPFAccountDetails",
+    "status": 404,
+    "error": "Not Found",
+    "message": null,
+    "requestId": "23a4fe7a-6720"
+}

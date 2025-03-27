@@ -1,0 +1,42 @@
+{
+    "transRefNumber": null,
+    "success": null,
+    "status": null,
+    "cif": "1000000373",
+    "custName": "SADHANA ENVIRO ENGINEERING SERVICES",
+    "accountNumber": "201827030000025",
+    "accountName": null,
+    "openDate": "2022-12-31",
+    "months": 17,
+    "days": 29,
+    "schemeCode": "LADEP",
+    "interestRate": 0.000000,
+    "loanType": "F",
+    "nextInstallmentDate": "2024-06-30",
+    "jointHolderName1": "SADHANA ENVIRO ENGINEERING SERVICES",
+    "jointHolderName2": "",
+    "jointHolderName3": "",
+    "sanctionAmount": 450000000,
+    "disbursedAmount": 450000000,
+    "installmentAmount": 450000000,
+    "overDueAmount": 0,
+    "currency": "INR",
+    "acctBalances": [
+        {
+            "balTypeCode": "EFFAVL",
+            "amount": -4493071.00,
+            "currencyCode": "INR"
+        },
+        {
+            "balTypeCode": "AVAIL",
+            "amount": 0.00,
+            "currencyCode": "INR"
+        },
+        {
+            "balTypeCode": "LEDGER",
+            "amount": 0.00,
+            "currencyCode": "INR"
+        }
+    ],
+    "nominees": null
+}

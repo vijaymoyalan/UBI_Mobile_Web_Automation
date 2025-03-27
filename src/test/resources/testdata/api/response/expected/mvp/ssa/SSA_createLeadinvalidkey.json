@@ -1,0 +1,14 @@
+{
+    "errorId": "0c679933-ff5a-4200-a57d-0df145f2e7d7",
+    "errorAt": "2024-12-10T16:57:19.607293653",
+    "errorLocation": null,
+    "errors": [
+        {
+            "code": "BAD_REQUEST",
+            "message": "Bad Request",
+            "values": null,
+            "origmesg": null,
+            "errors": null
+        }
+    ]
+}

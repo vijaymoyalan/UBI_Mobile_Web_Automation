@@ -1,0 +1,27 @@
+{
+    "source": {
+        "cif": "60466771",
+        "acctNum": "000113060000126",
+        "scheme": {
+            "code": "SBA",
+            "type": "Savings"
+        }
+    },
+    "cif": "60466771",
+    "scheme": {
+        "type": "TDA"
+    },
+    "subType": "RDSC",
+    "subTypeCode": "Regular_RD",
+    "depositAmount": 620.0,
+    "depositTerm": {
+        "year": 6,
+        "month": 0,
+        "day": 0
+    },
+    "interestPayoutType": "Maturity",
+    "renewalDtls": {
+        "maturityIndicator": "",
+        "maturityInstruction": "Closure"
+    }
+}

@@ -1,0 +1,42 @@
+[
+    {
+        "cif": "250720664",
+        "acctNum": "545803030007520",
+        "acctName": "MUNISH ARORA",
+        "customerName": "MUNISH ARORA",
+        "acctType": "TDA",
+        "subscriptionCode": "FD",
+        "activeFlag": false,
+        "depositAmount": 2957631,
+        "interestRate": null,
+        "maturityAmount": 3148410,
+        "acctBals": null,
+        "maturityDate": "2024-12-06",
+        "openingDate": "2023-12-06",
+        "operatingInstruction": "001",
+        "schemeCode": "TD003",
+        "schemeName": null,
+        "acctStatus": "",
+        "repaymentAccount": "545801010050541"
+    },
+    {
+        "cif": "250720664",
+        "acctNum": "545801010050541",
+        "acctName": "MUNISH ARORA",
+        "customerName": "MUNISH ARORA",
+        "acctType": "CAA",
+        "subscriptionCode": null,
+        "activeFlag": false,
+        "depositAmount": 0,
+        "interestRate": null,
+        "maturityAmount": 0,
+        "acctBals": null,
+        "maturityDate": null,
+        "openingDate": null,
+        "operatingInstruction": "001",
+        "schemeCode": "CAGEN",
+        "schemeName": null,
+        "acctStatus": "A",
+        "repaymentAccount": ""
+    }
+]

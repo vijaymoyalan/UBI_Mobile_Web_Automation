@@ -1,0 +1,1 @@
+{"errorId":"a8095e58-7d80-4f14-97f0-43600b179d55","errorAt":"2024-12-18T17:55:53.181103747","errorLocation":null,"error":null,"errors":[{"code":"400","message":"500 Internal Server Error from POST http://bbps-fasttag-recharge-service.biz-bbps-sit.svc.cluster.local:8080/bbps/command/v1/payFastagRecharge","values":null,"origmesg":null,"errors":null}]}

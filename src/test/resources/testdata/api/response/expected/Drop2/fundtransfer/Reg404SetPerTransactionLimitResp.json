@@ -1,0 +1,8 @@
+{
+    "timestamp": "2024-12-04T17:51:38.825+00:00",
+    "path": "/v1/fund-transfer/manage-payee/setPerTransactionLimi",
+    "status": 404,
+    "error": "Not Found",
+    "message": null,
+    "requestId": "d3f95ed1-4313"
+}

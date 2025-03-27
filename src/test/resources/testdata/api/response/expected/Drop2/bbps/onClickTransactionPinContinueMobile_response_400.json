@@ -1,0 +1,15 @@
+{
+    "error": null,
+    "errorAt": "2024-12-19T15:26:01.682160246",
+    "errorId": "e6bc8ea0-4a50-459b-8a9d-95324d960dc5",
+    "errorLocation": null,
+    "errors": [
+        {
+            "code": "400",
+            "errors": null,
+            "message": "500 Internal Server Error from POST http://bbps-mobile-recharge-service.biz-bbps-sit.svc.cluster.local:8080/bbps/command/v1/payMobileRecharge",
+            "origmesg": null,
+            "values": null
+        }
+    ]
+}

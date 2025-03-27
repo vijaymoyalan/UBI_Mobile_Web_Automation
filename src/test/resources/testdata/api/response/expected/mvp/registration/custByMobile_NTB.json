@@ -1,0 +1,15 @@
+{
+    "errorId": "eca28681-7910-465a-a5d9-07576f724025",
+    "errorAt": "2025-02-04T17:48:24",
+    "errorLocation": "null",
+    "error": null,
+    "errors": [
+        {
+            "code": "ERR_CU_00121",
+            "message": "We could not find customer id linked to this phone number.If you are an existing customer please contact your nearest branch for more details.",
+            "values": null,
+            "origmesg": null,
+            "errors": null
+        }
+    ]
+}

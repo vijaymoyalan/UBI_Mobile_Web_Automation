@@ -1,0 +1,8 @@
+{
+    "timestamp": "2025-02-13T06:39:38.512+00:00",
+    "path": "/app/invst/nps/api/v1/checkNpsAccBa",
+    "status": 404,
+    "error": "Not Found",
+    "message": null,
+    "requestId": "b7b95978-796"
+}

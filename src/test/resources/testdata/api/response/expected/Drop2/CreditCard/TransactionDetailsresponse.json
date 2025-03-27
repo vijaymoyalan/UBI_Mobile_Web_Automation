@@ -1,0 +1,37 @@
+{
+  "traceId": "173735459928730423469985103115888203",
+  "statusCode": "SUCCESS",
+  "statusDescription": "Transactions fetched successfully",
+  "totalTransaction": 2,
+  "txnDetails": [
+    {
+      "title": "18-05-2024",
+      "data": [
+        {
+          "txnDate": "18-05-2024",
+          "txnRefNo": "U24142183294",
+          "txnNarration": "Paytm",
+          "txnAmt": "2392.61",
+          "dbCrFlag": null,
+          "txnCardFlg": "M",
+          "responseType": "U"
+        }
+      ]
+    },
+    {
+      "title": "15-05-2024",
+      "data": [
+        {
+          "txnDate": "15-05-2024",
+          "txnRefNo": "U24136559473",
+          "txnNarration": "Pymt By Auto Debit",
+          "txnAmt": "3600.00",
+          "dbCrFlag": null,
+          "txnCardFlg": "M",
+          "responseType": "U"
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

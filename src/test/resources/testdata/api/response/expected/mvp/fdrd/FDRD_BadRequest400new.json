@@ -1,0 +1,9 @@
+{
+    "errorId": "d8a410bd-53f3-4eb1-8eb1-84f8b2208760",
+    "errors": [
+        {
+            "code": "BAD_REQUEST",
+            "message": "#: required key [acctNum] not found"
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "cif": "900696250",
+    "fromDate": "06/11/2024",
+	"toDate": "03/02/2025",
+    "cid": "9768911985govi900986039",
+    "pageSize": 10,
+    "pageNumber": 1,
+    "status": "Success",
+    "transactionType": "POS",
+  
+    "accountDetails": [
+        {
+			"accountName": "VIKASH MARBLE ",
+			"accountNumber": "353801010120861",
+			"accountType": "CAA"
+		}
+		
+      
+    ]
+}
+

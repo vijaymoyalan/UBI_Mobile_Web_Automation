@@ -1,0 +1,8 @@
+{
+    "timestamp": "2024-12-10T17:30:46.253+00:00",
+    "path": "/app/invst/ssa/api/v1/emailStatements",
+    "status": 404,
+    "error": "Not Found",
+    "message": null,
+    "requestId": "843e19f5-9973"
+}

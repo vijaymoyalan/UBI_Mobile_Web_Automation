@@ -1,0 +1,15 @@
+{
+    "errorId": "abe662f8-ca86-45f5-a473-7f4c6356a7c2",
+    "errorAt": "2025-01-03T13:02:28",
+    "errorLocation": "null",
+    "error": null,
+    "errors": [
+        {
+            "code": "ERR_CU_00100",
+            "message": "Please provide valid input to fetch the details.",
+            "values": null,
+            "origmesg": null,
+            "errors": null
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+{
+  "remitterMobileNumber": "7400195265",
+  "remitterAccount": "441002010058664",
+  "remitterName": "JEETENDRA YADAV",
+  "beneficiaryMMID": "9229002",
+  "beneficiaryMobileNumber": "9121910051",
+  "amount": "101",
+  "remarks": "Transfer",
+  "beneficiaryName": "MMID",
+  "debitAccountType": "SBA",
+  "cif": "254061641",
+  "quickTransfer": true
+}

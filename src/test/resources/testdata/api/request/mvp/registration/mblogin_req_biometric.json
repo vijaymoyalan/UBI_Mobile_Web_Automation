@@ -1,0 +1,11 @@
+{
+    "deviceid": "84183225a98f55c6",
+    "simdata": "84183225a98f55c601|0|1",
+    "loginpin": "ed946f65d2c785d90e827c5ffd879ce3b49c68d4c88013074176a7e73bc58bcf",
+    "sessionexpiry": 30,
+    "allowedfailure": 3,
+    "loginpinexpiry": 90,
+    "logininactivity": "120",
+    "loginwithbiometric": true,
+    "signeddata": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJoYXNoIjoiYmMzZTU4ZDNjMTU3NGExOTRhMjUzMDI4NjRiNWEzNDdhMTg1ZGE0OTgzYjA2NDdlNDU2YWMyZjMwYzg1YTc0YiJ9.NCnsMre0z0HgOnufzFef3bOsS23jLRXQW1BICVox-t0cin2sFMa8fwHFWx8CYBUON1qtJjMN0zVDMVLFKkVzmtGMa0aZ-c5YnXB_OTEzYu04qPa24Hrggd5mtLdVm9pqze1t9imw-Hv1PhtzFQ_t_o7TguXFxtkTTF-A7pc6794K9W2g9b0tp0y82vbaFYK4Rey54296rTrfQCRAdXNrTXvYDPSEtciRuXuY9hx7yn6Sx3VR51TTZBpAcd-yx_-ngahy8_U36d0gf7wnuEcLVVeiDSHpbqlUvleMI8JrCdcQw8utc7UGUxtf1qsQG4RNuUAr1Bl_GMPp4BP4345XEA"
+}

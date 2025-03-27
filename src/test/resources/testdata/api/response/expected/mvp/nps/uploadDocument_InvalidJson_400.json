@@ -1,0 +1,15 @@
+{
+    "errorId": "a65b64bc-9eda-4dfd-936f-ab407b58d29b",
+    "errorAt": "2025-01-28T13:52:46",
+    "errorLocation": "null",
+    "error": null,
+    "errors": [
+        {
+            "code": "NO_APPS_FORM_NUM",
+            "message": "Application form number is empty or invalid",
+            "values": null,
+            "origmesg": null,
+            "errors": null
+        }
+    ]
+}

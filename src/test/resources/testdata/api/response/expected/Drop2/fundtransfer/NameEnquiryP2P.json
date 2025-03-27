@@ -1,0 +1,12 @@
+{
+  "data": {
+    "responseCode": "00",
+    "reason": "Successful Transaction",
+    "rrn": "436616152878",
+    "transactionDate": "31122024165215",
+    "beneName": "KAJAL",
+    "requestId": "5450874077107904213"
+  },
+  "errorDetails": null,
+  "success": true
+}

@@ -1,0 +1,9 @@
+{
+  "deviceid": "44864153-A320-4CA3-9F24-33460A2F5FCB",
+  "simdata": "44864153-A320-4CA3-9F24-33460A2F5FCB|0|1",
+  "loginpin": "2580",
+  "sessionexpiry": 30,
+  "allowedfailure": 3,
+  "loginpinexpiry": 1000,
+  "loginwithbiometric": false
+}

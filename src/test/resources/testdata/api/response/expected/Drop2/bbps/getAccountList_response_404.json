@@ -1,0 +1,8 @@
+{
+    "timestamp": "2024-12-20T10:39:49.291+00:00",
+    "path": "/bbps-bff-mobile/api/v1/getAccountList1",
+    "status": 404,
+    "error": "Not Found",
+    "message": null,
+    "requestId": "484ab588-4356"
+}

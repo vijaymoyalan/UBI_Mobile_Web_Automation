@@ -1,0 +1,8 @@
+{
+    "timestamp": "2024-12-18T05:57:38.743+00:00",
+    "path": "/bbps-bff-mobile/api/v1/getPastPaymentDtls1",
+    "status": 404,
+    "error": "Not Found",
+    "message": null,
+    "requestId": "cd15aa27-984"
+}

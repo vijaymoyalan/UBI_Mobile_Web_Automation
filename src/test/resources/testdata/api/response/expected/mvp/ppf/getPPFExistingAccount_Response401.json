@@ -1,0 +1,15 @@
+{
+    "errorId": "b3be2cba-9af9-41e0-af00-27639c4e48c4",
+    "errorAt": "2025-02-05T17:38:56.470920449",
+    "errorLocation": null,
+    "error": null,
+    "errors": [
+        {
+            "code": "CIF_NOT_PRESENT",
+            "message": "Cif id is not Present (empty).",
+            "values": null,
+            "origmesg": null,
+            "errors": null
+        }
+    ]
+}

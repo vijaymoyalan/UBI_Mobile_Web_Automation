@@ -1,0 +1,26 @@
+{
+    "referenceID": null,
+    "applicationReferenceID": "",
+    "orderDateTime": null,
+    "branchLocation": {
+        "id": "",
+        "bankId": "",
+        "branchSolId": "45170",
+        "name": "",
+        "branchId": "",
+        "branchName": "ARERA COLONY, BHOPAL",
+        "workingDays": "Monday to Friday, 1st, 3rd and 5th Saturday",
+        "workingHrs": "10:00am to 4:00pm",
+        "address": {
+            "addrType": "",
+            "addrLine1": "UNION BANK OF INDIA E-3/76",
+            "addrLine2": "GAJANAN HOUSE, NEAR NARMADA HOSPITAL",
+            "addrLine3": "ARERA COLONY",
+            "addrLine4": null,
+            "pinCode": "462016",
+            "cityName": "BHOPAL",
+            "stateName": "MADHYA PRADESH",
+            "countryCode": ""
+        }
+    }
+}

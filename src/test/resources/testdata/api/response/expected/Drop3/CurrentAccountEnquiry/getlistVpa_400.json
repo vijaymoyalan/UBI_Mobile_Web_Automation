@@ -1,0 +1,9 @@
+{
+  "errorId": "deae47ba-c130-4bc3-b996-81417773980d",
+  "errorAt": "2025-02-05T12:25:07.463726297",
+  "errors": {
+    "code": "400",
+    "result": "Failure",
+    "message": "{\"errorId\":\"6fff3650-0d31-4689-bc7d-7bdaf783b94d\",\"errorAt\":\"2025-02-05T12:25:07.458343142\",\"errors\":null,\"error\":{\"code\":\"CIF Mismatch\",\"result\":\"Failure\",\"message\":\"Enter the Valid CIF\"}}"
+  }
+}

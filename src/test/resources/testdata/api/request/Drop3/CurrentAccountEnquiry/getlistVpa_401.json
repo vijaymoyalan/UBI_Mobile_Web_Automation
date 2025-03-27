@@ -1,0 +1,16 @@
+{
+    "customerId": "919987829235",
+    "cif": "901218115",
+    "cid": "9987829235musi1218115",
+    "device": {
+        "app": "com.ibm.uboinpci",
+        "capability": "5245454545242454542454545445",
+        "geocode": "17.5,78.3",
+        "id": "cd2699c34e9b53e1",
+        "location": "<string>",
+        "mobile": "917999524046",
+        "os": "android",
+        "type": "MOB",
+        "ip": "10.0.0.0"
+    }
+}

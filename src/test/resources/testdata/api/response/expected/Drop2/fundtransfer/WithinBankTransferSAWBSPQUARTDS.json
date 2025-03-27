@@ -1,0 +1,26 @@
+{
+  "data": {
+    "cif": "254061641",
+    "referenceNumber": "AA4836304",
+    "amount": 100,
+    "creditAccountNumber": "635302010012456",
+    "debitAccountNumber": "441002010058664",
+    "creditAccountName": null,
+    "debitAccountName": "HARMANJIT SINGH SO RANJIT SINGH",
+    "frequency": "QUARTERLY",
+    "mode": "WITHINBANK",
+    "numberOfTransfer": 3,
+    "initialNumberOfTransfers": null,
+    "remarks": "TEST RECURRING WITHINBANK",
+    "scheduleDate": null,
+    "scheduleType": "RECURRING",
+    "siStartDate": "2025-07-09T09:29:04.297",
+    "siEndDate": "2026-01-09T09:29:04.297",
+    "status": "SCHEDULED",
+    "trnxTimestamp": "2024-12-04T23:51:49.726141356"
+  },
+  "success": true,
+  "errorMessage": null,
+  "kafkaStatus": "COMPLETED",
+  "correlationId": null
+}

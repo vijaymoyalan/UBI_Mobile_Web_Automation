@@ -1,0 +1,6 @@
+{
+    "workFlows": [
+        "JYOTI can authorize all payments individually.",
+        "If any user initiates a payment, it will require one-level approval with JYOTI as the approver."
+    ]
+}

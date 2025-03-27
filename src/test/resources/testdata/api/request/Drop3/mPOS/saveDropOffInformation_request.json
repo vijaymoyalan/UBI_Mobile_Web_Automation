@@ -1,0 +1,13 @@
+{
+	 "cif": "634444396",
+  "applicationFormNumber": "POS160125000001",
+  "accountNumber": "451702011015244",
+ 
+  "paymentMode" :"offline",
+	
+  "journeyName": "NON-LENDING",
+  "subJourneyName": "POS",
+  "journeyProgressName": "BUSINESS",
+  "journeyStatus": "UPDATE"
+
+}

@@ -1,0 +1,2204 @@
+Feature: Regression Test of BBPS APIs
+Background: SettingFileHandlerPath
+Given user sets the file path for this feature file for Drop2/bbps
+	
+#======================getPendingBills=====================
+		
+		@TestCaseKey=UDB-T17054 @BBPS-02
+ 		Scenario Outline: Verify 200 success responce for getPendingBills API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 200
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	  |requestField   |responsefield      | filename     |	responseBody	|
+					|	bbps	|	/getPendingBills	|	src/test/resources/testdata/api/request/Drop2/bbps/getPendingBills_request.json	| null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/getPendingBills_response.json	|      
+
+		@TestCaseKey=UDB-T170541
+ 		Scenario Outline: Verify 400 error response for getPendingBills API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 400
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename    |	responseBody	|	
+					|	bbps	|	/getPendingBills	|	src/test/resources/testdata/api/request/Drop2/bbps/src/test/resources/testdata/api/request/Drop2/bbps/getPendingBills_missingcif_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/src/test/resources/testdata/api/response/expected/Drop2/bbps/getPendingBills_missingcif_response.json	|	
+				
+		@TestCaseKey=UDB-T170542
+ 		Scenario Outline: Verify 404 error responce for getPendingBills API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 404
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/getPendingBillsabc	|	src/test/resources/testdata/api/request/Drop2/bbps/getPendingBills_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/getPendingBills_response_404.json	|      
+	
+		@TestCaseKey=UDB-T170543 
+ 		Scenario Outline: Verify 500 error responce for getPendingBills API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 500
+  	  Then user verifies json from <responseBody>
+  		
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	2/getPendingBills	|	src/test/resources/testdata/api/request/Drop2/bbps/getPendingBills_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/BBPS_XML_500.xml	| 
+
+#======================getAutopayBills=====================
+
+		@TestCaseKey=UDB-T17058
+ 		Scenario Outline: Verify 200 success responce for getAutopayBills API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 200
+  		Then user verifies json from <responseBody>.
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	/getAutopayBills	|	src/test/resources/testdata/api/request/Drop2/bbps/getAutopayBills_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/getAutopayBills_response.json	|      
+
+		@TestCaseKey=UDB-T170581
+ 		Scenario Outline: Verify 400 error response for getAutopayBills API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 400
+  		Then user verifies json from <responseBody> 
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/getAutopayBills	|	src/test/resources/testdata/api/request/Drop2/bbps/getAutopayBills_missingcif_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/getAutopayBills_missingcif_response.json	|	
+				
+		@TestCaseKey=UDB-T170582
+ 		Scenario Outline: Verify 404 error responce for getAutopayBills API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 404
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/getAutopayBills1	|	src/test/resources/testdata/api/request/Drop2/bbps/getAutopayBills_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/getAutopayBills_response_404.json	|      
+	
+		@TestCaseKey=UDB-T170583
+ 		Scenario Outline: Verify 500 error responce for getAutopayBills API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 500
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	2/getAutopayBills	|	src/test/resources/testdata/api/request/Drop2/bbps/getAutopayBills_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/BBPS_XML_500.xml	| 	
+	
+#======================getPastPaymentDtls=====================
+
+		@TestCaseKey=UDB-T17059 @getPastPaymentDtls
+ 		Scenario Outline: Verify 200 success responce for getPastPaymentDtls API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 200
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	/getPastPaymentDtls	|	src/test/resources/testdata/api/request/Drop2/bbps/getPastPaymentDtls_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/getPastPaymentDtls_response.json	|      
+
+		@TestCaseKey=UDB-T170591 @getPastPaymentDtls
+ 		Scenario Outline: Verify 400 error response for getPastPaymentDtls API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  	  Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 400
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|	
+					|	bbps	|	/getPastPaymentDtls	|	src/test/resources/testdata/api/request/Drop2/bbps/getPastPaymentDtls_missingcif_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/getPastPaymentDtls_missingcif_response.json	|
+					
+		@TestCaseKey=UDB-T170592 @getPastPaymentDtls
+ 		Scenario Outline: Verify 404 error responce for getPastPaymentDtls API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 404
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/getPastPaymentDtls1	|	src/test/resources/testdata/api/request/Drop2/bbps/getPastPaymentDtls_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/getPastPaymentDtls_response_404.json	|      
+	
+		@TestCaseKey=UDB-T170593 @getPastPaymentDtls
+ 		Scenario Outline: Verify 500 error responce for getPastPaymentDtls API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 500
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	2/getPastPaymentDtls	|	src/test/resources/testdata/api/request/Drop2/bbps/getPastPaymentDtls_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/BBPS_XML_500.xml	|					
+					
+
+#======================onClickServiceProvider=====================
+
+		@TestCaseKey=UDB-T28829 @onClickServiceProvider
+ 		Scenario Outline: Verify 200 success responce for onClickServiceProvider API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 200
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	/onClickServiceProvider/274309887	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickServiceProvider_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickServiceProvider_response.json	|	     
+
+		@TestCaseKey=UDB-T288291 @onClickServiceProvider
+ 		Scenario Outline: Verify 400 error response for onClickServiceProvider API
+  		Given user sets the environment of endpoint
+			Given user set the basepath to <service>
+			Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 400
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|/onClickServiceProvider/274309887	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickServiceProvider_request_400.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickServiceProvider_response_400.json	|
+				
+		@TestCaseKey=UDB-T288292 @onClickServiceProvider
+ 		Scenario Outline: Verify 404 error responce for onClickServiceProvider API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 404
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickServiceProvider1/274309887|	src/test/resources/testdata/api/request/Drop2/bbps/onClickServiceProvider_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickServiceProvider_response_404.json	|      
+	
+		@TestCaseKey=UDB-T288293 @onClickServiceProvider
+ 		Scenario Outline: Verify 500 error responce for onClickServiceProvider API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 500
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	2/onClickServiceProvider/274309887	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickServiceProvider_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/BBPS_XML_500.xml	|
+					
+#======================onClickUtilityGas=====================
+
+		@TestCaseKey=UDB-T16879 @onClickUtilityGas
+ 		Scenario Outline: Verify 200 success responce for onClickUtilityGas API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 200
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickUtilityGas	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickUtilityGas_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickUtilityGas_response.json	|      
+
+		@TestCaseKey=UDB-T168791 @onClickUtilityGas
+ 		Scenario Outline: Verify 400 error response for onClickUtilityGas API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 400
+  		Then user verifies json from <responseBody> 
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|	
+					|	bbps	|	/onClickUtilityGas	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickUtilityGas_missingcif_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickUtilityGas_missingcif_response.json	|	
+				
+		@TestCaseKey=UDB-T168792 @onClickUtilityGas
+ 		Scenario Outline: Verify 404 error responce for onClickUtilityGas API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 404
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickUtilityGas1	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickUtilityGas_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickUtilityGas_response_404.json	|      
+	
+		@TestCaseKey=UDB-T168793 @onClickUtilityGas
+ 		Scenario Outline: Verify 500 error responce for onClickUtilityGas API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 500
+  	  Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	2/onClickUtilityGas	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickUtilityGas_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/BBPS_XML_500.xml	|	
+
+#======================onClickUtilityRental=====================
+
+		@TestCaseKey=UDB-T16947 @onClickUtilityRental
+ 		Scenario Outline: Verify 200 success responce for onClickUtilityRental API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 200
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickUtilityRental	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickUtilityRental_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/BBPS_XML_500.xml	|      
+
+		@TestCaseKey=UDB-T169471 @onClickUtilityRental
+ 		Scenario Outline: Verify 400 error response for onClickUtilityRental API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody> 
+  		Then user verifies that status is 400
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickUtilityRental	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickUtilityRental_request_400.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickUtilityRental_response_400.json	|
+				
+		@TestCaseKey=UDB-T169472 @onClickUtilityRental
+ 		Scenario Outline: Verify 404 error responce for onClickUtilityRental API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 404
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickUtilityRental1	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickUtilityRental_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickUtilityRental_response_404.json	|      
+	
+		@TestCaseKey=UDB-T169473 @onClickUtilityRental
+ 		Scenario Outline: Verify 500 error responce for onClickUtilityRental API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 500
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	2/onClickUtilityRental	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickUtilityRental_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/BBPS_XML_500.xml	|	
+						
+#======================onClickUtilityElectricity=====================
+
+		@TestCaseKey=UDB-T16017 @onClickUtilityElectricity
+ 		Scenario Outline: Verify 200 success responce for onClickUtilityElectricity API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 200
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickUtilityElectricity	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickUtilityElectricity_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickUtilityElectricity_response.json	|      
+
+		@TestCaseKey=UDB-T160171 @onClickUtilityElectricity
+ 		Scenario Outline: Verify 400 error response for onClickUtilityElectricity API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody> 
+  		Then user verifies that status is 400
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	/onClickUtilityElectricity	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickUtilityElectricity_request_400.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickUtilityElectricity_response_400.json	|
+				
+		@TestCaseKey=UDB-T160172 @onClickUtilityElectricity
+ 		Scenario Outline: Verify 404 error responce for onClickUtilityElectricity API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 404
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickUtilityElectricity1	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickUtilityElectricity_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickUtilityElectricity_response_404.json	|      
+	
+		@TestCaseKey=UDB-T160173 @onClickUtilityElectricity
+ 		Scenario Outline: Verify 500 error responce for onClickUtilityElectricity API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 500
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	2/onClickUtilityElectricity	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickUtilityElectricity_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/BBPS_XML_500.xml	|	
+									
+									
+#======================onClickRechargeFastag=====================
+
+		@TestCaseKey=UDB-T29840 @onClickRechargeFastag
+ 		Scenario Outline: Verify 200 success responce for onClickRechargeFastag API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 200
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickRechargeFastag	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickRechargeFastag_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickRechargeFastag_response.json	|      
+
+		@TestCaseKey=UDB-T298401 @onClickRechargeFastag
+ 		Scenario Outline: Verify 400 error response for onClickRechargeFastag API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody> 
+  		Then user verifies that status is 400
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickRechargeFastag	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickRechargeFastag_request_400.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickRechargeFastag_response_400.json	|
+				
+		@TestCaseKey=UDB-T298402 @onClickRechargeFastag
+ 		Scenario Outline: Verify 404 error responce for onClickRechargeFastag API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 404
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickRechargeFastag1	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickRechargeFastag_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickRechargeFastag_response_404.json	|      
+	
+		@TestCaseKey=UDB-T298403 @onClickRechargeFastag
+ 		Scenario Outline: Verify 500 error responce for onClickRechargeFastag API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 500
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	2/onClickRechargeFastag	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickRechargeFastag_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/BBPS_XML_500.xml	|	
+									
+
+#======================onClickProviderDetailContinueFastag=====================
+
+		@TestCaseKey=UDB-T28912 @onClickProviderDetailContinueFastag
+ 		Scenario Outline: Verify 200 success responce for onClickProviderDetailContinueFastag API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 200
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickProviderDetailContinueFastag	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickProviderDetailContinueFastag_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickProviderDetailContinueFastag_response.json	|      
+
+		@TestCaseKey=UDB-T289121 @onClickProviderDetailContinueFastag
+ 		Scenario Outline: Verify 400 error response for onClickProviderDetailContinueFastag API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody> 
+  		Then user verifies that status is 400
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	/onClickProviderDetailContinueFastag	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickProviderDetailContinueFastag_request_400.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickProviderDetailContinueFastag_response_400.json	|
+				
+		@TestCaseKey=UDB-T289122 @onClickProviderDetailContinueFastag
+ 		Scenario Outline: Verify 404 error responce for onClickProviderDetailContinueFastag API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 404
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickProviderDetailContinueFastag1	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickProviderDetailContinueFastag_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickProviderDetailContinueFastag_response_404.json	|      
+	
+		@TestCaseKey=UDB-T289123 @onClickProviderDetailContinueFastag
+ 		Scenario Outline: Verify 500 error responce for onClickProviderDetailContinueFastag API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 500
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	2/onClickProviderDetailContinueFastag	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickProviderDetailContinueFastag_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/BBPS_XML_500.xml	|	
+									
+#======================onClickTransactionPinContinueFastag=====================
+
+		@TestCaseKey=UDB-T30068 @onClickTransactionPinContinueFastag
+ 		Scenario Outline: Verify 200 success responce for onClickTransactionPinContinueFastag API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 200
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	/onClickTransactionPinContinueFastag	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickTransactionPinContinueFastag_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickTransactionPinContinueFastag_response.json	|      
+
+		@TestCaseKey=UDB-T300681  @onClickTransactionPinContinueFastag
+ 		Scenario Outline: Verify 400 error response for onClickTransactionPinContinueFastag API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody> 
+  		Then user verifies that status is 400
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickTransactionPinContinueFastag	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickTransactionPinContinueFastag_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickTransactionPinContinueFastag_response_400.json	|
+				
+		@TestCaseKey=UDB-T300682 @onClickTransactionPinContinueFastag
+ 		Scenario Outline: Verify 404 error responce for onClickTransactionPinContinueFastag API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 404
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	/onClickTransactionPinContinueFastag1	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickTransactionPinContinueFastag_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickTransactionPinContinueFastag_response_404.json	|      
+	
+		@TestCaseKey=UDB-T300683 @onClickTransactionPinContinueFastag
+ 		Scenario Outline: Verify 500 error responce for onClickTransactionPinContinueFastag API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 500
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	2/onClickTransactionPinContinueFastag	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickTransactionPinContinueFastag_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/BBPS_XML_500.xml	|	
+									
+#======================onClickUtilityDTH=====================
+
+		@TestCaseKey=UDB-T16952 @onClickUtilityDTH
+ 		Scenario Outline: Verify 200 success responce for onClickUtilityDTH API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 200
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickUtilityDTH	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickUtilityDTH_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickUtilityDTH_response.json	|      
+
+		@TestCaseKey=UDB-T169521 @onClickUtilityDTH
+ 		Scenario Outline: Verify 400 error response for onClickUtilityDTH API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody> 
+  		Then user verifies that status is 400
+  		Then user verifies json from <responseBody> 
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickUtilityDTH	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickUtilityDTH_request_400.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickUtilityDTH_response_400.json	|
+				
+		@TestCaseKey=UDB-T169522 @onClickUtilityDTH
+ 		Scenario Outline: Verify 404 error responce for onClickUtilityDTH API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 404
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickUtilityDTH1	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickUtilityDTH_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickUtilityDTH_response_404.json	|      
+	
+		@TestCaseKey=UDB-T169523 @onClickUtilityDTH
+ 		Scenario Outline: Verify 500 error responce for onClickUtilityDTH API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 500
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	2/onClickUtilityDTH	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickUtilityDTH_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/BBPS_XML_500.xml	|	
+									
+									
+#======================onClickProviderDetailContinueDTH=====================
+
+		@TestCaseKey=UDB-T28973 @onClickProviderDetailContinueDTH
+ 		Scenario Outline: Verify 200 success responce for onClickProviderDetailContinueDTH API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 200
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickProviderDetailContinueDTH	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickProviderDetailContinueDTH_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickProviderDetailContinueDTH_response.json	|      
+
+		@TestCaseKey=UDB-T289731 @onClickProviderDetailContinueDTH
+ 		Scenario Outline: Verify 400 error response for onClickProviderDetailContinueDTH API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody> 
+  		Then user verifies that status is 400
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	/onClickProviderDetailContinueDTH	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickProviderDetailContinueDTH_request_400.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickProviderDetailContinueDTH_response_400.json	|
+				
+		@TestCaseKey=UDB-T289732 @onClickProviderDetailContinueDTH
+ 		Scenario Outline: Verify 404 error responce for onClickProviderDetailContinueDTH API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 404
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	/onClickProviderDetailContinueDTH1	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickProviderDetailContinueDTH_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickProviderDetailContinueDTH_response_404.json	|      
+	
+		@TestCaseKey=UDB-T289733 @onClickProviderDetailContinueDTH
+ 		Scenario Outline: Verify 500 error responce for onClickProviderDetailContinueDTH API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 500
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	2/onClickProviderDetailContinueDTH	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickProviderDetailContinueDTH_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/BBPS_XML_500.xml	|	
+
+#======================onClickTransactionPinContinueDTH=====================
+
+		@TestCaseKey=UDB-T28981 @onClickTransactionPinContinueDTH
+ 		Scenario Outline: Verify 200 success responce for onClickTransactionPinContinueDTH API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 200
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	/onClickTransactionPinContinueDTH	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickTransactionPinContinueDTH_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickTransactionPinContinueDTH_response.json	|      
+
+		@TestCaseKey=UDB-T289811 @onClickTransactionPinContinueDTH
+ 		Scenario Outline: Verify 400 error response for onClickTransactionPinContinueDTH API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody> 
+  		Then user verifies that status is 400
+  		Then user verifies json from <responseBody> 
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickTransactionPinContinueDTH	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickTransactionPinContinueDTH_request_400.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickTransactionPinContinueDTH_response_400.json	|
+				
+		@TestCaseKey=UDB-T289812 @onClickTransactionPinContinueDTH
+ 		Scenario Outline: Verify 404 error responce for onClickTransactionPinContinueDTH API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 404
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickTransactionPinContinueDTH1	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickTransactionPinContinueDTH_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickTransactionPinContinueDTH_response_404.json	|      
+	
+		@TestCaseKey=UDB-T289813 @onClickTransactionPinContinueDTH
+ 		Scenario Outline: Verify 500 error responce for onClickTransactionPinContinueDTH API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 500
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	2/onClickTransactionPinContinueDTH	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickTransactionPinContinueDTH_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/BBPS_XML_500.xml	|	
+																		
+#======================onClickRechargeMobile=====================
+
+		@TestCaseKey=UDB-C67 @onClickRechargeMobile
+ 		Scenario Outline: Verify 200 success responce for onClickRechargeMobile API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 200
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	/onClickRecharge	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickRechargeMobile_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickRechargeMobile_response.json	|      
+
+		@TestCaseKey=UDB-C671 @onClickRechargeMobile
+ 		Scenario Outline: Verify 400 error response for onClickRechargeMobile API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody> 
+  		Then user verifies that status is 400
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	/onClickRecharge	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickRechargeMobile_request_400.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickRechargeMobile_response_400.json	|
+				
+		@TestCaseKey=UDB-C672 @onClickRechargeMobile
+ 		Scenario Outline: Verify 404 error responce for onClickRechargeMobile API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 404
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickRechargeMobile1	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickRechargeMobile_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickRechargeMobile_response_404.json	|      
+	
+		@TestCaseKey=UDB-C673 @onClickRechargeMobile
+ 		Scenario Outline: Verify 500 error responce for onClickRechargeMobile API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 500
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	2/onClickRecharge	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickRechargeMobile_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/BBPS_XML_500.xml	|	
+									
+#======================onClickContact=====================
+
+		@TestCaseKey=UDB-C68 @onClickContact
+ 		Scenario Outline: Verify 200 success responce for onClickContact API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 200
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickContact	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickContact_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickContact_response.json	|      
+
+		@TestCaseKey=UDB-C681 @onClickContact
+ 		Scenario Outline: Verify 400 error response for onClickContact API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody> 
+  		Then user verifies that status is 400
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	/onClickContact	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickContact_request_400.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickContact_response_400.json	|
+				
+		@TestCaseKey=UDB-C682 @onClickContact
+ 		Scenario Outline: Verify 404 error responce for onClickContact API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 404
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	/onClickContact1	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickContact_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickContact_response_404.json	|      
+	
+		@TestCaseKey=UDB-C683 @onClickContact
+ 		Scenario Outline: Verify 500 error responce for onClickContact API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 500
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	2/onClickContact	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickContact_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/BBPS_XML_500.xml	|	
+									
+									
+#======================onClickTransactionPinContinueMobile=====================
+
+		@TestCaseKey=UDB-C66 @onClickTransactionPinContinueMobile
+ 		Scenario Outline: Verify 200 success responce for onClickTransactionPinContinueMobile API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 200
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickTransactionPinContinue	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickTransactionPinContinueMobile_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickTransactionPinContinueMobile_response.json	|      
+
+		@TestCaseKey=UDB-C661 @onClickTransactionPinContinueMobile
+ 		Scenario Outline: Verify 400 error response for onClickTransactionPinContinueMobile API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody> 
+  		Then user verifies that status is 400
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickTransactionPinContinue	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickTransactionPinContinueMobile_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickTransactionPinContinueMobile_response_400.json	|
+				
+		@TestCaseKey=UDB-C662 @onClickTransactionPinContinueMobile
+ 		Scenario Outline: Verify 404 error responce for onClickTransactionPinContinueMobile API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 404
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickTransactionPinContinueMobile1	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickTransactionPinContinueMobile_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickTransactionPinContinueMobile_response_404.json	|      
+	
+		@TestCaseKey=UDB-C663 @onClickTransactionPinContinueMobile
+ 		Scenario Outline: Verify 500 error responce for onClickTransactionPinContinueMobile API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 500
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	2/onClickTransactionPinContinue	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickTransactionPinContinueMobile_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/BBPS_XML_500.xml	|	
+									
+									
+#======================onClickUserNotEnabledAutoPay=====================
+
+		@TestCaseKey=UDB-C69 @onClickUserNotEnabledAutoPay
+ 		Scenario Outline: Verify 200 success responce for onClickUserNotEnabledAutoPay API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 200
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickUserNotEnabledAutoPay	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickUserNotEnabledAutoPay_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickUserNotEnabledAutoPay_response.json	|      
+
+		@TestCaseKey=UDB-C691 @onClickUserNotEnabledAutoPay
+ 		Scenario Outline: Verify 400 error response for onClickUserNotEnabledAutoPay API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 400
+  		Then user verifies json from <responseBody>
+  		
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	/onClickUserNotEnabledAutoPay	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickUserNotEnabledAutoPay_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickUserNotEnabledAutoPay_response.json	|
+				
+		@TestCaseKey=UDB-C692 @onClickUserNotEnabledAutoPay
+ 		Scenario Outline: Verify 404 error responce for onClickUserNotEnabledAutoPay API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 404
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	/onClickUserNotEnabledAutoPay1	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickUserNotEnabledAutoPay_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickUserNotEnabledAutoPay_response_404.json	|      
+	
+		@TestCaseKey=UDB-C693 @onClickUserNotEnabledAutoPay
+ 		Scenario Outline: Verify 500 error responce for onClickUserNotEnabledAutoPay API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 500
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	2/onClickUserNotEnabledAutoPay	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickUserNotEnabledAutoPay_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/BBPS_XML_500.xml	|	
+																																		
+#======================userChangeNickName=====================
+
+		@TestCaseKey=UDB-T28711 @userChangeNickName
+ 		Scenario Outline: Verify 200 success responce for userChangeNickName API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 200
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/userChangeNickName	|	src/test/resources/testdata/api/request/Drop2/bbps/userChangeNickName_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/userChangeNickName_response.json	|      
+
+		@TestCaseKey=UDB-T287111 @userChangeNickName
+ 		Scenario Outline: Verify 400 error response for userChangeNickName API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 400
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/userChangeNickName	|	src/test/resources/testdata/api/request/Drop2/bbps/userChangeNickName_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/userChangeNickName_response_400.json	|
+				
+		@TestCaseKey=UDB-T287112 @userChangeNickName
+ 		Scenario Outline: Verify 404 error responce for userChangeNickName API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 404
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/userChangeNickName1	|	src/test/resources/testdata/api/request/Drop2/bbps/userChangeNickName_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/userChangeNickName_response_404.json	|      
+	
+		@TestCaseKey=UDB-T287113 @userChangeNickName
+ 		Scenario Outline: Verify 500 error responce for userChangeNickName API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 500
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	2/userChangeNickName	|	src/test/resources/testdata/api/request/Drop2/bbps/userChangeNickName_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/BBPS_XML_500.xml	|
+																																												
+
+#======================onClickPayNowBills=====================
+
+		@TestCaseKey=UDB-T28693 @onClickPayNowBills
+ 		Scenario Outline: Verify 200 success responce for onClickPayNowBills API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 200
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickPayNowBills	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickPayNowBills_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickPayNowBills_response.json	|      
+
+		@TestCaseKey=UDB-T286931 @onClickPayNowBills
+ 		Scenario Outline: Verify 400 error response for onClickPayNowBills API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 400
+  		Then user verifies json from <responseBody> 
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickPayNowBills	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickPayNowBills_request_400.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickPayNowBills_response_400.json	|
+				
+		@TestCaseKey=UDB-T286932 @onClickPayNowBills
+ 		Scenario Outline: Verify 404 error responce for onClickPayNowBills API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 404
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickPayNowBills1	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickPayNowBills_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickPayNowBills_response_404.json	|      
+	
+		@TestCaseKey=UDB-T286933 @onClickPayNowBills
+ 		Scenario Outline: Verify 500 error responce for onClickPayNowBills API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 500
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	2/onClickPayNowBills	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickPayNowBills_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/BBPS_XML_500.xml	|	
+									
+
+#======================userContinueAutopay=====================
+
+		@TestCaseKey=UDB-T28687 @userContinueAutopay
+ 		Scenario Outline: Verify 200 success responce for userContinueAutopay API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 200
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/userContinueAutopay	|	src/test/resources/testdata/api/request/Drop2/bbps/userContinueAutopay_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/userContinueAutopay_response.json	|      
+
+		@TestCaseKey=UDB-T286871 @userContinueAutopay
+ 		Scenario Outline: Verify 400 error response for userContinueAutopay API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 400
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	/userContinueAutopay	|	src/test/resources/testdata/api/request/Drop2/bbps/userContinueAutopay_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/userContinueAutopay_response.json	|
+				
+		@TestCaseKey=UDB-T286872 @userContinueAutopay
+ 		Scenario Outline: Verify 404 error responce for userContinueAutopay API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 404
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	/userContinueAutopay1	|	src/test/resources/testdata/api/request/Drop2/bbps/userContinueAutopay_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/userContinueAutopay_response.json	|      
+	
+		@TestCaseKey=UDB-T286873 @userContinueAutopay
+ 		Scenario Outline: Verify 500 error responce for userContinueAutopay API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 500
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	2/userContinueAutopay	|	src/test/resources/testdata/api/request/Drop2/bbps/userContinueAutopay_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/BBPS_XML_500.xml	|
+
+#======================userEnabledAutoPay=====================
+
+		@TestCaseKey=UDB-C65 @userEnabledAutoPay
+ 		Scenario Outline: Verify 200 success responce for userEnabledAutoPay API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 200
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	/userEnabledAutoPay	|	src/test/resources/testdata/api/request/Drop2/bbps/userEnabledAutoPay_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/userEnabledAutoPay_response.json	|      
+
+		@TestCaseKey=UDB-C651 @userEnabledAutoPay
+ 		Scenario Outline: Verify 400 error response for userEnabledAutoPay API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 400
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/userEnabledAutoPay	|	src/test/resources/testdata/api/request/Drop2/bbps/userEnabledAutoPay_request_400.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/userEnabledAutoPay_response_400.json	|
+				
+		@TestCaseKey=UDB-C652 @userEnabledAutoPay
+ 		Scenario Outline: Verify 404 error responce for userEnabledAutoPay API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 404
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	/userEnabledAutoPay1	|	src/test/resources/testdata/api/request/Drop2/bbps/userEnabledAutoPay_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/userEnabledAutoPay_response_404.json	|      
+	
+		@TestCaseKey=UDB-C653 @userEnabledAutoPay
+ 		Scenario Outline: Verify 500 error responce for userEnabledAutoPay API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 500
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	2/userEnabledAutoPay	|	src/test/resources/testdata/api/request/Drop2/bbps/userEnabledAutoPay_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/BBPS_XML_500.xml	|
+									
+									
+#======================onClickServiceProviderGas=====================
+
+		@TestCaseKey=UDB-T28834 @onClickServiceProviderGas
+ 		Scenario Outline: Verify 200 success responce for onClickServiceProviderGas API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 200
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickServiceProviderGas	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickServiceProviderGas_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickServiceProviderGas_response.json	|      
+
+		@TestCaseKey=UDB-T288341 @onClickServiceProviderGas
+ 		Scenario Outline: Verify 400 error response for onClickServiceProviderGas API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 400
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	/onClickServiceProviderGas	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickServiceProviderGas_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickServiceProviderGas_response.json	|
+				
+		@TestCaseKey=UDB-T288342 @onClickServiceProviderGas
+ 		Scenario Outline: Verify 404 error responce for onClickServiceProviderGas API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 404
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickServiceProviderGas1	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickServiceProviderGas_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickServiceProviderGas_response_404.json	|      
+	
+		@TestCaseKey=UDB-T288343 @onClickServiceProviderGas
+ 		Scenario Outline: Verify 500 error responce for onClickServiceProviderGas API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 500
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	2/onClickServiceProviderGas	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickServiceProviderGas_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/BBPS_XML_500.xml	|
+									
+									
+#======================onClickServiceProviderRental=====================
+
+		@TestCaseKey=UDB-T28926 @onClickServiceProviderRental
+ 		Scenario Outline: Verify 200 success responce for onClickServiceProviderRental API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 200
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickServiceProviderRental	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickServiceProviderRental_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickServiceProviderRental_response.json	|      
+
+		@TestCaseKey=UDB-T289261 @onClickServiceProviderRental
+ 		Scenario Outline: Verify 400 error response for onClickServiceProviderRental API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 400
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	/onClickServiceProviderRental	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickServiceProviderRental_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickServiceProviderRental_response.json	|
+				
+		@TestCaseKey=UDB-T289262 @onClickServiceProviderRental
+ 		Scenario Outline: Verify 404 error responce for onClickServiceProviderRental API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 404
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickServiceProviderRental1	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickServiceProviderRental_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickServiceProviderRental_response_404.json	|      
+	
+		@TestCaseKey=UDB-T289263 @onClickServiceProviderRental
+ 		Scenario Outline: Verify 500 error responce for onClickServiceProviderRental API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 500
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	2/onClickServiceProviderRental	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickServiceProviderRental_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/BBPS_XML_500.xml	|
+									
+
+#======================onClickServiceProviderElectricity=====================
+
+		@TestCaseKey=UDB-T28930 @onClickServiceProviderElectricity
+ 		Scenario Outline: Verify 200 success responce for onClickServiceProviderElectricity API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 200
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickServiceProviderElectricity	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickServiceProviderElectricity_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickServiceProviderElectricity_response.json	|      
+
+		@TestCaseKey=UDB-T289301 @onClickServiceProviderElectricity
+ 		Scenario Outline: Verify 400 error response for onClickServiceProviderElectricity API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 400
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickServiceProviderElectricity	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickServiceProviderElectricity_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickServiceProviderElectricity_response.json	|
+				
+		@TestCaseKey=UDB-T289302 @onClickServiceProviderElectricity
+ 		Scenario Outline: Verify 404 error responce for onClickServiceProviderElectricity API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 404
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickServiceProviderElectricity1	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickServiceProviderElectricity_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickServiceProviderElectricity_response_404.json	|      
+	
+		@TestCaseKey=UDB-T289303 @onClickServiceProviderElectricity
+ 		Scenario Outline: Verify 500 error responce for onClickServiceProviderElectricity API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 500
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	2/onClickServiceProviderElectricity	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickServiceProviderElectricity_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/BBPS_XML_500.xml	|
+									
+
+#======================getBBPSDashData=====================
+
+		@TestCaseKey=UDB-T287060 @getBBPSDashData
+ 		Scenario Outline: Verify 200 success responce for getBBPSDashData API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 200
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/getBBPSDashData	|	src/test/resources/testdata/api/request/Drop2/bbps/getBBPSDashData_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/getBBPSDashData_response.json	|      
+
+		@TestCaseKey=UDB-T287061 @getBBPSDashData
+ 		Scenario Outline: Verify 400 error response for getBBPSDashData API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 400
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/getBBPSDashData	|	src/test/resources/testdata/api/request/Drop2/bbps/getBBPSDashData_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/getBBPSDashData_response_400.json	|
+				
+		@TestCaseKey=UDB-T287062 @getBBPSDashData
+ 		Scenario Outline: Verify 404 error responce for getBBPSDashData API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 404
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/getBBPSDashData1	|	src/test/resources/testdata/api/request/Drop2/bbps/getBBPSDashData_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/getBBPSDashData_response_404.json	|      
+	
+		@TestCaseKey=UDB-T287063 @getBBPSDashData
+ 		Scenario Outline: Verify 500 error responce for getBBPSDashData API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 500
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	2/getBBPSDashData	|	src/test/resources/testdata/api/request/Drop2/bbps/getBBPSDashData_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/BBPS_XML_500.xml	|
+									
+#======================onFilterPastPayment=====================
+
+		@TestCaseKey=UDB-T28706 @onFilterPastPayment
+ 		Scenario Outline: Verify 200 success responce for onFilterPastPayment API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 200
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	/onFilterPastPayment	|	src/test/resources/testdata/api/request/Drop2/bbps/onFilterPastPayment_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onFilterPastPayment_response.json	|      
+
+		@TestCaseKey=UDB-T289211 @onFilterPastPayment
+ 		Scenario Outline: Verify 400 error response for onFilterPastPayment API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 400
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onFilterPastPayment	|	src/test/resources/testdata/api/request/Drop2/bbps/onFilterPastPayment_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/onFilterPastPayment_response.json	|
+				
+		@TestCaseKey=UDB-T289212 @onFilterPastPayment
+ 		Scenario Outline: Verify 404 error responce for onFilterPastPayment API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 404
+  	  Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onFilterPastPayment1	|	src/test/resources/testdata/api/request/Drop2/bbps/onFilterPastPayment_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onFilterPastPayment_response_404.json	|      
+	
+		@TestCaseKey=UDB-T289213 @onFilterPastPayment
+ 		Scenario Outline: Verify 500 error responce for onFilterPastPayment API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 500
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	2/onFilterPastPayment	|	src/test/resources/testdata/api/request/Drop2/bbps/onFilterPastPayment_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/BBPS_XML_500.xml	|
+									
+#======================onClickTransactionPinContinueAutopay=====================
+
+		@TestCaseKey=UDB-T28918 @onClickTransactionPinContinueAutopay
+ 		Scenario Outline: Verify 200 success responce for onClickTransactionPinContinueAutopay API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 200
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	/onClickTransactionPinContinueAutopay	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickTransactionPinContinueAutopay_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickTransactionPinContinueAutopay_response.json	|      
+
+		@TestCaseKey=UDB-T289181 @onClickTransactionPinContinueAutopay
+ 		Scenario Outline: Verify 400 error response for onClickTransactionPinContinueAutopay API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 400
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickTransactionPinContinueAutopay	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickTransactionPinContinueAutopay_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickTransactionPinContinueAutopay_response.json	|
+				
+		@TestCaseKey=UDB-T289182 @onClickTransactionPinContinueAutopay
+ 		Scenario Outline: Verify 404 error responce for onClickTransactionPinContinueAutopay API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 404
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickTransactionPinContinueAutopay1	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickTransactionPinContinueAutopay_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickTransactionPinContinueAutopay_response_404.json	|      
+	
+		@TestCaseKey=UDB-T289183 @onClickTransactionPinContinueAutopay
+ 		Scenario Outline: Verify 500 error responce for onClickTransactionPinContinueAutopay API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 500
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	2/onClickTransactionPinContinueAutopay	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickTransactionPinContinueAutopay_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/BBPS_XML_500.xml	|
+									
+#======================onClickPayAgain=====================
+
+		@TestCaseKey=UDB-T29692 @onClickPayAgain
+ 		Scenario Outline: Verify 200 success responce for onClickPayAgain API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 200
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickPayAgain	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickPayAgain_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickPayAgain_response.json	|      
+
+		@TestCaseKey=UDB-T296921 @onClickPayAgain
+ 		Scenario Outline: Verify 400 error response for onClickPayAgain API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 400
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	/onClickPayAgain	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickPayAgain_request_400.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickPayAgain_response_400.json	|
+				
+		@TestCaseKey=UDB-T296922 @onClickPayAgain
+ 		Scenario Outline: Verify 404 error responce for onClickPayAgain API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 404
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickPayAgain1	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickPayAgain_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickPayAgain_response_404.json	|      
+	
+		@TestCaseKey=UDB-T289183 @onClickPayAgain
+ 		Scenario Outline: Verify 500 error responce for onClickPayAgain API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 500
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	2/onClickPayAgain	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickPayAgain_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/BBPS_XML_500.xml	|
+									
+
+#======================raiseComplaint=====================
+
+		@TestCaseKey=UDB-T28699 @raiseComplaint
+ 		Scenario Outline: Verify 200 success responce for raiseComplaint API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 200
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	/raiseComplaint	|	src/test/resources/testdata/api/request/Drop2/bbps/raiseComplaint_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/raiseComplaint_response.json	|      
+
+		@TestCaseKey=UDB-T286991 @raiseComplaint
+ 		Scenario Outline: Verify 400 error response for raiseComplaint API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 400
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/raiseComplaint	|	src/test/resources/testdata/api/request/Drop2/bbps/raiseComplaint_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/raiseComplaint_response_400.json	|
+				
+		@TestCaseKey=UDB-T286992 @raiseComplaint
+ 		Scenario Outline: Verify 404 error responce for raiseComplaint API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 404
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/raiseComplaint1	|	src/test/resources/testdata/api/request/Drop2/bbps/raiseComplaint_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/raiseComplaint_response_404.json	|      
+	
+		@TestCaseKey=UDB-T286993 @raiseComplaint
+ 		Scenario Outline: Verify 500 error responce for raiseComplaint API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 500
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	2/raiseComplaint	|	src/test/resources/testdata/api/request/Drop2/bbps/raiseComplaint_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/BBPS_XML_500.xml	|
+	
+#======================trackComplaint=====================
+
+		@TestCaseKey=UDB-T30065 @trackComplaint
+ 		Scenario Outline: Verify 200 success responce for trackComplaint API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 200
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/trackComplaint	|	src/test/resources/testdata/api/request/Drop2/bbps/trackComplaint_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/trackComplaint_response.json	|      
+
+		@TestCaseKey=UDB-T300651 @trackComplaint
+ 		Scenario Outline: Verify 400 error response for trackComplaint API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 400
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/trackComplaint	|	src/test/resources/testdata/api/request/Drop2/bbps/trackComplaint_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/trackComplaint_response_400.json	|
+				
+		@TestCaseKey=UDB-T300652 @trackComplaint
+ 		Scenario Outline: Verify 404 error responce for trackComplaint API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 404
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/trackComplaint1	|	src/test/resources/testdata/api/request/Drop2/bbps/trackComplaint_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/trackComplaint_response_404.json	|      
+	
+		@TestCaseKey=UDB-T300653 @trackComplaint
+ 		Scenario Outline: Verify 500 error responce for trackComplaint API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 500
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	2/trackComplaint	|	src/test/resources/testdata/api/request/Drop2/bbps/trackComplaint_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/BBPS_XML_500.xml	|
+									
+
+#======================onClickUtility=====================
+
+		@TestCaseKey=UDB-T16002 @onClickUtility
+ 		Scenario Outline: Verify 200 success responce for onClickUtility API, utility type is LOAN.
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 200
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickUtility	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickUtility_Loan_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickUtility_Loan_response.json	|      
+
+		@TestCaseKey=UDB-T160021 @onClickUtility
+ 		Scenario Outline: Verify 200 success responce for onClickUtility API, utility type is DTH.
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 200
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	/onClickUtility	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickUtility_DTH_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickUtility_DTH_response.json	|      
+
+		@TestCaseKey=UDB-T160022 @onClickUtility
+ 		Scenario Outline: Verify 200 success responce for onClickUtility API, utility type is Electricity.
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 200
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickUtility	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickUtility_Electricity_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickUtilityElectricity_response.json	|      
+
+		@TestCaseKey=UDB-T160023 @onClickUtility
+ 		Scenario Outline: Verify 400 error response for onClickUtility API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 400
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickUtility	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickUtility_request_400.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickUtility_response_400.json	|
+				
+		@TestCaseKey=UDB-T160024 @onClickUtility
+ 		Scenario Outline: Verify 404 error responce for onClickUtility API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 404
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/onClickUtility1	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickUtility_Loan_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickUtility_response_404.json	|      
+	
+		@TestCaseKey=UDB-T160025 @onClickUtility
+ 		Scenario Outline: Verify 500 error responce for onClickUtility API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 500
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	2/onClickUtility	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickUtility_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/BBPS_XML_500.xml	|
+									
+#======================userClickRemoveAccount=====================
+
+		@TestCaseKey=UDB-C70 @userClickRemoveAccount
+ 		Scenario Outline: Verify 200 success responce for userClickRemoveAccount API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 200
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	/userClickRemoveAccount	|	src/test/resources/testdata/api/request/Drop2/bbps/userClickRemoveAccount_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/userClickRemoveAccount_response.json	|      
+
+		@TestCaseKey=UDB-C701 @userClickRemoveAccount
+ 		Scenario Outline: Verify 400 error response for userClickRemoveAccount API, remove attribute cif
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 400
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	/userClickRemoveAccount	|	src/test/resources/testdata/api/request/Drop2/bbps/userClickRemoveAccount_request_400_CIF.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/userClickRemoveAccount_response_400_CIF.json	|
+				
+		@TestCaseKey=UDB-C702 @userClickRemoveAccount
+ 		Scenario Outline: Verify 400 error response for userClickRemoveAccount API, remove attribute billerAccountId
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 400
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	/userClickRemoveAccount	|	src/test/resources/testdata/api/request/Drop2/bbps/userClickRemoveAccount_request_400_billerid.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/userClickRemoveAccount_response_400_billerid.json	|
+						
+		@TestCaseKey=UDB-C703 @userClickRemoveAccount
+ 		Scenario Outline: Verify 404 error responce for userClickRemoveAccount API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 404
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/userClickRemoveAccount1	|	src/test/resources/testdata/api/request/Drop2/bbps/userClickRemoveAccount_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/userClickRemoveAccount_response_404.json	|      
+	
+		@TestCaseKey=UDB-C704 @userClickRemoveAccount
+ 		Scenario Outline: Verify 500 error responce for userClickRemoveAccount API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 500
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	2/userClickRemoveAccount	|	src/test/resources/testdata/api/request/Drop2/bbps/userClickRemoveAccount_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/BBPS_XML_500.xml	|
+  
+#======================getAccountList=====================
+
+		@TestCaseKey=UDB-C71 @getAccountList
+ 		Scenario Outline: Verify 200 success responce for getAccountList API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 200
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/getAccountList	|	src/test/resources/testdata/api/request/Drop2/bbps/getAccountList_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/getAccountList_response.json	|      
+
+		@TestCaseKey=UDB-C711 @getAccountList
+ 		Scenario Outline: Verify 400 error response for getAccountList API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 400
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	/getAccountList	|	src/test/resources/testdata/api/request/Drop2/bbps/getAccountList_request_400.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/getAccountList_response_400.json	|
+				
+		@TestCaseKey=UDB-C712 @getAccountList
+ 		Scenario Outline: Verify 404 error responce for getAccountList API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 404
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/getAccountList1	|	src/test/resources/testdata/api/request/Drop2/bbps/getAccountList_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/getAccountList_response_404.json	|      
+	
+		@TestCaseKey=UDB-C713 @getAccountList
+ 		Scenario Outline: Verify 500 error responce for getAccountList API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 500
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	2/getAccountList	|	src/test/resources/testdata/api/request/Drop2/bbps/getAccountList_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/BBPS_XML_500.xml	|
+									
+#======================linkUserWithBiller=====================
+
+		@TestCaseKey=UDB-T15972 @linkUserWithBiller
+ 		Scenario Outline: Verify 200 success responce for linkUserWithBiller API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 200
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/linkUserWithBiller/2002605586	|	src/test/resources/testdata/api/request/Drop2/bbps/linkUserWithBiller_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/linkUserWithBiller_response.json	|      
+
+		@TestCaseKey=UDB-T159721 @linkUserWithBiller
+ 		Scenario Outline: Verify 400 error response for linkUserWithBiller API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 400
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	/linkUserWithBiller/2002605586	|	src/test/resources/testdata/api/request/Drop2/bbps/linkUserWithBiller_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/linkUserWithBiller_response_400.json	|
+				
+		@TestCaseKey=UDB-T159722 @linkUserWithBiller
+ 		Scenario Outline: Verify 404 error responce for linkUserWithBiller API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  	 	Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 404
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/linkUserWithBiller1	|	src/test/resources/testdata/api/request/Drop2/bbps/linkUserWithBiller_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/linkUserWithBiller_response_404.json	|      
+	
+		@TestCaseKey=UDB-T159723 @linkUserWithBiller
+ 		Scenario Outline: Verify 500 error responce for linkUserWithBiller API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 500
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	2/linkUserWithBiller	|	src/test/resources/testdata/api/request/Drop2/bbps/linkUserWithBiller_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/BBPS_XML_500.xml	|	
+									
+#======================getComplaintReasons=====================
+
+		@TestCaseKey=UDB-C72 @getComplaintReasons
+ 		Scenario Outline: Verify 200 success responce for getComplaintReasons API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 200
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/getComplaintReasons	|	src/test/resources/testdata/api/request/Drop2/bbps/getComplaintReasons_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/getComplaintReasons_response.json	|      
+
+		@TestCaseKey=UDB-C721 @getComplaintReasons
+ 		Scenario Outline: Verify 400 error response for getComplaintReasons API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 400
+  		Then user verifies json from <responseBody> 
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/getComplaintReasons	|	src/test/resources/testdata/api/request/Drop2/bbps/getComplaintReasons_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/getComplaintReasons_response_400.json	|
+				
+		@TestCaseKey=UDB-C722 @getComplaintReasons
+ 		Scenario Outline: Verify 404 error responce for getComplaintReasons API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 404
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/getComplaintReasons1	|	src/test/resources/testdata/api/request/Drop2/bbps/getComplaintReasons_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/getComplaintReasons_response_404.json	|      
+	
+		@TestCaseKey=UDB-C723 @getComplaintReasons
+ 		Scenario Outline: Verify 500 error responce for getComplaintReasons API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 500
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	2/getComplaintReasons	|	src/test/resources/testdata/api/request/Drop2/bbps/getComplaintReasons_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/BBPS_XML_500.xml	|
+									
+#======================getStateList=====================
+
+		@TestCaseKey=UDB-C73 @getStateList
+ 		Scenario Outline: Verify 200 success responce for getStateList API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 200
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/getStateList	|	src/test/resources/testdata/api/request/Drop2/bbps/getStateList_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/getStateList_response.json	|      
+
+		@TestCaseKey=UDB-C731 @getStateList
+ 		Scenario Outline: Verify 400 error response for getStateList API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 400
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	/getStateList	|	src/test/resources/testdata/api/request/Drop2/bbps/getStateList_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/getStateList_response_400.json	|
+				
+		@TestCaseKey=UDB-C732 @getStateList
+ 		Scenario Outline: Verify 404 error responce for getStateList API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 404
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/getStateList1	|	src/test/resources/testdata/api/request/Drop2/bbps/getStateList_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/getStateList_response_404.json	|      
+	
+		@TestCaseKey=UDB-C733 @getStateList
+ 		Scenario Outline: Verify 500 error responce for getStateList API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 500
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	2/getStateList	|	src/test/resources/testdata/api/request/Drop2/bbps/getStateList_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/BBPS_XML_500.xml	|
+								
+#======================getCityList=====================
+
+		@TestCaseKey=UDB-C74 @getCityList
+ 		Scenario Outline: Verify 200 success responce for getCityList API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 200
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/getCityList	|	src/test/resources/testdata/api/request/Drop2/bbps/getCityList_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/getCityList_response.json	|      
+
+		@TestCaseKey=UDB-C741 @getCityList
+ 		Scenario Outline: Verify 400 error response for getCityList API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 400
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|	requestField   |responsefield | filename |responseBody	|
+					|	bbps	|	/getCityList	|	src/test/resources/testdata/api/request/Drop2/bbps/getCityList_request_400.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/getCityList_response_400.json	|
+				
+		@TestCaseKey=UDB-C742 @getCityList
+ 		Scenario Outline: Verify 404 error responce for getCityList API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 404
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	/getCityList1	|	src/test/resources/testdata/api/request/Drop2/bbps/getCityList_request.json	|	null | null | null |src/test/resources/testdata/api/response/expected/Drop2/bbps/getCityList_response_404.json	|      
+	
+		@TestCaseKey=UDB-C743 @getCityList
+ 		Scenario Outline: Verify 500 error responce for getCityList API
+  		Given user sets the environment of endpoint
+  		Given user set the basepath to <service>
+  		Then set the endpoint <endpoint>
+  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		Then user triggers a post request with <requestBody>
+  		Then user verifies that status is 500
+  		Then user verifies json from <responseBody>
+  
+  			Examples:
+					|	service |	endpoint |	requestBody	|requestField   |responsefield | filename |	responseBody	|
+					|	bbps	|	2/getCityList	|	src/test/resources/testdata/api/request/Drop2/bbps/getCityList_request.json	|null | null | null |	src/test/resources/testdata/api/response/expected/Drop2/bbps/BBPS_XML_500.xml	|																																																																																																																																																																											      											      																				      											      

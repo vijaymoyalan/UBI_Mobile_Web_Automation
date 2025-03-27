@@ -1,0 +1,1 @@
+{"errorId":"38e779fe-db42-4f75-9225-96a89090adbf","errorAt":"2024-12-20T16:47:17.023030101","errorLocation":null,"error":null,"errors":[{"code":"400","message":"The mapper [com.ubi.bbps.service.impl.BbpsServiceImpl$$Lambda$1951/0x00007f9a3492c9e8] returned a null value.","values":null,"origmesg":null,"errors":null}]}

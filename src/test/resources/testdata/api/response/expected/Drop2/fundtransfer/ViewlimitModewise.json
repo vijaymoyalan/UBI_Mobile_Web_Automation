@@ -1,0 +1,17 @@
+{
+  "data": {
+    "cif": "254061641",
+    "channel": "MOB",
+    "data": [
+      {
+        "mode": "NEFT",
+        "maxDailyTrnLimit": 1000000,
+        "maxPerTrnLimit": 1000000,
+        "minDailyTrnLimit": 1,
+        "minPerTrnLimit": 1
+      }
+    ]
+  },
+  "errorMessage": null,
+  "success": true
+}

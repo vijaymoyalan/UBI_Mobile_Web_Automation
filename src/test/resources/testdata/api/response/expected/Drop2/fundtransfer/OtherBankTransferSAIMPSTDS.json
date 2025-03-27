@@ -1,0 +1,21 @@
+{
+  "success": true,
+  "data": {
+    "requestId": "1484377870682065476",
+    "txnId": "434000151102",
+    "trnxTimestamp": "2024-12-05T00:14:25",
+    "creditAccountName": "Kiran Kumar",
+    "debitAccountName": "Ankur Mishrat",
+    "creditAccountType": null,
+    "creditAccountNumber": "123456041",
+    "creditMMID": null,
+    "remarks": "IMPS Transfer testing",
+    "amount": "60",
+    "modeOfPayment": "IMPS",
+    "fromAccountNumber": "441002010058664",
+    "creditAccountIfsc": "SBIN0001594",
+    "mobileNumber": null,
+    "accountType": "SBA"
+  },
+  "errorDetails": null
+}

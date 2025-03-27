@@ -1,0 +1,15 @@
+{
+    "errorId": "14d6613a-e201-4bb7-af0d-ca7b152f9d0e",
+    "errorAt": "2025-01-03T13:12:25",
+    "errorLocation": "null",
+    "error": null,
+    "errors": [
+        {
+            "code": "ERR_CU_00999",
+            "message": "Technical error occurred while processing your request. Kindly try after some time.",
+            "values": null,
+            "origmesg": null,
+            "errors": null
+        }
+    ]
+}

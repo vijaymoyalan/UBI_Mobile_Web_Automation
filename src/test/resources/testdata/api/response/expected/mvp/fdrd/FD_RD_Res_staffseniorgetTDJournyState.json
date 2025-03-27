@@ -1,0 +1,16 @@
+{
+    "cif": "226786783",
+    "journeyName": "TDA",
+    "subJourneyName": "RDSC",
+    "transactionDate": "2024-12-30T17:32:19.377",
+    "applicationFormNumber": "849807476004",
+    "channel": "",
+    "failureReason": "",
+    "journeyProgressName": "",
+    "journeyTask": "OPEN",
+    "journeyTaskRequestDate": "2024-12-30T17:32:19.38",
+    "remarks": "",
+    "transactionRefNumber": null,
+    "transactionStatus": false,
+    "journeyStatus": "DRAFT"
+}

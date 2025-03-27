@@ -1,0 +1,15 @@
+{
+   "errorId": "2b16717f-d93f-4c5e-a694-d1452753bccf",
+   "errorAt": "2025-02-07T15:34:26",
+   "errorLocation": "null",
+   "error": null,
+   "errors": [
+      {
+         "code": "ERR_NS_00153",
+         "message": "Document not found.",
+         "values": null,
+         "origmesg": null,
+         "errors": null
+      }
+   ]
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "cif": "254061641",
+    "referenceNumber": "AAUL646941",
+    "amount": 12.34,
+    "creditAccountNumber": "123456043",
+    "debitAccountNumber": "441002010058664",
+    "creditAccountName": null,
+    "debitAccountName": "HARMANJIT SINGH SO RANJIT SINGH",
+    "frequency": "MONTHLY",
+    "mode": "NEFT",
+    "numberOfTransfer": 2,
+    "initialNumberOfTransfers": "2",
+    "remarks": "SI UBI",
+    "scheduleDate": "2025-11-06T00:00:00",
+    "scheduleType": "RECURRING",
+    "siStartDate": "2025-11-06T00:00:00",
+    "siEndDate": "2025-12-06T00:00:00",
+    "status": "SCHEDULED",
+    "trnxTimestamp": "2024-12-02T16:12:56.492849718"
+  },
+  "success": true,
+  "errorMessage": null,
+  "kafkaStatus": "COMPLETED",
+  "correlationId": null
+}

@@ -1,0 +1,36 @@
+{
+    "cif": "634444396",
+    "rentedDeviceDetails": {
+        "deviceType": null,
+        "noofDevices": 0,
+        "posDeviceModelName": null,
+        "tenureAmount": null,
+        "exclGst": true,
+        "termsConditions": null,
+        "communicationAddress": "null, null, null, null, null - null, null, null, null, null, null, null, null, null",
+        "rental": null,
+        "charges": null
+    },
+    "businessDetails": {
+        "businessName": null,
+        "pan": null,
+        "businessAddress": "null, null, null, null - null",
+        "settlementAccount": null,
+        "expectedAnnualTurnover": null,
+        "gstin": null,
+        "natureofBusiness": null,
+        "mobileNumber": null,
+        "emailAddress": null,
+        "altMobileNumber": null
+    },
+    "documentUploadedList": [
+        {
+            "name": "file1",
+            "type": "png",
+            "url": "634444396/POS/POS300125000014_OTHER_SBL.png",
+            "uploadIndicator": null,
+            "docRefno": "73334398716441"
+        }
+    ],
+    "applicationProceedIndicator": null
+}

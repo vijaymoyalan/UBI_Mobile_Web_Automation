@@ -1,0 +1,1 @@
+{"errorId":"5edac9bc-ea71-4604-8e2a-2972b6fa66f6","errorAt":"2024-12-11T18:07:15.948604988","errorLocation":null,"error":null,"errors":[{"code":"BAD_REQUEST","message":"schemeCode: string [DMJJBS] does not match pattern ^(PMJJBY|PMSBY)$","values":null,"origmesg":null,"errors":null}]}

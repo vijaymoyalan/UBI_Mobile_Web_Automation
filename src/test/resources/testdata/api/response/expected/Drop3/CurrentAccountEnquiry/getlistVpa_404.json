@@ -1,0 +1,9 @@
+{
+  "errorId": "b78596b9-d87d-4195-8aee-6b0cd7cc19f1",
+  "errorAt": "2025-02-05T12:27:04.882567737",
+  "errors": {
+    "code": "404",
+    "result": "The requested URL path /msme/app/upi/api/v1/getlistVpadfd is not found",
+    "message": "404 NOT_FOUND"
+  }
+}

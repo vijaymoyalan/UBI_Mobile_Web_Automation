@@ -1,0 +1,21 @@
+{
+  "biller_category": [
+    "Utilities",
+    "Internet",
+    "Mobile",
+    "Insurance"
+  ],
+  "amount_range": [
+    {
+      "min": 100,
+      "max": 1000
+    }
+  ],
+  "date": [
+    {
+      "min": "07-07-2020",
+      "max": "08-12-2024"
+    }
+  ],
+  "cif": "264479335"
+}

@@ -1,0 +1,18 @@
+{
+  "data": {
+    "referenceNumber": "UBINH24219428957",
+    "creditAccountType": "SBA",
+    "debitAccountType": "SBA",
+    "creditAccountName": "TEST NEFT",
+    "fromAccount": "441002010058664",
+    "toAccount": "123456043",
+    "modeOfPayment": "NEFT",
+    "trnxAmount": 12,
+    "remarks": "TEST",
+    "trnxTimestamp": "2024-12-07T18:27:09"
+  },
+  "success": true,
+  "errorMessage": null,
+  "kafkaStatus": null,
+  "correlationId": null
+}

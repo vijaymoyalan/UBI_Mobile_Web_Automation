@@ -1,0 +1,38 @@
+[
+    {
+        "yourDevice": [],
+        "activeOrders": [
+            {
+                "device": {
+                    "posDeviceType": "",
+                    "deviceIconName": "",
+                    "deviceStatus": null,
+                    "posDeviceModelName": null,
+                    "activationDate": null,
+                    "noOfDevices": 0,
+                    "orderDate": null,
+                    "applicationFormNumber": "POS160125000001"
+                },
+                "deviceDetails": []
+            }
+        ]
+    },
+    {
+        "yourDevice": [],
+        "activeOrders": [
+            {
+                "device": {
+                    "posDeviceType": "",
+                    "deviceIconName": "",
+                    "deviceStatus": null,
+                    "posDeviceModelName": null,
+                    "activationDate": null,
+                    "noOfDevices": 0,
+                    "orderDate": null,
+                    "applicationFormNumber": "POS300125000014"
+                },
+                "deviceDetails": []
+            }
+        ]
+    }
+]

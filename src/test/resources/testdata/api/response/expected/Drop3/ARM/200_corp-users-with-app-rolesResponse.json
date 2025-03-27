@@ -1,0 +1,328 @@
+{
+    "users": [
+        {
+            "userId": "MALK0000",
+            "userGroupId": "GRP_MALK0000",
+            "userName": "Malko ",
+            "kycStatus": "Pending",
+            "mobNum": "0000000000",
+            "journeyRoles": [
+                {
+                    "journeyName": "Payments",
+                    "accessLevel": "viewer",
+                    "grantedAccess": "2025-02-05T23:48:27.750+00:00",
+                    "lastEdited": "2025-02-05T23:48:27.898+00:00",
+                    "sortDateType": "Granted access",
+                    "timeStamp": "06/02/2025",
+                    "level": 0
+                },
+                {
+                    "journeyName": "Other services",
+                    "accessLevel": "viewer",
+                    "grantedAccess": "2025-02-05T23:48:27.756+00:00",
+                    "lastEdited": "2025-02-05T23:48:27.839+00:00",
+                    "sortDateType": "Granted access",
+                    "timeStamp": "06/02/2025",
+                    "level": 0
+                },
+                {
+                    "journeyName": "Deposit",
+                    "accessLevel": "viewer",
+                    "grantedAccess": "2025-02-05T23:48:27.751+00:00",
+                    "lastEdited": "2025-02-05T23:48:27.897+00:00",
+                    "sortDateType": "Granted access",
+                    "timeStamp": "06/02/2025",
+                    "level": 0
+                },
+                {
+                    "journeyName": "Borrowings",
+                    "accessLevel": "viewer",
+                    "grantedAccess": "2025-02-05T23:48:27.751+00:00",
+                    "lastEdited": "2025-02-05T23:48:27.897+00:00",
+                    "sortDateType": "Granted access",
+                    "timeStamp": "06/02/2025",
+                    "level": 0
+                },
+                {
+                    "journeyName": "Collections",
+                    "accessLevel": "viewer",
+                    "grantedAccess": "2025-02-05T23:48:27.751+00:00",
+                    "lastEdited": "2025-02-05T23:48:27.837+00:00",
+                    "sortDateType": "Granted access",
+                    "timeStamp": "06/02/2025",
+                    "level": 0
+                }
+            ]
+        },
+        {
+            "userId": "HELLOBUDDY",
+            "userGroupId": "GRP_HELLOBUDDY",
+            "userName": "Om",
+            "kycStatus": "Pending",
+            "mobNum": "7575757557",
+            "journeyRoles": [
+                {
+                    "journeyName": "Deposit",
+                    "accessLevel": "viewer",
+                    "grantedAccess": "2025-01-23T13:04:29.411+00:00",
+                    "lastEdited": "2025-01-23T14:54:58.719+00:00",
+                    "sortDateType": "Last edited",
+                    "timeStamp": "23/01/2025",
+                    "level": 0
+                },
+                {
+                    "journeyName": "Other services",
+                    "accessLevel": "viewer",
+                    "grantedAccess": "2025-01-23T13:04:29.412+00:00",
+                    "lastEdited": "2025-01-23T14:54:58.719+00:00",
+                    "sortDateType": "Last edited",
+                    "timeStamp": "23/01/2025",
+                    "level": 0
+                },
+                {
+                    "journeyName": "Collections",
+                    "accessLevel": "viewer",
+                    "grantedAccess": "2025-01-23T13:04:29.421+00:00",
+                    "lastEdited": "2025-01-23T14:54:58.733+00:00",
+                    "sortDateType": "Last edited",
+                    "timeStamp": "23/01/2025",
+                    "level": 0
+                },
+                {
+                    "journeyName": "Borrowings",
+                    "accessLevel": "viewer",
+                    "grantedAccess": "2025-01-23T13:04:29.422+00:00",
+                    "lastEdited": "2025-01-23T14:54:58.727+00:00",
+                    "sortDateType": "Last edited",
+                    "timeStamp": "23/01/2025",
+                    "level": 0
+                },
+                {
+                    "journeyName": "Payments",
+                    "accessLevel": "viewer",
+                    "grantedAccess": "2025-01-23T13:04:29.416+00:00",
+                    "lastEdited": "2025-01-23T14:54:58.731+00:00",
+                    "sortDateType": "Last edited",
+                    "timeStamp": "23/01/2025",
+                    "level": 0
+                }
+            ]
+        },
+        {
+            "userId": "BHARGAV123",
+            "userGroupId": "GRP_BHARGAV123",
+            "userName": "Bhargav ",
+            "kycStatus": "Pending",
+            "mobNum": "9538955665",
+            "journeyRoles": [
+                {
+                    "journeyName": "Borrowings",
+                    "accessLevel": "viewer",
+                    "grantedAccess": "2025-01-29T12:13:04.215+00:00",
+                    "lastEdited": "2025-01-29T12:17:36.635+00:00",
+                    "sortDateType": "Last edited",
+                    "timeStamp": "29/01/2025",
+                    "level": 0
+                },
+                {
+                    "journeyName": "Payments",
+                    "accessLevel": "viewer",
+                    "grantedAccess": "2025-01-29T12:13:04.231+00:00",
+                    "lastEdited": "2025-01-29T12:17:36.630+00:00",
+                    "sortDateType": "Last edited",
+                    "timeStamp": "29/01/2025",
+                    "level": 0
+                },
+                {
+                    "journeyName": "Other services",
+                    "accessLevel": "viewer",
+                    "grantedAccess": "2025-01-29T12:13:04.218+00:00",
+                    "lastEdited": "2025-01-29T12:17:36.624+00:00",
+                    "sortDateType": "Last edited",
+                    "timeStamp": "29/01/2025",
+                    "level": 0
+                },
+                {
+                    "journeyName": "Deposit",
+                    "accessLevel": "viewer",
+                    "grantedAccess": "2025-01-29T12:13:04.210+00:00",
+                    "lastEdited": "2025-01-29T12:17:36.786+00:00",
+                    "sortDateType": "Last edited",
+                    "timeStamp": "29/01/2025",
+                    "level": 0
+                },
+                {
+                    "journeyName": "Collections",
+                    "accessLevel": "viewer",
+                    "grantedAccess": "2025-01-29T12:13:04.210+00:00",
+                    "lastEdited": "2025-01-29T12:17:36.715+00:00",
+                    "sortDateType": "Last edited",
+                    "timeStamp": "29/01/2025",
+                    "level": 0
+                }
+            ]
+        },
+        {
+            "userId": "PRAV6590",
+            "userGroupId": "GRP_PRAV6590",
+            "userName": "Pravin",
+            "kycStatus": "Pending",
+            "mobNum": "1212126590",
+            "journeyRoles": [
+                {
+                    "journeyName": "Payments",
+                    "accessLevel": "viewer",
+                    "grantedAccess": "2025-01-24T09:25:31.399+00:00",
+                    "lastEdited": "2025-01-24T09:25:31.438+00:00",
+                    "sortDateType": "Granted access",
+                    "timeStamp": "24/01/2025",
+                    "level": 0
+                },
+                {
+                    "journeyName": "Collections",
+                    "accessLevel": "viewer",
+                    "grantedAccess": "2025-01-24T09:25:31.411+00:00",
+                    "lastEdited": "2025-01-24T09:25:31.513+00:00",
+                    "sortDateType": "Granted access",
+                    "timeStamp": "24/01/2025",
+                    "level": 0
+                },
+                {
+                    "journeyName": "Deposit",
+                    "accessLevel": "viewer",
+                    "grantedAccess": "2025-01-24T09:25:31.419+00:00",
+                    "lastEdited": "2025-01-24T09:25:31.515+00:00",
+                    "sortDateType": "Granted access",
+                    "timeStamp": "24/01/2025",
+                    "level": 0
+                },
+                {
+                    "journeyName": "Other services",
+                    "accessLevel": "initiator",
+                    "grantedAccess": "2025-01-24T09:25:31.400+00:00",
+                    "lastEdited": "2025-01-24T09:25:31.439+00:00",
+                    "sortDateType": "Granted access",
+                    "timeStamp": "24/01/2025",
+                    "level": 1
+                },
+                {
+                    "journeyName": "Borrowings",
+                    "accessLevel": "viewer",
+                    "grantedAccess": "2025-01-24T09:25:31.399+00:00",
+                    "lastEdited": "2025-01-24T09:25:31.438+00:00",
+                    "sortDateType": "Granted access",
+                    "timeStamp": "24/01/2025",
+                    "level": 0
+                }
+            ]
+        },
+        {
+            "userId": "KOMA6590",
+            "userGroupId": "GRP_KOMA6590",
+            "userName": "Komal",
+            "kycStatus": "Pending",
+            "mobNum": "9128296590",
+            "journeyRoles": [
+                {
+                    "journeyName": "Other services",
+                    "accessLevel": "initiator",
+                    "grantedAccess": "2025-01-21T13:05:34.501+00:00",
+                    "lastEdited": "2025-01-21T13:05:34.697+00:00",
+                    "sortDateType": "Granted access",
+                    "timeStamp": "21/01/2025",
+                    "level": 1
+                },
+                {
+                    "journeyName": "Deposit",
+                    "accessLevel": "initiator",
+                    "grantedAccess": "2025-01-21T13:05:34.413+00:00",
+                    "lastEdited": "2025-01-21T13:05:34.702+00:00",
+                    "sortDateType": "Granted access",
+                    "timeStamp": "21/01/2025",
+                    "level": 1
+                },
+                {
+                    "journeyName": "Borrowings",
+                    "accessLevel": "initiator",
+                    "grantedAccess": "2025-01-21T13:05:34.493+00:00",
+                    "lastEdited": "2025-01-21T13:05:34.699+00:00",
+                    "sortDateType": "Granted access",
+                    "timeStamp": "21/01/2025",
+                    "level": 1
+                },
+                {
+                    "journeyName": "Collections",
+                    "accessLevel": "viewer",
+                    "grantedAccess": "2025-01-21T13:05:34.503+00:00",
+                    "lastEdited": "2025-01-21T13:05:34.698+00:00",
+                    "sortDateType": "Granted access",
+                    "timeStamp": "21/01/2025",
+                    "level": 0
+                },
+                {
+                    "journeyName": "Payments",
+                    "accessLevel": "initiator",
+                    "grantedAccess": "2025-01-21T13:05:34.593+00:00",
+                    "lastEdited": "2025-01-21T13:05:34.705+00:00",
+                    "sortDateType": "Granted access",
+                    "timeStamp": "21/01/2025",
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "userId": "ASHI2133",
+            "userGroupId": "GRP_ASHI2133",
+            "userName": "Ashish",
+            "kycStatus": "Pending",
+            "mobNum": "9530132133",
+            "journeyRoles": [
+                {
+                    "journeyName": "Other services",
+                    "accessLevel": "initiator",
+                    "grantedAccess": "2025-01-03T07:28:33.025+00:00",
+                    "lastEdited": "2025-01-31T13:07:08.209+00:00",
+                    "sortDateType": "Last edited",
+                    "timeStamp": "31/01/2025",
+                    "level": 1
+                },
+                {
+                    "journeyName": "Payments",
+                    "accessLevel": "initiator",
+                    "grantedAccess": "2025-01-31T13:07:07.996+00:00",
+                    "lastEdited": "2025-01-31T13:07:08.303+00:00",
+                    "sortDateType": "Last edited",
+                    "timeStamp": "31/01/2025",
+                    "level": 1
+                },
+                {
+                    "journeyName": "Deposit",
+                    "accessLevel": "viewer",
+                    "grantedAccess": "2025-01-03T07:28:33.024+00:00",
+                    "lastEdited": "2025-01-31T13:07:08.107+00:00",
+                    "sortDateType": "Last edited",
+                    "timeStamp": "31/01/2025",
+                    "level": 0
+                },
+                {
+                    "journeyName": "Collections",
+                    "accessLevel": "initiator",
+                    "grantedAccess": "2025-01-03T07:28:33.014+00:00",
+                    "lastEdited": "2025-01-31T13:07:08.294+00:00",
+                    "sortDateType": "Last edited",
+                    "timeStamp": "31/01/2025",
+                    "level": 1
+                },
+                {
+                    "journeyName": "Borrowings",
+                    "accessLevel": "viewer",
+                    "grantedAccess": "2025-01-03T07:28:33.026+00:00",
+                    "lastEdited": "2025-01-31T13:07:08.111+00:00",
+                    "sortDateType": "Last edited",
+                    "timeStamp": "31/01/2025",
+                    "level": 0
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "cif": "60466771",
+    "source": {
+        "acctNum": ""
+    },
+    "customer": {
+        "cif": "60466771"
+    },
+    "channel": "DBP",
+    "events": "PART_WITHDRAWAL"
+}

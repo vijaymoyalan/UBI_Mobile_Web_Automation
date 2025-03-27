@@ -1,0 +1,31 @@
+{
+  "cif": "258459119",
+  "pan": "DSJPK9933C",
+  "symbol": "EQUITAS",
+  "category": "EMP",
+  "applicationNumber": "950000921",
+  "referenceNum": "D622737930916",
+  "applicationStageResponseList": [
+    {
+      "stageCode": "OFFER_START_DATE",
+      "stageDescription": "Offer start date",
+      "date": "2023-12-19 00:00:00",
+      "stageValue": "",
+      "stageOrder": "1"
+    },
+    {
+      "stageCode": "OFFER_END_DATE",
+      "stageDescription": "Offer end date",
+      "date": "2025-11-30 23:15:00",
+      "stageValue": "",
+      "stageOrder": "3"
+    },
+    {
+      "stageCode": "IPO_ALLOTMENT",
+      "stageDescription": "IPO Allotment",
+      "date": "TBD",
+      "stageValue": "Awaited",
+      "stageOrder": "4"
+    }
+  ]
+}

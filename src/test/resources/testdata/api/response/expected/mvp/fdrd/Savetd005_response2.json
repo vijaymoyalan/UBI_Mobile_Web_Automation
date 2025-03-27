@@ -1,0 +1,15 @@
+{
+    "errorId": "0de3faf8-533b-4c38-8c66-ef550dfadeaf",
+    "errorAt": null,
+    "errorLocation": null,
+    "error": null,
+    "errors": [
+        {
+            "code": "SCHEME_NOT_FOUND",
+            "message": "No Scheme is available for given details",
+            "values": null,
+            "origmesg": null,
+            "errors": null
+        }
+    ]
+}

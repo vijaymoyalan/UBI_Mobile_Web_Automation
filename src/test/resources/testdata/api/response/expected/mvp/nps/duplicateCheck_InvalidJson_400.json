@@ -1,0 +1,15 @@
+{
+   "errorId": "b61bc84d-7257-4a7c-b6ad-2d0e84f50b33",
+   "errorAt": "2025-01-28T12:10:03",
+   "errorLocation": "null",
+   "error": null,
+   "errors": [
+      {
+         "code": "PAN204",
+         "message": "Invalid Bank IFSC Code",
+         "values": null,
+         "origmesg": null,
+         "errors": null
+      }
+   ]
+}

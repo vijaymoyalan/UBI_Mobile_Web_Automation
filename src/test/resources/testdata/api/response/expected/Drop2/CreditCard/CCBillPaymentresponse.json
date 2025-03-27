@@ -1,0 +1,13 @@
+{
+  "statusCode": "SUCCESS",
+  "statusDescription": "PAYMENT_SUCCESSFULL",
+  "txnStatus": "SUCCESS",
+  "paymentRefNo": "857210477456",
+  "ccPaymentRefNo": "2024-12-00436154",
+  "amount": 1,
+  "ledgerBalance": "0000000003713609",
+  "availableBalance": "0000000003713609",
+  "errors": null,
+  "txnDate": "02-12-2024",
+  "correlationId": "ea3059da-d65a-4846-b909-836c14053b4d"
+}

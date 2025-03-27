@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "data": {
+    "cif": "258459119",
+    "dpType": "CDSL",
+    "dpId": "8888888811111111",
+    "clientId": "0",
+    "id": "0d9a60f8-c48e-40e0-86ec-a91e5db699a6",
+    "panNumber": "DSJPK9933C",
+    "customerName": "BHAWANA KANYAL DO RAJENDRA SINGH KANYAL",
+    "nickName": "Testing 2",
+    "bankId": "",
+    "bankName": "UNION BANK OF INDIA",
+    "dematAccountStatus": "Inactive",
+    "termsAndConditionsAcceptanceFlag": true,
+    "termsAndConditionsAcceptanceDate": "2025-01-20T13:02:20.453",
+    "actionFlag": "MODIFY",
+    "activeFlag": true,
+    "createdDate": "2025-01-20T13:02:20.453",
+    "createdBy": "ASBA_CUSTOMER",
+    "modifiedDate": "2025-01-20T13:32:37.512465382",
+    "modifiedBy": "ASBA_CUSTOMER",
+    "channel": "MOB"
+  },
+  "errorDetails": null
+}

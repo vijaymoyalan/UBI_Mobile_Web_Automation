@@ -1,0 +1,15 @@
+{
+    "errorId": "0919789a-2095-4765-89cd-de9a4c66c3fc",
+    "errorAt": "2024-12-26T11:47:05.58156162",
+    "errorLocation": null,
+    "error": null,
+    "errors": [
+        {
+            "code": "ERR_GE_1999",
+            "message": "applicationFrmNum: expected minLength: 1, actual: 0",
+            "values": null,
+            "origmesg": null,
+            "errors": null
+        }
+    ]
+}
