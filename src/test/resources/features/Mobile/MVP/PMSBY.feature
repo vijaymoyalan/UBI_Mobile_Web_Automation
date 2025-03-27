@@ -98,13 +98,13 @@ Given user is on page PMSBY clicks on NomineeRelationship
 
 @TestCaseKey=UDB-T12492 @Automatable @Smoke @RedmiNote9Pro
 Scenario: Verify that "Are you specially abled" radio buttons are visible
-#Given user logins to app
-#Given user logins to app entering Login PIN
-#Given user is on page DashboardPage clicks on FingerPrint
-#Given user is on page DashboardPage clicks on DepositsTab
-#When user scrolls down to "Invest & Insure"
-#Given user is on page DashboardPage clicks on InvestandInsureViewAll
-#Given user is on page InvestAndInsure clicks on PMSBYInsurance
+Given user logins to app
+Given user logins to app entering Login PIN
+Given user is on page DashboardPage clicks on FingerPrint
+Given user is on page DashboardPage clicks on DepositsTab
+When user scrolls down to "Invest & Insure"
+Given user is on page DashboardPage clicks on InvestandInsureViewAll
+Given user is on page InvestAndInsure clicks on PMSBYInsurance
 Given user is on page PMSBY clicks on ApplyNow
 Given user is on page PMSBY clicks on T&CAccept
 When user is on page PMSBY and verifies for Are you specially abled? TextField
@@ -113,13 +113,13 @@ When user is on page PMSBY and verifies for No NRadioButton
 
 @TestCaseKey=UDB-T12494 @Automatable @Smoke @RedmiNote9Pro
 Scenario: Verify that "Submit" button is visible
-#Given user logins to app
-#Given user logins to app entering Login PIN
-#Given user is on page DashboardPage clicks on FingerPrint
-#Given user is on page DashboardPage clicks on DepositsTab
-#When user scrolls down to "Invest & Insure"
-#Given user is on page DashboardPage clicks on InvestandInsureViewAll
-#Given user is on page InvestAndInsure clicks on PMSBYInsurance
+Given user logins to app
+Given user logins to app entering Login PIN
+Given user is on page DashboardPage clicks on FingerPrint
+Given user is on page DashboardPage clicks on DepositsTab
+When user scrolls down to "Invest & Insure"
+Given user is on page DashboardPage clicks on InvestandInsureViewAll
+Given user is on page InvestAndInsure clicks on PMSBYInsurance
 Given user is on page PMSBY clicks on ApplyNow
 Given user is on page PMSBY clicks on T&CAccept
 #When user is on page PMSBY and verifies for Submit ButtonField --- skip this step
