@@ -111,7 +111,7 @@ When user is on page PMSBY and verifies for Are you specially abled? TextField
 When user is on page PMSBY and verifies for Yes YRadioButton
 When user is on page PMSBY and verifies for No NRadioButton
 
-@TestCaseKey=UDB-T12494 @Automatable @Smoke @RedmiNote9Pro
+@TestCaseKey=UDB-T12494 @Automatable @Smoke @RedmiNote9Pro 
 Scenario: Verify that "Submit" button is visible
 Given user logins to app
 Given user logins to app entering Login PIN
