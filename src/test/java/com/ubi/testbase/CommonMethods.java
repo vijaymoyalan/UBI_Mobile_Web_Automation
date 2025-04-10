@@ -110,14 +110,14 @@ public class CommonMethods extends PageObject {
 		// element.click();
 	}
 
-	public void clickWithCoordinate(int x, int y) {
+	public void clickWithCoordinate(String x, String y) {
 
 		// Perform click action using PointerInput
-
+		int xCoord = Integer.parseInt(x);
+        int yCoord = Integer.parseInt(y);
 		PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
-
 		Sequence clickSequence = new Sequence(finger, 1)
-				.addAction(finger.createPointerMove(Duration.ofMillis(0), PointerInput.Origin.viewport(), x, y))
+				.addAction(finger.createPointerMove(Duration.ofMillis(0), PointerInput.Origin.viewport(), xCoord, yCoord))
 				.addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))
 				.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
 		androidDriver.perform(Collections.singletonList(clickSequence));
@@ -125,7 +125,7 @@ public class CommonMethods extends PageObject {
 	}
 
 	public void enterText(ORPageModel element, String text) {
-		// element.isEnabled();
+		findElement(element).clear();
 		findElement(element).sendKeys(text);
 
 		// element.click();
@@ -290,6 +290,7 @@ public void verifyText(ORPageModel element, String expectedText) {
 		// text);
 		// driver.executeScript("mobile: scroll", scrollOptions);
 	}
+	
 
 	public void scrollDown(String elementText) throws InterruptedException {
 		WebDriverWait wait;
@@ -297,7 +298,6 @@ public void verifyText(ORPageModel element, String expectedText) {
 		wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
 		boolean elementFound = false;
 		Thread.sleep(3000);
-
 		do {
 			try {
 				// Try to find the element
@@ -312,10 +312,7 @@ public void verifyText(ORPageModel element, String expectedText) {
 				System.out.println("Element not found, scrolling down");
 			}//elementFound = true;
 		} while (!elementFound);
-		
-
 	}
-	
 	
 
 	public void scrollUp(String elementText) {
@@ -444,7 +441,7 @@ public void verifyText(ORPageModel element, String expectedText) {
 		 // Create a SoftAssert instance
 		    try {
 		    	SoftAssert softAssert = new SoftAssert();
-				softAssert.assertEquals(actualText, expectedText, "Text passed in step is not matching");
+				softAssert.assertEquals(actualText, expectedText, "Text passed in step is matching");
 				
 			} catch (AssertionError e) {
 				System.out.println("Assertion failed with reason as "+e);
@@ -558,8 +555,42 @@ public void verifyText(ORPageModel element, String expectedText) {
 
 	}
 	public void dateYearSelection(ORPageModel element) {  
-		for (int i=0; i<2; i++)
+		for (int i=0; i<2; i++) // loop to go to previous year for meeting >18 years conditions
 		findElement(element).click();
 	}
 	
+	public void swipeDownPage() {
+		androidDriver.findElement(AppiumBy.androidUIAutomator(
+			    "new UiScrollable(new UiSelector().scrollable(true)).flingToEnd(10)"));
+	}
+	
+
+	
+	public void actionVerification(String pageName,String action, String name) {
+		System.out.println("inside amount verification find element menthod");
+		actionVerification(findElement(TestBase._ORIntializater.get(pageName), name), action);
+	}
+	public void actionVerification(ORPageModel element, String action) {   // this code will only verify if the amount is having a value > 0
+		switch (action) {
+		case "amount":
+			String amt = findElement(element).getText();
+			System.out.println("getText returened "+ amt);
+			String AmountText = amt.replace("₹", "").replace(",", "").trim();
+			System.out.println("replace & trim returened "+ AmountText);
+			double intAmount = Double.parseDouble(AmountText.trim());
+			System.out.println("Interest amount is "+ intAmount);
+			Assert.assertTrue(intAmount > 0, "Amount should be greater than 0");	
+			break;
+		
+		case "count":
+			String cnt = findElement(element).getText();
+			System.out.println("getText returened "+ cnt);
+			int intcnt = Integer.parseInt(cnt.trim());
+			Assert.assertTrue(intcnt > 0, "No Active account found");
+			break;
+		default:
+			break;
+		}
+		
+	}
 }

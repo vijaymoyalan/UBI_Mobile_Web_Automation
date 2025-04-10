@@ -212,84 +212,304 @@
 	],
 	"FDDetailsPage": [
 		{
-			"name": "EnterFDName",
-			"locator": "xpath",
-			"value": "//android.widget.EditText[@resource-id=\"floatingTextinput\"]"
+				"name": "SelectAccount",
+				"locator": "xpath",
+				"value": "//android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.view.ViewGroup[1]/com.horcrux.svg.SvgView" 
 		},
+		{
+				"name": "SelectSavingAccount",
+				"locator": "xpath",
+				"value": "//android.widget.Button[contains(@content-desc,\"Savings Account, XXXXX 22239\")]" 
+		}, 
+		{
+				"name": "SelectCurrentAccount",
+				"locator": "xpath",
+				"value": "//android.widget.Button[contains(@content-desc,\"Current Account, XXXXX 36151\")]" 
+		}, 
+		{
+				"name": "NormalFixedDeposit",
+				"locator": "xpath",
+				"value": "//android.view.ViewGroup[@content-desc=\"Normal Fixed Deposit\"]" 
+		}, 
+		{
+				"name": "TaxSaverFixedDeposit",
+				"locator": "xpath",
+				"value": "//android.view.ViewGroup[@content-desc=\"Tax Saver Fixed Deposit\"]" 
+		}, 
+		{
+				"name": "EnterFDName",
+				"locator": "xpath",
+				"value": "//android.widget.EditText[@resource-id=\"floatingTextinput\"]" 
+		}, 
 		{
 				"name": "EnterAmount",
 				"locator": "xpath",
 				"value": "//android.widget.EditText[@resource-id=\"amount\"]"
-		},
+		}, 
 		{
-					"name": "3Years",
-					"locator": "xpath",
-					"value": "(//com.horcrux.svg.SvgView[@content-desc=\"tenure not selected\"])[3]/com.horcrux.svg.v/com.horcrux.svg.v/com.horcrux.svg.d0"
-		},
-		{
-			"name": "SelectTenure",
-			"locator": "xpath",
-			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Select Tenure\"]"
-		},
-		{
-			"name": "EnterAmount",
-			"locator": "xpath",
-			"value": "//android.widget.EditText[@resource-id=\"amount\"]"
-		},
-		{
-			"name": "SelectMaturity",
-			"locator": "xpath",
-			"value": "//android.view.ViewGroup[@content-desc=\"Fixed Deposit\"]"
-		},
-		{
-			"name": "SelectInterestPayout",
-			"locator": "xpath",
-			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Select Interest Payout\"]"
-		},
-		{
-				"name": "SelectPeriod",
+				"name": "PopularTenure",
 				"locator": "xpath",
-				"value": "//android.view.ViewGroup[@content-desc=\"Select Period\"]"
-		},
+				"value": "//android.view.ViewGroup[contains(@content-desc,\"Popular\")]"
+		}, 
 		{
-				"name": "SelectFirstElement",
+				"name": "SelectInterestPayout",
 				"locator": "xpath",
-				"value": "//android.view.ViewGroup[@resource-id=\"onPressList\"]"
+				"value": "(//android.view.ViewGroup[contains(@content-desc,\"combo box, \")])[1]/android.view.ViewGroup"
 		},
 		{
-				"name": "AddNominee",
+				"name": "TaxSaverTenure",
 				"locator": "xpath",
-				"value": "//com.horcrux.svg.SvgView[@content-desc=\"add nominee on switch button\"]/com.horcrux.svg.v/com.horcrux.svg.a0/com.horcrux.svg.d0"
+				"value": "//android.view.ViewGroup[contains(@content-desc,\"5 Years (Tax Saver)\")]"
 		},
 		{
-				"name": "Continue",
+				"name": "SelectMonthlyPeriod",
 				"locator": "xpath",
-				"value": "//android.widget.TextView[@resource-id=\"solidButtonClick-text\"]"
+				"value": "//android.view.ViewGroup[@content-desc=\"Monthly\"]"
 		},
 		{
-			"name": "CustomRadioButton",
-			"locator": "xpath",
-			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Custom\"]"
+				"name": "SelectOnMaturityPeriod",
+				"locator": "xpath",
+				"value": "//android.view.ViewGroup[@content-desc=\"On Maturity\"]"
 		},
 		{
-			"name": "TextFixedDepositDetails",
-			"locator": "xpath",
-			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Fixed Deposit Details\"]"
+				"name": "SelectQuarterlyPeriod",
+				"locator": "xpath",
+				"value": "//android.view.ViewGroup[@content-desc=\"Quarterly\"]"
 		},
 		{
-			"name": "ClickOnArrow",
-			"locator": "xpath",
-			"value": "//android.widget.TextView[@text=\"󰅀\"]"
+				"name": "NomineeName",
+				"locator":"xpath",
+				"value":"//android.view.ViewGroup[contains(@content-desc,\"Name , Nameshow\")]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.View"
 		},
 		{
-			"name": "CurrentAccount",
+				"name": "NomineeDOB",
+				"locator":"xpath",
+				"value":"//android.view.ViewGroup[contains(@content-desc,\"Date of Birth\")]/android.view.ViewGroup/android.widget.Button"
+		},
+		{
+				"name": "NomineeDOBYear",
+				"locator":"xpath",
+				"value":"//android.view.ViewGroup[starts-with(@content-desc,\"202\")]/android.widget.TextView"
+		},
+		{
+				"name": "PreviousYear",
+				"locator":"xpath",
+				"value":"//android.view.ViewGroup[@content-desc=\"Previous\"]"
+		},
+		{
+				"name": "NomineeYear",
+				"locator":"xpath",
+				"value":"//android.widget.Button[@index=\"14\"]"
+		},
+		{
+				"name": "NomineeMonth",
+				"locator":"xpath",
+				"value":"//android.widget.Button[@index=\"16\"]"
+		},
+		{
+			"name": "NomineeDay",
+			"locator":"xpath",
+			"value":"//android.widget.Button[contains(@content-desc,\"23\")]/android.widget.TextView"
+		},
+		{
+			"name": "Relationship",
+			"locator":"xpath",
+			"value":"//android.widget.EditText[@content-desc=\"RelationshipList\"]"
+		},
+		{
+			"name": "NomineeRelationship",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[4]"
+		},		
+		{
+			"name": "Continue",
+			"locator":"xpath",
+			"value":"//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "AutoRenewalOff",
+			"locator":"xpath",
+			"value":" //com.horcrux.svg.SvgView[@content-desc=\"auto renewal on switch button\"]/com.horcrux.svg.v/com.horcrux.svg.a0/com.horcrux.svg.d0"
+		},
+		{
+			"name": "OverDraftAccount",
+			"locator":"xpath",
+			"value":"//android.widget.Button[contains(@content-desc,\"Overdraft Account, XXXXX\")]/android.widget.TextView[1]"
+		},
+		{
+			"name": "AutoRenewalPAInt",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[contains(@content-desc,\"Reinvest Principal Amount + Interest,\")]"
+		},
+		{
+			"name": "InterestAmountPayout",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.EditText"
+		},
+		{
+			"name": "RecommendedTenure",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[contains(@content-desc,\"1 Year, Recommended,\")]"
+		},
+		{
+			"name": "OneYearTenure",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[contains(@content-desc,\"1 Year, \")]"
+		},
+		{
+			"name": "TwoYearTenure",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[contains(@content-desc,\"2 Years, \")]/android.widget.TextView[1]"
+		},
+		{
+			"name": "CustomTenure",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[@content-desc=\"Custom\"]"
+		},
+		{
+			"name": "CustomTenureMonth",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[contains(@content-desc,\"Months , \")]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.EditText"
+		},
+		{
+			"name": "CustomTenureDays",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[contains(@content-desc,\"Days , \")]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.EditText"
+		},
+		{
+			"name": "CustomTenureYears",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[contains(@content-desc,\"Years , \")]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.EditText"
+		},
+		{
+			"name": "QuartelyTotalInterestPayout",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.TextView[2]"
+		}, 
+		{
+			"name": "AutoRenewalToggle",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[contains(@content-desc,\" auto renewal \")]"
+		},
+		{
+			"name": "ViewInterestRate",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[@content-desc=\"View Interest Rate\"]/android.widget.TextView"
+		},
+		{
+			"name": "FDRequest",
+			"locator":"xpath",
+			"value":"//android.view.View[@content-desc=\"Requests\"]/android.widget.TextView"
+		},
+		{
+			"name": "AllowPermission",
 			"locator": "xpath",
-			"value": "//android.view.ViewGroup[@content-desc=\"Ibm's Current Account, xxxxx 50034\"]"
-		}
+			"value": "//android.widget.Button[1][@resource-id=\"com.android.permissioncontroller:id/permission_allow_button\"]"
+		},
+		{
+			"name": "DownloadInterestCert",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[@content-desc=\"Download Interest Certificate\"]"
+		},
+		{
+			"name": "ChooseCurrentFD",
+			"locator":"xpath",
+			"value":"//android.view.View[contains(@content-desc,\"For Current Fixed Deposit, \")]/android.widget.RadioButton[1]"
+		},
+		{
+			"name": "ChooseFinancialYr",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[@content-desc=\"Financial Year, Choose Year\"]"
+		},
+		{
+			"name": "SelectYrFromList",
+			"locator":"xpath",
+			"value":"(//android.view.ViewGroup[contains(@content-desc,\"FY \")])[1]"
+		},
+		{
+			"name": "Download",
+			"locator":"xpath",
+			"value":"//android.widget.Button[@content-desc=\"Download\"]"
+		},
+		{
+			"name": "DownloadSuccess",
+			"locator":"xpath",
+			"value":"//android.widget.TextView[@content-desc=\"Download Successful\"]"
+		},
+		{
+			"name": "Okay",
+			"locator":"xpath",
+			"value":"//android.widget.Button[@content-desc=\"Okay\"]"
+		},
+		{
+			"name": "StatementsTab",
+			"locator":"xpath",
+			"value":"//android.view.View[@content-desc=\"Statements\"]/android.view.ViewGroup/android.widget.TextView"
+		},
+		{
+			"name": "CurrentMonthOption",
+			"locator":"xpath",
+			"value":"//android.widget.TextView[contains(@content-desc,\"Current month\")]"
+		},
+		{
+			"name": "LastMonthOption",
+			"locator":"xpath",
+			"value":"//android.widget.TextView[contains(@content-desc,\"Last month\")]"
+		},
+		{
+			"name": "Last3MonthOption",
+			"locator":"xpath",
+			"value":"//android.widget.TextView[contains(@content-desc,\"Last 3-months\")]"
+		},
+		{
+			"name": "Last6MonthOption",
+			"locator":"xpath",
+			"value":"//android.widget.TextView[contains(@content-desc,\"Last 6-months\")]"
+		},
+		{
+			"name": "DetailsTab",
+			"locator":"xpath",
+			"value":"//android.view.View[@content-desc=\"Details\"]/android.widget.TextView"
+		},
+		{
+			"name": "AccountInfoSection",
+			"locator":"xpath",
+			"value":"(//android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.widget.TextView)[1]"
+		},
+		{
+			"name": "NomineeDetailsSection",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.widget.TextView[1]"
+		},
+		{
+			"name": "BranchInfoSection",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.widget.TextView[2]"
+		},
+		{
+			"name": "RequestsTab",
+			"locator":"xpath",
+			"value":"//android.view.View[@content-desc=\"Requests\"]"
+		}, 
+		{
+			"name": "ChooseAllcombinedFD",
+			"locator":"xpath",
+			"value":"//android.view.View[contains(@content-desc,\"For All Fixed Deposits Combined\")]/android.widget.RadioButton[2]/android.view.ViewGroup"
+		},
+		{
+			"name": "NoNominee",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[contains(@content-desc,\"add nominee \")]"
+		},
+		{
+			"name": "DepositAmtVerbiage",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[contains(@content-desc,\"₹\")]/android.view.ViewGroup[2]/android.widget.TextView"
+		} 
 	],
 	"FDReviewPage": [
 		{
-				"name": "Checkbox",
+				"name": "T&CCheckbox",
 				"locator": "xpath",
 				"value": "//android.widget.TextView[@text=\"󰄱\"]"
 		},
@@ -304,19 +524,29 @@
 				"value": "//android.widget.Button[@content-desc=\"Submit\"]"
 		},
 		{
-				"name": "TPIN",
-				"locator": "xpath",
-				 "value": "//android.widget.TextView[@text=\"4-digit Transaction Pin (TPIN) \"]"
+			"name": "TPIN",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[contains(@text,\"digit Transaction Pin\")]"
 		},
 		{
-					"name": "TpinText",
-					"locator": "xpath",
-					"value": "//android.widget.EditText"
+			"name": "TpinText",
+			"locator": "xpath",
+			"value": "//android.widget.EditText"
 		},
 		{
-				"name": "SubmitButton",
-				"locator": "xpath",
-				"value": "//android.widget.TextView[@resource-id=\"button-text\"]"
+			"name": "TPINContinue",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "CompletedFDPage",
+			"locator": "xpath",
+			"value": "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView"
+		},
+		{
+			"name": "ShareButton",
+			"locator": "xpath",
+			"value": "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView"
 		}
 		
 	],
@@ -951,6 +1181,26 @@
 				"name": "PMJJBYInsurance",
 				"locator": "xpath",
 				"value":"//android.view.ViewGroup[@content-desc=\"PMJJBY Insurance\"]"
+		},
+		{
+				"name": "AllDeposit",
+				"locator": "xpath",
+				"value":"//android.view.ViewGroup[contains(@content-desc,\"All Deposits \")]"
+		},
+		{
+				"name": "FixedDepositOption",
+				"locator": "xpath",
+				"value":"//android.view.ViewGroup[@content-desc=\"Fixed Deposit\"]"
+		},
+		{
+				"name": "FixedDepositAccount",
+				"locator": "xpath",
+				"value":"(//android.view.ViewGroup[contains(@content-desc,\"VIJAY JOSEPH MOYALAN (XXXXX \")])[1]"
+		},
+		{
+				"name": "ViewFDAccount",
+				"locator": "xpath",
+				"value":"(//android.view.ViewGroup[contains(@content-desc,\"VIJAY JOSEPH MOYALAN (XXXXX \")])[1]"
 		}
 	],	
 	

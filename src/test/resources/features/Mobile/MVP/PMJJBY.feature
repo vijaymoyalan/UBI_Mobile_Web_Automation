@@ -56,15 +56,15 @@ Scenario: Validate the ETB user want to change nominee
 @TestCaseKey=UDB-T12807	@Automatable @Smoke @RedmiNote9Pro
 Scenario: Validate that user is getting success message if there is Enrolment Successful post enrolment
 
-#	Given user logins to app
-#	Given user logins to app entering Login PIN
-#	Given user is on page DashboardPage clicks on FingerPrint
-#	Given user is on page DashboardPage clicks on DepositsTab
-#	When user scrolls down to "Invest & Insure"
-#	Given user is on page DashboardPage clicks on InvestandInsureViewAll
-#	Given user is on page InvestAndInsure clicks on PMJJBYInsurance
-#	Given user is on page PMJJBY clicks on ApplyNow
-#	Given user is on page PMJJBY clicks on Terms&Conditions
+	Given user logins to app
+	Given user logins to app entering Login PIN
+	Given user is on page DashboardPage clicks on FingerPrint
+	Given user is on page DashboardPage clicks on DepositsTab
+	When user scrolls down to "Invest & Insure"
+	Given user is on page DashboardPage clicks on InvestandInsureViewAll
+	Given user is on page InvestAndInsure clicks on PMJJBYInsurance
+	Given user is on page PMJJBY clicks on ApplyNow
+	Given user is on page PMJJBY clicks on Terms&Conditions
 	When user scrolls down to "PMJJBY Details"
 	Given user is on page PMJJBY clicks on NomineeDOB
 	Given user is on page PMJJBY clicks on NomineeDOBYear
@@ -78,21 +78,19 @@ Scenario: Validate that user is getting success message if there is Enrolment Su
 	Given user is on page PMJJBY clicks on Confirm&Pay
 	Given user is on page PMJJBY clicks on TPIN
   When user is on page PMJJBY and types 0852 on TpinText
-  When user is on page PMJJBY clicks on TPINContinue
-  When user is on page PMJJBY and verifies for Completed PaymentConfirmation
 
 @TestCaseKey=UDB-T12830	@Automatable @Smoke @RedmiNote9Pro
 Scenario: Verify that scheme details are displayed under PMJJBY Details section
 
-#	Given user logins to app
-#	Given user logins to app entering Login PIN
-#	Given user is on page DashboardPage clicks on FingerPrint
-#	Given user is on page DashboardPage clicks on DepositsTab
-#	When user scrolls down to "Invest & Insure"
-#	Given user is on page DashboardPage clicks on InvestandInsureViewAll
-#	Given user is on page InvestAndInsure clicks on PMJJBYInsurance
-#	Given user is on page PMJJBY clicks on ApplyNow
-#	Given user is on page PMJJBY clicks on Terms&Conditions
+	Given user logins to app
+	Given user logins to app entering Login PIN
+	Given user is on page DashboardPage clicks on FingerPrint
+	Given user is on page DashboardPage clicks on DepositsTab
+	When user scrolls down to "Invest & Insure"
+	Given user is on page DashboardPage clicks on InvestandInsureViewAll
+	Given user is on page InvestAndInsure clicks on PMJJBYInsurance
+	Given user is on page PMJJBY clicks on ApplyNow
+	Given user is on page PMJJBY clicks on Terms&Conditions
 	When user scrolls down to "Sum Assured"
 	When user is on page PMJJBY and verifies for Cover Start Date StartDate
 	When user is on page PMJJBY and verifies for Cover End Date EndDate

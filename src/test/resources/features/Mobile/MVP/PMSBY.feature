@@ -12,9 +12,9 @@ Given user is on page InvestAndInsure clicks on PMSBYInsurance
 
 @TestCaseKey=UDB-T12462 @Automatable @Smoke @RedmiNote9Pro
 Scenario: Verify that product information is displayed in "Product Info" Page
-#Given user logins to app
+Given user logins to app
 Given user logins to app entering Login PIN
-#Given user is on page DashboardPage clicks on FingerPrint
+Given user is on page DashboardPage clicks on FingerPrint
 Given user is on page DashboardPage clicks on DepositsTab
 When user scrolls down to "Invest & Insure"
 Given user is on page DashboardPage clicks on InvestandInsureViewAll
@@ -23,21 +23,21 @@ When user scrolls down to "Premium Rate"
 
 @TestCaseKey=UDB-T12463 @Automatable @Smoke @RedmiNote9Pro
 Scenario: Verify that "Accept Terms and Conditions" prompt is displayed in "Product Info" Page
-#Given user logins to app
-#Given user logins to app entering Login PIN
-#Given user is on page DashboardPage clicks on FingerPrint
-#Given user is on page DashboardPage clicks on DepositsTab
-#When user scrolls down to "Invest & Insure"
-#Given user is on page DashboardPage clicks on InvestandInsureViewAll
-#Given user is on page InvestAndInsure clicks on PMSBYInsurance
+Given user logins to app
+Given user logins to app entering Login PIN
+Given user is on page DashboardPage clicks on FingerPrint
+Given user is on page DashboardPage clicks on DepositsTab
+When user scrolls down to "Invest & Insure"
+Given user is on page DashboardPage clicks on InvestandInsureViewAll
+Given user is on page InvestAndInsure clicks on PMSBYInsurance
 Given user is on page PMSBY clicks on ApplyNow
 When user is on page PMSBY and verifies for Terms & Conditions Terms&Conditions
 
 @TestCaseKey=UDB-T12464 @Automatable @Smoke @RedmiNote9Pro
 Scenario: Verify that terms and conditons are downloadable
-#Given user logins to app
+Given user logins to app
 Given user logins to app entering Login PIN
-#Given user is on page DashboardPage clicks on FingerPrint
+Given user is on page DashboardPage clicks on FingerPrint
 Given user is on page DashboardPage clicks on DepositsTab
 When user scrolls down to "Invest & Insure"
 Given user is on page DashboardPage clicks on InvestandInsureViewAll
@@ -48,13 +48,13 @@ Given user is on page PMSBY clicks on AllowPermission
 
 @TestCaseKey=UDB-T12474 @TestCaseKey=UDB-T12475 @testCaseKey=UDB-T12480  @Automatable @Smoke @RedmiNote9Pro
 Scenario: Verify that on PMSBY landing page, list of customer accounts are displayed as a dropdown
-#Given user logins to app
-#Given user logins to app entering Login PIN
-#Given user is on page DashboardPage clicks on FingerPrint
-#Given user is on page DashboardPage clicks on DepositsTab
-#When user scrolls down to "Invest & Insure"
-#Given user is on page DashboardPage clicks on InvestandInsureViewAll
-#Given user is on page InvestAndInsure clicks on PMSBYInsurance
+Given user logins to app
+Given user logins to app entering Login PIN
+Given user is on page DashboardPage clicks on FingerPrint
+Given user is on page DashboardPage clicks on DepositsTab
+When user scrolls down to "Invest & Insure"
+Given user is on page DashboardPage clicks on InvestandInsureViewAll
+Given user is on page InvestAndInsure clicks on PMSBYInsurance
 Given user is on page PMSBY clicks on ApplyNow
 Given user is on page PMSBY clicks on T&CAccept
 Given user is on page PMSBY clicks on AccountName    
@@ -62,26 +62,26 @@ When user is on page PMSBY and verifies for Select an Account SelectAccount
 
 @TestCaseKey=UDB-T12481 @Automatable @Smoke @RedmiNote9Pro
 Scenario: Verify that customer name is fetched and displayed
-#Given user logins to app
-#Given user logins to app entering Login PIN
-#Given user is on page DashboardPage clicks on FingerPrint
-#Given user is on page DashboardPage clicks on DepositsTab
-#When user scrolls down to "Invest & Insure"
-#Given user is on page DashboardPage clicks on InvestandInsureViewAll
-#Given user is on page InvestAndInsure clicks on PMSBYInsurance
+Given user logins to app
+Given user logins to app entering Login PIN
+Given user is on page DashboardPage clicks on FingerPrint
+Given user is on page DashboardPage clicks on DepositsTab
+When user scrolls down to "Invest & Insure"
+Given user is on page DashboardPage clicks on InvestandInsureViewAll
+Given user is on page InvestAndInsure clicks on PMSBYInsurance
 Given user is on page PMSBY clicks on ApplyNow
 Given user is on page PMSBY clicks on T&CAccept
 When user is on page PMSBY and verifies for Vijay Joseph Moyalan CustomerName
 
 @TestCaseKey=UDB-T12490 @Automatable @Smoke @RedmiNote9Pro
 Scenario: Verify that user can edit nominee details.
-#Given user logins to app
-#Given user logins to app entering Login PIN
-#Given user is on page DashboardPage clicks on FingerPrint
-#Given user is on page DashboardPage clicks on DepositsTab
-#When user scrolls down to "Invest & Insure"
-#Given user is on page DashboardPage clicks on InvestandInsureViewAll
-#Given user is on page InvestAndInsure clicks on PMSBYInsurance
+Given user logins to app
+Given user logins to app entering Login PIN
+Given user is on page DashboardPage clicks on FingerPrint
+Given user is on page DashboardPage clicks on DepositsTab
+When user scrolls down to "Invest & Insure"
+Given user is on page DashboardPage clicks on InvestandInsureViewAll
+Given user is on page InvestAndInsure clicks on PMSBYInsurance
 Given user is on page PMSBY clicks on ApplyNow
 Given user is on page PMSBY clicks on T&CAccept
 When user scrolls down to "State"
@@ -127,9 +127,9 @@ Given user verifies on page PMSBY for Submit text in placeholder ButtonField
 
 @TestCaseKey=UDB-T12498 @Automatable @Smoke @RedmiNote9Pro
 Scenario: Verify that success screen is visible after payment is complete
-#Given user logins to app
+Given user logins to app
 Given user logins to app entering Login PIN
-#Given user is on page DashboardPage clicks on FingerPrint
+Given user is on page DashboardPage clicks on FingerPrint
 Given user is on page DashboardPage clicks on DepositsTab
 When user scrolls down to "Invest & Insure"
 Given user is on page DashboardPage clicks on InvestandInsureViewAll
@@ -155,5 +155,4 @@ When user scrolls down to "Sum Assured"
 Given user is on page PMSBY clicks on Confirm&Pay
 Given user is on page PMSBY clicks on TPIN
 When user is on page PMSBY and types 0852 on TpinText
-#When user is on page PMSBY clicks on TPINContinue
 

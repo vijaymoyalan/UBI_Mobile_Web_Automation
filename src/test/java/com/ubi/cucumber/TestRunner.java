@@ -68,12 +68,16 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 //features = "src/test/resources/features/API/MVP/Registration")
 		
 //Below Feature File External Dependency Services
-//features = "src\\test\\resources\\features\\Mobile\\MVP\\FixedDeposit.feature")
+//features = "src\\test\\resources\\features\\Mobile\\MVP\\FDFlow.feature", tags="@TestCaseKey=UDB-T2399")
+		features = "src\\test\\resources\\features\\Mobile\\MVP\\FDFlow.feature")
 //features = "src\\test\\resources\\features\\Mobile\\MVP\\SSA.feature")
+		//features = "src\\test\\resources\\features\\Mobile\\MVP\\genAICS.feature")
 //features = "src\\test\\resources\\features\\Mobile\\MVP\\PMJJBY.feature", tags="@TestCaseKey=UDB-T12807")
 //features = "src\\test\\resources\\features\\Mobile\\MVP\\PMSBY.feature", tags="@TestCaseKey=UDB-T12498")
+		//features = "src\\test\\resources\\features\\Mobile\\MVP\\PMJJBY.feature")
+		//features = "src\\test\\resources\\features\\Mobile\\MVP\\PMSBY.feature")
 //features = "src\\test\\resources\\features\\Mobile\\MVP\\Nuclei.feature", tags="@TestCaseKey=TC05")
-			features = "src\\test\\resources\\features\\Mobile\\MVP\\BBPS.feature", tags="@TestCaseKey=UDB-T28215")
+			//features = "src\\test\\resources\\features\\Mobile\\MVP\\BBPS.feature", tags="@TestCaseKey=UDB-T28108 or @TestCaseKey=UDB-T28100 or @TestCaseKey=UDB-T28107 or @TestCaseKey=UDB-T28109 or @TestCaseKey=UDB-T28103 or @TestCaseKey=UDB-T28187")
 //features = "src\\test\\resources\\features\\Mobile\\MVP\\BBPS.feature")
 //features = "src\\test\\resources\\features\\Mobile\\MVP\\fisdom.feature")
 		

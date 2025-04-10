@@ -239,4 +239,15 @@ public static String setEnvPath = "";
 		common.waitTillElementDisplayed(pageName,elementName);
 		common.dateYearSelection(pageName,elementName);
 	}
+	@Given("^user swipe down the page$")
+	public void swipeDown() {
+		// this will navigate to bottom of the page(applicable where scroll to text is not applicable)
+		common.swipeDownPage();
+	}
+	@Given("^user is on page (.+) verifies (.+) in (.+)$")
+	public void payoutAmount(String pageName, String action, String elementName) {
+		common.waitTillElementDisplayed(pageName,elementName);
+		common.actionVerification(pageName,action, elementName);
+		
+	}
 }
