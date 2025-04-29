@@ -32,7 +32,7 @@ Given user is on page FDReviewPage clicks on T&CCheckbox
 Given user is on page FDReviewPage clicks on AcceptButton
 Given user is on page FDReviewPage clicks on Submit
 Given user is on page FDReviewPage clicks on TPIN
-When user is on page FDReviewPage and types 0963 on TpinText
+When user is on page FDReviewPage and types 1212 on TpinText
 When user is on page FDReviewPage clicks on TPINContinue
 Given user verifies on page FDReviewPage for Your Fixed Deposit Account has been opened successfully! text in placeholder CompletedFDPage
 
@@ -70,7 +70,7 @@ Given user is on page FDReviewPage clicks on T&CCheckbox
 Given user is on page FDReviewPage clicks on AcceptButton
 Given user is on page FDReviewPage clicks on Submit
 Given user is on page FDReviewPage clicks on TPIN
-When user is on page FDReviewPage and types 0963 on TpinText
+When user is on page FDReviewPage and types 1212 on TpinText
 When user is on page FDReviewPage clicks on TPINContinue
 Given user verifies on page FDReviewPage for Your Fixed Deposit Account has been opened successfully! text in placeholder CompletedFDPage
 
@@ -109,7 +109,7 @@ Given user is on page FDReviewPage clicks on T&CCheckbox
 Given user is on page FDReviewPage clicks on AcceptButton
 Given user is on page FDReviewPage clicks on Submit
 Given user is on page FDReviewPage clicks on TPIN
-When user is on page FDReviewPage and types 0963 on TpinText
+When user is on page FDReviewPage and types 1212 on TpinText
 When user is on page FDReviewPage clicks on TPINContinue
 Given user verifies on page FDReviewPage for Your Fixed Deposit Account has been opened successfully! text in placeholder CompletedFDPage
 
@@ -147,7 +147,7 @@ Given user is on page FDReviewPage clicks on T&CCheckbox
 Given user is on page FDReviewPage clicks on AcceptButton
 Given user is on page FDReviewPage clicks on Submit
 Given user is on page FDReviewPage clicks on TPIN
-When user is on page FDReviewPage and types 0963 on TpinText
+When user is on page FDReviewPage and types 1212 on TpinText
 When user is on page FDReviewPage clicks on TPINContinue
 Given user verifies on page FDReviewPage for Your Fixed Deposit Account has been opened successfully! text in placeholder CompletedFDPage
 
@@ -184,7 +184,7 @@ Given user is on page FDReviewPage clicks on T&CCheckbox
 Given user is on page FDReviewPage clicks on AcceptButton
 Given user is on page FDReviewPage clicks on Submit
 Given user is on page FDReviewPage clicks on TPIN
-When user is on page FDReviewPage and types 0963 on TpinText
+When user is on page FDReviewPage and types 1212 on TpinText
 When user is on page FDReviewPage clicks on TPINContinue
 Given user verifies on page FDReviewPage for Your Fixed Deposit Account has been opened successfully! text in placeholder CompletedFDPage
 
@@ -221,7 +221,7 @@ Given user is on page FDReviewPage clicks on T&CCheckbox
 Given user is on page FDReviewPage clicks on AcceptButton
 Given user is on page FDReviewPage clicks on Submit
 Given user is on page FDReviewPage clicks on TPIN
-When user is on page FDReviewPage and types 0963 on TpinText
+When user is on page FDReviewPage and types 1212 on TpinText
 When user is on page FDReviewPage clicks on TPINContinue
 Given user verifies on page FDReviewPage for Your Fixed Deposit Account has been opened successfully! text in placeholder CompletedFDPage
 
@@ -311,27 +311,6 @@ Given user is on page FDDetailsPage clicks on SelectInterestPayout
 Given user is on page FDDetailsPage clicks on SelectQuarterlyPeriod 
 Given user is on page FDDetailsPage verifies amount in InterestAmountPayout
 
-
-@TestCaseKey=UDB-T2375 @Automatable @Smoke @RedmiNote9Pro
-Scenario: Verify Select Tenure screen and Interest calculated against the selected period when user selects tenure as "Custom" and tenure period is greater than 1 Month or Max 120 Months
-Given user logins to app
-Given user logins to app entering Login PIN
-Given user is on page DashboardPage clicks on FingerPrint
-Given user is on page DashboardPage clicks on Accounts
-Given user is on page DepositPage clicks on AddAccount   
-Given user is on page DepositPage clicks on FixedDeposit
-Given user is on page FDDetailsPage clicks on SelectAccount    
-Given user is on page FDDetailsPage clicks on SelectSavingAccount
-Given user is on page FDDetailsPage clicks on EnterFDName
-When user is on page FDDetailsPage and types Vijay Test on EnterFDName  
-When user is on page FDDetailsPage and types 10000 on EnterAmount
-When user scrolls down to "Select Interest Payout"
-Given user is on page FDDetailsPage clicks on CustomTenure
-When user is on page FDDetailsPage and types 105 on CustomTenureMonth
-When user scrolls down to "Total Maturity Amount"
-Given user is on page FDDetailsPage clicks on SelectInterestPayout 
-Given user is on page FDDetailsPage clicks on SelectQuarterlyPeriod 
-Given user is on page FDDetailsPage verifies amount in InterestAmountPayout
 
 @TestCaseKey=UDB-T2375 @Automatable @Smoke @RedmiNote9Pro
 Scenario: Verify Select Tenure screen and Interest calculated against the selected period when user selects tenure as "Custom" and tenure period is greater than 1 Month or Max 120 Months
@@ -453,7 +432,7 @@ Given user is on page FDReviewPage clicks on T&CCheckbox
 Given user is on page FDReviewPage clicks on AcceptButton
 Given user is on page FDReviewPage clicks on Submit
 Given user is on page FDReviewPage clicks on TPIN
-When user is on page FDReviewPage and types 0963 on TpinText
+When user is on page FDReviewPage and types 1212 on TpinText
 When user is on page FDReviewPage clicks on TPINContinue
 Given user verifies on page FDReviewPage for Your Fixed Deposit Account has been opened successfully! text in placeholder CompletedFDPage
 
@@ -490,7 +469,7 @@ Given user is on page FDReviewPage clicks on T&CCheckbox
 Given user is on page FDReviewPage clicks on AcceptButton
 Given user is on page FDReviewPage clicks on Submit
 Given user is on page FDReviewPage clicks on TPIN
-When user is on page FDReviewPage and types 0963 on TpinText
+When user is on page FDReviewPage and types 1212 on TpinText
 When user is on page FDReviewPage clicks on TPINContinue
 Given user verifies on page FDReviewPage for Your Fixed Deposit Account has been opened successfully! text in placeholder CompletedFDPage
 
@@ -527,7 +506,7 @@ Given user is on page FDReviewPage clicks on T&CCheckbox
 Given user is on page FDReviewPage clicks on AcceptButton
 Given user is on page FDReviewPage clicks on Submit
 Given user is on page FDReviewPage clicks on TPIN
-When user is on page FDReviewPage and types 0963 on TpinText
+When user is on page FDReviewPage and types 1212 on TpinText
 When user is on page FDReviewPage clicks on TPINContinue
 Given user verifies on page FDReviewPage for Your Fixed Deposit Account has been opened successfully! text in placeholder CompletedFDPage
 
@@ -701,7 +680,7 @@ Given user is on page FDReviewPage clicks on T&CCheckbox
 Given user is on page FDReviewPage clicks on AcceptButton
 Given user is on page FDReviewPage clicks on Submit
 Given user is on page FDReviewPage clicks on TPIN
-When user is on page FDReviewPage and types 0963 on TpinText
+When user is on page FDReviewPage and types 1212 on TpinText
 When user is on page FDReviewPage clicks on TPINContinue
 Given user verifies on page FDReviewPage for Your Fixed Deposit Account has been opened successfully! text in placeholder CompletedFDPage
 
@@ -732,7 +711,7 @@ Given user is on page FDReviewPage clicks on T&CCheckbox
 Given user is on page FDReviewPage clicks on AcceptButton
 Given user is on page FDReviewPage clicks on Submit
 Given user is on page FDReviewPage clicks on TPIN
-When user is on page FDReviewPage and types 0963 on TpinText
+When user is on page FDReviewPage and types 1212 on TpinText
 When user is on page FDReviewPage clicks on TPINContinue
 Given user verifies on page FDReviewPage for Your Fixed Deposit Account has been opened successfully! text in placeholder CompletedFDPage
 
@@ -890,7 +869,7 @@ Given user is on page FDReviewPage clicks on T&CCheckbox
 Given user is on page FDReviewPage clicks on AcceptButton
 Given user is on page FDReviewPage clicks on Submit
 Given user is on page FDReviewPage clicks on TPIN
-When user is on page FDReviewPage and types 0963 on TpinText
+When user is on page FDReviewPage and types 1212 on TpinText
 When user is on page FDReviewPage clicks on TPINContinue
 Given user verifies on page FDReviewPage for Your Fixed Deposit Account has been opened successfully! text in placeholder CompletedFDPage
 
@@ -935,6 +914,513 @@ Given user is on page FDDetailsPage clicks on CustomTenure
 When user is on page FDDetailsPage and types 4 on CustomTenureYears
 When user scrolls down to "Total Maturity Amount"
 Given user is on page FDDetailsPage clicks on SelectInterestPayout 
-Given user is on page FDDetailsPage clicks on SelectOnMaturityPeriod 
+Given user is on page FDDetailsPage clicks on SelectOnMaturityPeriod
 Given user is on page FDDetailsPage verifies amount in InterestAmountPayout
+
+
+@TestCaseKey=UDB-T2354 @Automatable @Smoke @RedmiNote9Pro
+Scenario: Verify that ETB user Non-bank employee with age 18-30 should successfully open the Regular FD with Interest Payout On Maturity and Auto Renew selection is "Auto renew with principle amount only " and should be able to deposit minimum of Rs 1000 
+Given user logins to app
+Given user logins to app entering Login PIN
+Given user is on page DashboardPage clicks on FingerPrint
+Given user is on page DashboardPage clicks on Accounts
+Given user is on page DepositPage clicks on AddAccount   
+Given user is on page DepositPage clicks on FixedDeposit
+Given user is on page FDDetailsPage clicks on SelectAccount    
+Given user is on page FDDetailsPage clicks on SelectSavingAccount
+Given user is on page FDDetailsPage clicks on EnterFDName
+When user is on page FDDetailsPage and types Vijay Maturity on EnterFDName  
+When user is on page FDDetailsPage and types 1000 on EnterAmount
+When user scrolls down to "Select Interest Payout"
+Given user is on page FDDetailsPage clicks on PopularTenure
+When user scrolls down to "Total Maturity Amount"
+Given user is on page FDDetailsPage clicks on SelectInterestPayout 
+Given user is on page FDDetailsPage clicks on SelectOnMaturityPeriod 
+When user scrolls down to "Add Nominee?"
+Given user is on page FDDetailsPage clicks on AutoRenewalPrincipalAmt
+Given user swipe down the page
+Given user is on page FDDetailsPage clicks on NomineeDOB
+Given user is on page FDDetailsPage clicks on NomineeDOBYear
+Given user is on page FDDetailsPage selects PreviousYear
+Given user is on page FDDetailsPage clicks on NomineeYear
+Given user is on page FDDetailsPage clicks on NomineeMonth
+Given user is on page FDDetailsPage clicks on NomineeDay
+Given user is on page FDDetailsPage clicks on Continue
+Given user swipe down the page
+Given user is on page FDReviewPage clicks on T&CCheckbox 
+Given user is on page FDReviewPage clicks on AcceptButton
+Given user is on page FDReviewPage clicks on Submit
+Given user is on page FDReviewPage clicks on TPIN
+When user is on page FDReviewPage and types 1212 on TpinText
+When user is on page FDReviewPage clicks on TPINContinue
+Given user verifies on page FDReviewPage for Your Fixed Deposit Account has been opened successfully! text in placeholder CompletedFDPage
+
+
+@TestCaseKey=UDB-T2363 @TestCaseKey=UDB-T2386 @Automatable @Smoke @RedmiNote9Pro
+Scenario: Verify that ETB user should successfully Auto Renew the Regular FD with "principle amount only" if Payout is selected as "On Maturity" 
+Given user logins to app
+Given user logins to app entering Login PIN
+Given user is on page DashboardPage clicks on FingerPrint
+Given user is on page DashboardPage clicks on Accounts
+Given user is on page DepositPage clicks on AddAccount   
+Given user is on page DepositPage clicks on FixedDeposit
+Given user is on page FDDetailsPage clicks on SelectAccount    
+Given user is on page FDDetailsPage clicks on SelectSavingAccount
+Given user is on page FDDetailsPage clicks on EnterFDName
+When user is on page FDDetailsPage and types Vijay PrincipleAmt on EnterFDName  
+When user is on page FDDetailsPage and types 12000 on EnterAmount
+When user scrolls down to "Select Interest Payout"
+Given user is on page FDDetailsPage clicks on PopularTenure
+When user scrolls down to "Total Maturity Amount"
+Given user is on page FDDetailsPage clicks on SelectInterestPayout 
+Given user is on page FDDetailsPage clicks on SelectOnMaturityPeriod 
+When user scrolls down to "Add Nominee?"
+Given user is on page FDDetailsPage clicks on AutoRenewalPrincipalAmt
+Given user swipe down the page
+Given user is on page FDDetailsPage clicks on NomineeDOB
+Given user is on page FDDetailsPage clicks on NomineeDOBYear
+Given user is on page FDDetailsPage selects PreviousYear
+Given user is on page FDDetailsPage clicks on NomineeYear
+Given user is on page FDDetailsPage clicks on NomineeMonth
+Given user is on page FDDetailsPage clicks on NomineeDay
+Given user is on page FDDetailsPage clicks on Continue
+Given user swipe down the page
+Given user is on page FDReviewPage clicks on T&CCheckbox 
+Given user is on page FDReviewPage clicks on AcceptButton
+Given user is on page FDReviewPage clicks on Submit
+Given user is on page FDReviewPage clicks on TPIN
+When user is on page FDReviewPage and types 1212 on TpinText
+When user is on page FDReviewPage clicks on TPINContinue
+Given user verifies on page FDReviewPage for Your Fixed Deposit Account has been opened successfully! text in placeholder CompletedFDPage
+
+
+@TestCaseKey=UDB-T2384 @Automatable @Smoke @RedmiNote9Pro
+Scenario: Verify Regular FD Negative testing for Deposit Amount field
+Given user logins to app
+Given user logins to app entering Login PIN
+Given user is on page DashboardPage clicks on FingerPrint
+Given user is on page DashboardPage clicks on Accounts
+Given user is on page DepositPage clicks on AddAccount   
+Given user is on page DepositPage clicks on FixedDeposit
+Given user is on page FDDetailsPage clicks on NormalFixedDeposit  
+Given user is on page FDDetailsPage clicks on SelectAccount    
+Given user is on page FDDetailsPage clicks on SelectSavingAccount
+Given user is on page FDDetailsPage clicks on EnterFDName
+When user is on page FDDetailsPage and types Vijay MinAmt on EnterFDName  
+When user is on page FDDetailsPage and types 990 on EnterAmount
+When user scrolls down to "Select Interest Payout"
+Given user is on page FDDetailsPage clicks on PopularTenure
+When user scrolls down to "Total Maturity Amount"
+Given user is on page FDDetailsPage clicks on SelectInterestPayout 
+Given user is on page FDDetailsPage clicks on SelectMonthlyPeriod 
+Given user swipe down the page
+Given user is on page FDDetailsPage clicks on NomineeDOB
+Given user is on page FDDetailsPage clicks on NomineeDOBYear
+Given user is on page FDDetailsPage selects PreviousYear
+Given user is on page FDDetailsPage clicks on NomineeYear
+Given user is on page FDDetailsPage clicks on NomineeMonth
+Given user is on page FDDetailsPage clicks on NomineeDay
+Given user is on page FDDetailsPage clicks on Continue
+Given user verifies on page FDDetailsPage for Enter an amount that is within the permissible limit. text in placeholder DepositAmtVerbiage
+When user is on page FDDetailsPage and types 20000000 on EnterAmount
+Given user swipe down the page
+Given user is on page FDDetailsPage clicks on Continue
+Given user verifies on page FDDetailsPage for Enter an amount that is within the permissible limit. text in placeholder DepositAmtVerbiage
+
+
+@TestCaseKey=UDB-T2387 @Automatable @Smoke @RedmiNote9Pro
+Scenario: Verify that ETB user is able to add New Nominee details Below 18 years while creating FD if nominee details are not present in selected SA/CA/OD account 
+Given user logins to app
+Given user logins to app entering Login PIN
+Given user is on page DashboardPage clicks on FingerPrint
+Given user is on page DashboardPage clicks on Accounts
+Given user is on page DepositPage clicks on AddAccount   
+Given user is on page DepositPage clicks on FixedDeposit
+Given user is on page FDDetailsPage clicks on SelectAccount    
+Given user is on page FDDetailsPage clicks on SelectSavingAccount
+Given user is on page FDDetailsPage clicks on EnterFDName
+When user is on page FDDetailsPage and types Vijay NomiMinor on EnterFDName  
+When user is on page FDDetailsPage and types 12000 on EnterAmount
+When user scrolls down to "Select Interest Payout"
+Given user is on page FDDetailsPage clicks on PopularTenure
+When user scrolls down to "Total Maturity Amount"
+Given user is on page FDDetailsPage clicks on SelectInterestPayout 
+Given user is on page FDDetailsPage clicks on SelectMonthlyPeriod 
+When user scrolls down to "Nominee Details"
+Given user swipe down the page
+Given user is on page FDDetailsPage clicks on NomineeDOB
+Given user selects day 1 month Apr year 2020 and current year is 2025
+Given user swipe down the page
+Given user is on page FDDetailsPage clicks on GuardianName
+When user is on page FDDetailsPage and types Sachin Guardian on GuardianName
+Given user is on page FDDetailsPage clicks on GuardianDOB
+Given user selects day 11 month Apr year 2006 and current year is 2025 
+Given user is on page FDDetailsPage clicks on GuardianRelationship
+Given user is on page FDDetailsPage clicks on GuardianRelationshipSelection
+Given user is on page FDDetailsPage clicks on Continue
+Given user swipe down the page
+Given user is on page FDReviewPage clicks on T&CCheckbox 
+Given user is on page FDReviewPage clicks on AcceptButton
+Given user is on page FDReviewPage clicks on Submit
+Given user is on page FDReviewPage clicks on TPIN
+When user is on page FDReviewPage and types 1212 on TpinText
+When user is on page FDReviewPage clicks on TPINContinue
+Given user verifies on page FDReviewPage for Your Fixed Deposit Account has been opened successfully! text in placeholder CompletedFDPage
+
+@TestCaseKey=UDB-T2379 @Automatable @Smoke @RedmiNote9Pro
+Scenario: Verify the Negative scenarios for Custom field Year on Tenure screen
+Given user logins to app
+Given user logins to app entering Login PIN
+Given user is on page DashboardPage clicks on FingerPrint
+Given user is on page DashboardPage clicks on Accounts
+Given user is on page DepositPage clicks on AddAccount   
+Given user is on page DepositPage clicks on FixedDeposit
+Given user is on page FDDetailsPage clicks on NormalFixedDeposit 
+Given user is on page FDDetailsPage clicks on SelectAccount    
+Given user is on page FDDetailsPage clicks on SelectSavingAccount
+Given user is on page FDDetailsPage clicks on EnterFDName
+When user is on page FDDetailsPage and types Vijay InvalidYr on EnterFDName  
+When user is on page FDDetailsPage and types 10000 on EnterAmount
+When user scrolls down to "Select Interest Payout"
+Given user is on page FDDetailsPage clicks on CustomTenure
+When user is on page FDDetailsPage and types 12 on CustomTenureYears
+When user scrolls down to "Total Maturity Amount"
+Given user is on page FDDetailsPage clicks on SelectInterestPayout 
+Given user is on page FDDetailsPage clicks on SelectMonthlyPeriod
+Given user verifies for toast message on page FDDetailsPage as No Scheme is available for given details text in placeholder ErrorToastMsg
+
+@TestCaseKey=UDB-T2380 @Automatable @Smoke @RedmiNote9Pro
+Scenario: Verify the Negative scenarios for Custom field Months on Tenure screen
+Given user logins to app
+Given user logins to app entering Login PIN
+Given user is on page DashboardPage clicks on FingerPrint
+Given user is on page DashboardPage clicks on Accounts
+Given user is on page DepositPage clicks on AddAccount   
+Given user is on page DepositPage clicks on FixedDeposit
+Given user is on page FDDetailsPage clicks on NormalFixedDeposit 
+Given user is on page FDDetailsPage clicks on SelectAccount    
+Given user is on page FDDetailsPage clicks on SelectSavingAccount
+Given user is on page FDDetailsPage clicks on EnterFDName
+When user is on page FDDetailsPage and types Vijay InvalidYr on EnterFDName  
+When user is on page FDDetailsPage and types 10000 on EnterAmount
+When user scrolls down to "Select Interest Payout"
+Given user is on page FDDetailsPage clicks on CustomTenure
+When user is on page FDDetailsPage and types 251 on CustomTenureMonth
+When user scrolls down to "Total Maturity Amount"
+Given user is on page FDDetailsPage clicks on SelectInterestPayout 
+Given user is on page FDDetailsPage clicks on SelectMonthlyPeriod
+Given user verifies for toast message on page FDDetailsPage as No Scheme is available for given details text in placeholder ErrorToastMsg
+
+@TestCaseKey=UDB-T2381 @Automatable @Smoke @RedmiNote9Pro
+Scenario: Verify the Negative scenarios for Custom field Days on Tenure screen
+Given user logins to app
+Given user logins to app entering Login PIN
+Given user is on page DashboardPage clicks on FingerPrint
+Given user is on page DashboardPage clicks on Accounts
+Given user is on page DepositPage clicks on AddAccount   
+Given user is on page DepositPage clicks on FixedDeposit
+Given user is on page FDDetailsPage clicks on NormalFixedDeposit 
+Given user is on page FDDetailsPage clicks on SelectAccount    
+Given user is on page FDDetailsPage clicks on SelectSavingAccount
+Given user is on page FDDetailsPage clicks on EnterFDName
+When user is on page FDDetailsPage and types Vijay InvalidYr on EnterFDName  
+When user is on page FDDetailsPage and types 10000 on EnterAmount
+When user scrolls down to "Select Interest Payout"
+Given user is on page FDDetailsPage clicks on CustomTenure
+When user is on page FDDetailsPage and types 4 on CustomTenureDays
+When user scrolls down to "Total Maturity Amount"
+Given user is on page FDDetailsPage clicks on SelectInterestPayout 
+Given user is on page FDDetailsPage clicks on SelectMonthlyPeriod
+Given user verifies for toast message on page FDDetailsPage as No Scheme is available for given details text in placeholder ErrorToastMsg
+
+@TestCaseKey=UDB-T2407 @Automatable @Smoke @RedmiNote9Pro
+Scenario: Verify Tax Saver FD Negative testing for Deposit Amount field 
+Given user logins to app
+Given user logins to app entering Login PIN
+Given user is on page DashboardPage clicks on FingerPrint
+Given user is on page DashboardPage clicks on Accounts
+Given user is on page DepositPage clicks on AddAccount   
+Given user is on page DepositPage clicks on FixedDeposit
+Given user is on page FDDetailsPage clicks on TaxSaverFixedDeposit 
+Given user is on page FDDetailsPage clicks on SelectAccount    
+Given user is on page FDDetailsPage clicks on SelectSavingAccount
+Given user is on page FDDetailsPage clicks on EnterFDName
+When user is on page FDDetailsPage and types Vijay TaxSaver on EnterFDName  
+When user is on page FDDetailsPage and types 1500 on EnterAmount
+When user scrolls down to "Select Interest Payout"
+Given user is on page FDDetailsPage clicks on TaxSaverTenure
+When user scrolls down to "Total Maturity Amount"
+Given user is on page FDDetailsPage clicks on SelectInterestPayout 
+Given user is on page FDDetailsPage clicks on SelectMonthlyPeriod
+Given user verifies for toast message on page FDDetailsPage as No Scheme is available for given details text in placeholder ErrorToastMsg
+
+@TestCaseKey=UDB-T2413 @Automatable @Smoke @RedmiNote9Pro
+Scenario: Verify Pre-mature closure for Regular FD and Penalty charges
+Given user logins to app
+Given user logins to app entering Login PIN
+Given user is on page DashboardPage clicks on FingerPrint
+Given user is on page DashboardPage clicks on Accounts
+Given user is on page AccountsPage clicks on AllDeposit
+Given user is on page AccountsPage clicks on FixedDepositOption
+Given user is on page AccountsPage clicks on ViewFD
+Given user is on page FDDetailsPage clicks on FDRequest
+Given user is on page FDDetailsPage clicks on FDClosure
+Given user is on page FDDetailsPage clicks on FDClosureAgreeButton
+Given user is on page FDReviewPage clicks on TPIN
+When user is on page FDReviewPage and types 1212 on TpinText
+When user is on page FDReviewPage clicks on TPINContinue
+
+
+@TestCaseKey=UDB-T2415 @Automatable @Smoke @RedmiNote9Pro
+Scenario: Verify that ETB user should successfully open the Tax Saver FD with Auto Renew selection is Disable
+#Given user logins to app
+#Given user logins to app entering Login PIN
+#Given user is on page DashboardPage clicks on FingerPrint
+#Given user is on page DashboardPage clicks on Accounts
+#Given user is on page DepositPage clicks on AddAccount   
+Given user is on page DepositPage clicks on FixedDeposit
+Given user is on page FDDetailsPage clicks on TaxSaverFixedDeposit 
+Given user is on page FDDetailsPage clicks on SelectAccount    
+Given user is on page FDDetailsPage clicks on SelectSavingAccount
+Given user is on page FDDetailsPage clicks on EnterFDName
+When user is on page FDDetailsPage and types Vijay TaxSaver on EnterFDName  
+When user is on page FDDetailsPage and types 15000 on EnterAmount
+When user scrolls down to "Select Interest Payout"
+Given user is on page FDDetailsPage clicks on TaxSaverTenure
+When user scrolls down to "Total Maturity Amount"
+Given user is on page FDDetailsPage clicks on SelectInterestPayout 
+Given user is on page FDDetailsPage clicks on SelectMonthlyPeriod
+When user scrolls down to "Nominee Details"
+Given user is on page FDDetailsPage to check FDAutoRenewal toggle switch is On    # need to work as method is not getting called
+#Given user swipe down the page
+#Given user is on page FDDetailsPage clicks on NomineeDOB
+#Given user selects day 12 month Apr year 2006 and current year is 2025
+#Given user is on page FDDetailsPage clicks on Continue
+#Given user swipe down the page
+#Given user is on page FDReviewPage clicks on T&CCheckbox 
+#Given user is on page FDReviewPage clicks on AcceptButton
+#Given user is on page FDReviewPage clicks on Submit
+#Given user is on page FDReviewPage clicks on TPIN
+#When user is on page FDReviewPage and types 1212 on TpinText
+#When user is on page FDReviewPage clicks on TPINContinue
+#Given user verifies on page FDReviewPage for Your Fixed Deposit Account has been opened successfully! text in placeholder CompletedFDPage
+
+@TestCaseKey=UDB-T2421 @Automatable @Smoke @RedmiNote9Pro
+Scenario: Verify Negative testing for Nominee fields Name 
+Given user logins to app
+Given user logins to app entering Login PIN
+Given user is on page DashboardPage clicks on FingerPrint
+Given user is on page DashboardPage clicks on Accounts
+Given user is on page DepositPage clicks on AddAccount   
+Given user is on page DepositPage clicks on FixedDeposit
+Given user is on page FDDetailsPage clicks on NormalFixedDeposit 
+Given user is on page FDDetailsPage clicks on SelectAccount    
+Given user is on page FDDetailsPage clicks on SelectSavingAccount
+Given user swipe down the page
+Given user is on page FDDetailsPage clicks on ChangeNominee
+When user is on page FDDetailsPage and types AZ on NomineeName
+Given user verifies on page FDDetailsPage for Name should contain more than two characters. text in placeholder NomineeNameValidation
+
+
+@TestCaseKey=UDB-T2424 @Automatable @Smoke @RedmiNote9Pro
+Scenario: Verify Negative testing for Address field for Nominee 
+Given user logins to app
+Given user logins to app entering Login PIN
+Given user is on page DashboardPage clicks on FingerPrint
+Given user is on page DashboardPage clicks on Accounts
+Given user is on page DepositPage clicks on AddAccount   
+Given user is on page DepositPage clicks on FixedDeposit
+Given user is on page FDDetailsPage clicks on NormalFixedDeposit 
+Given user is on page FDDetailsPage clicks on SelectAccount    
+Given user is on page FDDetailsPage clicks on SelectSavingAccount
+Given user swipe down the page
+Given user is on page FDDetailsPage clicks on ChangeNominee
+Given user is on page FDDetailsPage clicks on NomineeAddressCheckbox
+When user scrolls down to "Pin"
+Given user verifies on page FDDetailsPage for Name should contain more than two characters. text in placeholder NomineeNameValidation
+
+@TestCaseKey=UDB-T2427 @Automatable @Smoke @RedmiNote9Pro
+Scenario: Verify that user should be able to Edit the pre-filled FD details After review screen
+Given user logins to app
+Given user logins to app entering Login PIN
+Given user is on page DashboardPage clicks on FingerPrint
+Given user is on page DashboardPage clicks on Accounts
+Given user is on page DepositPage clicks on AddAccount   
+Given user is on page DepositPage clicks on FixedDeposit
+Given user is on page FDDetailsPage clicks on NormalFixedDeposit 
+Given user is on page FDDetailsPage clicks on SelectAccount    
+Given user is on page FDDetailsPage clicks on SelectSavingAccount
+Given user is on page FDDetailsPage clicks on EnterFDName
+When user is on page FDDetailsPage and types Vijay Joseph on EnterFDName  
+When user is on page FDDetailsPage and types 10000 on EnterAmount
+When user scrolls down to "Select Interest Payout"
+Given user is on page FDDetailsPage clicks on PopularTenure
+When user scrolls down to "Total Maturity Amount"
+Given user is on page FDDetailsPage clicks on SelectInterestPayout 
+Given user is on page FDDetailsPage clicks on SelectMonthlyPeriod 
+When user scrolls down to "Nominee Details"
+Given user swipe down the page
+Given user is on page FDDetailsPage clicks on NomineeDOB
+Given user selects day 12 month Apr year 2006 and current year is 2025
+Given user is on page FDDetailsPage clicks on Continue
+Given user is on page FDReviewPage clicks on FDDetailsChange
+Given user verifies on page FDDetailsPage for Fixed Deposit Details text in placeholder DetailsPage
+
+
+
+@TestCaseKey=UDB-T2428 @Automatable @Smoke @RedmiNote9Pro
+Scenario: Verify that Proceed button should be disable if T&C is not selected
+Given user logins to app
+Given user logins to app entering Login PIN
+Given user is on page DashboardPage clicks on FingerPrint
+Given user is on page DashboardPage clicks on Accounts
+Given user is on page DepositPage clicks on AddAccount   
+Given user is on page DepositPage clicks on FixedDeposit
+Given user is on page FDDetailsPage clicks on NormalFixedDeposit 
+Given user is on page FDDetailsPage clicks on SelectAccount    
+Given user is on page FDDetailsPage clicks on SelectSavingAccount
+Given user is on page FDDetailsPage clicks on EnterFDName
+When user is on page FDDetailsPage and types Vijay Joseph on EnterFDName  
+When user is on page FDDetailsPage and types 10000 on EnterAmount
+When user scrolls down to "Select Interest Payout"
+Given user is on page FDDetailsPage clicks on PopularTenure
+When user scrolls down to "Total Maturity Amount"
+Given user is on page FDDetailsPage clicks on SelectInterestPayout 
+Given user is on page FDDetailsPage clicks on SelectMonthlyPeriod 
+When user scrolls down to "Nominee Details"
+Given user swipe down the page
+Given user is on page FDDetailsPage clicks on NomineeDOB
+Given user selects day 12 month Apr year 2006 and current year is 2025
+Given user is on page FDDetailsPage clicks on Continue
+Given user swipe down the page
+Given user is on page FDReviewPage to check SubmitButton is Disabled
+
+
+@TestCaseKey=UDB-T2429 @Automatable @Smoke @RedmiNote9Pro
+Scenario: Verify that Proceed button should be Enable if T&C is Accepted
+Given user logins to app
+Given user logins to app entering Login PIN
+Given user is on page DashboardPage clicks on FingerPrint
+Given user is on page DashboardPage clicks on Accounts
+Given user is on page DepositPage clicks on AddAccount   
+Given user is on page DepositPage clicks on FixedDeposit
+Given user is on page FDDetailsPage clicks on NormalFixedDeposit 
+Given user is on page FDDetailsPage clicks on SelectAccount    
+Given user is on page FDDetailsPage clicks on SelectSavingAccount
+Given user is on page FDDetailsPage clicks on EnterFDName
+When user is on page FDDetailsPage and types Vijay Joseph on EnterFDName  
+When user is on page FDDetailsPage and types 10000 on EnterAmount
+When user scrolls down to "Select Interest Payout"
+Given user is on page FDDetailsPage clicks on PopularTenure
+When user scrolls down to "Total Maturity Amount"
+Given user is on page FDDetailsPage clicks on SelectInterestPayout 
+Given user is on page FDDetailsPage clicks on SelectMonthlyPeriod 
+When user scrolls down to "Nominee Details"
+Given user swipe down the page
+Given user is on page FDDetailsPage clicks on NomineeDOB
+Given user selects day 12 month Apr year 2006 and current year is 2025
+Given user is on page FDDetailsPage clicks on Continue
+Given user swipe down the page
+Given user is on page FDReviewPage clicks on T&CCheckbox
+Given user is on page FDReviewPage clicks on AcceptButton
+Given user is on page FDReviewPage to check SubmitButton is Enabled
+
+
+@TestCaseKey=UDB-T2430 @Automatable @Smoke @RedmiNote9Pro
+Scenario: Verify that ETB user is trying to  open a FD and payment contribution transaction has failed Due to incorrect TPIN
+Given user logins to app
+Given user logins to app entering Login PIN
+Given user is on page DashboardPage clicks on FingerPrint
+Given user is on page DashboardPage clicks on Accounts
+Given user is on page DepositPage clicks on AddAccount   
+Given user is on page DepositPage clicks on FixedDeposit
+Given user is on page FDDetailsPage clicks on NormalFixedDeposit 
+Given user is on page FDDetailsPage clicks on SelectAccount    
+Given user is on page FDDetailsPage clicks on SelectSavingAccount
+Given user is on page FDDetailsPage clicks on EnterFDName
+When user is on page FDDetailsPage and types Vijay Joseph on EnterFDName  
+When user is on page FDDetailsPage and types 10000 on EnterAmount
+When user scrolls down to "Select Interest Payout"
+Given user is on page FDDetailsPage clicks on PopularTenure
+When user scrolls down to "Total Maturity Amount"
+Given user is on page FDDetailsPage clicks on SelectInterestPayout 
+Given user is on page FDDetailsPage clicks on SelectMonthlyPeriod 
+When user scrolls down to "Nominee Details"
+Given user swipe down the page
+Given user is on page FDDetailsPage clicks on NomineeDOB
+Given user selects day 12 month Apr year 2006 and current year is 2025
+Given user is on page FDDetailsPage clicks on Continue
+Given user swipe down the page
+Given user is on page FDReviewPage clicks on T&CCheckbox
+Given user is on page FDReviewPage clicks on AcceptButton
+Given user is on page FDReviewPage clicks on Submit
+Given user is on page FDReviewPage clicks on TPIN
+#When user is on page FDReviewPage and types 1212 on TpinText
+When user is on page FDReviewPage clicks on TPINContinue
+Given user verifies on page FDReviewPage for Please enter correct TPIN, you have 2 more attempts remaining text in placeholder TPINIncorrectMsg
+
+
+@TestCaseKey=UDB-T2431 @Automatable @Smoke @RedmiNote9Pro
+Scenario: Verify that User is able to download the T&C
+Given user logins to app
+Given user logins to app entering Login PIN
+Given user is on page DashboardPage clicks on FingerPrint
+Given user is on page DashboardPage clicks on Accounts
+Given user is on page DepositPage clicks on AddAccount   
+Given user is on page DepositPage clicks on FixedDeposit
+Given user is on page FDDetailsPage clicks on NormalFixedDeposit 
+Given user is on page FDDetailsPage clicks on SelectAccount    
+Given user is on page FDDetailsPage clicks on SelectSavingAccount
+Given user is on page FDDetailsPage clicks on EnterFDName
+When user is on page FDDetailsPage and types Vijay Joseph on EnterFDName  
+When user is on page FDDetailsPage and types 10000 on EnterAmount
+When user scrolls down to "Select Interest Payout"
+Given user is on page FDDetailsPage clicks on PopularTenure
+When user scrolls down to "Total Maturity Amount"
+Given user is on page FDDetailsPage clicks on SelectInterestPayout 
+Given user is on page FDDetailsPage clicks on SelectMonthlyPeriod 
+When user scrolls down to "Nominee Details"
+Given user swipe down the page
+Given user is on page FDDetailsPage clicks on NomineeDOB
+Given user selects day 12 month Apr year 2006 and current year is 2025
+Given user is on page FDDetailsPage clicks on Continue
+Given user swipe down the page
+Given user is on page FDReviewPage clicks on T&CCheckbox
+Given user is on page FDReviewPage clicks on DownloadT&C
+Given user is on page FDReviewPage clicks on AllowPermission
+
+@TestCaseKey=UDB-T2383 @Automatable @Smoke @RedmiNote9Pro
+Scenario: Verify that user is able to share image of successful payment on available apps by clicking on ‘share’ icon 
+Given user logins to app
+Given user logins to app entering Login PIN
+Given user is on page DashboardPage clicks on FingerPrint
+Given user is on page DashboardPage clicks on Accounts
+Given user is on page DepositPage clicks on AddAccount   
+Given user is on page DepositPage clicks on FixedDeposit
+Given user is on page FDDetailsPage clicks on NormalFixedDeposit 
+Given user is on page FDDetailsPage clicks on SelectAccount    
+Given user is on page FDDetailsPage clicks on SelectSavingAccount
+Given user is on page FDDetailsPage clicks on EnterFDName
+When user is on page FDDetailsPage and types Vijay AutoRenewOff on EnterFDName  
+When user is on page FDDetailsPage and types 10000 on EnterAmount
+When user scrolls down to "Select Interest Payout"
+Given user is on page FDDetailsPage clicks on PopularTenure
+When user scrolls down to "Total Maturity Amount"
+Given user is on page FDDetailsPage clicks on SelectInterestPayout 
+Given user is on page FDDetailsPage clicks on SelectMonthlyPeriod 
+When user scrolls down to "Auto Renewal"
+Given user is on page FDDetailsPage clicks on AutoRenewalOff 
+Given user swipe down the page
+Given user is on page FDDetailsPage clicks on NomineeDOB
+Given user selects day 12 month Apr year 2006 and current year is 2025
+Given user is on page FDDetailsPage clicks on Continue
+Given user swipe down the page
+Given user is on page FDReviewPage clicks on T&CCheckbox 
+Given user is on page FDReviewPage clicks on AcceptButton
+Given user is on page FDReviewPage clicks on Submit
+Given user is on page FDReviewPage clicks on TPIN
+When user is on page FDReviewPage and types 1212 on TpinText
+When user is on page FDReviewPage clicks on TPINContinue
+Given user verifies on page FDReviewPage for Your Fixed Deposit Account has been opened successfully! text in placeholder CompletedFDPage
+When user is on page FDReviewPage clicks on ShareButton
 

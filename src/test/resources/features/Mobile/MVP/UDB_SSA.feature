@@ -95,7 +95,7 @@ When user is on page SSABranchPage and types Chowk Bazar on EnterPinCode
 When user is on page SSABranchPage clicks on SearchIcon
 
 @TestCaseKey=UDB-5 @Automatable @Smoke @RedmiNote9Pro
-Scenario: Validate the ETB user see the Select your Debit Account dropdown above the Preferred Branch section on Account Details screen 
+Scenario: Validate the ETB user see the Select your Debit Account dropdown above the Preferred Branch section on Account Details screens
 #Given user logins to app
 Given user logins to app entering Login PIN
 #Given user is on page DashboardPage clicks on FingerPrint

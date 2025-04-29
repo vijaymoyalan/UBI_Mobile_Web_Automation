@@ -192,7 +192,7 @@ public static String setEnvPath = "";
 	
 	@Given("^user verifies on page (.+) for (.+) text in placeholder (.+)$")
 	public void placeHolderCheck(String pageName,String expectedText, String elementName) {
-		common.waitTillElementDisplayed(pageName,elementName);
+		//common.waitTillElementDisplayed(pageName,elementName);
 		String actualText = common.getText(pageName,elementName);
 		common.textValidation(actualText, expectedText);		
 	}
@@ -201,9 +201,11 @@ public static String setEnvPath = "";
     public void scrollsUp(String text) {
          common.scrollUp(text.replace("\"", "").trim());
     }
-	@Given("^user is on page (.+) to check (.+) is disabled$")
-	public void elementStatusCheck(String pageName, String elementName) {
-	//common.elementStatus(pageName,elementName);
+	@Given("^user is on page (.+) to check (.+) is (.+)$")  
+	// Given user is on page <ModulePage> to check <xpathName> is <Disabled/Enabled/Checked/UnChecked/Selected/NotSelected>
+	public void elementStatusCheck(String pageName, String elementName, String status) {
+		common.waitTillElementDisplayed(pageName,elementName);
+		common.elementStatus(pageName,elementName, status);
 	}
 	
 	@When("^user is on page (.+) for (.+) and (.+)$")
@@ -244,10 +246,26 @@ public static String setEnvPath = "";
 		// this will navigate to bottom of the page(applicable where scroll to text is not applicable)
 		common.swipeDownPage();
 	}
-	@Given("^user is on page (.+) verifies (.+) in (.+)$")
+	@Given("^user is on page (.+) verifies (.+) in (.+)$")  // this will verify amount >0 or count >0
 	public void payoutAmount(String pageName, String action, String elementName) {
 		common.waitTillElementDisplayed(pageName,elementName);
-		common.actionVerification(pageName,action, elementName);
+		common.actionVerification(pageName,action, elementName);	
+	}
+	
+	@Given("^user selects day (.+) month (.+) year (.+) and current year is (.+)$")
+    public void selectDayofMOnthYear(String day,String month,String year,String CurrentYear) {
+		common.selectDate(day,month,year,CurrentYear);
+    }
+	@Given("^user verifies for toast message on page (.+) as (.+) text in placeholder (.+)$")
+	public void toastmsgVerification(String pageName, String toastMsg, String elementName) {
+		common.waitTillElementDisplayed(pageName,elementName);
+		common.verifyToastMessage(pageName, toastMsg, elementName);
+	}
+	
+	@Given("^user is on page (.+) to check (.+) toggle switch is (.+)$")
+	public void toggleSwitch(String pageName, String elementName, String status) {
+		//common.waitTillElementDisplayed(pageName,elementName);
+		common.toggleSwitchStatus(pageName, elementName, status);
 		
 	}
 }

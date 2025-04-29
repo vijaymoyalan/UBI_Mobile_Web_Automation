@@ -4,10 +4,14 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.time.LocalDate;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Collections;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
@@ -161,30 +165,25 @@ public void verifyText(ORPageModel element, String expectedText) {
 
 	}
 
+	public void verifyToastMessage(String pageName, String expectedToastMessage, String elementname) {
+		System.out.println("inside verifyToastMessage menthod");
+		
+	//finding toast msg in page
+		String actualToastMessage = getText(findElement(TestBase._ORIntializater.get(pageName), elementname)).trim();
 	
-	public void verifyToastMessage(ORPageModel toastMessageElement, String expectedToastMessage) {
+	//using assert to verify the toast msg with actual text
 		int attempts = 0;
 		while (attempts < 3) {
 			try {
-
-				SoftAssertions softAssertions = new SoftAssertions();
-
-				// Wait for the toast message and verify it
-				waitTillElementDisplayed(toastMessageElement);
-
-				String actualToastMessage = findElement(toastMessageElement).getText();
-				// Perform various assertions
-				softAssertions
-						.assertThat(actualToastMessage).as("Check if Texts are equals. Expected Text:"
-								+ expectedToastMessage + " Actual Text: " + actualToastMessage)
-						.isEqualTo(expectedToastMessage);
-				softAssertions.assertAll();
+				Assert.assertTrue(
+						actualToastMessage.equals(expectedToastMessage),
+					    "Toast message mismatch! Expected: \"" + expectedToastMessage + "\", but found: \"" + actualToastMessage + "\"");
 				break;
-			} catch (StaleElementReferenceException | NoSuchElementException e) {
+			} catch (NoSuchElementException e) {
+				System.out.println("Exception in verifyToastMessage method: "+e);
 				attempts++;
 			}
 		}
-
 	}
 
 	public void selectDropdown(ORPageModel element, String optionText) {
@@ -592,5 +591,138 @@ public void verifyText(ORPageModel element, String expectedText) {
 			break;
 		}
 		
+	}
+	
+	public void elementStatus(String pageName, String elementname, String action) {
+		System.out.println("inside verification find element menthod");
+		elementStatus(findElement(TestBase._ORIntializater.get(pageName), elementname), action);
+	}
+	public void elementStatus(ORPageModel element, String status) {   
+// this method verifies based on the status of element pass.
+	// for Button: Enabled or Disabled
+	// for checkbox: Checked or UnChecked
+		switch (status) {
+		case "Disabled":
+			boolean elementStatusFalse = findElement(element).isEnabled();
+			System.out.println("Element Status "+ elementStatusFalse);
+			Assert.assertFalse(elementStatusFalse, "Element selected should be Disbaled");	
+			break;
+		
+		case "Enabled":
+			boolean elementStatusTrue = findElement(element).isEnabled();
+			System.out.println("Element Status "+ elementStatusTrue);
+			Assert.assertTrue(elementStatusTrue, "Element selected should be Enabled");	
+			break;
+			
+		case "Checked":
+			String elementStatusChecked = findElement(element).getAttribute("clickable");
+			System.out.println("Element Status "+ elementStatusChecked);
+			Assert.assertFalse(elementStatusChecked.equals("false"), "Checkbox is not selected");	
+			break;
+		
+		case "UnChecked":
+			String elementStatusUnChecked = findElement(element).getAttribute("clickable");
+			System.out.println("Element Status "+ elementStatusUnChecked);
+			Assert.assertTrue(elementStatusUnChecked.equals("true"), "Checkbox is selected");		
+			break;
+			
+		case "NotSelected":
+			boolean elementStatusNotSelected = findElement(element).isSelected();
+			System.out.println("Element Status "+ elementStatusNotSelected);
+			Assert.assertFalse(elementStatusNotSelected, "Checkbox is not selected");	
+			break;
+		
+		case "Selected":
+			boolean elementStatusSelected = findElement(element).isSelected();
+			System.out.println("Element Status "+ elementStatusSelected);
+			Assert.assertTrue(elementStatusSelected, "Checkbox is selected");		
+			break;
+		default:
+			break;
+		}
+	}
+	
+	public void selectDate(String day, String month, String year, String currentYearText) {
+        AndroidDriver androidDriver = (AndroidDriver) ((WebDriverFacade) getDriver()).getProxiedDriver();
+        WebDriverWait wait = new WebDriverWait(androidDriver, Duration.ofSeconds(10));
+        WebElement selectCurrentYear = wait.until(ExpectedConditions.elementToBeClickable(
+                AppiumBy.androidUIAutomator("new UiSelector().text(\"" + currentYearText + "\")")));
+        selectCurrentYear.click();
+        int targetYear = Integer.parseInt(year);
+        int currentYear = Integer.parseInt(currentYearText);
+        // Navigate to correct year
+        while (true) {
+            try {
+            	if((targetYear < currentYear) || (targetYear > currentYear)){
+            		WebElement yearToBeSelected = wait.until(ExpectedConditions.elementToBeClickable(
+            				AppiumBy.androidUIAutomator("new UiSelector().text(\"" + year + "\")")));
+            		yearToBeSelected.click();
+                break;
+                }
+                   else
+                   {
+                        WebElement yearToBeSelected = wait.until(ExpectedConditions.elementToBeClickable(
+                              AppiumBy.androidUIAutomator("new UiSelector().text(\"" + year + "\").instance(1)")));
+                        yearToBeSelected.click();
+               break;    
+                   }
+            } catch (Exception e) {
+                try {
+                    if (targetYear < currentYear) {
+                        WebElement prevButton = wait.until(ExpectedConditions.elementToBeClickable(
+                                AppiumBy.androidUIAutomator("new UiSelector().className(\"com.horcrux.svg.d0\").instance(2)")));
+                        prevButton.click();
+                    } else if (targetYear > currentYear) {
+                        WebElement nextButton = wait.until(ExpectedConditions.elementToBeClickable(
+                                AppiumBy.androidUIAutomator("new UiSelector().className(\"com.horcrux.svg.SvgView\").instance(2)")));
+                        nextButton.click();
+                    }
+                } catch (Exception ex) {
+                    System.out.println("Failed to navigate to year: " + ex.getMessage());
+                    break;
+                }
+            }
+        }
+   // Select the month
+        try {
+            WebElement monthElement = wait.until(ExpectedConditions.elementToBeClickable(
+                    AppiumBy.androidUIAutomator("new UiSelector().text(\"" + month + "\")")));
+            monthElement.click();
+        } catch (Exception e) {
+            System.out.println("Month not found: " + e.getMessage());
+        }
+   // Select the day
+        try {
+            WebElement dayElement = wait.until(ExpectedConditions.elementToBeClickable(
+                    AppiumBy.androidUIAutomator("new UiSelector().text(\"" + day + "\")")));
+            dayElement.click();
+        } catch (Exception e) {
+            System.out.println("Day not found: " + e.getMessage());
+        }
+    }
+	
+	public void toggleSwitchStatus(String pageName, String elementname, String status) {
+		System.out.println("inside toggle find element menthod");
+		elementStatus(findElement(TestBase._ORIntializater.get(pageName), elementname), status);
+	}
+	
+	public void toggleSwitchStatus(ORPageModel element, String status) {
+		System.out.println("inside toggleSwitchStatus menthod");  // this code will only verify if the element is enabled or disabled 
+		
+		String contentDesc = findElement(element).getAttribute("content-desc");
+		System.out.println("content desc text: "+ contentDesc);
+				switch (status) {
+				case "Off":
+					String toggleOff = "off switch button";
+					Assert.assertTrue(contentDesc.contains(toggleOff),"Toggle Switch in On mode");
+					break;
+				
+				case "On":
+					String toggleOn = "on switch button";
+					Assert.assertTrue(contentDesc.contains(toggleOn),"Toggle Switch in Off mode");
+					break;
+				default:
+					break;
+				}
 	}
 }
