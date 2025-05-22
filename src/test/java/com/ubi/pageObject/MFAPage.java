@@ -1,13 +1,10 @@
 package com.ubi.pageObject;
 
 import java.util.List;
-
 import org.openqa.selenium.WebElement;
-
 import com.ubi.base.ORPageModel;
 import com.ubi.testbase.CommonMethods;
 import com.ubi.testbase.TestBase;
-
 import io.appium.java_client.pagefactory.AndroidBy;
 
 public class MFAPage {

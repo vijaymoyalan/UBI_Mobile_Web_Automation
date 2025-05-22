@@ -601,6 +601,12 @@ public void verifyText(ORPageModel element, String expectedText) {
 // this method verifies based on the status of element pass.
 	// for Button: Enabled or Disabled
 	// for checkbox: Checked or UnChecked
+	// for field: clickable or Notclickable
+	// for radioButton: select or notselected
+	// for element: displayed or notdisplayed
+	// for text field: NotNull
+		androidDriver = ((AndroidDriver) ((WebDriverFacade) getDriver()).getProxiedDriver());
+		SoftAssert softAssert = new SoftAssert();
 		switch (status) {
 		case "Disabled":
 			boolean elementStatusFalse = findElement(element).isEnabled();
@@ -637,6 +643,42 @@ public void verifyText(ORPageModel element, String expectedText) {
 			System.out.println("Element Status "+ elementStatusSelected);
 			Assert.assertTrue(elementStatusSelected, "Checkbox is selected");		
 			break;
+			
+		case "NotClickable":
+			String NotClickable = findElement(element).getAttribute("clickable");
+			System.out.println("Element is clickable "+NotClickable);
+			Assert.assertEquals(NotClickable, "false",  "Text box is Clickable");				
+			break;
+		
+		case "Clickable":	
+			String Clickable = findElement(element).getAttribute("clickable");
+			System.out.println("Element is clickable "+Clickable);
+			Assert.assertEquals(Clickable, "true",  "Text box is Not Clickable");	
+			break;
+			
+		case "NotDisplayed":
+			boolean elementStatusNotDisplayed = findElement(element).isDisplayed();
+			System.out.println("Element Status "+ elementStatusNotDisplayed);
+			Assert.assertFalse(elementStatusNotDisplayed, "element is displayed");	
+			break;
+		
+		case "Displayed":
+			boolean elementStatusDisplayed = findElement(element).isDisplayed();
+			System.out.println("Element Status "+ elementStatusDisplayed);
+			Assert.assertTrue(elementStatusDisplayed, "element is not displayed");		
+			break;
+			
+		case "NotNull":
+			String elementText = findElement(element).getText();
+			System.out.println("Text Present in element is "+ elementText);
+			// Check not null
+			softAssert.assertNotNull(elementText, "Text should not be null");
+			// Check does not contain hyphen
+			if (elementText != null) {
+			    softAssert.assertFalse(elementText.contains("-"), "Text should not contain hyphen");
+			}
+			break;
+			
 		default:
 			break;
 		}
@@ -650,6 +692,7 @@ public void verifyText(ORPageModel element, String expectedText) {
         selectCurrentYear.click();
         int targetYear = Integer.parseInt(year);
         int currentYear = Integer.parseInt(currentYearText);
+        
         // Navigate to correct year
         while (true) {
             try {
@@ -725,4 +768,52 @@ public void verifyText(ORPageModel element, String expectedText) {
 					break;
 				}
 	}
+	
+	public void moveSlider(int sliderNumber, int sliderValue) {
+		System.out.println("Inside slider method");
+		
+        // Locate all sliders
+        List<WebElement> sliders = androidDriver.findElements(By.xpath("//android.widget.SeekBar"));
+        if (sliderNumber < 0 || sliderNumber > sliders.size()) {
+            System.out.println("Invalid slider number: " + sliderNumber);
+            return;
+        }
+        
+        // Get the target slider based on index (1-based index)
+        System.out.println("Get the target slider based on index");
+        WebElement slider = sliders.get(sliderNumber);
+        
+        // Get slider's position and size
+        int startX = slider.getLocation().getX();
+        int width = slider.getSize().getWidth();
+        int yAxis = slider.getLocation().getY() + (slider.getSize().getHeight() / 2);
+        
+        // Calculate new X position based on the given sliderValue (move by given points)
+        int newX = startX + sliderValue;
+        
+        // Ensure newX is within the slider's width
+        if (newX > (startX + width)) {
+            newX = startX + width;
+        } else if (newX < startX) {
+            newX = startX;
+        }
+        
+        // Create PointerInput instance for finger touch
+        PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
+        Sequence swipe = new Sequence(finger, 1);
+        
+        // Press on the slider
+        swipe.addAction(finger.createPointerMove(Duration.ofMillis(0), PointerInput.Origin.viewport(), startX, yAxis));
+        swipe.addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
+        
+        // Move to new position
+        swipe.addAction(finger.createPointerMove(Duration.ofMillis(500), PointerInput.Origin.viewport(), newX, yAxis));
+        
+        // Release touch
+        swipe.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+        
+        // Perform the sequence
+        androidDriver.perform(Collections.singletonList(swipe));
+        System.out.println("Moved slider #" + sliderNumber + " by " + sliderValue + " points.");
+    }
 }

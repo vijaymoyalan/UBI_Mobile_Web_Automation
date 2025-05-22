@@ -125,7 +125,7 @@ Given user is on page PMSBY clicks on T&CAccept
 #When user is on page PMSBY and verifies for Submit ButtonField --- skip this step
 Given user verifies on page PMSBY for Submit text in placeholder ButtonField
 
-@TestCaseKey=UDB-T12498 @TestCaseKey=UDB-T12496 @Automatable @Smoke @RedmiNote9Pro
+@TestCaseKey=UDB-T12498 @TestCaseKey=UDB-T12496 @TestCaseKey=UDB-T12505 @Automatable @Smoke @RedmiNote9Pro
 Scenario: Verify that success screen is visible after payment is complete
 Given user logins to app
 Given user logins to app entering Login PIN
@@ -155,6 +155,10 @@ When user scrolls down to "Sum Assured"
 Given user is on page PMSBY clicks on Confirm&Pay
 Given user is on page PMSBY clicks on TPIN
 When user is on page PMSBY and types 1212 on TpinText
+Given user verifies on page PMSBY for **** text in placeholder TPinText
+Given user is on page PMSBY clicks on ShowTPINIcon
+Given user verifies on page PMSBY for 1212 text in placeholder TPinText
+Given user is on page PMSBY to check TPINContinue is Enabled
 
 
 @TestCaseKey=UDB-T12459 @Automatable @Smoke @RedmiNote9Pro
@@ -209,15 +213,32 @@ Given user verifies on page PMSBY for MOYALAN ANTONY JOSEPH text in placeholder 
 
 @TestCaseKey=UDB-T12493  @Automatable @Smoke @RedmiNote9Pro
 Scenario: Verify that "i" icon should display the meaning of "Specially abled"
-#Given user logins to app
-#Given user logins to app entering Login PIN
-#Given user is on page DashboardPage clicks on FingerPrint
-#Given user is on page DashboardPage clicks on DepositsTab
-#Given user is on page DashboardPage clicks on InvestandInsureTab
-#Given user is on page DashboardPage clicks on AddNew
-#Given user is on page InvestAndInsure clicks on PMSBYInsurance
-#Given user is on page PMSBY clicks on ApplyNow
-#Given user is on page PMSBY clicks on T&CAccept
+Given user logins to app
+Given user logins to app entering Login PIN
+Given user is on page DashboardPage clicks on FingerPrint
+Given user is on page DashboardPage clicks on DepositsTab
+Given user is on page DashboardPage clicks on InvestandInsureTab
+Given user is on page DashboardPage clicks on AddNew
+Given user is on page InvestAndInsure clicks on PMSBYInsurance
+Given user is on page PMSBY clicks on ApplyNow
+Given user is on page PMSBY clicks on T&CAccept
 Given user is on page PMSBY clicks on SpeciallyAbledInfoIcon
 Given user verifies on page PMSBY for Are you physically challenged? text in placeholder InfoIconText
+
+
+@TestCaseKey=UDB-T12482 @TestCaseKey=UDB-T12484  @Automatable @Smoke @RedmiNote9Pro
+Scenario: Verify that customer name and DOB is not editable
+Given user logins to app
+Given user logins to app entering Login PIN
+Given user is on page DashboardPage clicks on FingerPrint
+Given user is on page DashboardPage clicks on DepositsTab
+Given user is on page DashboardPage clicks on InvestandInsureTab
+Given user is on page DashboardPage clicks on AddNew
+Given user is on page InvestAndInsure clicks on PMSBYInsurance
+Given user is on page PMSBY clicks on ApplyNow
+Given user is on page PMSBY clicks on T&CAccept
+Given user is on page PMSBY to check CustName is NotClickable
+Given user is on page PMSBY to check CustDOB is NotClickable
+
+
 

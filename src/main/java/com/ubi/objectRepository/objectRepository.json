@@ -131,7 +131,11 @@
 			"locator": "xpath",
 			"value": "(//android.view.ViewGroup[@content-desc=\"View All\"])[2]/android.widget.TextView"
 		},
-		
+		{
+			"name": "LoansViewAll",
+			"locator": "xpath",
+			"value": "(//android.view.ViewGroup[@content-desc=\"View All\"])[1]/android.widget.TextView"
+		},
 		{
 			"name": "Home",
 			"locator": "xpath",
@@ -172,9 +176,23 @@
 			"name": "AddNew",
 			"locator": "xpath",
 			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"+ Add New\"]"
+		},
+		{
+			"name": "AddAccount",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"+Add Account\"]"
+		},
+		{
+			"name": "Loans",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Loans tab\"]/android.view.ViewGroup/android.widget.TextView"
+		},
+		{
+			"name": "LoanAgainstDeposit",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[@content-desc=\"Loan Against Deposit\"]"
 		}
 	],
-
 	"DepositPage": [
 		{
 			"name": "AddAccount",
@@ -191,6 +209,16 @@
 			"name": "AccountsAfterLogin",
 			"locator": "xpath",
 			"value": "//android.view.View[@content-desc=\"Accounts\"]"
+		},
+		{
+			"name": "LoansProducts",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[contains(@content-desc,\"Loans\")]/android.view.ViewGroup[2]/com.horcrux.svg.SvgView/com.horcrux.svg.v/com.horcrux.svg.d0"
+		},
+		{
+			"name": "ExploreLoansProducts",
+			"locator": "xpath",
+			"value": "//android.view.View[@content-desc=\"Loan Against Deposit\"]/com.horcrux.svg.SvgView/com.horcrux.svg.v/com.horcrux.svg.v/com.horcrux.svg.d0[1]"
 		}
 	],
 	"AddNewAccountPage": [
@@ -1306,6 +1334,11 @@
 				"name": "ViewFD",
 				"locator": "xpath",
 				"value":"(//android.view.ViewGroup[contains(@content-desc,\"VIJAY JOSEPH MOYALAN (XXXXX \")])[2]"
+		},
+		{
+				"name": "SavingsAccount",
+				"locator": "xpath",
+				"value":"//android.view.ViewGroup[@content-desc=\"Savings Account\"]/android.view.ViewGroup[1]"
 		}
 	],	
 	
@@ -1314,11 +1347,21 @@
             "locator": "xpath",
             "name": "SSADebitAccDropdown",
             "value": "//android.view.ViewGroup[contains(@content-desc,\"Select Account\")]/com.horcrux.svg.SvgView/com.horcrux.svg.v/com.horcrux.svg.a0/com.horcrux.svg.d0"
+        }, 
+        {
+            "locator": "xpath",
+            "name": "ResumeSSA",
+            "value": "//android.view.ViewGroup[@content-desc=\"Resume Your SSA Application\"]/android.view.ViewGroup/android.widget.TextView"
+        },
+        {
+            "locator": "xpath",
+            "name": "ResumeButton",
+            "value": "//android.widget.Button[@content-desc=\"Resume\"]"
         },
         {
             "locator": "xpath",
             "name": "SSADebitAccSelection",
-            "value": "//android.widget.Button[contains(@content-desc,\"VIJAY's Savings Account\")]"
+            "value": "//android.widget.Button[contains(@content-desc,\"Savings Account\")]"
         },
         {
             "locator": "xpath",
@@ -1354,18 +1397,39 @@
 			"name":"SearchIcon",
 			"locator": "xpath",
 			"value": "//android.view.ViewGroup[@content-desc=\"Enter Pin Code / Branch Name / Area421503show\"]"
-		}
+		},
+		{
+        	"name": "ApplyNowbutton",
+            "locator": "xpath",
+            "value": "//android.widget.Button[@content-desc=\"Apply Now\"]"
+        },
+        {
+        	"name": "MinimumAmountValidation",
+            "locator": "xpath",
+            "value": "//android.widget.TextView[@resource-id=\"textId\" and contains(@text,\"Minimum deposit amount must be\")]"
+        },
+        {
+        	"name": "MaximumAmountValidation",
+            "locator": "xpath",
+            "value": "//android.widget.TextView[@resource-id=\"textId\" and contains(@text,\"Maximum deposit amount of ₹\")]"
+        }
         ],
+        
     "SSAGirlDetailPage": [
         {
         	"locator":"xpath",
         	"name": "GirlChildName",
-        	"value": "//android.view.ViewGroup[@content-desc=\"Name of Girl Child , Name of Girl Childshow\"]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.EditText"
+        	"value": "//android.view.ViewGroup[contains(@content-desc,\"Name of Girl Child , Name of Girl\")]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.EditText"
         },
+        {
+			"name": "BackButton",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Back\"]/android.view.ViewGroup[1]"
+		},
         {
         	"locator":"xpath",
         	"name": "DOB",
-        	"value": "//android.view.ViewGroup[@content-desc=\"Date of Birth\"]/android.view.ViewGroup/android.widget.Button"
+        	"value": "//android.view.ViewGroup[contains(@content-desc,\"Date of Birth\")]/com.horcrux.svg.SvgView/com.horcrux.svg.v"
         },
         {
         	"locator":"xpath",
@@ -1375,31 +1439,38 @@
         {
 			"name": "Relationship",
 			"locator": "xpath",
-			"value": "//android.widget.Button[@content-desc=\"Apply Now\"]"
+			"value": "//android.widget.EditText[@content-desc=\"Select Relationship list\"]"
+		},
+		{
+			"name": "RelationshipSelection",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[@content-desc=\"Father\"]/android.view.ViewGroup"
 		},
 		{
 			"name": "BirthOrder",
 			"locator": "xpath",
-			"value": "//android.widget.Button[@content-desc=\"Apply Now\"]"
+			"value": "//android.widget.EditText[@content-desc=\"Select Birth Order list\"]"
+		},
+		{
+			"name": "BirthOrderSelection",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[@content-desc=\"First Child\"]/android.view.ViewGroup"
 		},
 		{
 			"name": "BirthType",
 			"locator": "xpath",
-			"value": "//android.widget.Button[@content-desc=\"Apply Now\"]"
+			"value": "//android.widget.EditText[@content-desc=\"Select Birth Type list\"]"
 		},
 		{
-	
 	     	"name": "BirthTypeSelection",
 			"locator": "xpath",
 			"value": "//android.view.ViewGroup[@content-desc=\"Single\"]/android.view.ViewGroup"
 		},
-
 		{
 			"name": "EnterGirlChildAddress",
 			"locator": "xpath",
 			"value": "//android.widget.TextView[@text=\"󰄲\"]"
 		},
-
 		{
 			"name": "PinCode",
 			"locator": "xpath",
@@ -1433,7 +1504,7 @@
 			"value":"//android.view.ViewGroup[contains(@content-desc,\"Upload Birth Certificate\")]"
 		},
 		{
-			"name": "MobileDocSelection",
+			"name": "BrowsePhone",
 			"locator": "xpath",
 			"value":"//android.view.ViewGroup[@content-desc=\"Browse Phone\"]"
 		},
@@ -1454,9 +1525,19 @@
 			"value":"//android.view.ViewGroup[@content-desc=\"Take Photo\"]"
 		},
 		{
-			"name": "CameraTakePhoto",
+			"name": "AllowPermission",
 			"locator": "xpath",
-			"value":"//android.view.ViewGroup[@content-desc=\"Take Photo\"]"
+			"value": "//android.widget.Button[1]"
+		},
+		{
+			"name": "CameraClick",
+			"locator": "xpath",
+			"value": "//android.view.View[@content-desc=\"Shutter button\"]"
+		},
+		{
+			"name": "ComfirmCameraClick",
+			"locator": "xpath",
+			"value": "//android.widget.ImageView[@content-desc=\"Done\"]"
 		},
 		{
 			"name": "GirlChildName",
@@ -1469,25 +1550,47 @@
 			"value":"//android.widget.EditText[@resource-id=\"girlChildName\"]"
 		},
 		{
-			"name": "RelationshipSelection",
-			"locator": "xpath",
-			"value": "//android.view.ViewGroup[@content-desc=\"Others\"]/android.view.ViewGroup"
-		},
-		{
 			"name": "BirthOrderFirstChild",
 			"locator": "xpath",
 			"value": "//android.view.ViewGroup[@content-desc=\"First Child\"]/android.view.ViewGroup"
 		},
 		{
-			"name": "BirthType",
-			"locator": "xpath",
-			"value": "(//android.widget.Button[@resource-id=\"onIconPress\"])[4]"
-		},
-		{
 			"name": "EnterGirlChildAddress",
 			"locator": "xpath",
 			"value": "//android.widget.TextView[@text=\"ó°„²\"]"
+		},
+		{
+			"name": "ChangeGirlChildAddress",
+			"locator": "xpath",
+			"value": "//android.view.View[@content-desc=\"checkbox checked Girl Child's address will be registered as the same as the Applicants address\"]/android.widget.TextView"
 		}
+	],
+	"SSAReviewPage":[
+		 {
+        	"name": "GirlChildNamePlaceholder",
+            "locator": "xpath",
+            "value": "//android.widget.TextView[@content-desc=\"AppGirlName\"]"
+        },
+        {
+        	"name": "RelationshipPlaceholder",
+            "locator": "xpath",
+            "value": "//android.widget.TextView[@content-desc=\"Father\"]"
+        },
+        {
+        	"name": "BirthOrderPlaceholder",
+            "locator": "xpath",
+            "value": "//android.widget.TextView[@content-desc=\"FIRST\"]"
+        },
+        {
+        	"name": "BirthTypePlaceholder",
+            "locator": "xpath",
+            "value": "//android.widget.TextView[@content-desc=\"Single\"]"
+        },
+        {
+        	"name": "AddressTitlePlaceholder",
+            "locator": "xpath",
+            "value": "//android.widget.TextView[@content-desc=\"CUT-ORI\"]"
+        }
 	],
 	 "SSASubmitPage":[
 		{
@@ -1498,12 +1601,17 @@
 		{
 			"name": "DeclarationTerm&Conditions",
 			"locator": "xpath",
-			"value":"//android.widget.Button[@content-desc=\"checkbox\"]"
+			"value": "//android.widget.Button[contains(@content-desc,\"I accept all the  terms & conditions\")]"
 		},
+		{
+			"name": "BackButton",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Back\"]/android.view.ViewGroup[1]"
+		}, 
 		{
 			"name": "Term&ConditionsIAccept",
 			"locator": "xpath",
-			"value":"//android.widget.Button[@content-desc=\"I accept\"]"
+			"value": "//android.widget.Button[@content-desc=\"I accept\"]"
 		},
 		{
 			"name": "T&CAccept",
@@ -1526,9 +1634,29 @@
 			"value":"//android.widget.Button[@content-desc=\"Ok\"]"
 		},
 		{
-			"locator": "xpath",
 			"name": "HomeButton",
+			"locator": "xpath",
 			"value":"//android.widget.Button[@content-desc=\"Home\"]"
+		},
+		{
+			"name": "TPIN",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@text=\"4 Digit Transaction PIN \"]"
+		},
+		{
+			"name": "TpinText",
+			"locator": "xpath",
+			"value": "//android.widget.EditText"
+		},
+		{
+			"name": "TPINContinue",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "CloseDeclaration",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[contains(@content-desc,\"Close button\")]"
 		}
     ],
     "SSADetailPage": [
@@ -1543,6 +1671,111 @@
 				"name": "RequestTab",
 				"locator": "xpath",
 				"value":"//android.widget.TextView[@resource-id=\"textId\" and @text=\"Requests\"]"
+		},
+		{
+				"name": "ExistingSSAAccount",
+				"locator": "xpath",
+				"value":"//android.view.ViewGroup[contains(@content-desc,\", (XXXXX \")]/android.widget.TextView[2]"
+		},
+		{
+				"name": "StatementTab",
+				"locator": "xpath",
+				"value":"//android.view.View[@content-desc=\"Statement\"]/android.view.ViewGroup/android.widget.TextView"
+		},
+		{
+				"name": "DetailsTab",
+				"locator": "xpath",
+				"value":"//android.view.View[@content-desc=\"Details\"]"
+		},
+		{
+				"name": "BalanceAmount",
+				"locator": "xpath",
+				"value":"//android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView[4]"
+		},
+		{
+				"name": "AccountNumber",
+				"locator": "xpath",
+				"value":"//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView[2]"
+		},
+		{
+				"name": "AccountBalance",
+				"locator": "xpath",
+				"value":"//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView[4]"
+		},
+		{
+				"name": "DetailsAccInfo",
+				"locator": "xpath",
+				"value":"//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView[1]"
+		},
+		{
+				"name": "DetailsChildInfo",
+				"locator": "xpath",
+				"value":"//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView[2]"
+		},
+		{
+				"name": "ApplicantName",
+				"locator": "xpath",
+				"value":"//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.TextView[2]"
+		},
+		{
+				"name": "RelationshipStatus",
+				"locator": "xpath",
+				"value":"//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.TextView[4]"
+		},
+		{
+				"name": "BirthOrder",
+				"locator": "xpath",
+				"value":"//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.TextView[6]"
+		},
+		{
+				"name": "BirthType",
+				"locator": "xpath",
+				"value":"//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.TextView[8]"
+		},
+		{
+				"name": "DOB",
+				"locator": "xpath",
+				"value":"//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.TextView[10]"
+		},
+		{
+				"name": "MaturityDate",
+				"locator": "xpath",
+				"value":"//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.TextView[12]"
+		},
+		{
+				"name": "ChildAddress",
+				"locator": "xpath",
+				"value":"//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.TextView[14]"
+		},
+		{
+				"name": "DetailsBranchInfo",
+				"locator": "xpath",
+				"value":"//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView[2]"
+		},
+		{
+				"name": "BranchAddress",
+				"locator": "xpath",
+				"value":"//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.TextView[1]"
+		},		
+		{
+				"name": "DownloadStatement",
+				"locator": "xpath",
+				"value":"//android.widget.Button[@content-desc=\"Download\"]"
+		},
+		{
+				"name": "AllowPermission",
+				"locator": "xpath",
+				"value":"//android.widget.Button[@resource-id=\"com.android.permissioncontroller:id/permission_allow_button\" and @text=\"ALLOW\"]"
+		},
+		{
+				"name": "StatementDownloadAlert",
+				"locator": "xpath",
+				"value":"//android.widget.TextView[@resource-id=\"textId\" and @text=\"Statement Downloaded\"]"
+		},
+		{
+				"name": "DownloadAlert",
+				"locator": "xpath",
+				"value":"//android.widget.Button[@content-desc=\"Ok\"]"
 		}
 	],
     "SSASummaryPage": [
@@ -2093,7 +2326,12 @@
 			"name": "TPinText",
 			"locator": "xpath",
 			"value": "//android.view.ViewGroup[@content-desc=\"4 digit Transaction PIN \"]/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.EditText"
-		}		
+		},
+		{
+			"name": "TPINClose",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[@content-desc=\"Close Button\"]/com.horcrux.svg.SvgView/com.horcrux.svg.v/com.horcrux.svg.a0/com.horcrux.svg.d0"
+		}
 	],
 	"BharatPayWater":[
 		{
@@ -2628,6 +2866,11 @@
 			"value": "//android.widget.TextView[contains(@content-desc,\"₹ \")]"
 		},
 		{
+			"name": "ProviderLogo",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ImageView"
+		},
+		{
 			"name": "CustomerName",
 			"locator": "xpath",
 			"value": "//android.widget.TextView[@content-desc=\"VIJAY JOSEPH MOYALAN\"]"
@@ -2766,6 +3009,41 @@
 			"name": "RecentRechargeBiller",
 			"locator": "xpath",
 			"value": "//android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.TextView[1]"
+		},
+		{
+			"name": "Amount",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[@content-desc=\"Amount , ₹, Amount\"]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.EditText"
+		},
+		{
+			"name": "AmountAlertVerbiage",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[@content-desc=\"0.00\"]/android.view.ViewGroup[2]/android.widget.TextView"
+		},
+		{
+			"name": "AmountSuggestion",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[@content-desc=\"₹1,000\"]/android.view.ViewGroup/android.widget.TextView"
+		},
+		{
+			"name": "ShowTPINIcon",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[contains(@content-desc,\"4 digit Transaction PIN\")]/com.horcrux.svg.SvgView/com.horcrux.svg.v/com.horcrux.svg.d0"
+		},
+		{
+			"name": "TPinText",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[@content-desc=\"4 digit Transaction PIN \"]/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.EditText"
+		},
+		{
+			"name": "DownloadButton",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Download\"]"
+		},
+		{
+			"name": "OtherBillsButton",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Other Bills\"]"
 		}
 	],
 	"BharatPaySubscription":[
@@ -3151,6 +3429,16 @@
 			"value":"//android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView[1]"
 		},
 		{
+			"name": "MarketingBanner",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[2]/android.widget.HorizontalScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ImageView"
+		},
+		{
+			"name": "BBPSLogo",
+			"locator":"xpath",
+			"value":"//com.horcrux.svg.SvgView[@content-desc=\"B B P S logo\"]/com.horcrux.svg.v/com.horcrux.svg.d0"
+		},
+		{
 			"name": "UtilitiesSection",
 			"locator":"xpath",
 			"value":"//android.view.View[@resource-id=\"textId\" and @text=\"Utilities\"]"
@@ -3209,6 +3497,11 @@
 			"name": "TechnicalError",
 			"locator":"xpath",
 			"value":"//android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.widget.TextView"
+		},
+		{
+			"name": "BBPSViewAll",
+			"locator":"xpath",
+			"value":"(//android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[1])[1]"
 		}
 	],
 	"BharatPayPendingBills":[
@@ -3328,7 +3621,12 @@
 			"name": "BillPayments",
 			"locator": "xpath",
 			"value": "//android.widget.Button[contains(@content-desc,\"Bill Payments\")]"
-		}	
+		},
+		{
+			"name": "RemarkAlertVerbiage",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[contains(@content-desc,\"Test Script Entered \")]/android.view.ViewGroup[2]/android.widget.TextView"
+		}
 	],
 "BharatPayTrackComplaints":[
 		{
@@ -3567,6 +3865,26 @@
 			"name": "ChangeNominee",
 			"locator":"xpath",
 			"value":"//android.view.ViewGroup[@content-desc=\"Change\"]/android.widget.TextView"
+		},
+		{
+			"name": "DownloadT&C",
+			"locator":"xpath",
+			"value":"//android.widget.Button[@content-desc=\"Download T&C\"]"
+		},
+		{
+			"name": "AccountBalance",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[contains(@content-desc,\"Account Name, ₹\")]/android.widget.TextView[2]"
+		},
+		{
+			"name": "TPINTextField",
+			"locator":"xpath",
+			"value":"//android.view.ViewGroup[@content-desc=\"4 digit Transaction PIN \"]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.widget.TextView"
+		},
+		{
+			"name": "TPINContinue",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
 		}
 	],
 "FisdomPage": [
@@ -3843,6 +4161,454 @@
 				"name": "InfoIconText",
 				"locator": "xpath",
 				"value": "//android.view.ViewGroup[3]/android.view.ViewGroup[1]/android.widget.TextView" 
+		},
+		{
+				"name": "CustName",
+				"locator": "xpath",
+				"value": "//android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[2]/android.widget.TextView[2]"
+		},
+		{
+				"name": "CustDOB",
+				"locator": "xpath",
+				"value": "//android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[3]/android.widget.TextView[2]"
+		},
+		{
+			"name": "ShowTPINIcon",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[contains(@content-desc,\"4 digit Transaction PIN\")]/com.horcrux.svg.SvgView/com.horcrux.svg.v/com.horcrux.svg.d0"
+		},
+		{
+			"name": "TPinText",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[@content-desc=\"4 digit Transaction PIN \"]/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.EditText"
+		} 
+	],
+	"LADDetailsPage": [
+		{
+				"name": "LADTitlePage",
+				"locator": "xpath",
+				"value": "//android.view.View/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup" 
+		}, 
+		{
+			"name": "MinLoanAmount",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@content-desc=\"Minimum Limit is 900\"]"
+		},
+		{
+				"name": "DepositSelectionAlert",
+				"locator": "xpath",
+				"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Please select a term deposit to continue\"]" 
+		},
+		{
+				"name": "LoanPurposeOption1",
+				"locator": "xpath",
+				"value": "//android.view.ViewGroup[@content-desc=\"Personal Requirement\"]/android.widget.TextView" 
+		},
+		{
+				"name": "LoanPurposeOption2",
+				"locator": "xpath",
+				"value": "//android.view.ViewGroup[@content-desc=\"Agricultural Requirement\"]/android.widget.TextView" 
+		},
+		{
+				"name": "EnableAutoRenewalText",
+				"locator": "xpath",
+				"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Enable Deposit Auto-Renewal\"]" 
+		},
+		{
+				"name": "LoanAmountText",
+				"locator": "xpath",
+				"value": "//android.widget.TextView[@resource-id=\"textId\" and contains(@text,\"The maximum loan amount you can avail is ₹\")]" 
+		},
+		{
+				"name": "EnableAutoRenewalMessage",
+				"locator": "xpath",
+				"value": "(//android.widget.TextView[@resource-id=\"textId\" and @text=\"Auto Renewal is Active\"])[1]" 
+		},
+		{
+				"name": "LoanPurposeAlert",
+				"locator": "xpath",
+				"value": "//android.widget.TextView[@resource-id=\"textId\" and contains(@text,\"Please select a purpose of loan to continue\")]" 
+		}, 
+		{
+				"name": "SelectOperativeAccountAlert",
+				"locator": "xpath",
+				"value": "//android.widget.TextView[@resource-id=\"textId\" and contains(@text,\"Please select an operative account to continue\")]" 
+		},
+		{
+				"name": "KFSPage",
+				"locator": "xpath",
+				"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Key Facts Statement\"]" 
+		},
+		{
+				"name": "EnableAutoRenewalButton",
+				"locator": "xpath",
+				"value": "//android.widget.Button[@content-desc=\"Continue\"]" 
+		},
+		{
+				"name": "AccountSelection",
+				"locator": "xpath",
+				"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Select Operative Account\"]" 
+		},
+		{
+				"name": "DepositAccount",
+				"locator": "xpath",
+				"value": "(//android.view.ViewGroup[contains(@content-desc,\"XXXX XXXX XXX \")])[1]" 
+		},
+		{
+				"name": "Continue",
+				"locator": "xpath",
+				"value": "//android.widget.Button[@content-desc=\"Continue\"]" 
+		},
+		{
+				"name": "LoanPurposePersonal",
+				"locator": "xpath",
+				"value": "//android.view.ViewGroup[@content-desc=\"Personal Requirement\"]" 
+		},
+		{
+				"name": "SelectOperativeAccount",
+				"locator": "xpath",
+				"value": "//android.view.ViewGroup/android.view.ViewGroup[5]/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[4]" 
+		},
+		{
+				"name": "SavingsAccount",
+				"locator": "xpath",
+				"value": "//android.widget.Button[contains(@content-desc,\"Savings Account, XXXXX \")]" 
+		},
+		{
+				"name": "ContinueAhead",
+				"locator": "xpath",
+				"value": "//android.widget.Button[@content-desc=\"Continue\"]" 
+		},
+		{
+				"name": "OperativeAccountSavings",
+				"locator": "xpath",
+				"value": "//android.widget.Button[contains(@content-desc,\"Savings Account, XXXXX \")]/android.widget.TextView[1]" 
+		},
+		{
+				"name": "OperativeAccountOverdraft",
+				"locator": "xpath",
+				"value": "//android.widget.Button[contains(@content-desc,\"Overdraft Account, XXXXX \")]/android.widget.TextView[1]" 
+		},
+		{
+				"name": "OperativeAccountCurrent",
+				"locator": "xpath",
+				"value": "//android.widget.Button[contains(@content-desc,\"Current Account, XXXXX \")]/android.widget.TextView[1]" 
+		}
+	],
+	"LADKFSPage":[
+		{
+				"name": "KFSDate",
+				"locator": "xpath",
+				"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Date\"]" 
+		},
+		{
+				"name": "KFSRefNo",
+				"locator": "xpath",
+				"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Application Reference Number\"]" 
+		},
+		{
+				"name": "KFSCustName",
+				"locator": "xpath",
+				"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Applicant Name\"]" 
+		},
+		{
+				"name": "KFSFDAccount",
+				"locator": "xpath",
+				"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"FD Account\"]" 
+		},
+		{
+				"name": "KFSInvestAmt",
+				"locator": "xpath",
+				"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Invested Amount\"]" 
+		},
+		{
+				"name": "KFSCurrentValue",
+				"locator": "xpath",
+				"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Current Value\"]" 
+		},
+		{
+				"name": "KFSIntRate",
+				"locator": "xpath",
+				"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Interest Rate\"]" 
+		},
+		{
+				"name": "KFSMaturityDate",
+				"locator": "xpath",
+				"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Maturity Date \"]" 
+		},
+		{
+				"name": "KFSLoanType",
+				"locator": "xpath",
+				"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Loan Type\"]" 
+		},
+		{
+				"name": "KFSLoanAmt",
+				"locator": "xpath",
+				"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Loan Amount to be disbursed\"]" 
+		},
+		{
+				"name": "KFSLoanCreditAccount",
+				"locator": "xpath",
+				"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Loan Credit Account\"]" 
+		},
+		{
+				"name": "KFSROI",
+				"locator": "xpath",
+				"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"ROI on Loan\"]" 
+		},
+		{
+				"name": "KFSLoanPurpose",
+				"locator": "xpath",
+				"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Loan Purpose\"]" 
+		}
+	],
+	"LADReviewPage": [
+		{
+				"name": "DownloadKeyFacts",
+				"locator": "xpath",
+				"value": "//android.view.ViewGroup[contains(@content-desc,\"_KFS.pdf\")]/android.view.ViewGroup" 
+		},
+		{
+				"name": "DownloadSanctionLetter",
+				"locator": "xpath",
+				"value": "//android.view.ViewGroup/android.view.ViewGroup[8]/android.view.ViewGroup[1]/com.horcrux.svg.SvgView/com.horcrux.svg.v/com.horcrux.svg.v/com.horcrux.svg.d0" 
+		},
+		{
+				"name": "DownloadKeyFactsLetter",
+				"locator": "xpath",
+				"value": "//android.view.ViewGroup/android.view.ViewGroup[9]/android.view.ViewGroup/com.horcrux.svg.SvgView/com.horcrux.svg.v/com.horcrux.svg.v/com.horcrux.svg.d0" 
+		},
+		{
+				"name": "AllowDownloadPermission",
+				"locator": "xpath",
+				"value": "//android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.Button[1]" 
+		},
+		{
+				"name": "DownloadOkay",
+				"locator": "xpath",
+				"value": "//android.widget.Button[@content-desc=\"Okay\"]" 
+		},
+		{
+				"name": "Declarations",
+				"locator": "xpath",
+				"value": "//android.view.ViewGroup/android.widget.Button[@resource-id=\"checkBoxIconView\"]" 
+		},
+		{
+				"name": "IAccept",
+				"locator": "xpath",
+				"value": "//android.widget.Button[@content-desc=\"I accept\"]" 
+		},
+		{
+				"name": "ContinueLADForm",
+				"locator": "xpath",
+				"value": "//android.widget.Button[@content-desc=\"Continue\"]" 
+		},
+		{
+				"name": "TPIN",
+				"locator": "xpath",
+				"value": "//android.view.ViewGroup[@content-desc=\"4 digit Transaction PIN \"]/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.view.ViewGroup"
+		},
+		{
+				"name": "TpinText",
+				"locator": "xpath",
+				"value": "//android.widget.EditText"
+		},
+		{
+				"name": "TPINContinue",
+				"locator": "xpath",
+				"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+				"name": "CompletedLADPage",
+				"locator": "xpath",
+				"value": "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView[2]"
+		},
+		{
+				"name": "ShareButton",
+				"locator": "xpath",
+				"value": "//android.widget.Button[@content-desc=\"Share\"]/android.widget.TextView"
+		},
+		{
+				"name": "HomeButton",
+				"locator": "xpath",
+				"value": "//android.widget.Button[@content-desc=\"Home\"]/android.widget.TextView"
+		},
+		{
+				"name": "T&CDownload",
+				"locator": "xpath",
+				"value": "//android.widget.Button[@content-desc=\"Download T&C\"]/android.widget.TextView"
+		},
+		{
+				"name": "AcceptBtn",
+				"locator": "xpath",
+				"value": "//android.widget.Button[@content-desc=\"I accept\"]/android.widget.TextView"
+		}
+	],
+	"LADClosure": [
+		{
+			"name": "LoanBorrowingsOption",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[contains(@content-desc,\"All Borrowings\")]"
+		},
+		{
+			"name": "LoanAgainstDeposit",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[@content-desc=\"Loan Against Deposit\"]"
+		},
+		{
+			"name": "LADAccount",
+			"locator": "xpath",
+			"value": "(//android.view.ViewGroup[contains(@content-desc,\"xxxxxxxxxxx\")])[1]"
+		},
+		{
+			"name": "RequestTab",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Requests tab\"]"
+		},
+		{
+			"name": "CloseLAD",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[contains(@content-desc,\"Close LAD\")]"
+		},
+		{
+			"name": "CloseLADAlert",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.widget.TextView"
+		},
+		{
+			"name": "CloseLADContinuBtn",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "LoanUtilizationStep",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[contains(@content-desc,\" Loan Limit Utilisation\")]/android.widget.TextView"
+		},
+		{
+			"name": "LoanDepositAccountDetails",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[7]/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView"
+		},
+		{
+			"name": "LoanDepositDetails",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[7]/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.TextView"
+		},
+		{
+			"name": "OperativeAccountSavings",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup[1]/android.widget.RadioButton/android.view.ViewGroup"
+		},
+		{
+			"name": "SelectAccountStep",
+			"locator": "xpath",
+			"value": "//android.view.ViewGroup[contains(@content-desc,\" Select Account\")]/android.widget.TextView"
+		},
+		{
+			"name": "Terms&Conditions",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@resource-id=\"checkBoxIconView\"]"
+		},
+		{
+				"name": "IAccept",
+				"locator": "xpath",
+				"value": "//android.widget.Button[@content-desc=\"I accept\"]" 
+		},
+		{
+				"name": "TPIN",
+				"locator": "xpath",
+				"value": "//android.view.ViewGroup[@content-desc=\"4 digit Transaction PIN \"]/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.view.ViewGroup"
+		},
+		{
+				"name": "TpinText",
+				"locator": "xpath",
+				"value": "//android.widget.EditText"
+		},
+		{
+				"name": "TPINContinue",
+				"locator": "xpath",
+				"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+				"name": "LADClosurePage",
+				"locator": "xpath",
+				"value": "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView"
+		},
+		{
+				"name": "HomeIcon",
+				"locator": "xpath",
+				"value": "//android.widget.Button[@content-desc=\"Home\"]/android.widget.TextView"
+		}, 
+		{
+				"name": "ShareIcon",
+				"locator": "xpath",
+				"value": "//android.widget.Button[@content-desc=\"Share\"]/android.widget.TextView"
+		},
+		{
+			"name": "TPIN",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[contains(@text,\"digit Transaction Pin\")]"
+		},
+		{
+			"name": "TpinText",
+			"locator": "xpath",
+			"value": "//android.widget.EditText"
+		},
+		{
+			"name": "TPINContinue",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "LoanDepositInvstAmt",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Invested Amount\"]"
+		},
+		{
+			"name": "LoanDepositCurrentValue",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Current Value\"]"
+		},
+		{
+			"name": "LoanDepositInterestRate",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Deposit Interest Rate\"]"
+		},
+		{
+			"name": "LoanDepositMaturityDate",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Maturity Date \"]"
+		},
+				{
+			"name": "LoanDepositAccount",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Loan Account\"]"
+		},
+		{
+			"name": "LoanDepositAmt",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Loan Amount Availed\"]"
+		},
+		{
+			"name": "LoanDepositROI",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"ROI on Loan\"]"
+		},
+		{
+			"name": "LoanDepositInterest",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Interest charged on loan till date\"]"
+		},
+		{
+			"name": "LoanDepositRepaid",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Amount repaid till date\"]"
+		},
+		{
+			"name": "LoanDepositClosureAmt",
+			"locator": "xpath",
+			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Total Amount Due for Closure\"]"
 		}
 	]
-}		
+}

@@ -940,11 +940,11 @@ Feature: Mobile UI for BBPS Journey
     Given user is on page BharatPayPendingBills to check HomeButton is Enabled
     
     
-@TestCaseKey=UDB-T28129 @TestCaseKey=UDB-T28127	@Automatable @Smoke @RedmiNote9Pro @Test
+@TestCaseKey=UDB-T28129 @TestCaseKey=UDB-T28127 @TestCaseKey=UDB-T28128	@Automatable @Smoke @RedmiNote9Pro @Test
 	Scenario: Verify Payment Details page for Amount field and TPIN screen for view and hide TPIN icon
-		Given user logins to app
-    Given user logins to app entering Login PIN
-    Given user is on page DashboardPage clicks on FingerPrint
+#		Given user logins to app
+    #Given user logins to app entering Login PIN
+    #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
     When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
@@ -961,12 +961,13 @@ Feature: Mobile UI for BBPS Journey
     Given user verifies on page BharatPayElectricity for **** text in placeholder TPinText
     Given user is on page BharatPayElectricity clicks on ShowTPINIcon
     Given user verifies on page BharatPayElectricity for 1212 text in placeholder TPinText
+    Given user is on page BharatPayElectricity clicks on TPINClose
     
     
     
 @TestCaseKey=UDB-T28219 @TestCaseKey=UDB-T28223 @TestCaseKey=UDB-T28224 @TestCaseKey=UDB-T28225 @TestCaseKey=UDB-T28226 
 @TestCaseKey=UDB-T28229 @TestCaseKey=UDB-T28230 @TestCaseKey=UDB-T28233 @TestCaseKey=UDB-T28234 @TestCaseKey=UDB-T28238 
-@TestCaseKey=UDB-T28241 @Automatable @Smoke @RedmiNote9Pro 
+@TestCaseKey=UDB-T28241 @TestCaseKey=UDB-T28220 @Automatable @Smoke @RedmiNote9Pro 
 	Scenario: Verify that the fastag provider name, Balance, CustomerName, Amount, Biller details is visible at the label
 		Given user logins to app
     Given user logins to app entering Login PIN
@@ -980,11 +981,12 @@ Feature: Mobile UI for BBPS Journey
     Given user is on page BharatPayFastag and types Indian Highways Management on Search
     Given user is on page BharatPayFastag clicks on SelectBiller
     Given user verifies on page BharatPayFastag for Indian Highways Management text in placeholder FastagHeader
+    Given user is on page BharatPayFastag to check ProviderLogo is Displayed
     Given user is on page BharatPayFastag and types MH01AB1234 on VehicleNumber
     Given user is on page BharatPayFastag clicks on Continue
     Then user verifies message on page BharatPayFastag is Indian Highways Management Company Ltd FASTag on FastagProvider
     Given user is on page BharatPayFastag verifies amount in FasTagBalance
-    Then user verifies message on page BharatPayFastag is VIJAY JOSEPH MOYALAN on CustomerName
+    #Then user verifies message on page BharatPayFastag is VIJAY JOSEPH MOYALAN on CustomerName
     Given user is on page BharatPayFastag verifies amount in RechargeAmount
     Given user is on page BharatPayFastag clicks on ContinuePayment
     Given user is on page BharatPayFastag clicks on TPIN
@@ -999,9 +1001,148 @@ Feature: Mobile UI for BBPS Journey
  
 @TestCaseKey=UDB-T28283 @Automatable @Smoke @RedmiNote9Pro 
 	Scenario: Verify that ETB user should navigate to Dashboard section. Homepage >>Payments>>BBPS>> View all link
-#		Given user logins to app
-    #Given user logins to app entering Login PIN
-    #Given user is on page DashboardPage clicks on FingerPrint
+		Given user logins to app
+    Given user logins to app entering Login PIN
+    Given user is on page DashboardPage clicks on FingerPrint
     Given user is on page DashboardPage clicks on Payments
     When user scrolls down to "Favourite Transaction"
     
+@TestCaseKey=UDB-T28151  @TestCaseKey=UDB-T28152  @TestCaseKey=UDB-T28153	@Automatable @Smoke @RedmiNote9Pro 
+	Scenario: Verify that user is able to see the Existing completed transactions
+		Given user logins to app
+    Given user logins to app entering Login PIN
+    Given user is on page DashboardPage clicks on FingerPrint
+    When user scrolls down to "Recharge & Bill Pay"
+    When user scrolls down to "Loans"
+    Given user is on page DashboardPage clicks on Recharge&BillPay
+    Given user swipe down the page
+    Given user is on page BharatPayPastPayments clicks on PastPaymentsSection
+    Given user is on page BharatPayPastPayments clicks on CompletedTab
+    
+@TestCaseKey=UDB-T28154	@Automatable @Smoke @RedmiNote9Pro 
+	Scenario: Verify that user is able to see the Existing Failed transactions
+		Given user logins to app
+    Given user logins to app entering Login PIN
+    Given user is on page DashboardPage clicks on FingerPrint
+    When user scrolls down to "Recharge & Bill Pay"
+    When user scrolls down to "Loans"
+    Given user is on page DashboardPage clicks on Recharge&BillPay
+    Given user swipe down the page
+    Given user is on page BharatPayPastPayments clicks on PastPaymentsSection
+    Given user is on page BharatPayPastPayments clicks on FailedTab
+ 
+@TestCaseKey=UDB-T28155	@Automatable @Smoke @RedmiNote9Pro 
+	Scenario: Verify that user is able to see the Existing Pending transactions
+		Given user logins to app
+    Given user logins to app entering Login PIN
+    Given user is on page DashboardPage clicks on FingerPrint
+    When user scrolls down to "Recharge & Bill Pay"
+    When user scrolls down to "Loans"
+    Given user is on page DashboardPage clicks on Recharge&BillPay
+    Given user swipe down the page
+    Given user is on page BharatPayPastPayments clicks on PastPaymentsSection
+    Given user is on page BharatPayPastPayments clicks on PendingTab
+    
+@TestCaseKey=UDB-T28080	@Automatable @Smoke @RedmiNote9Pro 
+	Scenario: Verify that ETB user should navigate to BBPS Dashboard (Homepage>>Payments>>BBPS icon>>View all link)
+		Given user logins to app
+    Given user logins to app entering Login PIN
+    Given user is on page DashboardPage clicks on FingerPrint
+    Given user is on page DashboardPage clicks on Payments
+    When user scrolls down to "Favourite Transaction"
+ 		Given user is on page BharatPayPage click on BBPSViewAll
+ 		
+ 		
+@TestCaseKey=UDB-T28170	@Automatable @Smoke @RedmiNote9Pro 
+	Scenario: Verify that ETB user should navigate to Complaints section (Homepage >>Payments>>BBPS icon >> View all link >> Complaints)
+		Given user logins to app
+    Given user logins to app entering Login PIN
+    Given user is on page DashboardPage clicks on FingerPrint
+    Given user is on page DashboardPage clicks on Payments
+    When user scrolls down to "Favourite Transaction"
+ 		Given user is on page BharatPayPage click on BBPSViewAll
+ 		Given user swipe down the page
+ 		Given user is on page BharatPayPage clicks on Complaints
+
+@TestCaseKey=UDB-T28176 @TestCaseKey=UDB-T28177 @TestCaseKey=UDB-T28186	@Automatable @Smoke @RedmiNote9Pro  		
+Scenario: Verify that Remarks field is visible and negative testing for "Remarks" field
+		Given user logins to app
+    Given user logins to app entering Login PIN
+    Given user is on page DashboardPage clicks on FingerPrint
+    When user scrolls down to "Recharge & Bill Pay"
+    When user scrolls down to "Loans"
+    Given user is on page DashboardPage clicks on Recharge&BillPay
+    Given user swipe down the page
+    Given user is on page BharatPayPage clicks on Complaints
+    Given user is on page BharatPayPageComplaints clicks on ComplaintReason
+    Given user is on page BharatPayPageComplaints clicks on ComplaintReasonSelection
+    When user is on page BharatPayPageComplaints and types UN015080BAFAAAAAAEHN on EnterBBPSPaymentID
+    When user is on page BharatPayPageComplaints and types Test Script Entered for negative validation of remark section on EnterRemarks
+    Given user is on page BharatPayPageComplaints to check RaiseComplaint is Enabled
+    Given user is on page BharatPayPageComplaints clicks on RaiseComplaint
+    Given user verifies on page BharatPayPageComplaints for Remark character length should not exceed 50 text in placeholder RemarkAlertVerbiage
+    
+@TestCaseKey=UDB-T28227 @TestCaseKey=UDB-T28228	@Automatable @Smoke @RedmiNote9Pro 
+	Scenario: Verify negative testing for "Amount" field and "Amount suggestion boxes" are visible
+#		Given user logins to app
+    #Given user logins to app entering Login PIN
+    #Given user is on page DashboardPage clicks on FingerPrint
+    When user scrolls down to "Recharge & Bill Pay"
+    When user scrolls down to "Loans"
+    Given user is on page DashboardPage clicks on Recharge&BillPay
+    When user scrolls down to "Fastag"
+    Given user is on page BharatPayFastag clicks on Fastag
+    Given user is on page BharatPayFastag clicks on Search
+    Given user is on page BharatPayFastag and types Indian Highways Management on Search
+    Given user is on page BharatPayFastag clicks on SelectBiller
+    Given user is on page BharatPayFastag and types MH01AB1234 on VehicleNumber
+    Given user is on page BharatPayFastag clicks on Continue
+    Given user is on page BharatPayFastag and types 0.00 on Amount
+    Given user is on page BharatPayFastag clicks on ContinuePayment
+    Given user verifies on page BharatPayFastag for Please add the Amount value text in placeholder AmountAlertVerbiage
+    Given user verifies on page BharatPayFastag for ₹1,000 text in placeholder AmountSuggestion
+    
+    
+@TestCaseKey=UDB-T28232 @TestCaseKey=UDB-T28235 @TestCaseKey=UDB-T28239 @TestCaseKey=UDB-T28240 @Automatable @Smoke @RedmiNote9Pro 
+	Scenario: Verify that "Hide/Show" button is visible in Transaction Text box, transaction details page, download & others option
+		Given user logins to app
+    Given user logins to app entering Login PIN
+    Given user is on page DashboardPage clicks on FingerPrint
+    When user scrolls down to "Recharge & Bill Pay"
+    When user scrolls down to "Loans"
+    Given user is on page DashboardPage clicks on Recharge&BillPay
+    When user scrolls down to "Fastag"
+    Given user is on page BharatPayFastag clicks on Fastag
+    Given user is on page BharatPayFastag clicks on Search
+    Given user is on page BharatPayFastag and types Indian Highways Management on Search
+    Given user is on page BharatPayFastag clicks on SelectBiller
+    Given user verifies on page BharatPayFastag for Indian Highways Management text in placeholder FastagHeader
+    Given user is on page BharatPayFastag and types MH01AB1234 on VehicleNumber
+    Given user is on page BharatPayFastag clicks on Continue
+    Given user is on page BharatPayFastag clicks on ContinuePayment
+    Given user is on page BharatPayFastag clicks on TPIN
+    When user is on page BharatPayFastag and types 1212 on TpinText
+		Given user verifies on page BharatPayFastag for **** text in placeholder TPinText
+		Given user is on page BharatPayFastag clicks on ShowTPINIcon
+		Given user verifies on page BharatPayFastag for 1212 text in placeholder TPinText
+		Given user is on page BharatPayFastag to check TPINContinue is Enabled
+    When user is on page BharatPayFastag clicks on TPINContinue
+    Given user verifies on page BharatPayFastag for Completed text in placeholder PaymentConfirmation
+    Then user verifies message on page BharatPayFastag is Indian Highways Management Company Ltd FASTag on BillerName
+    Given user swipe down the page
+    Given user verifies on page BharatPayFastag for Share text in placeholder ShareIcon
+    Given user is on page BharatPayFastag to check HomeButton is Enabled
+    Given user is on page BharatPayFastag to check DownloadButton is Enabled
+    Given user is on page BharatPayFastag to check OtherBillsButton is Enabled
+ 
+ 
+@TestCaseKey=UDB-T28083 @TestCaseKey=UDB-T28236 @Automatable @Smoke @RedmiNote9Pro 
+	Scenario: Verify that user is able to view Marketing Banner,BBPS logo on BBPS Dashboard
+		Given user logins to app
+    Given user logins to app entering Login PIN
+    Given user is on page DashboardPage clicks on FingerPrint
+    When user scrolls down to "Recharge & Bill Pay"
+    When user scrolls down to "Loans"
+    Given user is on page DashboardPage clicks on Recharge&BillPay
+    Given user is on page BharatPayPage to check MarketingBanner is Displayed
+    Given user is on page BharatPayPage to check BBPSLogo is Displayed

@@ -192,7 +192,7 @@ public static String setEnvPath = "";
 	
 	@Given("^user verifies on page (.+) for (.+) text in placeholder (.+)$")
 	public void placeHolderCheck(String pageName,String expectedText, String elementName) {
-		//common.waitTillElementDisplayed(pageName,elementName);
+		common.waitTillElementDisplayed(pageName,elementName);
 		String actualText = common.getText(pageName,elementName);
 		common.textValidation(actualText, expectedText);		
 	}
@@ -202,7 +202,7 @@ public static String setEnvPath = "";
          common.scrollUp(text.replace("\"", "").trim());
     }
 	@Given("^user is on page (.+) to check (.+) is (.+)$")  
-	// Given user is on page <ModulePage> to check <xpathName> is <Disabled/Enabled/Checked/UnChecked/Selected/NotSelected>
+	// Given user is on page <ModulePage> to check <xpathName> is <Disabled/Enabled/Checked/UnChecked/Selected/NotSelected/NotNull>
 	public void elementStatusCheck(String pageName, String elementName, String status) {
 		common.waitTillElementDisplayed(pageName,elementName);
 		common.elementStatus(pageName,elementName, status);
@@ -268,4 +268,9 @@ public static String setEnvPath = "";
 		common.toggleSwitchStatus(pageName, elementName, status);
 		
 	}
+	
+	@Given("^user moves slider number (.+) to (.+)$")
+	public void moveSliders(int SliderNumber,int Slidervalue) {
+		common.moveSlider(SliderNumber, Slidervalue);
+    }
 }
