@@ -9,7 +9,7 @@ import java.io.IOException;
 
 class JsonToCsvConverter {
 
-	private static final String JSON_REPORT_PATH = "target/cucumber-report.json"; // Update path as needed
+	private static final String JSON_REPORT_PATH = "target/serenity-reports/index.html"; // Update path as needed
 	private static final String CSV_OUTPUT_PATH = "target/test-results.csv";
 
 	public static void main(String[] args) {

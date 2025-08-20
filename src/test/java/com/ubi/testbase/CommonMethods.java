@@ -3,35 +3,28 @@ package com.ubi.testbase;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.time.LocalDate;
+import java.time.Month;
+import java.time.format.DateTimeFormatter;
+import java.time.format.TextStyle;
 import java.util.Arrays;
-import java.util.Calendar;
 import java.util.Collections;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 
-import org.assertj.core.api.SoftAssertions;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Interaction;
 import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.interactions.Sequence;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.asserts.SoftAssert;
 
 import com.google.common.collect.ImmutableMap;
-import org.testng.Assert;
 import com.ubi.base.ORPageModel;
 import com.ubi.pageObject.MFAPage;
 
@@ -40,21 +33,20 @@ import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
-import io.appium.java_client.pagefactory.AndroidBy;
-import io.appium.java_client.touch.WaitOptions;
-import io.appium.java_client.touch.offset.PointOption;
+import io.appium.java_client.touch.offset.ElementOption;
 import net.serenitybdd.core.pages.PageObject;
-import net.serenitybdd.screenplay.Actor;
-import net.serenitybdd.screenplay.actions.SendKeys;
-import net.serenitybdd.screenplay.events.ActorPerforms;
-import net.thucydides.core.pages.components.FileToUpload;
+import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.webdriver.WebDriverFacade;
-import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class CommonMethods extends PageObject {
 
    AndroidDriver androidDriver = ((AndroidDriver) ((WebDriverFacade) getDriver()).getProxiedDriver());
 	WebElement elementObject = null;
+	String accountNumber = "407101234541662";
+	String maskedAccountNumber;
+	VerificationCommonMethods verification = new VerificationCommonMethods();
 
 	public ORPageModel getElementFromObject(List<ORPageModel> listofElements, String name) {
 		ORPageModel element = new ORPageModel();
@@ -108,8 +100,9 @@ public class CommonMethods extends PageObject {
 
 	public void clickObject(ORPageModel element) {
 		// element.isEnabled();
-         		
+			
 		findElement(element).click();
+//		handleAlertPopup();		
 
 		// element.click();
 	}
@@ -143,20 +136,12 @@ public class CommonMethods extends PageObject {
 	}
 
 	
-public void verifyText(ORPageModel element, String expectedText) {
+public void verifyText(String actualText, String expectedText) {
 		int attempts = 0;
 		while (attempts < 3) {
 			try {
-				String actualText = findElement(element).getText();
-			
-				// Create a SoftAssertions instance
-				SoftAssertions softAssertions = new SoftAssertions();
-
-				// Perform various assertions
-				softAssertions.assertThat(actualText)
-						.as("Check if expected text contains in the actual text. Expected Text:" + expectedText + " Actual Text: " + actualText)
-						.contains(expectedText);
-				softAssertions.assertAll();
+				//assertion is being done
+				verification.verificationTextAssertion(actualText, expectedText);
 				break;
 			} catch (StaleElementReferenceException | NoSuchElementException e) {
 				attempts++;
@@ -175,9 +160,8 @@ public void verifyText(ORPageModel element, String expectedText) {
 		int attempts = 0;
 		while (attempts < 3) {
 			try {
-				Assert.assertTrue(
-						actualToastMessage.equals(expectedToastMessage),
-					    "Toast message mismatch! Expected: \"" + expectedToastMessage + "\", but found: \"" + actualToastMessage + "\"");
+				// assertion is called
+				verification.verificationToastMessage(expectedToastMessage, actualToastMessage);
 				break;
 			} catch (NoSuchElementException e) {
 				System.out.println("Exception in verifyToastMessage method: "+e);
@@ -254,13 +238,14 @@ public void verifyText(ORPageModel element, String expectedText) {
 	public void clickElementByText(String text) {
         // Locate the element using XPath and the text provided
 		androidDriver = ((AndroidDriver) ((WebDriverFacade) getDriver()).getProxiedDriver());
-		
+		System.out.println("Inside clickElementByText method");
 		WebElement element = androidDriver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"textId\" and @text=\"" + text + "\"]"));
         
 		WebDriverWait wait = new WebDriverWait(androidDriver, Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.visibilityOf(element));
         // Click the element
         if (element != null) {
+        	System.out.println("Inside IF clause to click on element");
             element.click();
         } else {
             System.out.println("Element with text '" + text + "' not found.");
@@ -278,7 +263,6 @@ public void verifyText(ORPageModel element, String expectedText) {
 
 	}
 	
-	
 
 	public void scrollToElement(String pageName, String name) {
 
@@ -292,15 +276,14 @@ public void verifyText(ORPageModel element, String expectedText) {
 	
 
 	public void scrollDown(String elementText) throws InterruptedException {
-		WebDriverWait wait;
 		androidDriver = ((AndroidDriver) ((WebDriverFacade) getDriver()).getProxiedDriver());
-		wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
 		boolean elementFound = false;
-		Thread.sleep(3000);
-		do {
+		int maxScrolls = 10;
+		int scrollCount = 0;
+		while (!elementFound && scrollCount < maxScrolls) {
 			try {
 				// Try to find the element
-				WebElement element = androidDriver.findElement(AppiumBy.androidUIAutomator("new UiSelector().text(\"" + elementText + "\")"));
+				WebElement element = androidDriver.findElement(AppiumBy.androidUIAutomator("new UiSelector().textContains(\"" + elementText + "\")"));
 				if(element.isDisplayed()) {
 					elementFound = true; // Element found
 					System.out.println("Element found, exiting loop.");					
@@ -309,8 +292,12 @@ public void verifyText(ORPageModel element, String expectedText) {
 				// If element is not found, scroll down
 				androidDriver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true)).scrollForward();"));
 				System.out.println("Element not found, scrolling down");
+				scrollCount++;
 			}//elementFound = true;
-		} while (!elementFound);
+		}
+		if (!elementFound) {
+		    System.out.println("Element '" + elementText + "' not found after max scrolls.");
+		}
 	}
 	
 
@@ -331,44 +318,56 @@ public void verifyText(ORPageModel element, String expectedText) {
 	        } while (!elementFound);
 	}
 
-	public void swipeLeft(ORPageModel element) {
-
-		androidDriver = ((AndroidDriver) ((WebDriverFacade) getDriver()).getProxiedDriver());
-
-		do {
-			try {
-				WebElement mobileElement = findElement(element);
-				if (mobileElement.isDisplayed()) {
-					System.out.println("Element is displayed!");
-					break;
-				}
-			} catch (NoSuchElementException e) {
-				swipeLeft(androidDriver);
-			}
-		} while (true);
-
+	public void swipeLeft(String elementText) {
+        androidDriver = ((AndroidDriver) ((WebDriverFacade) getDriver()).getProxiedDriver());
+        int maxSwipes = 2;
+        int attempts = 0;
+        while (attempts < maxSwipes) {
+              try {
+                      WebElement mobileElement = androidDriver.findElement(AppiumBy.androidUIAutomator("new UiSelector().text(\"" + elementText + "\")"));
+                      if (mobileElement.isDisplayed()) {
+                          System.out.println("Element is displayed!");
+                          return;
+                      }
+                   } catch (NoSuchElementException e) {
+                       swipeLeft(androidDriver);
+                       attempts++;
+               }
+        } 
+        System.out.println("Element '" + elementText + "' not found after " + maxSwipes + " swipes.");
 	}
+
+//	private static void swipeLeft(AndroidDriver androidDriver) {
+//        int screenHeight = androidDriver.manage().window().getSize().height;
+//        int screenWidth = androidDriver.manage().window().getSize().width;
+//        int startX = (int) (screenWidth * 0.8);
+//        int startY = screenHeight / 2;
+//        int endX = (int) (screenWidth * 0.2);
+//        int endY = screenHeight / 2;
+//        PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
+//        Sequence swipe = new Sequence(finger, 1)
+//            .addAction(finger.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), startX, startY))
+//        .addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))
+//	.addAction(finger.createPointerMove(Duration.ofMillis(500), 		PointerInput.Origin.viewport(), endX, endY))
+//	.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+//        androidDriver.perform(Arrays.asList(swipe));
+//}
 	
-
 	private static void swipeLeft(AndroidDriver androidDriver) {
-		int screenHeight = androidDriver.manage().window().getSize().height;
-		int screenWidth = androidDriver.manage().window().getSize().width;
+	    int height = androidDriver.manage().window().getSize().height;
+	    int width = androidDriver.manage().window().getSize().width;
+	    int startX = (int) (width * 0.8);
+	    int endX = (int) (width * 0.2);
+	    int y = height / 2;
 
-		int startX = (int) (screenWidth * 0.8);
-		int startY = screenHeight / 2;
-		int endX = (int) (screenWidth * 0.2);
-		int endY = screenHeight / 2;
+	    PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
+	    Sequence swipe = new Sequence(finger, 1)
+	        .addAction(finger.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), startX, y))
+	        .addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))
+	        .addAction(finger.createPointerMove(Duration.ofMillis(500), PointerInput.Origin.viewport(), endX, y))
+	        .addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
 
-		PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
-		Sequence swipe = new Sequence(finger, 1)
-				.addAction(finger.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), startX, startY))
-				.addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))
-				.addAction(
-						finger.createPointerMove(Duration.ofMillis(500), PointerInput.Origin.viewport(), endX, endY))
-				.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
-
-		androidDriver.perform(Arrays.asList(swipe));
-
+	    androidDriver.perform(Arrays.asList(swipe));
 	}
 
 	public void swipeRight(ORPageModel element) {
@@ -435,18 +434,12 @@ public void verifyText(ORPageModel element, String expectedText) {
 }
 	
 	public void textValidation(String expectedText, String actualText) {
-			System.out.println("Expected text: "+expectedText);
-			System.out.println("Actual text: "+actualText);
-		 // Create a SoftAssert instance
-		    try {
-		    	SoftAssert softAssert = new SoftAssert();
-				softAssert.assertEquals(actualText, expectedText, "Text passed in step is matching");
-				
-			} catch (AssertionError e) {
-				System.out.println("Assertion failed with reason as "+e);
-			}
-			
+		System.out.println("Expected text: "+expectedText);
+		System.out.println("Actual text: "+actualText);
+		//assertion is called and checked
+		verification.verificationAssertEquals(actualText, expectedText);	
 	}
+	
 	public void verifyAccountBalance(String accountBalance, String payableAmount) {
 		String AmountText = accountBalance.replace("₹", "").replace(",", "").trim();
 		double accBalance = Double.parseDouble(AmountText.trim());
@@ -455,8 +448,10 @@ public void verifyText(ORPageModel element, String expectedText) {
 		String PayText = payableAmount.replace("₹", "").replace(",", "").trim();
 		double payAmount = Double.parseDouble(PayText.trim());
 		System.out.println("Recharge Amount selected "+ payAmount);
-	    Assert.assertTrue(accBalance > payAmount, "Account Balance is Low");	
+		// assertion is called
+		verification.verificationConditionTrue(accBalance > payAmount, "Account Balance is Low");
 	}
+	
 	public void digitKeyPadClick() {
 		/*
 		 * androidDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_1));
@@ -466,18 +461,20 @@ public void verifyText(ORPageModel element, String expectedText) {
 		 */
 		androidDriver.executeScript("mobile: pressKey", ImmutableMap.of("keycode", 8));
 	}
+	
 	public void stopExecutionOnTextMatch(String actualText, String expectedText) {
 		System.out.println("Actual Text: "+actualText);
 		System.out.println("Expected Text: "+expectedText);
 		try {
 			if (actualText.equalsIgnoreCase(expectedText)) {
                 System.out.println("Text matched. Stopping execution.");
-                Assert.fail(actualText);
+                verification.verificationFailTest(actualText);
             } 			
 		} catch (Exception e) {
 			System.out.println("Exception occured in stopExecutionOnTextMatch "+e);
 		}
 	}
+	
 	public void TransactionSuccessOnTextMatch(String actualText, String expectedText) {
 		System.out.println("Actual Text: "+actualText);
 		System.out.println("Expected Text: "+expectedText);
@@ -485,7 +482,7 @@ public void verifyText(ORPageModel element, String expectedText) {
 			if (actualText.equalsIgnoreCase(expectedText)) {
                 System.out.println("Transaction Successful.");
             } else {
-            	Assert.fail("Sorry, your transaction is not completed");
+            	verification.verificationFailTest("Sorry, your transaction is not completed");
                 System.out.println("Text did not match. Execution Stopped.");
             }
 			
@@ -578,14 +575,14 @@ public void verifyText(ORPageModel element, String expectedText) {
 			System.out.println("replace & trim returened "+ AmountText);
 			double intAmount = Double.parseDouble(AmountText.trim());
 			System.out.println("Interest amount is "+ intAmount);
-			Assert.assertTrue(intAmount > 0, "Amount should be greater than 0");	
+			verification.verificationConditionTrue(intAmount > 0, "Amount should be greater than 0");
 			break;
 		
 		case "count":
 			String cnt = findElement(element).getText();
 			System.out.println("getText returened "+ cnt);
 			int intcnt = Integer.parseInt(cnt.trim());
-			Assert.assertTrue(intcnt > 0, "No Active account found");
+			verification.verificationConditionTrue(intcnt > 0, "No Active account found");
 			break;
 		default:
 			break;
@@ -597,6 +594,8 @@ public void verifyText(ORPageModel element, String expectedText) {
 		System.out.println("inside verification find element menthod");
 		elementStatus(findElement(TestBase._ORIntializater.get(pageName), elementname), action);
 	}
+	
+	
 	public void elementStatus(ORPageModel element, String status) {   
 // this method verifies based on the status of element pass.
 	// for Button: Enabled or Disabled
@@ -606,76 +605,75 @@ public void verifyText(ORPageModel element, String expectedText) {
 	// for element: displayed or notdisplayed
 	// for text field: NotNull
 		androidDriver = ((AndroidDriver) ((WebDriverFacade) getDriver()).getProxiedDriver());
-		SoftAssert softAssert = new SoftAssert();
 		switch (status) {
 		case "Disabled":
 			boolean elementStatusFalse = findElement(element).isEnabled();
 			System.out.println("Element Status "+ elementStatusFalse);
-			Assert.assertFalse(elementStatusFalse, "Element selected should be Disbaled");	
+			verification.verificationConditionFalse(elementStatusFalse, "Element selected should be Disbaled");
 			break;
 		
 		case "Enabled":
 			boolean elementStatusTrue = findElement(element).isEnabled();
 			System.out.println("Element Status "+ elementStatusTrue);
-			Assert.assertTrue(elementStatusTrue, "Element selected should be Enabled");	
+			verification.verificationConditionTrue(elementStatusTrue, "Element selected should be Enabled");
 			break;
 			
 		case "Checked":
 			String elementStatusChecked = findElement(element).getAttribute("clickable");
 			System.out.println("Element Status "+ elementStatusChecked);
-			Assert.assertFalse(elementStatusChecked.equals("false"), "Checkbox is not selected");	
+			verification.verificationConditionFalse(elementStatusChecked.equals("false"), "Checkbox is not selected");
 			break;
 		
 		case "UnChecked":
 			String elementStatusUnChecked = findElement(element).getAttribute("clickable");
-			System.out.println("Element Status "+ elementStatusUnChecked);
-			Assert.assertTrue(elementStatusUnChecked.equals("true"), "Checkbox is selected");		
+			System.out.println("Element Status "+ elementStatusUnChecked);	
+			verification.verificationConditionTrue(elementStatusUnChecked.equals("true"), "Checkbox is selected");
 			break;
 			
 		case "NotSelected":
 			boolean elementStatusNotSelected = findElement(element).isSelected();
 			System.out.println("Element Status "+ elementStatusNotSelected);
-			Assert.assertFalse(elementStatusNotSelected, "Checkbox is not selected");	
+			verification.verificationConditionFalse(elementStatusNotSelected, "Checkbox is not selected");
 			break;
 		
 		case "Selected":
 			boolean elementStatusSelected = findElement(element).isSelected();
-			System.out.println("Element Status "+ elementStatusSelected);
-			Assert.assertTrue(elementStatusSelected, "Checkbox is selected");		
+			System.out.println("Element Status "+ elementStatusSelected);	
+			verification.verificationConditionTrue(elementStatusSelected, "Checkbox is selected");
 			break;
 			
 		case "NotClickable":
 			String NotClickable = findElement(element).getAttribute("clickable");
 			System.out.println("Element is clickable "+NotClickable);
-			Assert.assertEquals(NotClickable, "false",  "Text box is Clickable");				
+			verification.verificationEquals(NotClickable, "false",  "Text box is Clickable");
 			break;
 		
 		case "Clickable":	
 			String Clickable = findElement(element).getAttribute("clickable");
-			System.out.println("Element is clickable "+Clickable);
-			Assert.assertEquals(Clickable, "true",  "Text box is Not Clickable");	
+			System.out.println("Element is clickable "+Clickable);	
+			verification.verificationEquals(Clickable, "true",  "Text box is Not Clickable");
 			break;
 			
 		case "NotDisplayed":
 			boolean elementStatusNotDisplayed = findElement(element).isDisplayed();
 			System.out.println("Element Status "+ elementStatusNotDisplayed);
-			Assert.assertFalse(elementStatusNotDisplayed, "element is displayed");	
+			verification.verificationConditionFalse(elementStatusNotDisplayed, "element is displayed");
 			break;
 		
 		case "Displayed":
 			boolean elementStatusDisplayed = findElement(element).isDisplayed();
-			System.out.println("Element Status "+ elementStatusDisplayed);
-			Assert.assertTrue(elementStatusDisplayed, "element is not displayed");		
+			System.out.println("Element Status "+ elementStatusDisplayed);	
+			verification.verificationConditionTrue(elementStatusDisplayed, "element is not displayed");
 			break;
 			
 		case "NotNull":
 			String elementText = findElement(element).getText();
 			System.out.println("Text Present in element is "+ elementText);
 			// Check not null
-			softAssert.assertNotNull(elementText, "Text should not be null");
+			verification.verificationNotNull(elementText, "Text should not be null");
 			// Check does not contain hyphen
 			if (elementText != null) {
-			    softAssert.assertFalse(elementText.contains("-"), "Text should not contain hyphen");
+			    verification.verificationConditionFalse(elementText.contains("-"), "Text should not contain hyphen");
 			}
 			break;
 			
@@ -684,70 +682,98 @@ public void verifyText(ORPageModel element, String expectedText) {
 		}
 	}
 	
+	
 	public void selectDate(String day, String month, String year, String currentYearText) {
-        AndroidDriver androidDriver = (AndroidDriver) ((WebDriverFacade) getDriver()).getProxiedDriver();
-        WebDriverWait wait = new WebDriverWait(androidDriver, Duration.ofSeconds(10));
-        WebElement selectCurrentYear = wait.until(ExpectedConditions.elementToBeClickable(
-                AppiumBy.androidUIAutomator("new UiSelector().text(\"" + currentYearText + "\")")));
-        selectCurrentYear.click();
-        int targetYear = Integer.parseInt(year);
-        int currentYear = Integer.parseInt(currentYearText);
-        
-        // Navigate to correct year
-        while (true) {
-            try {
-            	if((targetYear < currentYear) || (targetYear > currentYear)){
-            		WebElement yearToBeSelected = wait.until(ExpectedConditions.elementToBeClickable(
-            				AppiumBy.androidUIAutomator("new UiSelector().text(\"" + year + "\")")));
-            		yearToBeSelected.click();
-                break;
-                }
-                   else
-                   {
-                        WebElement yearToBeSelected = wait.until(ExpectedConditions.elementToBeClickable(
-                              AppiumBy.androidUIAutomator("new UiSelector().text(\"" + year + "\").instance(1)")));
-                        yearToBeSelected.click();
-               break;    
-                   }
-            } catch (Exception e) {
-                try {
-                    if (targetYear < currentYear) {
-                        WebElement prevButton = wait.until(ExpectedConditions.elementToBeClickable(
-                                AppiumBy.androidUIAutomator("new UiSelector().className(\"com.horcrux.svg.d0\").instance(2)")));
-                        prevButton.click();
-                    } else if (targetYear > currentYear) {
-                        WebElement nextButton = wait.until(ExpectedConditions.elementToBeClickable(
-                                AppiumBy.androidUIAutomator("new UiSelector().className(\"com.horcrux.svg.SvgView\").instance(2)")));
-                        nextButton.click();
-                    }
-                } catch (Exception ex) {
-                    System.out.println("Failed to navigate to year: " + ex.getMessage());
-                    break;
-                }
-            }
-        }
-   // Select the month
-        try {
-            WebElement monthElement = wait.until(ExpectedConditions.elementToBeClickable(
-                    AppiumBy.androidUIAutomator("new UiSelector().text(\"" + month + "\")")));
-            monthElement.click();
-        } catch (Exception e) {
-            System.out.println("Month not found: " + e.getMessage());
-        }
-   // Select the day
-        try {
-            WebElement dayElement = wait.until(ExpectedConditions.elementToBeClickable(
-                    AppiumBy.androidUIAutomator("new UiSelector().text(\"" + day + "\")")));
-            dayElement.click();
-        } catch (Exception e) {
-            System.out.println("Day not found: " + e.getMessage());
-        }
-    }
+		AndroidDriver androidDriver = (AndroidDriver) ((WebDriverFacade) getDriver()).getProxiedDriver();
+		WebDriverWait wait = new WebDriverWait(androidDriver, Duration.ofSeconds(10));
+		WebElement selectCurrentYear = wait.until(ExpectedConditions.elementToBeClickable(
+				AppiumBy.androidUIAutomator("new UiSelector().text(\"" + currentYearText + "\")")));
+		selectCurrentYear.click();
+		int targetYear = Integer.parseInt(year);
+		int currentYear = Integer.parseInt(currentYearText);
+		// Navigate to correct year
+		while (true) {
+			try {
+				if ((targetYear < currentYear) || (targetYear > currentYear)) {
+					WebElement yearToBeSelected = wait.until(ExpectedConditions.elementToBeClickable(
+							AppiumBy.androidUIAutomator("new UiSelector().text(\"" + year + "\")")));
+					yearToBeSelected.click();
+					break;
+				} else {
+					WebElement yearToBeSelected = wait.until(ExpectedConditions.elementToBeClickable(
+							AppiumBy.androidUIAutomator("new UiSelector().text(\"" + year + "\").instance(1)")));
+					yearToBeSelected.click();
+					break;
+				}
+			} catch (Exception e) {
+				try {
+					if (targetYear < currentYear) {
+						WebElement prevButton = wait.until(ExpectedConditions.elementToBeClickable(AppiumBy
+								.androidUIAutomator("new UiSelector().className(\"com.horcrux.svg.d0\").instance(2)")));
+						prevButton.click();
+					} else if (targetYear > currentYear) {
+						WebElement nextButton = wait
+								.until(ExpectedConditions.elementToBeClickable(AppiumBy.androidUIAutomator(
+										"new UiSelector().className(\"com.horcrux.svg.SvgView\").instance(2)")));
+						nextButton.click();
+					}
+				} catch (Exception ex) {
+					System.out.println("Failed to navigate to year: " + ex.getMessage());
+					break;
+				}
+			}
+		}
+		// Select the month
+		try {
+			String currentMonth = new SimpleDateFormat("MMM", Locale.ENGLISH).format(new Date());
+			String getFullMonthNameOnCalender = getFullMonthName(currentMonth);
+			if (getFullMonthNameOnCalender.equalsIgnoreCase(month)) {
+				WebElement monthElement = wait.until(ExpectedConditions.elementToBeClickable(
+						AppiumBy.androidUIAutomator("new UiSelector().text(\"" + month + "\").instance(1)")));
+				monthElement.click();
+			} else {
+				WebElement monthElement = wait.until(ExpectedConditions
+						.elementToBeClickable(AppiumBy.androidUIAutomator("new UiSelector().text(\"" + month + "\")")));
+				monthElement.click();
+			}
+		} catch (Exception e) {
+			System.out.println("Month not found: " + e.getMessage());
+		}
+		// Select the day
+		try {
+			WebElement dayElement = wait.until(ExpectedConditions
+					.elementToBeClickable(AppiumBy.androidUIAutomator("new UiSelector().text(\"" + day + "\")")));
+			dayElement.click();
+		} catch (Exception e) {
+			System.out.println("Day not found: " + e.getMessage());
+		}
+	}
+	
+	
+	public String getFullMonthName(String shortMonth) {
+		if (shortMonth == null || shortMonth.length() < 3) {
+			return "Invalid input";
+		}
+		try {
+			Month month = Month.valueOf(shortMonth.toUpperCase(Locale.ENGLISH));
+			return month.getDisplayName(TextStyle.FULL, Locale.ENGLISH);
+		} catch (IllegalArgumentException e) {
+			// Handle case where input is not a valid month abbreviation
+			for (Month m : Month.values()) {
+				if (m.getDisplayName(TextStyle.SHORT, Locale.ENGLISH).equalsIgnoreCase(shortMonth)) {
+					return m.getDisplayName(TextStyle.FULL, Locale.ENGLISH);
+				}
+			}
+			return "Invalid month abbreviation";
+		}
+	}
+	
 	
 	public void toggleSwitchStatus(String pageName, String elementname, String status) {
 		System.out.println("inside toggle find element menthod");
 		elementStatus(findElement(TestBase._ORIntializater.get(pageName), elementname), status);
 	}
+	
 	
 	public void toggleSwitchStatus(ORPageModel element, String status) {
 		System.out.println("inside toggleSwitchStatus menthod");  // this code will only verify if the element is enabled or disabled 
@@ -757,17 +783,18 @@ public void verifyText(ORPageModel element, String expectedText) {
 				switch (status) {
 				case "Off":
 					String toggleOff = "off switch button";
-					Assert.assertTrue(contentDesc.contains(toggleOff),"Toggle Switch in On mode");
+					verification.verificationConditionTrue(contentDesc.contains(toggleOff),"Toggle Switch in On mode");
 					break;
 				
 				case "On":
 					String toggleOn = "on switch button";
-					Assert.assertTrue(contentDesc.contains(toggleOn),"Toggle Switch in Off mode");
+					verification.verificationConditionTrue(contentDesc.contains(toggleOn),"Toggle Switch in Off mode");
 					break;
 				default:
 					break;
 				}
 	}
+	
 	
 	public void moveSlider(int sliderNumber, int sliderValue) {
 		System.out.println("Inside slider method");
@@ -816,4 +843,402 @@ public void verifyText(ORPageModel element, String expectedText) {
         androidDriver.perform(Collections.singletonList(swipe));
         System.out.println("Moved slider #" + sliderNumber + " by " + sliderValue + " points.");
     }
+	
+	
+	public void traverseDate(String year) {
+		// this method will select Day, Month and Year from calendar picker where input
+		// will be integer entered in feature step .i.e. moving 5 year before today.(
+		// e.g 5 year from from 22May2025)
+		int YearDeduction = Integer.parseInt(year);
+		// Current date
+		LocalDate currentDate = LocalDate.now();
+		// Subtract years inputed from method
+		LocalDate pastDate = currentDate.minusYears(YearDeduction);
+		System.out.println("Subtracted Date is " + pastDate);
+		String pastDate1 = pastDate.format(DateTimeFormatter.ofPattern("yyyy-MMM-dd", Locale.ENGLISH));
+		System.out.println("Subtracted Date is " + pastDate1);
+		// Retrieving current year from today
+		int currentYear = LocalDate.now().getYear();
+		String currentYearText = String.valueOf(currentYear);
+		AndroidDriver androidDriver = (AndroidDriver) ((WebDriverFacade) getDriver()).getProxiedDriver();
+		WebDriverWait wait = new WebDriverWait(androidDriver, Duration.ofSeconds(10));
+		WebElement selectCurrentYear = wait.until(ExpectedConditions.elementToBeClickable(
+				AppiumBy.androidUIAutomator("new UiSelector().text(\"" + currentYearText + "\")")));
+		selectCurrentYear.click();
+		int targetYear = currentYear - YearDeduction;
+		System.out.println("Target Year is " + targetYear);
+		// Navigate to correct year
+		while (true) {
+			try {
+				if ((targetYear < currentYear) || (targetYear > currentYear)) {
+					WebElement yearToBeSelected = wait.until(ExpectedConditions.elementToBeClickable(
+							AppiumBy.androidUIAutomator("new UiSelector().text(\"" + targetYear + "\")")));
+					yearToBeSelected.click();
+					break;
+				} else {
+					WebElement yearToBeSelected = wait.until(ExpectedConditions.elementToBeClickable(
+							AppiumBy.androidUIAutomator("new UiSelector().text(\"" + targetYear + "\").instance(1)")));
+					yearToBeSelected.click();
+					break;
+				}
+			} catch (Exception e) {
+				try {
+					if (targetYear < currentYear) {
+						WebElement prevButton = wait.until(ExpectedConditions.elementToBeClickable(AppiumBy
+								.androidUIAutomator("new UiSelector().className(\"com.horcrux.svg.d0\").instance(2)")));
+						prevButton.click();
+					} else if (targetYear > currentYear) {
+						WebElement nextButton = wait
+								.until(ExpectedConditions.elementToBeClickable(AppiumBy.androidUIAutomator(
+										"new UiSelector().className(\"com.horcrux.svg.SvgView\").instance(2)")));
+						nextButton.click();
+					}
+				} catch (Exception ex) {
+					System.out.println("Failed to navigate to year: " + ex.getMessage());
+					break;
+				}
+			}
+		}
+		// Select the month
+		try {
+			// month in MMM
+			String monthName = currentDate.getMonth().toString();
+			System.out.println("Month passed is " + monthName);
+			String formattedMonth = monthName.charAt(0) + monthName.substring(1).toLowerCase();
+			System.out.println("Month passed is " + formattedMonth);
+			String currentMonth = new SimpleDateFormat("MMM", Locale.ENGLISH).format(new Date());
+			
+			if (formattedMonth.equalsIgnoreCase(currentMonth)) {
+				WebElement monthElement = wait.until(ExpectedConditions.elementToBeClickable(
+						AppiumBy.androidUIAutomator("new UiSelector().text(\"" + currentMonth + "\").instance(1)")));
+				monthElement.click();
+			} else {
+				WebElement monthElement = wait.until(ExpectedConditions
+						.elementToBeClickable(AppiumBy.androidUIAutomator("new UiSelector().text(\"" + currentMonth + "\")")));
+				monthElement.click();
+			}
+		} catch (Exception e) {
+			System.out.println("Month not found: " + e.getMessage());
+		}
+		// Select the day
+		int day = currentDate.getDayOfMonth() + 1;
+		System.out.println("Date passed is " + day);
+		try {
+			WebElement dayElement = wait.until(ExpectedConditions
+					.elementToBeClickable(AppiumBy.androidUIAutomator("new UiSelector().text(\"" + day + "\")")));
+			dayElement.click();
+		} catch (Exception e) {
+			System.out.println("Day not found: " + e.getMessage());
+		}
+	}
+	
+	
+	public void selectTextToClick(String TextToClick) {
+
+		androidDriver = ((AndroidDriver) ((WebDriverFacade) getDriver()).getProxiedDriver());
+			try {
+				// Locate and select the desired option
+				WebElement option = androidDriver
+						.findElement(AppiumBy.androidUIAutomator("new UiSelector().text(\"" + TextToClick + "\")"));
+				option.click();
+
+			} catch (StaleElementReferenceException | NoSuchElementException e) {
+				System.out.println("Exeception Occured in selectTextToClick method "+e);
+			}
+	}
+	
+	
+	public void clickForcefully(String pageName, String name) { // This method is to click an object forcefully if object is displayed on UI
+		clickForcefully(findElement(TestBase._ORIntializater.get(pageName), name));
+	}
+	
+	
+	public void clickForcefully(ORPageModel element) {
+	    try {
+	        androidDriver = (AndroidDriver) ((WebDriverFacade) getDriver()).getProxiedDriver();
+
+	        // Get WebElementFacade from Serenity
+	        WebElementFacade facadeElement = (WebElementFacade) findElement(element);
+
+	        // Unwrap to native WebElement (RemoteWebElement)
+	        WebElement rawElement = facadeElement.getWrappedElement();
+
+	        // Use TouchAction to tap
+	        TouchAction<?> touch = new TouchAction<>(androidDriver);
+	        touch.tap(ElementOption.element(rawElement)).perform();
+
+	        System.out.println("Tapped on element");
+
+	    } catch (Exception e) {
+	        System.out.println("Failed to tap on element: "+ e);
+	    }
+	}
+	
+//	added by Vijay M on 10/7/2025
+	// this method will help in capturing the account no# created, store it to a global variable and reuse the same in different page.
+	// convert 407103060031783 to XXXXX XXXXX 31783
+	// String maskedAccountNumber; this is a globally declared variable in CommonMethods
+	public String capturAccountNo(String pageName, String accNum){  
+		accountNumber = getText(findElement(TestBase._ORIntializater.get(pageName), accNum)).trim();
+		String lastSet = accountNumber.substring(accountNumber.length()-5);
+		System.out.println("last five digit of account no#: "+lastSet);
+		maskedAccountNumber = "XXXXX XXXXX "+lastSet;
+		System.out.println("Masked account number: "+maskedAccountNumber);
+		return(maskedAccountNumber);
+	}
+	
+	
+//	added by Vijay M on 10/7/2025
+	//this method will click after the scrolling identifies the account no# stored in maskedAccountNumber
+	public void callingMaskedAccountNum() throws InterruptedException {
+			androidDriver = ((AndroidDriver) ((WebDriverFacade) getDriver()).getProxiedDriver());
+			boolean elementFound = false;
+			int maxScrolls = 15;
+			int scrollCount = 0;
+			while (!elementFound && scrollCount < maxScrolls) {
+				try {
+					// Try to find the element
+					WebElement element = androidDriver.findElement(AppiumBy.androidUIAutomator("new UiSelector().text(\"" + maskedAccountNumber + "\")"));
+//					element = androidDriver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"textId\" and contains(@text,"XXXXX XXXXX 41669"]"));
+					if(element.isDisplayed()) {
+						elementFound = true; // Element found
+						element.click();
+						System.out.println("Element found and clicked, exiting loop.");					
+					}
+				} catch (NoSuchElementException e) {
+					// If element is not found, scroll down
+					androidDriver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true)).scrollForward();"));
+					System.out.println("Element not found, scrolling down");
+					scrollCount++;
+				}//elementFound = true;
+			}
+			if (!elementFound) {
+			    System.out.println("Element '" + maskedAccountNumber + "' not found after max scrolls.");
+			}
+		}
+	
+	public void clickOnStartOver(String pageName, String startOver) throws InterruptedException {
+		clickOnStartOver(findElement(TestBase._ORIntializater.get(pageName), startOver));
+	}
+	
+
+// this method is used to handle the pop-up msg of Start Over and Resume during account creation
+	public void clickOnStartOver(ORPageModel element) throws InterruptedException {
+	    WebElement StartOver = null;
+	    androidDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+	    try {
+	        //find element
+	        StartOver = findElement(element);
+
+	        // Check if displayed and click on element
+	        if (StartOver != null && StartOver.isDisplayed()) {
+	            System.out.println("Element found and is displayed");
+	            StartOver.click();
+	        }
+	    } catch (NoSuchElementException ignored) {
+	    }
+	}
+	
+	
+//Added by Vijay M on 22Jul2025
+// handling the pop-up based on error msg text
+	public void handleAlertPopup() {
+	    try {
+	    	ErrorPopupPage popup = new ErrorPopupPage();
+	    	boolean elementDisplayed = popup.isErrorPopupVisible();
+	    	System.out.println("Error Pop-up displayed: "+elementDisplayed);
+	        	if(popup.isErrorPopupVisible() == true) {
+	        		String errorTXT = popup.getErrorMessageText();
+	        		System.out.println("Error Msg: "+ errorTXT);
+	        		switch (errorTXT) {
+		        	case "Technical Error!": 
+		        		System.out.println("Error Message Displayed: " + errorTXT);
+		        		popup.clickOkayButton();
+			            break;        
+			            
+		        	case "Location Disabled!":
+		        		System.out.println("Error Message Displayed: " + errorTXT);
+		        		popup.clickOkayButton();
+			            break;
+			            
+		        	 default:
+		        		 System.out.println("Unknown error: " + errorTXT);
+		        		 break;
+		        	}
+	    	}
+	    } catch (NoSuchElementException ignored) {
+	        System.out.println("No alert present.");
+	    }
+	}
+	
+	public void enterOTP(String pageName, String name, String OTPtext) {
+		System.out.println("inside enterOTP method");
+		// element.isEnabled();
+		String otp = OTPtext;
+		otp = readOTPFromSMS();
+		System.out.println("OTP found! " + otp);
+		if (otp != null) {
+			System.out.println("OTP found! " + otp);
+			enterText(findElement(TestBase._ORIntializater.get(pageName), name), otp);
+		} else {
+			System.out.println("OTP not found!");
+		}
+	}
+	
+	public String readOTPFromSMS() {
+		try {
+			Thread.sleep(7000); // Give time for notification to arrive
+			
+//			((AndroidDriver) androidDriver).openNotifications();
+//			Thread.sleep(3000); // Allow notifications to be fully opened
+			
+			Runtime.getRuntime().exec("adb shell cmd statusbar expand-notifications");
+	        Thread.sleep(3000); 
+			System.out.println("Notification panel opened!");
+			
+			
+			// Possible element IDs for notification text
+//			String[] possibleIds = { 
+//					"com.android.systemui:id/notification_panel", // Common ID
+//					"android:id/message_text", // Alternative ID
+//					"com.google.android.gms:id/message" // Some devices
+//			};
+//			
+			String[] possibleIds = { 
+					"android:id/message_text", // Alternative ID
+					"com.android.systemui:id/notification_panel", // Common ID
+					"com.android.systemui:id/notification_container_parent",
+					"android:id/notification_messaging",
+			};
+//			
+			
+//			String[] possibleIds = { 
+//					"com.android.systemui:id/text",
+//		            "com.android.systemui:id/notification_text",
+//		            "android:id/message",
+//		            "android:id/big_text",
+//		            "com.android.systemui:id/big_text",
+//		            "com.miui.securitycenter:id/message",
+//		            "com.google.android.gms:id/message",
+//		            "com.android.systemui:id/notification_main_column"
+//			};
+			
+			List<WebElement> messages = null;
+			for (String id : possibleIds) {
+				messages = androidDriver.findElements(By.id(id));
+				if (!messages.isEmpty()) {
+					System.out.println("Found messages using ID: " + id);
+					break; // If messages are found, exit the loop
+				}
+			}
+			if (messages == null || messages.isEmpty()) {
+				System.out.println("No SMS notifications found!");
+				return null;
+			}
+			// Regex pattern to extract 4-6 digit OTP
+			Pattern pattern = Pattern.compile("\\b\\d{4,6}\\b");
+			for (WebElement message : messages) {
+				String smsText = message.getText();
+				System.out.println("SMS Found: " + smsText);
+				Matcher matcher = pattern.matcher(smsText);
+				if (matcher.find()) {
+					String otp = matcher.group();
+					System.out.println("Extracted OTP: " + otp);
+					
+					
+					// ---- Try clicking Mark as Read ----
+	                try {
+	                    List<String> markAsReadIds = Arrays.asList(
+	                        "android:id/action0"
+	                    );
+
+	                    boolean clicked = false;
+	                    for (String btnId : markAsReadIds) {
+	                        List<WebElement> buttons = androidDriver.findElements(By.id(btnId));
+	                        if (!buttons.isEmpty()) {
+	                            buttons.get(0).click();
+	                            System.out.println("Clicked Mark as read" + btnId);
+	                            clicked = true;
+	                            break;
+	                        }
+	                    }
+
+	                    if (!clicked) {
+	                        System.out.println("Mark as read button not found in notifications!");
+	                    }
+
+	                } catch (Exception e) {
+	                    System.out.println("Error clicking Mark as Read: " + e.getMessage());
+	                }
+			
+					
+					
+			// Close notification shade
+//					androidDriver.pressKey(new KeyEvent(AndroidKey.BACK));
+					androidDriver.navigate().back();
+					return otp;
+				}
+			}
+			System.out.println("OTP not found in notifications!");
+		} catch (Exception e) {
+			System.out.println("Error reading SMS: " + e.getMessage());
+		}
+		return null;
+	}
+	
+	
+	
+	public String readOTPFromNotification() {
+	    try {
+	        Thread.sleep(6000); // Wait for notification to arrive
+//	        androidDriver.openNotifications();
+//	        Thread.sleep(3000); // Ensure notification shade is open
+
+	        Runtime.getRuntime().exec("adb shell cmd statusbar expand-notifications");
+	        Thread.sleep(3000); 
+	        
+	        String[] possibleOtpIds = {
+	            "com.android.systemui:id/text",
+	            "com.android.systemui:id/notification_text",
+	            "android:id/message",
+	            "android:id/big_text",
+	            "com.android.systemui:id/big_text",
+	            "com.miui.securitycenter:id/message",
+	            "com.google.android.gms:id/message",
+	            "com.android.systemui:id/notification_main_column"
+	        };
+
+	        List<WebElement> messages = null;
+			for (String id : possibleOtpIds) {
+				messages = androidDriver.findElements(By.id(id));
+				if (!messages.isEmpty()) {
+					System.out.println("Found messages using ID: " + id);
+					break; // If messages are found, exit the loop
+				}
+			}
+			if (messages == null || messages.isEmpty()) {
+				System.out.println("No SMS notifications found!");
+				return null;
+			}
+			// Regex pattern to extract 4-6 digit OTP
+			Pattern pattern = Pattern.compile("\\b\\d{4,6}\\b");
+			for (WebElement message : messages) {
+				String smsText = message.getText();
+				System.out.println("SMS Found: " + smsText);
+				Matcher matcher = pattern.matcher(smsText);
+				if (matcher.find()) {
+					String otp = matcher.group();
+					System.out.println("Extracted OTP: " + otp);
+					// Close notification shade
+					androidDriver.pressKey(new KeyEvent(AndroidKey.BACK));
+					return otp;
+				}
+			}
+			System.out.println("OTP not found in notifications!");
+		} catch (Exception e) {
+			System.out.println("Error reading SMS: " + e.getMessage());
+		}
+		return null;
+	}
+
 }

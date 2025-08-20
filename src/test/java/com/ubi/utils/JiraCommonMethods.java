@@ -3,6 +3,7 @@ package com.ubi.utils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import javax.net.ssl.*;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
@@ -15,105 +16,182 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.net.ssl.HttpsURLConnection;
-import javax.net.ssl.SSLContext;
-import javax.net.ssl.TrustManager;
-import javax.net.ssl.X509TrustManager;
-
 public class JiraCommonMethods {
 
     public static String PROJECT_ID = "10100";
     public static String BASE_URL = "https://jiradbp.unionbankofindia.co.in/rest/tests/1.0/";
     public static String TOKEN_URL = "https://jiradbp.unionbankofindia.co.in/rest/gadget/1.0/";
 
-    public static String login(){
+    public static String login() {
         try {
-        	
-        	TrustManager[] trustAllCerts = new TrustManager[]{
-        	        new X509TrustManager() {
-        	            public X509Certificate[] getAcceptedIssuers() { return null; }
-        	            public void checkClientTrusted(X509Certificate[] certs, String authType) { }
-        	            public void checkServerTrusted(X509Certificate[] certs, String authType) { }
-        	        }
-        	};
-        	SSLContext sc = SSLContext.getInstance("TLS");
-        	sc.init(null, trustAllCerts, new SecureRandom());
-        	HttpsURLConnection.setDefaultSSLSocketFactory(sc.getSocketFactory());
+            // Trust all SSL certificates (for self-signed Jira certs)
+            TrustManager[] trustAllCerts = new TrustManager[]{
+                new X509TrustManager() {
+                    public X509Certificate[] getAcceptedIssuers() { return null; }
+                    public void checkClientTrusted(X509Certificate[] certs, String authType) { }
+                    public void checkServerTrusted(X509Certificate[] certs, String authType) { }
+                }
+            };
+            SSLContext sc = SSLContext.getInstance("TLS");
+            sc.init(null, trustAllCerts, new SecureRandom());
+            HttpsURLConnection.setDefaultSSLSocketFactory(sc.getSocketFactory());
 
-            // Set up the URL and HttpURLConnection
+            // Jira login URL
             URL url = new URL(TOKEN_URL + "login");
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
-            // Configure the request headers
+            // Set HTTP headers
             connection.setRequestMethod("POST");
-            connection.setRequestProperty("accept", "application/json, text/plain, */*");
-            connection.setRequestProperty("accept-language", "en-US,en;q=0.9");
-            connection.setRequestProperty("content-type", "application/x-www-form-urlencoded; charset=UTF-8");
-            connection.setRequestProperty("jira-project-id", PROJECT_ID);
-            connection.setRequestProperty("origin", "https://jiradbp.unionbankofindia.co.in");
-            connection.setRequestProperty("priority", "u=1, i");
-            connection.setRequestProperty("referer", "https://jiradbp.unionbankofindia.co.in/secure/Dashboard.jspa?");
-            connection.setRequestProperty("sec-ch-ua", "\"Chromium\";v=\"130\", \"Microsoft Edge\";v=\"130\", \"Not?A_Brand\";v=\"99\"");
-            connection.setRequestProperty("sec-ch-ua-mobile", "?0");
-            connection.setRequestProperty("sec-ch-ua-platform", "\"Windows\"");
-            connection.setRequestProperty("sec-fetch-dest", "empty");
-            connection.setRequestProperty("sec-fetch-mode", "cors");
-            connection.setRequestProperty("sec-fetch-site", "same-origin");
-            connection.setRequestProperty("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0");
-            connection.setRequestProperty("x-requested-with", "XMLHttpRequest");
-
-            // Enable input/output streams
+            connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
+            connection.setRequestProperty("User-Agent", "Mozilla/5.0");
+            connection.setRequestProperty("X-Requested-With", "XMLHttpRequest");
             connection.setDoOutput(true);
 
-            // Write data to the request body
-            String requestBody = "os_username=Arshan.Bhanage%40ibm.com&os_password=Qwerty123%24";
-
+            // Login credentials (already URL-encoded)
+            String requestBody = "os_username=shaikshoaibrehman%40ibm.com&os_password=Rehman%402001";
             try (OutputStream os = connection.getOutputStream()) {
-                byte[] input = requestBody.getBytes(StandardCharsets.UTF_8);
-                os.write(input, 0, input.length);
+                os.write(requestBody.getBytes(StandardCharsets.UTF_8));
             }
 
-            // Read the response
-            BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream(), StandardCharsets.UTF_8));
+            // Check login response
+            int responseCode = connection.getResponseCode();
+            if (responseCode != 200) {
+                System.err.println("❌ Login failed. HTTP Response Code: " + responseCode);
+                return null;
+            }
+
+            // Read response (optional debug)
+            BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+            String line;
             StringBuilder response = new StringBuilder();
-            String responseLine;
-            while ((responseLine = br.readLine()) != null) {
-                response.append(responseLine.trim());
-            }
+            while ((line = br.readLine()) != null) response.append(line);
+            System.out.println("Login response: " + response);
 
-            // Print the response for debugging (optional)
-            System.out.println("Response: " + response.toString());
-
-            // Extract the XSRF token from the response headers
-
-            System.out.println(connection.getHeaderFields());
-
-            String setCookieHeader = connection.getHeaderField("Set-Cookie");
-
-            Map<String, List<String>> hm = connection.getHeaderFields();
-
+            // Extract Set-Cookie values
+            List<String> cookies = connection.getHeaderFields().get("Set-Cookie");
+            String JSESSIONID = null;
             String xsrfToken = null;
-            String JSESSIONID = hm.get("Set-Cookie").get(1).split(";")[0].split("=")[1];
 
-            if (setCookieHeader != null && setCookieHeader.contains("atlassian.xsrf.token")) {
-                String[] cookies = setCookieHeader.split(";");
-                for (String cookie : cookies) {
-                    if (cookie.trim().startsWith("atlassian.xsrf.token")) {
-                        xsrfToken = cookie.split("=")[1];
-                        break;
-                    }
+            for (String cookie : cookies) {
+                if (cookie.contains("JSESSIONID")) {
+                    JSESSIONID = cookie.split("JSESSIONID=")[1].split(";")[0].trim();
+                }
+                if (cookie.contains("atlassian.xsrf.token")) {
+                    xsrfToken = cookie.split("atlassian.xsrf.token=")[1].split(";")[0].trim();
                 }
             }
 
-            // Output the XSRF token
-            String cookie = String.format("JSESSIONID=%s; atlassian.xsrf.token=%s", JSESSIONID, xsrfToken);
-            System.out.println(cookie);
-            return cookie;
+            // Final validation
+            if (JSESSIONID == null || xsrfToken == null) {
+                System.err.println("❌ Missing JSESSIONID or XSRF token.");
+                return null;
+            }
+
+            // Format final cookie header
+            String finalCookie = String.format("JSESSIONID=%s; atlassian.xsrf.token=%s", JSESSIONID, xsrfToken);
+            System.out.println("✅ Final Cookie for use: " + finalCookie);
+            return finalCookie;
+
         } catch (Exception e) {
             e.printStackTrace();
+            return null;
         }
-        return null;
     }
+
+//    public static String login() {
+//
+//        try {
+//
+//            TrustManager[] trustAllCerts = new TrustManager[]{
+//                    new X509TrustManager() {
+//                        public X509Certificate[] getAcceptedIssuers() { return null; }
+//                        public void checkClientTrusted(X509Certificate[] certs, String authType) { }
+//                        public void checkServerTrusted(X509Certificate[] certs, String authType) { }
+//                    }
+//            };
+//            SSLContext sc = SSLContext.getInstance("TLS");
+//            sc.init(null, trustAllCerts, new SecureRandom());
+//            HttpsURLConnection.setDefaultSSLSocketFactory(sc.getSocketFactory());
+//
+//            // Set up the URL and HttpURLConnection
+//            URL url = new URL(TOKEN_URL + "login");
+//            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+//
+//            // Configure the request headers
+//            connection.setRequestMethod("POST");
+//            connection.setRequestProperty("accept", "application/json, text/plain, */*");
+//            connection.setRequestProperty("accept-language", "en-US,en;q=0.9");
+//            connection.setRequestProperty("content-type", "application/x-www-form-urlencoded; charset=UTF-8");
+//            connection.setRequestProperty("jira-project-id", PROJECT_ID);
+//            connection.setRequestProperty("origin", "https://jiradbp.unionbankofindia.co.in");
+//            connection.setRequestProperty("priority", "u=1, i");
+//            connection.setRequestProperty("referer", "https://jiradbp.unionbankofindia.co.in/secure/Dashboard.jspa?");
+//            connection.setRequestProperty("sec-ch-ua", "\"Chromium\";v=\"130\", \"Microsoft Edge\";v=\"130\", \"Not?A_Brand\";v=\"99\"");
+//            connection.setRequestProperty("sec-ch-ua-mobile", "?0");
+//            connection.setRequestProperty("sec-ch-ua-platform", "\"Windows\"");
+//            connection.setRequestProperty("sec-fetch-dest", "empty");
+//            connection.setRequestProperty("sec-fetch-mode", "cors");
+//            connection.setRequestProperty("sec-fetch-site", "same-origin");
+//            connection.setRequestProperty("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0");
+//            connection.setRequestProperty("x-requested-with", "XMLHttpRequest");
+//
+//            // Enable input/output streams
+//            connection.setDoOutput(true);
+//
+//            // Write data to the request body
+//            String requestBody = "os_username=shaikshoaibrehman%40ibm.com&os_password=Rehman%402001";
+//
+//            try (OutputStream os = connection.getOutputStream()) {
+//                byte[] input = requestBody.getBytes(StandardCharsets.UTF_8);
+//                os.write(input, 0, input.length);
+//            }
+//
+//            // Read the response
+//            BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream(), StandardCharsets.UTF_8));
+//            StringBuilder response = new StringBuilder();
+//            String responseLine;
+//            while ((responseLine = br.readLine()) != null) {
+//                response.append(responseLine.trim());
+//            }
+//
+//            // Print the response for debugging (optional)
+//            System.out.println("Response: " + response.toString());
+//
+//            // Extract the XSRF token from the response headers
+//
+//            System.out.println(connection.getHeaderFields());
+//
+//            String setCookieHeader = connection.getHeaderField("Set-Cookie");
+//            
+//            System.out.print(setCookieHeader);
+//            Map<String, List<String>> hm = connection.getHeaderFields();
+//
+//            String xsrfToken = hm.get("Set-Cookie").get(0).split(";")[0].split("=")[1];;
+//            String JSESSIONID = hm.get("Set-Cookie").get(1).split(";")[0].split("=")[1];
+//
+////            if (setCookieHeader != null && setCookieHeader.contains("atlassian.xsrf.token")) {
+////                String[] cookies = setCookieHeader.split(";");
+////                
+////                for (String cookie : cookies) {
+////                    if (cookie.trim().startsWith("atlassian.xsrf.token")) {
+////                        xsrfToken = cookie.split("=")[1];
+////                        System.out.print(xsrfToken);
+////                        break;
+////                    }
+////                }
+////            }
+//
+//            // Output the XSRF token
+//            String cookie = String.format("JSESSIONID=%s; atlassian.xsrf.token=%s", JSESSIONID, xsrfToken);
+//            System.out.println(cookie);
+//            return cookie;
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//        return null;
+//        
+//        
+//    }
 
     public static int searchTestCycle(String cookie, String testCycleKey){
         try {

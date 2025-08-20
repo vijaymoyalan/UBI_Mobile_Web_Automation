@@ -111,20 +111,20 @@ Given user is on page SSABranchPage clicks on SSADebitAccSelection
 @TestCaseKey=UDB-T1590 @Automatable @Smoke @RedmiNote9Pro
 Scenario: Validate the ETB user open the SSY Account and enters incorrect Girl Child Name on Girl Child Details page
 #Given user logins to app
-Given user logins to app entering Login PIN
+#Given user logins to app entering Login PIN
 #Given user is on page DashboardPage clicks on FingerPrint
-Given user is on page DashboardPage clicks on Accounts
-Given user is on page AccountsPage clicks on AccountsInvestandInsureTab
-Given user is on page AccountsPage clicks on InvestandInsureAddAccount
-Given user is on page AccountsPage clicks on SSAAddNewAccount
-Given user is on page AccountsPage clicks on SSA Icon
-Given user is on page SSASummaryPage clicks on ApplyNowbutton
-Given user is on page SSABranchPage clicks on SSADebitAccDropdown
-Given user is on page SSABranchPage clicks on SSADebitAccSelection
-When user is on page SSABranchPage and types 250 on EnterInitialAmount
-Given user is on page SSABranchPage clicks on ContinueButton
-When user is on page SSAGirlDetailPage and types A on GirlChildNameTextBox
-Given user is on page SSAGirlDetailPage clicks on ContinueButton
+#Given user is on page DashboardPage clicks on Accounts
+#Given user is on page AccountsPage clicks on AccountsInvestandInsureTab
+#Given user is on page AccountsPage clicks on InvestandInsureAddAccount
+#Given user is on page AccountsPage clicks on SSAAddNewAccount
+#Given user is on page AccountsPage clicks on SSA Icon
+#Given user is on page SSASummaryPage clicks on ApplyNowbutton
+#Given user is on page SSABranchPage clicks on SSADebitAccDropdown
+#Given user is on page SSABranchPage clicks on SSADebitAccSelection
+#When user is on page SSABranchPage and types 250 on EnterInitialAmount
+#Given user is on page SSABranchPage clicks on ContinueButton
+#When user is on page SSAGirlDetailPage and types A on GirlChildNameTextBox
+#Given user is on page SSAGirlDetailPage clicks on ContinueButton
 Given user verifies for any error message on page SSAGirlDetailPage as Name should contains 2-40 for GirlChildName
 
 @TestCaseKey=UDB-6 @Automatable @Smoke @RedmiNote9Pro

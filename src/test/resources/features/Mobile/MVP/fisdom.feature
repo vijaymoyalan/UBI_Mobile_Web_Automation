@@ -1,5 +1,5 @@
-Feature: Mobile UI for Fisdom Journey
-
+Feature: Mobile UI for Fisdom Journey 
+#Fisdom PIN for CIF 613763682 is 1233
 @TestCaseKey=UDB-1 @Automatable @Smoke @RedmiNote9Pro
 Scenario: Validate the ETB user can navigate to Fisdom screen from Dashboard-Invest & Insure 
 Given user logins to app

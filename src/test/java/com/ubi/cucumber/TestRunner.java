@@ -40,15 +40,6 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 //				//"src\\test\\resources\\features\\API\\Drop2\\GovtScheme",
 //				"src\\test\\resources\\features\\API\\Drop2\\NCMC",
 //			     "src\\test\\resources\\features\\API\\Drop2\\UPI"})
-//	
-//		features = {
-//				"src\\test\\resources\\features\\API\\Drop3\\ARM",
-//				"src\\test\\resources\\features\\API\\Drop3\\Borrowings",
-//				"src\\test\\resources\\features\\API\\Drop3\\CurrentAccountEnquiry",
-//				"src\\test\\resources\\features\\API\\Drop3\\HomePage",
-//				"src\\test\\resources\\features\\API\\Drop3\\mPOS"
-//				})
-		
 		
 				
 //		features = {
@@ -58,34 +49,42 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 //        plugin = {"json:target/cucumber-report.json", "html:target/cucumber-html-report.html"} // specify reporting options
 //)
 
-//features = "src\\test\\resources\\features\\API\\Drop3\\CurrentAccountEnquiry\\SmokeCurrentAccountEnquiry.feature")//,tags="@TestCaseKey=UDB-T38599A")
+//		features = {
+//				"src\\test\\resources\\features\\Mobile\\MVP\\Turtlemint.feature",
+//				"src\\test\\resources\\features\\Mobile\\MVP\\Nuclei.feature",
+//				"src\\test\\resources\\features\\Mobile\\MVP\\LAD.feature",
+//				"src\\test\\resources\\features\\Mobile\\MVP\\PMJJBY.feature",
+//				"src\\test\\resources\\features\\Mobile\\MVP\\PMSBY.feature"
+//				}, tags = "@PilotRun")
+//        features = "src\\test\\resources\\features\\Mobile\\MVP\\FDFlow.feature", tags="@TestCaseKey=UDB-T9654")
+//features = "src\\test\\resources\\features\\Mobile\\MVP\\PMSBY.feature", tags="@TestCaseKey=UDB-T12485")
 
-//features = "src/test/resources/features/API/MVP/NPS/NPSSmoke.feature",tags="@testcasekey")
-//features = "src/test/resources/features/API/MVP/FixedRecurringDeposit/FDRDSmoke.feature",tags="@TestCaseKey=UDB-T7639")
-//features = "src/test/resources/features/API/MVP/FixedRecurringDeposit")
-		
-//features = "src\\test\\resources\\features\\API\\Drop2\\ASBA\\")
-//features = "src/test/resources/features/API/MVP/Registration")
-		
-//Below Feature File External Dependency Services
-//features = "src\\test\\resources\\features\\Mobile\\MVP\\FDFlow.feature", tags="@TestCaseKey=UDB-T2415 or @TestCaseKey=UDB-T2416")
-		//features = "src\\test\\resources\\features\\Mobile\\MVP\\FDFlow.feature")
-features = "src\\test\\resources\\features\\Mobile\\MVP\\SSA_P2.feature", tags="@TestCaseKey=UDB-T1613")
+//features = "src\\test\\resources\\features\\Mobile\\MVP\\SSA_P2.feature", tags="@TestCaseKey=UDB-T1171")
 		//features = "src\\test\\resources\\features\\Mobile\\MVP\\genAICS.feature")
-//features = "src\\test\\resources\\features\\Mobile\\MVP\\PMJJBY.feature", tags="@TestCaseKey=UDB-T12807")
-//features = "src\\test\\resources\\features\\Mobile\\MVP")
-//features = "src\\test\\resources\\features\\Mobile\\MVP\\PMSBY.feature")
-		//features = "src\\test\\resources\\features\\Mobile\\MVP\\PMJJBY.feature", tags="@TestCaseKey=UDB-T12832")
-		//features = "src\\test\\resources\\features\\Mobile\\MVP\\PMSBY.feature", tags="@TestCaseKey=UDB-T12498")
+//features = "src\\test\\resources\\features\\Mobile\\MVP\\PMJJBY.feature", tags="@TestCaseKey=UDB-T12785")
+//features = "src\\test\\resources\\features\\Mobile\\MVP\\RecurringDeposit.feature", tags="@TestCaseKey=UDB-T9560")
+//features = "src\\test\\resources\\features\\Mobile\\MVP\\PMJJBY.feature")
+//		features = "src\\test\\resources\\features\\Mobile\\MVP\\PMJJBY.feature", tags="@TestCaseKey=UDB-T12784")
+//		features = "src\\test\\resources\\features\\Mobile\\MVP\\PMSBY.feature")
 //features = "src\\test\\resources\\features\\Mobile\\MVP\\Nuclei.feature", tags="@TestCaseKey=TC05")
-			//features = "src\\test\\resources\\features\\Mobile\\MVP\\BBPS.feature", tags="@TestCaseKey=UDB-T28219")
-  //features = "src\\test\\resources\\features\\Mobile\\MVP\\LAD.feature", tags="@TestCaseKey=UDB-T018")
+//			features = "src\\test\\resources\\features\\Mobile\\MVP\\BBPS.feature", tags="@Set3 or @Set4")
+//  features = "src\\test\\resources\\features\\Mobile\\MVP\\LAD.feature", tags="@TestCaseKey=UDB-T028 or @TestCaseKey=UDB-T008 or @TestCaseKey=UDB-T020 or @TestCaseKey=UDB-T066 or @TestCaseKey=UDB-T036 or @TestCaseKey=UDB-T058 or @TestCaseKey=UDB-T026 or @TestCaseKey=UDB-T005 or @TestCaseKey=UDB-T019 or @TestCaseKey=UDB-T023 or  @TestCaseKey=UDB-T025" )
 //features = "src\\test\\resources\\features\\Mobile\\MVP\\LAD.feature")
-//features = "src\\test\\resources\\features\\Mobile\\MVP\\BBPS.feature")
-//features = "src\\test\\resources\\features\\Mobile\\MVP")
+//features = "src\\test\\resources\\features\\Mobile\\MVP\\Login&Registration_FailedCases.feature", tags="@TestCaseKey=UDB-T1131")
+//features = "src\\test\\resources\\features\\Mobile\\MVP\\ASBA.feature")
+//features = "src\\test\\resources\\features\\Mobile\\MSME\\Test.feature")
+//		features = "src\\test\\resources\\features\\Mobile\\MSME\\Help&Support.feature", tags="@TestCaseKey=UDB-T44559 or @TestCaseKey=UDB-T44598 or @TestCaseKey=UDB-T44540 or @TestCaseKey=UDB-T44599 or @TestCaseKey=UDB-T44594 or @TestCaseKey=UDB-T44570 or @TestCaseKey=UDB-T44531")
+//		features = "src\\test\\resources\\features\\Mobile\\MSME\\FundTransfer.feature", tags="@TestCaseKey=UDB-T47761")
+//features = "src\\test\\resources\\features\\Mobile\\MSME\\FundTransfer.feature", tags="@Set1")
+		features = "src\\test\\resources\\features\\Mobile\\MSME\\MSME_BQR_Mobile.feature", tags="@TestCaseKey=UDB-T59297")
+//		features = "src\\test\\resources\\features\\Mobile\\MVP\\ASBA.feature", tags="@Test-T0082")
 		
-		
-//features = "src\\test\\resources\\features\\API\\Drop3\\ARM",tags="@TestCaseKey=UDB-T11")
+//		features = "src\\test\\resources\\features\\Mobile\\MVP\\Turtlemint.feature")
+//		features = "src\\test\\resources\\features\\Mobile\\MVP\\Nuclei.feature")
+//		features = "src\\test\\resources\\features\\Mobile\\MVP\\fisdom.feature")
+//		features = "src\\test\\resources\\features\\Mobile\\MVP\\PMSBY.feature")
+//		features = "src\\test\\resources\\features\\Mobile\\MVP\\PMJJBY.feature")
+//		features = "src\\test\\resources\\features\\Mobile\\MVP\\LAD.feature")
 
 //Below feature link for Feature FD-RD		
 //features = "src\\test\\resources\\features\\API\\MVP\\FixedRecurringDeposit\\FDRDSmoke.feature",tags="@TestCaseKey=UDB-T7639")

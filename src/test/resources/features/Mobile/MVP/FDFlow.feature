@@ -6,13 +6,14 @@ Given user logins to app
 Given user logins to app entering Login PIN
 Given user is on page DashboardPage clicks on FingerPrint
 Given user is on page DashboardPage clicks on Accounts
-Given user is on page DepositPage clicks on AddAccount   
+Given user is on page DepositPage clicks on AddAccount  
 Given user is on page DepositPage clicks on FixedDeposit
-Given user is on page FDDetailsPage clicks on SelectAccount    
+Given user is on DepositPage to check for pending application option and clicks on StartOver
+Given user is on page FDDetailsPage clicks on SelectAccount   
 Given user is on page FDDetailsPage clicks on SelectSavingAccount
 Given user is on page FDDetailsPage clicks on EnterFDName
 When user is on page FDDetailsPage and types Vijay Test on EnterFDName  
-When user is on page FDDetailsPage and types 10000 on EnterAmount
+When user is on page FDDetailsPage and types 1000 on EnterAmount
 When user scrolls down to "Select Interest Payout"
 Given user is on page FDDetailsPage clicks on PopularTenure
 When user scrolls down to "Total Maturity Amount"
@@ -21,18 +22,14 @@ Given user is on page FDDetailsPage clicks on SelectMonthlyPeriod
 When user scrolls down to "Nominee Details"
 Given user swipe down the page
 Given user is on page FDDetailsPage clicks on NomineeDOB
-Given user is on page FDDetailsPage clicks on NomineeDOBYear
-Given user is on page FDDetailsPage selects PreviousYear
-Given user is on page FDDetailsPage clicks on NomineeYear
-Given user is on page FDDetailsPage clicks on NomineeMonth
-Given user is on page FDDetailsPage clicks on NomineeDay
+Given user selects day 11 month Apr year 2006 and current year is 2025
 Given user is on page FDDetailsPage clicks on Continue
 Given user swipe down the page
 Given user is on page FDReviewPage clicks on T&CCheckbox 
 Given user is on page FDReviewPage clicks on AcceptButton
 Given user is on page FDReviewPage clicks on Submit
 Given user is on page FDReviewPage clicks on TPIN
-When user is on page FDReviewPage and types 1212 on TpinText
+When user is on page FDReviewPage and types 2121 on TpinText
 When user is on page FDReviewPage clicks on TPINContinue
 Given user verifies on page FDReviewPage for Your Fixed Deposit Account has been opened successfully! text in placeholder CompletedFDPage
 
@@ -59,18 +56,14 @@ When user scrolls down to "Auto Renewal"
 Given user is on page FDDetailsPage clicks on AutoRenewalOff 
 Given user swipe down the page
 Given user is on page FDDetailsPage clicks on NomineeDOB
-Given user is on page FDDetailsPage clicks on NomineeDOBYear
-Given user is on page FDDetailsPage selects PreviousYear
-Given user is on page FDDetailsPage clicks on NomineeYear
-Given user is on page FDDetailsPage clicks on NomineeMonth
-Given user is on page FDDetailsPage clicks on NomineeDay
+Given user selects day 11 month Apr year 2006 and current year is 2025
 Given user is on page FDDetailsPage clicks on Continue
 Given user swipe down the page
 Given user is on page FDReviewPage clicks on T&CCheckbox 
 Given user is on page FDReviewPage clicks on AcceptButton
 Given user is on page FDReviewPage clicks on Submit
 Given user is on page FDReviewPage clicks on TPIN
-When user is on page FDReviewPage and types 1212 on TpinText
+When user is on page FDReviewPage and types 2121 on TpinText
 When user is on page FDReviewPage clicks on TPINContinue
 Given user verifies on page FDReviewPage for Your Fixed Deposit Account has been opened successfully! text in placeholder CompletedFDPage
 
@@ -96,11 +89,7 @@ When user scrolls down to "Nominee Details"
 Given user swipe down the page
 Given user is on page FDDetailsPage and enters Test Script Value as NomineeName
 Given user is on page FDDetailsPage clicks on NomineeDOB
-Given user is on page FDDetailsPage clicks on NomineeDOBYear
-Given user is on page FDDetailsPage selects PreviousYear
-Given user is on page FDDetailsPage clicks on NomineeYear
-Given user is on page FDDetailsPage clicks on NomineeMonth
-Given user is on page FDDetailsPage clicks on NomineeDay
+Given user selects day 11 month Apr year 2006 and current year is 2025
 Given user is on page FDDetailsPage clicks on Relationship
 Given user is on page FDDetailsPage clicks on NomineeRelationship
 Given user is on page FDDetailsPage clicks on Continue
@@ -109,7 +98,7 @@ Given user is on page FDReviewPage clicks on T&CCheckbox
 Given user is on page FDReviewPage clicks on AcceptButton
 Given user is on page FDReviewPage clicks on Submit
 Given user is on page FDReviewPage clicks on TPIN
-When user is on page FDReviewPage and types 1212 on TpinText
+When user is on page FDReviewPage and types 2121 on TpinText
 When user is on page FDReviewPage clicks on TPINContinue
 Given user verifies on page FDReviewPage for Your Fixed Deposit Account has been opened successfully! text in placeholder CompletedFDPage
 
@@ -136,18 +125,14 @@ When user scrolls down to "Add Nominee?"
 Given user is on page FDDetailsPage clicks on AutoRenewalPAInt
 Given user swipe down the page
 Given user is on page FDDetailsPage clicks on NomineeDOB
-Given user is on page FDDetailsPage clicks on NomineeDOBYear
-Given user is on page FDDetailsPage selects PreviousYear
-Given user is on page FDDetailsPage clicks on NomineeYear
-Given user is on page FDDetailsPage clicks on NomineeMonth
-Given user is on page FDDetailsPage clicks on NomineeDay
+Given user selects day 11 month Apr year 2006 and current year is 2025
 Given user is on page FDDetailsPage clicks on Continue
 Given user swipe down the page
 Given user is on page FDReviewPage clicks on T&CCheckbox 
 Given user is on page FDReviewPage clicks on AcceptButton
 Given user is on page FDReviewPage clicks on Submit
 Given user is on page FDReviewPage clicks on TPIN
-When user is on page FDReviewPage and types 1212 on TpinText
+When user is on page FDReviewPage and types 2121 on TpinText
 When user is on page FDReviewPage clicks on TPINContinue
 Given user verifies on page FDReviewPage for Your Fixed Deposit Account has been opened successfully! text in placeholder CompletedFDPage
 
@@ -173,18 +158,14 @@ Given user is on page FDDetailsPage clicks on SelectMonthlyPeriod
 When user scrolls down to "Nominee Details"
 Given user swipe down the page
 Given user is on page FDDetailsPage clicks on NomineeDOB
-Given user is on page FDDetailsPage clicks on NomineeDOBYear
-Given user is on page FDDetailsPage selects PreviousYear
-Given user is on page FDDetailsPage clicks on NomineeYear
-Given user is on page FDDetailsPage clicks on NomineeMonth
-Given user is on page FDDetailsPage clicks on NomineeDay
+Given user selects day 11 month Apr year 2006 and current year is 2025
 Given user is on page FDDetailsPage clicks on Continue
 Given user swipe down the page
 Given user is on page FDReviewPage clicks on T&CCheckbox 
 Given user is on page FDReviewPage clicks on AcceptButton
 Given user is on page FDReviewPage clicks on Submit
 Given user is on page FDReviewPage clicks on TPIN
-When user is on page FDReviewPage and types 1212 on TpinText
+When user is on page FDReviewPage and types 2121 on TpinText
 When user is on page FDReviewPage clicks on TPINContinue
 Given user verifies on page FDReviewPage for Your Fixed Deposit Account has been opened successfully! text in placeholder CompletedFDPage
 
@@ -210,18 +191,14 @@ Given user is on page FDDetailsPage clicks on SelectQuarterlyPeriod
 When user scrolls down to "Nominee Details"
 Given user swipe down the page
 Given user is on page FDDetailsPage clicks on NomineeDOB
-Given user is on page FDDetailsPage clicks on NomineeDOBYear
-Given user is on page FDDetailsPage selects PreviousYear
-Given user is on page FDDetailsPage clicks on NomineeYear
-Given user is on page FDDetailsPage clicks on NomineeMonth
-Given user is on page FDDetailsPage clicks on NomineeDay
+Given user selects day 11 month Apr year 2006 and current year is 2025
 Given user is on page FDDetailsPage clicks on Continue
 Given user swipe down the page
 Given user is on page FDReviewPage clicks on T&CCheckbox 
 Given user is on page FDReviewPage clicks on AcceptButton
 Given user is on page FDReviewPage clicks on Submit
 Given user is on page FDReviewPage clicks on TPIN
-When user is on page FDReviewPage and types 1212 on TpinText
+When user is on page FDReviewPage and types 2121 on TpinText
 When user is on page FDReviewPage clicks on TPINContinue
 Given user verifies on page FDReviewPage for Your Fixed Deposit Account has been opened successfully! text in placeholder CompletedFDPage
 
@@ -310,6 +287,7 @@ When user scrolls down to "Total Maturity Amount"
 Given user is on page FDDetailsPage clicks on SelectInterestPayout 
 Given user is on page FDDetailsPage clicks on SelectQuarterlyPeriod 
 Given user is on page FDDetailsPage verifies amount in InterestAmountPayout
+Then user verifies text on page DepositPage is +Add Account on AddAccount
 
 
 @TestCaseKey=UDB-T2375 @Automatable @Smoke @RedmiNote9Pro
@@ -421,18 +399,14 @@ When user scrolls down to "Auto Renewal"
 Given user is on page FDDetailsPage clicks on AutoRenewalOff 
 Given user swipe down the page
 Given user is on page FDDetailsPage clicks on NomineeDOB
-Given user is on page FDDetailsPage clicks on NomineeDOBYear
-Given user is on page FDDetailsPage selects PreviousYear
-Given user is on page FDDetailsPage clicks on NomineeYear
-Given user is on page FDDetailsPage clicks on NomineeMonth
-Given user is on page FDDetailsPage clicks on NomineeDay
+Given user selects day 11 month Apr year 2006 and current year is 2025
 Given user is on page FDDetailsPage clicks on Continue
 Given user swipe down the page
 Given user is on page FDReviewPage clicks on T&CCheckbox 
 Given user is on page FDReviewPage clicks on AcceptButton
 Given user is on page FDReviewPage clicks on Submit
 Given user is on page FDReviewPage clicks on TPIN
-When user is on page FDReviewPage and types 1212 on TpinText
+When user is on page FDReviewPage and types 2121 on TpinText
 When user is on page FDReviewPage clicks on TPINContinue
 Given user verifies on page FDReviewPage for Your Fixed Deposit Account has been opened successfully! text in placeholder CompletedFDPage
 
@@ -458,18 +432,14 @@ Given user is on page FDDetailsPage clicks on SelectInterestPayout
 Given user is on page FDDetailsPage clicks on SelectMonthlyPeriod 
 Given user swipe down the page
 Given user is on page FDDetailsPage clicks on NomineeDOB
-Given user is on page FDDetailsPage clicks on NomineeDOBYear
-Given user is on page FDDetailsPage selects PreviousYear
-Given user is on page FDDetailsPage clicks on NomineeYear
-Given user is on page FDDetailsPage clicks on NomineeMonth
-Given user is on page FDDetailsPage clicks on NomineeDay
+Given user selects day 11 month Apr year 2006 and current year is 2025
 Given user is on page FDDetailsPage clicks on Continue
 Given user swipe down the page
 Given user is on page FDReviewPage clicks on T&CCheckbox 
 Given user is on page FDReviewPage clicks on AcceptButton
 Given user is on page FDReviewPage clicks on Submit
 Given user is on page FDReviewPage clicks on TPIN
-When user is on page FDReviewPage and types 1212 on TpinText
+When user is on page FDReviewPage and types 2121 on TpinText
 When user is on page FDReviewPage clicks on TPINContinue
 Given user verifies on page FDReviewPage for Your Fixed Deposit Account has been opened successfully! text in placeholder CompletedFDPage
 
@@ -495,18 +465,14 @@ Given user is on page FDDetailsPage clicks on SelectInterestPayout
 Given user is on page FDDetailsPage clicks on SelectOnMaturityPeriod 
 Given user swipe down the page
 Given user is on page FDDetailsPage clicks on NomineeDOB
-Given user is on page FDDetailsPage clicks on NomineeDOBYear
-Given user is on page FDDetailsPage selects PreviousYear
-Given user is on page FDDetailsPage clicks on NomineeYear
-Given user is on page FDDetailsPage clicks on NomineeMonth
-Given user is on page FDDetailsPage clicks on NomineeDay
+Given user selects day 11 month Apr year 2006 and current year is 2025
 Given user is on page FDDetailsPage clicks on Continue
 Given user swipe down the page
 Given user is on page FDReviewPage clicks on T&CCheckbox 
 Given user is on page FDReviewPage clicks on AcceptButton
 Given user is on page FDReviewPage clicks on Submit
 Given user is on page FDReviewPage clicks on TPIN
-When user is on page FDReviewPage and types 1212 on TpinText
+When user is on page FDReviewPage and types 2121 on TpinText
 When user is on page FDReviewPage clicks on TPINContinue
 Given user verifies on page FDReviewPage for Your Fixed Deposit Account has been opened successfully! text in placeholder CompletedFDPage
 
@@ -680,7 +646,7 @@ Given user is on page FDReviewPage clicks on T&CCheckbox
 Given user is on page FDReviewPage clicks on AcceptButton
 Given user is on page FDReviewPage clicks on Submit
 Given user is on page FDReviewPage clicks on TPIN
-When user is on page FDReviewPage and types 1212 on TpinText
+When user is on page FDReviewPage and types 2121 on TpinText
 When user is on page FDReviewPage clicks on TPINContinue
 Given user verifies on page FDReviewPage for Your Fixed Deposit Account has been opened successfully! text in placeholder CompletedFDPage
 
@@ -711,7 +677,7 @@ Given user is on page FDReviewPage clicks on T&CCheckbox
 Given user is on page FDReviewPage clicks on AcceptButton
 Given user is on page FDReviewPage clicks on Submit
 Given user is on page FDReviewPage clicks on TPIN
-When user is on page FDReviewPage and types 1212 on TpinText
+When user is on page FDReviewPage and types 2121 on TpinText
 When user is on page FDReviewPage clicks on TPINContinue
 Given user verifies on page FDReviewPage for Your Fixed Deposit Account has been opened successfully! text in placeholder CompletedFDPage
 
@@ -737,11 +703,7 @@ Given user is on page FDDetailsPage clicks on SelectInterestPayout
 Given user is on page FDDetailsPage clicks on SelectMonthlyPeriod 
 Given user swipe down the page
 Given user is on page FDDetailsPage clicks on NomineeDOB
-Given user is on page FDDetailsPage clicks on NomineeDOBYear
-Given user is on page FDDetailsPage selects PreviousYear
-Given user is on page FDDetailsPage clicks on NomineeYear
-Given user is on page FDDetailsPage clicks on NomineeMonth
-Given user is on page FDDetailsPage clicks on NomineeDay
+Given user selects day 11 month Apr year 2006 and current year is 2025
 Given user is on page FDDetailsPage clicks on Continue
 Given user verifies on page FDDetailsPage for Enter an amount that is within the permissible limit. text in placeholder DepositAmtVerbiage
 
@@ -766,11 +728,7 @@ Given user is on page FDDetailsPage clicks on SelectInterestPayout
 Given user is on page FDDetailsPage clicks on SelectMonthlyPeriod 
 Given user swipe down the page
 Given user is on page FDDetailsPage clicks on NomineeDOB
-Given user is on page FDDetailsPage clicks on NomineeDOBYear
-Given user is on page FDDetailsPage selects PreviousYear
-Given user is on page FDDetailsPage clicks on NomineeYear
-Given user is on page FDDetailsPage clicks on NomineeMonth
-Given user is on page FDDetailsPage clicks on NomineeDay
+Given user selects day 11 month Apr year 2006 and current year is 2025
 Given user is on page FDDetailsPage clicks on Continue
 Given user verifies on page FDDetailsPage for Enter an amount that is within the permissible limit. text in placeholder DepositAmtVerbiage
 
@@ -796,11 +754,7 @@ Given user is on page FDDetailsPage clicks on SelectInterestPayout
 Given user is on page FDDetailsPage clicks on SelectMonthlyPeriod 
 Given user swipe down the page
 Given user is on page FDDetailsPage clicks on NomineeDOB
-Given user is on page FDDetailsPage clicks on NomineeDOBYear
-Given user is on page FDDetailsPage selects PreviousYear
-Given user is on page FDDetailsPage clicks on NomineeYear
-Given user is on page FDDetailsPage clicks on NomineeMonth
-Given user is on page FDDetailsPage clicks on NomineeDay
+Given user selects day 11 month Apr year 2006 and current year is 2025
 Given user is on page FDDetailsPage clicks on Continue
 Given user verifies on page FDDetailsPage for Enter an amount that is within the permissible limit. text in placeholder DepositAmtVerbiage
 
@@ -825,11 +779,7 @@ Given user is on page FDDetailsPage clicks on SelectInterestPayout
 Given user is on page FDDetailsPage clicks on SelectMonthlyPeriod 
 Given user swipe down the page
 Given user is on page FDDetailsPage clicks on NomineeDOB
-Given user is on page FDDetailsPage clicks on NomineeDOBYear
-Given user is on page FDDetailsPage selects PreviousYear
-Given user is on page FDDetailsPage clicks on NomineeYear
-Given user is on page FDDetailsPage clicks on NomineeMonth
-Given user is on page FDDetailsPage clicks on NomineeDay
+Given user selects day 11 month Apr year 2006 and current year is 2025
 Given user is on page FDDetailsPage clicks on Continue
 Given user verifies on page FDDetailsPage for Enter an amount that is within the permissible limit. text in placeholder DepositAmtVerbiage
 
@@ -851,16 +801,13 @@ When user scrolls down to "Select Interest Payout"
 Given user is on page FDDetailsPage clicks on PopularTenure
 When user scrolls down to "Total Maturity Amount"
 Given user is on page FDDetailsPage clicks on SelectInterestPayout 
-Given user is on page FDDetailsPage clicks on SelectMonthlyPeriod 
+Given user is on page FDDetailsPage clicks on SelectOnMaturityPeriod 
 When user scrolls down to "Nominee Details"
 Given user swipe down the page
 Given user is on page FDDetailsPage and enters Test Script Value as NomineeName
 Given user is on page FDDetailsPage clicks on NomineeDOB
 Given user is on page FDDetailsPage clicks on NomineeDOBYear
-Given user is on page FDDetailsPage selects PreviousYear
-Given user is on page FDDetailsPage clicks on NomineeYear
-Given user is on page FDDetailsPage clicks on NomineeMonth
-Given user is on page FDDetailsPage clicks on NomineeDay
+Given user selects day 11 month Apr year 2006 and current year is 2025
 Given user is on page FDDetailsPage clicks on Relationship
 Given user is on page FDDetailsPage clicks on NomineeRelationship
 Given user is on page FDDetailsPage clicks on Continue
@@ -869,7 +816,7 @@ Given user is on page FDReviewPage clicks on T&CCheckbox
 Given user is on page FDReviewPage clicks on AcceptButton
 Given user is on page FDReviewPage clicks on Submit
 Given user is on page FDReviewPage clicks on TPIN
-When user is on page FDReviewPage and types 1212 on TpinText
+When user is on page FDReviewPage and types 2121 on TpinText
 When user is on page FDReviewPage clicks on TPINContinue
 Given user verifies on page FDReviewPage for Your Fixed Deposit Account has been opened successfully! text in placeholder CompletedFDPage
 
@@ -940,18 +887,14 @@ When user scrolls down to "Add Nominee?"
 Given user is on page FDDetailsPage clicks on AutoRenewalPrincipalAmt
 Given user swipe down the page
 Given user is on page FDDetailsPage clicks on NomineeDOB
-Given user is on page FDDetailsPage clicks on NomineeDOBYear
-Given user is on page FDDetailsPage selects PreviousYear
-Given user is on page FDDetailsPage clicks on NomineeYear
-Given user is on page FDDetailsPage clicks on NomineeMonth
-Given user is on page FDDetailsPage clicks on NomineeDay
+Given user selects day 11 month Apr year 2006 and current year is 2025
 Given user is on page FDDetailsPage clicks on Continue
 Given user swipe down the page
 Given user is on page FDReviewPage clicks on T&CCheckbox 
 Given user is on page FDReviewPage clicks on AcceptButton
 Given user is on page FDReviewPage clicks on Submit
 Given user is on page FDReviewPage clicks on TPIN
-When user is on page FDReviewPage and types 1212 on TpinText
+When user is on page FDReviewPage and types 2121 on TpinText
 When user is on page FDReviewPage clicks on TPINContinue
 Given user verifies on page FDReviewPage for Your Fixed Deposit Account has been opened successfully! text in placeholder CompletedFDPage
 
@@ -978,18 +921,14 @@ When user scrolls down to "Add Nominee?"
 Given user is on page FDDetailsPage clicks on AutoRenewalPrincipalAmt
 Given user swipe down the page
 Given user is on page FDDetailsPage clicks on NomineeDOB
-Given user is on page FDDetailsPage clicks on NomineeDOBYear
-Given user is on page FDDetailsPage selects PreviousYear
-Given user is on page FDDetailsPage clicks on NomineeYear
-Given user is on page FDDetailsPage clicks on NomineeMonth
-Given user is on page FDDetailsPage clicks on NomineeDay
+Given user selects day 11 month Apr year 2006 and current year is 2025
 Given user is on page FDDetailsPage clicks on Continue
 Given user swipe down the page
 Given user is on page FDReviewPage clicks on T&CCheckbox 
 Given user is on page FDReviewPage clicks on AcceptButton
 Given user is on page FDReviewPage clicks on Submit
 Given user is on page FDReviewPage clicks on TPIN
-When user is on page FDReviewPage and types 1212 on TpinText
+When user is on page FDReviewPage and types 2121 on TpinText
 When user is on page FDReviewPage clicks on TPINContinue
 Given user verifies on page FDReviewPage for Your Fixed Deposit Account has been opened successfully! text in placeholder CompletedFDPage
 
@@ -1015,11 +954,7 @@ Given user is on page FDDetailsPage clicks on SelectInterestPayout
 Given user is on page FDDetailsPage clicks on SelectMonthlyPeriod 
 Given user swipe down the page
 Given user is on page FDDetailsPage clicks on NomineeDOB
-Given user is on page FDDetailsPage clicks on NomineeDOBYear
-Given user is on page FDDetailsPage selects PreviousYear
-Given user is on page FDDetailsPage clicks on NomineeYear
-Given user is on page FDDetailsPage clicks on NomineeMonth
-Given user is on page FDDetailsPage clicks on NomineeDay
+Given user selects day 11 month Apr year 2006 and current year is 2025
 Given user is on page FDDetailsPage clicks on Continue
 Given user verifies on page FDDetailsPage for Enter an amount that is within the permissible limit. text in placeholder DepositAmtVerbiage
 When user is on page FDDetailsPage and types 20000000 on EnterAmount
@@ -1054,7 +989,7 @@ Given user swipe down the page
 Given user is on page FDDetailsPage clicks on GuardianName
 When user is on page FDDetailsPage and types Sachin Guardian on GuardianName
 Given user is on page FDDetailsPage clicks on GuardianDOB
-Given user selects day 11 month Apr year 2006 and current year is 2025 
+Given user selects day 11 month Apr year 2006 and current year is 2025
 Given user is on page FDDetailsPage clicks on GuardianRelationship
 Given user is on page FDDetailsPage clicks on GuardianRelationshipSelection
 Given user is on page FDDetailsPage clicks on Continue
@@ -1063,7 +998,7 @@ Given user is on page FDReviewPage clicks on T&CCheckbox
 Given user is on page FDReviewPage clicks on AcceptButton
 Given user is on page FDReviewPage clicks on Submit
 Given user is on page FDReviewPage clicks on TPIN
-When user is on page FDReviewPage and types 1212 on TpinText
+When user is on page FDReviewPage and types 2121 on TpinText
 When user is on page FDReviewPage clicks on TPINContinue
 Given user verifies on page FDReviewPage for Your Fixed Deposit Account has been opened successfully! text in placeholder CompletedFDPage
 
@@ -1167,7 +1102,7 @@ Given user is on page FDDetailsPage clicks on FDRequest
 Given user is on page FDDetailsPage clicks on FDClosure
 Given user is on page FDDetailsPage clicks on FDClosureAgreeButton
 Given user is on page FDReviewPage clicks on TPIN
-When user is on page FDReviewPage and types 1212 on TpinText
+When user is on page FDReviewPage and types 2121 on TpinText
 When user is on page FDReviewPage clicks on TPINContinue
 
 
@@ -1192,18 +1127,18 @@ Given user is on page FDDetailsPage clicks on SelectInterestPayout
 Given user is on page FDDetailsPage clicks on SelectMonthlyPeriod
 When user scrolls down to "Nominee Details"
 Given user is on page FDDetailsPage to check FDAutoRenewal toggle switch is On    # need to work as method is not getting called
-#Given user swipe down the page
-#Given user is on page FDDetailsPage clicks on NomineeDOB
-#Given user selects day 12 month Apr year 2006 and current year is 2025
-#Given user is on page FDDetailsPage clicks on Continue
-#Given user swipe down the page
-#Given user is on page FDReviewPage clicks on T&CCheckbox 
-#Given user is on page FDReviewPage clicks on AcceptButton
-#Given user is on page FDReviewPage clicks on Submit
-#Given user is on page FDReviewPage clicks on TPIN
-#When user is on page FDReviewPage and types 1212 on TpinText
-#When user is on page FDReviewPage clicks on TPINContinue
-#Given user verifies on page FDReviewPage for Your Fixed Deposit Account has been opened successfully! text in placeholder CompletedFDPage
+Given user swipe down the page
+Given user is on page FDDetailsPage clicks on NomineeDOB
+Given user selects day 12 month Apr year 2006 and current year is 2025
+Given user is on page FDDetailsPage clicks on Continue
+Given user swipe down the page
+Given user is on page FDReviewPage clicks on T&CCheckbox 
+Given user is on page FDReviewPage clicks on AcceptButton
+Given user is on page FDReviewPage clicks on Submit
+Given user is on page FDReviewPage clicks on TPIN
+When user is on page FDReviewPage and types 2121 on TpinText
+When user is on page FDReviewPage clicks on TPINContinue
+Given user verifies on page FDReviewPage for Your Fixed Deposit Account has been opened successfully! text in placeholder CompletedFDPage
 
 @TestCaseKey=UDB-T2421 @Automatable @Smoke @RedmiNote9Pro
 Scenario: Verify Negative testing for Nominee fields Name 
@@ -1222,22 +1157,34 @@ When user is on page FDDetailsPage and types AZ on NomineeName
 Given user verifies on page FDDetailsPage for Name should contain more than two characters. text in placeholder NomineeNameValidation
 
 
-@TestCaseKey=UDB-T2424 @Automatable @Smoke @RedmiNote9Pro
+@TestCaseKey=UDB-T2424 @Automatable @Smoke @RedmiNote9Pro  
 Scenario: Verify Negative testing for Address field for Nominee 
 Given user logins to app
 Given user logins to app entering Login PIN
 Given user is on page DashboardPage clicks on FingerPrint
 Given user is on page DashboardPage clicks on Accounts
-Given user is on page DepositPage clicks on AddAccount   
+Given user is on page DepositPage clicks on AddAccount 
 Given user is on page DepositPage clicks on FixedDeposit
 Given user is on page FDDetailsPage clicks on NormalFixedDeposit 
 Given user is on page FDDetailsPage clicks on SelectAccount    
 Given user is on page FDDetailsPage clicks on SelectSavingAccount
+Given user is on page FDDetailsPage clicks on EnterFDName
+When user is on page FDDetailsPage and types Vijay Test on EnterFDName
+When user is on page FDDetailsPage and types 15000 on EnterAmount
+When user scrolls down to "Select Interest Payout"
+Given user is on page FDDetailsPage clicks on PopularTenure
+When user scrolls down to "Total Maturity Amount"
+Given user is on page FDDetailsPage clicks on SelectInterestPayout 
+Given user is on page FDDetailsPage clicks on SelectMonthlyPeriod 
 Given user swipe down the page
 Given user is on page FDDetailsPage clicks on ChangeNominee
-Given user is on page FDDetailsPage clicks on NomineeAddressCheckbox
-When user scrolls down to "Pin"
+When user is on page FDDetailsPage and types AS on NomineeName
 Given user verifies on page FDDetailsPage for Name should contain more than two characters. text in placeholder NomineeNameValidation
+Given user swipe down the page
+Given user is on page FDDetailsPage clicks on NomineeAddressCheckbox
+When user is on page FDDetailsPage and types 12 on NomineePinCode
+Given user verifies on page FDDetailsPage for Name should contain more than two characters. text in placeholder NomineePinCodeValidation
+
 
 @TestCaseKey=UDB-T2427 @Automatable @Smoke @RedmiNote9Pro
 Scenario: Verify that user should be able to Edit the pre-filled FD details After review screen
@@ -1355,7 +1302,7 @@ Given user is on page FDReviewPage clicks on T&CCheckbox
 Given user is on page FDReviewPage clicks on AcceptButton
 Given user is on page FDReviewPage clicks on Submit
 Given user is on page FDReviewPage clicks on TPIN
-#When user is on page FDReviewPage and types 1212 on TpinText
+#When user is on page FDReviewPage and types 2121 on TpinText
 When user is on page FDReviewPage clicks on TPINContinue
 Given user verifies on page FDReviewPage for Please enter correct TPIN, you have 2 more attempts remaining text in placeholder TPINIncorrectMsg
 
@@ -1389,7 +1336,7 @@ Given user is on page FDReviewPage clicks on T&CCheckbox
 Given user is on page FDReviewPage clicks on DownloadT&C
 Given user is on page FDReviewPage clicks on AllowPermission
 
-@TestCaseKey=UDB-T2383 @Automatable @Smoke @RedmiNote9Pro
+@TestCaseKey=UDB-T2483 @Automatable @Smoke @RedmiNote9Pro
 Scenario: Verify that user is able to share image of successful payment on available apps by clicking on ‘share’ icon 
 Given user logins to app
 Given user logins to app entering Login PIN
@@ -1418,8 +1365,8 @@ Given user swipe down the page
 Given user is on page FDReviewPage clicks on T&CCheckbox 
 Given user is on page FDReviewPage clicks on AcceptButton
 Given user is on page FDReviewPage clicks on Submit
-Given user is on page FDReviewPage clicks on TPIN
-When user is on page FDReviewPage and types 1212 on TpinText
+Given user is on page FDReviewbPage clicks on TPIN
+When user is on page FDReviewPage and types 2121 on TpinText
 When user is on page FDReviewPage clicks on TPINContinue
 Given user verifies on page FDReviewPage for Your Fixed Deposit Account has been opened successfully! text in placeholder CompletedFDPage
 When user is on page FDReviewPage clicks on ShareButton

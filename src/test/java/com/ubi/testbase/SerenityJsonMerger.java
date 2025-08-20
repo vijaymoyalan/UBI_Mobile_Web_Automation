@@ -1,5 +1,87 @@
-package com.ubi.testbase;
+//package com.ubi.testbase;
+//
+//
+//import com.fasterxml.jackson.databind.JsonNode;
+//import com.fasterxml.jackson.databind.ObjectMapper;
+//
+//import java.io.File;
+//import java.io.FileWriter;
+//import java.io.IOException;
+//import java.nio.file.Files;
+//import java.nio.file.Paths;
+//import java.util.ArrayList;
+//import java.util.List;
+//import java.util.stream.Stream;
+//
+//class SerenityJsonMerger {
+//
+//    public static void main(String[] args) {
+//        // Path to the directory containing JSON files
+//        String jsonDirectoryPath = "target/serenity-reports";
+//
+//        // Output CSV file
+//        String outputCsvPath = "target/serenity-reports/test_results.csv";
+//
+//        // Create ObjectMapper instance
+//        ObjectMapper objectMapper = new ObjectMapper();
+//        List<String> udbNames = new ArrayList<>();
+//
+//        try (FileWriter csvWriter = new FileWriter(outputCsvPath)) {
+//            // Write CSV header
+//            csvWriter.append("Tag Name,Result\n");
+//
+//            // Process each JSON file in the directory
+//            try (Stream<File> jsonFiles = Files.list(Paths.get(jsonDirectoryPath))
+//                    .filter(path -> path.toString().endsWith(".json"))
+//                    .map(path -> path.toFile())) {
+//
+//                jsonFiles.forEach(file -> {
+//                    try {
+//                        // Parse the JSON file
+//                        JsonNode rootNode = objectMapper.readTree(file);
+//
+//                        // Extract tag name
+//                        JsonNode tagsNode = rootNode.path("tags");
+//                        
+//                        if (tagsNode.isArray()) {
+//                            tagsNode.forEach(tag -> {
+//                            	
+//                                String name = tag.path("name").asText();
+//                                if (name.startsWith("UDB-")) {
+//                                    udbNames.add(name); 
+//                                }
+//                            });
+//                        }
+//
+//                        String result = rootNode.path("result").asText("Unknown");
+//
+//                        // Write to CSV
+//						while(!udbNames.isEmpty()) {
+//                        	String testCase = udbNames.get(0);
+//                            csvWriter.append(testCase).append(",").append(result).append("\n");
+//                            udbNames.remove(testCase);
+//                        }
+//
+//
+//                    } catch (IOException e) {
+//                        System.err.println("Error processing file: " + file.getName());
+//                        e.printStackTrace();
+//                    }
+//                });
+//            }
+//
+//            System.out.println("Test results exported to: " + outputCsvPath);
+//
+//        } catch (IOException e) {
+//            System.err.println("Error writing CSV file.");
+//            e.printStackTrace();
+//        }
+//
+// ProcessCsvData.runCsv();
+//    }
+//}
 
+package com.ubi.testbase;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -15,68 +97,61 @@ import java.util.stream.Stream;
 
 class SerenityJsonMerger {
 
-    public static void main(String[] args) {
-        // Path to the directory containing JSON files
-        String jsonDirectoryPath = "target/serenity-reports";
+public static void main(String[] args) {
+// Path to the directory containing JSON files
+String jsonDirectoryPath = "C:\\Users\\ShoaibRehman\\Automation\\ubiAutomationapi\\ubiAutomation\\target\\serenity-reports";
 
-        // Output CSV file
-        String outputCsvPath = "target/serenity-reports/test_results.csv";
+// Output CSV file
+String outputCsvPath = "C:\\Users\\ShoaibRehman\\Automation\\ubiAutomationapi\\ubiAutomation\\src\\test\\java\\com\\ubi\\testbase\\testbasetest_results.csv";
 
-        // Create ObjectMapper instance
-        ObjectMapper objectMapper = new ObjectMapper();
-        List<String> udbNames = new ArrayList<>();
+// Create ObjectMapper instance
+ObjectMapper objectMapper = new ObjectMapper();
+List<String> udbNames = new ArrayList<>();
 
-        try (FileWriter csvWriter = new FileWriter(outputCsvPath)) {
-            // Write CSV header
-            csvWriter.append("Tag Name,Result\n");
+try (FileWriter csvWriter = new FileWriter(outputCsvPath)) {
+// Write CSV header
+csvWriter.append("Tag Name,Result\n");
 
-            // Process each JSON file in the directory
-            try (Stream<File> jsonFiles = Files.list(Paths.get(jsonDirectoryPath))
-                    .filter(path -> path.toString().endsWith(".json"))
-                    .map(path -> path.toFile())) {
+// Process each JSON file in the directory
+try (Stream<File> jsonFiles = Files.list(Paths.get(jsonDirectoryPath))
+.filter(path -> path.toString().endsWith(".json"))
+.map(path -> path.toFile())) {
 
-                jsonFiles.forEach(file -> {
-                    try {
-                        // Parse the JSON file
-                        JsonNode rootNode = objectMapper.readTree(file);
+jsonFiles.forEach(file -> {
+try {
 
-                        // Extract tag name
-                        JsonNode tagsNode = rootNode.path("tags");
-                        
-                        if (tagsNode.isArray()) {
-                            tagsNode.forEach(tag -> {
-                            	
-                                String name = tag.path("name").asText();
-                                if (name.startsWith("UDB-")) {
-                                    udbNames.add(name); 
-                                }
-                            });
-                        }
+// Parse the JSON file
+JsonNode rootNode = objectMapper.readTree(file);
+// Extract tag name
+JsonNode tagsNode = rootNode.path("tags");
 
-                        String result = rootNode.path("result").asText("Unknown");
+if (tagsNode.isArray()) {
+tagsNode.forEach(tag -> {
+String name = tag.path("name").asText();
 
-                        // Write to CSV
-						while(!udbNames.isEmpty()) {
-                        	String testCase = udbNames.get(0);
-                            csvWriter.append(testCase).append(",").append(result).append("\n");
-                            udbNames.remove(testCase);
-                        }
+if (name.startsWith("UDB-"))
 
+{ udbNames.add(name); }
+});
+}
 
-                    } catch (IOException e) {
-                        System.err.println("Error processing file: " + file.getName());
-                        e.printStackTrace();
-                    }
-                });
-            }
+String result = rootNode.path("result").asText("Unknown");
 
-            System.out.println("Test results exported to: " + outputCsvPath);
+// Write to CSV
+while(!udbNames.isEmpty())
 
-        } catch (IOException e) {
-            System.err.println("Error writing CSV file.");
-            e.printStackTrace();
-        }
+{ String testCase = udbNames.get(0); csvWriter.append(testCase).append(",").append(result).append("\n"); udbNames.remove(testCase); }
+} catch (IOException e)
 
- ProcessCsvData.runCsv();
-    }
+{ System.err.println("Error processing file: " + file.getName()); e.printStackTrace(); }
+});
+}
+
+System.out.println("Test results exported to: " + outputCsvPath);
+
+} catch (IOException e)
+
+{ System.err.println("Error writing CSV file."); e.printStackTrace(); }
+ProcessCsvData.runCsv();
+}
 }

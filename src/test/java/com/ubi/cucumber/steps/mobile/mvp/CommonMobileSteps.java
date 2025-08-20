@@ -125,9 +125,9 @@ public static String setEnvPath = "";
 	public void enterTpin() throws InterruptedException {
 		common.waitTillElementDisplayed(mfaPage.EnterLoginPin1);
 		common.clickObject(mfaPage.EnterLoginPin1);
-		common.enterText(mfaPage.EnterLoginPin1, "3");
-		common.enterText(mfaPage.EnterLoginPin2, "6");
-		common.enterText(mfaPage.EnterLoginPin3, "9");
+		common.enterText(mfaPage.EnterLoginPin1, "2");
+		common.enterText(mfaPage.EnterLoginPin2, "5");
+		common.enterText(mfaPage.EnterLoginPin3, "8");
 		common.enterText(mfaPage.EnterLoginPin4, "0");
 		//common.waitTillElementDisplayed(generalService.CustomerName);
 		//common.clickObject(dashboardPage.Home);
@@ -167,7 +167,7 @@ public static String setEnvPath = "";
 	
 	@Given("^user scrolls down and clicks on (.+)$")
 	public void scrollsDownandClicks(String text) {
-		//common.clickElementByText(text.replace("\"", "").trim());
+		common.clickElementByText(text.replace("\"", "").trim());
 		common.KeyDown();
 	}
 	
@@ -176,7 +176,6 @@ public static String setEnvPath = "";
 		common.waitTillElementDisplayed(pageName,elementName);
 		String actualText = common.getText(pageName, elementName);
         Assert.assertEquals(actualText,text.replace("\"", "").trim());
-		//common.verifyText(null, text);)
 		//common.clickElementByText(text.replace("\"", "").trim());
 	}
 	@When("^user capture image from handset camera option$")
@@ -190,18 +189,25 @@ public static String setEnvPath = "";
 		common.giveThirdPartyConsent(pageName, elementName); 
 	}
 	
-	@Given("^user verifies on page (.+) for (.+) text in placeholder (.+)$")
+	@When("^user verifies on page (.+) for (.+) text in placeholder (.+)$")
 	public void placeHolderCheck(String pageName,String expectedText, String elementName) {
 		common.waitTillElementDisplayed(pageName,elementName);
 		String actualText = common.getText(pageName,elementName);
 		common.textValidation(actualText, expectedText);		
 	}
 	
+//	@When("^user verifies on page (.+) for (.+) text in placeholder (.+)$")
+//	public void textHolderCheck(String pageName,String expectedText, String elementName) {
+//		common.waitTillElementDisplayed(pageName,elementName);
+//		String actualText = common.getText(pageName,elementName);
+//		common.textValidation(actualText, expectedText);		
+//	}
+	
 	@Given("^user scrolls up to (.+)$")
     public void scrollsUp(String text) {
          common.scrollUp(text.replace("\"", "").trim());
     }
-	@Given("^user is on page (.+) to check (.+) is (.+)$")  
+	@When("^user is on page (.+) to check (.+) is (.+)$")  
 	// Given user is on page <ModulePage> to check <xpathName> is <Disabled/Enabled/Checked/UnChecked/Selected/NotSelected/NotNull>
 	public void elementStatusCheck(String pageName, String elementName, String status) {
 		common.waitTillElementDisplayed(pageName,elementName);
@@ -219,7 +225,7 @@ public static String setEnvPath = "";
 	public void enterAmountByKeyPad() {
 		//common.digitKeyPadClick();
 	}
-	@Given("^user verifies for any error message on page (.+) as (.+) for (.+)$")
+	@When("^user verifies for any error message on page (.+) as (.+) for (.+)$")
 	public void textErrorMsg(String pageName,String text, String elementName) {
 		common.waitTillElementDisplayed(pageName,elementName);
 		String actualText = common.getText(pageName, elementName);
@@ -246,7 +252,7 @@ public static String setEnvPath = "";
 		// this will navigate to bottom of the page(applicable where scroll to text is not applicable)
 		common.swipeDownPage();
 	}
-	@Given("^user is on page (.+) verifies (.+) in (.+)$")  // this will verify amount >0 or count >0
+	@Then("^user is on page (.+) verifies (.+) in (.+)$")  // this will verify amount >0 or count >0
 	public void payoutAmount(String pageName, String action, String elementName) {
 		common.waitTillElementDisplayed(pageName,elementName);
 		common.actionVerification(pageName,action, elementName);	
@@ -256,13 +262,13 @@ public static String setEnvPath = "";
     public void selectDayofMOnthYear(String day,String month,String year,String CurrentYear) {
 		common.selectDate(day,month,year,CurrentYear);
     }
-	@Given("^user verifies for toast message on page (.+) as (.+) text in placeholder (.+)$")
+	@Then("^user verifies for toast message on page (.+) as (.+) text in placeholder (.+)$")
 	public void toastmsgVerification(String pageName, String toastMsg, String elementName) {
 		common.waitTillElementDisplayed(pageName,elementName);
 		common.verifyToastMessage(pageName, toastMsg, elementName);
 	}
 	
-	@Given("^user is on page (.+) to check (.+) toggle switch is (.+)$")
+	@When("^user is on page (.+) to check (.+) toggle switch is (.+)$")
 	public void toggleSwitch(String pageName, String elementName, String status) {
 		//common.waitTillElementDisplayed(pageName,elementName);
 		common.toggleSwitchStatus(pageName, elementName, status);
@@ -272,5 +278,91 @@ public static String setEnvPath = "";
 	@Given("^user moves slider number (.+) to (.+)$")
 	public void moveSliders(int SliderNumber,int Slidervalue) {
 		common.moveSlider(SliderNumber, Slidervalue);
+    }
+	@Given("^user selects a date (.+) years before today$")
+	public void traverseDate(String year) {
+		common.traverseDate(year);
+	}
+	@When("^user on page (.+) compares text (.+) with (.+)$")  // this method will compare text with partial text matching
+	public void compareText(String pageName,String expectedText, String elementName) {
+		common.waitTillElementDisplayed(pageName,elementName);
+		String actualText = common.getText(pageName, elementName);
+		common.verifyText(actualText, expectedText);
+		//common.clickElementByText(text.replace("\"", "").trim());
+	}
+
+// added by Vijay M on 20/6/2025
+	@Given("^user logins to MSME app$")
+	public void MSMEAPP() throws InterruptedException
+	{
+		  common.waitTillElementDisplayed("MFAPage","MSMEAllowPhone");
+	      common.clickObject("MFAPage","MSMEAllowPhone");
+	      common.swipeLeft("Merchant Collection Product");
+	      common.swipeLeft("Comprehensive Payment");
+	      
+	      common.clickObject("MFAPage","SelectEnglish");
+	      common.clickObject("MFAPage","ContinueButton");
+	      common.clickObject("MFAPage","Symbol");
+	      common.clickObject("MFAPage","MSMEAllowSMS");
+	      common.clickObject("MFAPage","MSMEAllowLocation");
+//	      common.clickObject("MFAPage","MSMEAllowPhone");
+	      common.clickObject("MFAPage","Symbol1");
+	      common.swipeDownPage();
+	      common.clickObject("MFAPage","MSMETnCAgree");
+	      
+	      common.clickObject("MFAPage","LetsGetStarted");
+	      common.waitTillElementDisplayed("MFAPage","ChooseSim2");
+	      common.clickObject("MFAPage","ChooseSim2");
+	      common.clickObject("MFAPage","ContinueSimButton"); 
+	}
+	
+	
+//	added by Vijay M on 20/6/2025
+	@Given("^user logins to MSME app entering Login PIN$")
+	public void enterMSMETpin() throws InterruptedException {
+		
+		common.waitTillElementDisplayed(mfaPage.MSMELoginPin1);
+		common.clickObject(mfaPage.MSMELoginPin1);
+		
+		common.enterText(mfaPage.MSMELoginPin1, "3");
+		common.enterText(mfaPage.MSMELoginPin2, "6");
+		common.enterText(mfaPage.MSMELoginPin3, "9");
+		common.enterText(mfaPage.MSMELoginPin4, "0");
+		
+		common.clickObject(mfaPage.MSMELoginButton);
+	}
+	
+	@Given("^user clicks on text (.+)$")   // this method
+	public void TextToClick(String TextName) {
+		common.selectTextToClick(TextName);
+	}
+	
+//	added by Vijay M on 10/7/2025
+	@Given("^user is on page (.+) to capture (.+)$")
+	public void accountNumPassing(String pageName, String accNum) {
+		common.capturAccountNo(pageName, accNum);
+	}
+//	added by Vijay M on 10/7/2025	
+	@Given("^user scrolls to clicks on Masked Account Number$")
+	public void clickMaskedAccNumber() throws InterruptedException {
+		common.callingMaskedAccountNum();		
+	}
+	
+//	added by Vijay M on 14/7/2025
+	@Given("^user is on (.+) to check for pending application option and clicks on (.+)$")  
+	public void clickOnStartOverOption(String pageName, String StartOver) throws InterruptedException {
+		common.clickOnStartOver(pageName, StartOver);
+		
+	}
+	
+	@Given("^user enters OTP on page (.+) and types (.+) on (.+)$")
+    public void user_entersOTP(String pageName, String OTP, String elementName) {
+                  common.waitTillElementDisplayed(pageName,elementName);
+                   common.enterOTP(pageName,elementName,OTP);
+    }
+	
+	@Given("^user swipes left to (.+)$")
+    public void swipesLeft(String text) {
+		common.swipeLeft(text.replace("\"", "").trim());
     }
 }

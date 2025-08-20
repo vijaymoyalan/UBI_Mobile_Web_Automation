@@ -28,4 +28,15 @@ public class MFAPage {
 	public ORPageModel EnterLoginPin2 = common.findElement(listofElements,"EnterLoginPin2"); 
 	public ORPageModel EnterLoginPin3 = common.findElement(listofElements,"EnterLoginPin3"); 
 	public ORPageModel EnterLoginPin4 = common.findElement(listofElements,"EnterLoginPin4"); 
+	
+//	MSME Login Added
+	public ORPageModel MSMELoginPin1 = common.findElement(listofElements,"MSMELoginPin1"); 
+	public ORPageModel MSMELoginPin2 = common.findElement(listofElements,"MSMELoginPin2"); 
+	public ORPageModel MSMELoginPin3 = common.findElement(listofElements,"MSMELoginPin3"); 
+	public ORPageModel MSMELoginPin4 = common.findElement(listofElements,"MSMELoginPin4");
+	public ORPageModel MSMELoginButton = common.findElement(listofElements,"MSMELoginButton");
+	public ORPageModel MSMEAllowPhone = common.findElement(listofElements,"MSMEAllowPhone");
+	public ORPageModel MSMEAllowSMS = common.findElement(listofElements,"MSMEAllowSMS");
+	public ORPageModel MSMEAllowLocation = common.findElement(listofElements,"MSMEAllowLocation");
+	public ORPageModel MSMETnCAgree = common.findElement(listofElements,"MSMETnCAgree");
 }
