@@ -152,10 +152,8 @@ public void verifyText(String actualText, String expectedText) {
 
 	public void verifyToastMessage(String pageName, String expectedToastMessage, String elementname) {
 		System.out.println("inside verifyToastMessage menthod");
-		
 	//finding toast msg in page
 		String actualToastMessage = getText(findElement(TestBase._ORIntializater.get(pageName), elementname)).trim();
-	
 	//using assert to verify the toast msg with actual text
 		int attempts = 0;
 		while (attempts < 3) {
@@ -1240,5 +1238,62 @@ public void verifyText(String actualText, String expectedText) {
 		}
 		return null;
 	}
+	
+	public void selectYesterday() {
+		// Get yesterday's date in numeric format (e.g., "14" for the 14th)
+		String yesterdayDate = LocalDate.now().minusDays(1).format(DateTimeFormatter.ofPattern("d"));
+
+		try {
+			// Locate the date element using XPath
+			WebElement dateElement = androidDriver
+					.findElement(By.xpath("//android.widget.TextView[@text='" + yesterdayDate + "']"));
+
+			// Check if the element is enabled before clicking
+			if (dateElement.isEnabled()) {
+				dateElement.click();
+				System.out.println("Successfully clicked on yesterday's date: " + yesterdayDate);
+			} else {
+				System.out.println("Yesterday's date (" + yesterdayDate + ") is disabled and cannot be selected.");
+			}
+		} catch (Exception e) {
+			System.out.println("Could not find yesterday's date element: " + e.getMessage());
+		}
+	}
+	
+	public void clickObjectifdisabled(ORPageModel element) {
+		String checkedAttribute = findElement(element).getAttribute("checked");
+		// If the checked attribute is "false", click the element
+		if (!"true".equals(checkedAttribute)) {
+			findElement(element).click(); // Click the element if it is not checked (checked = "false")
+		}
+		// If checked is "true", do nothing (ignore)
+	}
+	
+	public void clickObjectifdisabled(String pageName, String name) {
+		clickObjectifdisabled(findElement(TestBase._ORIntializater.get(pageName), name));
+	}
+	
+	public void clickWithCoordinate(int x, int y) {
+        // Perform click action using PointerInput
+        PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
+        Sequence clickSequence = new Sequence(finger, 1)
+                      .addAction(finger.createPointerMove(Duration.ofMillis(0), PointerInput.Origin.viewport(), x, y))
+                      .addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))
+                      .addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+     androidDriver.perform(Collections.singletonList(clickSequence));
+	}
+	
+	
+	public void clickObjectNtimes(String pageName,String name,int n) {
+	
+		clickObjectNtimes(findElement(TestBase._ORIntializater.get(pageName),name),n);
+		}
+	private void clickObjectNtimes(ORPageModel element, int n) {
+		for(int i=0; i<n;i++)
+		{
+			findElement(element).click();
+		}
+	}
+	
 
 }

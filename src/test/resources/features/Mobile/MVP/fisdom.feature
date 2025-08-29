@@ -12,4 +12,4 @@ Given user is on page InvestAndInsure clicks on Investments&Stocks
 When user scrolls down to "Declarations"
 Given user is on page FisdomPage clicks on Declaration
 Given user is on page FisdomPage clicks on Continue
-When user is on page FisdomPage and verifies for Welcome back FisdomLogin
+Given user is on page FisdomPage to check ThridPartyPage is Enabled

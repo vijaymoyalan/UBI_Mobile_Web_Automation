@@ -14,7 +14,7 @@ Scenario: Validate the DashBoard Screen for LifeStyle
   Given user is on page DashboardPage clicks on FingerPrint    
 	Given user is on page DashboardPage clicks on Lifestyle
 	Given user verifies on page Lifestyle for Recharge text in placeholder RechargeSection
-	When user scrolls down to "Gift Card"
+#	When user scrolls down to "Gift Card"
 	Given user verifies on page Lifestyle for Travel text in placeholder TravelSection
 	Given user swipe down the page
 	Given user verifies on page Lifestyle for Gift Card text in placeholder GiftSection
@@ -29,6 +29,7 @@ Scenario: Validate the Enable the Toggle for Consent Required for Mobile Recharg
 	Given user is on page DashboardPage clicks on Lifestyle
 	Given user is on page Lifestyle clicks on MobileRecharge
 	Given user is on page Lifestyle and gives Consent for first time
+	Then user verifies on page LifestyleMobileRecharge for Recharge text in placeholder RechargeTitlePage
 	
 @TestCaseKey=TC04 @Automatable @Smoke @RedmiNote9Pro
 Scenario: Verify that ETB user should navigate to LifeStyle Dashboard for Travel Bus Booking

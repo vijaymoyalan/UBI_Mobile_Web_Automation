@@ -323,12 +323,11 @@ public static String setEnvPath = "";
 		
 		common.waitTillElementDisplayed(mfaPage.MSMELoginPin1);
 		common.clickObject(mfaPage.MSMELoginPin1);
-		
 		common.enterText(mfaPage.MSMELoginPin1, "3");
 		common.enterText(mfaPage.MSMELoginPin2, "6");
 		common.enterText(mfaPage.MSMELoginPin3, "9");
 		common.enterText(mfaPage.MSMELoginPin4, "0");
-		
+
 		common.clickObject(mfaPage.MSMELoginButton);
 	}
 	
@@ -365,4 +364,35 @@ public static String setEnvPath = "";
     public void swipesLeft(String text) {
 		common.swipeLeft(text.replace("\"", "").trim());
     }
+	
+	@Given("^user is at page (.+) if element is disabled clicks on (.+)$")
+	public void user_clicks_isdisabled(String pageName, String elementName) {
+	common.waitTillElementDisplayed(pageName,elementName);
+	common.clickObjectifdisabled(pageName,elementName);
+	}
+	
+	@Given("^user selects yesterday's date$")
+	public void selectDate() {
+		common.selectYesterday();
+	}
+	
+	// Added by Rohit G
+	@Given("^user waits to click apply now button")
+    public void user_waits() throws InterruptedException {
+                   Thread.sleep(8000);
+    }
+	
+	// Added by Rohit G
+	@Given("user clicks with cordinate {int} {int}")
+	public void user_clicks_with_cordinate(int int1, int int2) {
+		common.clickWithCoordinate(int1, int2);
+	}
+	
+	// added by Dipesh
+	@Given("^user is on page (.+) clicks to element (.+) (.+) times$")
+	public void user_clicks(String pageName,String elementName, int n ) {
+		common.waitTillElementDisplayed(pageName,elementName);
+		common.clickObjectNtimes(pageName,elementName,n);
+	}
+	
 }
