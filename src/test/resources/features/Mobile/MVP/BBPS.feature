@@ -1,6 +1,30 @@
 Feature: Mobile UI for BBPS Journey
+    
 
-#@TestCaseKey=UDB-T28089	@Automatable @Smoke @RedmiNote9Pro @Set1 @Test
+@TestCaseKey=UDB-T28090	@Automatable @Smoke @RedmiNote9Pro @Set1 @Test
+	Scenario: Verify that user is able to Click and pay Electricity bills under Utilities - Electricity Bill
+		Given user logins to app
+    Given user logins to app entering Login PIN
+    Given user is on page DashboardPage clicks on FingerPrint
+    When user scrolls down to "Recharge & Bill Pay"
+    #When user scrolls down to "Loans"
+    Given user is on page DashboardPage clicks on Recharge&BillPay
+    Given user is on page BharatPayElectricity clicks on Electricity
+    Given user is on page BharatPayElectricity clicks on Search
+    Given user is on page BharatPayElectricity and types Adani on Search
+    Given user is on page BharatPayElectricity clicks on SelectBiller
+    Given user is on page BharatPayElectricity and types 212345678 on ConsumerNumber
+    #Given user is on page BharatPayElectricity clicks on PendingBillsCheckBox
+    Given user is on page BharatPayElectricity clicks on Continue
+    Given user is on page BharatPayElectricity clicks on ContinuePayment
+    Given user is on page BharatPayElectricity clicks on TPIN
+    When user is on page BharatPayElectricity and types 2121 on TpinText
+    When user is on page BharatPayElectricity clicks on TPINContinue
+    Then user verifies on page BharatPayElectricity for Completed text in placeholder PaymentConfirmation
+    Given user swipe down the page
+    
+    
+ #@TestCaseKey=UDB-T28089	@Automatable @Smoke @RedmiNote9Pro @Set1 @Test
   #Scenario: Verify that user is able to Click and pay Gas bills under Utilities - Gas Bill (Currently not working)
   #	Given user logins to app
     #Given user logins to app entering Login PIN
@@ -23,30 +47,6 @@ Feature: Mobile UI for BBPS Journey
     #Given user verifies on page BharatPayGas for Completed text in placeholder PaymentConfirmation
     #Given user swipe down the page
     
-
-@TestCaseKey=UDB-T28090	@Automatable @Smoke @RedmiNote9Pro @Set1 @Test
-	Scenario: Verify that user is able to Click and pay Electricity bills under Utilities - Electricity Bill
-		Given user logins to app
-    Given user logins to app entering Login PIN
-    Given user is on page DashboardPage clicks on FingerPrint
-    When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
-    Given user is on page DashboardPage clicks on Recharge&BillPay
-    Given user is on page BharatPayElectricity clicks on Electricity
-    Given user is on page BharatPayElectricity clicks on Search
-    Given user is on page BharatPayElectricity and types Adani on Search
-    Given user is on page BharatPayElectricity clicks on SelectBiller
-    Given user is on page BharatPayElectricity and types 212345678 on ConsumerNumber
-    #Given user is on page BharatPayElectricity clicks on PendingBillsCheckBox
-    Given user is on page BharatPayElectricity clicks on Continue
-    Given user is on page BharatPayElectricity clicks on ContinuePayment
-    Given user is on page BharatPayElectricity clicks on TPIN
-    When user is on page BharatPayElectricity and types 2121 on TpinText
-    When user is on page BharatPayElectricity clicks on TPINContinue
-    Given user verifies on page BharatPayElectricity for Completed text in placeholder PaymentConfirmation
-    Given user swipe down the page
-    
-    
 @TestCaseKey=UDB-T28091	@Automatable @Smoke @RedmiNote9Pro @Set1
 	Scenario: Verify that user is able to Click and pay Water bills under Utilities - Water Bill
 		Given user logins to app
@@ -63,12 +63,12 @@ Feature: Mobile UI for BBPS Journey
     Given user is on page BharatPayWater and types 26789365 on ConsumerID
     #Given user is on page BharatPayWater clicks on PendingBillsCheckBox
     Given user is on page BharatPayWater clicks on Continue
-    Given user is on page BharatPayWater and enters 210 as AmountText
+    Given user is on page BharatPayWater and enters 210 as AmountTextBox
     Given user is on page BharatPayWater clicks on ContinuePayment
     Given user is on page BharatPayWater clicks on TPIN
     When user is on page BharatPayWater and types 2121 on TpinText
     When user is on page BharatPayWater clicks on TPINContinue
-    Given user verifies on page BharatPayWater for Completed text in placeholder PaymentConfirmation
+    Then user verifies on page BharatPayWater for Completed text in placeholder PaymentConfirmation
     Given user swipe down the page
     
 @TestCaseKey=UDB-T28092	@Automatable @Smoke @RedmiNote9Pro @Set1 
@@ -90,7 +90,7 @@ Feature: Mobile UI for BBPS Journey
     Given user is on page BharatPayCableTV clicks on TPIN
     When user is on page BharatPayCableTV and types 2121 on TpinText
     When user is on page BharatPayCableTV clicks on TPINContinue
-    Given user verifies on page BharatPayCableTV for Completed text in placeholder PaymentConfirmation
+    Then user verifies on page BharatPayCableTV for Completed text in placeholder PaymentConfirmation
     Given user swipe down the page
     
     
@@ -114,7 +114,7 @@ Feature: Mobile UI for BBPS Journey
     Given user is on page BharatPayBroadband clicks on TPIN
     When user is on page BharatPayBroadband and types 2121 on TpinText
     When user is on page BharatPayBroadband clicks on TPINContinue
-    Given user verifies on page BharatPayBroadband for Completed text in placeholder PaymentConfirmation
+    Then user verifies on page BharatPayBroadband for Completed text in placeholder PaymentConfirmation
     Given user swipe down the page
     
     
@@ -128,7 +128,7 @@ Feature: Mobile UI for BBPS Journey
     Given user is on page DashboardPage clicks on Recharge&BillPay
     Given user is on page BharatPayLandline clicks on LandlinePostpaid
     Given user is on page BharatPayLandline clicks on Search
-    Given user is on page BharatPayLandline and types Nigam Limited - Mumbai on Search
+    Given user is on page BharatPayLandline and types MTNL Mumbai on Search
     Given user is on page BharatPayLandline clicks on SelectBiller
     Given user is on page BharatPayLandline and types 27450249 on TelephoneNumber
     Given user is on page BharatPayLandline and types 2031737434 on AccountNumber
@@ -138,7 +138,7 @@ Feature: Mobile UI for BBPS Journey
     Given user is on page BharatPayLandline clicks on TPIN
     When user is on page BharatPayLandline and types 2121 on TpinText
     When user is on page BharatPayLandline clicks on TPINContinue
-    Given user verifies on page BharatPayLandline for Completed text in placeholder PaymentConfirmation
+    Then user verifies on page BharatPayLandline for Completed text in placeholder PaymentConfirmation
     Given user swipe down the page
     
     
@@ -161,7 +161,7 @@ Feature: Mobile UI for BBPS Journey
     Given user is on page BharatPayDTH clicks on TPIN
     When user is on page BharatPayDTH and types 2121 on TpinText
     When user is on page BharatPayDTH clicks on TPINContinue
-    Given user verifies on page BharatPayDTH for Completed text in placeholder PaymentConfirmation
+    Then user verifies on page BharatPayDTH for Completed text in placeholder PaymentConfirmation
     Given user swipe down the page
     
 
@@ -174,7 +174,7 @@ Feature: Mobile UI for BBPS Journey
     #When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     When user scrolls down to "Recharge"
-    Given user verifies on page BharatPayRecharge for Recharge text in placeholder RechargeSection
+    Then user verifies on page BharatPayRecharge for Recharge text in placeholder RechargeSection
     
     
 @TestCaseKey=UDB-T28099 @TestCaseKey=UDB-T28249	@Automatable @Smoke @RedmiNote9Pro @Set1 
@@ -196,7 +196,7 @@ Feature: Mobile UI for BBPS Journey
     Given user is on page BharatPayFastag clicks on TPIN
     When user is on page BharatPayFastag and types 2121 on TpinText
     When user is on page BharatPayFastag clicks on TPINContinue
-    Given user verifies on page BharatPayFastag for Completed text in placeholder PaymentConfirmation
+    Then user verifies on page BharatPayFastag for Completed text in placeholder PaymentConfirmation
     Given user swipe down the page
     
 @TestCaseKey=UDB-T28100 @TestCaseKey=UDB-T28260 @TestCaseKey=UDB-T28264  
@@ -213,7 +213,7 @@ Feature: Mobile UI for BBPS Journey
     When user scrolls down to "Financial Services"
     Given user is on page BharatPaySubscription clicks on Subscription
     Given user is on page BharatPaySubscription clicks on Search
-    Given user is on page BharatPaySubscription and types Shemaroo Entert on Search
+    Given user is on page BharatPaySubscription and types Shemaroo IBADAT on Search
     Given user is on page BharatPaySubscription clicks on SelectBiller
     Given user is on page BharatPaySubscription and types vmoyalanubi@gmail.com on EmailID
     Given user is on page BharatPaySubscription clicks on Continue
@@ -221,13 +221,13 @@ Feature: Mobile UI for BBPS Journey
     Given user is on page BharatPaySubscription clicks on TPIN
     When user is on page BharatPaySubscription and types 2121 on TpinText
     When user is on page BharatPaySubscription clicks on TPINContinue
-    Given user verifies on page BharatPaySubscription for Completed text in placeholder PaymentConfirmation
-    Given user verifies on page BharatPaySubscription for Completed text in placeholder PaymentConfirmation
+    Then user verifies on page BharatPaySubscription for Completed text in placeholder PaymentConfirmation
+    Then user verifies on page BharatPaySubscription for Completed text in placeholder PaymentConfirmation
     Given user swipe down the page
-    Given user verifies on page BharatPaySubscription for Share text in placeholder ShareIcon
-    Given user verifies on page BharatPaySubscription for Other Bills text in placeholder OtherBillsIcon
-    Given user verifies on page BharatPaySubscription for Download text in placeholder DownloadIcon
-    Given user is on page BharatPaySubscription to check HomeButton is Enabled
+    Then user verifies on page BharatPaySubscription for Share text in placeholder ShareIcon
+    Then user verifies on page BharatPaySubscription for Other Bills text in placeholder OtherBillsIcon
+    Then user verifies on page BharatPaySubscription for Download text in placeholder DownloadIcon
+    Then user is on page BharatPaySubscription to check HomeButton is Enabled
     
 @TestCaseKey=UDB-T28101	@Automatable @Smoke @RedmiNote9Pro @Set1 
 	Scenario: Verify that user is able to access Financial services Module
@@ -237,8 +237,8 @@ Feature: Mobile UI for BBPS Journey
     When user scrolls down to "Recharge & Bill Pay"
     #When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
-    When user scrolls down to "Recurring Deposit"
-    Given user verifies on page BharatPayFinancial for Financial Services text in placeholder FinancialSection
+    When user scrolls down to "Recharge"
+    Then user verifies on page BharatPayFinancial for Financial Services text in placeholder FinancialSection
     
 
 @TestCaseKey=UDB-T28102	@Automatable @Smoke @RedmiNote9Pro @Set2 
@@ -263,7 +263,7 @@ Feature: Mobile UI for BBPS Journey
     Given user is on page BharatPayFinancialCreditCard clicks on TPIN
     When user is on page BharatPayFinancialCreditCard and types 2121 on TpinText
     When user is on page BharatPayFinancialCreditCard clicks on TPINContinue
-    Given user verifies on page BharatPayFinancialCreditCard for Completed text in placeholder PaymentConfirmation
+    Then user verifies on page BharatPayFinancialCreditCard for Completed text in placeholder PaymentConfirmation
     Given user swipe down the page
     
 
@@ -288,7 +288,7 @@ Feature: Mobile UI for BBPS Journey
     Given user is on page BharatPayFinancialRecurringDeposit clicks on TPIN
     When user is on page BharatPayFinancialRecurringDeposit and types 2121 on TpinText
     When user is on page BharatPayFinancialRecurringDeposit clicks on TPINContinue
-    Given user verifies on page BharatPayFinancialRecurringDeposit for Completed text in placeholder PaymentConfirmation
+    Then user verifies on page BharatPayFinancialRecurringDeposit for Completed text in placeholder PaymentConfirmation
     Given user swipe down the page
     
     
@@ -313,7 +313,7 @@ Feature: Mobile UI for BBPS Journey
     Given user is on page BharatPayFinancialMunicipalTaxes clicks on TPIN
     When user is on page BharatPayFinancialMunicipalTaxes and types 2121 on TpinText
     When user is on page BharatPayFinancialMunicipalTaxes clicks on TPINContinue
-    Given user verifies on page BharatPayFinancialMunicipalTaxes for Completed text in placeholder PaymentConfirmation
+    Then user verifies on page BharatPayFinancialMunicipalTaxes for Completed text in placeholder PaymentConfirmation
     Given user swipe down the page  
     
     
@@ -325,9 +325,8 @@ Feature: Mobile UI for BBPS Journey
     When user scrolls down to "Recharge & Bill Pay"
     #When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
-    When user scrolls down to "Complaints"
-    When user scrolls down to "Housing Society"
-    Given user verifies on page BharatPayOthers for Others text in placeholder OthersServices 
+    When user scrolls down to "Others
+    Then user verifies on page BharatPayOthers for Others text in placeholder OthersServices 
     
 
 #@TestCaseKey=UDB-T28109	@Automatable @Smoke @RedmiNote9Pro @Set2 
@@ -352,7 +351,7 @@ Feature: Mobile UI for BBPS Journey
     #Given user is on page BharatPayOthersHousingSociety clicks on TPIN
     #When user is on page BharatPayOthersHousingSociety and types 2121 on TpinText
     #When user is on page BharatPayOthersHousingSociety clicks on TPINContinue
-    #Given user verifies on page BharatPayOthersHousingSociety for Completed text in placeholder PaymentConfirmation
+    #Then user verifies on page BharatPayOthersHousingSociety for Completed text in placeholder PaymentConfirmation
     #When user scrolls down to "Share" 
     
 @TestCaseKey=UDB-T28171 @TestCaseKey=UDB-T28113	@Automatable @Smoke @RedmiNote9Pro @Set2 
@@ -367,7 +366,7 @@ Feature: Mobile UI for BBPS Journey
     When user scrolls down to "Others"
     When user scrolls down to "Complaints"
     Given user is on page BharatPayPage clicks on Complaints
-    Given user verifies on page BharatPayPage for Register Complaint text in placeholder ComplaintsPage
+    Then user verifies on page BharatPayPage for Register Complaint text in placeholder ComplaintsPage
     
 @TestCaseKey=UDB-T28178 @TestCaseKey=UDB-T28174 @TestCaseKey=UDB-T28175 @TestCaseKey=UDB-T28184	@Automatable @Smoke @RedmiNote9Pro @Set2 
 	Scenario: Verify that the complaint is raised successfully
@@ -386,7 +385,7 @@ Feature: Mobile UI for BBPS Journey
     When user is on page BharatPayPageComplaints and types UN015080BAFAAAAAAEHN on EnterBBPSPaymentID
     When user is on page BharatPayPageComplaints and types Test Script Entered on EnterRemarks
     Given user is on page BharatPayPageComplaints clicks on RaiseComplaint
-    Given user verifies on page BharatPayPageComplaints for Successfully text in placeholder ConfirmationPage
+    Then user verifies on page BharatPayPageComplaints for Successfully text in placeholder ConfirmationPage
     Given user is on page BharatPayPageComplaints clicks on BillPayments
     
     
@@ -458,7 +457,7 @@ Feature: Mobile UI for BBPS Journey
     Given user is on page BharatPayGas clicks on TPIN
     When user is on page BharatPayGas and types 2121 on TpinText
     When user is on page BharatPayGas clicks on TPINContinue
-    Given user verifies on page BharatPayGas for Completed text in placeholder PaymentConfirmation
+    Then user verifies on page BharatPayGas for Completed text in placeholder PaymentConfirmation
     Given user swipe down the page
     When user is on page BharatPayGas clicks on DownloadClick
     When user is on page BharatPayGas clicks on AllowAccess
@@ -537,14 +536,14 @@ Feature: Mobile UI for BBPS Journey
     Given user is on page DashboardPage clicks on Recharge&BillPay
     When user scrolls down to "Fastag"
     Given user is on page BharatPayFastag clicks on Fastag
-    Given user verifies on page BharatPayFastag for Select your Fastag Provider text in placeholder ProviderList
+    Then user verifies on page BharatPayFastag for Select your Fastag Provider text in placeholder ProviderList
     Given user is on page BharatPayFastag clicks on Search
     Given user is on page BharatPayFastag and types Indian Highways Management on Search
     Given user is on page BharatPayFastag clicks on SelectBiller
-    Given user verifies on page BharatPayFastag for Vehicle Registration Number text in placeholder TextBoxField  
+    Then user verifies on page BharatPayFastag for Vehicle Registration Number text in placeholder TextBoxField  
     Given user is on page BharatPayFastag and types MH01AB1234 on VehicleNumber
     Given user is on page BharatPayFastag clicks on Continue
-    Given user verifies on page BharatPayFastag for Select Account text in placeholder DropDownAccount
+    Then user verifies on page BharatPayFastag for Select Account text in placeholder DropDownAccount
     Given user is on page BharatPayFastag clicks on DropDownAccount
     Given user is on page BharatPayFastag clicks on SavingAccount
     
@@ -594,7 +593,7 @@ Feature: Mobile UI for BBPS Journey
     When user scrolls down to "Recharge & Bill Pay"
     #When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
-    Given user verifies on page BharatPayPage for Something Went Wrong text in placeholder TechnicalError
+    Then user verifies on page BharatPayPage for Something Went Wrong text in placeholder TechnicalError
     
 @TestCaseKey=UDB-T28085 @Automatable @Smoke @RedmiNote9Pro @Set3 
 	Scenario: Verify technical error if BBPS not able to fetch due bills
@@ -605,7 +604,7 @@ Feature: Mobile UI for BBPS Journey
     #When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     Given user is on page BharatPayPage clicks on PendingBillsViewAll
-    Given user verifies on page BharatPayPage for Something Went Wrong text in placeholder TechnicalError
+    Then user verifies on page BharatPayPage for Something Went Wrong text in placeholder TechnicalError
     
 #@TestCaseKey=UDB-T28074 @Automatable @Smoke @RedmiNote9Pro @Set3     --- biller not mapped ---
 #	Scenario: Verify that user is able to view the link bills payment due date
@@ -630,14 +629,8 @@ Feature: Mobile UI for BBPS Journey
     When user scrolls down to "Recharge"
     When user scrolls down to "Financial Services"
     Given user is on page BharatPaySubscription clicks on Subscription
-    Given user is on page BharatPaySubscription clicks on LinkedBills
-    Given user is on page BharatPaySubscription clicks on Continue
-    Given user is on page BharatPaySubscription clicks on TPIN
-    When user is on page BharatPaySubscription and types 2121 on TpinText
-    When user is on page BharatPaySubscription clicks on TPINContinue
-    Given user verifies on page BharatPaySubscription for Completed text in placeholder PaymentConfirmation
-    Given user swipe down the page
-    
+    Given user is on page BharatPaySubscription to check LinkedBills is Enabled
+        
     
 @TestCaseKey=UDB-T28216	@Automatable @Smoke @RedmiNote9Pro @Set4 
 	Scenario: Verify that "Recent Recharges" section is visible
@@ -649,7 +642,7 @@ Feature: Mobile UI for BBPS Journey
     Given user is on page DashboardPage clicks on Recharge&BillPay
     When user scrolls down to "Fastag"
     Given user is on page BharatPayFastag clicks on Fastag
-    Given user verifies on page BharatPayFastag for Indian Highways Management Company Ltd text in placeholder RecentRechargeBiller
+    Then user verifies on page BharatPayFastag for Indian Highways Management Company Ltd text in placeholder RecentRechargeBiller
     
  
 @TestCaseKey=UDB-T28070	@Automatable @Smoke @RedmiNote9Pro @Set4 
@@ -660,8 +653,8 @@ Feature: Mobile UI for BBPS Journey
     When user scrolls down to "Recharge & Bill Pay"
     #When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
-    Given user verifies on page BharatPayPage for Bill Payments text in placeholder BBPSPageHeader
-    Given user verifies on page BharatPayPage for Pending Bills text in placeholder PendingBillHeader
+    Then user verifies on page BharatPayPage for Bill Payments text in placeholder BBPSPageHeader
+    Then user verifies on page BharatPayPage for Pending Bills text in placeholder PendingBillHeader
     
 @TestCaseKey=UDB-T28081	@Automatable @Smoke @RedmiNote9Pro @Set4 
 	Scenario: Verify that user is able to view categories/sections on BBPS Dashboard
@@ -671,16 +664,16 @@ Feature: Mobile UI for BBPS Journey
     When user scrolls down to "Recharge & Bill Pay"
     #When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
-    Given user verifies on page BharatPayPage for Utilities text in placeholder UtilitiesSection
+    Then user verifies on page BharatPayPage for Utilities text in placeholder UtilitiesSection
     When user scrolls down to "Recharge"
-    Given user verifies on page BharatPayPage for Recharge text in placeholder RechargeSection
+    Then user verifies on page BharatPayPage for Recharge text in placeholder RechargeSection
     When user scrolls down to "Financial Services"
-    Given user verifies on page BharatPayPage for Financial Services text in placeholder FinancialServicesSection
+    Then user verifies on page BharatPayPage for Financial Services text in placeholder FinancialServicesSection
     When user scrolls down to "Others"
-    Given user verifies on page BharatPayPage for Others text in placeholder OthersSection
+    Then user verifies on page BharatPayPage for Others text in placeholder OthersSection
     Given user swipe down the page
-    Given user verifies on page BharatPayPage for Complaints text in placeholder ComplaintsSection
-    Given user verifies on page BharatPayPage for Past Payments text in placeholder PastPaymentsSection
+    Then user verifies on page BharatPayPage for Complaints text in placeholder ComplaintsSection
+    Then user verifies on page BharatPayPage for Past Payments text in placeholder PastPaymentsSection
     
 @TestCaseKey=UDB-T28114	@Automatable @Smoke @RedmiNote9Pro @Set4 
 	Scenario: Verify that user is able to Click and access Past Payments
@@ -692,11 +685,11 @@ Feature: Mobile UI for BBPS Journey
     Given user is on page DashboardPage clicks on Recharge&BillPay
     Given user swipe down the page
     Given user is on page BharatPayPastPayments clicks on PastPaymentsSection
-    Given user verifies on page BharatPayPastPayments for Past Payments text in placeholder PastPaymentsHeader
-    Given user verifies on page BharatPayPastPayments for Track your payment history text in placeholder TrackPaymentsText
-    Given user verifies on page BharatPayPastPayments for Completed text in placeholder CompletedTab
-    Given user verifies on page BharatPayPastPayments for Failed text in placeholder FailedTab
-    Given user verifies on page BharatPayPastPayments for Pending text in placeholder PendingTab
+    Then user verifies on page BharatPayPastPayments for Past Payments text in placeholder PastPaymentsHeader
+    Then user verifies on page BharatPayPastPayments for Track your payment history text in placeholder TrackPaymentsText
+    Then user verifies on page BharatPayPastPayments for Completed text in placeholder CompletedTab
+    Then user verifies on page BharatPayPastPayments for Failed text in placeholder FailedTab
+    Then user verifies on page BharatPayPastPayments for Pending text in placeholder PendingTab
     
     
  @TestCaseKey=UDB-T28131	@Automatable @Smoke @RedmiNote9Pro @Set4 @Test
@@ -717,7 +710,7 @@ Feature: Mobile UI for BBPS Journey
     Given user is on page BharatPaySubscription clicks on TPIN
     When user is on page BharatPaySubscription and types 2121 on TpinText
     Given user is on page BharatPayElectricity clicks on ContinuePayment
-    Given user verifies on page BharatPayElectricity for Insufficient Balance text in placeholder BalanceAlert
+    Then user verifies on page BharatPayElectricity for Insufficient Balance text in placeholder BalanceAlert
     Given user is on page BharatPayElectricity clicks on AlertOk
     
 @TestCaseKey=UDB-T28157	@Automatable @Smoke @RedmiNote9Pro @Set4 
@@ -734,7 +727,7 @@ Feature: Mobile UI for BBPS Journey
     Given user is on page BharatPayPastPayments clicks on BillerCategory
     Given user is on page BharatPayPastPayments clicks on ElectricityOption
     Given user is on page BharatPayPastPayments clicks on FilterApply
-    Given user verifies on page BharatPayPastPayments for Adani Electricity Mumbai Limited text in placeholder PastPaymentUtilities
+    Then user verifies on page BharatPayPastPayments for Adani Electricity Mumbai Limited text in placeholder PastPaymentUtilities
     
 @TestCaseKey=UDB-T28158	@Automatable @Smoke @RedmiNote9Pro @Set4 
 	Scenario: Verify that user is able to used filter option Biller Category >>Recharge to search past transactions (Fastag)
@@ -748,9 +741,9 @@ Feature: Mobile UI for BBPS Journey
     Given user is on page BharatPayPastPayments clicks on PastPaymentsSection
     Given user is on page BharatPayPastPayments clicks on PaymentsFilter
     Given user is on page BharatPayPastPayments clicks on BillerCategory
-    Given user is on page BharatPayPastPayments clicks on FasTagOption
+    Given user is on page BharatPayPastPayments clicks on ElectricityOption
     Given user is on page BharatPayPastPayments clicks on FilterApply
-    Given user verifies on page BharatPayPastPayments for Indian Highways Management Company Ltd FASTag text in placeholder PastPaymentRecharge
+    Then user verifies on page BharatPayPastPayments for "Pimpri Chinchwad Municipal Corporation(PCMC)" text in placeholder PastPaymentRecharge
     
 @TestCaseKey=UDB-T28161	@Automatable @Smoke @RedmiNote9Pro @Set4 
 	Scenario: Verify that user is able to used filter option "Amount>>0 to 1000" to search past transactions
@@ -769,7 +762,7 @@ Feature: Mobile UI for BBPS Journey
     Given user is on page BharatPayPastPayments clicks on SearchText
     Given user is on page BharatPayPastPayments and types Mahanagar on SearchText
     Given user is on page BharatPayPastPayments clicks on SearchPayments
-    Given user verifies on page BharatPayPastPayments for Mahanagar Gas text in placeholder PastPaymentGas
+    Then user verifies on page BharatPayPastPayments for Mahanagar Gas text in placeholder PastPaymentGas
     
     
 @TestCaseKey=UDB-T28165	@Automatable @Smoke @RedmiNote9Pro @Set4 
@@ -789,7 +782,7 @@ Feature: Mobile UI for BBPS Journey
     Given user is on page BharatPayPastPayments clicks on SearchText
     Given user is on page BharatPayPastPayments and types Mahanagar on SearchText
     Given user is on page BharatPayPastPayments clicks on SearchPayments
-    Given user verifies on page BharatPayPastPayments for Mahanagar Gas text in placeholder PastPaymentGas
+    Then user verifies on page BharatPayPastPayments for Mahanagar Gas text in placeholder PastPaymentGas
     
 @TestCaseKey=UDB-T28166	@Automatable @Smoke @RedmiNote9Pro @Set5 
 	Scenario: Verify that user is able to used filter option Date-This Month to search past transactions
@@ -808,7 +801,7 @@ Feature: Mobile UI for BBPS Journey
     Given user is on page BharatPayPastPayments clicks on SearchText
     Given user is on page BharatPayPastPayments and types Mahanagar on SearchText
     #Given user is on page BharatPayPastPayments clicks on SearchPayments
-    #Given user verifies on page BharatPayPastPayments for Mahanagar Gas text in placeholder PastPaymentGas
+    #Then user verifies on page BharatPayPastPayments for Mahanagar Gas text in placeholder PastPaymentGas
     
 @TestCaseKey=UDB-T28167	@Automatable @Smoke @RedmiNote9Pro @Set5 
 	Scenario: Verify that user is able to used filter option Date-Last 3 Month to search past transactions
@@ -827,7 +820,7 @@ Feature: Mobile UI for BBPS Journey
     Given user is on page BharatPayPastPayments clicks on SearchText
     Given user is on page BharatPayPastPayments and types Mahanagar on SearchText
     #Given user is on page BharatPayPastPayments clicks on SearchPayments
-    #Given user verifies on page BharatPayPastPayments for Mahanagar Gas text in placeholder PastPaymentGas
+    #Then user verifies on page BharatPayPastPayments for Mahanagar Gas text in placeholder PastPaymentGas
     
 @TestCaseKey=UDB-T28168	@Automatable @Smoke @RedmiNote9Pro @Set5 
 	Scenario: Verify that user is able to used filter option Date-Custom Date to search past transactions
@@ -887,7 +880,7 @@ Feature: Mobile UI for BBPS Journey
     Given user is on page BharatPayPageComplaints clicks on ComplaintReasonSelection
     When user is on page BharatPayPageComplaints and types UN015080BAFAAAAAAEHN on EnterBBPSPaymentID
     When user is on page BharatPayPageComplaints and types With more than 50 characters, an alert message for textbox is displayed on EnterRemarks
-    Given user verifies on page BharatPayPageComplaints for Remark character length should not exceed 50 text in placeholder RemarksErrorMsg
+    Then user verifies on page BharatPayPageComplaints for Remark character length should not exceed 50 text in placeholder RemarksErrorMsg
     
  @TestCaseKey=UDB-T28207	@Automatable @Smoke @RedmiNote9Pro @Set5 
 	Scenario: Verify that "Duration" radio button is visible
@@ -933,11 +926,11 @@ Feature: Mobile UI for BBPS Journey
     Given user is on page BharatPayPendingBills clicks on TPIN
     When user is on page BharatPayPendingBills and types 2121 on TpinText
     When user is on page BharatPayPendingBills clicks on TPINContinue
-    Given user verifies on page BharatPayPendingBills for Completed text in placeholder PaymentConfirmation
+    Then user verifies on page BharatPayPendingBills for Completed text in placeholder PaymentConfirmation
     Given user swipe down the page
-    Given user verifies on page BharatPayPendingBills for Share text in placeholder ShareIcon
-    Given user verifies on page BharatPayPendingBills for Other Bills text in placeholder OtherBillsIcon
-    Given user is on page BharatPayPendingBills to check HomeButton is Enabled
+    Then user verifies on page BharatPayPendingBills for Share text in placeholder ShareIcon
+    Then user verifies on page BharatPayPendingBills for Other Bills text in placeholder OtherBillsIcon
+    Then user is on page BharatPayPendingBills to check HomeButton is Enabled
     
     
 @TestCaseKey=UDB-T28129 @TestCaseKey=UDB-T28127 @TestCaseKey=UDB-T28128	@Automatable @Smoke @RedmiNote9Pro @Set5 @Test
@@ -958,9 +951,9 @@ Feature: Mobile UI for BBPS Journey
     Given user is on page BharatPayElectricity clicks on ContinuePayment
     Given user is on page BharatPayElectricity clicks on TPIN
     When user is on page BharatPayElectricity and types 2121 on TpinText
-    Given user verifies on page BharatPayElectricity for **** text in placeholder TPinText
+    Then user verifies on page BharatPayElectricity for **** text in placeholder TPinText
     Given user is on page BharatPayElectricity clicks on ShowTPINIcon
-    Given user verifies on page BharatPayElectricity for 2121 text in placeholder TPinText
+    Then user verifies on page BharatPayElectricity for 2121 text in placeholder TPinText
     Given user is on page BharatPayElectricity clicks on TPINClose
     
     
@@ -980,11 +973,11 @@ Feature: Mobile UI for BBPS Journey
     Given user is on page BharatPayFastag clicks on Search
     Given user is on page BharatPayFastag and types Indian Highways Management on Search
     Given user is on page BharatPayFastag clicks on SelectBiller
-    Given user verifies on page BharatPayFastag for Indian Highways Management text in placeholder FastagHeader
+    Then user verifies on page BharatPayFastag for Indian Highways Management text in placeholder FastagHeader
     Given user is on page BharatPayFastag to check ProviderLogo is Displayed
     Given user is on page BharatPayFastag and types MH01AB1234 on VehicleNumber
     Given user is on page BharatPayFastag clicks on Continue
-    Given user verifies on page BharatPayFastag for Indian Highways Management Company Ltd FASTag text in placeholder FastagProvider
+    Then user verifies on page BharatPayFastag for Indian Highways Management Company Ltd FASTag text in placeholder FastagProvider
     Given user is on page BharatPayFastag verifies amount in FasTagBalance
     Given user is on page BharatPayFastag verifies amount in RechargeAmount
     Given user is on page BharatPayFastag clicks on ContinuePayment
@@ -992,10 +985,10 @@ Feature: Mobile UI for BBPS Journey
     When user is on page BharatPayFastag and types 2121 on TpinText
     When user is on page BharatPayFastag clicks on TPINContinue
     Given user verifies on page BharatPayFastag for Completed text in placeholder PaymentConfirmation
-    Given user verifies on page BharatPayFastag for Indian Highways Management Company Ltd FASTag text in placeholder BillerName
+    Then user verifies on page BharatPayFastag for Indian Highways Management Company Ltd FASTag text in placeholder BillerName
     Given user swipe down the page
-    Given user verifies on page BharatPayFastag for Share text in placeholder ShareIcon
-    Given user is on page BharatPayFastag to check HomeButton is Enabled
+    Then user verifies on page BharatPayFastag for Share text in placeholder ShareIcon
+    Then user is on page BharatPayFastag to check HomeButton is Enabled
   
  
 @TestCaseKey=UDB-T28283 @Automatable @Smoke @RedmiNote9Pro @Set6 
@@ -1077,9 +1070,9 @@ Scenario: Verify that Remarks field is visible and negative testing for "Remarks
     Given user is on page BharatPayPageComplaints clicks on ComplaintReasonSelection
     When user is on page BharatPayPageComplaints and types UN015080BAFAAAAAAEHN on EnterBBPSPaymentID
     When user is on page BharatPayPageComplaints and types Test Script Entered for negative validation of remark section on EnterRemarks
-    Given user is on page BharatPayPageComplaints to check RaiseComplaint is Enabled
+    Then user is on page BharatPayPageComplaints to check RaiseComplaint is Enabled
     Given user is on page BharatPayPageComplaints clicks on RaiseComplaint
-    Given user verifies on page BharatPayPageComplaints for Remark character length should not exceed 50 text in placeholder RemarkAlertVerbiage
+    Then user verifies on page BharatPayPageComplaints for Remark character length should not exceed 50 text in placeholder RemarkAlertVerbiage
     
 @TestCaseKey=UDB-T28227 @TestCaseKey=UDB-T28228	@Automatable @Smoke @RedmiNote9Pro @Set6 
 	Scenario: Verify negative testing for "Amount" field and "Amount suggestion boxes" are visible
@@ -1090,16 +1083,15 @@ Scenario: Verify that Remarks field is visible and negative testing for "Remarks
     #When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     When user scrolls down to "Fastag"
-    Given user is on page BharatPayFastag clicks on Fastag
-    Given user is on page BharatPayFastag clicks on Search
-    Given user is on page BharatPayFastag and types Indian Highways Management on Search
-    Given user is on page BharatPayFastag clicks on SelectBiller
-    Given user is on page BharatPayFastag and types MH01AB1234 on VehicleNumber
-    Given user is on page BharatPayFastag clicks on Continue
-    Given user is on page BharatPayFastag and types 0.00 on Amount
-    Given user is on page BharatPayFastag clicks on ContinuePayment
-    Given user verifies on page BharatPayFastag for Please add the Amount value text in placeholder AmountAlertVerbiage
-    Given user verifies on page BharatPayFastag for ₹1,000 text in placeholder AmountSuggestion
+    Given user is on page BharatPayWater clicks on Water
+    Given user is on page BharatPayWater clicks on Search
+    Given user is on page BharatPayWater and types Pimpri on Search
+    Given user is on page BharatPayWater clicks on SelectBiller
+    Given user is on page BharatPayWater and types 26789365 on ConsumerID
+    Given user is on page BharatPayWater clicks on Continue
+    Given user is on page BharatPayWater and types 0.00 on Amount
+    Given user is on page BharatPayWater clicks on ContinuePayment
+    Then user verifies on page BharatPayWater for "Enter valid bill amount." text in placeholder AmountAlertVerbiage
     
     
 @TestCaseKey=UDB-T28232 @TestCaseKey=UDB-T28235 @TestCaseKey=UDB-T28239 @TestCaseKey=UDB-T28240 @Automatable @Smoke @RedmiNote9Pro @Set6 
@@ -1115,24 +1107,24 @@ Scenario: Verify that Remarks field is visible and negative testing for "Remarks
     Given user is on page BharatPayFastag clicks on Search
     Given user is on page BharatPayFastag and types Indian Highways Management on Search
     Given user is on page BharatPayFastag clicks on SelectBiller
-    Given user verifies on page BharatPayFastag for Indian Highways Management text in placeholder FastagHeader
+    Then user verifies on page BharatPayFastag for Indian Highways Management text in placeholder FastagHeader
     Given user is on page BharatPayFastag and types MH01AB1234 on VehicleNumber
     Given user is on page BharatPayFastag clicks on Continue
     Given user is on page BharatPayFastag clicks on ContinuePayment
     Given user is on page BharatPayFastag clicks on TPIN
     When user is on page BharatPayFastag and types 2121 on TpinText
-		Given user verifies on page BharatPayFastag for **** text in placeholder TPinText
+		Then user verifies on page BharatPayFastag for **** text in placeholder TPinText
 		Given user is on page BharatPayFastag clicks on ShowTPINIcon
-		Given user verifies on page BharatPayFastag for 2121 text in placeholder TPinText
+		Then user verifies on page BharatPayFastag for 2121 text in placeholder TPinText
 		Given user is on page BharatPayFastag to check TPINContinue is Enabled
     When user is on page BharatPayFastag clicks on TPINContinue
-    Given user verifies on page BharatPayFastag for Completed text in placeholder PaymentConfirmation
-    Given user verifies on page BharatPayFastag for Indian Highways Management Company Ltd FASTag text in placeholder BillerName
+    Then user verifies on page BharatPayFastag for Completed text in placeholder PaymentConfirmation
+    Then user verifies on page BharatPayFastag for Indian Highways Management Company Ltd FASTag text in placeholder BillerName
     Given user swipe down the page
-    Given user verifies on page BharatPayFastag for Share text in placeholder ShareIcon
-    Given user is on page BharatPayFastag to check HomeButton is Enabled
-    Given user is on page BharatPayFastag to check DownloadButton is Enabled
-    Given user is on page BharatPayFastag to check OtherBillsButton is Enabled
+    Then user verifies on page BharatPayFastag for Share text in placeholder ShareIcon
+    Then user is on page BharatPayFastag to check HomeButton is Enabled
+    Then user is on page BharatPayFastag to check DownloadButton is Enabled
+    Then user is on page BharatPayFastag to check OtherBillsButton is Enabled
  
  
 @TestCaseKey=UDB-T28083 @TestCaseKey=UDB-T28236 @Automatable @Smoke @RedmiNote9Pro @Set6 
@@ -1146,17 +1138,17 @@ Scenario: Verify that Remarks field is visible and negative testing for "Remarks
     Given user is on page BharatPayPage to check MarketingBanner is Displayed
     Given user is on page BharatPayPage to check BBPSLogo is Displayed
     
-@TestCaseKey=UDB-T28248	@Automatable @Smoke @RedmiNote9Pro @Set6 
-	Scenario: Verify that "Recent Recharges" section is visible
-		Given user logins to app
-    Given user logins to app entering Login PIN
-    Given user is on page DashboardPage clicks on FingerPrint
-    When user scrolls down to "Recharge & Bill Pay"
+#@TestCaseKey=UDB-T28248	@Automatable @Smoke @RedmiNote9Pro @Set6   ---- option of mobile prepaid is out of scope
+#	Scenario: Verify that "Recent Recharges" section is visible
+#		Given user logins to app
+    #Given user logins to app entering Login PIN
+    #Given user is on page DashboardPage clicks on FingerPrint
+    #When user scrolls down to "Recharge & Bill Pay"
     #When user scrolls down to "Loans"
-    Given user is on page DashboardPage clicks on Recharge&BillPay
-    When user scrolls down to "Subscription"
-    Given user is on page BharatPayPrepaid clicks on MobilePrepaid
-    Given user verifies on page BharatPayPrepaid for Recent Recharges text in placeholder RecentRechargeSection
-    Given user verifies on page BharatPayPrepaid for BSNL Prepaid text in placeholder RechargeBillerName
+    #Given user is on page DashboardPage clicks on Recharge&BillPay
+    #When user scrolls down to "Subscription"
+    #Given user is on page BharatPayPrepaid clicks on MobilePrepaid
+    #Then user verifies on page BharatPayPrepaid for Recent Recharges text in placeholder RecentRechargeSection
+    #Then user verifies on page BharatPayPrepaid for BSNL Prepaid text in placeholder RechargeBillerName
     
     

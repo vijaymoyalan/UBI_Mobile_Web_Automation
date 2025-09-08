@@ -105,14 +105,14 @@ When user scrolls down to "PMJJBY Details"
 Given user is on page PMJJBY clicks on NomineeDOB
 Given user selects day 12 month Apr year 2006 and current year is 2025
 Given user is on page PMJJBY clicks on Submit
-Given user verifies on page PMJJBY for VIJAY XXXXX 22239 (Savings Account) text in placeholder AccountName
+Then user verifies on page PMJJBY for VIJAY XXXXX 22239 (Savings Account) text in placeholder AccountName
 When user scrolls down to "City"
 When user scrolls down to "Sum Assured"
 Given user is on page PMJJBY clicks on Confirm&Pay
 Given user is on page PMJJBY clicks on TPIN
 When user is on page PMJJBY and types 2121 on TpinText
 #When user is on page PMJJBY clicks on TPINContinue
-#Given user verifies on page PMJJBY for Please enter correct TPIN, you have 2 more attempts remaining text in placeholder TPINIncorrectMsg
+#Then user verifies on page PMJJBY for Please enter correct TPIN, you have 2 more attempts remaining text in placeholder TPINIncorrectMsg
 
 @TestCaseKey=UDB-T12785	@Automatable @Smoke @RedmiNote9Pro
 Scenario: Validate the ETB user want to change nominee of PMJJBY and on page Nominee details are non-editable
@@ -140,7 +140,7 @@ Given user is on page DashboardPage clicks on Accounts
 Given user is on page AccountsPage clicks on AccountsInvestandInsureTab
 Given user is on page AccountsPage clicks on InvestandInsureAddAccount
 Given user is on page AccountsPage clicks on PMJJBYInsurance
-Given user verifies on page PMJJBY for About the Policy text in placeholder PolicyDetails
+Then user verifies on page PMJJBY for About the Policy text in placeholder PolicyDetails
 When user scrolls down to "How to Apply?"
 Given user swipe down the page
 
@@ -155,9 +155,9 @@ When user scrolls down to "Invest & Insure"
 Given user is on page DashboardPage clicks on InvestandInsureViewAll
 Given user is on page InvestAndInsure clicks on PMJJBYInsurance
 Given user is on page PMJJBY clicks on ApplyNow
-Given user verifies on page PMJJBY for Terms & Conditions text in placeholder PolicyT&C
-Given user verifies on page PMJJBY for I accept text in placeholder AcceptButton
-Given user verifies on page PMJJBY for Download T&C text in placeholder DownloadT&CButton
+Then user verifies on page PMJJBY for Terms & Conditions text in placeholder PolicyT&C
+Then user verifies on page PMJJBY for I accept text in placeholder AcceptButton
+Then user verifies on page PMJJBY for Download T&C text in placeholder DownloadT&CButton
 Given user is on page PMJJBY clicks on DownloadT&C
 Given user is on page PMJJBY clicks on AllowPermission
 Given user is on page PMJJBY clicks on T&CCloseIcon
@@ -175,9 +175,9 @@ Given user is on page InvestAndInsure clicks on PMJJBYInsurance
 Given user is on page PMJJBY clicks on ApplyNow
 Given user is on page PMJJBY clicks on Terms&Conditions
 Given user is on page PMJJBY clicks on SelectDebitAccount
-Given user verifies on page PMJJBY for Savings Account text in placeholder SavingsAccount
-#Given user verifies on page PMJJBY for Current Account text in placeholder CurrentAccount -- 4thJul25:as per updated requirement only SA to be displayed in accounts.
-#Given user verifies on page PMJJBY for Overdraft Account text in placeholder OverdraftAccount -- 4thJul25:as per updated requirement only SA to be displayed in accounts.
+Then user verifies on page PMJJBY for Savings Account text in placeholder SavingsAccount
+#Then user verifies on page PMJJBY for Current Account text in placeholder CurrentAccount -- 4thJul25:as per updated requirement only SA to be displayed in accounts.
+#Then user verifies on page PMJJBY for Overdraft Account text in placeholder OverdraftAccount -- 4thJul25:as per updated requirement only SA to be displayed in accounts.
 
 
 @TestCaseKey=UDB-T12816 @TestCaseKey=UDB-T12817 @TestCaseKey=UDB-T12819	@Automatable @Smoke @RedmiNote9Pro
@@ -191,7 +191,7 @@ Given user is on page DashboardPage clicks on InvestandInsureViewAll
 Given user is on page InvestAndInsure clicks on PMJJBYInsurance
 Given user is on page PMJJBY clicks on ApplyNow
 Given user is on page PMJJBY clicks on Terms&Conditions
-Given user verifies on page PMJJBY for Savings Account text in placeholder AccountNameDisplayed
+Then user verifies on page PMJJBY for Savings Account text in placeholder AccountNameDisplayed
 Given user is on page PMJJBY verifies amount in AccountBalance
 Given user is on page PMJJBY clicks on SelectDebitAccount
 #Given user is on page PMJJBY clicks on CurrentAccount -- 4thJul25:as per updated reuirement only SA to be displayed in accounts.
@@ -207,7 +207,7 @@ Given user is on page DashboardPage clicks on InvestandInsureViewAll
 Given user is on page InvestAndInsure clicks on PMJJBYInsurance
 Given user is on page PMJJBY clicks on ApplyNow
 Given user is on page PMJJBY clicks on Terms&Conditions
-Given user verifies on page PMJJBY for Vijay Joseph Moyalan text in placeholder CustomerFetchedName
+Then user verifies on page PMJJBY for Vijay Joseph Moyalan text in placeholder CustomerFetchedName
 
 @TestCaseKey=UDB-T12822 @TestCaseKey=UDB-T12823	@Automatable @Smoke @RedmiNote9Pro
 Scenario: Verify that customer DOB is fetched and displayed
@@ -220,7 +220,7 @@ Given user is on page DashboardPage clicks on InvestandInsureViewAll
 Given user is on page InvestAndInsure clicks on PMJJBYInsurance
 Given user is on page PMJJBY clicks on ApplyNow
 Given user is on page PMJJBY clicks on Terms&Conditions
-Given user verifies on page PMJJBY for 23 Dec 1984 text in placeholder CustomerFetchedDOB
+Then user verifies on page PMJJBY for 23 Dec 1984 text in placeholder CustomerFetchedDOB
 
 
 @TestCaseKey=UDB-T12824 @TestCaseKey=UDB-T12825	@Automatable @Smoke @RedmiNote9Pro
@@ -234,7 +234,7 @@ Given user is on page DashboardPage clicks on InvestandInsureViewAll
 Given user is on page InvestAndInsure clicks on PMJJBYInsurance
 Given user is on page PMJJBY clicks on ApplyNow
 Given user is on page PMJJBY clicks on Terms&Conditions
-Given user verifies on page PMJJBY for MOYALAN ANTONY JOSEPH text in placeholder FatherNameTextBox
+Then user verifies on page PMJJBY for MOYALAN ANTONY JOSEPH text in placeholder FatherNameTextBox
 When user is on page PMSBY and types Test Script Name on FatherNameTextBox
 
 
@@ -277,7 +277,7 @@ Given user is on page PMJJBY clicks on Submit
 When user scrolls down to "City"
 When user scrolls down to "Sum Assured"
 Given user is on page PMJJBY clicks on Confirm&Pay
-Given user verifies on page PMJJBY for 4 digit Transaction PIN text in placeholder TPINTextField
+Then user verifies on page PMJJBY for 4 digit Transaction PIN text in placeholder TPINTextField
 Given user is on page PMJJBY clicks on TPIN
 When user is on page PMJJBY and types 2121 on TpinText
 Given user is on page PMJJBY to check TPINContinue is Enabled
@@ -296,7 +296,7 @@ Given user is on page PMJJBY clicks on ApplyNow
 Given user is on page PMJJBY clicks on Terms&Conditions
 Given user swipe down the page
 Given user is on page PMJJBY clicks on Submit
-Given user verifies on page PMJJBY for Please add nominee date of birth text in placeholder DOBValidationError
+Then user verifies on page PMJJBY for Please add nominee date of birth text in placeholder DOBValidationError
 Given user is on page PMJJBY clicks on NomineeDOB
 Given user selects day 12 month Apr year 2001 and current year is 2025
 Given user is on page PMJJBY clicks on Submit
