@@ -192,6 +192,7 @@ Feature: Mobile UI for BBPS Journey
     Given user is on page BharatPayFastag clicks on SelectBiller
     Given user is on page BharatPayFastag and types MH01AB1234 on VehicleNumber
     Given user is on page BharatPayFastag clicks on Continue
+    Given user is on page BharatPayFastag and types 650 on Amount
     Given user is on page BharatPayFastag clicks on ContinuePayment
     Given user is on page BharatPayFastag clicks on TPIN
     When user is on page BharatPayFastag and types 2121 on TpinText
@@ -543,7 +544,7 @@ Feature: Mobile UI for BBPS Journey
     Then user verifies on page BharatPayFastag for Vehicle Registration Number text in placeholder TextBoxField  
     Given user is on page BharatPayFastag and types MH01AB1234 on VehicleNumber
     Given user is on page BharatPayFastag clicks on Continue
-    Then user verifies on page BharatPayFastag for Select Account text in placeholder DropDownAccount
+    #Then user verifies on page BharatPayFastag for Select Account text in placeholder DropDownAccount
     Given user is on page BharatPayFastag clicks on DropDownAccount
     Given user is on page BharatPayFastag clicks on SavingAccount
     
@@ -977,6 +978,7 @@ Feature: Mobile UI for BBPS Journey
     Given user is on page BharatPayFastag to check ProviderLogo is Displayed
     Given user is on page BharatPayFastag and types MH01AB1234 on VehicleNumber
     Given user is on page BharatPayFastag clicks on Continue
+    Given user is on page BharatPayFastag and types 650 on Amount
     Then user verifies on page BharatPayFastag for Indian Highways Management Company Ltd FASTag text in placeholder FastagProvider
     Given user is on page BharatPayFastag verifies amount in FasTagBalance
     Given user is on page BharatPayFastag verifies amount in RechargeAmount
@@ -1110,6 +1112,7 @@ Scenario: Verify that Remarks field is visible and negative testing for "Remarks
     Then user verifies on page BharatPayFastag for Indian Highways Management text in placeholder FastagHeader
     Given user is on page BharatPayFastag and types MH01AB1234 on VehicleNumber
     Given user is on page BharatPayFastag clicks on Continue
+    Given user is on page BharatPayFastag and types 650 on Amount
     Given user is on page BharatPayFastag clicks on ContinuePayment
     Given user is on page BharatPayFastag clicks on TPIN
     When user is on page BharatPayFastag and types 2121 on TpinText

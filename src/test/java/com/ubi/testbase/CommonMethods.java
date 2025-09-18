@@ -3,6 +3,7 @@ package com.ubi.testbase;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.security.SecureRandom;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.time.LocalDate;
@@ -47,6 +48,7 @@ public class CommonMethods extends PageObject {
 	String accountNumber = "407101234541662";
 	String maskedAccountNumber;
 	VerificationCommonMethods verification = new VerificationCommonMethods();
+	GenerateRandomString randomStringUtil = new GenerateRandomString();
 
 	public ORPageModel getElementFromObject(List<ORPageModel> listofElements, String name) {
 		ORPageModel element = new ORPageModel();
@@ -1288,6 +1290,7 @@ public void verifyText(String actualText, String expectedText) {
 	
 		clickObjectNtimes(findElement(TestBase._ORIntializater.get(pageName),name),n);
 		}
+	
 	private void clickObjectNtimes(ORPageModel element, int n) {
 		for(int i=0; i<n;i++)
 		{
@@ -1295,5 +1298,16 @@ public void verifyText(String actualText, String expectedText) {
 		}
 	}
 	
+	
+	// added by Sachin
+	public void pressBackbuttonOnMobile()
+	{
+		
+		androidDriver = ((AndroidDriver) ((WebDriverFacade) getDriver()).getProxiedDriver());
+		
+			// Press Back button on mobile
+		androidDriver.pressKey(new KeyEvent(AndroidKey.BACK));
+	}
+		
 
 }

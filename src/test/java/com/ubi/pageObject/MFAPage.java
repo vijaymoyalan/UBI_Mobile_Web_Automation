@@ -36,6 +36,7 @@ public class MFAPage {
 	public ORPageModel MSMELoginPin4 = common.findElement(listofElements,"MSMELoginPin4");
 	public ORPageModel MSMELoginButton = common.findElement(listofElements,"MSMELoginButton");
 	
+	
 	public ORPageModel MSMEAllowPhone = common.findElement(listofElements,"MSMEAllowPhone");
 	public ORPageModel MSMEAllowSMS = common.findElement(listofElements,"MSMEAllowSMS");
 	public ORPageModel MSMEAllowLocation = common.findElement(listofElements,"MSMEAllowLocation");

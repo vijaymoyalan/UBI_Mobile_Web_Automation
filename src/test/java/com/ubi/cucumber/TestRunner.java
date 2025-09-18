@@ -76,7 +76,7 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 //		features = "src\\test\\resources\\features\\Mobile\\MSME\\Help&Support.feature", tags="")
 //		features = "src\\test\\resources\\features\\Mobile\\MSME\\FundTransfer.feature", tags="@TestCaseKey=UDB-T47761")
 //features = "src\\test\\resources\\features\\Mobile\\MSME\\FundTransfer.feature", tags="@Set3")
-//		features = "src\\test\\resources\\features\\Mobile\\MSME\\MSME_BQR_Mobile.feature", tags="@TestCaseKey=UDB-T59569")
+//		features = "src\\test\\resources\\features\\Mobile\\MSME\\MSME_BQR_Mobile.feature", tags="@TestCaseKey=UDB-T59405")
 //		features = "src\\test\\resources\\features\\Mobile\\MVP\\ASBA.feature", tags="@Test-T0082")
 		
 //		features = "src\\test\\resources\\features\\Mobile\\MVP\\Turtlemint.feature") --
@@ -84,10 +84,15 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 //		features = "src\\test\\resources\\features\\Mobile\\MVP\\fisdom.feature")
 //		features = "src\\test\\resources\\features\\Mobile\\MVP\\PMSBY.feature") --
 //		features = "src\\test\\resources\\features\\Mobile\\MVP\\PMJJBY.feature") --
-		features = "src\\test\\resources\\features\\Mobile\\MVP\\LAD.feature")
+//		features = "src\\test\\resources\\features\\Mobile\\MVP\\LAD.feature")
 //		features = "src\\test\\resources\\features\\Mobile\\MVP\\BBPS.feature")
 		
-//		features = "src\\test\\resources\\features\\Mobile\\MSME\\MSME_BQR_Mobile.feature")
+//		features = "src\\test\\resources\\features\\Mobile\\MSME\\MSME_BQR_Mobile.feature", tags="@TestCaseKey=UDB-T45650")
+//features = "src\\test\\resources\\features\\Mobile\\MSME\\MSME_Login.feature",tags="@TestCaseKey=UDB-T45834")
+		
+//		features = "src\\test\\resources\\features\\Mobile\\MSME\\Help&Support.feature", tags="@TestCaseKey=UDB-T44594 or @TestCaseKey=UDB-T44526 or @TestCaseKey=UDB-T44603")
+features = "src\\test\\resources\\features\\Mobile\\MSME\\FundTransfer.feature", tags="@TestCaseKey=UDB-T47716 or @TestCaseKey=UDB-T47753 or @TestCaseKey=UDB-T47817 or @TestCaseKey=UDB-T47816 or @TestCaseKey=UDB-T47729 or @TestCaseKey=UDB-T47733 or @TestCaseKey=UDB-T47692 or @TestCaseKey=UDB-T47708 or @TestCaseKey=UDB-T47738 or @TestCaseKey=UDB-T47721 or @TestCaseKey=UDB-T47712 or @TestCaseKey=UDB-T47852 or @TestCaseKey=UDB-T47849 or @TestCaseKey=UDB-T47845 or @TestCaseKey=UDB-T47861 or @TestCaseKey=UDB-T47859 or @TestCaseKey=UDB-T47860 or @TestCaseKey=UDB-T47862 or @TestCaseKey=UDB-T47656" )
+//		features = "src\\test\\resources\\features\\Mobile\\MSME\\MSME_HomePage.feature")
 
 //Below feature link for Feature FD-RD		
 //features = "src\\test\\resources\\features\\API\\MVP\\FixedRecurringDeposit\\FDRDSmoke.feature",tags="@TestCaseKey=UDB-T7639")
