@@ -95,14 +95,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
-class SerenityJsonMerger {
+public class SerenityJsonMerger {
 
 public static void main(String[] args) {
 // Path to the directory containing JSON files
-String jsonDirectoryPath = "C:\\Users\\ShoaibRehman\\Automation\\ubiAutomationapi\\ubiAutomation\\target\\serenity-reports";
+String jsonDirectoryPath = "target\\serenity-reports";
 
 // Output CSV file
-String outputCsvPath = "C:\\Users\\ShoaibRehman\\Automation\\ubiAutomationapi\\ubiAutomation\\src\\test\\java\\com\\ubi\\testbase\\testbasetest_results.csv";
+String outputCsvPath = "target\\serenity-reports\\test_results.csv";
 
 // Create ObjectMapper instance
 ObjectMapper objectMapper = new ObjectMapper();

@@ -31,8 +31,8 @@ import net.serenitybdd.junit.runners.*;
 @RunWith(SerenityRunner.class)
 public class TestBase  {
 
-	@Managed(driver="appium")
-	WebDriver appium;
+	@Managed(driver="chrome")
+	WebDriver driver;
 	
 
     public static String baseUrlBrowser = "";

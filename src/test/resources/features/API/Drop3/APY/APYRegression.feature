@@ -1,4 +1,4 @@
-Feature: Regression of APY API
+Feature: Regression of APY API D3
 Background: SettingFileHandlerPath
 Given user sets the file path for this feature file for Drop3/APY
 

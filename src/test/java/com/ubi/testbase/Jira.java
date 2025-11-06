@@ -256,10 +256,6 @@ public class Jira {
         String testCycleKey = "UDB-C175";  // The test cycle to which these test cases belong
 
         // Login and fetch xsrf token
-//        String xsrfToken = login();
-//        String cookie = String.format("JSESSIONID=%s; atlassian.xsrf.token=%s", "33B2F43601931888490897D766B71C74", xsrfToken);
-
-//        Map<String, String> cookies = login();
         Map<String, String> cookies = login();
         String jsessionId = cookies.get("JSESSIONID");
         String xsrfToken = cookies.get("atlassian.xsrf.token");
@@ -327,9 +323,8 @@ public class Jira {
             JSONObject jsonResponse = new JSONObject(content.toString());
             String contextJwt = jsonResponse.optString("contextJwt", "Key not found");
             System.out.println("contextJwt: " + contextJwt);
-//
-//
-//            // Close connection
+
+            // Close connection
            connection.disconnect();
             return contextJwt;
 

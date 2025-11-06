@@ -1,4 +1,4 @@
-Feature: Smoke of APY
+Feature: Smoke of APY D3
 Background: SettingFileHandlerPath
 Given user sets the file path for this feature file for Drop3/APY
 

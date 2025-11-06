@@ -1,4 +1,4 @@
-Feature: Mobile UI for SSA Journey
+Feature: Mobile UI for SSA UDB Journey
 
 @TestCaseKey=UDB-1 @Automatable @Smoke @RedmiNote9Pro
 Scenario: Validate the ETB user apply for SSY Account from Dashboard-Invest & Insure(1st Entry Point) 

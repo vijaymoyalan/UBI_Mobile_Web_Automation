@@ -10,6 +10,7 @@ import java.time.LocalDate;
 import java.time.Month;
 import java.time.format.DateTimeFormatter;
 import java.time.format.TextStyle;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Date;
@@ -24,6 +25,7 @@ import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.interactions.Sequence;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import com.google.common.collect.ImmutableMap;
 import com.ubi.base.ORPageModel;
@@ -43,12 +45,14 @@ import java.util.regex.Pattern;
 
 public class CommonMethods extends PageObject {
 
-   AndroidDriver androidDriver = ((AndroidDriver) ((WebDriverFacade) getDriver()).getProxiedDriver());
+	AndroidDriver androidDriver = ((AndroidDriver) ((WebDriverFacade) getDriver()).getProxiedDriver());
 	WebElement elementObject = null;
 	String accountNumber = "407101234541662";
 	String maskedAccountNumber;
 	VerificationCommonMethods verification = new VerificationCommonMethods();
 	GenerateRandomString randomStringUtil = new GenerateRandomString();
+//	String APP_PACKAGE = "com.ubi.msme.uat";
+	String APP_PACKAGE = "com.infra.ubi";
 
 	public ORPageModel getElementFromObject(List<ORPageModel> listofElements, String name) {
 		ORPageModel element = new ORPageModel();
@@ -96,7 +100,7 @@ public class CommonMethods extends PageObject {
 	}
 
 	public void findElement(WebElement element) {
-		WebDriverWait wait = new WebDriverWait(androidDriver, Duration.ofSeconds(15));
+		WebDriverWait wait = new WebDriverWait(androidDriver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 
@@ -203,7 +207,7 @@ public void verifyText(String actualText, String expectedText) {
 		int attempts = 0;
 		while (attempts < 3) {
 			try {
-				WebDriverWait wait = new WebDriverWait(androidDriver, Duration.ofSeconds(60));
+				WebDriverWait wait = new WebDriverWait(androidDriver, Duration.ofSeconds(20));
 				wait.until(ExpectedConditions.visibilityOf(findElement(element)));
 				break;
 			} catch (StaleElementReferenceException | NoSuchElementException e) {
@@ -241,7 +245,7 @@ public void verifyText(String actualText, String expectedText) {
 		System.out.println("Inside clickElementByText method");
 		WebElement element = androidDriver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"textId\" and @text=\"" + text + "\"]"));
         
-		WebDriverWait wait = new WebDriverWait(androidDriver, Duration.ofSeconds(60));
+		WebDriverWait wait = new WebDriverWait(androidDriver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.visibilityOf(element));
         // Click the element
         if (element != null) {
@@ -260,7 +264,6 @@ public void verifyText(String actualText, String expectedText) {
 	
 	public void keyboardNext() {
 		androidDriver.hideKeyboard();
-
 	}
 	
 
@@ -676,7 +679,6 @@ public void verifyText(String actualText, String expectedText) {
 			    verification.verificationConditionFalse(elementText.contains("-"), "Text should not contain hyphen");
 			}
 			break;
-			
 		default:
 			break;
 		}
@@ -1025,7 +1027,7 @@ public void verifyText(String actualText, String expectedText) {
 // this method is used to handle the pop-up msg of Start Over and Resume during account creation
 	public void clickOnStartOver(ORPageModel element) throws InterruptedException {
 	    WebElement StartOver = null;
-	    androidDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+	    androidDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	    try {
 	        //find element
 	        StartOver = findElement(element);
@@ -1071,10 +1073,13 @@ public void verifyText(String actualText, String expectedText) {
 	    }
 	}
 	
-	public void enterOTP(String pageName, String name, String OTPtext) {
+	public void enterOTP(String OTPMode, String pageName, String name, String OTPtext) {
 		System.out.println("inside enterOTP method");
 		// element.isEnabled();
 		String otp = OTPtext;
+		
+		switch (OTPMode) {
+    	case "SMS": 
 		otp = readOTPFromSMS();
 		System.out.println("OTP found! " + otp);
 		if (otp != null) {
@@ -1082,6 +1087,22 @@ public void verifyText(String actualText, String expectedText) {
 			enterText(findElement(TestBase._ORIntializater.get(pageName), name), otp);
 		} else {
 			System.out.println("OTP not found!");
+		}
+		break;
+		
+    	case "Email": 
+    		otp = readOTPFromEmail();
+    		System.out.println("OTP found! " + otp);
+    		if (otp != null) {
+    			System.out.println("OTP found! " + otp);
+    			enterText(findElement(TestBase._ORIntializater.get(pageName), name), otp);
+    		} else {
+    			System.out.println("OTP not found!");
+    		}
+    		break;
+    	default:
+   		 System.out.println("Switch Case of reading OTP");
+   		 break;
 		}
 	}
 	
@@ -1096,32 +1117,12 @@ public void verifyText(String actualText, String expectedText) {
 	        Thread.sleep(3000); 
 			System.out.println("Notification panel opened!");
 			
-			
-			// Possible element IDs for notification text
-//			String[] possibleIds = { 
-//					"com.android.systemui:id/notification_panel", // Common ID
-//					"android:id/message_text", // Alternative ID
-//					"com.google.android.gms:id/message" // Some devices
-//			};
-//			
 			String[] possibleIds = { 
 					"android:id/message_text", // Alternative ID
 					"com.android.systemui:id/notification_panel", // Common ID
 					"com.android.systemui:id/notification_container_parent",
 					"android:id/notification_messaging",
 			};
-//			
-			
-//			String[] possibleIds = { 
-//					"com.android.systemui:id/text",
-//		            "com.android.systemui:id/notification_text",
-//		            "android:id/message",
-//		            "android:id/big_text",
-//		            "com.android.systemui:id/big_text",
-//		            "com.miui.securitycenter:id/message",
-//		            "com.google.android.gms:id/message",
-//		            "com.android.systemui:id/notification_main_column"
-//			};
 			
 			List<WebElement> messages = null;
 			for (String id : possibleIds) {
@@ -1169,13 +1170,11 @@ public void verifyText(String actualText, String expectedText) {
 
 	                } catch (Exception e) {
 	                    System.out.println("Error clicking Mark as Read: " + e.getMessage());
-	                }
-			
+	                }	
 					
-					
-			// Close notification shade
+			// Close notification shade -- if clear all notification is moving back to mobile screen then comment below back() method
 //					androidDriver.pressKey(new KeyEvent(AndroidKey.BACK));
-					androidDriver.navigate().back();
+//					androidDriver.navigate().back();
 					return otp;
 				}
 			}
@@ -1183,7 +1182,120 @@ public void verifyText(String actualText, String expectedText) {
 		} catch (Exception e) {
 			System.out.println("Error reading SMS: " + e.getMessage());
 		}
+		
+		// Click Clear All notification
+		androidDriver.findElement(By.id("com.android.systemui:id/dismiss_view")).click();
 		return null;
+	}
+	
+	public String readOTPFromEmail() {
+	    try {
+	        Thread.sleep(7000); // Wait for notification to arrive
+
+	        // Expand notification shade
+	        Runtime.getRuntime().exec("adb shell cmd statusbar expand-notifications");
+	        Thread.sleep(3000);
+	        System.out.println("Notification panel opened!");
+
+	        try {
+	            // Try to expand grouped notification if present
+	            try {
+	                WebElement textElement = androidDriver.findElement(
+	                    AppiumBy.androidUIAutomator(
+	                        "new UiSelector().resourceId(\"android:id/expand_button_touch_container\").instance(0)"
+	                    )
+	                );
+	                textElement.click();
+	            } catch (NoSuchElementException nse) {
+	                System.out.println("Expand button not found, continuing...");
+	            }
+
+	            // Possible IDs where OTP might appear
+	            String[] possibleIds = {
+	                "android:id/big_text",
+	                "com.android.systemui:id/notification_panel",
+	                "com.android.systemui:id/notification_container_parent",
+	                "android:id/notification_messaging",
+	            };
+
+	            List<WebElement> messages = new ArrayList<>();
+	            for (String id : possibleIds) {
+	                try {
+	                    messages = androidDriver.findElements(By.id(id));
+	                    if (!messages.isEmpty()) {
+	                        System.out.println("Found messages using ID: " + id);
+	                        break;
+	                    }
+	                } catch (NoSuchElementException nse) {
+	                    continue;
+	                }
+	            }
+
+	            if (messages == null || messages.isEmpty()) {
+	                System.out.println("No SMS notifications found!");
+	                return null;
+	            }
+
+	            // Regex pattern to extract 4–6 digit OTP
+	            Pattern pattern = Pattern.compile("\\b\\d{4,6}\\b");
+	            for (WebElement message : messages) {
+	                String smsText = message.getText();
+	                System.out.println("SMS Found: " + smsText);
+
+	                Matcher matcher = pattern.matcher(smsText);
+	                if (matcher.find()) {
+	                    String otp = matcher.group();
+	                    System.out.println("Extracted OTP: " + otp);
+
+	                    // Try clicking "Mark as read"
+	                    try {
+	                        List<WebElement> markAsReadButtons = androidDriver.findElements(
+	                            By.xpath("//android.widget.Button[@content-desc=\"Mark as read\"]")
+	                        );
+	                        if (!markAsReadButtons.isEmpty()) {
+	                            markAsReadButtons.get(0).click();
+	                            System.out.println("Clicked 'Mark as read'");
+	                        } else {
+	                            System.out.println("Mark as read button not found!");
+	                        }
+	                    } catch (NoSuchElementException nse) {
+	                        System.out.println("No 'Mark as read' button available.");
+	                    }
+
+	                    // Close notification
+	                    try {
+	                        androidDriver.findElement(By.id("com.android.systemui:id/dismiss_view")).click();
+	                    } catch (NoSuchElementException nse) {
+	                        System.out.println("No dismiss/clear button found.");
+	                    }
+	                    androidDriver.pressKey(new KeyEvent(AndroidKey.BACK));
+
+	                    return otp;
+	                }
+	            }
+	            System.out.println("OTP not found in notifications!");
+	        } catch (Exception e) {
+	            System.out.println("Error while processing notifications: " + e.getMessage());
+	        }
+
+	        // Close notification
+	        try {
+	            androidDriver.findElement(By.id("com.android.systemui:id/dismiss_view")).click();
+	        } catch (NoSuchElementException nse) {
+	            System.out.println("No dismiss button found at cleanup.");
+	        }
+	        androidDriver.pressKey(new KeyEvent(AndroidKey.BACK));
+
+	    } catch (Exception e) {
+	        System.out.println("Fatal error in readOTPFromEmail(): " + e.getMessage());
+	        try {
+	            androidDriver.findElement(By.id("com.android.systemui:id/dismiss_view")).click();
+	            androidDriver.navigate().back();
+	        } catch (NoSuchElementException nse) {
+	            System.out.println("No dismiss button found in fallback cleanup.");
+	        }
+	    }
+	    return null;
 	}
 	
 	
@@ -1262,6 +1374,28 @@ public void verifyText(String actualText, String expectedText) {
 		}
 	}
 	
+	
+	public void selectTodayDate() {
+	    // Get today's date in numeric format (e.g., "15" for the 15th)
+	    String todayDate = LocalDate.now().format(DateTimeFormatter.ofPattern("d"));
+
+	    try {
+	        // Locate the date element using XPath
+	        WebElement dateElement = androidDriver.findElement(By.xpath("//android.widget.TextView[@text='" + todayDate + "']"));
+
+	        // Check if the element is enabled before clicking
+	        if (dateElement.isEnabled()) {
+	            dateElement.click();
+	            System.out.println("Successfully clicked on today's date: " + todayDate);
+	        } else {
+	            System.out.println("Today's date (" + todayDate + ") is disabled and cannot be selected.");
+	        }
+	    } catch (Exception e) {
+	        System.out.println("Could not find today's date element: " + e.getMessage());
+	    }
+	}
+
+	
 	public void clickObjectifdisabled(ORPageModel element) {
 		String checkedAttribute = findElement(element).getAttribute("checked");
 		// If the checked attribute is "false", click the element
@@ -1307,6 +1441,34 @@ public void verifyText(String actualText, String expectedText) {
 		
 			// Press Back button on mobile
 		androidDriver.pressKey(new KeyEvent(AndroidKey.BACK));
+	}
+	
+//	Added by Vijay (25Sep) for hooks implementation
+	public void launchAPP() {
+        if (androidDriver != null) {  
+        	androidDriver.activateApp(APP_PACKAGE); // Launch app 
+        }
+    }
+	
+//	Added by Vijay (25Sep) for hooks implementation
+	 public void closeAPP() {
+	        if (androidDriver != null) {
+	        	androidDriver.terminateApp(APP_PACKAGE); // Close app
+	        }
+	    }
+	 
+
+//		Added by Vijay (29Sep) for text search in UI
+	 public void noTextDisplayed(String textName) {
+		  try {
+			  WebElement textElement = androidDriver.findElement(AppiumBy.androidUIAutomator("new UiSelector().text(\"" + textName + "\")"));
+             boolean elementStatusDisplayedFalse = textElement.isDisplayed();
+             System.out.println("Element Status " + elementStatusDisplayedFalse);
+             verification.verificationNotDisplayed(elementStatusDisplayedFalse, "Element should not be Displayed");
+         } catch (NoSuchElementException e) {
+             System.out.println("Element not found on the page (as expected).");
+             verification.verificationConditionTrue(true, "Element is not displayed as expected");
+         }
 	}
 		
 

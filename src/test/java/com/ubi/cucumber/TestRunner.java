@@ -11,116 +11,73 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-		
-//For running combine features as below
-//features = { 
-//"src/test/resources/features/API/MVP/FixedRecurringDeposit",
-//"src/test/resources/features/API/MVP/PPF",
-//"src/test/resources/features/API/MVP/Registration",
-//"src/test/resources/features/API/MVP/SSA",
-//"src/test/resources/features/API/MVP/NPS"})
-
-//features ="src/test/resources/features/API/MVP/NPS")
-
-//		"src/test/resources/features/API/MVP/AssistedPortal/AssistedPortalRegression.feature",
-//        "src/test/resources/features/API/MVP/AssistedPortal/AssignmentService.feature",
-//        "src/test/resources/features/API/MVP/AssistedPortal/ConsentService.feature",
-//        "src/test/resources/features/API/MVP/AssistedPortal/DashboardService.feature"})
-//-UPI
-//features = "src\\test\\resources\\features\\API\\MVP\\PPF\\PPFRegression.feature",tags="@TestCaseKey=UDB-T7627 or @TestCaseKey=UDB-T7632")
-//features = "src\\test\\resources\\features\\API\\MVP\\PPF\\PPFRegression.feature")
-//		features = {
-//				"src\\test\\resources\\features\\API\\Drop2\\BBPS",
-//				"src\\test\\resources\\features\\API\\Drop2\\ChequeService",
-//				"src\\test\\resources\\features\\API\\Drop2\\CreditCard",
-//				"src\\test\\resources\\features\\API\\Drop2\\DebitCard",
-//				"src\\test\\resources\\features\\API\\Drop2\\FundTransfer",
-//				"src\\test\\resources\\features\\API\\Drop2\\GeneralService",
-//				"src\\test\\resources\\features\\API\\Drop2\\ASBA",
-//				//"src\\test\\resources\\features\\API\\Drop2\\GovtScheme",
-//				"src\\test\\resources\\features\\API\\Drop2\\NCMC",
-//			     "src\\test\\resources\\features\\API\\Drop2\\UPI"})
-		
 				
-//		features = {
-//                "src/test/resources/features/API/Drop2/GeneralService"
-//        },
-//        glue = "com.ubi.cucumber.steps.api.mvp", // path to step definition classes
-//        plugin = {"json:target/cucumber-report.json", "html:target/cucumber-html-report.html"} // specify reporting options
-//)
+//		features = "src\\test\\resources\\features\\Mobile\\MVP\\Turtlemint.feature",
+//		glue = {"com.ubi.cucumber.steps.mobile.mvp","com.ubi.hooks.mobile"})
+		
+//		features = "src\\test\\resources\\features\\Mobile\\MVP\\Nuclei.feature",
+//		glue = {"com.ubi.cucumber.steps.mobile.mvp","com.ubi.hooks.mobile"})
+		
+//		features = "src\\test\\resources\\features\\Mobile\\MVP\\fisdom.feature",
+//		glue = {"com.ubi.cucumber.steps.mobile.mvp","com.ubi.hooks.mobile"})
+		
+//		features = "src\\test\\resources\\features\\Mobile\\MVP\\PMSBY.feature",
+//		glue = {"com.ubi.cucumber.steps.mobile.mvp","com.ubi.hooks.mobile"})
 
-//		features = {
-//				"src\\test\\resources\\features\\Mobile\\MVP\\Turtlemint.feature",
-//				"src\\test\\resources\\features\\Mobile\\MVP\\Nuclei.feature",
-//				"src\\test\\resources\\features\\Mobile\\MVP\\LAD.feature",
-//				"src\\test\\resources\\features\\Mobile\\MVP\\PMJJBY.feature",
-//				"src\\test\\resources\\features\\Mobile\\MVP\\PMSBY.feature"
-//				}, tags = "@PilotRun")
-//        features = "src\\test\\resources\\features\\Mobile\\MVP\\FDFlow.feature", tags="@TestCaseKey=UDB-T9654")
-//features = "src\\test\\resources\\features\\Mobile\\MVP\\PMSBY.feature", tags="@TestCaseKey=UDB-T12485")
+//		features = "src\\test\\resources\\features\\Mobile\\MVP\\PMJJBY.feature",
+//		glue = {"com.ubi.cucumber.steps.mobile.mvp","com.ubi.hooks.mobile"})
 
-//features = "src\\test\\resources\\features\\Mobile\\MVP\\SSA_P2.feature", tags="@TestCaseKey=UDB-T1171")
-		//features = "src\\test\\resources\\features\\Mobile\\MVP\\genAICS.feature")
-//features = "src\\test\\resources\\features\\Mobile\\MVP\\PMJJBY.feature", tags="@TestCaseKey=UDB-T12785")
-//features = "src\\test\\resources\\features\\Mobile\\MVP\\RecurringDeposit.feature", tags="@TestCaseKey=UDB-T9560")
-//features = "src\\test\\resources\\features\\Mobile\\MVP\\PMJJBY.feature")
-//		features = "src\\test\\resources\\features\\Mobile\\MVP\\PMJJBY.feature", tags="@TestCaseKey=UDB-001 or @TestCaseKey=UDB-T12743")
-//		features = "src\\test\\resources\\features\\Mobile\\MVP\\PMSBY.feature")
-//features = "src\\test\\resources\\features\\Mobile\\MVP\\Nuclei.feature", tags="@TestCaseKey=TC02 or @TestCaseKey=TC04")
-//  features = "src\\test\\resources\\features\\Mobile\\MVP\\BBPS.feature", tags="@TestCaseKey=UDB-T28227 or @TestCaseKey=UDB-T28130 or @TestCaseKey=UDB-T28131 or @TestCaseKey=UDB-T28085 or @TestCaseKey=UDB-T28239 or @TestCaseKey=UDB-T28248 or @TestCaseKey=UDB-T28187 or @TestCaseKey=UDB-T28175 or @TestCaseKey=UDB-T28103 or @TestCaseKey=UDB-T28268 or @TestCaseKey=UDB-T28092 or @TestCaseKey=UDB-T28094 or @TestCaseKey=UDB-T28091 or @TestCaseKey=UDB-T28123 or @TestCaseKey=UDB-T28154 or @TestCaseKey=UDB-T28161 or @TestCaseKey=UDB-T28158 or @TestCaseKey=UDB-T28165 or @TestCaseKey=UBD-T28125 or @TestCaseKey=UDB-T28080 or @TestCaseKey=UDB-T28170")
-//  features = "src\\test\\resources\\features\\Mobile\\MVP\\LAD.feature", tags="@TestCaseKey=UDB-T017" )
-//features = "src\\test\\resources\\features\\Mobile\\MVP\\LAD.feature")
-//features = "src\\test\\resources\\features\\Mobile\\MVP\\Login&Registration_FailedCases.feature", tags="@TestCaseKey=UDB-T1131")
-//features = "src\\test\\resources\\features\\Mobile\\MVP\\ASBA.feature")
-//features = "src\\test\\resources\\features\\Mobile\\MSME\\Test.feature")
-//		features = "src\\test\\resources\\features\\Mobile\\MSME\\Help&Support.feature", tags="")
-//		features = "src\\test\\resources\\features\\Mobile\\MSME\\FundTransfer.feature", tags="@TestCaseKey=UDB-T47761")
-//features = "src\\test\\resources\\features\\Mobile\\MSME\\FundTransfer.feature", tags="@Set3")
-//		features = "src\\test\\resources\\features\\Mobile\\MSME\\MSME_BQR_Mobile.feature", tags="@TestCaseKey=UDB-T59405")
-//		features = "src\\test\\resources\\features\\Mobile\\MVP\\ASBA.feature", tags="@Test-T0082")
+//		features = "src\\test\\resources\\features\\Mobile\\MVP\\LAD.feature",
+//		glue = {"com.ubi.cucumber.steps.mobile.mvp","com.ubi.hooks.mobile"})
+
+//		features = "src\\test\\resources\\features\\Mobile\\MVP\\BBPS.feature",
+//		glue = {"com.ubi.cucumber.steps.mobile.mvp","com.ubi.hooks.mobile"})
 		
-//		features = "src\\test\\resources\\features\\Mobile\\MVP\\Turtlemint.feature") --
-//		features = "src\\test\\resources\\features\\Mobile\\MVP\\Nuclei.feature") --
-//		features = "src\\test\\resources\\features\\Mobile\\MVP\\fisdom.feature")
-//		features = "src\\test\\resources\\features\\Mobile\\MVP\\PMSBY.feature") --
-//		features = "src\\test\\resources\\features\\Mobile\\MVP\\PMJJBY.feature") --
-//		features = "src\\test\\resources\\features\\Mobile\\MVP\\LAD.feature")
-//		features = "src\\test\\resources\\features\\Mobile\\MVP\\BBPS.feature")
+//		features = "src\\test\\resources\\features\\Mobile\\MSME\\Help&Support.feature",
+//		glue = {"com.ubi.cucumber.steps.mobile.mvp","com.ubi.hooks.mobile"})
 		
-//		features = "src\\test\\resources\\features\\Mobile\\MSME\\MSME_BQR_Mobile.feature", tags="@TestCaseKey=UDB-T45650")
-//features = "src\\test\\resources\\features\\Mobile\\MSME\\MSME_Login.feature",tags="@TestCaseKey=UDB-T45834")
+//		features = "src\\test\\resources\\features\\Mobile\\MSME\\FundTransfer.feature",
+//		glue = {"com.ubi.cucumber.steps.mobile.mvp","com.ubi.hooks.mobile"})
 		
+//		features = "src\\test\\resources\\features\\Mobile\\MSME\\MSME_BQR_Mobile.feature",
+//		glue = {"com.ubi.cucumber.steps.mobile.mvp","com.ubi.hooks.mobile"})
+
+
+
+		
+		
+		
+//		features = "src\\test\\resources\\features\\Mobile\\MSME\\MSME_BQR_Mobile.feature", tags="@TestCaseKey=UDB-T59442 or @TestCaseKey=UDB-T59467 or @TestCaseKey=UDB-T59482 or @TestCaseKey=UDB-T59485 or @TestCaseKey=UDB-T59535 or @TestCaseKey=UDB-T59542 or @TestCaseKey=UDB-T59835 or @TestCaseKey=UDB-T59836",
+//		glue = {"com.ubi.cucumber.steps.mobile.mvp","com.ubi.hooks.mobile"})
+//features = "src\\test\\resources\\features\\Mobile\\MSME\\MSME_Login.feature", tags="@TestCaseKey=UDB-T44105 or @TestCaseKey=UDB-T45879 or @TestCaseKey=UDB-T45835 or @TestCaseKey=UDB-T45881 or @TestCaseKey=UDB-T45817 or @TestCaseKey=UDB-T45756 or @TestCaseKey=UDB-T45761 or @TestCaseKey=UDB-T45713 or @TestCaseKey=UDB-T45834 or @TestCaseKey=UDB-T45878 or @TestCaseKey=UDB-T458149",
+//glue = {"com.ubi.cucumber.steps.mobile.mvp","com.ubi.hooks.mobile"})
+//features = "src\\test\\resources\\features\\Mobile\\MSME\\FundTransfer.feature", tags="@TestCaseKey=UDB-T47816 or @TestCaseKey=UDB-T47714 or @TestCaseKey=UDB-T47715 or @TestCaseKey=UDB-T47726 or @TestCaseKey=UDB-T47729 or @TestCaseKey=UDB-T47845 or @TestCaseKey=UDB-T47818 or @TestCaseKey=UDB-T47813 or @TestCaseKey=UDB-T47759 or @TestCaseKey=UDB-T47757 or @TestCaseKey=UDB-T47754 or @TestCaseKey=UDB-T47758 or @TestCaseKey=UDB-T47760 or @TestCaseKey=UDB-T47809 or @TestCaseKey=UDB-T47799 or @TestCaseKey=UDB-T47733 or @TestCaseKey=UDB-T47708 or @TestCaseKey=UDB-T47718 or @TestCaseKey=UDB-T47721 or @TestCaseKey=UDB-T47712",
+//glue = {"com.ubi.cucumber.steps.mobile.mvp","com.ubi.hooks.mobile"})
+//features = "src\\test\\resources\\features\\Mobile\\MSME\\MSME_BQR_Mobile.feature",
+	
 //		features = "src\\test\\resources\\features\\Mobile\\MSME\\Help&Support.feature", tags="@TestCaseKey=UDB-T44594 or @TestCaseKey=UDB-T44526 or @TestCaseKey=UDB-T44603")
-features = "src\\test\\resources\\features\\Mobile\\MSME\\FundTransfer.feature", tags="@TestCaseKey=UDB-T47716 or @TestCaseKey=UDB-T47753 or @TestCaseKey=UDB-T47817 or @TestCaseKey=UDB-T47816 or @TestCaseKey=UDB-T47729 or @TestCaseKey=UDB-T47733 or @TestCaseKey=UDB-T47692 or @TestCaseKey=UDB-T47708 or @TestCaseKey=UDB-T47738 or @TestCaseKey=UDB-T47721 or @TestCaseKey=UDB-T47712 or @TestCaseKey=UDB-T47852 or @TestCaseKey=UDB-T47849 or @TestCaseKey=UDB-T47845 or @TestCaseKey=UDB-T47861 or @TestCaseKey=UDB-T47859 or @TestCaseKey=UDB-T47860 or @TestCaseKey=UDB-T47862 or @TestCaseKey=UDB-T47656" )
-//		features = "src\\test\\resources\\features\\Mobile\\MSME\\MSME_HomePage.feature")
+//features = "src\\test\\resources\\features\\Mobile\\MSME\\FundTransfer.feature", tags="@TestCaseKey=UDB-T47716 or @TestCaseKey=UDB-T47753 or @TestCaseKey=UDB-T47817 or @TestCaseKey=UDB-T47816 or @TestCaseKey=UDB-T47729 or @TestCaseKey=UDB-T47733 or @TestCaseKey=UDB-T47692 or @TestCaseKey=UDB-T47708 or @TestCaseKey=UDB-T47738 or @TestCaseKey=UDB-T47721 or @TestCaseKey=UDB-T47712 or @TestCaseKey=UDB-T47852 or @TestCaseKey=UDB-T47849 or @TestCaseKey=UDB-T47845 or @TestCaseKey=UDB-T47861 or @TestCaseKey=UDB-T47859 or @TestCaseKey=UDB-T47860 or @TestCaseKey=UDB-T47862 or @TestCaseKey=UDB-T47656" )
+//		features = "src\\test\\resources\\features\\Mobile\\MSME\\MSME_HomePage.feature", tags="@TestCaseKey=UDB-T52200 or @TestCaseKey=UDB-T52194 or @TestCaseKey=UDB-T52201")
 
-//Below feature link for Feature FD-RD		
-//features = "src\\test\\resources\\features\\API\\MVP\\FixedRecurringDeposit\\FDRDSmoke.feature",tags="@TestCaseKey=UDB-T7639")
-//features = "src\\test\\resources\\features\\API\\MVP\\FixedRecurringDeposit\\FDRDRegression.feature")
-//features = "src/test/resources/features/API/MVP/FixedRecurringDeposit")
-//features = "src/test/resources/features/API/MVP/PPF/PPFRegression.feature")
-
-//Below feature link for Feature Login Registration	
-//features = "src/test/resources/features/API/MVP/Registration/RegistrationSmokeBranchToken.feature")
-//features = "src/test/resources/features/API/MVP/Registration/RegistrationSmokeAadhar.feature")
-//features = "src/test/resources/features/API/MVP/Registration/RegistrationSmokeDebitCard.feature")
-//features = "src/test/resources/features/API/MVP/Registration/")
-
-//Below feature link for Feature SSA
-//features = "src\\test\\resources\\features\\API\\MVP\\FixedRecurringDeposit\\FDRDRegression.feature",tags="@TestCaseKey=UDB-T34205")
+		features = "src/test/resources/features/Web/AssistedPortal/AssistedPortal.feature", tags="@TestCaseKey=UDB-T9180",
+		        		   glue = {"com.ubi.cucumber.steps.web","com.ubi.hooks.web"})
 		
-//features="src\\test\\resources\\features\\API\\MVP\\AssistedPortal\\ConsentService.feature")
-//features="C:\\Users\\004QAI744\\UBIAutomation\\automationubi\\ubiAutomation\\src\\test\\resources\\features\\API\\MVP\\AssistedPortal\\DashboardService.feature")
+		
+//		features = "src/test/resources/features/Web/AssistedPortal/BrowserLaunch.feature",
+//	        		   glue = {"com.ubi.cucumber.steps.web","com.ubi.hooks"})
 
-//Below Feature File is for Govt Scheme
-//features = "src\\test\\resources\\features\\API\\Drop2\\GovtScheme\\GovtSchemeMobileRegression.feature")
+//features = "src\\test\\resources\\features\\Mobile\\MSME\\MSME_HomePage.feature", tags="@TestCaseKey=UDB-T52183",
+//glue = {"com.ubi.cucumber.steps.mobile.mvp","com.ubi.hooks.mobile"})	
+		
+//		features = "src\\test\\resources\\features\\Mobile\\MSME\\MSME_HomePage.feature")
+		
+//		features = "src\\test\\resources\\features\\Mobile\\MSME\\FundTransfer.feature",
+//		glue = {"com.ubi.cucumber.steps.mobile.mvp","com.ubi.hooks"})
 
-//Below Feature File is for NCMC
-//features = {"src/test/resources/features/API/Drop2/FundTransfer",
-//"src/test/resources/features/API/Drop2/ExternalServices"})
-
-//Mobile 
-//features = "src/test/resources/features/Mobile/MVP")
+//		features = "src\\test\\resources\\features\\Mobile\\MSME\\MSME_Login.feature")
+		
+//		features = "src\\test\\resources\\features\\Mobile\\MSME\\MSME_BQR_Mobile.feature",
+//		glue = {"com.ubi.cucumber.steps.mobile.mvp","com.ubi.hooks"})
 		
 public class TestRunner extends TestBase{
 	//@Managed(driver="Appium")

@@ -40,8 +40,8 @@ public static String setEnvPath = "";
 	VerificationAPI stepsVerify;
 	JSONComparator jsonComparator;*/
 
-	@Managed(driver="appium")
-	WebDriver appium;
+//	@Managed(driver="appium")
+//	WebDriver appium;
 	MFAPage mfaPage = new MFAPage();
 	CommonMethods common = new CommonMethods();
 	DepositPage depositPage = new DepositPage();
@@ -318,9 +318,9 @@ public static String setEnvPath = "";
 		
 		common.waitTillElementDisplayed(mfaPage.MSMELoginPin1);
 		common.clickObject(mfaPage.MSMELoginPin1);
-		common.enterText(mfaPage.MSMELoginPin1, "3");
-		common.enterText(mfaPage.MSMELoginPin2, "6");
-		common.enterText(mfaPage.MSMELoginPin3, "9");
+		common.enterText(mfaPage.MSMELoginPin1, "2");
+		common.enterText(mfaPage.MSMELoginPin2, "5");
+		common.enterText(mfaPage.MSMELoginPin3, "8");
 		common.enterText(mfaPage.MSMELoginPin4, "0");
 
 		common.clickObject(mfaPage.MSMELoginButton);
@@ -349,10 +349,10 @@ public static String setEnvPath = "";
 		
 	}
 	
-	@Given("^user enters OTP on page (.+) and types (.+) on (.+)$")
-    public void user_entersOTP(String pageName, String OTP, String elementName) {
+	@Given("^user enters (.+) OTP on page (.+) and types (.+) on (.+)$")
+    public void user_entersOTP(String OTPMode, String pageName, String OTP, String elementName) {
                   common.waitTillElementDisplayed(pageName,elementName);
-                   common.enterOTP(pageName,elementName,OTP);
+                   common.enterOTP(OTPMode,pageName,elementName,OTP);
     }
 	
 	@Given("^user swipes left to (.+)$")
@@ -369,6 +369,11 @@ public static String setEnvPath = "";
 	@Given("^user selects yesterday's date$")
 	public void selectDate() {
 		common.selectYesterday();
+	}
+	
+	@Given("^user selects today date from calendar option$")
+	public void selectTodayDate() {
+		common.selectTodayDate();
 	}
 	
 	// Added by Rohit G
@@ -418,5 +423,12 @@ public static String setEnvPath = "";
 
 		common.clickObject(mfaPage.MSMELoginButton);
 	}
+	
+	// added by Vijay M for MSME APP (Text not displayed on APP)
+		@Then("^user verifies text (.+) is not displayed$")
+		public void textNotFound(String textName) {
+			common.noTextDisplayed(textName);
+			
+		}
 	
 }

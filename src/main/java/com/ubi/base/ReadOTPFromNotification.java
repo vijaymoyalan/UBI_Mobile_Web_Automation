@@ -1,9 +1,7 @@
 package com.ubi.base;
 
-import io.appium.java_client.MobileBy;
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.remote.AndroidMobileCapabilityType;
-import io.appium.java_client.remote.MobileCapabilityType;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -15,11 +13,11 @@ import java.util.regex.Pattern;
 public class ReadOTPFromNotification {
     public static void main(String[] args) throws MalformedURLException, InterruptedException {
         DesiredCapabilities caps = new DesiredCapabilities();
-        caps.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
-        caps.setCapability(MobileCapabilityType.DEVICE_NAME, "b0b1c169"); // Change to your device
-        caps.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
-        caps.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.android.settings"); 
-        caps.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".Settings");
+        caps.setCapability("platformName", "Android");
+        caps.setCapability("appium:deviceName", "b0b1c169"); // Change to your device
+        caps.setCapability("appium:automationName", "UiAutomator2");
+        caps.setCapability("appium:appPackage", "com.android.settings"); 
+        caps.setCapability("appium:appActivity", ".Settings");
 
         AndroidDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), caps);
 
@@ -27,7 +25,7 @@ public class ReadOTPFromNotification {
         driver.openNotifications();
         Thread.sleep(2000); // Wait for notifications to load
      // Open latest SMS
-        WebElement latestSMS = driver.findElement(MobileBy.id("android:id/text1"));
+        WebElement latestSMS = driver.findElement(AppiumBy.id("android:id/text1"));
         String smsText = latestSMS.getText();
         System.out.println("SMS Content: " + smsText);
 
