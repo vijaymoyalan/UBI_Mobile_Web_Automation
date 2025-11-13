@@ -10332,6 +10332,41 @@
 				"name": "NPSApplication",
 				"locator": "xpath",
 				"value": "//a[@aria-label=\"NPS Application 219119003412 is assigned to you\"]"
+		},
+		{
+				"name": "GovtSchemeTab",
+				"locator": "xpath",
+				"value": "//a[contains(normalize-space(),\"Govt. Schemes\")]"
+		},
+		{
+				"name": "GovtSchemeSubTab",
+				"locator": "xpath",
+				"value": "//a[contains(normalize-space(),\"Government Schemes\")]"
+		},
+		{
+				"name": "AccessOverInternet",
+				"locator": "xpath",
+				"value": "//a[@aria-label=\"Access Over Internet\"]//*[name()=\"svg\"]"
+		},
+		{
+				"name": "LendingTab",
+				"locator": "xpath",
+				"value": "//a[contains(normalize-space(),\"Lending\")]"
+		},
+		{
+				"name": "LiabilitiesTab",
+				"locator": "xpath",
+				"value": "//a[contains(normalize-space(),\"Liabilities\")]"
+		},
+		{
+				"name": "LiabilitiesSubTab",
+				"locator": "xpath",
+				"value": "(//a[contains(normalize-space(),\"Liabilities\")])[2]"
+		},
+		{
+				"name": "TabHeaderName",
+				"locator": "xpath",
+				"value": "(//div[@role=\"heading\"])[1]"
 		}
 	],
 "GovtSchemePage":[
@@ -10374,7 +10409,70 @@
 				"name": "CloseIcon",
 				"locator": "xpath",
 				"value": "//svg[@aria-hidden=\"true\" and @width=\"24\" and @height=\"24\"]"
+		},
+		{
+				"name": "OpenStatus",
+				"locator": "xpath",
+				"value": "//button[@name=\"Open\"]"
+		},
+		{
+				"name": "FilterApplyButton",
+				"locator": "xpath",
+				"value": "(//button[normalize-space()=\"Apply Filter\"])[1]"
+		},
+		{
+				"name": "FilterOption",
+				"locator": "xpath",
+				"value": "//button[@aria-label=\"Filter\"]"
+		},
+		{
+				"name": "FilterApplicationStatus",
+				"locator": "xpath",
+				"value": "//button[normalize-space()=\"Application Status\"]"
+		},
+		{
+				"name": "ApplicationDate",
+				"locator": "xpath",
+				"value": "(//td[contains(@class,'css-q34dxg')]//div[contains(@class,'css-1xar93x')]//span[contains(@class,'css-yb0lig')]//div[@class='customersApplicationTable__tableBody__cell__primary']//div[@class='customersApplicationTable__tableBody__cell__primary'])[2]"
+		},
+		{
+				"name": "ApplicationSource",
+				"locator": "xpath",
+				"value": "(//td[contains(@class,'css-q34dxg')]//div[contains(@class,'css-1xar93x')]//span[contains(@class,'css-yb0lig')]//div[@class='customersApplicationTable__tableBody__cell__primary']//div[@class='customersApplicationTable__tableBody__cell__primary'])[2]"
+		},
+		{
+				"name": "ApplicationStage",
+				"locator": "xpath",
+				"value": "(//div[contains(@class,\"customersApplicationTable__tableBody__cell__secondary\")])[2]"
+		},
+		{
+				"name": "ApplicationAge",
+				"locator": "xpath",
+				"value": "(//div[@class=\"customersApplicationTable__tableBody__cell__secFlake\"])[1]"
 		}
-		
-	]
+	],
+"AccessOverInternet":[
+		{
+				"name": "AccessOverInternetHeader",
+				"locator": "xpath",
+				"value": "//div[normalize-space(text())=\"Access Over Internet\"]"
+		}
+	],
+"LiabilitiesPage":[
+		{
+				"name": "ApplicationNumber",
+				"locator": "xpath",
+				"value": "(//a[contains(@class,\"customersApplicationTable__tableBody__cell__primary__link\")])[1]"
+		},
+		{
+				"name": "ResumeButton",
+				"locator": "xpath",
+				"value": "//button[normalize-space()=\"Resume\"]"
+		},
+		{
+				"name": "RDDetailsText",
+				"locator": "xpath",
+				"value": "//h5[normalize-space()=\"Recurring Deposit Details\"]"
+		}
+]
 }

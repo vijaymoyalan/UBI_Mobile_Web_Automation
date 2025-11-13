@@ -59,7 +59,7 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 //features = "src\\test\\resources\\features\\Mobile\\MSME\\FundTransfer.feature", tags="@TestCaseKey=UDB-T47716 or @TestCaseKey=UDB-T47753 or @TestCaseKey=UDB-T47817 or @TestCaseKey=UDB-T47816 or @TestCaseKey=UDB-T47729 or @TestCaseKey=UDB-T47733 or @TestCaseKey=UDB-T47692 or @TestCaseKey=UDB-T47708 or @TestCaseKey=UDB-T47738 or @TestCaseKey=UDB-T47721 or @TestCaseKey=UDB-T47712 or @TestCaseKey=UDB-T47852 or @TestCaseKey=UDB-T47849 or @TestCaseKey=UDB-T47845 or @TestCaseKey=UDB-T47861 or @TestCaseKey=UDB-T47859 or @TestCaseKey=UDB-T47860 or @TestCaseKey=UDB-T47862 or @TestCaseKey=UDB-T47656" )
 //		features = "src\\test\\resources\\features\\Mobile\\MSME\\MSME_HomePage.feature", tags="@TestCaseKey=UDB-T52200 or @TestCaseKey=UDB-T52194 or @TestCaseKey=UDB-T52201")
 
-		features = "src/test/resources/features/Web/AssistedPortal/AssistedPortal.feature", tags="@TestCaseKey=UDB-T9180",
+		features = "src/test/resources/features/Web/AssistedPortal/AssistedPortal.feature", tags="@TestCaseKey=UDB-T9126",
 		        		   glue = {"com.ubi.cucumber.steps.web","com.ubi.hooks.web"})
 		
 		

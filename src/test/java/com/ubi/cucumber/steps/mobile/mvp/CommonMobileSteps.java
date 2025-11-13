@@ -369,6 +369,7 @@ public static String setEnvPath = "";
 	@Given("^user selects yesterday's date$")
 	public void selectDate() {
 		common.selectYesterday();
+		
 	}
 	
 	@Given("^user selects today date from calendar option$")
