@@ -1,17 +1,15 @@
 {
-    "errorId": "f8cae435-b3b9-49c9-839d-8448b69c4afc",
-    "errorAt": "2024-12-13T12:50:26.478999309",
+    "errorId": "933d84df-f1a8-4b76-86ea-3802d81634bc",
+    "errorAt": "2025-02-21T12:44:42.121425307",
     "errorLocation": null,
     "error": null,
     "errors": [
         {
             "code": "BAD_REQUEST",
-            "message": "#: required key [channelId] not found, #: required key [schemeCode] not found",
+            "message": "channelId: string [Mrty5B] does not match pattern ^(MB)$",
             "values": null,
             "origmesg": null,
             "errors": null
-        
-}
-    
-]
+        }
+    ]
 }

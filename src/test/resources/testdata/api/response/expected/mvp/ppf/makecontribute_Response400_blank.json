@@ -1,11 +1,12 @@
 {
-    "errorId": "24176d3b-a972-47ad-913e-1f6a8d39ac9c",
-    "errorAt": "2024-08-01T16:51:30.483699039",
+    "errorId": "96b33099-93ca-4afe-b0ce-6e351c61948b",
+    "errorAt": "2025-03-20T12:23:42.706643641",
     "errorLocation": null,
+    "error": null,
     "errors": [
         {
-            "code": "400",
-            "message": "Failed to read HTTP message",
+            "code": "BAD_REQUEST",
+            "message": "Something went wrong. Please try again later.",
             "values": null,
             "origmesg": null,
             "errors": null

@@ -7,7 +7,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     Given user is on page BharatPayElectricity clicks on Electricity
     Given user is on page BharatPayElectricity clicks on Search
@@ -53,7 +53,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     #When user scrolls down to "Water" -- step to skipp
     Given user is on page BharatPayWater clicks on Water
@@ -77,7 +77,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     Given user is on page BharatPayCableTV clicks on CableTV
     Given user is on page BharatPayCableTV clicks on Search
@@ -100,7 +100,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     Given user is on page BharatPayBroadband clicks on Broadband
     Given user is on page BharatPayBroadband clicks on Search
@@ -124,7 +124,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     Given user is on page BharatPayLandline clicks on LandlinePostpaid
     Given user is on page BharatPayLandline clicks on Search
@@ -148,7 +148,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     When user scrolls down to "DTH"
     Given user is on page BharatPayDTH clicks on DTH
@@ -172,7 +172,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     When user scrolls down to "Recharge"
     Then user verifies on page BharatPayRecharge for Recharge text in placeholder RechargeSection
@@ -184,7 +184,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     When user scrolls down to "Fastag"
     Given user is on page BharatPayFastag clicks on Fastag
@@ -209,7 +209,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     When user scrolls down to "Recharge"
     When user scrolls down to "Financial Services"
@@ -237,7 +237,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     When user scrolls down to "Recharge"
     Then user verifies on page BharatPayFinancial for Financial Services text in placeholder FinancialSection
@@ -249,7 +249,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     When user scrolls down to "Financial Services"
     When user scrolls down to "Credit Card"
@@ -275,7 +275,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     When user scrolls down to "Financial Services"
     When user scrolls down to "Recurring Deposit"
@@ -300,7 +300,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     When user scrolls down to "Financial Services"
     When user scrolls down to "Municipal Taxes"
@@ -325,7 +325,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     When user scrolls down to "Others
     Then user verifies on page BharatPayOthers for Others text in placeholder OthersServices 
@@ -362,7 +362,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     When user scrolls down to "Recharge"
     When user scrolls down to "Others"
@@ -376,7 +376,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     When user scrolls down to "Recharge"
     When user scrolls down to "Others"
@@ -397,7 +397,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     When user scrolls down to "Recharge"
     When user scrolls down to "Others"
@@ -410,7 +410,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     When user scrolls down to "Recharge"
     When user scrolls down to "Others"
@@ -425,7 +425,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     Given user is on page BharatPayGas clicks on Gas
     Given user is on page BharatPayGas clicks on Search
@@ -445,7 +445,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     Given user is on page BharatPayGas clicks on Gas
     Given user is on page BharatPayGas clicks on Search
@@ -470,7 +470,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     When user scrolls down to "Recharge"
     When user scrolls down to "Others"
@@ -486,7 +486,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     When user scrolls down to "Recharge"
     When user scrolls down to "Others"
@@ -534,7 +534,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     When user scrolls down to "Fastag"
     Given user is on page BharatPayFastag clicks on Fastag
@@ -593,7 +593,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     Then user verifies on page BharatPayPage for Pending Bills text in placeholder PendingBillsHeader
     
@@ -603,7 +603,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     Given user is on page BharatPayPage clicks on PendingBillsViewAll
     Then user verifies on page BharatPayPage for Something Went Wrong text in placeholder TechnicalError
@@ -626,7 +626,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     When user scrolls down to "Recharge"
     When user scrolls down to "Financial Services"
@@ -640,7 +640,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     When user scrolls down to "Fastag"
     Given user is on page BharatPayFastag clicks on Fastag
@@ -653,7 +653,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     Then user verifies on page BharatPayPage for Bill Payments text in placeholder BBPSPageHeader
     Then user verifies on page BharatPayPage for Pending Bills text in placeholder PendingBillHeader
@@ -664,7 +664,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     Then user verifies on page BharatPayPage for Utilities text in placeholder UtilitiesSection
     When user scrolls down to "Recharge"
@@ -683,7 +683,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     Given user swipe down the page
     Given user is on page BharatPayPastPayments clicks on PastPaymentsSection
@@ -700,7 +700,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     Given user is on page BharatPayElectricity clicks on Electricity
     Given user is on page BharatPayElectricity clicks on Search
@@ -722,7 +722,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     Given user swipe down the page
     Given user is on page BharatPayPastPayments clicks on PastPaymentsSection
@@ -738,7 +738,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     Given user swipe down the page
     Given user is on page BharatPayPastPayments clicks on PastPaymentsSection
@@ -754,7 +754,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     Given user swipe down the page
     Given user is on page BharatPayPastPayments clicks on PastPaymentsSection
@@ -774,7 +774,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     Given user swipe down the page
     Given user is on page BharatPayPastPayments clicks on PastPaymentsSection
@@ -793,7 +793,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     Given user swipe down the page
     Given user is on page BharatPayPastPayments clicks on PastPaymentsSection
@@ -812,7 +812,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     Given user swipe down the page
     Given user is on page BharatPayPastPayments clicks on PastPaymentsSection
@@ -831,7 +831,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     Given user swipe down the page
     Given user is on page BharatPayPastPayments clicks on PastPaymentsSection
@@ -853,7 +853,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     Given user swipe down the page
     Given user is on page BharatPayPastPayments clicks on PastPaymentsSection
@@ -875,7 +875,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     Given user swipe down the page
     Given user is on page BharatPayPage clicks on Complaints
@@ -891,7 +891,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     Given user swipe down the page
     Given user is on page BharatPayPage clicks on Complaints
@@ -906,7 +906,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     Given user swipe down the page
     Given user is on page BharatPayPage clicks on Complaints
@@ -942,7 +942,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     Given user is on page BharatPayElectricity clicks on Electricity
     Given user is on page BharatPayElectricity clicks on Search
@@ -969,7 +969,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     When user scrolls down to "Fastag"
     Given user is on page BharatPayFastag clicks on Fastag
@@ -1009,7 +1009,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     Given user swipe down the page
     Given user is on page BharatPayPastPayments clicks on PastPaymentsSection
@@ -1021,7 +1021,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     Given user swipe down the page
     Given user is on page BharatPayPastPayments clicks on PastPaymentsSection
@@ -1033,7 +1033,7 @@ Feature: Mobile UI for BBPS Journey
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     Given user swipe down the page
     Given user is on page BharatPayPastPayments clicks on PastPaymentsSection
@@ -1066,7 +1066,7 @@ Scenario: Verify that Remarks field is visible and negative testing for "Remarks
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     Given user swipe down the page
     Given user is on page BharatPayPage clicks on Complaints
@@ -1084,7 +1084,7 @@ Scenario: Verify that Remarks field is visible and negative testing for "Remarks
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     When user scrolls down to "Fastag"
     Given user is on page BharatPayWater clicks on Water
@@ -1104,7 +1104,7 @@ Scenario: Verify that Remarks field is visible and negative testing for "Remarks
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     When user scrolls down to "Fastag"
     Given user is on page BharatPayFastag clicks on Fastag
@@ -1138,7 +1138,7 @@ Scenario: Verify that Remarks field is visible and negative testing for "Remarks
     Given user logins to app entering Login PIN
     #Given user is on page DashboardPage clicks on FingerPrint
     When user scrolls down to "Recharge & Bill Pay"
-    #When user scrolls down to "Loans"
+    When user scrolls down to "Loans"
     Given user is on page DashboardPage clicks on Recharge&BillPay
     Given user is on page BharatPayPage to check MarketingBanner is Displayed
     Given user is on page BharatPayPage to check BBPSLogo is Displayed

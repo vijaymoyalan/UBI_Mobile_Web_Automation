@@ -1,15 +1,1 @@
-{
-  "errorId": "96de69f5-b85b-4b86-90de-411545968993",
-  "errorAt": null,
-  "errorLocation": null,
-  "error": null,
-  "errors": [
-    {
-      "code": "400",
-      "message": "Something went wrong. Please try again later.",
-      "values": null,
-      "origmesg": null,
-      "errors": null
-    }
-  ]
-}
+{"errorId":"a9191681-7fd0-4ee5-81e8-e734c31c06f7","errorAt":"2025-04-02T15:27:15.830036771","errorLocation":null,"error":null,"errors":[{"code":"400","title":null,"message":"400 Bad Request from POST http://cbs-acct-qry-ext-svc.proxy-cbs-sit.svc.cluster.local:8080/proxy/v1/cbs/accountDetail/getLienDetails","values":null,"origmesg":null,"errors":null}]}

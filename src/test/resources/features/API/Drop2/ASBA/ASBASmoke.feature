@@ -37,8 +37,8 @@ Then user verifies that status is 200
 Then user verifies json from <responseBody>
 
 Examples: 
-| service        | endpoint    				| requestBody 																																																										|requestField|responsefield|filename  | responseBody                                                                                           |
-| generalservice | getProfileDetails  |\src\test\resources\testdata\api\request\Drop2\ASBA\GS_getProfileDetails_Regression_Mandatory_Optional_200.json|null 			 |null 				 | null 		|\src\test\resources\testdata\api\response\Expected\Drop2\ASBA\GS_getProfileDetails_Regression_Mandatory_Optional_200.json|
+| service        | endpoint    				| requestBody 																																							|requestField|responsefield|filename  | responseBody                                                                                           |
+| generalservice | getProfileDetails  |\src\test\resources\testdata\api\request\Drop2\ASBA\GS_getProfileDetails_Mandatory_200.json|null 			 |null 				 | null 		|\src\test\resources\testdata\api\response\Expected\Drop2\ASBA\GS_getProfileDetails_Mandatory_200.json|
  
 @Test-UDB-T001 
 Scenario Outline: Verify that system should return the Ongoing IPO list by hitting the post getOngoingIpoList api.
@@ -51,8 +51,8 @@ Then user verifies that status is 200
 Then user verifies json from <responseBody>
 
 Examples:
-| service     | endpoint              | requestBody                                                                    | requestField | responsefield  | filename    																				| responseBody |
-| asbaservice | getOngoingIpoList     | src\test\resources\testdata\api\request\Drop2\ASBA\200_getOngoingIpoList.json  | cif          | customerId 		 | GS_getProfileDetails_Regression_Mandatory_Optional_200.json  | src\test\resources\testdata\api\response\expected\Drop2\ASBA\200_getOngoingIpoList.json|
+| service     | endpoint              | requestBody                                                                    | requestField | responsefield  | filename    															| responseBody |
+| asbaservice | getOngoingIpoList     | src\test\resources\testdata\api\request\Drop2\ASBA\200_getOngoingIpoList.json  | cif          | customerId 		 | GS_getProfileDetails_Mandatory_200.json  | src\test\resources\testdata\api\response\expected\Drop2\ASBA\200_getOngoingIpoList.json|
 
 @Test-UDB-T002
 Scenario Outline: Verify that system should return the already added Demat Account list by hitting the post fetchDematList api.
@@ -66,7 +66,7 @@ Then user verifies json from <responseBody>
 
 Examples:
 | service     | endpoint           | requestBody                                                                    | requestField     | responsefield  				   | filename  																												 | responseBody |
-| asbaservice | fetchDematList     | src\test\resources\testdata\api\request\Drop2\ASBA\200_fetchDematList.json     | cif,pan          | customerId,kycDetails.pan | GS_getProfileDetails_Regression_Mandatory_Optional_200.json       | src\test\resources\testdata\api\response\expected\Drop2\ASBA\200_fetchDematList.json|
+| asbaservice | fetchDematList     | src\test\resources\testdata\api\request\Drop2\ASBA\200_fetchDematList.json     | cif,pan          | customerId,kycDetails.pan | GS_getProfileDetails_Mandatory_200.json       | src\test\resources\testdata\api\response\expected\Drop2\ASBA\200_fetchDematList.json|
 
 @Test-UDB-T003
 Scenario Outline: Verify that system should add the Demat account by hitting the post addNewDematAccount api.
@@ -80,7 +80,7 @@ Then user verifies json from <responseBody>
 
 Examples:
 | service     | endpoint              | requestBody                                                                         | requestField  | responsefield   								 | filename     																							 | responseBody |
-| asbaservice | addNewDematAccount    | src\test\resources\testdata\api\request\Drop2\ASBA\200_addNewDematAccount_CDSL.json | cif,pan,name  | customerId,kycDetails.pan,name   | GS_getProfileDetails_Regression_Mandatory_Optional_200.json | src\test\resources\testdata\api\response\expected\Drop2\ASBA\200_addNewDematAccount_CDSL.json|
+| asbaservice | addNewDematAccount    | src\test\resources\testdata\api\request\Drop2\ASBA\200_addNewDematAccount_CDSL.json | cif,pan,name  | customerId,kycDetails.pan,name   | GS_getProfileDetails_Mandatory_200.json | src\test\resources\testdata\api\response\expected\Drop2\ASBA\200_addNewDematAccount_CDSL.json|
 
 
 @Test-UDB-T004
@@ -95,7 +95,7 @@ Then user verifies json from <responseBody>
 
 Examples:
 | service     | endpoint         | requestBody                                                                  | requestField  | responsefield   								 | filename    																							  | responseBody |
-| asbaservice | editDematAccount | src/test/resources/testdata/api/request/Drop2/ASBA/200_editDematAccount.json | cif,pan,name  | customerId,kycDetails.pan,name   | GS_getProfileDetails_Regression_Mandatory_Optional_200.json| src/test/resources/testdata/api/response/expected/Drop2/ASBA/200_editDematAccount.json |
+| asbaservice | editDematAccount | src/test/resources/testdata/api/request/Drop2/ASBA/200_editDematAccount.json | cif,pan,name  | customerId,kycDetails.pan,name   | GS_getProfileDetails_Mandatory_200.json| src/test/resources/testdata/api/response/expected/Drop2/ASBA/200_editDematAccount.json |
 
 
 @Test-UDB-T005
@@ -110,23 +110,9 @@ Then user verifies json from <responseBody>
 
 Examples:
 | service     | endpoint           | requestBody                                                                       | requestField  | responsefield   								  | filename     																									  | responseBody |                                                                  
-| asbaservice | deleteDematAccount | src\test\resources\testdata\api\request\Drop2\ASBA\200_deleteDematAccount.json    | cif,pan,name  | customerId,kycDetails.pan,name   | GS_getProfileDetails_Regression_Mandatory_Optional_200.json 		| src\test\resources\testdata\api\response\expected\Drop2\ASBA\200_deleteDematAccount.json|
+| asbaservice | deleteDematAccount | src\test\resources\testdata\api\request\Drop2\ASBA\200_deleteDematAccount.json    | cif,pan,name  | customerId,kycDetails.pan,name   | GS_getProfileDetails_Mandatory_200.json 		| src\test\resources\testdata\api\response\expected\Drop2\ASBA\200_deleteDematAccount.json|
 
 @Test-UDB-T006
-Scenario Outline: Verify that system should return the correct response for allotment stage by hitting the post getAllotmentStageResponse api.
-Given user sets the environment of endpoint
-Given user set the basepath to <service>
-Then set the endpoint <endpoint>
-Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
-Then user triggers a post request with <requestBody>
-Then user verifies that status is 200
-Then user verifies json from <responseBody>
-
-Examples:
-| service     | endpoint                  | requestBody                                                                              | requestField   | responsefield    | filename      | responseBody |                                                                  
-| asbaservice | getAllotmentStageResponse | src\test\resources\testdata\api\request\Drop2\ASBA\200_getAllotmentStageResponse.json    | null 				  | null        		 | null      		 | src\test\resources\testdata\api\response\expected\Drop2\ASBA\200_getAllotmentStageResponse.json |
-
-@Test-UDB-T007
 Scenario Outline: Verify that system should return the correct response for Ipo Category Details stage by hitting the post getCategoryDetails api.
 Given user sets the environment of endpoint
 Given user set the basepath to <service>
@@ -140,7 +126,7 @@ Examples:
 | service     | endpoint                  | requestBody                                                                              | requestField   | responsefield    | filename      | responseBody |                                                                  
 | asbaservice | getCategoryDetails        | src\test\resources\testdata\api\request\Drop2\ASBA\200_getCategoryDetails.json           | null 				  | null        		 | null      		 | src\test\resources\testdata\api\response\expected\Drop2\ASBA\200_getCategoryDetails.json |
 
-@Test-UDB-T008 
+@Test-UDB-T007 
 Scenario Outline: Verify that system should return the correct response for Ipo subscription rate stage by hitting the post getSubscriptionRate api.
 Given user sets the environment of endpoint
 Given user set the basepath to <service>
@@ -155,21 +141,26 @@ Examples:
 | asbaservice | getSubscriptionRate       | src\test\resources\testdata\api\request\Drop2\ASBA\200_getSubscriptionRate.json          | null 				  | null        		 | null      		 | src\test\resources\testdata\api\response\expected\Drop2\ASBA\200_getSubscriptionRate.json |
 
 
-@Test-UDB-T009A 
+@Test-UDB-T008
 Scenario Outline: Verify that system should return the correct response for new applied ipo by hitting the applyNewIpo Api.
 Given user sets the environment of endpoint
 Given user set the basepath to <service>
 Then set the endpoint <endpoint>
 Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+When user updates the json request body <requestBody> with tags <tag> and cif <cif> for generating transactionID
 Then user triggers a post request with <requestBody>
 Then user verifies that status is 200
 Then user verifies json from <responseBody>		
 			
-Examples:			
-| service        | endpoint         | requestBody 																											      | requestField   | responsefield     							 | filename     																							 | responseBody |
-| asbaservice    | applyNewIpo      |	src\test\resources\testdata\api\request\Drop2\ASBA\200_applyNewIpo.json	| cif,pan,name   |customerId,kycDetails.pan,name 	 | GS_getProfileDetails_Regression_Mandatory_Optional_200.json | src\test\resources\testdata\api\response\expected\Drop2\ASBA\200_applyNewIpo.json |
+#Examples:			
+#| service        | endpoint         | requestBody 																											      | requestField   | responsefield  | filename     												   	| responseBody |
+#| asbaservice    | applyNewIpo      |	src\test\resources\testdata\api\request\Drop2\ASBA\200_applyNewIpo.json	| cif   				 |customerId 	 		| GS_getProfileDetails_Mandatory_200.json | src\test\resources\testdata\api\response\expected\Drop2\ASBA\200_applyNewIpo.json |
 
-@Test-UDB-T010
+Examples:
+| service     | endpoint		| requestBody																														 | requestField	| responsefield | filename																| responseBody  																																	 | tag					 |cif|
+| asbaservice | applyNewIpo	| src\test\resources\testdata\api\request\Drop2\ASBA\200_applyNewIpo.json| cif 					| customerId 		| GS_getProfileDetails_Mandatory_200.json | src\test\resources\testdata\api\response\expected\Drop2\ASBA\200_applyNewIpo.json| transactionId |258459119|
+
+@Test-UDB-T009
 Scenario Outline: Verify that system should return the Ongoing IPO list by hitting the post checkAlreadyAppliedIpo api.
 Given user sets the environment of endpoint
 Given user set the basepath to <service>
@@ -181,11 +172,10 @@ Then user verifies json from <responseBody>
 
 Examples:		
 | service     | endpoint                   | requestBody                                                                         | requestField  | responsefield     					| filename    																								| responseBody |
-| asbaservice | checkAlreadyAppliedIpo     | src\test\resources\testdata\api\request\Drop2\ASBA\200_checkAlreadyAppliedIpo.json  | cif,pan       | customerId,kycDetails.pan  | GS_getProfileDetails_Regression_Mandatory_Optional_200.json | src\test\resources\testdata\api\response\expected\Drop2\ASBA\200_checkAlreadyAppliedIpo.json|
+| asbaservice | checkAlreadyAppliedIpo     | src\test\resources\testdata\api\request\Drop2\ASBA\200_checkAlreadyAppliedIpo.json  | cif,pan       | customerId,kycDetails.pan  | GS_getProfileDetails_Mandatory_200.json | src\test\resources\testdata\api\response\expected\Drop2\ASBA\200_checkAlreadyAppliedIpo.json|
 
-
-@Test-UDB-T011
-Scenario Outline: Verify that system should return the correct response for already applied IPO list by hitting the getAppliedIpoList api.
+@Test-UDB-T010
+Scenario Outline: Verify that system should return the correct response for already applied IPO list by hitting the getAppliedIpoListAPI.
 Given user sets the environment of endpoint
 Given user set the basepath to <service>
 Then set the endpoint <endpoint>
@@ -197,7 +187,25 @@ Then user verifies json from <responseBody>
 			
 Examples:			
 | service        | endpoint          | requestBody 																																		|	requestField   |	responsefield  						| filename       																							| responseBody                   																										      |source|
-| asbaservice 	 | getAppliedIpoList | src\test\resources\testdata\api\request\Drop2\ASBA\200_getAppliedIpoList.json	|	cif,pan        | customerId,kycDetails.pan  | GS_getProfileDetails_Regression_Mandatory_Optional_200.json |	src\test\resources\testdata\api\response\expected\Drop2\ASBA\200_getAppliedIpoList.json |src/test/resources/responseFolder/200_getAppliedIpoList.json|                      
+| asbaservice 	 | getAppliedIpoList | src\test\resources\testdata\api\request\Drop2\ASBA\200_getAppliedIpoList.json	|	cif,pan        | customerId,kycDetails.pan  | GS_getProfileDetails_Mandatory_200.json |	src\test\resources\testdata\api\response\expected\Drop2\ASBA\200_getAppliedIpoList.json |src/test/resources/responseFolder/200_getAppliedIpoList.json|                      
+
+@Test-UDB-T011
+Scenario Outline: Verify that system should return the correct response for allotment stage by hitting the post getAllotmentStageResponse api.
+Given user sets the environment of endpoint
+Given user set the basepath to <service>
+Then set the endpoint <endpoint>
+Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+Then user triggers a post request with <requestBody>
+Then user verifies that status is 200
+Then user verifies json from <responseBody>
+
+#Examples:
+#| service     | endpoint                  | requestBody                                                                              | requestField   | responsefield    | filename      | responseBody |                                                                  
+#| asbaservice | getAllotmentStageResponse | src\test\resources\testdata\api\request\Drop2\ASBA\200_getAllotmentStageResponse.json    | null 				  | null        		 | null      		 | src\test\resources\testdata\api\response\expected\Drop2\ASBA\200_getAllotmentStageResponse.json |
+
+Examples:
+| service     | endpoint       		  		  | requestBody																																		  			| requestField 							  	 | responsefield 																					| filename  	 											  | responseBody               		     																											  		 | responseFile	|
+| asbaservice | getAllotmentStageResponse | src\test\resources\testdata\api\request\Drop2\ASBA\200_getAllotmentStageResponse.json	| referenceNum,applicationNumber | appliedIpoEntityList[0].referenceId,applicationNumber  | 200_getAppliedIpoList.json 					| src\test\resources\testdata\api\response\expected\Drop2\ASBA\200_getAllotmentStageResponse.json| src\test\resources\testdata\api\response\expected\Drop2\ASBA\200_getAppliedIpoList.json	|                 
 
 @Test-UDB-T012
 Scenario Outline: Verify that system should return the correct response for modified IPO list by hitting the modifyAppliedIpoBid api.
@@ -205,27 +213,54 @@ Given user sets the environment of endpoint
 Given user set the basepath to <service>
 Then set the endpoint <endpoint>
 Then Update the request body <requestBody> with attributes and values from response file <responseFile>
+When user updates the json request body <requestBody> with tags <tag> and cif <cif> for generating transactionID
 Then user triggers a post request with <requestBody>   
 Then user verifies that status is 200
 Then user verifies json from <responseBody>
 			
+#Examples:
+#| service     | endpoint       		  | requestBody																																		  | requestField 							  | responsefield 																| filename  	 											  | responseBody               		     																											  | responseFile	|
+#| asbaservice | modifyAppliedIpoBid | src\test\resources\testdata\api\request\Drop2\ASBA\200_modifyAppliedIpoBid.json	| bids[0].bidid,applicationNo | bidDetail[0].bidId,applicationNumber		  	  | 200_getAppliedIpoList.json 					| src\test\resources\testdata\api\response\expected\Drop2\ASBA\200_modifyAppliedIpoBid.json | src\test\resources\testdata\api\response\expected\Drop2\ASBA\200_getAppliedIpoList.json|                  
+
 Examples:
-| service     | endpoint       		  | requestBody																																		  | requestField 							  | responsefield 																| filename  	 											  | responseBody               		     																											  | responseFile	|
-| asbaservice | modifyAppliedIpoBid | src\test\resources\testdata\api\request\Drop2\ASBA\200_modifyAppliedIpoBid.json	| bids[0].bidid,applicationNo | bidDetail[0].bidId,applicationNumber		  	  | 200_getAppliedIpoList.json 					| src\test\resources\testdata\api\response\expected\Drop2\ASBA\200_modifyAppliedIpoBid.json | src\test\resources\testdata\api\response\expected\Drop2\ASBA\200_getAppliedIpoList.json|                  
+| service     | endpoint						| requestBody																																		 | requestField															| responsefield 																																																							| filename									 | responseBody  																																	 					| tag					 	|cif			| responseFile																																						| 
+| asbaservice | modifyAppliedIpoBid	| src\test\resources\testdata\api\request\Drop2\ASBA\200_modifyAppliedIpoBid.json| referenceno,applicationNo,bids[0].bidid	| appliedIpoEntityList[0].applicationNumber,appliedIpoEntityList[0].referenceId,appliedIpoEntityList[0].bidDetail[0].bidId 		| 200_getAppliedIpoList.json | src\test\resources\testdata\api\response\expected\Drop2\ASBA\200_modifyAppliedIpoBid.json| transactionId |258459119| src\test\resources\testdata\api\response\expected\Drop2\ASBA\200_getAppliedIpoList.json	|
 
 @Test-UDB-T013
+Scenario Outline: Verify that system should return the correct response for already applied IPO list by hitting the getAppliedIpoList api.
+Given user sets the environment of endpoint
+Given user set the basepath to <service>
+Then set the endpoint <endpoint>
+Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+Then user triggers a post request with <requestBody>   
+Then user verifies that status is 200
+Then user copy file from <source> and paste to file at location <responseBody>
+Then user verifies json from <responseBody>
+			
+Examples:			
+| service        | endpoint          | requestBody 																																		|	requestField   |	responsefield  						| filename       													| responseBody                   																										      |source|
+| asbaservice 	 | getAppliedIpoList | src\test\resources\testdata\api\request\Drop2\ASBA\200_getAppliedIpoList2.json	|	cif,pan        | customerId,kycDetails.pan  | GS_getProfileDetails_Mandatory_200.json |	src\test\resources\testdata\api\response\expected\Drop2\ASBA\200_getAppliedIpoList.json |src/test/resources/responseFolder/200_getAppliedIpoList2.json|                      
+
+@Test-UDB-T014
 Scenario Outline: Verify taht system should return the correct response for withdrawning the BId by hitting the withdrawAppliedIpoBid Api.
 Given user sets the environment of endpoint
 Given user set the basepath to <service>
 Then set the endpoint <endpoint>
-Then user copy file from <source> and paste to file at location <requestBody>
+#Then user copy file from <source> and paste to file at location <requestBody>
+Then Update the request body <requestBody> with attributes and values from response file <responseFile>
+When user updates the json request body <requestBody> with tags <tag> and cif <cif> for generating transactionID
 Then user triggers a post request with <requestBody>
 Then user verifies that status is 200
 Then user verifies json from <responseBody>		
 			
-Examples:			
-| service     | endpoint              | requestBody            																												    | requestField  				    	 | responsefield      				        | filename                    | responseBody                                                                                |source|
-| asbaservice | withdrawAppliedIpoBid | src\test\resources\testdata\api\request\Drop2\ASBA\200_withdrawAppliedIpoBid.json | bids[0].bidid,applicationNo  |bidDetail[0].bidId,applicationNumber| 200_getAppliedIpoList.json  | src\test\resources\testdata\api\response\expected\Drop2\ASBA\200_withdrawAppliedIpoBid.json |src\test\resources\testdata\api\request\Drop2\ASBA\200_modifyAppliedIpoBid.json|
+#Examples:			
+#| service     | endpoint              | requestBody            																												    | requestField  				    	 | responsefield      				        | filename                    | responseBody                                                                                |source|
+#| asbaservice | withdrawAppliedIpoBid | src\test\resources\testdata\api\request\Drop2\ASBA\200_withdrawAppliedIpoBid.json | bids[0].bidid,applicationNo  |bidDetail[0].bidId,applicationNumber| 200_getAppliedIpoList.json  | src\test\resources\testdata\api\response\expected\Drop2\ASBA\200_withdrawAppliedIpoBid.json |src\test\resources\testdata\api\request\Drop2\ASBA\200_modifyAppliedIpoBid.json|
+
+Examples:
+| service     | endpoint							| requestBody																																		 		| requestField														| responsefield 																																																							| filename									 | responseBody  																																	 						| tag					 		|cif			| responseFile |
+| asbaservice | withdrawAppliedIpoBid	| src\test\resources\testdata\api\request\Drop2\ASBA\200_withdrawAppliedIpoBid.json | applicationNo,referenceno,bids[0].bidid	| appliedIpoEntityList[0].applicationNumber,appliedIpoEntityList[0].referenceId,appliedIpoEntityList[0].bidDetail[0].bidId 		| 200_getAppliedIpoList.json | src\test\resources\testdata\api\response\expected\Drop2\ASBA\200_withdrawAppliedIpoBid.json| transactionId 	|258459119| src\test\resources\testdata\api\response\expected\Drop2\ASBA\200_getAppliedIpoList.json	|
+
 
 #@Test-UDB-T013
 #Scenario Outline: Verify that system should return the Ongoing IPO list by hitting the post checkAlreadyAppliedIpo api.

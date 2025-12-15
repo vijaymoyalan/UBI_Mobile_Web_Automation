@@ -1,1 +1,15 @@
-{"errorId":"21247aca-d492-48d7-806e-9fc460498ba6","errorAt":"2024-12-27T14:26:40.688510656","errorLocation":null,"error":null,"errors":[{"code":"BAD_REQUEST","message":"channelId: expected minLength: 1, actual: 0, channelId: string [] does not match pattern ^(MB)$","values":null,"origmesg":null,"errors":null}]}
+{
+  "errorId": "603a0eff-fd2a-46de-ae7c-8135a4ccd40d",
+  "errorAt": "2025-02-21T02:07:20.378966984",
+  "errorLocation": null,
+  "error": null,
+  "errors": [
+    {
+      "code": "BAD_REQUEST",
+      "message": "channelId: string [ ] does not match pattern ^(MB)$",
+      "values": null,
+      "origmesg": null,
+      "errors": null
+    }
+  ]
+}

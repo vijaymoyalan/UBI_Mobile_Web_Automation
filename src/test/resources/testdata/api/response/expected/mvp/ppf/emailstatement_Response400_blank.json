@@ -1,11 +1,12 @@
 {
-    "errorId": "b6a3dad6-a982-43a5-aca4-0b54daf184c2",
-    "errorAt": "2024-08-01T12:08:52.445467085",
+    "errorId": "68f677e1-9aac-4682-b1e4-54680f53b4d0",
+    "errorAt": "2025-03-20T11:53:28.688357345",
     "errorLocation": null,
+    "error": null,
     "errors": [
         {
-            "code": "400",
-            "message": "415 UNSUPPORTED_MEDIA_TYPE \"Content type 'application/octet-stream' not supported for bodyType=com.ubi.dbp.investment.ppf.bff.model.TransactionReq\"",
+            "code": "BAD_REQUEST",
+            "message": "Something went wrong. Please try again later.",
             "values": null,
             "origmesg": null,
             "errors": null

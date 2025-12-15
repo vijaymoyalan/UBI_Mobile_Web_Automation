@@ -1,12 +1,12 @@
 {
-    "schemeC2ode": "PMJJBY",
-    "accountNum1ber": "470202070011019",
-    "cif": "634207926",
-    "appewlicationFormNumber": "117841101228",
-   "uren": "JNS-PMJJBY-23-24-00000100331-631",
-    "globalTrxd2nId": "abcd123",
-    "channelId": "MB",
-    "transactionAmount": "123",
-    "branchCode": "1234567",
-    "email": "randeep.kaur1@ibm.com"
+  "schemeCode": "PMSBY",
+  "accountNumber": "441002010063745",
+  "cif": "264479335",
+  "applica56tionFormNumber":"908511111111",
+  "urn": "JNS-PMJJBY-23-24-00000004219-531",
+  "globalTrxnId" : "abcd123",
+  "chann456elId" : "MB",
+  "transactionAmount" : "123",
+  "branchCode": "1234567",
+  "email": "soumyasree.bose@ibm.com"
 }

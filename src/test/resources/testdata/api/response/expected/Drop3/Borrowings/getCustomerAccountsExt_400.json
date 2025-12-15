@@ -1,1 +1,16 @@
-{}
+{
+    "errorId": "e038374d-78cc-4d09-925f-1d8aebb37319",
+    "errorAt": "2025-04-02T18:15:06.114136953",
+    "errorLocation": null,
+    "error": null,
+    "errors": [
+        {
+            "code": "BAD_REQUEST",
+            "title": "Technical Error",
+            "message": "Something went wrong. Please try again later.",
+            "values": null,
+            "origmesg": null,
+            "errors": null
+        }
+    ]
+}

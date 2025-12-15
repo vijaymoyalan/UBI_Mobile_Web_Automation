@@ -1,1 +1,104 @@
-{"totalTransactions":73,"transactions":{"2024-02-09":[{"transactionparticular":"MS BALAJI UDYOG","amount":1350000.0,"creditDebitFlag":"C","transactionId":"A751398","postedDateTime":"2024-02-09T16:33:40","balAmount":-11542997.63}],"2024-02-03":[{"transactionparticular":"BY 560131000116233","amount":150000.0,"creditDebitFlag":"C","transactionId":"A63740","postedDateTime":"2024-02-03T10:44:09","balAmount":-12892997.63}],"2024-01-31":[{"transactionparticular":"064924010000002:Int.Coll:01-01-2024 to 31-01-2024","amount":102284.0,"creditDebitFlag":"D","transactionId":"S84192313","postedDateTime":"2024-01-31T06:15:50","balAmount":-13042997.63}],"2023-12-31":[{"transactionparticular":"064924010000002:Int.Coll:01-12-2023 to 31-12-2023","amount":101197.0,"creditDebitFlag":"D","transactionId":"S20892551","postedDateTime":"2023-12-31T07:43:16","balAmount":-12940713.63}],"2023-12-07":[{"transactionparticular":"RTGSO-ELECTRICAL ENGINEERING PRO UBINH23341921429","amount":1500000.0,"creditDebitFlag":"D","transactionId":"S24682410","postedDateTime":"2023-12-07T15:29:43","balAmount":-12839516.63},{"transactionparticular":"Charges for PORD Customer Payment:UBINH23341921429","amount":58.41,"creditDebitFlag":"D","transactionId":"S24682410","postedDateTime":"2023-12-07T15:29:43","balAmount":-11339516.63},{"transactionparticular":"TRF","amount":100000.0,"creditDebitFlag":"C","transactionId":"AA680438","postedDateTime":"2023-12-07T15:16:40","balAmount":-11339458.22}],"2023-12-06":[{"transactionparticular":"MS BALAJI UDYOG","amount":1500000.0,"creditDebitFlag":"C","transactionId":"AA434664","postedDateTime":"2023-12-06T13:10:58","balAmount":-11439458.22}],"2023-11-30":[{"transactionparticular":"064924010000002:Int.Coll:01-11-2023 to 30-11-2023","amount":92154.0,"creditDebitFlag":"D","transactionId":"S18614445","postedDateTime":"2023-11-30T06:07:06","balAmount":-12939458.22}],"2023-11-21":[{"transactionparticular":"RTGSO-ELECTRICAL ENGINEERING PRO UBINH23325932633","amount":1000000.0,"creditDebitFlag":"D","transactionId":"S2252932","postedDateTime":"2023-11-21T16:53:58","balAmount":-12847304.22}]},"page":0,"size":10,"totalPages":8}
+{
+    "totalTransactions": 73,
+    "transactions": {
+        "2024-02-09": [
+            {
+                "transactionparticular": "MS BALAJI UDYOG",
+                "amount": 1350000.0,
+                "creditDebitFlag": "C",
+                "transactionId": "A751398",
+                "postedDateTime": "2024-02-09T16:33:40",
+                "balAmount": -11542997.63
+            }
+        ],
+        "2024-02-03": [
+            {
+                "transactionparticular": "BY 560131000116233",
+                "amount": 150000.0,
+                "creditDebitFlag": "C",
+                "transactionId": "A63740",
+                "postedDateTime": "2024-02-03T10:44:09",
+                "balAmount": -12892997.63
+            }
+        ],
+        "2024-01-31": [
+            {
+                "transactionparticular": "064924010000002:Int.Coll:01-01-2024 to 31-01-2024",
+                "amount": 102284.0,
+                "creditDebitFlag": "D",
+                "transactionId": "S84192313",
+                "postedDateTime": "2024-01-31T06:15:50",
+                "balAmount": -13042997.63
+            }
+        ],
+        "2023-12-31": [
+            {
+                "transactionparticular": "064924010000002:Int.Coll:01-12-2023 to 31-12-2023",
+                "amount": 101197.0,
+                "creditDebitFlag": "D",
+                "transactionId": "S20892551",
+                "postedDateTime": "2023-12-31T07:43:16",
+                "balAmount": -12940713.63
+            }
+        ],
+        "2023-12-07": [
+            {
+                "transactionparticular": "RTGSO-ELECTRICAL ENGINEERING PRO UBINH23341921429",
+                "amount": 1500000.0,
+                "creditDebitFlag": "D",
+                "transactionId": "S24682410",
+                "postedDateTime": "2023-12-07T15:29:43",
+                "balAmount": -12839516.63
+            },
+            {
+                "transactionparticular": "Charges for PORD Customer Payment:UBINH23341921429",
+                "amount": 58.41,
+                "creditDebitFlag": "D",
+                "transactionId": "S24682410",
+                "postedDateTime": "2023-12-07T15:29:43",
+                "balAmount": -11339516.63
+            },
+            {
+                "transactionparticular": "TRF",
+                "amount": 100000.0,
+                "creditDebitFlag": "C",
+                "transactionId": "AA680438",
+                "postedDateTime": "2023-12-07T15:16:40",
+                "balAmount": -11339458.22
+            }
+        ],
+        "2023-12-06": [
+            {
+                "transactionparticular": "MS BALAJI UDYOG",
+                "amount": 1500000.0,
+                "creditDebitFlag": "C",
+                "transactionId": "AA434664",
+                "postedDateTime": "2023-12-06T13:10:58",
+                "balAmount": -11439458.22
+            }
+        ],
+        "2023-11-30": [
+            {
+                "transactionparticular": "064924010000002:Int.Coll:01-11-2023 to 30-11-2023",
+                "amount": 92154.0,
+                "creditDebitFlag": "D",
+                "transactionId": "S18614445",
+                "postedDateTime": "2023-11-30T06:07:06",
+                "balAmount": -12939458.22
+            }
+        ],
+        "2023-11-21": [
+            {
+                "transactionparticular": "RTGSO-ELECTRICAL ENGINEERING PRO UBINH23325932633",
+                "amount": 1000000.0,
+                "creditDebitFlag": "D",
+                "transactionId": "S2252932",
+                "postedDateTime": "2023-11-21T16:53:58",
+                "balAmount": -12847304.22
+            }
+        ]
+    },
+    "page": 0,
+    "size": 10,
+    "totalPages": 8
+}

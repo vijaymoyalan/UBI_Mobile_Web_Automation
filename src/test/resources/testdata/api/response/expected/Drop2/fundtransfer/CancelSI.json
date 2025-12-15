@@ -1,1 +1,1 @@
-{"data":null,"success":false,"errorMessage":{"code":"500","message":"FAILED","details":"No SI Found for entered data","errors":null},"kafkaStatus":"COMPLETED","correlationId":null}
+{"data":null,"success":false,"errorMessage":{"code":"E0043","message":"FAILED","details":"No SI Found for entered data","errors":null},"kafkaStatus":"COMPLETED","correlationId":null}

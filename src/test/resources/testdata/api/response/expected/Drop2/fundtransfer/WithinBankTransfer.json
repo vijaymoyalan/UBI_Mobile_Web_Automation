@@ -1,21 +1,24 @@
 {
   "data": {
     "cif": "254061641",
-    "creditAccountType": "CAA",
+    "creditAccountType": "SBA",
     "debitAccountType": "SBA",
-    "creditAccountNumber": "441001010032134",
-    "payeeName": "YOGESH CHORAT",
+    "creditAccountNumber": "545802010013583",
+    "payeeName": "RAJ KUMAR",
     "debitAccountNumber": "441002010058664",
     "debitAccountName": "HARMANJIT SINGH SO RANJIT SINGH",
-    "amount": 500,
+    "amount": 101.10,
     "mode": "UNION BANK OF INDIA",
-    "remarks": "Testing",
-    "txnId": "869603793482",
-    "txnDate": "2024-10-28T12:44:58",
-    "ledgerBalance": "0000000034138840",
-    "availableBalance": "0000000034133040",
+    "remarks": "",
+    "txnId": "222703829055",
+    "txnDate": "2025-02-13T12:23:51",
+    "ledgerBalance": "0000003279988330",
+    "availableBalance": "0000003279972530",
+    "challengeResp": null,
     "withinBank": true
   },
   "errorMessage": null,
-  "success": true
+  "success": true,
+  "kafkaStatus": null,
+  "correlationId": null
 }

@@ -1,7 +1,8 @@
 {
-    "cif": "634207926",
+    "cif": "264479335",
     "schemeCode": "PMJJBY",
-    "status": "PARTIAL",
-    "userId": "Lavanya",
-    "channelId": "ATM"
+    "status": "COMPLETED",
+    "userId": "test",
+    "channelId": "MB"
 }
+

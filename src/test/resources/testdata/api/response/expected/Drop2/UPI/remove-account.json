@@ -1,11 +1,9 @@
 {
-    "correlationId": "d7fe605e-bb71-4dbf-8724-a8ba145b4dbc_243356508",
+    "correlationId": "9f6a7147-755b-4123-a653-087a3f84a20a_243356508",
     "code": "00",
     "result": "SUCCESS",
-    "securityResp": null,
     "data": null,
     "createdDateTime": null,
     "errorDesc": null,
-    "checksum": null,
-    "attempts": 0
+    "checksum": null
 }

@@ -1,1 +1,8 @@
-{"code":"NOT_AUTHORIZED","message":"Authorization failed."}
+{
+    "timestamp": "2025-02-17T07:31:55.808+00:00",
+    "path": "/msme/v1/generalservice/getTransactionStatement1",
+    "status": 404,
+    "error": "Not Found",
+    "message": null,
+    "requestId": "27cd43d1-286"
+    }

@@ -1,7 +1,0 @@
-{
-
-  "mode": "IMPS",
-  "channel": "MOB",
-  "maxPerTrnLimit": 100000,
-  "minPerTrnLimit": 2000
-}

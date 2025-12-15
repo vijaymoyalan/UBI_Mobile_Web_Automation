@@ -1,1 +1,15 @@
-{"errorId":"35765b49-6351-4478-8446-fea8f0f4c3d6","errorAt":"2024-12-11T18:07:14.094502443","errorLocation":null,"error":null,"errors":[{"code":"BAD_REQUEST","message":"#: required key [schemeCode] not found","values":null,"origmesg":null,"errors":null}]}
+{
+  "errorId": "c2c16551-890a-4b35-8393-dc4c49c55ffe",
+  "errorAt": "2025-02-20T12:06:43.752159902",
+  "errorLocation": null,
+  "error": null,
+  "errors": [
+    {
+      "code": "BAD_REQUEST",
+      "message": "#: required key [schemeCode] not found",
+      "values": null,
+      "origmesg": null,
+      "errors": null
+    }
+  ]
+}

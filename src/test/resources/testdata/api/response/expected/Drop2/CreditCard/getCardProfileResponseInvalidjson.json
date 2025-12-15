@@ -1,1 +1,1 @@
-{"errorId":"79380ded-7d4e-4652-b7e2-760a87bb2056","errorAt":"2025-02-12T15:51:18.49069837","error":{"code":"400","title":"","description":"#: required key [cif] not found"}}
+{"code":"NOT_AUTHORIZED","title":"null","message":"Authorization failed."}

@@ -18,7 +18,6 @@ import java.util.Properties;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
-import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
@@ -33,6 +32,7 @@ import com.ubi.testbase.VerificationAPI;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
 import net.serenitybdd.annotations.Steps;
 
@@ -44,7 +44,6 @@ public class CommonSteps {
 	CommonRestUtils steps;
 	VerificationAPI stepsVerify;
 	JSONComparator jsonComparator;
-	private String jsonRequest;
 
 	@Given("^user set the basepath to (.*)$")
 	public void setbaseurl(String service) {
@@ -57,6 +56,12 @@ public class CommonSteps {
 		case "customer":
 			RestAssured.baseURI = env + "app/customer/api/v1";
 			break;
+
+		case "registrationMSME":
+
+			RestAssured.baseURI = env + "app/login-registration/api/v1/";
+			break;
+
 		// Credit Card Service MSME
 		case "credit-cardMSME":
 			RestAssured.baseURI = env + "msme/v1/credit-card/manage-card/";
@@ -69,9 +74,14 @@ public class CommonSteps {
 
 		// Login Service
 		case "registration":
-
 			RestAssured.baseURI = env + "mga/sps/apiauthsvc/policy";
 			break;
+			
+		// LAD Service
+		case "lad":
+			RestAssured.baseURI = env + "lad/v1";
+			break;
+			
 		case "prelogin":
 			RestAssured.baseURI = env + "app/prelogin/api/v1";
 			break;
@@ -113,6 +123,11 @@ public class CommonSteps {
 
 			RestAssured.baseURI = env.trim() + "v1/cheque";
 			break;
+			
+		case "positivepay":
+
+			RestAssured.baseURI = env.trim() + "v1/positivepay";
+			break;
 
 		// APY Services as below
 		case "apy":
@@ -140,7 +155,7 @@ public class CommonSteps {
 
 			RestAssured.baseURI = env + "msme/v1/loanservice/";
 			break;
-		
+
 		case "customerMSME":
 			RestAssured.baseURI = env + "msme/app/customer/api/v1/";
 			break;
@@ -188,6 +203,12 @@ public class CommonSteps {
 		case "payment":
 
 			RestAssured.baseURI = env + "v1/fund-transfer/initiate";
+			break;
+
+		// PaymentsLink
+		case "payment-linksMSME":
+
+			RestAssured.baseURI = env + "payment-links/api/v1/";
 			break;
 
 		case "smartsearch":
@@ -272,6 +293,11 @@ public class CommonSteps {
 		case "bff-service":
 
 			RestAssured.baseURI = env + "app/bff-service/api/v1/wfo/workflow";
+			break;
+		
+		// AccountInfo API for LAD
+		case "chequeserviceOne":
+			RestAssured.baseURI = "https://rmb.unionbankofindia.co.in/mpgw/v1/cheque";
 			break;
 
 		default:
@@ -1995,4 +2021,54 @@ public class CommonSteps {
 		// Compare JSON output
 		jsonComparator.compareJsonOutput(expectedResponseFilePath, fieldsToIgnore, specificValuesToIgnore);
 	}
+	
+	@Then("^user modifies (.+) with tag (.+) sorted by (.+) and (.+) of (.+)$")
+	public void sortLADElegibleTDS(String reqfilePath,String fdAccountNo, String schemeCategory, String renewFlag, String resfilePath) throws IOException {
+		steps.updateJsonFileWithFdAccountRenew(reqfilePath,fdAccountNo, schemeCategory, renewFlag, resfilePath);
+	}
+	
+//	created by Vijay M on 26Jun2025
+	@Then("^user converts (.+) to filter with (.+) and (.+)$")
+	public void EligibleTdsNewFile(String resfilePath, String schemeCategory, String renewFlag) throws IOException {
+		steps.EligibleTdsNewFile(resfilePath, schemeCategory, renewFlag);
+	}
+	
+	// Added By Vijay M: to call FD open term deposit from LAD services without encryption
+		@Then("^user triggers a post request for open Fixed Desposit (.*)$")
+		public void triggerPostRequestforopenFixedDeposit(String requestBody) {
+			try {
+				System.out.print("FixedDeposit Request Body: " + requestBody);
+				steps.triggerPostRequestwithoutEncryption(requestBody);
+			} catch (Exception e) {
+				System.out.println("Exception in triggerPostRequestforopenFixedDeposit method "+e);;
+			}
+		}
+		
+	// Added By Vijay M on 30/6/25: to call accountInfo from LAD services without encryption
+		@Then("^user triggers a post request for AccountInfoAPI (.*)$")
+		public void triggerPostRequesAccountAPI(String requestBody) {
+			try {
+				System.out.print("Account Info Request Body: " + requestBody);
+				steps.triggerPostRequesAccountAPI(requestBody);
+			} catch (Exception e) {
+				System.out.println("Exception in triggerPostRequestforopenFixedDeposit method "+e);;
+			}
+		}
+		
+		// added by Dipesh for Credit Card
+		@When("^user updates the json request body (.*) with tags (.*) and cif (.*) for generating transactionID$")
+	    public void settransactionID(String requestBody,String tags,String cif) throws Exception {
+	                  steps.generateTxnID(requestBody, tags, cif);
+	   }
+	
+//		created by Vijay M on 26Jun2025
+		@Then("^sort (.*) file based on (.*) and (.*)$")
+		public void sortElegibleTDSResponse(String resfilePath, String sCategory, String rFlag) throws Exception {
+			steps.sortEligibleTds(resfilePath, sCategory, rFlag);
+		}
+//		created by Vijay M on 30Jun2025	
+		@Then("^user identifies (.*) account from accountInfo API$")
+		public void LADAccountList(String accType) throws Exception {
+			steps.LoanAgainstDepostAccountList(accType);
+		}
 }

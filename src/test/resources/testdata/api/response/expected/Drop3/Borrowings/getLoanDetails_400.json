@@ -1,1 +1,16 @@
-{}
+{
+    "errorId": "5b256d16-7094-4b7a-b81f-4ee86032559f",
+    "errorAt": "2025-04-02T19:19:47.914535676",
+    "errorLocation": null,
+    "error": null,
+    "errors": [
+        {
+            "code": "400",
+            "title": null,
+            "message": "Cannot invoke \"String.toUpperCase()\" because the return value of \"com.ubi.dbp.custservice.model.CorpUserRequest.getCorpId()\" is null",
+            "values": null,
+            "origmesg": null,
+            "errors": null
+        }
+    ]
+}

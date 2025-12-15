@@ -1,4 +1,4 @@
- Feature: Smoke of Fund Transfer
+Feature: Smoke of Fund Transfer
 Background: SettingFileHandlerPath
 Given user sets the file path for this feature file for Drop2/FundTransfer
 
@@ -253,7 +253,7 @@ Then user verifies that status is 200
 Then user verifies json from <responseBody>
 
 Examples:
-|service     					|endpoint  |requestBody                                     																	|requestField 																						|responsefield	  				|filename                            					|responseBody|
+|service     					|endpoint  |requestBody                                     																	|requestField 																						|responsefield	  																												|filename                            																		|responseBody|
 |standinginstruction	|/set-si	 |\src\test\resources\testdata\api\request\Drop2\fundtransfer\Reg200SETSIReq.json 	|cif,identifierNumber,fromAccountNumber,mode							|data.cif, data.toAccount,data.fromAccount, data.modeOfPayment					|OtherBankTransfer.json																			 |\src\test\resources\testdata\api\response\expected\Drop2\fundtransfer\Reg200SETSIResp.json|
 
 @TestCaseKey=UDB-T34793 @Smoke
@@ -291,12 +291,13 @@ Given user sets the environment of endpoint
 Given user set the basepath to <service>
 Then set the endpoint <endpoint>
 Then user triggers a post request with <requestBody>
+Then user copy file from <responseFolder> and paste to file at location <responseBody>
 Then user verifies that status is 200
 Then user verifies json from <responseBody>
 
 Examples:
-|service     					|endpoint   |requestBody           																										 |requestField 														|responsefield	  																		|filename                |responseBody|
-|standinginstruction	|/cancel-si	|\src\test\resources\testdata\api\request\Drop2\fundtransfer\CancelSI.json |cif,debitAccountNumber,serialNumber	|data.cif, data.debitAccountNumber,data.referenceNumber   |Reg200SETSIResp.json 	 |\src\test\resources\testdata\api\response\expected\Drop2\fundtransfer\CancelSI.json|
+|service     					|endpoint   |requestBody           																										 |requestField 														|responsefield	  																				|filename                |responseBody																																						|responseFolder|
+|standinginstruction	|/cancel-si	|\src\test\resources\testdata\api\request\Drop2\fundtransfer\CancelSI.json |cif,debitAccountNumber,serialNumber			|data.cif, data.debitAccountNumber,data.referenceNumber   |Reg200SETSIResp.json 	 |\src\test\resources\testdata\api\response\expected\Drop2\fundtransfer\CancelSI.json			|src\\test\\resources\\responseFolder\\CancelSI.json|
 
 
 @TestCaseKey=UDB-T34796 @Smoke

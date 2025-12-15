@@ -1,8 +1,1 @@
-{
-    "timestamp": "2025-02-04T11:14:53.937+00:00",
-    "path": "/msme/app/customer/api/v1/getCustomerAccountsExtsd",
-    "status": 404,
-    "error": "Not Found",
-    "message": null,
-    "requestId": "aeae6b69-2302"
-}
+{"timestamp":"2025-03-25T12:05:17.467+00:00","path":"/msme/app/customer/api/v1/getCustomerAccountsExt1","status":404,"error":"Not Found","message":null,"requestId":"0b256614-544"}

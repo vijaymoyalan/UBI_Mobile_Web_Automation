@@ -1,6 +1,6 @@
 {
 	"cif":"243356508",
-    "customerId": "919713373552",
+    "customerId": "919082572961",
     "payerVpa": "6006259304@unionbankofindia",
     "mcc":"0000",
     "payerName": "SIRRA MARTHA",
@@ -10,17 +10,17 @@
     "expiry": "",
     "remarks": "Rent",
    "ac": {
-        "name": "SAURABH MISHRA",
-        "accRefNumber": "729502070000067",
+        "name": "RAJU MAURYA",
+        "accRefNumber": "360102010156168",
         "type": "SAVINGS",
         "ifsc": "UBIN0556688",
         "atmpinlength": "4",
         "otpLength": "6",
         "isDefault": "Y",
-        "vpa": "9713373552@unionbankofindia"
+        "vpa": "9082572961@ubi"
     },
     "device": {
-        "mobile": "919713373552",
+        "mobile": "919082572961",
         "location": "Hyderabad,Hyderabad,India",
         "type": "MOB",
         "id": "561eb7a60f03a796",

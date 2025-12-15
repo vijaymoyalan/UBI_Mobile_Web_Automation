@@ -1,32 +1,736 @@
 {
-  "traceId": "173735459928730423469985103115888203",
+  "traceId": "174979452993017687576378465943994943",
   "statusCode": "SUCCESS",
   "statusDescription": "Transactions fetched successfully",
-  "totalTransaction": 2,
+  "totalTransaction": 63,
   "txnDetails": [
     {
-      "title": "18-05-2024",
+      "title": "12-06-2025",
       "data": [
         {
-          "txnDate": "18-05-2024",
-          "txnRefNo": "U24142183294",
-          "txnNarration": "Paytm",
-          "txnAmt": "2392.61",
-          "dbCrFlag": null,
+          "txnDate": "12-06-2025",
+          "txnRefNo": "U25163167131",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "1.00",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        },
+        {
+          "txnDate": "12-06-2025",
+          "txnRefNo": "U25163167130",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "1.00",
+          "dbCrFlg": "CR",
           "txnCardFlg": "M",
           "responseType": "U"
         }
       ]
     },
     {
-      "title": "15-05-2024",
+      "title": "11-06-2025",
       "data": [
         {
-          "txnDate": "15-05-2024",
-          "txnRefNo": "U24136559473",
-          "txnNarration": "Pymt By Auto Debit",
-          "txnAmt": "3600.00",
-          "dbCrFlag": null,
+          "txnDate": "11-06-2025",
+          "txnRefNo": "U25162167128",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "1.00",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        }
+      ]
+    },
+    {
+      "title": "29-05-2025",
+      "data": [
+        {
+          "txnDate": "29-05-2025",
+          "txnRefNo": "U25149167109",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "2.00",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        }
+      ]
+    },
+    {
+      "title": "26-05-2025",
+      "data": [
+        {
+          "txnDate": "26-05-2025",
+          "txnRefNo": "U25146167073",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "2.00",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        }
+      ]
+    },
+    {
+      "title": "23-05-2025",
+      "data": [
+        {
+          "txnDate": "23-05-2025",
+          "txnRefNo": "U25143167066",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "1.00",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        },
+        {
+          "txnDate": "23-05-2025",
+          "txnRefNo": "U25143167064",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "1.00",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        },
+        {
+          "txnDate": "23-05-2025",
+          "txnRefNo": "U25143167063",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "1.00",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        },
+        {
+          "txnDate": "23-05-2025",
+          "txnRefNo": "U25143167065",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "1.00",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        },
+        {
+          "txnDate": "23-05-2025",
+          "txnRefNo": "U25143167062",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "1.00",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        }
+      ]
+    },
+    {
+      "title": "21-05-2025",
+      "data": [
+        {
+          "txnDate": "21-05-2025",
+          "txnRefNo": "U25141167056",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "1.00",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        },
+        {
+          "txnDate": "21-05-2025",
+          "txnRefNo": "U25141167058",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "1.00",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        },
+        {
+          "txnDate": "21-05-2025",
+          "txnRefNo": "U25141167057",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "1.00",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        }
+      ]
+    },
+    {
+      "title": "20-05-2025",
+      "data": [
+        {
+          "txnDate": "20-05-2025",
+          "txnRefNo": "U25140167055",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "1.00",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        },
+        {
+          "txnDate": "20-05-2025",
+          "txnRefNo": "U25140167054",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "1.00",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        }
+      ]
+    },
+    {
+      "title": "19-05-2025",
+      "data": [
+        {
+          "txnDate": "19-05-2025",
+          "txnRefNo": "U25139167053",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "1.00",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        },
+        {
+          "txnDate": "19-05-2025",
+          "txnRefNo": "U25139167052",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "1.00",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        }
+      ]
+    },
+    {
+      "title": "16-05-2025",
+      "data": [
+        {
+          "txnDate": "16-05-2025",
+          "txnRefNo": "U25136167047",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "2.00",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        },
+        {
+          "txnDate": "16-05-2025",
+          "txnRefNo": "U25136167046",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "1.00",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        },
+        {
+          "txnDate": "16-05-2025",
+          "txnRefNo": "U25136167048",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "1.00",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        }
+      ]
+    },
+    {
+      "title": "15-05-2025",
+      "data": [
+        {
+          "txnDate": "15-05-2025",
+          "txnRefNo": "U25135167044",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "1.00",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        },
+        {
+          "txnDate": "15-05-2025",
+          "txnRefNo": "U25135167045",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "23.00",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        }
+      ]
+    },
+    {
+      "title": "14-05-2025",
+      "data": [
+        {
+          "txnDate": "14-05-2025",
+          "txnRefNo": "U25134167040",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "1.00",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        },
+        {
+          "txnDate": "14-05-2025",
+          "txnRefNo": "U25134167042",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "1.00",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        },
+        {
+          "txnDate": "14-05-2025",
+          "txnRefNo": "U25134167041",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "1.00",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        },
+        {
+          "txnDate": "14-05-2025",
+          "txnRefNo": "U25134167039",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "1.00",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        }
+      ]
+    },
+    {
+      "title": "29-04-2025",
+      "data": [
+        {
+          "txnDate": "29-04-2025",
+          "txnRefNo": "U25119167011",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "1.00",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        },
+        {
+          "txnDate": "29-04-2025",
+          "txnRefNo": "U25119167010",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "1.00",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        }
+      ]
+    },
+    {
+      "title": "23-04-2025",
+      "data": [
+        {
+          "txnDate": "23-04-2025",
+          "txnRefNo": "U25113166962",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "1.00",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        },
+        {
+          "txnDate": "23-04-2025",
+          "txnRefNo": "U25113166963",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "1.00",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        },
+        {
+          "txnDate": "23-04-2025",
+          "txnRefNo": "U25113166964",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "1.00",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        }
+      ]
+    },
+    {
+      "title": "22-04-2025",
+      "data": [
+        {
+          "txnDate": "22-04-2025",
+          "txnRefNo": "U25112166951",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "1.00",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        }
+      ]
+    },
+    {
+      "title": "14-04-2025",
+      "data": [
+        {
+          "txnDate": "14-04-2025",
+          "txnRefNo": "U25104166940",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "1.00",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        }
+      ]
+    },
+    {
+      "title": "12-04-2025",
+      "data": [
+        {
+          "txnDate": "12-04-2025",
+          "txnRefNo": "U25102166932",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "1.00",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        },
+        {
+          "txnDate": "12-04-2025",
+          "txnRefNo": "U25102166933",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "1.00",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        }
+      ]
+    },
+    {
+      "title": "09-04-2025",
+      "data": [
+        {
+          "txnDate": "09-04-2025",
+          "txnRefNo": "U25099166924",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "1.00",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        }
+      ]
+    },
+    {
+      "title": "02-04-2025",
+      "data": [
+        {
+          "txnDate": "02-04-2025",
+          "txnRefNo": "U25092166902",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "1.00",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        },
+        {
+          "txnDate": "02-04-2025",
+          "txnRefNo": "U25092166903",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "1.00",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        }
+      ]
+    },
+    {
+      "title": "27-03-2025",
+      "data": [
+        {
+          "txnDate": "27-03-2025",
+          "txnRefNo": "U25086166891",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "1.00",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        }
+      ]
+    },
+    {
+      "title": "26-03-2025",
+      "data": [
+        {
+          "txnDate": "26-03-2025",
+          "txnRefNo": "U25085166888",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "1.00",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        },
+        {
+          "txnDate": "26-03-2025",
+          "txnRefNo": "U25085166887",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "1.00",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        },
+        {
+          "txnDate": "26-03-2025",
+          "txnRefNo": "U25085166883",
+          "txnNarration": "Pymt By Vyom",
+          "txnAmt": "1.00",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        }
+      ]
+    },
+    {
+      "title": "24-05-2024",
+      "data": [
+        {
+          "txnDate": "24-05-2024",
+          "txnRefNo": "U24145541271",
+          "txnNarration": "Fuel Surchg Rev",
+          "txnAmt": "92.85",
+          "dbCrFlg": "CR",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        }
+      ]
+    },
+    {
+      "title": "14-05-2024",
+      "data": [
+        {
+          "txnDate": "14-05-2024",
+          "txnRefNo": "U24137690510",
+          "txnNarration": "S R Filling Statio",
+          "txnAmt": "738.61",
+          "dbCrFlg": "DB",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        },
+        {
+          "txnDate": "14-05-2024",
+          "txnRefNo": "U24137686707",
+          "txnNarration": "R S Service Statio",
+          "txnAmt": "580.56",
+          "dbCrFlg": "DB",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        }
+      ]
+    },
+    {
+      "title": "13-05-2024",
+      "data": [
+        {
+          "txnDate": "13-05-2024",
+          "txnRefNo": "U24136484663",
+          "txnNarration": "Torrent Gas Morada",
+          "txnAmt": "339.96",
+          "dbCrFlg": "DB",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        },
+        {
+          "txnDate": "13-05-2024",
+          "txnRefNo": "U24136483914",
+          "txnNarration": "Hiway 9 Fuel N Fac",
+          "txnAmt": "711.30",
+          "dbCrFlg": "DB",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        }
+      ]
+    },
+    {
+      "title": "12-05-2024",
+      "data": [
+        {
+          "txnDate": "12-05-2024",
+          "txnRefNo": "U24135364087",
+          "txnNarration": "Dipti Filling Stat",
+          "txnAmt": "1062.39",
+          "dbCrFlg": "DB",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        }
+      ]
+    },
+    {
+      "title": "11-05-2024",
+      "data": [
+        {
+          "txnDate": "11-05-2024",
+          "txnRefNo": "U24135296598",
+          "txnNarration": "Hiway 9 Fuel N Fac",
+          "txnAmt": "283.30",
+          "dbCrFlg": "DB",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        }
+      ]
+    },
+    {
+      "title": "10-05-2024",
+      "data": [
+        {
+          "txnDate": "10-05-2024",
+          "txnRefNo": "U24135233139",
+          "txnNarration": "Siddhartha Fuels",
+          "txnAmt": "616.19",
+          "dbCrFlg": "DB",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        },
+        {
+          "txnDate": "10-05-2024",
+          "txnRefNo": "U24135293445",
+          "txnNarration": "Mobikwik50000",
+          "txnAmt": "25708.00",
+          "dbCrFlg": "DB",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        }
+      ]
+    },
+    {
+      "title": "09-05-2024",
+      "data": [
+        {
+          "txnDate": "09-05-2024",
+          "txnRefNo": "U24134121518",
+          "txnNarration": "R S Service Statio",
+          "txnAmt": "496.99",
+          "dbCrFlg": "DB",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        }
+      ]
+    },
+    {
+      "title": "07-05-2024",
+      "data": [
+        {
+          "txnDate": "07-05-2024",
+          "txnRefNo": "U24130026308",
+          "txnNarration": "R S Service Statio",
+          "txnAmt": "500.80",
+          "dbCrFlg": "DB",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        }
+      ]
+    },
+    {
+      "title": "06-05-2024",
+      "data": [
+        {
+          "txnDate": "06-05-2024",
+          "txnRefNo": "U24129014631",
+          "txnNarration": "S R Filling Statio",
+          "txnAmt": "960.71",
+          "dbCrFlg": "DB",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        }
+      ]
+    },
+    {
+      "title": "02-05-2024",
+      "data": [
+        {
+          "txnDate": "02-05-2024",
+          "txnRefNo": "U24125046672",
+          "txnNarration": "M/S  Yadu Fuels",
+          "txnAmt": "557.80",
+          "dbCrFlg": "DB",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        },
+        {
+          "txnDate": "02-05-2024",
+          "txnRefNo": "U24125047499",
+          "txnNarration": "Siddhartha Fuels",
+          "txnAmt": "727.20",
+          "dbCrFlg": "DB",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        }
+      ]
+    },
+    {
+      "title": "30-04-2024",
+      "data": [
+        {
+          "txnDate": "30-04-2024",
+          "txnRefNo": "U24124022981",
+          "txnNarration": "S R Filling Statio",
+          "txnAmt": "660.22",
+          "dbCrFlg": "DB",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        }
+      ]
+    },
+    {
+      "title": "28-04-2024",
+      "data": [
+        {
+          "txnDate": "28-04-2024",
+          "txnRefNo": "U24121014245",
+          "txnNarration": "Kp 5 G Noida",
+          "txnAmt": "580.64",
+          "dbCrFlg": "DB",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        },
+        {
+          "txnDate": "28-04-2024",
+          "txnRefNo": "U24121018026",
+          "txnNarration": "Peetambra Filling ",
+          "txnAmt": "182.12",
+          "dbCrFlg": "DB",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        },
+        {
+          "txnDate": "28-04-2024",
+          "txnRefNo": "U24121015212",
+          "txnNarration": "Jaypee Infratech L",
+          "txnAmt": "255.36",
+          "dbCrFlg": "DB",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        }
+      ]
+    },
+    {
+      "title": "26-04-2024",
+      "data": [
+        {
+          "txnDate": "26-04-2024",
+          "txnRefNo": "U24120147311",
+          "txnNarration": "Jal Devi Cng Filli",
+          "txnAmt": "746.71",
+          "dbCrFlg": "DB",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        },
+        {
+          "txnDate": "26-04-2024",
+          "txnRefNo": "U24120141845",
+          "txnNarration": "Gail Gas Limited",
+          "txnAmt": "698.00",
+          "dbCrFlg": "DB",
+          "txnCardFlg": "M",
+          "responseType": "U"
+        },
+        {
+          "txnDate": "26-04-2024",
+          "txnRefNo": "U24120144787",
+          "txnNarration": "Igl It City",
+          "txnAmt": "316.06",
+          "dbCrFlg": "DB",
           "txnCardFlg": "M",
           "responseType": "U"
         }

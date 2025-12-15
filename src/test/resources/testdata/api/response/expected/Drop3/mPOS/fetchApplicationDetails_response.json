@@ -32,5 +32,10 @@
             "docRefno": "73334398716441"
         }
     ],
-    "applicationProceedIndicator": null
+    "applicationProceedIndicator": null,
+    "referenceNumber": null,
+    "journeyProgressName": null,
+    "journeySubProgressName": null,
+    "journeyStatus": null,
+    "custName": null
 }

@@ -1,1 +1,15 @@
-{"errorId":"a4b9f17d-2d44-4a6c-be21-31808f3e8dda","errorAt":"2024-12-11T16:00:55.227307349","errorLocation":null,"error":null,"errors":[{"code":"PM007","message":"No Enrollment Details Found","values":null,"origmesg":null,"errors":null}]}
+{
+  "errorId": "a4ad3703-80ca-49a0-a02a-6c390125fb54",
+  "errorAt": "2025-02-21T11:52:19.597370137",
+  "errorLocation": null,
+  "error": null,
+  "errors": [
+    {
+      "code": "BAD_REQUEST",
+      "message": "schemeCode: string [PMJyhujJBY] does not match pattern ^(PMJJBY|PMSBY)$",
+      "values": null,
+      "origmesg": null,
+      "errors": null
+    }
+  ]
+}

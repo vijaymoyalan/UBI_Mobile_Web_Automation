@@ -1,13 +1,1 @@
-{
-  "data": null,
-  "success": false,
-  "errorMessage": {
-    "code": "500",
-    "message": "FAILED",
-    "details": "No Records found",
-    "errors": {
-      "CIF": "254061641",
-      "SI Id": "RJEB171543"
-    }
-  }
-}
+{"data":null,"success":false,"errorMessage":{"code":"E0016","message":"FAILED","details":"No Records found","errors":{"SI ID":"RJEB171543","CIF":"254061641"}}}

@@ -1,1 +1,15 @@
-{"errorId":"526fc8c0-5fa2-4ab2-9959-76c76188725f","errorAt":"2024-12-11T18:07:16.438352201","errorLocation":null,"error":null,"errors":[{"code":"BAD_REQUEST","message":"channelId: string [MggJjA] does not match pattern ^(BC|ATM|MB|EB|SMS|WHATSAPP|BRANCH|TAB|CSP|WEBSITE|MISSCALL|DBU)$","values":null,"origmesg":null,"errors":null}]}
+{
+  "errorId": "b812b9d7-8048-42b5-b3be-73fb5bd0d9c7",
+  "errorAt": "2025-02-20T12:20:12.319106957",
+  "errorLocation": null,
+  "error": null,
+  "errors": [
+    {
+      "code": "BAD_REQUEST",
+      "message": "channelId: string [MBAS] does not match pattern ^(BC|ATM|MB|EB|SMS|WHATSAPP|BRANCH|TAB|CSP|WEBSITE|MISSCALL|DBU)$",
+      "values": null,
+      "origmesg": null,
+      "errors": null
+    }
+  ]
+}

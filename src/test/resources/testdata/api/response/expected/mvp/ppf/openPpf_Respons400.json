@@ -1,11 +1,12 @@
 {
-    "errorId": "e879c6b8-00b7-476c-b30f-cc1df42d9573",
-    "errorAt": "2024-12-10T11:43:39.216330799",
+    "errorId": "68f677e1-9aac-4682-b1e4-54680f53b4d0",
+    "errorAt": "2025-03-20T11:53:28.688357345",
     "errorLocation": null,
+    "error": null,
     "errors": [
         {
             "code": "BAD_REQUEST",
-            "message": "Bad Request",
+            "message": "Something went wrong. Please try again later.",
             "values": null,
             "origmesg": null,
             "errors": null

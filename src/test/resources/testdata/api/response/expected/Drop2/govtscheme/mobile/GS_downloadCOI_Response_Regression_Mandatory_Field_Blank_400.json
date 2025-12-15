@@ -1,1 +1,15 @@
-{"errorId":"1039e535-9a2b-4dc8-a7b3-4e95d98f2eb0","errorAt":"2024-12-11T16:00:57.120204565","errorLocation":null,"error":null,"errors":[{"code":"PM007","message":"No Enrollment Details Found","values":null,"origmesg":null,"errors":null}]}
+{
+  "errorId": "fec05162-bbab-4373-acb4-b41e4465a2aa",
+  "errorAt": "2025-02-21T12:03:04.79745314",
+  "errorLocation": null,
+  "error": null,
+  "errors": [
+    {
+      "code": "BAD_REQUEST",
+      "message": "schemeCode: expected minLength: 1, actual: 0, schemeCode: string [] does not match pattern ^(PMJJBY|PMSBY)$, applnRefNumber: expected minLength: 1, actual: 0",
+      "values": null,
+      "origmesg": null,
+      "errors": null
+    }
+  ]
+}

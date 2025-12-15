@@ -1,13 +1,1 @@
-{
-  "statusCode": "SUCCESS",
-  "statusDescription": "PAYMENT_SUCCESSFULL",
-  "txnStatus": "SUCCESS",
-  "paymentRefNo": "857210477456",
-  "ccPaymentRefNo": "2024-12-00436154",
-  "amount": 1,
-  "ledgerBalance": "0000000003713609",
-  "availableBalance": "0000000003713609",
-  "errors": null,
-  "txnDate": "02-12-2024",
-  "correlationId": "ea3059da-d65a-4846-b909-836c14053b4d"
-}
+{"statusCode":"SUCCESS","statusDescription":"PAYMENT_SUCCESSFULL","txnStatus":"SUCCESS","paymentRefNo":"S439598","ccPaymentRefNo":"2025-06-01155427","amount":1,"ledgerBalance":"0000003439457090","availableBalance":"0000002755960210","errors":null,"txnDate":"Jun 13 2025 12:19 PM","correlationId":"f1dbf801-0ac0-45ca-83c7-ee1aa9369611"}

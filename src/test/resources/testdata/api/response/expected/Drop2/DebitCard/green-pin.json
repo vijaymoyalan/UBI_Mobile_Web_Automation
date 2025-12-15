@@ -1,6 +1,8 @@
 {
-  "success": true,
-  "errorDetails": null,
-  "message": "Your PIN has been generated.",
-  "errorMessage": null
+  "success":true,
+  "errorDetails":null,
+  "message":"Your PIN has been generated.",
+  "errorMessage":null,
+  "systemCode":"ATM-SWITCH"  
+  
 }

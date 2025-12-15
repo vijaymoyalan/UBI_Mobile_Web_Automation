@@ -1,18 +1,19 @@
 {
   "data": {
-    "referenceNumber": "UBINH24219428957",
-    "creditAccountType": "SBA",
+    "referenceNumber": "UBINH2543041802",
+    "creditAccountType": null,
     "debitAccountType": "SBA",
-    "creditAccountName": "TEST NEFT",
+    "creditAccountName": "Manohar Saho ",
     "fromAccount": "441002010058664",
-    "toAccount": "123456043",
+    "toAccount": "123456041",
     "modeOfPayment": "NEFT",
-    "trnxAmount": 12,
-    "remarks": "TEST",
-    "trnxTimestamp": "2024-12-07T18:27:09"
+    "trnxAmount": 12.11,
+    "remarks": "",
+    "trnxTimestamp": "2025-02-12T17:47:21",
+    "challengeResp": null
   },
   "success": true,
   "errorMessage": null,
-  "kafkaStatus": null,
+  "kafkaStatus": "COMPLETED",
   "correlationId": null
 }

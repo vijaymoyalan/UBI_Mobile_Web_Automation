@@ -1,1 +1,16 @@
-{}
+{
+    "errorId": "eec29cb6-abd2-4660-842c-ce78b17c400c",
+    "errorAt": "2025-04-07T12:51:20.280746538",
+    "errorLocation": null,
+    "error": null,
+    "errors": [
+        {
+            "code": "400",
+            "title": null,
+            "message": "400 Bad Request from POST http://cbs-acct-qry-ext-svc.proxy-cbs-sit.svc.cluster.local:8080/proxy/v1/cbs/accountDetail/getBGLCDetails",
+            "values": null,
+            "origmesg": null,
+            "errors": null
+        }
+    ]
+}

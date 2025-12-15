@@ -1,1 +1,5 @@
-{"errorId":"01df4bcd-29d5-40de-9201-8581daa78007","errorAt":"2024-12-27T15:51:32.124244763","errorLocation":null,"error":null,"errors":[{"code":"BAD_REQUEST","message":"#: required key [cif] not found","values":null,"origmesg":null,"errors":null}]}
+{
+  "code": "NOT_AUTHORIZED",
+  "title": "null",
+  "message": "Authorization failed."
+}

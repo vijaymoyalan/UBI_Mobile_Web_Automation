@@ -155,6 +155,11 @@
 			"name": "MSMELoginButton",
 			"locator": "xpath",
 			"value": "//android.widget.Button[@content-desc=\"Login\"]"
+		},
+		{
+			"name": "ContinueButton",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
 		}
 	],
 	"PermissionsPage": [
@@ -5456,6 +5461,11 @@
 			"name": "LoanDepositClosureAmt",
 			"locator": "xpath",
 			"value": "//android.widget.TextView[@resource-id=\"textId\" and @text=\"Total Amount Due for Closure\"]"
+		},
+		{
+			"name": "CancelButton",
+			"locator": "xpath",
+			"value": "//android.widget.Button[@content-desc=\"Cancel\"]"
 		}
 	],
 	"RDDetailsPage": [
@@ -10245,6 +10255,16 @@
 				"name": "SeePassword",
 				"locator": "xpath",
 				"value": "//*[@id=\"root\"]/div/div[1]/main/div/div[2]/form/div[2]/div/div"
+		},
+		{
+				"name": "AuthenticationErrorAlert",
+				"locator": "xpath",
+				"value": "//p[@class=\"MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom css-4an0mh\"]"
+		},
+		{
+				"name": "AlertOkayButton",
+				"locator": "xpath",
+				"value": "//button[normalize-space()=\"Okay\"]"
 		}
 	],
 "AssistedPortalDashboard":[
@@ -10291,7 +10311,7 @@
 		{
 				"name": "ApplicationStatus",
 				"locator": "xpath",
-				"value": "/html/body/div/div/div[1]/div[3]/div[2]/div/div[2]/div/table/tbody/tr[51]/td[6]/div/p/div/div/span/text()"
+				"value": "(//div[@class=\"customersApplicationTable__tableBody__cell__primary__status__label\"])[1]"
 		},
 		{
 				"name": "GlobalSerachBox",
@@ -10312,6 +10332,21 @@
 				"name": "RepoteeMayur",
 				"locator": "xpath",
 				"value": "//a[contains(text(),\"Mayur Barpande\")]"
+		},
+		{
+				"name": "AssigneHarshita",
+				"locator": "xpath",
+				"value": "//a[normalize-space()=\"Medisetty Harshita\"]"
+		},
+		{
+				"name": "AssigneBharadwaj",
+				"locator": "xpath",
+				"value": "//a[normalize-space()=\"BHARADWAJ TOONDLA\"]"
+		},
+		{
+				"name": "AssigneNalagatla",
+				"locator": "xpath",
+				"value": "//a[normalize-space()=\"NALAGATLA ANUPAMA\"]"
 		},
 		{
 				"name": "ApplicationNumber",
@@ -10341,7 +10376,7 @@
 		{
 				"name": "GovtSchemeSubTab",
 				"locator": "xpath",
-				"value": "//a[contains(normalize-space(),\"Government Schemes\")]"
+				"value": "//a[contains(@class, \"MuiLink-underlineHover\") and contains(text(), \"Government Schemes\")]"
 		},
 		{
 				"name": "AccessOverInternet",
@@ -10367,7 +10402,128 @@
 				"name": "TabHeaderName",
 				"locator": "xpath",
 				"value": "(//div[@role=\"heading\"])[1]"
+		},
+		{
+				"name": "AssignNowButton",
+				"locator": "xpath",
+				"value": "//button[normalize-space()=\"Assign Now\"]"
+		},
+		{
+				"name": "NewApplicationButton",
+				"locator": "xpath",
+				"value": "//button[normalize-space()=\"New Application\"]"
+		},
+		{
+				"name": "ApplicationLiabilitiesTab",
+				"locator": "xpath",
+				"value": "(//a[@role=\"link\"][normalize-space()=\"Liabilities\"])[2]"
+		},
+		{
+				"name": "NewRecurringDeposit",
+				"locator": "xpath",
+				"value": "//span[normalize-space()=\"Recurring Deposit\"]"
+		},
+		{
+				"name": "CustomerContactNumber",
+				"locator": "xpath",
+				"value": "//input[@id=\"contactnumber\"]"
+		},
+		{
+				"name": "ContinueButton",
+				"locator": "xpath",
+				"value": "//button[normalize-space()=\"Continue\"]"
+		},
+		{
+				"name": "DateOfAssignment",
+				"locator": "xpath",
+				"value": "(//div[@class=\"updatesView__cardGroup__card__cardHeader__subTitle\"]//span[@class=\"updatesView__cardGroup__card__cardHeader__subTitle__text\"])[3]"
+		},
+		{
+				"name": "ProfileIcon",
+				"locator": "xpath",
+				"value": "(//*[name()=\"svg\"][@aria-label=\"Profile dropdown\"])[1]"
+		},
+		{
+				"name": "OkayButton",
+				"locator": "xpath",
+				"value": "//button[normalize-space()=\"Okay\"]"
+		},
+		{
+				"name": "ProfileOption",
+				"locator": "xpath",
+				"value": "//li[contains(normalize-space(.), \"View Profile\")]"
+		},
+		{
+				"name": "Branch",
+				"locator": "xpath",
+				"value": "//p[contains(normalize-space(.), \"R.O.MUMBAI SOUTH\")]"
+		},
+		{
+				"name": "LoginUserName",
+				"locator": "xpath",
+				"value": "//div[@class=\"MuiTypography-root MuiTypography-h5 DashboardPage__header__text--label css-zq6grw\"]"
+		},
+		{
+				"name": "TotalAssignedApplication",
+				"locator": "xpath",
+				"value": "//div[@class=\"MuiTypography-root MuiTypography-h6 DashboardPage__header__text--desc css-1anx036\"]"
+		},
+		{
+				"name": "ApplicationAssignedHeader",
+				"locator": "xpath",
+				"value": "//th[normalize-space()=\"Application Assigned to\"]"
+		},
+		{
+				"name": "OpenStatusHeader",
+				"locator": "xpath",
+				"value": "(//th[contains(normalize-space(),\"Open\")])[1]"
+		},
+		{
+				"name": "InprogressStatusHeader",
+				"locator": "xpath",
+				"value": "(//th[contains(normalize-space(),\"In-progress\")])[1]"
+		},
+		{
+				"name": "LastLoginHeader",
+				"locator": "xpath",
+				"value": "//th[normalize-space()=\"Last Login\"]"
+		},
+		{
+				"name": "AssignedApplicationCategory",
+				"locator": "xpath",
+				"value": "//a[normalize-space()=\"Government Schemes\"]"
+		},
+		{
+				"name": "MyApplicationSection",
+				"locator": "xpath",
+				"value": "//p[@aria-label=\"My Applications\"]"
+		},
+		{
+				"name": "MyApplicationOpenStatus",
+				"locator": "xpath",
+				"value": "(//th[@class=\"MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium applicationsTable__tableHeader__cell css-1bigob2\"][contains(normalize-space(),\"Open\")])[2]"
+		},
+		{
+				"name": "MyApplicationInprogressStatus",
+				"locator": "xpath",
+				"value": "(//th[@class=\"MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium applicationsTable__tableHeader__cell css-1bigob2\"][contains(normalize-space(),\"In-progress\")])[2]"
+		},
+		{
+				"name": "MyApplicationCompletedStatus",
+				"locator": "xpath",
+				"value": "(//th[@class=\"MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium applicationsTable__tableHeader__cell css-1bigob2\"][contains(normalize-space(),\"Completed\")])[2]"
+		},
+		{
+				"name": "AssignedApplications",
+				"locator": "xpath",
+				"value": "//span[contains(@class,\"MuiChip-label\") and contains(text(),\"Assigned Application\")]"
+		},
+		{
+				"name": "UnAssignedApplications",
+				"locator": "xpath",
+				"value": "//span[contains(@class,\"MuiChip-label\") and contains(text(),\"Unassigned Application\")]"
 		}
+		
 	],
 "GovtSchemePage":[
 		{
@@ -10416,6 +10572,16 @@
 				"value": "//button[@name=\"Open\"]"
 		},
 		{
+				"name": "InprogressStatus",
+				"locator": "xpath",
+				"value": "//button[@name=\"In-progress\"]"
+		},
+		{
+				"name": "CompletedStatus",
+				"locator": "xpath",
+				"value": "//button[@name=\"Completed\"]"
+		},
+		{
 				"name": "FilterApplyButton",
 				"locator": "xpath",
 				"value": "(//button[normalize-space()=\"Apply Filter\"])[1]"
@@ -10433,7 +10599,7 @@
 		{
 				"name": "ApplicationDate",
 				"locator": "xpath",
-				"value": "(//td[contains(@class,'css-q34dxg')]//div[contains(@class,'css-1xar93x')]//span[contains(@class,'css-yb0lig')]//div[@class='customersApplicationTable__tableBody__cell__primary']//div[@class='customersApplicationTable__tableBody__cell__primary'])[2]"
+				"value": "(//td[contains(@class,\"css-q34dxg\")]//div[contains(@class,\"css-1xar93x\")]//span[contains(@class,\"css-yb0lig\")]//div[@class=\"customersApplicationTable__tableBody__cell__primary\"]//div[@class=\"customersApplicationTable__tableBody__cell__primary\"])[2]"
 		},
 		{
 				"name": "ApplicationSource",
@@ -10449,6 +10615,66 @@
 				"name": "ApplicationAge",
 				"locator": "xpath",
 				"value": "(//div[@class=\"customersApplicationTable__tableBody__cell__secFlake\"])[1]"
+		},
+		{
+				"name": "CheckBoxSelection",
+				"locator": "xpath",
+				"value": "//input[@aria-labelledby=\"enhanced-table-checkbox-0\"]/parent::span"
+		},
+		{
+				"name": "CheckBox",
+				"locator": "xpath",
+				"value": "//tbody/tr[1]/td[1]/span[1]//*[name()=\"svg\"]"
+		},
+		{
+				"name": "ApplicationStatus",
+				"locator": "xpath",
+				"value": "//div[@class=\"customersApplicationTable__tableBody__cell__primary__status__label\"]"
+		},
+		{
+				"name": "ApplicationNumber",
+				"locator": "xpath",
+				"value": "(//a[contains(@class,\"customersApplicationTable__tableBody__cell__primary__link\")])[1]"
+		},
+		{
+				"name": "ResumeButton",
+				"locator": "xpath",
+				"value": "//button[normalize-space()=\"Resume\"]"
+		},
+		{
+				"name": "ShowingApplicationCount",
+				"locator": "xpath",
+				"value": "//span[@class=\"govtSchemes__preDataSection__pagination__text__label\"]"
+		},
+		{
+				"name": "SSANewApplication",
+				"locator": "xpath",
+				"value": "//span[normalize-space()=\"Sukanya Samriddhi Account\"]"
+		},
+		{
+				"name": "NPSNewApplication",
+				"locator": "xpath",
+				"value": "//span[normalize-space()=\"Public Provident Fund\"]"
+		},
+		{
+				"name": "ApplicationAssignedTo",
+				"locator": "xpath",
+				"value": "(//span[@class=\"MuiTypography-root MuiTypography-body1 customersApplicationTable__tableBody__assigneeSection__text__value css-9l3uo3\"])[1]"
+		},
+		{
+				"name": "ApplicationDateSortingIcon",
+				"locator": "xpath",
+				"value": "(//*[name()=\"svg\"][@class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-tqymag\"])[2]"
+		},
+		{
+				"name": "ApplicationNumberSortingIcon",
+				"locator": "xpath",
+				"value": "(//*[name()=\"svg\"][@class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-tqymag\"])[1]"
+		},
+		{
+				"name": "NewApplicationButton",
+				"locator": "xpath",
+				"value": "//button[normalize-space()=\"New Application\"]"
 		}
 	],
 "AccessOverInternet":[
@@ -10473,6 +10699,612 @@
 				"name": "RDDetailsText",
 				"locator": "xpath",
 				"value": "//h5[normalize-space()=\"Recurring Deposit Details\"]"
+		},
+		{
+				"name": "CustomerBranch",
+				"locator": "xpath",
+				"value": "(//div[contains(text(),\"COLLEGE SQUARE\")])[1]"
+		},
+		{
+				"name": "OpenStatus",
+				"locator": "xpath",
+				"value": "//button[@name=\"Open\"]"
+		},
+		{
+				"name": "InprogressStatus",
+				"locator": "xpath",
+				"value": "//button[@name=\"In-progress\"]"
+		},
+		{
+				"name": "CompletedStatus",
+				"locator": "xpath",
+				"value": "//button[@name=\"Completed\"]"
+		},
+		{
+				"name": "FilterApplyButton",
+				"locator": "xpath",
+				"value": "(//button[normalize-space()=\"Apply Filter\"])[1]"
+		},
+		{
+				"name": "FilterOption",
+				"locator": "xpath",
+				"value": "//button[@aria-label=\"Filter\"]"
+		},
+		{
+				"name": "FilterApplicationStatus",
+				"locator": "xpath",
+				"value": "//button[normalize-space()=\"Application Status\"]"
+		},
+		{
+				"name": "ApplicationStatus",
+				"locator": "xpath",
+				"value": "//div[@class=\"customersApplicationTable__tableBody__cell__primary__status__label\"]"
+		},
+		{
+				"name": "ApplicationStage",
+				"locator": "xpath",
+				"value": "(//div[contains(@class,\"customersApplicationTable__tableBody__cell__secondary\")])[3]"
+		},
+		{
+				"name": "SelectAllRecords",
+				"locator": "xpath",
+				"value": "(//*[name()=\"path\"])[13]"
+		},
+		{
+				"name": "DisabledRadioButton",
+				"locator": "xpath",
+				"value": "//input[@type=\"radio\" and contains(@class,\"radio-custom\")]"
 		}
-]
+		
+	],
+"NewApplicationPage":
+	[
+		{
+				"name": "CustomerContactNumber",
+				"locator": "xpath",
+				"value": "//input[@id=\"contactnumber\"]"
+		},
+		{
+				"name": "ContinueButton",
+				"locator": "xpath",
+				"value": "//button[normalize-space()=\"Continue\"]"
+		},
+		{
+				"name": "SelectCIF",
+				"locator": "xpath",
+				"value": "//span[@class=\"card-container_span\"]"
+		},
+		{
+				"name": "SendConsentLink",
+				"locator": "xpath",
+				"value": "//button[normalize-space()=\"Send Consent Link\"]"
+		}
+	],
+"RIB_LoginPage":
+	[
+		{
+				"name": "LoginUsingPassword",
+				"locator": "xpath",
+				"value": "(//div[@class=\"access MuiBox-root css-0\"])[2]"
+		},
+		{
+				"name": "UserID",
+				"locator": "xpath",
+				"value": "//input[@id=\"username\"]"
+		},
+		{
+				"name": "Password",
+				"locator": "xpath",
+				"value": "//input[@id=\"password\"]"
+		},
+		{
+				"name": "LoginButton",
+				"locator": "xpath",
+				"value": "//button[normalize-space()=\"Login\"]"
+		}
+		
+	],
+"RIB_HomePage":
+	[
+		{
+				"name": "AddAccount",
+				"locator": "xpath",
+				"value": "//button[normalize-space()=\"+ Add Account\"]"
+		},
+		{
+				"name": "AddFD",
+				"locator": "xpath",
+				"value": "//div[@class=\"MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-834p59\"]//div[1]//div[1]//button[1]"
+		},
+		{
+				"name": "AddRD",
+				"locator": "xpath",
+				"value": "//button[.//p[text()='Recurring Deposit']]"
+		},
+		{
+				"name": "DepositTabViewMore",
+				"locator": "xpath",
+				"value": "(//p[@class=\"MuiTypography-root MuiTypography-body1 viewMore__viewMoreLabel css-9l3uo3\"])[1]"
+		},
+		{
+				"name": "RDTab",
+				"locator": "xpath",
+				"value": "(//button[contains(text(),\"Recurring Deposit\")])[1]"
+		},
+		{
+				"name": "ExistingRD",
+				"locator": "xpath",
+				"value": "(//button[contains(@class, \"balance-header__arrow\")])[1]"
+		}
+	],
+"RIB_FDPage":
+	[
+		{
+				"name": "FDName",
+				"locator": "xpath",
+				"value": "//input[@id=\"fdName\"]"
+		},
+		{
+				"name": "SelectInterestPayout",
+				"locator": "xpath",
+				"value": "//input[@id=\"interestPayoutPeriod\"]"
+		},
+		{
+				"name": "MonthlyPeriod",
+				"locator": "xpath",
+				"value": "//*[@id=\"interestPayoutPeriod-option-0\"]/span"
+		},
+		{
+				"name": "QuaterlyPeriod",
+				"locator": "xpath",
+				"value": "//*[@id=\"interestPayoutPeriod-option-1\"]/span"
+		},
+		{
+				"name": "YearlyPeriod",
+				"locator": "xpath",
+				"value": "//*[@id=\"interestPayoutPeriod-option-2\"]/span"
+		},
+		{
+				"name": "SelectPeriod",
+				"locator": "xpath",
+				"value": "//button[normalize-space()=\"Start Over\"]"
+		},
+		{
+				"name": "NomineeName",
+				"locator": "xpath",
+				"value": "(//input[@id=\"nominees[0].nomineeName\"])[1]"
+		},
+		{
+				"name":"AddNomineeText",
+				"locator":"xpath",
+				"value":"//p[@class=\"MuiTypography-root MuiTypography-body1 FdPage__box__content__formSection__nominee__header__labelNominee css-9l3uo3\"]"
+		},
+		{
+				"name":"DOB",
+				"locator":"xpath",
+				"value":"//div[contains(@class,\"textField__inputContainer__endAdornment_box\")]"
+		},
+		{
+				"name":"ContinueButton",
+				"locator":"xpath",
+				"value":"//button[normalize-space()=\"Continue\"]"
+		},
+		{
+				"name":"DepositAmount",
+				"locator":"xpath",
+				"value":"//input[@id=\"depositAmount\"]"
+		},
+		{
+				"name":"TnC",
+				"locator":"xpath",
+				"value":"//p[@class=\"MuiTypography-root MuiTypography-body1 FdCustomerReview__box__content__termsandcondition__text__subText css-uovq3q\"]"
+		},
+		{
+				"name":"AgreeButton",
+				"locator":"xpath",
+				"value":"//button[normalize-space()=\"I Agree\"]"
+		},
+		{
+				"name":"SubmitButton",
+				"locator":"xpath",
+				"value":"//button[normalize-space()=\"submit\"]"
+		},
+		{
+				"name":"StartOverButton",
+				"locator":"xpath",
+				"value":"//button[normalize-space()=\"Start Over\"]"
+		},
+		{
+				"name":"TPIN",
+				"locator":"xpath",
+				"value":"(//div[@class=\"MuiFormControl-root css-144jnq8\"])[1]"
+		},
+		{
+				"name":"ChangeFDDetails",
+				"locator":"xpath",
+				"value":"(//a[@role=\"link\"][normalize-space()=\"Change\"])[1]"
+		},
+		{
+				"name":"ChangeNamineeDetails",
+				"locator":"xpath",
+				"value":"(//a[@role=\"link\"][normalize-space()=\"Change\"])[2]"
+		},
+		{
+				"name":"3YearsTenure",
+				"locator":"xpath",
+				"value":"//span[normalize-space()=\"3 Years\"]"
+		},
+		{
+				"name":"ChangeRelation",
+				"locator":"xpath",
+				"value":"(//input[@id=\"nominees[0].nomineeRelationship\"])[1]"
+		},
+		{
+				"name":"SelectRelation",
+				"locator":"xpath",
+				"value":"//*[@id=\"nominees[0].nomineeRelationship-option-0\"]/span"
+		}
+		
+	],
+"RIB_RDPage":
+	[
+		{
+				"name": "RDName",
+				"locator": "xpath",
+				"value": "//input[@id=\"rdName\"]"
+		},
+		{
+				"name": "AccountNameDropDown",
+				"locator": "xpath",
+				"value": "//button[@title=\"Open\"]//*[name()=\"svg\"]"
+		},
+		{
+				"name": "SavingAccountSelection",
+				"locator": "xpath",
+				"value": "//*[@id=\"accountNumberDropDown-option-0\"]/div"
+		},
+		{
+				"name": "CurrentAccountSelection",
+				"locator": "xpath",
+				"value": "//*[@id=\"accountNumberDropDown-option-1\"]/div"
+		},
+		{
+				"name": "OverdraftAccountSelection",
+				"locator": "xpath",
+				"value": "//*[@id=\"accountNumberDropDown-option-2\"]/div"
+		},
+		{
+				"name": "SavingsAccountSelection",
+				"locator": "xpath",
+				"value": "//input[@id=\"rdName\"]"
+		},
+		{
+				"name": "SelectTenure1Year",
+				"locator": "xpath",
+				"value": "//span[normalize-space()=\"1 Year\"]"
+		},
+		{
+				"name": "SelectTenure3Year",
+				"locator": "xpath",
+				"value": "//span[normalize-space()=\"3 Years\"]"
+		},
+		{
+				"name": "SelectCustomeTenure",
+				"locator": "xpath",
+				"value": "//span[normalize-space()=\"Custom\"]"
+		},
+		{
+				"name": "ScheduleTransferDate",
+				"locator": "xpath",
+				"value": "(//div[contains(@class,\"textField__inputContainer__endAdornment_box\")])[1]"
+		},
+		{
+				"name": "SelectPeriod",
+				"locator": "xpath",
+				"value": "//button[normalize-space()=\"Start Over\"]"
+		},
+		{
+				"name": "NomineeName",
+				"locator": "xpath",
+				"value": "(//input[@id=\"nominees[0].nomineeName\"])[1]"
+		},
+		{
+				"name":"AddNomineeText",
+				"locator":"xpath",
+				"value":"(//p[@class=\"MuiTypography-root MuiTypography-body1 RdPage__box__content__formSection__nominee__header__labelNominee css-9l3uo3\"])[1]"			 
+		},
+		{
+				"name":"DOB",
+				"locator":"xpath",
+				"value":"(//div[contains(@class,\"textField__inputContainer__endAdornment_box\")])[2]"
+		},
+		{
+				"name":"ContinueButton",
+				"locator":"xpath",
+				"value":"//button[normalize-space()=\"Continue\"]"
+		},
+		{
+				"name":"DepositAmount",
+				"locator":"xpath",
+				"value":"//input[@id=\"depositAmount\"]"
+		},
+		{
+				"name":"TnC",
+				"locator":"xpath",
+				"value":"//p[@class=\"MuiTypography-root MuiTypography-body1 FdCustomerReview__box__content__termsandcondition__text__subText css-uovq3q\"]"
+		},
+		{
+				"name":"AgreeButton",
+				"locator":"xpath",
+				"value":"//button[normalize-space()=\"I Agree\"]"
+		},
+		{
+				"name":"SubmitButton",
+				"locator":"xpath",
+				"value":"//button[normalize-space()=\"Submit\"]"
+		},
+		{
+				"name":"StartOverButton",
+				"locator":"xpath",
+				"value":"//button[normalize-space()=\"Start Over\"]"
+		},
+		{
+				"name":"TPIN",
+				"locator":"xpath",
+				"value":"//input[@id=\"tpassword\"]"
+				
+		},
+		{
+				"name":"ChangeRDDetails",
+				"locator":"xpath",
+				"value":"(//a[@role=\"link\"][normalize-space()=\"Change\"])[1]"
+		},
+		{
+				"name":"ChangeNamineeDetails",
+				"locator":"xpath",
+				"value":"(//a[@role=\"link\"][normalize-space()=\"Change\"])[2]"
+		},
+		{
+				"name":"ChangeRelation",
+				"locator":"xpath",
+				"value":"(//input[@id=\"nominees[0].nomineeRelationship\"])[1]"
+		},
+		{
+				"name":"SelectRelation",
+				"locator":"xpath",
+				"value":"//*[@id=\"nominees[0].nomineeRelationship-option-0\"]/span"
+		},
+		{
+				"name":"ChangeNomineeAddress",
+				"locator":"xpath",
+				"value":"(//span[@class=\"MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-9l3uo3\"])[1]"
+		},
+		{
+				"name":"NomineeAddressPincode",
+				"locator":"xpath",
+				"value":"(//input[@id=\"nominees[0].nomineePincode\"])[1]"
+		},
+		{
+				"name":"NomineeAddressLine1",
+				"locator":"xpath",
+				"value":"(//input[@id=\"nominees[0].nomineeAddressLine1\"])[1]"
+		},
+		{
+				"name":"NomineeAddressLine2",
+				"locator":"xpath",
+				"value":"(//input[@id=\"nominees[0].nomineeAddressLine2\"])[1]"
+		},
+		{
+				"name":"NomineeAddressLine3",
+				"locator":"xpath",
+				"value":"(//input[@id=\"nominees[0].nomineeAddressLine3\"])[1]"
+		},
+		{
+				"name":"NomineeAddressLine3",
+				"locator":"xpath",
+				"value":"(//input[@id=\"nominees[0].nomineeAddressLine3\"])[1]"
+		},
+		{
+				"name":"DepositAmountText",
+				"locator":"xpath",
+				"value":"(//p[@class=\"MuiTypography-root MuiTypography-body2 css-16alnpn\" and contains(text(),\"Rupees Only\")])[1]"
+		},
+		{
+				"name":"NomineeAddress1Error",
+				"locator":"xpath",
+				"value":"(//p[@id=\"nominees[0].nomineeAddressLine1-helper-text\"])[1]"
+		},
+		{
+				"name":"NomineeAddress2Error",
+				"locator":"xpath",
+				"value":"(//p[@id=\"nominees[0].nomineeAddressLine2-helper-text\"])[1]"
+		},
+		{
+				"name":"NomineePincodeError",
+				"locator":"xpath",
+				"value":"(//p[@id=\"nominees[0].nomineePincode-helper-text\"])[1]"
+		},
+		{
+				"name":"DOBTextBox",
+				"locator":"xpath",
+				"value":"(//input[@id=\"nominees[0].nomineeDob\"])[1]"
+		},
+		{
+				"name":"DOBErrorMessage",
+				"locator":"xpath",
+				"value":"(//p[@id=\"nominees[0].nomineeDob-helper-text\"])[1]"
+		},
+		{
+				"name":"NomineeNameErrorMessage",
+				"locator":"xpath",
+				"value":"(//p[@id=\"nominees[0].nomineeName-helper-text\"])[1]"
+		},
+		{
+				"name":"NomineeRelationTextBox",
+				"locator":"xpath",
+				"value":"(//input[@id=\"nominees[0].nomineeRelationship\"])[1]"
+		},
+		{
+				"name":"NomineeRelationErrorMessage",
+				"locator":"xpath",
+				"value":"(//p[@id=\"nominees[0].nomineeRelationship-helper-text\"])[1]"
+		},
+		{
+				"name":"DepositAmountErrorMessage",
+				"locator":"xpath",
+				"value":"(//p[@id=\"depositAmount-helper-text\"])[1]"
+		},
+		{
+				"name":"CustomYearTextBox",
+				"locator":"xpath",
+				"value":"(//input[@id=\"customTenureYears\"])[1]"
+		},
+		{
+				"name":"CustomMonthTextBox",
+				"locator":"xpath",
+				"value":"(//input[@id=\"customTenureMonths\"])[1]"
+		},
+		{
+				"name":"CustomMonthErrorMessage",
+				"locator":"xpath",
+				"value":"(//span[@class=\"Tenure__card__content__custom__element__error\"])[1]"
+		}
+	],
+"RIB_ExistingRD":[
+		{
+				"name":"StatementTab",
+				"locator":"xpath",
+				"value":"(//button[normalize-space()=\"Statements\"])[1]"
+		},
+		{
+				"name":"DetailsTab",
+				"locator":"xpath",
+				"value":"(//button[normalize-space()=\"Details\"])[1]"
+		},
+		{
+				"name":"RequestTab",
+				"locator":"xpath",
+				"value":"(//button[normalize-space()=\"Requests\"])[1]"
+		},
+		{
+				"name":"CustomerInfoSection",
+				"locator":"xpath",
+				"value":"(//h3[normalize-space()=\"Customer Information\"])[1]"
+		},
+		{
+				"name":"AccountInfoSection",
+				"locator":"xpath",
+				"value":"(//h3[normalize-space()=\"Account Information\"])[1]"
+		},
+		{
+				"name":"NomineeInfoSection",
+				"locator":"xpath",
+				"value":"(//h3[normalize-space()=\"Nominee Information\"])[1]"
+		},
+		{
+				"name":"CountOfContributionText",
+				"locator":"xpath",
+				"value":"(//p[normalize-space()=\"No. of Contributions made till now\"])[1]"
+		},
+		{
+				"name":"MaturityDateText",
+				"locator":"xpath",
+				"value":"(//p[normalize-space()=\"Maturity Date\"])[1]"
+		},
+		{
+				"name":"FormText",
+				"locator":"xpath",
+				"value":"(//p[normalize-space()=\"Form\"])[1]"
+		},
+		{
+				"name":"RDAccountTypeText",
+				"locator":"xpath",
+				"value":"(//p[normalize-space()=\"RD Account Type\"])[1]"
+		},
+		{
+				"name":"CountOfContributionValue",
+				"locator":"xpath",
+				"value":"(//p[@class=\"MuiTypography-root MuiTypography-body2 css-9wsy4y\"])[9]"
+		},
+		{
+				"name":"MaturityDateValue",
+				"locator":"xpath",
+				"value":"(//p[@class=\"MuiTypography-root MuiTypography-body2 css-9wsy4y\"])[10]"
+		},
+		{
+				"name":"FormValue",
+				"locator":"xpath",
+				"value":"(//p[@class=\"MuiTypography-root MuiTypography-body2 css-9wsy4y\"])[11]"
+		},
+		{
+				"name":"RDAccountTypeValue",
+				"locator":"xpath",
+				"value":"(//p[@class=\"MuiTypography-root MuiTypography-body2 css-9wsy4y\"])[12]"
+		},
+		{
+				"name":"BranchLocationText",
+				"locator":"xpath",
+				"value":"(//p[normalize-space()=\"Preferred Branch Location\"])[1]"
+		},
+		{
+				"name":"BranchLocationValue",
+				"locator":"xpath",
+				"value":"(//p[@class=\"MuiTypography-root MuiTypography-body2 css-9wsy4y\"])[8]"
+		},
+		{
+				"name":"DownloadTDS",
+				"locator":"xpath",
+				"value":"(//p[normalize-space()=\"Download TDS\"])[1]"
+		},
+		{
+				"name":"DownloadInterestCertificate",
+				"locator":"xpath",
+				"value":"(//p[normalize-space()=\"Download Interest Certificate\"])[1]"
+		},
+		{
+				"name":"StatementCustomTab",
+				"locator":"xpath",
+				"value":"(//button[normalize-space()=\"Custom\"])[1]"
+		},
+		{
+				"name":"CustomStartDate",
+				"locator":"xpath",
+				"value":"(//div[contains(@class,\"textField__inputContainer__endAdornment_box\")])[1]"
+		},
+		{
+				"name":"CustomEndDate",
+				"locator":"xpath",
+				"value":"(//div[contains(@class,\"textField__inputContainer__endAdornment_box\")])[2]"
+		},
+		{
+				"name":"CurrentMonth",
+				"locator":"xpath",
+				"value":"(//button[normalize-space()=\"Current Month\"])[1]"
+		},
+		{
+				"name":"LastMonth",
+				"locator":"xpath",
+				"value":"//button[normalize-space()=\"Last Month\"]"
+		},
+		{
+				"name":"Last3Month",
+				"locator":"xpath",
+				"value":"//button[normalize-space()=\"Last 3 Months\"]"
+		},
+		{
+				"name":"Last6Month",
+				"locator":"xpath",
+				"value":"//button[normalize-space()=\"Last 6 Months\"]"
+		},
+		{
+				"name":"CurrentFinancialYear",
+				"locator":"xpath",
+				"value":"//button[normalize-space()=\"Current Financial year\"]"
+		},
+		{
+				"name":"LastFinancialYear",
+				"locator":"xpath",
+				"value":"//button[normalize-space()=\"Last Financial year\"]"
+		}
+	]
 }

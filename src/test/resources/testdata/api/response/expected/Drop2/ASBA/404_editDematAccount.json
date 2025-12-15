@@ -1,9 +1,10 @@
 {
-  "errorId": "861fc402-e7e9-4239-8e1a-90b80ee48e96",
-  "errorAt": "2025-02-12T13:57:40.81772359",
-  "error": {
-    "code": "NOT_FOUND",
-    "title": "404 NOT_FOUND \"No static resource asbaservice/editDematAccount12345.\"",
-    "description": null
-  }
+    
+        "timestamp": "2025-03-27T06:52:58.756+00:00",
+        "path": "/asbaservice/editDematAccount12345",
+        "status": 404,
+        "error": "Not Found",
+        "message": null,
+        "requestId": "ad424b65-1219"
+    
 }

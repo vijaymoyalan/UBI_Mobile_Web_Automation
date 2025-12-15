@@ -1,1 +1,15 @@
-{"errorId":"bcdaafb8-f372-4aa6-827c-d0a6a5454bb4","errorAt":"2024-12-11T16:00:56.585315228","errorLocation":null,"error":null,"errors":[{"code":"BAD_REQUEST","message":"#: required key [applnRefNumber] not found, #: required key [schemeCode] not found","values":null,"origmesg":null,"errors":null}]}
+{
+  "errorId": "a33bbd65-4188-410d-9bc9-8cfc1b4cd2b6",
+  "errorAt": "2025-02-21T12:01:27.026090348",
+  "errorLocation": null,
+  "error": null,
+  "errors": [
+    {
+      "code": "BAD_REQUEST",
+      "message": "schemeCode: string [PMtryduJJBY] does not match pattern ^(PMJJBY|PMSBY)$",
+      "values": null,
+      "origmesg": null,
+      "errors": null
+    }
+  ]
+}

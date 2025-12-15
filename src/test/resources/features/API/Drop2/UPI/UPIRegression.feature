@@ -667,18 +667,18 @@ Examples:
 |UPI     |/verify/vpa   |src\test\resources\testdata\api\request\Drop2\UPI\list-banks.json|null						|null						|null			|src\test\resources\testdata\api\response\expected\Drop2\UPI\405.json|
 
 #########################################################################################################################################
-@TestCaseKey=UDB-T30752 @Regression
-Scenario Outline: Verify "OTP" API "POST" Method for Status code 200 with all fields (Mandatory and Optional)
-Given user sets the environment of endpoint
-Given user set the basepath to <service>
-Then set the endpoint <endpoint>
-Then user triggers a post request with <requestBody>
-Then user verifies that status is 200
-Then user verifies json from <responseBody>
-	
-Examples:
-|service |endpoint          |responseBody 																|requestBody|
-|UPI     |/OTP   |src\test\resources\testdata\api\response\expected\Drop2\UPI\otp.json	|src\test\resources\testdata\api\request\Drop2\UPI\otp.json|
+#@TestCaseKey=UDB-T30752 @Regression
+#Scenario Outline: Verify "OTP" API "POST" Method for Status code 200 with all fields (Mandatory and Optional)
+#Given user sets the environment of endpoint
+#Given user set the basepath to <service>
+#Then set the endpoint <endpoint>
+#Then user triggers a post request with <requestBody>
+#Then user verifies that status is 200
+#Then user verifies json from <responseBody>
+#	
+#Examples:
+#|service |endpoint          |responseBody 																|requestBody|
+#|UPI     |/OTP   |src\test\resources\testdata\api\response\expected\Drop2\UPI\otp.json	|src\test\resources\testdata\api\request\Drop2\UPI\otp.json|
 
 
 @TestCaseKey=UDB-T30753 @Regression
@@ -1104,17 +1104,33 @@ Examples:
 
 ########################################################################################################################################
 @TestCaseKey=UDB-T30801 @Regression
-Scenario Outline: Verify "transaction id" API "POST" Method for Status code 200 with all fields (Mandatory and Optional)
+Scenario Outline: Verify "/transactionid" API "POST" Method for Status code 200 with Only Mandatory fields
 Given user sets the environment of endpoint
 Given user set the basepath to <service>
-Then set the endpoint <endpoint>
+Then set the endpoint <endpoint> 
+Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
 Then user triggers a post request with <requestBody>
 Then user verifies that status is 200
 Then user verifies json from <responseBody>
-	
-Examples:
-|service |endpoint          |requestBody|responseBody|
-|UPI     |/transactionid   |src\test\resources\testdata\api\request\Drop2\UPI\list-banks.json|src\test\resources\testdata\api\response\expected\Drop2\UPI\transactionid.json|
+
+Examples: 
+| service       | endpoint    		| requestBody 														 |requestField  |responsefield	|filename   | responseBody                                                                 |
+| UPI 			|/transactionid   	|src\test\resources\testdata\api\request\Drop2\UPI\transactionid.json|null 			|null			| null 		|src\test\resources\testdata\api\response\expected\Drop2\UPI\transactionid.json|
+  
+
+@TestCaseKey=UDB-T30805 @Regression
+Scenario Outline: Verify "/transaction/pay" API "POST" Method for Status code 200 with Only Mandatory fields
+Given user sets the environment of endpoint
+Given user set the basepath to <service>
+Then set the endpoint <endpoint> 
+Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+Then user triggers a post request with <requestBody>
+Then user verifies that status is 200
+Then user verifies json from <responseBody>
+
+Examples: 
+| service   | endpoint    		| requestBody 															|requestField   |responsefield	|filename				| responseBody|
+| UPI 		|/transaction/pay   |src\test\resources\testdata\api\request\Drop2\UPI\transaction-pay.json  |txnId 			|data			| transactionid.json    |src\test\resources\testdata\api\response\expected\Drop2\UPI\transaction-pay.json|
 
 
 @TestCaseKey=UDB-T30803 @Regression
@@ -1145,20 +1161,6 @@ Examples:
  
 
 ################################################################################################################################
-@TestCaseKey=UDB-T30805 @Regression
-Scenario Outline: Verify "transaction pay" API "POST" Method for Status code 200 with all fields (Mandatory and Optional)
-Given user sets the environment of endpoint
-Given user set the basepath to <service>
-Then set the endpoint <endpoint> 
-Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
-Then user triggers a post request with <requestBody>
-Then user verifies that status is 200
-Then user verifies json from <responseBody>
-
-Examples: 
-| service   | endpoint    		| requestBody 															|requestField   |responsefield	|filename				| responseBody|
-| UPI 		|/transaction/pay   |src\test\resources\testdata\api\request\Drop2\UPI\transaction-pay.json  |txnId 			|data			| transactionid.json    |src\test\resources\testdata\api\response\expected\Drop2\UPI\transaction-pay.json|
-
 
 @TestCaseKey=UDB-T30806 @Regression
 Scenario Outline: Verify "transaction pay" API "POST" Method for Status code 400 with invalid body
@@ -1254,7 +1256,7 @@ Then user verifies json from <responseBody>
 	
 Examples:
 |service |endpoint          |requestBody 																																					|responseBody|
-|UPI     |/delink/vpa   |src\test\resources\testdata\api\request\Drop2\UPI\delete_vpa_active_number.json	|src\test\resources\testdata\api\response\expected\Drop2\UPI\delink-vpa.json|
+|UPI     |/delink/vpa   |src\test\resources\testdata\api\request\Drop2\UPI\delete_vpa_active_number.json	|src\test\resources\testdata\api\response\expected\Drop2\UPI\delete_vpa_active_number.json|
 
 #######################################################################################################################################
 @TestCaseKey=UDB-35852 @EdgeScenario
@@ -1271,18 +1273,33 @@ Examples:
 |UPI     |/delink/vpa   |src\test\resources\testdata\api\request\Drop2\UPI\delete-primary-vpa.json	|src\test\resources\testdata\api\response\expected\Drop2\UPI\delete-primary-vpa.json|
 
 #######################################################################################################################################
-@TestCaseKey=UDB-T30845
-Scenario Outline: Verify "/collect" API "POST" Method for Status code 200 with Only Mandatory fields
-Given user sets the environment of endpoint
-Given user set the basepath to <service>
-Then set the endpoint <endpoint> 
-Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
-Then user triggers a post request with <requestBody>
-Then user verifies that status is 200
+#@TestCaseKey=UDB-T30845 #this feature is removed from APP level
+#Scenario Outline: Verify "/collect" API "POST" Method for Status code 200 with Only Mandatory fields
+#Given user sets the environment of endpoint
+#Given user set the basepath to <service>
+#Then set the endpoint <endpoint> 
+#Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+#Then user triggers a post request with <requestBody>
+#Then user verifies that status is 200
+#
+#Examples: 
+#| service       | endpoint    		| requestBody 														 |requestField  |responsefield	|filename   | responseBody                                                                 |
+#| UPI 			|/collect   	|src\test\resources\testdata\api\request\Drop2\UPI\collect.json|null 			|null			| null 		|src\test\resources\testdata\api\response\expected\Drop2\UPI\collect.json|
 
-Examples: 
-| service       | endpoint    		| requestBody 														 |requestField  |responsefield	|filename   | responseBody                                                                 |
-| UPI 			|/collect   	|src\test\resources\testdata\api\request\Drop2\UPI\collect.json|null 			|null			| null 		|src\test\resources\testdata\api\response\expected\Drop2\UPI\collect.json|
+#@TestCaseKey=UDB-T30850 @Regression
+#Scenario Outline: Verify "/collect/pay" API "POST" Method for Status code 200 with Only Mandatory fields
+#Given user sets the environment of endpoint
+#Given user set the basepath to <service>
+#Then set the endpoint <endpoint> 
+#Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+#Then user triggers a post request with <requestBody>
+#Then user verifies that status is 200
+#Then user verifies json from <responseBody>
+#
+#Examples: 
+#| service   | endpoint    		| requestBody 															|requestField   |responsefield	|filename				| responseBody|
+#| UPI 		|/collect-pay   |src\test\resources\testdata\api\request\Drop2\UPI\collect-pay.json  |txnId 			|txnId			| collect.json    |src\test\resources\testdata\api\response\expected\Drop2\UPI\collect-pay.json|
+
 
 
 @TestCaseKey=UDB-T30846 @Regression
@@ -1339,75 +1356,61 @@ Examples:
 |UPI     |/collect   |src\test\resources\testdata\api\request\Drop2\UPI\list-banks.json|null						|null						|null			|src\test\resources\testdata\api\response\expected\Drop2\UPI\405.json|
 
 ########################################################################################################################################
-@TestCaseKey=UDB-T30850 @Regression
-Scenario Outline: Verify "/collect/pay" API "POST" Method for Status code 200 with Only Mandatory fields
-Given user sets the environment of endpoint
-Given user set the basepath to <service>
-Then set the endpoint <endpoint> 
-Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
-Then user triggers a post request with <requestBody>
-Then user verifies that status is 200
-Then user verifies json from <responseBody>
 
-Examples: 
-| service   | endpoint    		| requestBody 															|requestField   |responsefield	|filename				| responseBody|
-| UPI 		|/collect-pay   |src\test\resources\testdata\api\request\Drop2\UPI\collect-pay.json  |txnId 			|txnId			| collect.json    |src\test\resources\testdata\api\response\expected\Drop2\UPI\collect-pay.json|
-
-
-@TestCaseKey=UDB-T30851 @Regression
-Scenario Outline: Verify "collect-pay" API "POST" Method for Status code 400 with invalid body
-Given user sets the environment of endpoint
-Given user set the basepath to <service>
-Then set the endpoint <endpoint>
-Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
-Then user triggers a post request with <requestBody>
-Then user verifies that status is 400
-	
-Examples: 
-| service   | endpoint    		| requestBody 															|requestField   |responsefield	|filename				| responseBody|
-| UPI 		|/collect-pay   |src\test\resources\testdata\api\request\Drop2\UPI\collect-pay-invalid.json  |txnId 			|txnId			| collect.json    |src\test\resources\testdata\api\response\expected\Drop2\UPI\collect-pay.json|
+#@TestCaseKey=UDB-T30851 @Regression
+#Scenario Outline: Verify "collect-pay" API "POST" Method for Status code 400 with invalid body
+#Given user sets the environment of endpoint
+#Given user set the basepath to <service>
+#Then set the endpoint <endpoint>
+#Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+#Then user triggers a post request with <requestBody>
+#Then user verifies that status is 400
+#	
+#Examples: 
+#| service   | endpoint    | requestBody 															|requestField   |responsefield	|filename				| responseBody|
+#| UPI 		|/collect-pay   |src\test\resources\testdata\api\request\Drop2\UPI\collect-pay-invalid.json  |txnId 			|txnId			| collect.json    |src\test\resources\testdata\api\response\expected\Drop2\UPI\collect-pay.json|
 
 
-@TestCaseKey=UDB-T30852 @Regression
-Scenario Outline: Verify "collect-pay" API "POST" Method for Status code 400 with blank body
-Given user sets the environment of endpoint
-Given user set the basepath to <service>
-Then set the endpoint <endpoint>
-Then user triggers a post request without body
-Then user verifies that status is 400
+#@TestCaseKey=UDB-T30852 @Regression
+#Scenario Outline: Verify "collect-pay" API "POST" Method for Status code 400 with blank body
+#Given user sets the environment of endpoint
+#Given user set the basepath to <service>
+#Then set the endpoint <endpoint>
+#Then user triggers a post request without body
+#Then user verifies that status is 400
 #Then user verifies json from <responseBody>
-	
-Examples:
-|service |endpoint  	|requestBody|responseBody|
-|UPI     |/collect-pay   |src\test\resources\testdata\api\request\Drop2\UPI\list-banks.json|src\test\resources\testdata\api\response\Drop2\UPI\400.json|
+#	
+#Examples:
+#|service |endpoint  	|requestBody|responseBody|
+#|UPI     |/collect-pay   |src\test\resources\testdata\api\request\Drop2\UPI\list-banks.json|src\test\resources\testdata\api\response\Drop2\UPI\400.json|
 
 
 
-@TestCaseKey=UDB-T30853 @Regression
-Scenario Outline: Verify "collect-pay" API "POST" Method for Status code 404 with invalid url
-Given user sets the environment of endpoint
-Given user set the basepath to <service>
-Then set the endpoint <endpoint>
-Then user triggers a post request with <requestBody>
-Then user verifies that status is 404
-	
-Examples:
-|service |endpoint     	|requestBody|
-|UPI     |/collect-pay123 	|src\test\resources\testdata\api\request\Drop2\UPI\collect-pay.json|
-
-
-@TestCaseKey=UDB-T30854 @Regression
-Scenario Outline: Verify "collect-pay" API "GET" Method for Status code 405 with all fields (Mandatory and Optional)
-Given user sets the environment of endpoint
-Given user set the basepath to <service>
-Then set the endpoint <endpoint>
-Then user triggers a get request with <requestBody>
-Then user verifies that status is 405
-Then user verifies json from <responseBody>
-	
-Examples:
-|service |endpoint          |requestBody 																																		|requestField   |responsefield	|filename |responseBody|
-|UPI     |/collect-pay   |src\test\resources\testdata\api\request\Drop2\UPI\list-banks.json|null						|null						|null			|src\test\resources\testdata\api\response\expected\Drop2\UPI\405.json|
+#@TestCaseKey=UDB-T30853 @Regression
+#Scenario Outline: Verify "collect-pay" API "POST" Method for Status code 404 with invalid url
+#Given user sets the environment of endpoint
+#Given user set the basepath to <service>
+#Then set the endpoint <endpoint>
+#Then user triggers a post request with <requestBody>
+#Then user verifies that status is 404
+#	
+#Examples:
+#|service |endpoint     	|requestBody|
+#|UPI     |/collect-pay123 	|src\test\resources\testdata\api\request\Drop2\UPI\collect-pay.json|
+#
+#
+#@TestCaseKey=UDB-T30854 @Regression
+#Scenario Outline: Verify "collect-pay" API "GET" Method for Status code 405 with all fields (Mandatory and Optional)
+#Given user sets the environment of endpoint
+#Given user set the basepath to <service>
+#Then set the endpoint <endpoint>
+#Then user triggers a get request with <requestBody>
+#Then user verifies that status is 405
+#Then user verifies json from <responseBody>
+#	
+#Examples:
+#|service |endpoint          |requestBody 																																		|requestField   |responsefield	|filename |responseBody|
+#|UPI     |/collect-pay   |src\test\resources\testdata\api\request\Drop2\UPI\list-banks.json|null						|null						|null			|src\test\resources\testdata\api\response\expected\Drop2\UPI\405.json|
 
 ########################################################################################################################################
 @TestCaseKey=UDB-T30796 @Regression
@@ -1641,19 +1644,19 @@ Examples:
 | UPI 		|/transaction/pay   |src\test\resources\testdata\api\request\Drop2\UPI\paymentWrongVPA.json  |txnId 			|data			| transactionid.json    |src\test\resources\testdata\api\response\expected\Drop2\UPI\transaction-pay.json|
 
 ########################################################################################################################################
-@TestCaseKey=UDB-T35858 @EdgeScenario
-Scenario Outline: Verify that user is not able to raise collect request through invalid UPI ID through API
-Given user sets the environment of endpoint
-Given user set the basepath to <service>
-Then set the endpoint <endpoint> 
-Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
-Then user triggers a post request with <requestBody>
-Then user verifies that status is 400
+#@TestCaseKey=UDB-T35858 @EdgeScenario #this feature is removed from APP level
+#Scenario Outline: Verify that user is not able to raise collect request through invalid UPI ID through API
+#Given user sets the environment of endpoint
+#Given user set the basepath to <service>
+#Then set the endpoint <endpoint> 
+#Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+#Then user triggers a post request with <requestBody>
+#Then user verifies that status is 400
 #Then user verifies json from <responseBody>
-
-Examples: 
-| service       | endpoint    		| requestBody 														 |requestField  |responsefield	|filename   | responseBody                                                                 |
-| UPI 			|/collect   	|src\test\resources\testdata\api\request\Drop2\UPI\collectWrongVPA.json|null 			|null			| null 		|src\test\resources\testdata\api\response\expected\Drop2\UPI\collect.json|
+#
+#Examples: 
+#| service   | endpoint    | requestBody 														 															|requestField  |responsefield	|filename   | responseBody                                                                 |
+#| UPI 			|/collect   	|src\test\resources\testdata\api\request\Drop2\UPI\collectWrongVPA.json|null 			|null			| null 		|src\test\resources\testdata\api\response\expected\Drop2\UPI\collect.json|
 
 ############################################################################################################################################
 @TestCaseKey=UDB-T39873 @Regression

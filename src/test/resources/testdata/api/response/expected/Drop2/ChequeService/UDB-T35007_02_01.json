@@ -1,6 +1,1 @@
-{
-    "error": {
-        "errorCode": null,
-        "errorMessage": "Invalid Account"
-    }
-}
+{"errorCode":null,"errorMessage":"{\"chequeNumber\":null,\"chequeStatus\":null,\"date\":null,\"referenceNumber\":null,\"message\":null,\"error\":{\"errorCode\":\"ERR_ACCOUNT_NOT_ASSOCIATED\",\"errorMessage\":\"Account number is not associated with the given CIF\"},\"correlationId\":null}"}

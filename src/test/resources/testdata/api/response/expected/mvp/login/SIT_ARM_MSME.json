@@ -5,6 +5,6 @@
     "corpid": "BABA901250569",
     "userid":"JYOT0434",
     "loginpin": "2580",
-    "loginpinexpiry": "90",
+    "loginpinexpiry": "3600",
     "loginwithbiometric": "false"
 }

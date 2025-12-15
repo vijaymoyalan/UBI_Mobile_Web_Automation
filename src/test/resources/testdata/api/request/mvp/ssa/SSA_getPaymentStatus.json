@@ -1,1 +1,9 @@
-{"cif":"60466771","source":{"acctNum":"59070SSA000000000041"},"investmentContribution":{"channelTxnId":"506870095686"}}
+{
+  "cif": "634921889",
+  "source": {
+    "acctNum": "35310SSA000000000017"
+  },
+  "investmentContribution": {
+    "channelTxnId": "975462695627"
+  }
+}

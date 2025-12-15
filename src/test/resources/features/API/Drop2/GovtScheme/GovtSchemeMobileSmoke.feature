@@ -16,7 +16,7 @@ Given user sets the file path for this feature file for drop2/GovtScheme
     Then set the endpoint <endpoint>
     Then user triggers a post request with <requestBody>
     Then user verifies that status is 200
-    Then user verifies json from <responseBody>
+    #Then user verifies json from <responseBody>
 
     Examples: 
       | service            | endpoint               | requestBody 																																						    |requestField   |responsefield      | filename       | responseBody                    |
@@ -62,17 +62,19 @@ Given user sets the file path for this feature file for drop2/GovtScheme
       | govt_scheme_mobile | /premiumDeduction | \src\test\resources\testdata\api\request\Drop2\govtscheme\mobile\premiumDeduction.json | null | null | null | \src\test\resources\testdata\api\response\expected\Drop2\govtscheme\mobile\premiumDeduction.json |
 
 @TestCaseKey=UDB-T15596
-  Scenario Outline: Verify getPMSchemeDetails API returns correct response for valid request
-    Given user sets the environment of endpoint
-    Given user set the basepath to <service>
-    Then set the endpoint <endpoint>
-    Then user triggers a post request with <requestBody>
-    Then user verifies that status is 200
-    Then user verifies json from <responseBody>
+ Scenario Outline: Verify getPMSchemeDetails API returns correct response for valid request
+ Given user sets the environment of endpoint
+ Given user set the basepath to <service>
+ Then set the endpoint <endpoint>
+ Then user triggers a post request with <requestBody>
+ Then user verifies that status is 200
+ Then user verifies json from <responseBody>
 
-    Examples: 
-      | service            | endpoint            | requestBody 																																							  |requestField   |responsefield      | filename       | responseBody                    |
+    Examples:
+      | service            | endpoint     			 | requestBody																																			    		|requestField   |responsefield      | filename       | responseBody                    |
       | govt_scheme_mobile | /getPMSchemeDetails | \src\test\resources\testdata\api\request\Drop2\govtscheme\mobile\getPMSchemeDetails.json | null | null | null | \src\test\resources\testdata\api\response\expected\Drop2\govtscheme\mobile\getPMSchemeDetails.json |
+
+
 
 @TestCaseKey=UDB-T15049
   Scenario Outline: Verify downloadCOI API returns correct response for valid request

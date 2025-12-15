@@ -1,8 +1,1 @@
-{
-  "timestamp": "2025-02-04T10:54:49.140+00:00",
-  "path": "/msme/v1/businessServices/fetchBranchDetailsd",
-  "status": 404,
-  "error": "Not Found",
-  "message": null,
-  "requestId": "db2fb44a-739"
-}
+{"timestamp":"2025-04-02T09:29:05.929+00:00","path":"/msme/v1/businessServices/fetchBranchDetails1","status":404,"error":"Not Found","message":null,"requestId":"b5e126de-1408"}

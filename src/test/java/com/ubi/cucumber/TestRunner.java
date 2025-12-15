@@ -27,7 +27,7 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 //		features = "src\\test\\resources\\features\\Mobile\\MVP\\PMJJBY.feature",
 //		glue = {"com.ubi.cucumber.steps.mobile.mvp","com.ubi.hooks.mobile"})
 
-//		features = "src\\test\\resources\\features\\Mobile\\MVP\\LAD.feature",
+//		features = "src\\test\\resources\\features\\Mobile\\MVP\\LAD.feature", 
 //		glue = {"com.ubi.cucumber.steps.mobile.mvp","com.ubi.hooks.mobile"})
 
 //		features = "src\\test\\resources\\features\\Mobile\\MVP\\BBPS.feature",
@@ -58,9 +58,16 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 //		features = "src\\test\\resources\\features\\Mobile\\MSME\\Help&Support.feature", tags="@TestCaseKey=UDB-T44594 or @TestCaseKey=UDB-T44526 or @TestCaseKey=UDB-T44603")
 //features = "src\\test\\resources\\features\\Mobile\\MSME\\FundTransfer.feature", tags="@TestCaseKey=UDB-T47716 or @TestCaseKey=UDB-T47753 or @TestCaseKey=UDB-T47817 or @TestCaseKey=UDB-T47816 or @TestCaseKey=UDB-T47729 or @TestCaseKey=UDB-T47733 or @TestCaseKey=UDB-T47692 or @TestCaseKey=UDB-T47708 or @TestCaseKey=UDB-T47738 or @TestCaseKey=UDB-T47721 or @TestCaseKey=UDB-T47712 or @TestCaseKey=UDB-T47852 or @TestCaseKey=UDB-T47849 or @TestCaseKey=UDB-T47845 or @TestCaseKey=UDB-T47861 or @TestCaseKey=UDB-T47859 or @TestCaseKey=UDB-T47860 or @TestCaseKey=UDB-T47862 or @TestCaseKey=UDB-T47656" )
 //		features = "src\\test\\resources\\features\\Mobile\\MSME\\MSME_HomePage.feature", tags="@TestCaseKey=UDB-T52200 or @TestCaseKey=UDB-T52194 or @TestCaseKey=UDB-T52201")
+////
+//		features = "src/test/resources/features/Web/AssistedPortal/AssistedPortal.feature",
+//		        		   glue = {"com.ubi.cucumber.steps.web","com.ubi.hooks.web"})
 
-		features = "src/test/resources/features/Web/AssistedPortal/AssistedPortal.feature", tags="@TestCaseKey=UDB-T9126",
-		        		   glue = {"com.ubi.cucumber.steps.web","com.ubi.hooks.web"})
+//
+//features = "src/test/resources/features/Web/AssistedPortal/Consent.feature",
+//glue = {"com.ubi.cucumber.steps.web","com.ubi.hooks.web"})
+
+features = "src/test/resources/features/Web/RIB/RIB_RD.feature", tags="@TestCaseKey=UDB-T899",
+glue = {"com.ubi.cucumber.steps.web","com.ubi.hooks.web"})
 		
 		
 //		features = "src/test/resources/features/Web/AssistedPortal/BrowserLaunch.feature",
@@ -78,6 +85,37 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 		
 //		features = "src\\test\\resources\\features\\Mobile\\MSME\\MSME_BQR_Mobile.feature",
 //		glue = {"com.ubi.cucumber.steps.mobile.mvp","com.ubi.hooks"})
+		
+	
+// API Features
+//		features =  "src\\test\\resources\\features\\API\\Drop2\\NCMC",
+//		glue = {"com.ubi.cucumber.steps.api.mvp"})
+
+
+//features = {
+//"src\\test\\resources\\features\\API\\Drop2\\ChequeService",
+//"src\\test\\resources\\features\\API\\Drop2\\GeneralService",
+//"src\\test\\resources\\features\\API\\Drop2\\CreditCard",
+//"src\\test\\resources\\features\\API\\Drop2\\FundTransfer",
+//"src\\test\\resources\\features\\API\\Drop2\\GovtScheme",
+//"src\\test\\resources\\features\\API\\Drop2\\UPI",
+//"src\\test\\resources\\features\\API\\Drop2\\DebitCard",
+//"src\\test\\resources\\features\\API\\Drop2\\NCMC",
+//"src\\test\\resources\\features\\API\\Drop2\\BBPS"
+//})										//				"src\\test\\resources\\features\\API\\Drop2\\ASBA",
+
+//features = {
+//"src\\test\\resources\\features\\API\\Drop3\\ARM",
+//"src\\test\\resources\\features\\API\\Drop3\\Borrowings",
+//"src\\test\\resources\\features\\API\\Drop3\\BSCollectionDashboard",
+//"src\\test\\resources\\features\\API\\Drop3\\CurrentAccountEnquiry",
+//"src\\test\\resources\\features\\API\\Drop3\\HomePage",
+//"src\\test\\resources\\features\\API\\Drop3\\mPOS",
+//"src\\test\\resources\\features\\API\\Drop3\\LoginAndRegistration",
+//"src\\test\\resources\\features\\API\\Drop3\\BusinessServices",
+//"src\\test\\resources\\features\\API\\Drop3\\PaymentLink",
+//"src\\test\\resources\\features\\API\\Drop3\\Profile"
+//})
 		
 public class TestRunner extends TestBase{
 	//@Managed(driver="Appium")

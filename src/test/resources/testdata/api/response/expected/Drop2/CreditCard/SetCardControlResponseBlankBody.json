@@ -1,9 +1,1 @@
-{
-  "errorId": "f7c5f9d2-1c8d-4e07-bfc8-592345b2b5e2",
-  "errorAt": "2024-12-03T09:52:42.374047171",
-  "error": {
-    "code": "BAD_REQUEST",
-    "title": null,
-    "description": "ccAccountId: expected minLength: 1, actual: 0"
-  }
-}
+{"code":"NOT_AUTHORIZED","title":"null","message":"Authorization failed."}

@@ -3,7 +3,6 @@ package com.ubi.testbase;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.security.SecureRandom;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.time.LocalDate;
@@ -25,7 +24,6 @@ import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.interactions.Sequence;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 
 import com.google.common.collect.ImmutableMap;
 import com.ubi.base.ORPageModel;
@@ -39,20 +37,24 @@ import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.touch.offset.ElementOption;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
+import net.serenitybdd.model.environment.EnvironmentSpecificConfiguration;
 import net.thucydides.core.webdriver.WebDriverFacade;
+import net.thucydides.model.environment.SystemEnvironmentVariables;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class CommonMethods extends PageObject {
 
+	
 	AndroidDriver androidDriver = ((AndroidDriver) ((WebDriverFacade) getDriver()).getProxiedDriver());
 	WebElement elementObject = null;
 	String accountNumber = "407101234541662";
 	String maskedAccountNumber;
 	VerificationCommonMethods verification = new VerificationCommonMethods();
 	GenerateRandomString randomStringUtil = new GenerateRandomString();
-//	String APP_PACKAGE = "com.ubi.msme.uat";
-	String APP_PACKAGE = "com.infra.ubi";
+
+	String APP_PACKAGE = EnvironmentSpecificConfiguration.from(SystemEnvironmentVariables.createEnvironmentVariables()).getProperty("appium.appPackage");
 
 	public ORPageModel getElementFromObject(List<ORPageModel> listofElements, String name) {
 		ORPageModel element = new ORPageModel();
@@ -134,15 +136,7 @@ public class CommonMethods extends PageObject {
 		// element.click();
 	}
 	
-	public String getText(ORPageModel element) {
-		// element.isEnabled();
-		return findElement(element).getText();
-
-		// element.click();
-	}
-
-	
-public void verifyText(String actualText, String expectedText) {
+	public void verifyText(String actualText, String expectedText) {
 		int attempts = 0;
 		while (attempts < 3) {
 			try {
@@ -230,6 +224,12 @@ public void verifyText(String actualText, String expectedText) {
 
 	}
 	
+	public String getText(ORPageModel element) {
+		// element.isEnabled();
+		return findElement(element).getText();
+
+		// element.click();
+	}
 
 	public String getText(String pageName, String name) {
 		// element.isEnabled();

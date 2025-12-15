@@ -1,4 +1,1 @@
-{
-  "errorCode": null,
-  "errorMessage": "endDate: must not be null; startDate: must not be null; cif: must not be null; acctNum: must not be null"
-}
+{"errorId":"daf7f9dc-cb23-4d01-802d-dbd274980e01","errorAt":"2025-04-02T12:36:39.172172","errorLocation":null,"error":null,"errors":[{"code":"400","title":"Technical Error","message":"Something went wrong. Please try again later.","values":null,"origmesg":null,"errors":null}]}

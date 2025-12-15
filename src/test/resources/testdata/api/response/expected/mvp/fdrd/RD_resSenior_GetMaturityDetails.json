@@ -1,15 +1,1 @@
-{
-    "cif": "60466771",
-    "maturityAmount": "55530.00",
-    "depositAmount": "620.0",
-    "interestRate": "7.00",
-    "depositTerm": {
-        "year": null,
-        "month": 72,
-        "day": 0
-    },
-    "maturityDate": null,
-    "interestPayoutType": "Maturity",
-    "interestPayoutAmount": "10890.00",
-    "totalInterestPayoutAmount": "10890.00"
-}
+{"cif":"60466771","maturityAmount":"54651.00","depositAmount":"620.0","interestRate":"6.50","depositTerm":{"year":null,"month":72,"day":0},"maturityDate":null,"interestPayoutType":"Maturity","interestPayoutAmount":"10011.00","totalInterestPayoutAmount":"10011.00"}

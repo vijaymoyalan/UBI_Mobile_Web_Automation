@@ -8,7 +8,7 @@ Feature: Smoke of Credit Card
     Given user sets the environment of endpoint
     Given user set the basepath to <service>
     Then set the endpoint <endpoint>
-    Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+    #Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
     Then user triggers a post request with <requestBody>
     Then user copy file from <responseFolder> and paste to file at location <responseBody>
     Then user verifies that status is 200
@@ -16,8 +16,8 @@ Feature: Smoke of Credit Card
 
     #Then user verfies json from <responseBody> which is not exact message
     Examples: 
-      | service    | endpoint       | requestBody                                                                  | requestField | responsefield | filename | responseBody                                                                           | responseFolder                                            |
-      | creditcard | getCardProfile | src/test/resources/testdata/api/request/Drop2/CreditCard/getCardProfile.json | null         | null          | null     | src/test/resources/testdata/api/response/expected/Drop2/CreditCard/getCardProfile.json | src\\test\\resources\\responseFolder\\getCardProfile.json |
+      | service    | endpoint       | requestBody                                                                 				 | requestField | responsefield | filename | responseBody                                                                           				 | responseFolder                                            |
+      | creditcard | getCardProfile | src\\test\\resources\\testdata\\api\\request\\Drop2\\CreditCard\\getCardProfile.json | null         | null          | null     | src\\test\\resources\\testdata\\api\\response\\expected\\Drop2\\CreditCard\\getCardProfile.json | src\\test\\resources\\responseFolder\\getCardProfile.json |
 
   @TestCaseKey=UDB-T30329
   Scenario Outline: Verify Set CC PIN sets the Credit card PIN
@@ -95,10 +95,11 @@ Feature: Smoke of Credit Card
     Given user set the basepath to <service>
     Then set the endpoint <endpoint>
     Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+    When user updates the json request body <requestBody> with tags <tag> and cif <cif> for generating transactionID
     Then user triggers a post request with <requestBody>
     Then user verifies that status is 200
     Then user verifies json from <responseBody>
 
     Examples: 
-      | service    | endpoint            | requestBody                                                                         | requestField | responsefield | filename | responseBody                                                                                             |
-      | creditcard | get-outstandingBill | src\\test\\resources\\testdata\\api\\request\\Drop2\\CreditCard\\CCBillPayment.json | null         | null          | null     | \\src\\test\\resources\\testdata\\api\\response\\expected\\Drop2\\CreditCard\\CCBillPaymentresponse.json |
+      | service    | endpoint            | requestBody                                                                         | requestField | responsefield | filename | responseBody                                                                                             | tag           |cif 			 |
+      | creditcard | get-outstandingBill | src\\test\\resources\\testdata\\api\\request\\Drop2\\CreditCard\\CCBillPayment.json | null         | null          | null     | \\src\\test\\resources\\testdata\\api\\response\\expected\\Drop2\\CreditCard\\CCBillPaymentresponse.json | transactionId |258459119 |

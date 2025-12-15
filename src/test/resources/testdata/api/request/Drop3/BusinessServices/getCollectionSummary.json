@@ -1,14 +1,13 @@
 {
-	"cif": "900696250",
-	"fromDate": "06/11/2024",
-	"toDate": "02/02/2025",
+	"cif": "1000000373",
+	"fromDate": "31/03/2025",
+	"toDate": "06/04/2025",
     "cid": "9768911985govi900986039",
 	"accountDetails": [
 		{
-			"accountName": "VIKASH MARBLE ",
-			"accountNumber": "353805140000190",
+			"accountName": "  ",
+			"accountNumber": "201821010000023",
 			"accountType": "CAA"
 		}
-		
-	]
+        	]
 }

@@ -11,15 +11,15 @@
         "acctBals": [
             {
                 "balTypeCode": "EFFAVL",
-                "amount": 29144194.30
+                "amount": 27199234.30
             },
             {
                 "balTypeCode": "AVAIL",
-                "amount": 29144194.30
+                "amount": 27199234.30
             },
             {
                 "balTypeCode": "LEDGER",
-                "amount": 29146342.30
+                "amount": 27201382.30
             }
         ],
         "scheme": {
@@ -38,6 +38,8 @@
             "branchId": "563536",
             "branchName": null,
             "address": null
-        }
+        },
+        "joinType": "M",
+        "custmrConstitution": "001"
     }
 ]

@@ -1,9 +1,1 @@
-{
-  "errorId": "dc8a8c2f-a513-47b9-8295-1bfad6386fad",
-  "errorAt": "2025-01-02T08:26:14.091391915",
-  "error": {
-    "code": "BAD_REQUEST",
-    "title": null,
-    "description": "debitAccount: expected minLength: 1, actual: 0, solId: expected minLength: 5, actual: 0, solId: string [] does not match pattern \\d{5}, ccAccountId: expected minLength: 1, actual: 0, #: required key [amount] not found"
-  }
-}
+{"code":"NOT_AUTHORIZED","title":"null","message":"Authorization failed."}

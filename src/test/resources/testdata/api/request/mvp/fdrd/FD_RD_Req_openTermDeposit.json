@@ -1,32 +1,32 @@
 {
     "source": {
-        "cif": "2005946706",
-        "acctNum": "520101041229211",
+        "cif": "612647375",
+        "acctNum": "369302010002353",
         "scheme": {
             "code": "SBA",
             "type": "Savings"
         }
     },
-    "cif": "2005946706",
-    "applicationFrmNum": "974129942574",
-    "nickName": "FD-1",
+    "cif": "612647375",
+    "applicationFrmNum": "139429105600",
+    "nickName": "FDLAD API",
     "scheme": {
         "type": "TDA"
     },
     "subType": "FDSC",
     "subTypeCode": "Regular_FD",
-    "maturityAmount": "12445.00",
-    "depositAmount": "12500.00",
-    "interestRate": "6.75",
+    "maturityAmount": "244118.00",
+    "depositAmount": "200000.00",
+    "interestRate": "6.7",
     "depositTerm": {
-        "year": "0",
-        "month": "3",
-        "day": "31"
+        "year": "3",
+        "month": "0",
+        "day": "0"
     },
-    "startDate": "2023-09-20",
-    "maturityDate": "2024-08-23",
+    "startDate": "2025-05-09",
+    "maturityDate": "2028-05-09",
     "interestPayoutType": "Maturity",
-    "interestPayoutAmount": "248.00",
+    "interestPayoutAmount": "44118.00",
     "operatingInstruction": "Sole_Ownership",
     "renewalDtls": {
         "maturityIndicator": "",

@@ -1,1 +1,1 @@
-{"date":"28 Jan, 2025 07:32 AM","referenceNumber":"634163561489","message":"Cheque Payment Stopped","correlationId":"264479335_3cfff93e-5389-445f-b050-d08c324cae32","systemCode":"CBS"}
+{"error":{"errorCode":null,"errorMessage":"Transaction not permitted to card holder"},"correlationId":"264479335_1c464a3d-d894-4214-b499-a66342cf145c","systemCode":"CBS"}

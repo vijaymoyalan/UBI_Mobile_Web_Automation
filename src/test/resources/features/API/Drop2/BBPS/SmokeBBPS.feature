@@ -10,7 +10,7 @@ Given user sets the file path for this feature file for Drop2/bbps
   		Given user sets the environment of endpoint
   		Given user set the basepath to <service>
   		Then set the endpoint <endpoint>
-  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  		 Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
   		Then user triggers a post request with <requestBody>
   		Then user verifies that status is 200
   		Then user verifies json from <responseBody>.
@@ -56,20 +56,20 @@ Given user sets the file path for this feature file for Drop2/bbps
 		
 #======================onClickServiceProvider=====================
 
-		@TestCaseKey=UDB-T28829
- 		Scenario Outline: Verify 200 success response for onClickServiceProvider API
-  		Given user sets the environment of endpoint
-  		Given user set the basepath to <service>
-  		Then set the endpoint <endpoint>
-  		#Then the endpoint <endpoint> with cif <cif>
-  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
-  		Then user triggers a post request with <requestBody>
-  		Then user verifies that status is 200
-  		Then user verifies json from <responseBody>.
-  
-  			Examples:
-					|	service |	endpoint |	requestBody	|  requestField   | responsefield      | filename  |  responseBody	| 
-					|	bbps	|	/onClickServiceProvider/274309887	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickServiceProvider_request.json	|	null | null | null	|	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickServiceProvider_response.json	|      
+#		@TestCaseKey=UDB-T28829
+ #		Scenario Outline: Verify 200 success response for onClickServiceProvider API
+  #		Given user sets the environment of endpoint
+  #		Given user set the basepath to <service>
+  #		Then set the endpoint <endpoint>
+  #		#Then the endpoint <endpoint> with cif <cif>
+  #		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  #		Then user triggers a post request with <requestBody>
+  #		Then user verifies that status is 200
+  #		Then user verifies json from <responseBody>.
+  #
+  #			Examples:
+#					|	service |	endpoint |	requestBody	|  requestField   | responsefield      | filename  |  responseBody	| 
+#					|	bbps	|	/onClickServiceProvider/274309887	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickServiceProvider_request.json	|	null | null | null	|	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickServiceProvider_response.json	|      
 
 		
 #======================onClickUtilityGas=====================
@@ -161,19 +161,19 @@ Given user sets the file path for this feature file for Drop2/bbps
 		
 #======================onClickTransactionPinContinueFastag=====================
 
-		@TestCaseKey=UDB-T30068
- 		Scenario Outline: Verify 200 success response for onClickTransactionPinContinueFastag API
-  		Given user sets the environment of endpoint
-  		Given user set the basepath to <service>
-  		Then set the endpoint <endpoint>
-  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
-  		Then user triggers a post request with <requestBody>
-  		Then user verifies that status is 200
-  		Then user verifies json from <responseBody>.
-  
-  			Examples:
-					|	service |	endpoint |	requestBody	|  requestField   | responsefield      | filename  |  responseBody	| 
-					|	bbps	|	/onClickTransactionPinContinueFastag	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickTransactionPinContinueFastag_request.json	|	null | null | null	|	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickTransactionPinContinueFastag_response.json	|      
+#		@TestCaseKey=UDB-T30068
+ #		Scenario Outline: Verify 200 success response for onClickTransactionPinContinueFastag API
+  #		Given user sets the environment of endpoint
+  #		Given user set the basepath to <service>
+  #		Then set the endpoint <endpoint>
+  #		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  #		Then user triggers a post request with <requestBody>
+  #		Then user verifies that status is 200
+  #		Then user verifies json from <responseBody>.
+  #
+  #			Examples:
+#					|	service |	endpoint |	requestBody	|  requestField   | responsefield      | filename  |  responseBody	| 
+#					|	bbps	|	/onClickTransactionPinContinueFastag	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickTransactionPinContinueFastag_request.json	|	null | null | null	|	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickTransactionPinContinueFastag_response.json	|      
 
 		
 #======================onClickUtilityDTH=====================
@@ -212,20 +212,20 @@ Given user sets the file path for this feature file for Drop2/bbps
 
 		
 #======================onClickTransactionPinContinueDTH=====================
-
-		@TestCaseKey=UDB-T28981
- 		Scenario Outline: Verify 200 success response for onClickTransactionPinContinueDTH API
-  		Given user sets the environment of endpoint
-  		Given user set the basepath to <service>
-  		Then set the endpoint <endpoint>
-  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
-  		Then user triggers a post request with <requestBody>
-  		Then user verifies that status is 200
-  		Then user verifies json from <responseBody>.
-  
-  			Examples:
-					|	service |	endpoint |	requestBody	|  requestField   | responsefield      | filename  |  responseBody	| 
-					|	bbps	|	/onClickTransactionPinContinueDTH	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickTransactionPinContinueDTH_request.json	|	null | null | null	|	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickTransactionPinContinueDTH_response.json	|      
+#commented as biller DTH is not available in SIT
+#		@TestCaseKey=UDB-T28981
+ #		Scenario Outline: Verify 200 success response for onClickTransactionPinContinueDTH API
+  #		Given user sets the environment of endpoint
+  #		Given user set the basepath to <service>
+  #		Then set the endpoint <endpoint>
+  #		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  #		Then user triggers a post request with <requestBody>
+  #		Then user verifies that status is 200
+  #		Then user verifies json from <responseBody>.
+  #
+  #			Examples:
+#					|	service |	endpoint |	requestBody	|  requestField   | responsefield      | filename  |  responseBody	| 
+#					|	bbps	|	/onClickTransactionPinContinueDTH	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickTransactionPinContinueDTH_request.json	|	null | null | null	|	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickTransactionPinContinueDTH_response.json	|      
 
 												
 #======================onClickRechargeMobile=====================
@@ -258,8 +258,8 @@ Given user sets the file path for this feature file for Drop2/bbps
   		Then user verifies json from <responseBody>.
   
   			Examples:
-					|	service |	endpoint |	requestBody	|  requestField   | responsefield      | filename  |  responseBody	| 
-					|	bbps	|	/onClickContact	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickContact_request.json	|	null | null | null	|	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickContact_response.json	|      
+					|	service |	endpoint 				|	requestBody																																			|  requestField | responsefield | filename  |  responseBody																										| 
+					|	bbps		|	/onClickContact	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickContact_request.json	|	null 					| null 					| null			|	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickContact_response.json	|      
 
 			
 									
@@ -353,19 +353,19 @@ Given user sets the file path for this feature file for Drop2/bbps
 		
 #======================userEnabledAutoPay=====================
 
-		@TestCaseKey=UDB-C65
- 		Scenario Outline: Verify 200 success response for userEnabledAutoPay API
-  		Given user sets the environment of endpoint
-  		Given user set the basepath to <service>
-  		Then set the endpoint <endpoint>
-  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
-  		Then user triggers a post request with <requestBody>
-  		Then user verifies that status is 200
-  		Then user verifies json from <responseBody>.
-  
-  			Examples:
-					|	service |	endpoint |	requestBody	|  requestField   | responsefield      | filename  |  responseBody	| 
-					|	bbps	|	/userEnabledAutoPay	|	src/test/resources/testdata/api/request/Drop2/bbps/userEnabledAutoPay_request.json	|	null | null | null	|	src/test/resources/testdata/api/response/expected/Drop2/bbps/userEnabledAutoPay_response.json	|      
+#		@TestCaseKey=UDB-C65
+ #		Scenario Outline: Verify 200 success response for userEnabledAutoPay API
+  #		Given user sets the environment of endpoint
+  #		Given user set the basepath to <service>
+  #		Then set the endpoint <endpoint>
+  #		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  #		Then user triggers a post request with <requestBody>
+  #		Then user verifies that status is 200
+  #		Then user verifies json from <responseBody>.
+  #
+  #			Examples:
+#					|	service |	endpoint |	requestBody	|  requestField   | responsefield      | filename  |  responseBody	| 
+#					|	bbps	|	/userEnabledAutoPay	|	src/test/resources/testdata/api/request/Drop2/bbps/userEnabledAutoPay_request.json	|	null | null | null	|	src/test/resources/testdata/api/response/expected/Drop2/bbps/userEnabledAutoPay_response.json	|      
 
 		
 									
@@ -434,8 +434,8 @@ Given user sets the file path for this feature file for Drop2/bbps
   		Then user verifies json from <responseBody>.
   
   			Examples:
-					|	service |	endpoint |	requestBody	|  requestField   | responsefield      | filename  |  responseBody	| 
-					|	bbps	|	/getBBPSDashData	|	src/test/resources/testdata/api/request/Drop2/bbps/getBBPSDashData_request.json	|	null | null | null	|	src/test/resources/testdata/api/response/expected/Drop2/bbps/getBBPSDashData_response.json	|      
+					|	service |	endpoint 					|	requestBody																																			|  requestField   | responsefield | filename  |  responseBody	| 
+					|	bbps		|	/getBBPSDashData	|	src/test/resources/testdata/api/request/Drop2/bbps/getBBPSDashData_request.json	|	null 						| null 					| null			|	src/test/resources/testdata/api/response/expected/Drop2/bbps/getBBPSDashData_response.json	|      
 
 		
 #======================onFilterPastPayment=====================
@@ -457,20 +457,20 @@ Given user sets the file path for this feature file for Drop2/bbps
 		
 #======================onClickTransactionPinContinueAutopay=====================
 
-		@TestCaseKey=UDB-T28918
- 		Scenario Outline: Verify 200 success response for onClickTransactionPinContinueAutopay API
-  		Given user sets the environment of endpoint
-  		Given user set the basepath to <service>
-  		Then set the endpoint <endpoint>
-  		#Then the endpoint <endpoint> with cif <cif>
-  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
-  		Then user triggers a post request with <requestBody>
-  		Then user verifies that status is 200
-  		Then user verifies json from <responseBody>.
-  
-  			Examples:
-				|	service |	endpoint |	requestBody	|  requestField   | responsefield      | filename  |  responseBody	| 	cif	|
-					|	bbps	|	/onClickTransactionPinContinueAutopay	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickTransactionPinContinueAutopay_request.json	|	null | null | null	|	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickTransactionPinContinueAutopay_response.json	|	2002605586 |      
+#		@TestCaseKey=UDB-T28918
+ #		Scenario Outline: Verify 200 success response for onClickTransactionPinContinueAutopay API
+  #		Given user sets the environment of endpoint
+  #		Given user set the basepath to <service>
+  #		Then set the endpoint <endpoint>
+  #		#Then the endpoint <endpoint> with cif <cif>
+  #		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  #		Then user triggers a post request with <requestBody>
+  #		Then user verifies that status is 200
+  #		Then user verifies json from <responseBody>.
+  #
+  #			Examples:
+#				|	service |	endpoint |	requestBody	|  requestField   | responsefield      | filename  |  responseBody	| 	cif	|
+#					|	bbps	|	/onClickTransactionPinContinueAutopay	|	src/test/resources/testdata/api/request/Drop2/bbps/onClickTransactionPinContinueAutopay_request.json	|	null | null | null	|	src/test/resources/testdata/api/response/expected/Drop2/bbps/onClickTransactionPinContinueAutopay_response.json	|	2002605586 |      
 
 		
 #======================onClickPayAgain=====================
@@ -506,10 +506,10 @@ Given user sets the file path for this feature file for Drop2/bbps
   #			Examples:
 #					|	service |	endpoint |	requestBody	|  requestField   | responsefield      | filename  |  responseBody	| 
 #					|	bbps	|	/raiseComplaint	|	src/test/resources/testdata/api/request/Drop2/bbps/raiseComplaint_request.json	|	null | null | null	|	src/test/resources/testdata/api/response/expected/Drop2/bbps/raiseComplaint_response.json	|      
-
-		
+#
+#		
 #======================trackComplaint=====================
-
+#
 #		@TestCaseKey=UDB-T30065
  #		Scenario Outline: Verify 200 success response for trackComplaint API
   #		Given user sets the environment of endpoint
@@ -523,8 +523,8 @@ Given user sets the file path for this feature file for Drop2/bbps
   #			Examples:
 #					|	service |	endpoint |	requestBody	|  requestField   | responsefield      | filename  |  responseBody	| 
 #					|	bbps	|	/trackComplaint	|	src/test/resources/testdata/api/request/Drop2/bbps/trackComplaint_request.json	|	null | null | null	|	src/test/resources/testdata/api/response/expected/Drop2/bbps/trackComplaint_response.json	|      
-
-		
+#
+#		
 #======================onClickUtility=====================
 
 		@TestCaseKey=UDB-T16002
@@ -544,19 +544,19 @@ Given user sets the file path for this feature file for Drop2/bbps
 		
 #======================userClickRemoveAccount=====================
 
-		@TestCaseKey=UDB-C70
- 		Scenario Outline: Verify 200 success response for userClickRemoveAccount API
-  		Given user sets the environment of endpoint
-  		Given user set the basepath to <service>
-  		Then set the endpoint <endpoint>
-  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
-  		Then user triggers a post request with <requestBody>
-  		Then user verifies that status is 200
-  		Then user verifies json from <responseBody>.
-  
-  			Examples:
-					|	service |	endpoint |	requestBody	|  requestField   | responsefield      | filename  |  responseBody	| 
-					|	bbps	|	/userClickRemoveAccount	|	src/test/resources/testdata/api/request/Drop2/bbps/userClickRemoveAccount_request.json	|	null | null | null	|	src/test/resources/testdata/api/response/expected/Drop2/bbps/userClickRemoveAccount_response.json	|      
+#		@TestCaseKey=UDB-C70
+ #		Scenario Outline: Verify 200 success response for userClickRemoveAccount API
+  #		Given user sets the environment of endpoint
+  #		Given user set the basepath to <service>
+  #		Then set the endpoint <endpoint>
+  #		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  #		Then user triggers a post request with <requestBody>
+  #		Then user verifies that status is 200
+  #		Then user verifies json from <responseBody>.
+  #
+  #			Examples:
+#					|	service |	endpoint |	requestBody	|  requestField   | responsefield      | filename  |  responseBody	| 
+#					|	bbps	|	/userClickRemoveAccount	|	src/test/resources/testdata/api/request/Drop2/bbps/userClickRemoveAccount_request.json	|	null | null | null	|	src/test/resources/testdata/api/response/expected/Drop2/bbps/userClickRemoveAccount_response.json	|      
 
 		
 #======================getAccountList=====================
@@ -569,46 +569,45 @@ Given user sets the file path for this feature file for Drop2/bbps
   		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
   		Then user triggers a post request with <requestBody>
   		Then user verifies that status is 200
-  		Then user verifies json from <responseBody>.
+  #		Then user verifies json from <responseBody>.
   
   			Examples:
-					|	service |	endpoint |	requestBody	|  requestField   | responsefield      | filename  |  responseBody	| 
-					|	bbps	|	/getAccountList	|	src/test/resources/testdata/api/request/Drop2/bbps/getAccountList_request.json	|	null | null | null	|	src/test/resources/testdata/api/response/expected/Drop2/bbps/getAccountList_response.json	|      
+					|	service |	endpoint 				|	requestBody																																			|  requestField   | responsefield | filename  | responseBody																										| 
+					|	bbps		|	/getAccountList	|	src/test/resources/testdata/api/request/Drop2/bbps/getAccountList_request.json	|	null 						| null 					| null			|	src/test/resources/testdata/api/response/expected/Drop2/bbps/getAccountList_response.json	|      
 
 		
 #======================linkUserWithBiller=====================
 
-		@TestCaseKey=UDB-T15972
- 		Scenario Outline: Verify 200 success response for linkUserWithBiller API
-  		Given user sets the environment of endpoint
-  		Given user set the basepath to <service>
-  		Then set the endpoint <endpoint>
-  		#Then the endpoint <endpoint> with cif <cif>
-  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
-  		Then user triggers a post request with <requestBody>
-  		Then user verifies that status is 200
-  		Then user verifies json from <responseBody>.
-  
-  			Examples:
-					|	service |	endpoint |	requestBody	|  requestField   | responsefield      | filename  |  responseBody	| 	cif	|
-					|	bbps	|	/linkUserWithBiller	|	src/test/resources/testdata/api/request/Drop2/bbps/linkUserWithBiller_request.json	|	null | null | null	|	src/test/resources/testdata/api/response/expected/Drop2/bbps/linkUserWithBiller_response.json	|	212345678 |      
+#		@TestCaseKey=UDB-T15972
+ #		Scenario Outline: Verify 200 success response for linkUserWithBiller API
+  #		Given user sets the environment of endpoint
+  #		Given user set the basepath to <service>
+  #		Then set the endpoint <endpoint>
+  #		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  #		Then user triggers a post request with <requestBody>
+  #		Then user verifies that status is 200
+  #		Then user verifies json from <responseBody>.
+  #
+  #			Examples:
+#					|	service |	endpoint 						|	requestBody																																					|  requestField   | responsefield | filename  |  responseBody																																									|
+#					|	bbps		|	/linkUserWithBiller	|	src/test/resources/testdata/api/request/Drop2/bbps/linkUserWithBiller_request.json	|	null 						| null 					| null			|	src/test/resources/testdata/api/response/expected/Drop2/bbps/linkUserWithBiller_response.json	|	     
 
 		
 #======================getComplaintReasons=====================
 
-		@TestCaseKey=UDB-C72
- 		Scenario Outline: Verify 200 success response for getComplaintReasons API
-  		Given user sets the environment of endpoint
-  		Given user set the basepath to <service>
-  		Then set the endpoint <endpoint>
-  		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
-  		Then user triggers a post request with <requestBody>
-  		Then user verifies that status is 200
-  		Then user verifies json from <responseBody>.
-  
-  			Examples:
-				  |	service |	endpoint |	requestBody	|  requestField   | responsefield      | filename  |  responseBody	| 
-					|	bbps	|	/getComplaintReasons	|	src/test/resources/testdata/api/request/Drop2/bbps/getComplaintReasons_request.json	|	null | null | null	|	src/test/resources/testdata/api/response/expected/Drop2/bbps/getComplaintReasons_response.json	|      
+#		@TestCaseKey=UDB-C72
+ #		Scenario Outline: Verify 200 success response for getComplaintReasons API
+  #		Given user sets the environment of endpoint
+  #		Given user set the basepath to <service>
+  #		Then set the endpoint <endpoint>
+  #		Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+  #		Then user triggers a post request with <requestBody>
+  #		Then user verifies that status is 200
+  #		Then user verifies json from <responseBody>.
+  #
+  #			Examples:
+#				  |	service |	endpoint |	requestBody	|  requestField   | responsefield      | filename  |  responseBody	| 
+#					|	bbps	|	/getComplaintReasons	|	src/test/resources/testdata/api/request/Drop2/bbps/getComplaintReasons_request.json	|	null | null | null	|	src/test/resources/testdata/api/response/expected/Drop2/bbps/getComplaintReasons_response.json	|      
 
 		
 #======================getStateList=====================

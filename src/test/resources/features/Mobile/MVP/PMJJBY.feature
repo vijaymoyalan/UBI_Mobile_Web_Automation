@@ -40,7 +40,7 @@ Given user is on page DashboardPage clicks on InvestandInsureViewAll
 Given user is on page InvestAndInsure clicks on PMJJBYInsurance
 Given user is on page PMJJBY clicks on ApplyNow
 Given user is on page PMJJBY clicks on Terms&Conditions
-When user scrolls down to "State"
+#When user scrolls down to "State"
 Given user is on page PMJJBY clicks on ChangeNominee
 Given user is on page PMJJBY and enters Test Script Value as NomineeName
 Given user is on page PMJJBY clicks on NomineeDOB

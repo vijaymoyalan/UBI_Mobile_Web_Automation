@@ -24,6 +24,7 @@ public class MFAPage {
 	public ORPageModel ChooseSim1 = common.findElement(listofElements,"ChooseSim1"); 
 	public ORPageModel ContinueSim = common.findElement(listofElements,"ContinueSim"); 
 	public ORPageModel Icon = common.findElement(listofElements,"Icon"); 
+	public ORPageModel SecurityContinueButton = common.findElement(listofElements,"ContinueButton"); 
 	public ORPageModel EnterLoginPin1 = common.findElement(listofElements,"EnterLoginPin1"); 
 	public ORPageModel EnterLoginPin2 = common.findElement(listofElements,"EnterLoginPin2"); 
 	public ORPageModel EnterLoginPin3 = common.findElement(listofElements,"EnterLoginPin3"); 

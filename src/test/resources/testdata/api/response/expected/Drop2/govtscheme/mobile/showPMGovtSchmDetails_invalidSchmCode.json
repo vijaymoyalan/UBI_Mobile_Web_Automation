@@ -1,1 +1,15 @@
-{"errorId":"5edac9bc-ea71-4604-8e2a-2972b6fa66f6","errorAt":"2024-12-11T18:07:15.948604988","errorLocation":null,"error":null,"errors":[{"code":"BAD_REQUEST","message":"schemeCode: string [DMJJBS] does not match pattern ^(PMJJBY|PMSBY)$","values":null,"origmesg":null,"errors":null}]}
+{
+  "errorId": "a08b6a32-33fa-4cde-9076-5703a99b0cf4",
+  "errorAt": "2025-02-20T12:17:11.215992853",
+  "errorLocation": null,
+  "error": null,
+  "errors": [
+    {
+      "code": "BAD_REQUEST",
+      "message": "schemeCode: string [PMJJBUUJY] does not match pattern ^(PMJJBY|PMSBY)$",
+      "values": null,
+      "origmesg": null,
+      "errors": null
+    }
+  ]
+}

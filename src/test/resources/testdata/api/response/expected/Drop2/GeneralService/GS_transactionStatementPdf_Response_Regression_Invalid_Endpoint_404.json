@@ -1,4 +1,5 @@
 {
     "errorCode": null,
-    "errorMessage": "404 NOT_FOUND \"No static resource v1/generalservice/transactionStatementPdf1.\""
+    "errorMessage": "404 NOT_FOUND \"No static resource v1/generalservice/transactionStatementPdf1.\"",
+    "title":null
 }

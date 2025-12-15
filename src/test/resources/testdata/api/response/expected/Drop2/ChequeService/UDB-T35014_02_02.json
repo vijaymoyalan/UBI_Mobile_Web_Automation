@@ -1,5 +1,1 @@
-{
-    "chequeNumber": "33117278",
-    "date": "31 August, 2024 03:51 PM",
-    "message": "Stopped"
-}
+{"error":{"errorCode":null,"errorMessage":"Cheque not issued to this account"}}

@@ -118,7 +118,8 @@ public static String setEnvPath = "";
   	
 	@Given("^user logins to app entering Login PIN$")
 	public void enterTpin() throws InterruptedException {
-		common.waitTillElementDisplayed(mfaPage.EnterLoginPin1);
+		common.waitTillElementDisplayed(mfaPage.SecurityContinueButton);
+		common.clickObject(mfaPage.SecurityContinueButton);
 		common.clickObject(mfaPage.EnterLoginPin1);
 		common.enterText(mfaPage.EnterLoginPin1, "2");
 		common.enterText(mfaPage.EnterLoginPin2, "5");

@@ -1,9 +1,10 @@
 {
-    "errorId": "a56be319-3c12-466a-8cca-e0658331c693",
-    "errorAt": "2024-09-06T06:02:02.454849851",
-    "errors": {
-        "code": "02",
+    "errorId": "e304d39a-0114-4148-8356-8e9fa81e48c1",
+    "errorAt": "2025-04-03T16:39:48.654376490",
+    "errors": null,
+    "error": {
+        "code": "01",
         "result": "FAILED",
-        "message": "Unable to delete VPA. Please deregister the linked UPI number first."
+        "message": "Default Vpa Cannot be Deleted"
     }
 }

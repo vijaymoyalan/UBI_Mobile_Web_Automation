@@ -1,2 +1,8 @@
-{"timestamp": "2025-02-04T09:46:42.382+00:00", "path": "/msme/app/customer/api/v1/get1CustomerAccountsExt1", "status": 404, "error": "Not Found", "message": null, "requestId": "acb4ddb1-2240"
+{
+    "timestamp": "2025-04-07T06:45:24.557+00:00",
+    "path": "/msme/v1/businessServices/fetchBranchDetails1",
+    "status": 404,
+    "error": "Not Found",
+    "message": null,
+    "requestId": "3ac95bf7-3578"
 }

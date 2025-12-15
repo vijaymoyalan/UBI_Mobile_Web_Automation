@@ -1,1 +1,1 @@
-{"error":{"errorCode":null,"errorMessage":"Transaction not permitted to card holder"}}
+{"error":{"errorCode":null,"errorMessage":"Cheque not issued to this account"},"correlationId":"264479335_158f327a-3b77-4345-bf3c-255a51724945","systemCode":"CBS"}

@@ -19,7 +19,7 @@
             "amount": 0.00
         }
     ],
-    "subTypeCode": "Regular_RD",
+    "subTypeCode": null,
     "maturityAmount": "6360",
     "depositAmount": "511",
     "interestRate": "6.75",

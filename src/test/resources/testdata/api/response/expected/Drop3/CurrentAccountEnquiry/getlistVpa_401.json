@@ -1,11 +1,1 @@
-{
-    "httpCode": "401",
-    "httpMessage": "Unauthorized",
-    "errorLocation": "gateway",
-    "errors": [
-        {
-            "code": "ERR_JWT_INVALID",
-            "message": "JWT validation failed"
-        }
-    ]
-}
+{"code":"NOT_AUTHORIZED","title":"null","message":"Authorization failed."}

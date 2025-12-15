@@ -1,4 +1,1 @@
-{
-    "cid": "9768911985govi900986039",
-    "cif": "192785571"
-}
+{"timestamp":"2025-04-02T05:49:14.582+00:00","path":"/msme/app/customer/api/v1/getCustomerAccountsExt","status":500,"error":"Internal Server Error","requestId":"4e9fdec7-3768"}

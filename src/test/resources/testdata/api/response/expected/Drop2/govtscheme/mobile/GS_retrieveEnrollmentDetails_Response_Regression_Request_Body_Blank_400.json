@@ -1,1 +1,5 @@
-{"errorId":"723d4ce1-90c0-4149-b5c7-d41d5a779493","errorAt":"2024-12-27T14:26:31.6989103","errorLocation":null,"error":null,"errors":[{"code":"BAD_REQUEST","message":"#: required key [channelId] not found, #: required key [cif] not found, #: required key [schemeCode] not found","values":null,"origmesg":null,"errors":null}]}
+{
+  "code": "NOT_AUTHORIZED",
+  "title": "null",
+  "message": "Authorization failed."
+}

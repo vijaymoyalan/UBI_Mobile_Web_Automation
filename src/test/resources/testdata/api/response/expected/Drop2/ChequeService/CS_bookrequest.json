@@ -1,1 +1,1 @@
-{"error":{"errorCode":null,"errorMessage":"Cheque book cannot be issued as Account Balance is below Rs 1000"}}
+{"error":{"errorCode":null,"errorMessage":"Record Already Exists for given date..."},"correlationId":"264479335_3c019d87-bec5-4aa9-81d9-d3a3d221613f","systemCode":"CBS"}

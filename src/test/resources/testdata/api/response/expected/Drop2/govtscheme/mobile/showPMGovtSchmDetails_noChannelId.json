@@ -1,1 +1,15 @@
-{"errorId":"82af8ab8-e972-423e-8b3e-3e540984b7fe","errorAt":"2024-12-11T18:07:14.866598764","errorLocation":null,"error":null,"errors":[{"code":"BAD_REQUEST","message":"#: required key [channelId] not found","values":null,"origmesg":null,"errors":null}]}
+{
+  "errorId": "08839f3e-8554-4976-ae28-078751e7f9e6",
+  "errorAt": "2025-02-20T12:10:55.071153733",
+  "errorLocation": null,
+  "error": null,
+  "errors": [
+    {
+      "code": "BAD_REQUEST",
+      "message": "#: required key [channelId] not found",
+      "values": null,
+      "origmesg": null,
+      "errors": null
+    }
+  ]
+}

@@ -219,7 +219,7 @@ Then user verifies that status is 200
 Then user verifies json from <responseBody>
 	
 Examples:
-|service |endpoint          |responseBody 																|requestBody|
+|service |endpoint          |responseBody 																														|requestBody|
 |UPI     |/verify/vpa   |src\test\resources\testdata\api\response\expected\Drop2\UPI\verify-vpa.json	|src\test\resources\testdata\api\request\Drop2\UPI\verify-vpa.json|
 
 
@@ -233,7 +233,7 @@ Then user verifies that status is 200
 Then user verifies json from <responseBody>
 
 Examples:
-|service |endpoint          |responseBody 																		|requestBody|
+|service |endpoint          |responseBody 																															|requestBody|
 |UPI     |/profile-vpa   |src\test\resources\testdata\api\response\expected\Drop2\UPI\profile-vpa.json	|src\test\resources\testdata\api\request\Drop2\UPI\profile-vpa.json|
 
 
@@ -323,33 +323,34 @@ Examples:
 | UPI 		|/transaction/pay   |src\test\resources\testdata\api\request\Drop2\UPI\transaction-pay.json  |txnId 			|data			| transactionid.json    |src\test\resources\testdata\api\response\expected\Drop2\UPI\transaction-pay.json|
 
 
-@TestCaseKey=UDB-T30845
-Scenario Outline: Verify "/collect" API "POST" Method for Status code 200 with Only Mandatory fields
-Given user sets the environment of endpoint
-Given user set the basepath to <service>
-Then set the endpoint <endpoint> 
-Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
-Then user triggers a post request with <requestBody>
-Then user verifies that status is 200
-
-Examples: 
-| service       | endpoint    		| requestBody 														 |requestField  |responsefield	|filename   | responseBody                                                                 |
-| UPI 			|/collect   	|src\test\resources\testdata\api\request\Drop2\UPI\collect.json|null 			|null			| null 		|src\test\resources\testdata\api\response\expected\Drop2\UPI\collect.json|
+#@TestCaseKey=UDB-T30845 #this feature is removed from APP level
+#Scenario Outline: Verify "/collect" API "POST" Method for Status code 200 with Only Mandatory fields
+#Given user sets the environment of endpoint
+#Given user set the basepath to <service>
+#Then set the endpoint <endpoint> 
+#Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+#Then user triggers a post request with <requestBody>
+#Then user verifies that status is 200
+#
+#Examples: 
+#| service       | endpoint    		| requestBody 														 |requestField  |responsefield	|filename   | responseBody                                                                 |
+#| UPI 			|/collect   	|src\test\resources\testdata\api\request\Drop2\UPI\collect.json|null 			|null			| null 		|src\test\resources\testdata\api\response\expected\Drop2\UPI\collect.json|
   
 
-@TestCaseKey=UDB-T30850
-Scenario Outline: Verify "/collect/pay" API "POST" Method for Status code 200 with Only Mandatory fields
-Given user sets the environment of endpoint
-Given user set the basepath to <service>
-Then set the endpoint <endpoint> 
-Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
-Then user triggers a post request with <requestBody>
-Then user verifies that status is 200
-Then user verifies json from <responseBody>
-
-Examples: 
-| service   | endpoint    		| requestBody 															|requestField   |responsefield	|filename				| responseBody|
-| UPI 		|/collect-pay   |src\test\resources\testdata\api\request\Drop2\UPI\collect-pay.json  |txnId 			|txnId			| collect.json    |src\test\resources\testdata\api\response\expected\Drop2\UPI\collect-pay.json|
+#@TestCaseKey=UDB-T30850
+#this feature is removed from APP level
+#Scenario Outline: Verify "/collect/pay" API "POST" Method for Status code 200 with Only Mandatory fields
+#Given user sets the environment of endpoint
+#Given user set the basepath to <service>
+#Then set the endpoint <endpoint> 
+#Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+#Then user triggers a post request with <requestBody>
+#Then user verifies that status is 200
+#Then user verifies json from <responseBody>
+#
+#Examples: 
+#| service   | endpoint    		| requestBody 															|requestField   |responsefield	|filename				| responseBody|
+#| UPI 		|/collect-pay   |src\test\resources\testdata\api\request\Drop2\UPI\collect-pay.json  |txnId 			|txnId			| collect.json    |src\test\resources\testdata\api\response\expected\Drop2\UPI\collect-pay.json|
 
 
 @TestCaseKey=UDB-T30796

@@ -1,1 +1,15 @@
-{"errorId":"aa2c4955-28ba-4420-82ab-78bdd361ecff","errorAt":"2024-12-10T18:31:52.425875136","errorLocation":null,"error":null,"errors":[{"code":"CBS_ERROR","message":"Invalid Account Number","values":null,"origmesg":null,"errors":null}]}
+{
+  "errorId": "3328da38-3182-47f6-be83-1cc52dc21ae7",
+  "errorAt": "2025-02-21T12:55:19.360062922",
+  "errorLocation": null,
+  "error": null,
+  "errors": [
+    {
+      "code": "BAD_REQUEST",
+      "message": "schemeCode: string [PM546rtySBY] does not match pattern ^(PMJJBY|PMSBY)$",
+      "values": null,
+      "origmesg": null,
+      "errors": null
+    }
+  ]
+}

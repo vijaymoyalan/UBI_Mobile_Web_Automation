@@ -3,7 +3,7 @@
     "simdata": "b732f6b7cb7d87d101|0|1",
     "loginwithbiometric": false,
     "allowedfailure": 3,
-    "loginpinexpiry": 3600,
+    "loginpinexpiry": 90,
     "logininactivity": 120,
     "loginpin": "2580"
 }

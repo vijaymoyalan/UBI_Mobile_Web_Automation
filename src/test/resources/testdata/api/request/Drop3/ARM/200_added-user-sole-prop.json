@@ -1,11 +1,11 @@
 {
   "corpId" : "BABA901250569",
   "corpDivision" : "ALL_DIVISION",
-  "corpUserId" : "BPRP0956",
-  "corpUserName" : "Njsetyyo",
+  "corpUserId" : "STRS0747",
+  "corpUserName" : "Uebibfck",
   "corpDesignation" : "Developer",
   "corpUserEmail" : "anuran.datta@gmail.com",
-  "corpUserMobileNumber" : "0539437105",
+  "corpUserMobileNumber" : "4762528451",
   "cid" : "7700920434baba901250569",
   "journeyFeatureAccesses" : [ {
     "type" : "Joureny_Feature",
@@ -21,125 +21,6 @@
       "fullAccess" : false,
       "approver" : false,
       "initiator" : false,
-      "viewer" : true,
-      "admin" : false
-    }
-  }, {
-    "type" : "Joureny_Feature",
-    "trasactionType" : "Banking Transactions",
-    "featureType" : "Actionable",
-    "product" : "Collections",
-    "featureCode" : "BQ10",
-    "featureValue" : "Cancel Transaction (In View Transaction)",
-    "displayOrder" : 56,
-    "level" : 1,
-    "parent" : "BQ0",
-    "accessFlags" : {
-      "fullAccess" : false,
-      "approver" : false,
-      "initiator" : false,
-      "viewer" : true,
-      "admin" : false
-    }
-  }, {
-    "type" : "Joureny_Feature",
-    "trasactionType" : "Banking Transactions",
-    "featureType" : "Actionable",
-    "product" : "Collections",
-    "featureCode" : "BQ11",
-    "featureValue" : "Manage Sound box",
-    "displayOrder" : 57,
-    "level" : 1,
-    "parent" : "BQ0",
-    "accessFlags" : {
-      "fullAccess" : false,
-      "approver" : false,
-      "initiator" : false,
-      "viewer" : true,
-      "admin" : false
-    }
-  }, {
-    "type" : "Joureny_Feature",
-    "trasactionType" : "Banking Transactions",
-    "featureType" : "Actionable",
-    "product" : "Collections",
-    "featureCode" : "PL1",
-    "featureValue" : "Register for Payment Link",
-    "displayOrder" : 60,
-    "level" : 1,
-    "parent" : "PL0",
-    "accessFlags" : {
-      "fullAccess" : false,
-      "approver" : false,
-      "initiator" : true,
-      "viewer" : true,
-      "admin" : false
-    }
-  }, {
-    "type" : "Joureny_Feature",
-    "trasactionType" : "Banking Transactions",
-    "featureType" : "Actionable",
-    "product" : "Collections",
-    "featureCode" : "PL6",
-    "featureValue" : "View Transaction history- Cancel Transaction",
-    "displayOrder" : 65,
-    "level" : 1,
-    "parent" : "PL0",
-    "accessFlags" : {
-      "fullAccess" : false,
-      "approver" : false,
-      "initiator" : false,
-      "viewer" : true,
-      "admin" : false
-    }
-  }, {
-    "type" : "Joureny_Feature",
-    "trasactionType" : "Banking Transactions",
-    "featureType" : "Actionable",
-    "product" : "Collections",
-    "featureCode" : "PO1",
-    "featureValue" : "Apply for POS terminal",
-    "displayOrder" : 67,
-    "level" : 1,
-    "parent" : "PO0",
-    "accessFlags" : {
-      "fullAccess" : false,
-      "approver" : false,
-      "initiator" : false,
-      "viewer" : true,
-      "admin" : false
-    }
-  }, {
-    "type" : "Joureny_Feature",
-    "trasactionType" : "Banking Transactions",
-    "featureType" : "Actionable",
-    "product" : "Deposit",
-    "featureCode" : "CA7",
-    "featureValue" : "CA Transfer (On Transfer tab)",
-    "displayOrder" : 9,
-    "level" : 1,
-    "parent" : "CA0",
-    "accessFlags" : {
-      "fullAccess" : false,
-      "approver" : false,
-      "initiator" : false,
-      "viewer" : true,
-      "admin" : false
-    }
-  }, {
-    "type" : "Joureny_Feature",
-    "trasactionType" : "Banking Transactions",
-    "featureType" : "Actionable",
-    "product" : "Deposit",
-    "featureCode" : "FD12",
-    "featureValue" : "FD Onboarding",
-    "displayOrder" : 30,
-    "level" : 1,
-    "parent" : "FD0",
-    "accessFlags" : {
-      "fullAccess" : false,
-      "approver" : false,
-      "initiator" : true,
       "viewer" : true,
       "admin" : false
     }

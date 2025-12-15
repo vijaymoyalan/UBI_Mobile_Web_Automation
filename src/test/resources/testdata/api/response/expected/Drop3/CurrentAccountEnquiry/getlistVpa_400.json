@@ -1,9 +1,1 @@
-{
-  "errorId": "deae47ba-c130-4bc3-b996-81417773980d",
-  "errorAt": "2025-02-05T12:25:07.463726297",
-  "errors": {
-    "code": "400",
-    "result": "Failure",
-    "message": "{\"errorId\":\"6fff3650-0d31-4689-bc7d-7bdaf783b94d\",\"errorAt\":\"2025-02-05T12:25:07.458343142\",\"errors\":null,\"error\":{\"code\":\"CIF Mismatch\",\"result\":\"Failure\",\"message\":\"Enter the Valid CIF\"}}"
-  }
-}
+{"errorId":"3f53d81e-7b53-4919-afea-10ca9aa0d652","errorAt":"2025-04-02T16:01:03.138212252","errorLocation":null,"error":null,"errors":[{"code":"METHOD_NOT_ALLOWED","title":"System Error","message":"{\"errorId\":\"de33e5e3-5a41-4917-b8fc-63ef97924b02\",\"errorAt\":\"2025-04-02T16:01:03.132182241\",\"errors\":null,\"error\":{\"code\":\"CIF Mismatch\",\"result\":\"Failure\",\"message\":\"Enter the Valid CIF\"}}","values":null,"origmesg":null,"errors":null}]}

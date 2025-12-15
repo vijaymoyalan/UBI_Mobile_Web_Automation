@@ -1,6 +1,1 @@
-{
-    "error": {
-        "errorCode": null,
-        "errorMessage": "Account number doesn't exist"
-    }
-}
+{"error":{"errorCode":null,"errorMessage":"Cheque not issued to this account"},"correlationId":"264479335_4256c163-e7f1-4e43-967d-e20bfee583c1","systemCode":"CBS"}

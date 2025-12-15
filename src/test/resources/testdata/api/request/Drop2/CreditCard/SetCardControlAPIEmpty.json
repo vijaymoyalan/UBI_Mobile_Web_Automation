@@ -1,20 +1,3 @@
 {
- "ccAccountId": "",
- "cif": "226786783",
- "domAtmFlg": "Y",
- "domAtmAmt": "5000",
- "domPosFlg": "Y",
- "domPosAmt": "5000",
- "domEcomFlg": "Y",
- "domEcomAmt": "100",
- "domContactLessFlg": "Y",
- "domContactLessAmt": "5000",
- "intlAtmFlg": "Y",
- "intlAtmAmt": "1234",
- "intlPosFlg": "Y",
- "intlPosAmt": "7890",
- "intlEcomFlg": "Y",
- "intlEcomAmt": "1234",
- "intlContactLessFlg": "Y",
- "intlContactLessAmt": "89"
+ 
 }

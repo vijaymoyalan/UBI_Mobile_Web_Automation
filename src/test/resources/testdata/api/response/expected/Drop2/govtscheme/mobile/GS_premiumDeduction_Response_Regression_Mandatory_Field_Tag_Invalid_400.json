@@ -1,1 +1,15 @@
-{"errorId":"7ab280c3-2a01-49b4-999e-01af3ecadfb7","errorAt":"2024-12-11T18:55:39.300351166","errorLocation":null,"error":null,"errors":[{"code":"BAD_REQUEST","message":"#: required key [accountNumber] not found, #: required key [applicationFormNumber] not found, #: required key [globalTrxnId] not found, #: required key [schemeCode] not found","values":null,"origmesg":null,"errors":null}]}
+{
+  "errorId": "94ce08b8-deb3-4a7a-abdf-76d9650eab05",
+  "errorAt": "2025-02-21T13:05:33.21622489",
+  "errorLocation": null,
+  "error": null,
+  "errors": [
+    {
+      "code": "BAD_REQUEST",
+      "message": "#: required key [applicationFormNumber] not found, #: required key [channelId] not found",
+      "values": null,
+      "origmesg": null,
+      "errors": null
+    }
+  ]
+}

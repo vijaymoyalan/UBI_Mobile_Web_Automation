@@ -1,15 +1,1 @@
-{
-  "errorId": "b53a07e9-c8ea-47cf-ab36-72040df12edb",
-  "errorAt": "2025-02-04T15:15:36.176705817",
-  "errorLocation": null,
-  "error": null,
-  "errors": [
-    {
-      "code": "METHOD_NOT_ALLOWED",
-      "message": "Method Not Allowed",
-      "values": null,
-      "origmesg": null,
-      "errors": null
-    }
-  ]
-}
+{"errorId":"f0090228-8d72-451d-9193-6731ee5c4739","errorAt":"2025-04-07T17:20:56.725761915","errorLocation":null,"error":null,"errors":[{"code":"405","title":"METHOD_NOT_ALLOWED","message":"Method Not Allowed","values":null,"origmesg":null,"errors":null}]}

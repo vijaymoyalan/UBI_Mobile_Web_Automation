@@ -1,9 +1,10 @@
 {
-  "errorId": "13692a87-5336-4328-a537-2155076e3e99",
-  "errorAt": "2025-02-12T12:50:38.754924192",
-  "error": {
-    "code": "NOT_FOUND",
-    "title": "404 NOT_FOUND \"No static resource asbaservice/addNewDematAccount1234.\"",
-    "description": null
-  }
+    
+        "timestamp": "2025-03-27T06:52:58.756+00:00",
+        "path": "/asbaservice/addNewDematAccount1234",
+        "status": 404,
+        "error": "Not Found",
+        "message": null,
+        "requestId": "ad424b65-1219"
+    
 }

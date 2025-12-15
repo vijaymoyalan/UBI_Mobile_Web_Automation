@@ -1,9 +1,10 @@
 {
-  "errorId": "d00b9e78-a708-4ac1-aaf9-699039114ae6",
-  "errorAt": "2025-02-13T06:32:55.421800577",
-  "error": {
-    "code": "NOT_FOUND",
-    "title": "404 NOT_FOUND \"No static resource asbaservice/deleteDematAccount12345.\"",
-    "description": null
-  }
+    
+        "timestamp": "2025-03-27T06:52:58.756+00:00",
+        "path": "/asbaservice/deleteDematAccount12345",
+        "status": 404,
+        "error": "Not Found",
+        "message": null,
+        "requestId": "ad424b65-1219"
+    
 }

@@ -1,1 +1,16 @@
-{}
+{
+    "errorId": "0a78be05-fdf7-4a99-8492-5b6cede4edfa",
+    "errorAt": "2025-04-03T16:31:22.739739",
+    "errorLocation": null,
+    "error": null,
+    "errors": [
+        {
+            "code": "400",
+            "title": "Technical Error",
+            "message": "Something went wrong. Please try again later.",
+            "values": null,
+            "origmesg": null,
+            "errors": null
+        }
+    ]
+}

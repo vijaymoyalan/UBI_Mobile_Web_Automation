@@ -1,6 +1,1 @@
-{
-    "error": {
-        "errorCode": null,
-        "errorMessage": "endDate should not be before startDate"
-    }
-}
+{"emailData":null,"fileData":null,"interestAmtCr":null,"interestAmtDr":null,"error":null,"systemCode":null}

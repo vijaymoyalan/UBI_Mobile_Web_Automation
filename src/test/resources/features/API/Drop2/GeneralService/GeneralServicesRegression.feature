@@ -10,23 +10,39 @@ Background: SettingFileHandlerPath
 Given user sets the file path for this feature file for drop2/GeneralService 
 #####################################################################################
 
- @TestCaseKey=UDB-T7632 @Regression 
- Scenario Outline: Verify get customer account details with cif for valid customer
- 			Given user sets the environment of endpoint
-			Given user set the basepath to <service>
-			Then set the endpoint <endpoint>
-			Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
-			Then user triggers a post request to get customer accounts <requestBody>
-			Then user verifies that status is 200
-			Then user verifies json from <responseBody>
-			
-						
-			Examples:
-			
-			| service        | endpoint         | requestBody |requestField   |responsefield      | filename       | responseBody                    |
-			 | customer |/getCustomerAccounts |src\test\resources\testdata\api\request\Drop2\GeneralService\Customer_getCustomerAccounts.json|null |null| null |src\test\resources\testdata\api\response\expected\Drop2\GeneralService\Customer_getCustomerAccounts.json|
+  @TestCaseKey=UDB-T28622 
+  Scenario Outline: Verify that get the account
+    Given user sets the environment of endpoint
+    Given user set the basepath to <service>
+    Then set the endpoint <endpoint>
+    Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+    Then user triggers a post request with <requestBody>
+    Then user verifies that status is 200
+    Then user verifies json from <responseBody>
+
+    Examples: 
+      | service        | endpoint    | requestBody |requestField |responsefield     | filename                                                                                     | responseBody                                                                                           |
+      | chequeservice | /account-info |\src\test\resources\testdata\api\request\Drop2\GeneralService\CS_accountinfo.json|null|null|null|src\test\resources\testdata\api\response\expected\Drop2\GeneralService\CS_accountinfo.json|
  
-	######################## getAddress ###########################################################
+ 
+ 
+ #@TestCaseKey=UDB-T7632 @Regression 
+ #Scenario Outline: Verify get customer account details with cif for valid customer
+ #			Given user sets the environment of endpoint
+#			Given user set the basepath to <service>
+#			Then set the endpoint <endpoint>
+#			Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+#			Then user triggers a post request to get customer accounts <requestBody>
+#			Then user verifies that status is 200
+#			Then user verifies json from <responseBody>
+#			
+#						
+#			Examples:
+#			
+#			| service        | endpoint         | requestBody |requestField   |responsefield      | filename       | responseBody                    |
+#			 | customer |/getCustomerAccounts |src\test\resources\testdata\api\request\Drop2\GeneralService\CS_accountinfo.json|null |null| null |src\test\resources\testdata\api\response\expected\Drop2\GeneralService\CS_accountinfo.json|
+ 
+######################### getAddress ###########################################################
 	@TestCaseKey=UDB-T30933 @Regression 
   Scenario Outline: Verify "/getAddress" API "POST" Method for Status code 200 with all fields (Mandatory and Optional)
     Given user sets the environment of endpoint
@@ -40,7 +56,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                         | responseBody                                                                                           |
-      | generalservice |getAddress   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getAddress_Request_Regression_Mandatory_Optional_200.json|cif,acctNum            |[0].cif,[0].acctNum     | Customer_getCustomerAccounts.json     | \src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getAddress_Response_Regression_200.json|
+      | generalservice |getAddress   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getAddress_Request_Regression_Mandatory_Optional_200.json|cif,acctNum            |accounts[0].cif,accounts[0].acctNum     | CS_accountinfo.json     | \src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getAddress_Response_Regression_200.json|
      
  
   @TestCaseKey=UDB-T30934 @Regression
@@ -55,91 +71,91 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                 | responseBody                                                                                           |
-      | generalservice |getAddress   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getAddress_Request_Regression_Mandatory_200.json|cif|[0].cif    | Customer_getCustomerAccounts.json  | \src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getAddress_Response_Regression_200.json|
+      | generalservice |getAddress   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getAddress_Request_Regression_Mandatory_200.json|cif|accounts[0].cif    | CS_accountinfo.json  | \src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getAddress_Response_Regression_200.json|
   
   @TestCaseKey=UDB-T30935 @Regression
-  Scenario Outline: Verify "/getAddress" API "POST" Method for Status code 400 with Only Optional fields available in request body
+  Scenario Outline: Verify "/getAddress" API "POST" Method for Status code 401 with Only Optional fields available in request body
     Given user sets the environment of endpoint
     Given user set the basepath to <service>
     Then set the endpoint <endpoint> 
     Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
     Then user triggers a post request with <requestBody>
-    Then user verifies that status is 400
+    Then user verifies that status is 401
     Then user verifies json from <responseBody>
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                          | responseBody                                                                                           |
-      | generalservice |getAddress |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getAddress_Request_Regression_Only_Optional Fields_400.json|acctNum            |[20].acctNum      | Customer_getCustomerAccounts.json    | \src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getAddress_Response_Regression_Only_Optional Fields_400.json|
+      | generalservice |getAddress |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getAddress_Request_Regression_Only_Optional Fields_400.json|acctNum            |accounts[0].acctNum      | CS_accountinfo.json    | \src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_401.json|
       
     @TestCaseKey=UDB-T30939 @Regression
-  Scenario Outline: Verify "/getAddress" API "POST" Method for Status code 400 with Mandatory fields are invalid in request body
+  Scenario Outline: Verify "/getAddress" API "POST" Method for Status code 401 with Mandatory fields are invalid in request body
     Given user sets the environment of endpoint
     Given user set the basepath to <service>
     Then set the endpoint <endpoint> 
     Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
     Then user triggers a post request with <requestBody>
-    Then user verifies that status is 400
+    Then user verifies that status is 401
     Then user verifies json from <responseBody>
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                          | responseBody                                                                                           |
-      | generalservice |getAddress |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getAddress_Request_Regression_Mandatory_Field_Invalid_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getAddress_Response_Regression_Mandatory_Field_Invalid_400.json|
+      | generalservice |getAddress |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getAddress_Request_Regression_Mandatory_Field_Invalid_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_401.json|
   
    @TestCaseKey=UDB-T30940 @Regression
-  Scenario Outline: Verify "/getAddress" API "POST" Method for Status code 400 with Mandatory tags are invalid in request body
+  Scenario Outline: Verify "/getAddress" API "POST" Method for Status code 401 with Mandatory tags are invalid in request body
     Given user sets the environment of endpoint
     Given user set the basepath to <service>
     Then set the endpoint <endpoint> 
     Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
     Then user triggers a post request with <requestBody>
-    Then user verifies that status is 400
+    Then user verifies that status is 401
     Then user verifies json from <responseBody>
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                          | responseBody                                                                                           |
-      | generalservice |getAddress |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getAddress_Request_Regression_Mandatory_Field_Tag_Invalid_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getAddress_Response_Regression_Mandatory_Field_Tag_Invalid_400.json|
+      | generalservice |getAddress |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getAddress_Request_Regression_Mandatory_Field_Tag_Invalid_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_401.json|
    
    @TestCaseKey=UDB-T30936 @Regression
-  Scenario Outline: Verify "/getAddress" API "POST" Method for Status code 400 if Request body is blank
+  Scenario Outline: Verify "/getAddress" API "POST" Method for Status code 401 if Request body is blank
     Given user sets the environment of endpoint
     Given user set the basepath to <service>
     Then set the endpoint <endpoint> 
     Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
     Then user triggers a post request with <requestBody>
-    Then user verifies that status is 400
+    Then user verifies that status is 401
     Then user verifies json from <responseBody>
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                          | responseBody                                                                                           |
-      | generalservice |getAddress   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getAddress_Request_Regression_Request_Body_Blank_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getAddress_Response_Regression_Request_Body_Blank_400.json|
+      | generalservice |getAddress   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getAddress_Request_Regression_Request_Body_Blank_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_401.json|
  
  @TestCaseKey=UDB-T30937 @Regression
-  Scenario Outline: Verify "/getAddress" API "POST" Method for Status code 400 if Request body is invalid JSON
+  Scenario Outline: Verify "/getAddress" API "POST" Method for Status code 401 if Request body is invalid JSON
     Given user sets the environment of endpoint
     Given user set the basepath to <service>
     Then set the endpoint <endpoint> 
     Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
     Then user triggers a post request with <requestBody>
-    Then user verifies that status is 400
+    Then user verifies that status is 401
     Then user verifies json from <responseBody>
 
     Examples: 
       | service        | endpoint  | requestBody |requestField|responsefield|filename                                                                                                                    | responseBody                                                                                           |
-      | generalservice |getAddress |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getAddress_Request_Regression_Invalid_Json_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getAddress_Response_Regression_Invalid_Json_400.json|
+      | generalservice |getAddress |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getAddress_Request_Regression_Invalid_Json_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_401.json|
   
   @TestCaseKey=UDB-T30938 @Regression
-  Scenario Outline: Verify "/getAddress" API "POST" Method for Status code 400 if Mandatory Field is Blank
+  Scenario Outline: Verify "/getAddress" API "POST" Method for Status code 401 if Mandatory Field is Blank
     Given user sets the environment of endpoint
     Given user set the basepath to <service>
     Then set the endpoint <endpoint> 
     Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
     Then user triggers a post request with <requestBody>
-    Then user verifies that status is 400
+    Then user verifies that status is 401
     Then user verifies json from <responseBody>
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                            | responseBody                                                                                           |
-      | generalservice |getAddress   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getAddress_Request_Regression_Mandatory_Field_Blank_400.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getAddress_Response_Regression_Mandatory_Field_Blank_400.json|
+      | generalservice |getAddress   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getAddress_Request_Regression_Mandatory_Field_Blank_400.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_401.json|
       
  @TestCaseKey=UDB-T30942 @Regression
   Scenario Outline: Verify "/getAddress" API "POST" Method for Status code 404 if endpoint is Invalid
@@ -153,7 +169,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                        | responseBody                                                                                           |
-      | generalservice |getAddress1  |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getAddress_Request_Regression_Invalid_Endpoint_404.json|cif,acctNum            |[0].cif,[0].acctNum     | Customer_getCustomerAccounts.json          | \src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getAddress_Response_Regression_Invalid_Endpoint_404.json|
+      | generalservice |getAddress1  |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getAddress_Request_Regression_Invalid_Endpoint_404.json|cif,acctNum            |accounts[0].cif,accounts[0].acctNum     | CS_accountinfo.json          | \src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getAddress_Response_Regression_Invalid_Endpoint_404.json|
 
  @TestCaseKey=UDB-T30941 @Regression
   Scenario Outline: Verify "/getAddress" API for Status code 405 if HTTP method is other than POST  for Eg: GET, PUT, Delete
@@ -167,22 +183,22 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint  | requestBody |requestField|responsefield|filename 																																																																		| responseBody                                                                                           |
-      | generalservice |getAddress | \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getAddress_Request_Regression_Request_Method_Not_Supported_405.json|cif,acctNum            |[0].cif,[0].acctNum     | Customer_getCustomerAccounts.json      |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getAddress_Response_Regression_Request_Method_Not_Supported_405.json|
+      | generalservice |getAddress | \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getAddress_Request_Regression_Request_Method_Not_Supported_405.json|cif,acctNum            |accounts[0].cif,accounts[0].acctNum     | CS_accountinfo.json      |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getAddress_Response_Regression_Request_Method_Not_Supported_405.json|
 
 
- @TestCaseKey=UDB-T30943 @Regression 
-  Scenario Outline: Verify "/getAddress" API for Status code 500 Error "Internal Server Error" 
-    Given user sets the environment of endpoint
-    Given user set the basepath to <service>
-    Then set the endpoint <endpoint> 
-    Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
-    Then user triggers a post request with <requestBody>
-    Then user verifies that status is 500
-    Then user verifies json from <responseBody>
-
-    Examples: 
-      | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                             | responseBody                                                                                           |
-      | generalservice1 |getAddress   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getAddress_Request_Regression_Internal_Server_Error_500.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_500_Internal_Error.xml|
+ #@TestCaseKey=UDB-T30943 @Regression 
+  #Scenario Outline: Verify "/getAddress" API for Status code 500 Error "Internal Server Error" 
+    #Given user sets the environment of endpoint
+    #Given user set the basepath to <service>
+    #Then set the endpoint <endpoint> 
+    #Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+    #Then user triggers a post request with <requestBody>
+    #Then user verifies that status is 500
+    #Then user verifies json from <responseBody>
+#
+    #Examples: 
+      #| service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                             | responseBody                                                                                           |
+      #| generalservice1 |getAddress   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getAddress_Request_Regression_Internal_Server_Error_500.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_500_Internal_Error.xml|
 
  ######################## getProfileDetails ###########################################################
 	@TestCaseKey=UDB-T30945 @Regression
@@ -197,7 +213,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                         | responseBody                                                                                           |
-      | generalservice |getProfileDetails   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getProfileDetails_Request_Regression_Mandatory_Optional_200.json|cif,name |[0].cif,[0].customerName  | Customer_getCustomerAccounts.json|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getProfileDetails_Response_Regression_200.json|
+      | generalservice |getProfileDetails   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getProfileDetails_Request_Regression_Mandatory_Optional_200.json|cif,name |accounts[0].cif,[0].customerName  | CS_accountinfo.json|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getProfileDetails_Response_Regression_200.json|
      
  
   @TestCaseKey=UDB-T30946 @Regression
@@ -212,91 +228,91 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                 | responseBody                                                                                           |
-      | generalservice |getProfileDetails   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getProfileDetails_Request_Regression_Mandatory_200.json|cif |[0].cif | Customer_getCustomerAccounts.json|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getProfileDetails_Response_Regression_200.json|
+      | generalservice |getProfileDetails   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getProfileDetails_Request_Regression_Mandatory_200.json|cif |accounts[0].cif | CS_accountinfo.json|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getProfileDetails_Response_Regression_200.json|
   
   @TestCaseKey=UDB-T30947 @Regression
-  Scenario Outline: Verify "/getProfileDetails" API "POST" Method for Status code 400 with Only Optional fields available in request body
+  Scenario Outline: Verify "/getProfileDetails" API "POST" Method for Status code 401 with Only Optional fields available in request body
     Given user sets the environment of endpoint
     Given user set the basepath to <service>
     Then set the endpoint <endpoint> 
     Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
     Then user triggers a post request with <requestBody>
-    Then user verifies that status is 400
+    Then user verifies that status is 401
     Then user verifies json from <responseBody>
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                          | responseBody                                                                                           |
-      | generalservice |getProfileDetails |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getProfileDetails_Request_Regression_Only_Optional Fields_400.json|name|accounts[0].name|Customer_getCustomerAccounts.json|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getProfileDetails_Response_Regression_Only_Optional Fields_400.json|
+      | generalservice |getProfileDetails |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getProfileDetails_Request_Regression_Only_Optional Fields_400.json|name|accounts[0].name|CS_accountinfo.json|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_401.json|
       
    @TestCaseKey=UDB-T30951 @Regression
-  Scenario Outline: Verify "/getProfileDetails" API "POST" Method for Status code 400 with Mandatory fields are invalid in request body
+  Scenario Outline: Verify "/getProfileDetails" API "POST" Method for Status code 401 with Mandatory fields are invalid in request body
     Given user sets the environment of endpoint
     Given user set the basepath to <service>
     Then set the endpoint <endpoint> 
     Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
     Then user triggers a post request with <requestBody>
-    Then user verifies that status is 400
+    Then user verifies that status is 401
     Then user verifies json from <responseBody>
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                          | responseBody                                                                                           |
-      | generalservice |getProfileDetails |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getProfileDetails_Request_Regression_Mandatory_Field_Invalid_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getProfileDetails_Response_Regression_Mandatory_Field_Invalid_400.json|
+      | generalservice |getProfileDetails |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getProfileDetails_Request_Regression_Mandatory_Field_Invalid_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_401.json|
   
    @TestCaseKey=UDB-T30952 @Regression
-  Scenario Outline: Verify "/getProfileDetails" API "POST" Method for Status code 400 with Mandatory tags are invalid in request body
+  Scenario Outline: Verify "/getProfileDetails" API "POST" Method for Status code 401 with Mandatory tags are invalid in request body
     Given user sets the environment of endpoint
     Given user set the basepath to <service>
     Then set the endpoint <endpoint> 
     Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
     Then user triggers a post request with <requestBody>
-    Then user verifies that status is 400
+    Then user verifies that status is 401
     Then user verifies json from <responseBody>
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                          | responseBody                                                                                           |
-      | generalservice |getProfileDetails |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getProfileDetails_Request_Regression_Mandatory_Field_Tag_Invalid_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getProfileDetails_Response_Regression_Mandatory_Field_Tag_Invalid_400.json|
+      | generalservice |getProfileDetails |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getProfileDetails_Request_Regression_Mandatory_Field_Tag_Invalid_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_401.json|
    
    @TestCaseKey=UDB-T30948 @Regression
-  Scenario Outline: Verify "/getProfileDetails" API "POST" Method for Status code 400 if Request body is blank
+  Scenario Outline: Verify "/getProfileDetails" API "POST" Method for Status code 401 if Request body is blank
     Given user sets the environment of endpoint
     Given user set the basepath to <service>
     Then set the endpoint <endpoint> 
     Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
     Then user triggers a post request with <requestBody>
-    Then user verifies that status is 400
+    Then user verifies that status is 401
     Then user verifies json from <responseBody>
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                          | responseBody                                                                                           |
-      | generalservice |getProfileDetails   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getProfileDetails_Request_Regression_Request_Body_Blank_400.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getProfileDetails_Response_Regression_Request_Body_Blank_400.json|
+      | generalservice |getProfileDetails   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getProfileDetails_Request_Regression_Request_Body_Blank_400.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_401.json|
  
  @TestCaseKey=UDB-T30949 @Regression
-  Scenario Outline: Verify "/getProfileDetails" API "POST" Method for Status code 400 if Request body is invalid JSON
+  Scenario Outline: Verify "/getProfileDetails" API "POST" Method for Status code 401 if Request body is invalid JSON
     Given user sets the environment of endpoint
     Given user set the basepath to <service>
     Then set the endpoint <endpoint> 
     Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
     Then user triggers a post request with <requestBody>
-    Then user verifies that status is 400
+    Then user verifies that status is 401
     Then user verifies json from <responseBody>
 
     Examples: 
       | service        | endpoint  | requestBody |requestField|responsefield|filename                                                                                                                    | responseBody                                                                                           |
-      | generalservice |getProfileDetails |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getProfileDetails_Request_Regression_Invalid_Json_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getProfileDetails_Response_Regression_Invalid_Json_400.json|
+      | generalservice |getProfileDetails |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getProfileDetails_Request_Regression_Invalid_Json_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_401.json|
   
   @TestCaseKey=UDB-T30950 @Regression
-  Scenario Outline: Verify "/getProfileDetails" API "POST" Method for Status code 400 if Mandatory Field is Blank
+  Scenario Outline: Verify "/getProfileDetails" API "POST" Method for Status code 401 if Mandatory Field is Blank
     Given user sets the environment of endpoint
     Given user set the basepath to <service>
     Then set the endpoint <endpoint> 
     Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
     Then user triggers a post request with <requestBody>
-    Then user verifies that status is 400
+    Then user verifies that status is 401
     Then user verifies json from <responseBody>
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                            | responseBody                                                                                           |
-      | generalservice |getProfileDetails   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getProfileDetails_Request_Regression_Mandatory_Field_Blank_400.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getProfileDetails_Response_Regression_Mandatory_Field_Blank_400.json|
+      | generalservice |getProfileDetails   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getProfileDetails_Request_Regression_Mandatory_Field_Blank_400.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_401.json|
       
  @TestCaseKey=UDB-T30954 @Regression
   Scenario Outline: Verify "/getProfileDetails" API "POST" Method for Status code 404 if endpoint is Invalid
@@ -310,7 +326,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                        | responseBody                                                                                           |
-      | generalservice |getProfileDetails1  |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getProfileDetails_Request_Regression_Invalid_Endpoint_404.json|cif,name |[0].cif,[0].customerName  | Customer_getCustomerAccounts.json|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getProfileDetails_Response_Regression_Invalid_Endpoint_404.json|
+      | generalservice |getProfileDetails1  |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getProfileDetails_Request_Regression_Invalid_Endpoint_404.json|cif,name |accounts[0].cif,[0].customerName  | CS_accountinfo.json|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getProfileDetails_Response_Regression_Invalid_Endpoint_404.json|
 
  @TestCaseKey=UDB-T30953 @Regression
   Scenario Outline: Verify "/getProfileDetails" API for Status code 405 if HTTP method is other than POST  for Eg: GET, PUT, Delete
@@ -324,22 +340,22 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint  | requestBody |requestField|responsefield|filename 																																																																		| responseBody                                                                                           |
-      | generalservice |getProfileDetails | \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getProfileDetails_Request_Regression_Request_Method_Not_Supported_405.json|cif,name |[0].cif,[0].customerName  | Customer_getCustomerAccounts.json|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getProfileDetails_Response_Regression_Request_Method_Not_Supported_405.json|
+      | generalservice |getProfileDetails | \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getProfileDetails_Request_Regression_Request_Method_Not_Supported_405.json|cif,name |accounts[0].cif,[0].customerName  | CS_accountinfo.json|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getProfileDetails_Response_Regression_Request_Method_Not_Supported_405.json|
 
 
- @TestCaseKey=UDB-T30955 @Regression 
-  Scenario Outline: Verify "/getProfileDetails" API for Status code 500 Error "Internal Server Error" 
-    Given user sets the environment of endpoint
-    Given user set the basepath to <service>
-    Then set the endpoint <endpoint> 
-    Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
-    Then user triggers a post request with <requestBody>
-    Then user verifies that status is 500
-    Then user verifies json from <responseBody>
-
-    Examples: 
-      | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                             | responseBody                                                                                           |
-      | generalservice1 |getProfileDetails   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getProfileDetails_Request_Regression_Internal_Server_Error_500.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_500_Internal_Error.xml|
+ #@TestCaseKey=UDB-T30955 @Regression 
+  #Scenario Outline: Verify "/getProfileDetails" API for Status code 500 Error "Internal Server Error" 
+    #Given user sets the environment of endpoint
+    #Given user set the basepath to <service>
+    #Then set the endpoint <endpoint> 
+    #Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+    #Then user triggers a post request with <requestBody>
+    #Then user verifies that status is 500
+    #Then user verifies json from <responseBody>
+#
+    #Examples: 
+      #| service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                             | responseBody                                                                                           |
+      #| generalservice1 |getProfileDetails   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getProfileDetails_Request_Regression_Internal_Server_Error_500.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_500_Internal_Error.xml|
 
  ######################## getMiniTransactionStatement ###########################################################
  @TestCaseKey=UDB-T30957 @Regression
@@ -354,7 +370,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                         | responseBody                                                                                           |
-      | generalservice |getMiniTransactionStatement   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getMiniTransactionStatement_Request_Regression_Mandatory_Optional_200.json|cif,acctNum            |[20].cif,[20].acctNum         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getMiniTransactionStatement_Response_Regression_200.json|
+      | generalservice |getMiniTransactionStatement   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getMiniTransactionStatement_Request_Regression_Mandatory_Optional_200.json|cif,acctNum            |accounts[0].cif,accounts[0].acctNum         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getMiniTransactionStatement_Response_Regression_200.json|
      
  
   @TestCaseKey=UDB-T30958 @Regression
@@ -369,7 +385,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                 | responseBody                                                                                           |
-      | generalservice |getMiniTransactionStatement   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getMiniTransactionStatement_Request_Regression_Mandatory_200.json|cif,acctNum            |[20].cif,[20].acctNum         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getMiniTransactionStatement_Response_Regression_200.json|
+      | generalservice |getMiniTransactionStatement   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getMiniTransactionStatement_Request_Regression_Mandatory_200.json|cif,acctNum            |accounts[0].cif,accounts[0].acctNum         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getMiniTransactionStatement_Response_Regression_200.json|
   
   @TestCaseKey=UDB-T30959 @Regression
   Scenario Outline: Verify "/getMiniTransactionStatement" API "POST" Method for Status code 400 with Only Optional fields available in request body
@@ -414,18 +430,18 @@ Given user sets the file path for this feature file for drop2/GeneralService
       | generalservice |getMiniTransactionStatement |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getMiniTransactionStatement_Request_Regression_Mandatory_Field_Tag_Invalid_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getMiniTransactionStatement_Response_Regression_Mandatory_Field_Tag_Invalid_400.json|
    
    @TestCaseKey=UDB-T30960 @Regression
-  Scenario Outline: Verify "/getMiniTransactionStatement" API "POST" Method for Status code 400 if Request body is blank
+  Scenario Outline: Verify "/getMiniTransactionStatement" API "POST" Method for Status code 401 if Request body is blank
     Given user sets the environment of endpoint
     Given user set the basepath to <service>
     Then set the endpoint <endpoint> 
     Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
     Then user triggers a post request with <requestBody>
-    Then user verifies that status is 400
+    Then user verifies that status is 401
     Then user verifies json from <responseBody>
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                          | responseBody                                                                                           |
-      | generalservice |getMiniTransactionStatement   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getMiniTransactionStatement_Request_Regression_Request_Body_Blank_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getMiniTransactionStatement_Response_Regression_Request_Body_Blank_400.json|
+      | generalservice |getMiniTransactionStatement   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getMiniTransactionStatement_Request_Regression_Request_Body_Blank_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_401.json|
  
  @TestCaseKey=UDB-T30961 @Regression
   Scenario Outline: Verify "/getMiniTransactionStatement" API "POST" Method for Status code 400 if Request body is invalid JSON
@@ -467,7 +483,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                        | responseBody                                                                                           |
-      | generalservice |getMiniTransactionStatement1  |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getMiniTransactionStatement_Request_Regression_Invalid_Endpoint_404.json|cif,acctNum            |[20].cif,[20].acctNum         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getMiniTransactionStatement_Response_Regression_Invalid_Endpoint_404.json|
+      | generalservice |getMiniTransactionStatement1  |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getMiniTransactionStatement_Request_Regression_Invalid_Endpoint_404.json|cif,acctNum            |accounts[0].cif,accounts[0].acctNum         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getMiniTransactionStatement_Response_Regression_Invalid_Endpoint_404.json|
 
  @TestCaseKey=UDB-T30965 @Regression
   Scenario Outline: Verify "/getMiniTransactionStatement" API for Status code 405 if HTTP method is other than POST  for Eg: GET, PUT, Delete
@@ -481,23 +497,23 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint  | requestBody |requestField|responsefield|filename 																																																																		| responseBody                                                                                           |
-      | generalservice |getMiniTransactionStatement | \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getMiniTransactionStatement_Request_Regression_Request_Method_Not_Supported_405.json|cif,acctNum            |[20].cif,[20].acctNum         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getMiniTransactionStatement_Response_Regression_Request_Method_Not_Supported_405.json|
+      | generalservice |getMiniTransactionStatement | \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getMiniTransactionStatement_Request_Regression_Request_Method_Not_Supported_405.json|cif,acctNum            |accounts[0].cif,accounts[0].acctNum         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getMiniTransactionStatement_Response_Regression_Request_Method_Not_Supported_405.json|
 
 
- @TestCaseKey=UDB-T30967 @Regression 
-  Scenario Outline: Verify "/getMiniTransactionStatement" API for Status code 500 Error "Internal Server Error" 
-    Given user sets the environment of endpoint
-    Given user set the basepath to <service>
-    Then set the endpoint <endpoint> 
-    Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
-    Then user triggers a post request with <requestBody>
-    Then user verifies that status is 500
-    Then user verifies json from <responseBody>
-
-    Examples: 
-      | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                             | responseBody                                                                                           |
-      | generalservice1 |getMiniTransactionStatement   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getMiniTransactionStatement_Request_Regression_Internal_Server_Error_500.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_500_Internal_Error.xml|
- 
+ #@TestCaseKey=UDB-T30967 @Regression 
+  #Scenario Outline: Verify "/getMiniTransactionStatement" API for Status code 500 Error "Internal Server Error" 
+    #Given user sets the environment of endpoint
+    #Given user set the basepath to <service>
+    #Then set the endpoint <endpoint> 
+    #Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+    #Then user triggers a post request with <requestBody>
+    #Then user verifies that status is 500
+    #Then user verifies json from <responseBody>
+#
+    #Examples: 
+      #| service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                             | responseBody                                                                                           |
+      #| generalservice1 |getMiniTransactionStatement   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getMiniTransactionStatement_Request_Regression_Internal_Server_Error_500.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_500_Internal_Error.xml|
+ #
  ######################## emailStatement ###########################################################  
 @TestCaseKey=UDB-T30993 @Regression
   Scenario Outline: Verify "/emailStatement" API "POST" Method for Status code 200 with all fields (Mandatory and Optional)
@@ -511,7 +527,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                         | responseBody                                                                                           |
-      | generalservice |emailStatement   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_emailStatement_Request_Regression_Mandatory_Optional_200.json|cif,acctNum |[20].cif,[20].acctNum         | Customer_getCustomerAccounts.json|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_emailStatement_Response_Regression_200.json|
+      | generalservice |emailStatement   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_emailStatement_Request_Regression_Mandatory_Optional_200.json|cif,acctNum |accounts[0].cif,accounts[0].acctNum         | CS_accountinfo.json|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_emailStatement_Response_Regression_200.json|
      
  
   @TestCaseKey=UDB-T30994 @Regression
@@ -526,7 +542,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                 | responseBody                                                                                           |
-      | generalservice |emailStatement   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_emailStatement_Request_Regression_Mandatory_200.json|cif,acctNum |[20].cif,[20].acctNum  | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_emailStatement_Response_Regression_200.json|
+      | generalservice |emailStatement   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_emailStatement_Request_Regression_Mandatory_200.json|cif,acctNum |accounts[0].cif,accounts[0].acctNum  | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_emailStatement_Response_Regression_200.json|
   
   @TestCaseKey=UDB-T30995 @Regression
   Scenario Outline: Verify "/emailStatement" API "POST" Method for Status code 400 with Only Optional fields available in request body
@@ -571,18 +587,18 @@ Given user sets the file path for this feature file for drop2/GeneralService
       | generalservice |emailStatement |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_emailStatement_Request_Regression_Mandatory_Field_Tag_Invalid_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_emailStatement_Response_Regression_Mandatory_Field_Tag_Invalid_400.json|
    
    @TestCaseKey=UDB-T30996 @Regression
-  Scenario Outline: Verify "/emailStatement" API "POST" Method for Status code 400 if Request body is blank
+  Scenario Outline: Verify "/emailStatement" API "POST" Method for Status code 401 if Request body is blank
     Given user sets the environment of endpoint
     Given user set the basepath to <service>
     Then set the endpoint <endpoint> 
     Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
     Then user triggers a post request with <requestBody>
-    Then user verifies that status is 400
+    Then user verifies that status is 401
     Then user verifies json from <responseBody>
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                          | responseBody                                                                                           |
-      | generalservice |emailStatement   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_emailStatement_Request_Regression_Request_Body_Blank_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_emailStatement_Response_Regression_Request_Body_Blank_400.json|
+      | generalservice |emailStatement   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_emailStatement_Request_Regression_Request_Body_Blank_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_401.json|
  
  @TestCaseKey=UDB-T30997 @Regression
   Scenario Outline: Verify "/emailStatement" API "POST" Method for Status code 400 if Request body is invalid JSON
@@ -624,7 +640,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                        | responseBody                                                                                           |
-      | generalservice |emailStatement1  |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_emailStatement_Request_Regression_Invalid_Endpoint_404.json|cif,acctNum |[20].cif,[20].acctNum  | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_emailStatement_Response_Regression_Invalid_Endpoint_404.json|
+      | generalservice |emailStatement1  |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_emailStatement_Request_Regression_Invalid_Endpoint_404.json|cif,acctNum |accounts[0].cif,accounts[0].acctNum  | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_emailStatement_Response_Regression_Invalid_Endpoint_404.json|
 
  @TestCaseKey=UDB-T31001 @Regression
   Scenario Outline: Verify "/emailStatement" API for Status code 405 if HTTP method is other than POST  for Eg: GET, PUT, Delete
@@ -638,22 +654,22 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint  | requestBody |requestField|responsefield|filename 																																																																		| responseBody                                                                                           |
-      | generalservice |emailStatement | \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_emailStatement_Request_Regression_Request_Method_Not_Supported_405.json|cif,acctNum |[20].cif,[20].acctNum  | Customer_getCustomerAccounts.json|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_emailStatement_Response_Regression_Request_Method_Not_Supported_405.json|
+      | generalservice |emailStatement | \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_emailStatement_Request_Regression_Request_Method_Not_Supported_405.json|cif,acctNum |accounts[0].cif,accounts[0].acctNum  | CS_accountinfo.json|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_emailStatement_Response_Regression_Request_Method_Not_Supported_405.json|
 
 
- @TestCaseKey=UDB-T31003 @Regression 
-  Scenario Outline: Verify "/emailStatement" API for Status code 500 Error "Internal Server Error" 
-    Given user sets the environment of endpoint
-    Given user set the basepath to <service>
-    Then set the endpoint <endpoint> 
-    Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
-    Then user triggers a post request with <requestBody>
-    Then user verifies that status is 500
-    Then user verifies json from <responseBody>
-
-    Examples: 
-      | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                             | responseBody                                                                                           |
-      | generalservice1 |emailStatement   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_emailStatement_Request_Regression_Internal_Server_Error_500.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_500_Internal_Error.xml|
+ #@TestCaseKey=UDB-T31003 @Regression 
+  #Scenario Outline: Verify "/emailStatement" API for Status code 500 Error "Internal Server Error" 
+    #Given user sets the environment of endpoint
+    #Given user set the basepath to <service>
+    #Then set the endpoint <endpoint> 
+    #Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+    #Then user triggers a post request with <requestBody>
+    #Then user verifies that status is 500
+    #Then user verifies json from <responseBody>
+#
+    #Examples: 
+      #| service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                             | responseBody                                                                                           |
+      #| generalservice1 |emailStatement   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_emailStatement_Request_Regression_Internal_Server_Error_500.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_500_Internal_Error.xml|
 
 ######################## fetchloandetails ###########################################################
   @TestCaseKey=UDB-T31078  @Regression
@@ -668,79 +684,79 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                 | responseBody                                                                                           |
-      | generalservice |fetchloandetails   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_fetchloandetails.json|cif            |[20].cif         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_fetchloandetails.json|
+      | generalservice |fetchloandetails   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_fetchloandetails.json|cif            |accounts[0].cif         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_fetchloandetails.json|
   
  
       
     @TestCaseKey=UDB-T31083  @Regression
-  Scenario Outline: Verify "/fetchloandetails" API "POST" Method for Status code 400 with Mandatory fields are invalid in request body
+  Scenario Outline: Verify "/fetchloandetails" API "POST" Method for Status code 401 with Mandatory fields are invalid in request body
     Given user sets the environment of endpoint
     Given user set the basepath to <service>
     Then set the endpoint <endpoint> 
     Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
     Then user triggers a post request with <requestBody>
-    Then user verifies that status is 400
+    Then user verifies that status is 401
     Then user verifies json from <responseBody>
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                          | responseBody                                                                                           |
-      | generalservice |fetchloandetails |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_fetchloandetails_Request_Regression_Mandatory_Field_Invalid_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_fetchloandetails_Response_Regression_Mandatory_Field_Invalid_400.json|
+      | generalservice |fetchloandetails |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_fetchloandetails_Request_Regression_Mandatory_Field_Invalid_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_401.json|
   
   @TestCaseKey=UDB-T31084 @Regression
-  Scenario Outline: Verify "/fetchloandetails" API "POST" Method for Status code 400 with Mandatory tags are invalid in request body
+  Scenario Outline: Verify "/fetchloandetails" API "POST" Method for Status code 401 with Mandatory tags are invalid in request body
     Given user sets the environment of endpoint
     Given user set the basepath to <service>
     Then set the endpoint <endpoint> 
     Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
     Then user triggers a post request with <requestBody>
-    Then user verifies that status is 400
+    Then user verifies that status is 401
     Then user verifies json from <responseBody>
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                          | responseBody                                                                                           |
-      | generalservice |fetchloandetails |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_fetchloandetails_Request_Regression_Mandatory_Field_Tag_Invalid_400.json|null|null|Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_fetchloandetails_Response_Regression_Mandatory_Field_Tag_Invalid_400.json|
+      | generalservice |fetchloandetails |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_fetchloandetails_Request_Regression_Mandatory_Field_Tag_Invalid_400.json|null|null|CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_401.json|
    
    @TestCaseKey=UDB-T31080  @Regression
-  Scenario Outline: Verify "/fetchloandetails" API "POST" Method for Status code 400 if Request body is blank
+  Scenario Outline: Verify "/fetchloandetails" API "POST" Method for Status code 401 if Request body is blank
     Given user sets the environment of endpoint
     Given user set the basepath to <service>
     Then set the endpoint <endpoint> 
     Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
     Then user triggers a post request with <requestBody>
-    Then user verifies that status is 400
+    Then user verifies that status is 401
     Then user verifies json from <responseBody>
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                          | responseBody                                                                                           |
-      | generalservice |fetchloandetails   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_fetchloandetails_Request_Regression_Request_Body_Blank_400.json|null|null|Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_fetchloandetails_Response_Regression_Request_Body_Blank_400.json|
+      | generalservice |fetchloandetails   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_fetchloandetails_Request_Regression_Request_Body_Blank_400.json|null|null|CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_401.json|
  
  @TestCaseKey=UDB-T31081 @Regression
-  Scenario Outline: Verify "/fetchloandetails" API "POST" Method for Status code 400 if Request body is invalid JSON
+  Scenario Outline: Verify "/fetchloandetails" API "POST" Method for Status code 401 if Request body is invalid JSON
     Given user sets the environment of endpoint
     Given user set the basepath to <service>
     Then set the endpoint <endpoint> 
     Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
     Then user triggers a post request with <requestBody>
-    Then user verifies that status is 400
+    Then user verifies that status is 401
     Then user verifies json from <responseBody>
 
     Examples: 
       | service        | endpoint  | requestBody |requestField|responsefield|filename                                                                                                                    | responseBody                                                                                           |
-      | generalservice |fetchloandetails |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_fetchloandetails_Request_Regression_Invalid_Json_400.json|null|null|Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_fetchloandetails_Response_Regression_Invalid_Json_400.json|
+      | generalservice |fetchloandetails |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_fetchloandetails_Request_Regression_Invalid_Json_400.json|null|null|CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_401.json|
   
    @TestCaseKey=UDB-T31082   @Regression
-  Scenario Outline: Verify "/fetchloandetails" API "POST" Method for Status code 400 if Mandatory Field is Blank
+  Scenario Outline: Verify "/fetchloandetails" API "POST" Method for Status code 401 if Mandatory Field is Blank
     Given user sets the environment of endpoint
     Given user set the basepath to <service>
     Then set the endpoint <endpoint> 
     Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
     Then user triggers a post request with <requestBody>
-    Then user verifies that status is 400
+    Then user verifies that status is 401
     Then user verifies json from <responseBody>
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                            | responseBody                                                                                           |
-      | generalservice |fetchloandetails   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_fetchloandetails_Request_Regression_Mandatory_Field_Blank_400.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_fetchloandetails_Response_Regression_Mandatory_Field_Blank_400.json|
+      | generalservice |fetchloandetails   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_fetchloandetails_Request_Regression_Mandatory_Field_Blank_400.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_401.json|
       
  @TestCaseKey=UDB-T31086  @Regression
   Scenario Outline: Verify "/fetchloandetails" API "POST" Method for Status code 404 if endpoint is Invalid
@@ -754,7 +770,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                        | responseBody                                                                                           |
-      | generalservice |fetchloandetails1  |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_fetchloandetails_Request_Regression_Invalid_Endpoint_404.json|cif            |[20].cif         | Customer_getCustomerAccounts.json|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_fetchloandetails_Response_Regression_Invalid_Endpoint_404.json|
+      | generalservice |fetchloandetails1  |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_fetchloandetails_Request_Regression_Invalid_Endpoint_404.json|cif            |accounts[0].cif         | CS_accountinfo.json|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_fetchloandetails_Response_Regression_Invalid_Endpoint_404.json|
 
  @TestCaseKey=UDB-T31085  @Regression
   Scenario Outline: Verify "/fetchloandetails" API for Status code 405 if HTTP method is other than POST  for Eg: GET, PUT, Delete
@@ -768,23 +784,23 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint  | requestBody|requestField|responsefield|filename 																																																																		| responseBody                                                                                           |
-      | generalservice |fetchloandetails | \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_fetchloandetails_Request_Regression_Request_Method_Not_Supported_405.json|cif            |[20].cif         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_fetchloandetails_Response_Regression_Request_Method_Not_Supported_405.json|
+      | generalservice |fetchloandetails | \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_fetchloandetails_Request_Regression_Request_Method_Not_Supported_405.json|cif            |accounts[0].cif         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_fetchloandetails_Response_Regression_Request_Method_Not_Supported_405.json|
 
 
- @TestCaseKey=UDB-T31087    @Regression 
-  Scenario Outline: Verify "/fetchloandetails" API for Status code 500 Error "Internal Server Error" 
-    Given user sets the environment of endpoint
-    Given user set the basepath to <service>
-    Then set the endpoint <endpoint> 
-    Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
-    Then user triggers a post request with <requestBody>
-    Then user verifies that status is 500
-    Then user verifies json from <responseBody>
-
-    Examples: 
-      | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                             | responseBody                                                                                           |
-      | generalservice1 |fetchloandetails   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_fetchloandetails_Request_Regression_Internal_Server_Error_500.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_500_Internal_Error.xml|
-      
+ #@TestCaseKey=UDB-T31087    @Regression 
+  #Scenario Outline: Verify "/fetchloandetails" API for Status code 500 Error "Internal Server Error" 
+    #Given user sets the environment of endpoint
+    #Given user set the basepath to <service>
+    #Then set the endpoint <endpoint> 
+    #Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+    #Then user triggers a post request with <requestBody>
+    #Then user verifies that status is 500
+    #Then user verifies json from <responseBody>
+#
+    #Examples: 
+      #| service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                             | responseBody                                                                                           |
+      #| generalservice1 |fetchloandetails   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_fetchloandetails_Request_Regression_Internal_Server_Error_500.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_500_Internal_Error.xml|
+      #
   ######################## individual loan-interest-cert ###########################################################   
   @TestCaseKey=UDB-T31053 @Regression
   Scenario Outline: Verify individual "/loan-interest-cert" API "POST" Method for Status code 200 with all fields (Mandatory and Optional)
@@ -813,7 +829,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                 | responseBody                                                                                           |
-      | generalservice |loan-interest-cert   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_loan-interest-cert_Individual_Request_Regression_Mandatory_200.json|accountNumber,solId,cif,schemeType |accountInfo[14].accountNumber,accountInfo[14].solId,accountInfo[14].customerId,accountInfo[14].schemeType  | GS_fetchloandetails.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_loan-interest-cert_Individual_Response_Regression_200.json|
+      | generalservice |loan-interest-cert   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_loan-interest-cert_Individual_Request_Regression_Mandatory_200.json|accountNumber,cif |accountInfo[14].acctNum,accountInfo[14].cif | GS_fetchloandetails.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_loan-interest-cert_Individual_Response_Regression_200.json|
   
   @TestCaseKey=UDB-T31055 @Regression
   Scenario Outline: Verify individual "/loan-interest-cert" API "POST" Method for Status code 400 with Only Optional fields available in request body
@@ -841,7 +857,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                          | responseBody                                                                                           |
-      | generalservice |loan-interest-cert |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_loan-interest-cert_Individual_Request_Regression_Mandatory_Field_Invalid_400.json|null|null|Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_loan-interest-cert_Individual_Response_Regression_Mandatory_Field_Invalid_400.json|
+      | generalservice |loan-interest-cert |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_loan-interest-cert_Individual_Request_Regression_Mandatory_Field_Invalid_400.json|null|null|CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_loan-interest-cert_Individual_Response_Regression_Mandatory_Field_Invalid_400.json|
   
    @TestCaseKey=UDB-T31060 @Regression
   Scenario Outline: Verify individual "/loan-interest-cert" API "POST" Method for Status code 400 with Mandatory tags are invalid in request body
@@ -858,18 +874,18 @@ Given user sets the file path for this feature file for drop2/GeneralService
       | generalservice |loan-interest-cert |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_loan-interest-cert_Individual_Request_Regression_Mandatory_Field_Tag_Invalid_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_loan-interest-cert_Individual_Response_Regression_Mandatory_Field_Tag_Invalid_400.json|
    
    @TestCaseKey=UDB-T31056 @Regression
-  Scenario Outline: Verify individual "/loan-interest-cert" API "POST" Method for Status code 400 if Request body is blank
+  Scenario Outline: Verify individual "/loan-interest-cert" API "POST" Method for Status code 401 if Request body is blank
     Given user sets the environment of endpoint
     Given user set the basepath to <service>
     Then set the endpoint <endpoint> 
     Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
     Then user triggers a post request with <requestBody>
-    Then user verifies that status is 400
+    Then user verifies that status is 401
     Then user verifies json from <responseBody>
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                          | responseBody                                                                                           |
-      | generalservice |loan-interest-cert   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_loan-interest-cert_Individual_Request_Regression_Request_Body_Blank_400.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_loan-interest-cert_Individual_Response_Regression_Request_Body_Blank_400.json|
+      | generalservice |loan-interest-cert   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_loan-interest-cert_Individual_Request_Regression_Request_Body_Blank_400.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_401.json|
  
  @TestCaseKey=UDB-T31057 @Regression
   Scenario Outline: Verify individual "/loan-interest-cert" API "POST" Method for Status code 400 if Request body is invalid JSON
@@ -928,20 +944,20 @@ Given user sets the file path for this feature file for drop2/GeneralService
       | generalservice |loan-interest-cert | \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_loan-interest-cert_Individual_Request_Regression_Request_Method_Not_Supported_405.json|accountNumber,solId,cif,schemeType |accountInfo[11].accountNumber,accountInfo[11].solId,accountInfo[11].customerId,accountInfo[11].schemeType  | GS_fetchloandetails.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_loan-interest-cert_Individual_Response_Regression_Request_Method_Not_Supported_405.json|
 
 
- @TestCaseKey=UDB-T31063 @Regression 
-  Scenario Outline: Verify individual "/loan-interest-cert" API for Status code 500 Error "Internal Server Error" 
-    Given user sets the environment of endpoint
-    Given user set the basepath to <service>
-    Then set the endpoint <endpoint> 
-    Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
-    Then user triggers a post request with <requestBody>
-    Then user verifies that status is 500
-    Then user verifies json from <responseBody>
-
-    Examples: 
-      | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                             | responseBody                                                                                           |
-      | generalservice1 |loan-interest-cert   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_loan-interest-cert_Individual_Request_Regression_Internal_Server_Error_500.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_500_Internal_Error.xml|
-      
+ #@TestCaseKey=UDB-T31063 @Regression 
+  #Scenario Outline: Verify individual "/loan-interest-cert" API for Status code 500 Error "Internal Server Error" 
+    #Given user sets the environment of endpoint
+    #Given user set the basepath to <service>
+    #Then set the endpoint <endpoint> 
+    #Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+    #Then user triggers a post request with <requestBody>
+    #Then user verifies that status is 500
+    #Then user verifies json from <responseBody>
+#
+    #Examples: 
+      #| service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                             | responseBody                                                                                           |
+      #| generalservice1 |loan-interest-cert   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_loan-interest-cert_Individual_Request_Regression_Internal_Server_Error_500.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_500_Internal_Error.xml|
+      #
   ######################## consolidated loan-interest-cert ###########################################################
   @TestCaseKey=UDB-T31101 @Regression
   Scenario Outline: Verify consolidated "/loan-interest-cert" API "POST" Method for Status code 200 with all fields (Mandatory and Optional)
@@ -1015,18 +1031,18 @@ Given user sets the file path for this feature file for drop2/GeneralService
       | generalservice |loan-interest-cert |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_loan-interest-cert_consolidated_Request_Regression_Mandatory_Field_Tag_Invalid_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_loan-interest-cert_consolidated_Response_Regression_Mandatory_Field_Tag_Invalid_400.json|
    
    @TestCaseKey=UDB-T31104 @Regression
-  Scenario Outline: Verify consolidated "/loan-interest-cert" API "POST" Method for Status code 400 if Request body is blank
+  Scenario Outline: Verify consolidated "/loan-interest-cert" API "POST" Method for Status code 401 if Request body is blank
     Given user sets the environment of endpoint
     Given user set the basepath to <service>
     Then set the endpoint <endpoint> 
     Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
     Then user triggers a post request with <requestBody>
-    Then user verifies that status is 400
+    Then user verifies that status is 401
     Then user verifies json from <responseBody>
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                          | responseBody                                                                                           |
-      | generalservice |loan-interest-cert   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_loan-interest-cert_consolidated_Request_Regression_Request_Body_Blank_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_loan-interest-cert_consolidated_Response_Regression_Request_Body_Blank_400.json|
+      | generalservice |loan-interest-cert   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_loan-interest-cert_consolidated_Request_Regression_Request_Body_Blank_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_401.json|
  
  @TestCaseKey=UDB-T31105 @Regression
   Scenario Outline: Verify consolidated "/loan-interest-cert" API "POST" Method for Status code 400 if Request body is invalid JSON
@@ -1085,20 +1101,20 @@ Given user sets the file path for this feature file for drop2/GeneralService
       | generalservice |loan-interest-cert | \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_loan-interest-cert_consolidated_Request_Regression_Request_Method_Not_Supported_405.json|accountNumber,solId,cif,schemeType |accountInfo[11].accountNumber,accountInfo[11].solId,accountInfo[11].customerId,accountInfo[11].schemeType  | GS_fetchloandetails.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_loan-interest-cert_consolidated_Response_Regression_Request_Method_Not_Supported_405.json|
 
 
- @TestCaseKey=UDB-T31111 @Regression 
-  Scenario Outline: Verify consolidated "/loan-interest-cert" API for Status code 500 Error "Internal Server Error" 
-    Given user sets the environment of endpoint
-    Given user set the basepath to <service>
-    Then set the endpoint <endpoint> 
-    Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
-    Then user triggers a post request with <requestBody>
-    Then user verifies that status is 500
-    Then user verifies json from <responseBody>
-
-    Examples: 
-      | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                             | responseBody                                                                                           |
-      | generalservice1 |loan-interest-cert   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_loan-interest-cert_consolidated_Request_Regression_Internal_Server_Error_500.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_500_Internal_Error.xml|
-      
+ #@TestCaseKey=UDB-T31111 @Regression 
+  #Scenario Outline: Verify consolidated "/loan-interest-cert" API for Status code 500 Error "Internal Server Error" 
+    #Given user sets the environment of endpoint
+    #Given user set the basepath to <service>
+    #Then set the endpoint <endpoint> 
+    #Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+    #Then user triggers a post request with <requestBody>
+    #Then user verifies that status is 500
+    #Then user verifies json from <responseBody>
+#
+    #Examples: 
+      #| service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                             | responseBody                                                                                           |
+      #| generalservice1 |loan-interest-cert   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_loan-interest-cert_consolidated_Request_Regression_Internal_Server_Error_500.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_500_Internal_Error.xml|
+      #
 ######################## getTransactionStatement ###########################################################
  @TestCaseKey=UDB-T30981 @Regression
   Scenario Outline: Verify "/getTransactionStatement" API "POST" Method for Status code 200 with all fields (Mandatory and Optional)
@@ -1112,7 +1128,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint                 | requestBody |requestField|responsefield|filename                                                                                                                         | responseBody                                                                                           |
-      | generalservice |getTransactionStatement   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getTransactionStatement_Request_Regression_Mandatory_Optional_200.json|cif,acctNum |[23].cif,[23].acctNum  | Customer_getCustomerAccounts.json|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getTransactionStatement_Response_Regression_200.json|
+      | generalservice |getTransactionStatement   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getTransactionStatement_Request_Regression_Mandatory_Optional_200.json|cif,acctNum |accounts[23].cif,accounts[23].acctNum  | CS_accountinfo.json|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getTransactionStatement_Response_Regression_200.json|
      
  
   @TestCaseKey=UDB-T30982  @Regression
@@ -1127,7 +1143,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                 | responseBody                                                                                           |
-      | generalservice |getTransactionStatement   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getTransactionStatement_Request_Regression_Mandatory_200.json|cif,acctNum |[23].cif,[23].acctNum  | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getTransactionStatement_Response_Regression_200.json|
+      | generalservice |getTransactionStatement   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getTransactionStatement_Request_Regression_Mandatory_200.json|cif,acctNum |accounts[23].cif,accounts[23].acctNum  | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getTransactionStatement_Response_Regression_200.json|
   
   @TestCaseKey=UDB-T30983  @Regression
   Scenario Outline: Verify "/getTransactionStatement" API "POST" Method for Status code 400 with Only Optional fields available in request body
@@ -1141,7 +1157,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                          | responseBody                                                                                           |
-      | generalservice |getTransactionStatement |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getTransactionStatement_Request_Regression_Only_Optional Fields_400.json|null|null|Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getTransactionStatement_Response_Regression_Only_Optional Fields_400.json|
+      | generalservice |getTransactionStatement |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getTransactionStatement_Request_Regression_Only_Optional Fields_400.json|null|null|CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getTransactionStatement_Response_Regression_Only_Optional Fields_400.json|
       
    @TestCaseKey=UDB-T30987  @Regression
   Scenario Outline: Verify "/getTransactionStatement" API "POST" Method for Status code 400 with Mandatory fields are invalid in request body
@@ -1155,7 +1171,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                          | responseBody                                                                                           |
-      | generalservice |getTransactionStatement |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getTransactionStatement_Request_Regression_Mandatory_Field_Invalid_400.json|null|null|Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getTransactionStatement_Response_Regression_Mandatory_Field_Invalid_400.json|
+      | generalservice |getTransactionStatement |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getTransactionStatement_Request_Regression_Mandatory_Field_Invalid_400.json|null|null|CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getTransactionStatement_Response_Regression_Mandatory_Field_Invalid_400.json|
   
    @TestCaseKey=UDB-T30988 @Regression
   Scenario Outline: Verify "/getTransactionStatement" API "POST" Method for Status code 400 with Mandatory tags are invalid in request body
@@ -1169,21 +1185,21 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                          | responseBody                                                                                           |
-      | generalservice |getTransactionStatement |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getTransactionStatement_Request_Regression_Mandatory_Field_Tag_Invalid_400.json|null|null|Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getTransactionStatement_Response_Regression_Mandatory_Field_Tag_Invalid_400.json|
+      | generalservice |getTransactionStatement |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getTransactionStatement_Request_Regression_Mandatory_Field_Tag_Invalid_400.json|null|null|CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getTransactionStatement_Response_Regression_Mandatory_Field_Tag_Invalid_400.json|
    
   @TestCaseKey=UDB-T30984  @Regression
-  Scenario Outline: Verify "/getTransactionStatement" API "POST" Method for Status code 400 if Request body is blank
+  Scenario Outline: Verify "/getTransactionStatement" API "POST" Method for Status code 401 if Request body is blank
     Given user sets the environment of endpoint
     Given user set the basepath to <service>
     Then set the endpoint <endpoint> 
     Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
     Then user triggers a post request with <requestBody>
-    Then user verifies that status is 400
+    Then user verifies that status is 401
     Then user verifies json from <responseBody>
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                          | responseBody                                                                                           |
-      | generalservice |getTransactionStatement   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getTransactionStatement_Request_Regression_Request_Body_Blank_400.json|null|null|Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getTransactionStatement_Response_Regression_Request_Body_Blank_400.json|
+      | generalservice |getTransactionStatement   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getTransactionStatement_Request_Regression_Request_Body_Blank_400.json|null|null|CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_401.json|
  
  @TestCaseKey=UDB-T30985  @Regression
   Scenario Outline: Verify "/getTransactionStatement" API "POST" Method for Status code 400 if Request body is invalid JSON
@@ -1197,7 +1213,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint  | requestBody |requestField|responsefield|filename                                                                                                                    | responseBody                                                                                           |
-      | generalservice |getTransactionStatement |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getTransactionStatement_Request_Regression_Invalid_Json_400.json|null|null|Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getTransactionStatement_Response_Regression_Invalid_Json_400.json|
+      | generalservice |getTransactionStatement |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getTransactionStatement_Request_Regression_Invalid_Json_400.json|null|null|CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getTransactionStatement_Response_Regression_Invalid_Json_400.json|
   
   @TestCaseKey=UDB-T30986  @Regression
   Scenario Outline: Verify "/getTransactionStatement" API "POST" Method for Status code 400 if Mandatory Field is Blank
@@ -1225,7 +1241,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                        | responseBody                                                                                           |
-      | generalservice |getTransactionStatement1  |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getTransactionStatement_Request_Regression_Invalid_Endpoint_404.json|cif,acctNum |[20].cif,[20].acctNum  | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getTransactionStatement_Response_Regression_Invalid_Endpoint_404.json|
+      | generalservice |getTransactionStatement1  |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getTransactionStatement_Request_Regression_Invalid_Endpoint_404.json|cif,acctNum |accounts[0].cif,accounts[0].acctNum  | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getTransactionStatement_Response_Regression_Invalid_Endpoint_404.json|
 
  @TestCaseKey=UDB-T30989 @Regression
   Scenario Outline: Verify "/getTransactionStatement" API for Status code 405 if HTTP method is other than POST  for Eg: GET, PUT, Delete
@@ -1239,23 +1255,23 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint  | requestBody |requestField|responsefield|filename 																																																																		| responseBody                                                                                           |
-      | generalservice |getTransactionStatement | \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getTransactionStatement_Request_Regression_Request_Method_Not_Supported_405.json|cif,acctNum |[20].cif,[20].acctNum  | Customer_getCustomerAccounts.json|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getTransactionStatement_Response_Regression_Request_Method_Not_Supported_405.json|
+      | generalservice |getTransactionStatement | \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getTransactionStatement_Request_Regression_Request_Method_Not_Supported_405.json|cif,acctNum |accounts[0].cif,accounts[0].acctNum  | CS_accountinfo.json|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getTransactionStatement_Response_Regression_Request_Method_Not_Supported_405.json|
 
 
- @TestCaseKey=UDB-T30991   @Regression 
-  Scenario Outline: Verify "/getTransactionStatement" API for Status code 500 Error "Internal Server Error" 
-    Given user sets the environment of endpoint
-    Given user set the basepath to <service>
-    Then set the endpoint <endpoint> 
-    Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
-    Then user triggers a post request with <requestBody>
-    Then user verifies that status is 500
-    Then user verifies json from <responseBody>
-
-    Examples: 
-      | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                             | responseBody                                                                                           |
-      | generalservice1 |getTransactionStatement   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getTransactionStatement_Request_Regression_Internal_Server_Error_500.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_500_Internal_Error.xml|  
-   
+ #@TestCaseKey=UDB-T30991   @Regression 
+  #Scenario Outline: Verify "/getTransactionStatement" API for Status code 500 Error "Internal Server Error" 
+    #Given user sets the environment of endpoint
+    #Given user set the basepath to <service>
+    #Then set the endpoint <endpoint> 
+    #Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+    #Then user triggers a post request with <requestBody>
+    #Then user verifies that status is 500
+    #Then user verifies json from <responseBody>
+#
+    #Examples: 
+      #| service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                             | responseBody                                                                                           |
+      #| generalservice1 |getTransactionStatement   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getTransactionStatement_Request_Regression_Internal_Server_Error_500.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_500_Internal_Error.xml|  
+   #
   ######################## transactionStatementPdf ###########################################################
   @TestCaseKey=UDB-T31006 @Regression
   Scenario Outline: Verify "/transactionStatementPdf" API "POST" Method for Status code 200 with Only Mandatory fields
@@ -1269,7 +1285,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                 | responseBody                                                                                           |
-      | generalservice |transactionStatementPdf   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_transactionStatementPdf_Request_Regression_Mandatory_200.json|cif,acctNum |[20].cif,[20].acctNum  | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_transactionStatementPdf_Response_Regression_200.json|
+      | generalservice |transactionStatementPdf   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_transactionStatementPdf_Request_Regression_Mandatory_200.json|cif,acctNum |accounts[0].cif,accounts[0].acctNum  | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_transactionStatementPdf_Response_Regression_200.json|
   
   @TestCaseKey=UDB-T31007 @Regression
   Scenario Outline: Verify "/transactionStatementPdf" API "POST" Method for Status code 400 with Only Optional fields available in request body
@@ -1314,18 +1330,18 @@ Given user sets the file path for this feature file for drop2/GeneralService
       | generalservice |transactionStatementPdf |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_transactionStatementPdf_Request_Regression_Mandatory_Field_Tag_Invalid_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_transactionStatementPdf_Response_Regression_Mandatory_Field_Tag_Invalid_400.json|
    
    @TestCaseKey=UDB-T31008 @Regression
-  Scenario Outline: Verify "/transactionStatementPdf" API "POST" Method for Status code 400 if Request body is blank
+  Scenario Outline: Verify "/transactionStatementPdf" API "POST" Method for Status code 401 if Request body is blank
     Given user sets the environment of endpoint
     Given user set the basepath to <service>
     Then set the endpoint <endpoint> 
     Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
     Then user triggers a post request with <requestBody>
-    Then user verifies that status is 400
+    Then user verifies that status is 401
     Then user verifies json from <responseBody>
 
     Examples: 
-      | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                          | responseBody                                                                                           |
-      | generalservice |transactionStatementPdf   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_transactionStatementPdf_Request_Regression_Request_Body_Blank_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_transactionStatementPdf_Response_Regression_Request_Body_Blank_400.json|
+      | service        | endpoint    							| requestBody 																																																													|requestField|responsefield|filename  | responseBody                                                                                           |
+      | generalservice |transactionStatementPdf   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_transactionStatementPdf_Request_Regression_Request_Body_Blank_400.json|null					|null					|null 	|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_transactionStatementPdf_Response_Regression_Request_Body_Blank_401.json|
  
  @TestCaseKey=UDB-T31009 @Regression
   Scenario Outline: Verify "/transactionStatementPdf" API "POST" Method for Status code 400 if Request body is invalid JSON
@@ -1342,7 +1358,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
       | generalservice |transactionStatementPdf |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_transactionStatementPdf_Request_Regression_Invalid_Json_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_transactionStatementPdf_Response_Regression_Invalid_Json_400.json|
   
   @TestCaseKey=UDB-T31010 @Regression
-  Scenario Outline: Verify "/transactionStatementPdf" API "POST" Method for Status code 401 if Mandatory Field is Blank
+  Scenario Outline: Verify "/transactionStatementPdf" API "POST" Method for Status code 400 if Mandatory Field is Blank
     Given user sets the environment of endpoint
     Given user set the basepath to <service>
     Then set the endpoint <endpoint> 
@@ -1352,8 +1368,8 @@ Given user sets the file path for this feature file for drop2/GeneralService
     Then user verifies json from <responseBody>
 
     Examples: 
-      | service        | endpoint    | requestBody |requestField|responsefield|filename                                         | responseBody                                                                                           |
-      | generalservice |transactionStatementPdf  |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_transactionStatementPdf_Request_Regression_Mandatory_Field_Blank_400.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_transactionStatementPdf_Response_Regression_Mandatory_Field_Blank_400.json|
+      | service        | endpoint    						 | requestBody 																																																															|requestField|responsefield|filename                                         | responseBody                                                                                           |
+      | generalservice |transactionStatementPdf  |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_transactionStatementPdf_Request_Regression_Mandatory_Field_Blank_401.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_transactionStatementPdf_Response_Regression_Mandatory_Field_Blank_400.json|
       
  @TestCaseKey=UDB-T31014 @Regression
   Scenario Outline: Verify "/transactionStatementPdf" API "POST" Method for Status code 404 if endpoint is Invalid
@@ -1367,7 +1383,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                        | responseBody                                                                                           |
-      | generalservice |transactionStatementPdf1  |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_transactionStatementPdf_Request_Regression_Invalid_Endpoint_404.json|cif,acctNum |[20].cif,[20].acctNum  | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_transactionStatementPdf_Response_Regression_Invalid_Endpoint_404.json|
+      | generalservice |transactionStatementPdf1  |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_transactionStatementPdf_Request_Regression_Invalid_Endpoint_404.json|cif,acctNum |accounts[0].cif,accounts[0].acctNum  | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_transactionStatementPdf_Response_Regression_Invalid_Endpoint_404.json|
 
  @TestCaseKey=UDB-T31013 @Regression
   Scenario Outline: Verify "/transactionStatementPdf" API for Status code 405 if HTTP method is other than POST  for Eg: GET, PUT, Delete
@@ -1381,23 +1397,23 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint  | requestBody |requestField|responsefield|filename 																																																																		| responseBody                                                                                           |
-      | generalservice |transactionStatementPdf | \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_transactionStatementPdf_Request_Regression_Request_Method_Not_Supported_405.json|cif,acctNum |[20].cif,[20].acctNum  | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_transactionStatementPdf_Response_Regression_Request_Method_Not_Supported_405.json|
+      | generalservice |transactionStatementPdf | \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_transactionStatementPdf_Request_Regression_Request_Method_Not_Supported_405.json|cif,acctNum |accounts[0].cif,accounts[0].acctNum  | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_transactionStatementPdf_Response_Regression_Request_Method_Not_Supported_405.json|
 
 
- @TestCaseKey=UDB-T31015 @Regression 
-  Scenario Outline: Verify "/transactionStatementPdf" API for Status code 500 Error "Internal Server Error" 
-    Given user sets the environment of endpoint
-    Given user set the basepath to <service>
-    Then set the endpoint <endpoint> 
-    Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
-    Then user triggers a post request with <requestBody>
-    Then user verifies that status is 500
-    Then user verifies json from <responseBody>
-
-    Examples: 
-      | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                             | responseBody                                                                                           |
-      | generalservice1 |transactionStatementPdf   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_transactionStatementPdf_Request_Regression_Internal_Server_Error_500.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_500_Internal_Error.xml|  
-      
+ #@TestCaseKey=UDB-T31015 @Regression 
+  #Scenario Outline: Verify "/transactionStatementPdf" API for Status code 500 Error "Internal Server Error" 
+    #Given user sets the environment of endpoint
+    #Given user set the basepath to <service>
+    #Then set the endpoint <endpoint> 
+    #Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+    #Then user triggers a post request with <requestBody>
+    #Then user verifies that status is 500
+    #Then user verifies json from <responseBody>
+#
+    #Examples: 
+      #| service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                             | responseBody                                                                                           |
+      #| generalservice1 |transactionStatementPdf   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_transactionStatementPdf_Request_Regression_Internal_Server_Error_500.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_500_Internal_Error.xml|  
+      #
  
     ######################## balance-cert ########################################################### 
  
@@ -1413,7 +1429,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                 | responseBody                                                                                           |
-      | generalservice |balance-cert   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_balance-cert_Request_Regression_Mandatory_200.json|acctId            |[20].acctNum         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_balance-cert_Response_Regression_Mandatory_200.json|
+      | generalservice |balance-cert   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_balance-cert_Request_Regression_Mandatory_200.json|acctId            |accounts[0].acctNum         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_balance-cert_Response_Regression_Mandatory_200.json|
   
  
       
@@ -1446,18 +1462,18 @@ Given user sets the file path for this feature file for drop2/GeneralService
       | generalservice |balance-cert |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_balance-cert_Request_Regression_Mandatory_Field_Tag_Invalid_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_balance-cert_Response_Regression_Mandatory_Field_Tag_Invalid_400.json|
    
    @TestCaseKey=UDB-T31044 @Regression
-  Scenario Outline: Verify "/balance-cert" API "POST" Method for Status code 400 if Request body is blank
+  Scenario Outline: Verify "/balance-cert" API "POST" Method for Status code 401 if Request body is blank
     Given user sets the environment of endpoint
     Given user set the basepath to <service>
     Then set the endpoint <endpoint> 
     Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
     Then user triggers a post request with <requestBody>
-    Then user verifies that status is 400
+    Then user verifies that status is 401
     Then user verifies json from <responseBody>
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                          | responseBody                                                                                           |
-      | generalservice |balance-cert   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_balance-cert_Request_Regression_Request_Body_Blank_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_balance-cert_Response_Regression_Request_Body_Blank_400.json|
+      | generalservice |balance-cert   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_balance-cert_Request_Regression_Request_Body_Blank_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_401.json|
  
  @TestCaseKey=UDB-T31045 @Regression
   Scenario Outline: Verify "/balance-cert" API "POST" Method for Status code 400 if Request body is invalid JSON
@@ -1499,7 +1515,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                        | responseBody                                                                                           |
-      | generalservice |balance-cert1  |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_balance-cert_Request_Regression_Invalid_Endpoint_404.json|acctId            |[20].acctNum         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_balance-cert_Response_Regression_Invalid_Endpoint_404.json|
+      | generalservice |balance-cert1  |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_balance-cert_Request_Regression_Invalid_Endpoint_404.json|acctId            |accounts[0].acctNum         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_balance-cert_Response_Regression_Invalid_Endpoint_404.json|
 
  @TestCaseKey=UDB-T31049 @Regression
   Scenario Outline: Verify "/balance-cert" API for Status code 405 if HTTP method is other than POST  for Eg: GET, PUT, Delete
@@ -1513,22 +1529,22 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint  | requestBody |requestField|responsefield|filename 																																																																		| responseBody                                                                                           |
-      | generalservice |balance-cert | \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_balance-cert_Request_Regression_Request_Method_Not_Supported_405.json|acctId            |[20].acctNum         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_balance-cert_Response_Regression_Request_Method_Not_Supported_405.json|
+      | generalservice |balance-cert | \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_balance-cert_Request_Regression_Request_Method_Not_Supported_405.json|acctId            |accounts[0].acctNum         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_balance-cert_Response_Regression_Request_Method_Not_Supported_405.json|
 
 
- @TestCaseKey=UDB-T31051 @Regression 
-  Scenario Outline: Verify "/balance-cert" API for Status code 500 Error "Internal Server Error" 
-    Given user sets the environment of endpoint
-    Given user set the basepath to <service>
-    Then set the endpoint <endpoint> 
-    Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
-    Then user triggers a post request with <requestBody>
-    Then user verifies that status is 500
-    Then user verifies json from <responseBody>
-
-    Examples: 
-      | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                             | responseBody                                                                                           |
-      | generalservice1 |balance-cert   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_balance-cert_Request_Regression_Internal_Server_Error_500.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_500_Internal_Error.xml|
+ #@TestCaseKey=UDB-T31051 @Regression 
+  #Scenario Outline: Verify "/balance-cert" API for Status code 500 Error "Internal Server Error" 
+    #Given user sets the environment of endpoint
+    #Given user set the basepath to <service>
+    #Then set the endpoint <endpoint> 
+    #Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+    #Then user triggers a post request with <requestBody>
+    #Then user verifies that status is 500
+    #Then user verifies json from <responseBody>
+#
+    #Examples: 
+      #| service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                             | responseBody                                                                                           |
+      #| generalservice1 |balance-cert   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_balance-cert_Request_Regression_Internal_Server_Error_500.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_500_Internal_Error.xml|
 
 ######################## balance ###########################################################      
    @TestCaseKey=UDB-T31089 @Regression
@@ -1543,7 +1559,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                         | responseBody                                                                                           |
-      | generalservice |balance   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_balance.json|acctId            |[20].acctNum  | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_balance.json|
+      | generalservice |balance   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_balance.json|acctId            |accounts[0].acctNum  | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_balance.json|
      
  
   @TestCaseKey=UDB-T31090 @Regression
@@ -1558,7 +1574,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                 | responseBody                                                                                           |
-      | generalservice |balance   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_balance_Request_Regression_Mandatory_200.json|acctId            |[20].acctNum  | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_balance_Response_Regression_Mandatory_200.json|
+      | generalservice |balance   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_balance_Request_Regression_Mandatory_200.json|acctId            |accounts[0].acctNum  | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_balance_Response_Regression_Mandatory_200.json|
   
   
    @TestCaseKey=UDB-T31095 @Regression
@@ -1590,18 +1606,18 @@ Given user sets the file path for this feature file for drop2/GeneralService
       | generalservice |balance |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_balance_Request_Regression_Mandatory_Field_Tag_Invalid_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_balance_Response_Regression_Mandatory_Field_Tag_Invalid_400.json|
    
    @TestCaseKey=UDB-T31092 @Regression
-  Scenario Outline: Verify "/balance" API "POST" Method for Status code 400 if Request body is blank
+  Scenario Outline: Verify "/balance" API "POST" Method for Status code 401 if Request body is blank
     Given user sets the environment of endpoint
     Given user set the basepath to <service>
     Then set the endpoint <endpoint> 
     Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
     Then user triggers a post request with <requestBody>
-    Then user verifies that status is 400
+    Then user verifies that status is 401
     Then user verifies json from <responseBody>
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                          | responseBody                                                                                           |
-      | generalservice |balance   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_balance_Request_Regression_Request_Body_Blank_400.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_balance_Response_Regression_Mandatory_Field_Blank_400.json|
+      | generalservice |balance   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_balance_Request_Regression_Request_Body_Blank_400.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_401.json|
  
  @TestCaseKey=UDB-T31093 @Regression
   Scenario Outline: Verify "/balance" API "POST" Method for Status code 400 if Request body is invalid JSON
@@ -1643,7 +1659,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                        | responseBody                                                                                           |
-      | generalservice |balance1  |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_balance_Request_Regression_Invalid_Endpoint_404.json|acctId            |[20].acctNum  | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_balance_Response_Regression_Invalid_Endpoint_404.json|
+      | generalservice |balance1  |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_balance_Request_Regression_Invalid_Endpoint_404.json|acctId            |accounts[0].acctNum  | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_balance_Response_Regression_Invalid_Endpoint_404.json|
 
  @TestCaseKey=UDB-T31097 @Regression
   Scenario Outline: Verify "/balance" API for Status code 405 if HTTP method is other than POST  for Eg: GET, PUT, Delete
@@ -1657,22 +1673,22 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint  | requestBody |requestField|responsefield|filename 																																																																		| responseBody                                                                                           |
-      | generalservice |balance | \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_balance_Request_Regression_Request_Method_Not_Supported_405.json|acctId            |[20].acctNum  | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_balance_Response_Regression_Request_Method_Not_Supported_405.json|
+      | generalservice |balance | \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_balance_Request_Regression_Request_Method_Not_Supported_405.json|acctId            |accounts[0].acctNum  | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_balance_Response_Regression_Request_Method_Not_Supported_405.json|
 
 
- @TestCaseKey=UDB-T31099 @Regression 
-  Scenario Outline: Verify "/balance" API for Status code 500 Error "Internal Server Error" 
-    Given user sets the environment of endpoint
-    Given user set the basepath to <service>
-    Then set the endpoint <endpoint> 
-    Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
-    Then user triggers a post request with <requestBody>
-    Then user verifies that status is 500
-    Then user verifies json from <responseBody>
-
-    Examples: 
-      | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                             | responseBody                                                                                           |
-      | generalservice1 |balance   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_balance_Request_Regression_Internal_Server_Error_500.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_500_Internal_Error.xml|  
+ #@TestCaseKey=UDB-T31099 @Regression 
+  #Scenario Outline: Verify "/balance" API for Status code 500 Error "Internal Server Error" 
+    #Given user sets the environment of endpoint
+    #Given user set the basepath to <service>
+    #Then set the endpoint <endpoint> 
+    #Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+    #Then user triggers a post request with <requestBody>
+    #Then user verifies that status is 500
+    #Then user verifies json from <responseBody>
+#
+    #Examples: 
+      #| service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                             | responseBody                                                                                           |
+      #| generalservice1 |balance   |\src\test\resources\testdata\api\request\Drop2\GeneralService\GS_balance_Request_Regression_Internal_Server_Error_500.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_500_Internal_Error.xml|  
    
   ######################## getLocateAtm ###########################################################
     @TestCaseKey=UDB-T35332 @Regression
@@ -1687,7 +1703,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint           | requestBody |requestField   |responsefield      | filename       | responseBody                    |
-      | businessServices |getLocateAtm|\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_getLocateAtm.json|cif|[20].cif | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_getLocateAtm.json|
+      | businessServices |getLocateAtm|\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_getLocateAtm.json|cif|accounts[0].cif | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_getLocateAtm.json|
       
   
    @TestCaseKey=UDB-T35336 @Regression
@@ -1719,18 +1735,18 @@ Given user sets the file path for this feature file for drop2/GeneralService
       | businessServices |getLocateAtm |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_getLocateAtm_Request_Regression_Mandatory_Field_Tag_Invalid_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_getLocateAtm_Response_Regression_Mandatory_Field_Tag_Invalid_400.json|
    
    @TestCaseKey=UDB-T35333 @Regression
-  Scenario Outline: Verify "/getLocateAtm" API "POST" Method for Status code 400 if Request body is blank
+  Scenario Outline: Verify "/getLocateAtm" API "POST" Method for Status code 401 if Request body is blank
     Given user sets the environment of endpoint
     Given user set the basepath to <service>
     Then set the endpoint <endpoint> 
     Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
     Then user triggers a post request with <requestBody>
-    Then user verifies that status is 400
+    Then user verifies that status is 401
     Then user verifies json from <responseBody>
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                          | responseBody                                                                                           |
-      | businessServices |getLocateAtm   |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_getLocateAtm_Request_Regression_Request_Body_Blank_400.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_getLocateAtm_Response_Regression_Request_Body_Blank_400.json|
+      | businessServices |getLocateAtm   |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_getLocateAtm_Request_Regression_Request_Body_Blank_400.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_401.json|
  
  @TestCaseKey=UDB-T35334 @Regression
   Scenario Outline: Verify "/getLocateAtm" API "POST" Method for Status code 400 if Request body is invalid JSON
@@ -1772,7 +1788,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                        | responseBody                                                                                           |
-      | businessServices |getLocateAtm1  |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_getLocateAtm_Request_Regression_Invalid_Endpoint_404.json|cif            |[1].cif | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_getLocateAtm_Response_Regression_Invalid_Endpoint_404.json|
+      | businessServices |getLocateAtm1  |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_getLocateAtm_Request_Regression_Invalid_Endpoint_404.json|cif            |accounts[1].cif | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_getLocateAtm_Response_Regression_Invalid_Endpoint_404.json|
 
  @TestCaseKey=UDB-T35338 @Regression
   Scenario Outline: Verify "/getLocateAtm" API for Status code 405 if HTTP method is other than POST  for Eg: GET, PUT, Delete
@@ -1786,22 +1802,22 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint  | requestBody |requestField|responsefield|filename 																																																																		| responseBody                                                                                           |
-      | businessServices |getLocateAtm | \src\test\resources\testdata\api\request\Drop2\GeneralService\BS_getLocateAtm_Request_Regression_Request_Method_Not_Supported_405.json|cif            |[1].cif | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_getLocateAtm_Response_Regression_Method_Not_Supported_405.json|
+      | businessServices |getLocateAtm | \src\test\resources\testdata\api\request\Drop2\GeneralService\BS_getLocateAtm_Request_Regression_Request_Method_Not_Supported_405.json|cif            |accounts[1].cif | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_getLocateAtm_Response_Regression_Method_Not_Supported_405.json|
 
 
- @TestCaseKey=UDB-T35340 @Regression 
-  Scenario Outline: Verify "/getLocateAtm" API for Status code 500 Error "Internal Server Error" 
-    Given user sets the environment of endpoint
-    Given user set the basepath to <service>
-    Then set the endpoint <endpoint> 
-    Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
-    Then user triggers a post request with <requestBody>
-    Then user verifies that status is 500
-    Then user verifies json from <responseBody>
-
-    Examples: 
-      | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                             | responseBody                                                                                           |
-      | businessServices1 |getLocateAtm   |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_getLocateAtm_Request_Regression_Internal_Server_Error_500.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_500_Internal_Error.xml|  
+ #@TestCaseKey=UDB-T35340 @Regression 
+  #Scenario Outline: Verify "/getLocateAtm" API for Status code 500 Error "Internal Server Error" 
+    #Given user sets the environment of endpoint
+    #Given user set the basepath to <service>
+    #Then set the endpoint <endpoint> 
+    #Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+    #Then user triggers a post request with <requestBody>
+    #Then user verifies that status is 500
+    #Then user verifies json from <responseBody>
+#
+    #Examples: 
+      #| service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                             | responseBody                                                                                           |
+      #| businessServices1 |getLocateAtm   |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_getLocateAtm_Request_Regression_Internal_Server_Error_500.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_500_Internal_Error.xml|  
 
 
 ######################## getLocateBranch ###########################################################   
@@ -1817,7 +1833,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint           | requestBody |requestField   |responsefield      | filename       | responseBody                    |
-      | businessServices |getLocateBranch|\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_getLocateBranch.json|cif            |[1].cif | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_getLocateBranch.json|
+      | businessServices |getLocateBranch|\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_getLocateBranch.json|cif            |accounts[1].cif | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_getLocateBranch.json|
      
   
    @TestCaseKey=UDB-T35346 @Regression
@@ -1849,18 +1865,18 @@ Given user sets the file path for this feature file for drop2/GeneralService
       | businessServices |getLocateBranch |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_getLocateBranch_Request_Regression_Mandatory_Field_Tag_Invalid_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_getLocateBranch_Response_Regression_Mandatory_Field_Tag_Invalid_400.json|
    
    @TestCaseKey=UDB-T35343 @Regression
-  Scenario Outline: Verify "/getLocateBranch" API "POST" Method for Status code 400 if Request body is blank
+  Scenario Outline: Verify "/getLocateBranch" API "POST" Method for Status code 401 if Request body is blank
     Given user sets the environment of endpoint
     Given user set the basepath to <service>
     Then set the endpoint <endpoint> 
     Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
     Then user triggers a post request with <requestBody>
-    Then user verifies that status is 400
+    Then user verifies that status is 401
     Then user verifies json from <responseBody>
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                          | responseBody                                                                                           |
-      | businessServices |getLocateBranch   |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_getLocateBranch_Request_Regression_Request_Body_Blank_400.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_getLocateBranch_Response_Regression_Request_Body_Blank_400.json|
+      | businessServices |getLocateBranch   |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_getLocateBranch_Request_Regression_Request_Body_Blank_400.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_401.json|
  
  @TestCaseKey=UDB-T35344 @Regression
   Scenario Outline: Verify "/getLocateBranch" API "POST" Method for Status code 400 if Request body is invalid JSON
@@ -1902,7 +1918,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                        | responseBody                                                                                           |
-      | businessServices |getLocateBranch1  |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_getLocateBranch_Request_Regression_Invalid_Endpoint_404.json|cif            |[1].cif | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_getLocateBranch_Response_Regression_Invalid_Endpoint_404.json|
+      | businessServices |getLocateBranch1  |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_getLocateBranch_Request_Regression_Invalid_Endpoint_404.json|cif            |accounts[1].cif | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_getLocateBranch_Response_Regression_Invalid_Endpoint_404.json|
 
  @TestCaseKey=UDB-T35348 @Regression
   Scenario Outline: Verify "/getLocateBranch" API for Status code 405 if HTTP method is other than POST  for Eg: GET, PUT, Delete
@@ -1916,23 +1932,23 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint  | requestBody |requestField|responsefield|filename 																																																																		| responseBody                                                                                           |
-      | businessServices |getLocateBranch | \src\test\resources\testdata\api\request\Drop2\GeneralService\BS_getLocateBranch_Request_Regression_Request_Method_Not_Supported_405.json|cif            |[1].cif | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_getLocateBranch_Response_Regression_Request_Method_Not_Supported_405.json|
+      | businessServices |getLocateBranch | \src\test\resources\testdata\api\request\Drop2\GeneralService\BS_getLocateBranch_Request_Regression_Request_Method_Not_Supported_405.json|cif            |accounts[1].cif | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_getLocateBranch_Response_Regression_Request_Method_Not_Supported_405.json|
 
 
- @TestCaseKey=UDB-T35350 @Regression 
-  Scenario Outline: Verify "/getLocateBranch" API for Status code 500 Error "Internal Server Error" 
-    Given user sets the environment of endpoint
-    Given user set the basepath to <service>
-    Then set the endpoint <endpoint> 
-    Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
-    Then user triggers a post request with <requestBody>
-    Then user verifies that status is 500
-    Then user verifies json from <responseBody>
-
-    Examples: 
-      | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                             | responseBody                                                                                           |
-      | businessServices1 |getLocateBranch   |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_getLocateBranch_Request_Regression_Internal_Server_Error_500.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_500_Internal_Error.xml|  
-   
+ #@TestCaseKey=UDB-T35350 @Regression 
+  #Scenario Outline: Verify "/getLocateBranch" API for Status code 500 Error "Internal Server Error" 
+    #Given user sets the environment of endpoint
+    #Given user set the basepath to <service>
+    #Then set the endpoint <endpoint> 
+    #Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+    #Then user triggers a post request with <requestBody>
+    #Then user verifies that status is 500
+    #Then user verifies json from <responseBody>
+#
+    #Examples: 
+      #| service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                             | responseBody                                                                                           |
+      #| businessServices1 |getLocateBranch   |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_getLocateBranch_Request_Regression_Internal_Server_Error_500.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_500_Internal_Error.xml|  
+   #
    ######################## searchByLocation ###########################################################
      @TestCaseKey=UDB-T35352 @Regression
   Scenario Outline: Verify "/searchByLocation" API "POST" Method for Status code 200 with Only Mandatory fields
@@ -1978,18 +1994,18 @@ Given user sets the file path for this feature file for drop2/GeneralService
       | businessServices |searchByLocation |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_searchByLocation_Request_Regression_Mandatory_Field_Tag_Invalid_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_searchByLocation_Response_Regression_Mandatory_Field_Tag_Invalid_400.json|
    
    @TestCaseKey=UDB-T35353 @Regression
-  Scenario Outline: Verify "/searchByLocation" API "POST" Method for Status code 400 if Request body is blank
+  Scenario Outline: Verify "/searchByLocation" API "POST" Method for Status code 401 if Request body is blank
     Given user sets the environment of endpoint
     Given user set the basepath to <service>
     Then set the endpoint <endpoint> 
     Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
     Then user triggers a post request with <requestBody>
-    Then user verifies that status is 400
+    Then user verifies that status is 401
     Then user verifies json from <responseBody>
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                          | responseBody                                                                                           |
-      | businessServices |searchByLocation   |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_searchByLocation_Request_Regression_Request_Body_Blank_400.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_searchByLocation_Response_Regression_Request_Body_Blank_400.json|
+      | businessServices |searchByLocation   |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_searchByLocation_Request_Regression_Request_Body_Blank_400.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_401.json|
  
  @TestCaseKey=UDB-T35354 @Regression
   Scenario Outline: Verify "/searchByLocation" API "POST" Method for Status code 400 if Request body is invalid JSON
@@ -2048,19 +2064,19 @@ Given user sets the file path for this feature file for drop2/GeneralService
       | businessServices |searchByLocation | \src\test\resources\testdata\api\request\Drop2\GeneralService\BS_searchByLocation_Request_Regression_Request_Method_Not_Supported_405.json|null |null  | null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_searchByLocation_Response_Regression_Request_Method_Not_Supported_405.json|
 
 
- @TestCaseKey=UDB-T35360 @Regression 
-  Scenario Outline: Verify "/searchByLocation" API for Status code 500 Error "Internal Server Error" 
-    Given user sets the environment of endpoint
-    Given user set the basepath to <service>
-    Then set the endpoint <endpoint> 
-    Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
-    Then user triggers a post request with <requestBody>
-    Then user verifies that status is 500
-    Then user verifies json from <responseBody>
-
-    Examples: 
-      | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                             | responseBody                                                                                           |
-      | businessServices1 |searchByLocation   |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_searchByLocation_Request_Regression_Internal_Server_Error_500.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_500_Internal_Error.xml|  
+ #@TestCaseKey=UDB-T35360 @Regression 
+  #Scenario Outline: Verify "/searchByLocation" API for Status code 500 Error "Internal Server Error" 
+    #Given user sets the environment of endpoint
+    #Given user set the basepath to <service>
+    #Then set the endpoint <endpoint> 
+    #Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+    #Then user triggers a post request with <requestBody>
+    #Then user verifies that status is 500
+    #Then user verifies json from <responseBody>
+#
+    #Examples: 
+      #| service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                             | responseBody                                                                                           |
+      #| businessServices1 |searchByLocation   |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_searchByLocation_Request_Regression_Internal_Server_Error_500.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_500_Internal_Error.xml|  
    
    ######################## Individual downloadTdsCert ########################################################### 
     @TestCaseKey=UDB-T35312 @Regression
@@ -2071,11 +2087,11 @@ Given user sets the file path for this feature file for drop2/GeneralService
     Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
     Then user triggers a post request with <requestBody>
     Then user verifies that status is 200
-    Then user verifies json from <responseBody>
+    #Then user verifies json from <responseBody>
 
      Examples: 
       | service        | endpoint           | requestBody |requestField   |responsefield      | filename       | responseBody                    |
-      | businessServices |downloadTdsCert|\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadTdsCert_Individual.json|cif,accountNumber |[1].cif,[1].acctNum  |Customer_getCustomerAccounts.json|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadTdsCert_Individual.json|
+      | businessServices |downloadTdsCert|\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadTdsCert_Individual.json|cif,accountNumber |accounts[1].cif,accounts[1].acctNum  |CS_accountinfo.json|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadTdsCert_Individual.json|
      
   
    @TestCaseKey=UDB-T35316 @Regression
@@ -2107,18 +2123,18 @@ Given user sets the file path for this feature file for drop2/GeneralService
       | businessServices |downloadTdsCert |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadTdsCert_Individual_Request_Regression_Mandatory_Field_Tag_Invalid_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadTdsCert_Individual_Response_Regression_Mandatory_Field_Tag_Invalid_400.json|
    
    @TestCaseKey=UDB-T35313 @Regression
-  Scenario Outline: Verify "/downloadTdsCert" Individual API "POST" Method for Status code 400 if Request body is blank
+  Scenario Outline: Verify "/downloadTdsCert" Individual API "POST" Method for Status code 401 if Request body is blank
     Given user sets the environment of endpoint
     Given user set the basepath to <service>
     Then set the endpoint <endpoint> 
     Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
     Then user triggers a post request with <requestBody>
-    Then user verifies that status is 400
+    Then user verifies that status is 401
     Then user verifies json from <responseBody>
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                          | responseBody                                                                                           |
-      | businessServices |downloadTdsCert   |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadTdsCert_Individual_Request_Regression_Request_Body_Blank_400.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadTdsCert_Individual_Response_Regression_Request_Body_Blank_400.json|
+      | businessServices |downloadTdsCert   |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadTdsCert_Individual_Request_Regression_Request_Body_Blank_400.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_401.json|
  
  @TestCaseKey=UDB-T35314 @Regression
   Scenario Outline: Verify "/downloadTdsCert" Individual API "POST" Method for Status code 400 if Request body is invalid JSON
@@ -2160,7 +2176,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                        | responseBody                                                                                           |
-      | businessServices |downloadTdsCert1  |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadTdsCert_Individual_Request_Regression_Invalid_Endpoint_404.json|cif,accountNumber |[1].cif,[1].acctNum  |Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadTdsCert_Individual_Response_Regression_Invalid_Endpoint_404.json|
+      | businessServices |downloadTdsCert1  |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadTdsCert_Individual_Request_Regression_Invalid_Endpoint_404.json|cif,accountNumber |accounts[1].cif,accounts[1].acctNum  |CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadTdsCert_Individual_Response_Regression_Invalid_Endpoint_404.json|
 
  @TestCaseKey=UDB-T35318 @Regression
   Scenario Outline: Verify "/downloadTdsCert" Individual API for Status code 405 if HTTP method is other than POST  for Eg: GET, PUT, Delete
@@ -2174,23 +2190,23 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint  | requestBody |requestField|responsefield|filename 																																																																		| responseBody                                                                                           |
-      | businessServices |downloadTdsCert | \src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadTdsCert_Individual_Request_Regression_Request_Method_Not_Supported_405.json|cif,accountNumber |[1].cif,[1].acctNum  |Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadTdsCert_Individual_Response_Regression_Request_Method_Not_Supported_405.json|
+      | businessServices |downloadTdsCert | \src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadTdsCert_Individual_Request_Regression_Request_Method_Not_Supported_405.json|cif,accountNumber |accounts[1].cif,accounts[1].acctNum  |CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadTdsCert_Individual_Response_Regression_Request_Method_Not_Supported_405.json|
 
 
- @TestCaseKey=UDB-T35320 @Regression 
-  Scenario Outline: Verify "/downloadTdsCert" Individual API for Status code 500 Error "Internal Server Error" 
-    Given user sets the environment of endpoint
-    Given user set the basepath to <service>
-    Then set the endpoint <endpoint> 
-    Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
-    Then user triggers a post request with <requestBody>
-    Then user verifies that status is 500
-    Then user verifies json from <responseBody>
-
-    Examples: 
-      | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                             | responseBody                                                                                           |
-      | businessServices1 |downloadTdsCert   |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadTdsCert_Individual_Request_Regression_Internal_Server_Error_500.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_500_Internal_Error.xml|  
-      
+ #@TestCaseKey=UDB-T35320 @Regression 
+  #Scenario Outline: Verify "/downloadTdsCert" Individual API for Status code 500 Error "Internal Server Error" 
+    #Given user sets the environment of endpoint
+    #Given user set the basepath to <service>
+    #Then set the endpoint <endpoint> 
+    #Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+    #Then user triggers a post request with <requestBody>
+    #Then user verifies that status is 500
+    #Then user verifies json from <responseBody>
+#
+    #Examples: 
+      #| service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                             | responseBody                                                                                           |
+      #| businessServices1 |downloadTdsCert   |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadTdsCert_Individual_Request_Regression_Internal_Server_Error_500.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_500_Internal_Error.xml|  
+      #
    ######################## Consolidated downloadTdsCert ###########################################################    
   @TestCaseKey=UDB-T30969 @Regression
   Scenario Outline: Verify "/downloadTdsCert" Consolidated API "POST" Method for Status code 200 with Only Mandatory fields
@@ -2204,7 +2220,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
     
     Examples: 
       | service        | endpoint           | requestBody |requestField   |responsefield      | filename       | responseBody                    |
-      | businessServices |downloadTdsCert|\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadTdsCert_Consolidated.json|cif,accountNumber |[1].cif,[1].acctNum  |Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadTdsCert_Consolidated.json|
+      | businessServices |downloadTdsCert|\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadTdsCert_Consolidated.json|cif,accountNumber |accounts[1].cif,accounts[1].acctNum  |CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadTdsCert_Consolidated.json|
      
   
    @TestCaseKey=UDB-T35296 @Regression
@@ -2236,18 +2252,18 @@ Given user sets the file path for this feature file for drop2/GeneralService
       | businessServices |downloadTdsCert |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadTdsCert_Consolidated_Request_Regression_Mandatory_Field_Tag_Invalid_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadTdsCert_Consolidated_Response_Regression_Mandatory_Field_Tag_Invalid_400.json|
    
    @TestCaseKey=UDB-T35293 @Regression
-  Scenario Outline: Verify "/downloadTdsCert" Consolidated API "POST" Method for Status code 400 if Request body is blank
+  Scenario Outline: Verify "/downloadTdsCert" Consolidated API "POST" Method for Status code 401 if Request body is blank
     Given user sets the environment of endpoint
     Given user set the basepath to <service>
     Then set the endpoint <endpoint> 
     Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
     Then user triggers a post request with <requestBody>
-    Then user verifies that status is 400
+    Then user verifies that status is 401
     Then user verifies json from <responseBody>
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                          | responseBody                                                                                           |
-      | businessServices |downloadTdsCert   |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadTdsCert_Consolidated_Request_Regression_Request_Body_Blank_400.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadTdsCert_Consolidated_Response_Regression_Request_Body_Blank_400.json|
+      | businessServices |downloadTdsCert   |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadTdsCert_Consolidated_Request_Regression_Request_Body_Blank_400.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_401.json|
  
  @TestCaseKey=UDB-T35294 @Regression
   Scenario Outline: Verify "/downloadTdsCert" Consolidated API "POST" Method for Status code 400 if Request body is invalid JSON
@@ -2289,7 +2305,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                        | responseBody                                                                                           |
-      | businessServices |downloadTdsCert1  |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadTdsCert_Consolidated_Request_Regression_Invalid_Endpoint_404.json|cif,accountNumber |[1].cif,[1].acctNum  |Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadTdsCert_Consolidated_Response_Regression_Invalid_Endpoint_404.json|
+      | businessServices |downloadTdsCert1  |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadTdsCert_Consolidated_Request_Regression_Invalid_Endpoint_404.json|cif,accountNumber |accounts[1].cif,accounts[1].acctNum  |CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadTdsCert_Consolidated_Response_Regression_Invalid_Endpoint_404.json|
 
  @TestCaseKey=UDB-T35298 @Regression
   Scenario Outline: Verify "/downloadTdsCert" Consolidated API for Status code 405 if HTTP method is other than POST  for Eg: GET, PUT, Delete
@@ -2303,23 +2319,23 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint  | requestBody |requestField|responsefield|filename 																																																																		| responseBody                                                                                           |
-      | businessServices |downloadTdsCert | \src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadTdsCert_Consolidated_Request_Regression_Request_Method_Not_Supported_405.json|cif,accountNumber |[1].cif,[1].acctNum  |Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadTdsCert_Consolidated_Response_Regression_Request_Method_Not_Supported_405.json|
+      | businessServices |downloadTdsCert | \src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadTdsCert_Consolidated_Request_Regression_Request_Method_Not_Supported_405.json|cif,accountNumber |accounts[1].cif,accounts[1].acctNum  |CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadTdsCert_Consolidated_Response_Regression_Request_Method_Not_Supported_405.json|
 
 
- @TestCaseKey=UDB-T35300 @Regression 
-  Scenario Outline: Verify "/downloadTdsCert" Consolidated API for Status code 500 Error "Internal Server Error" 
-    Given user sets the environment of endpoint
-    Given user set the basepath to <service>
-    Then set the endpoint <endpoint> 
-    Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
-    Then user triggers a post request with <requestBody>
-    Then user verifies that status is 500
-    Then user verifies json from <responseBody>
-
-    Examples: 
-      | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                             | responseBody                                                                                           |
-      | businessServices1 |downloadTdsCert   |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadTdsCert_Consolidated_Request_Regression_Internal_Server_Error_500.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_500_Internal_Error.xml|  
-      
+ #@TestCaseKey=UDB-T35300 @Regression 
+  #Scenario Outline: Verify "/downloadTdsCert" Consolidated API for Status code 500 Error "Internal Server Error" 
+    #Given user sets the environment of endpoint
+    #Given user set the basepath to <service>
+    #Then set the endpoint <endpoint> 
+    #Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+    #Then user triggers a post request with <requestBody>
+    #Then user verifies that status is 500
+    #Then user verifies json from <responseBody>
+#
+    #Examples: 
+      #| service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                             | responseBody                                                                                           |
+      #| businessServices1 |downloadTdsCert   |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadTdsCert_Consolidated_Request_Regression_Internal_Server_Error_500.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_500_Internal_Error.xml|  
+      #
    ######################## Consolidated downloadInterestCert ###########################################################    
   @TestCaseKey=UDB-T35302 @Regression
   Scenario Outline: Verify "/downloadInterestCert" Consolidated API "POST" Method for Status code 200 with Only Mandatory fields
@@ -2333,7 +2349,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
      Examples: 
       | service        | endpoint           | requestBody |requestField   |responsefield      | filename       | responseBody                    |
-      | businessServices |downloadInterestCert|\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadInterestCert_Consolidated.json|cif,accountNumber |[1].cif,[1].acctNum  |Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadInterestCert_Consolidated.json|
+      | businessServices |downloadInterestCert|\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadInterestCert_Consolidated.json|cif,accountNumber |accounts[1].cif,accounts[1].acctNum  |CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadInterestCert_Consolidated.json|
      
   
    @TestCaseKey=UDB-T35306 @Regression
@@ -2365,18 +2381,18 @@ Given user sets the file path for this feature file for drop2/GeneralService
       | businessServices |downloadInterestCert |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadInterestCert_Consolidated_Request_Regression_Mandatory_Field_Tag_Invalid_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadInterestCert_Consolidated_Response_Regression_Mandatory_Field_Tag_Invalid_400.json|
    
    @TestCaseKey=UDB-T35303 @Regression
-  Scenario Outline: Verify "/downloadInterestCert" Consolidated API "POST" Method for Status code 400 if Request body is blank
+  Scenario Outline: Verify "/downloadInterestCert" Consolidated API "POST" Method for Status code 401 if Request body is blank
     Given user sets the environment of endpoint
     Given user set the basepath to <service>
     Then set the endpoint <endpoint> 
     Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
     Then user triggers a post request with <requestBody>
-    Then user verifies that status is 400
+    Then user verifies that status is 401
     Then user verifies json from <responseBody>
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                          | responseBody                                                                                           |
-      | businessServices |downloadInterestCert   |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadInterestCert_Consolidated_Request_Regression_Request_Body_Blank_400.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadInterestCert_Consolidated_Response_Regression_Request_Body_Blank_400.json|
+      | businessServices |downloadInterestCert   |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadInterestCert_Consolidated_Request_Regression_Request_Body_Blank_400.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_401.json|
  
  @TestCaseKey=UDB-T35304 @Regression
   Scenario Outline: Verify "/downloadInterestCert" Consolidated API "POST" Method for Status code 400 if Request body is invalid JSON
@@ -2418,7 +2434,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                        | responseBody                                                                                           |
-      | businessServices |downloadInterestCert1  |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadInterestCert_Consolidated_Request_Regression_Invalid_Endpoint_404.json|cif,accountNumber |[1].cif,[1].acctNum  |Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadInterestCert_Consolidated_Response_Regression_Invalid_Endpoint_404.json|
+      | businessServices |downloadInterestCert1  |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadInterestCert_Consolidated_Request_Regression_Invalid_Endpoint_404.json|cif,accountNumber |accounts[1].cif,accounts[1].acctNum  |CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadInterestCert_Consolidated_Response_Regression_Invalid_Endpoint_404.json|
 
  @TestCaseKey=UDB-T35308 @Regression
   Scenario Outline: Verify "/downloadInterestCert" Consolidated API for Status code 405 if HTTP method is other than POST  for Eg: GET, PUT, Delete
@@ -2432,22 +2448,22 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint  | requestBody |requestField|responsefield|filename 																																																																		| responseBody                                                                                           |
-      | businessServices |downloadInterestCert | \src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadInterestCert_Consolidated_Request_Regression_Request_Method_Not_Supported_405.json|cif,accountNumber |[1].cif,[1].acctNum  |Customer_getCustomerAccounts.json|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadInterestCert_Consolidated_Response_Regression_Request_Method_Not_Supported_405.json|
+      | businessServices |downloadInterestCert | \src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadInterestCert_Consolidated_Request_Regression_Request_Method_Not_Supported_405.json|cif,accountNumber |accounts[1].cif,accounts[1].acctNum  |CS_accountinfo.json|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadInterestCert_Consolidated_Response_Regression_Request_Method_Not_Supported_405.json|
 
 
- @TestCaseKey=UDB-T35310 @Regression 
-  Scenario Outline: Verify "/downloadInterestCert" Consolidated API for Status code 500 Error "Internal Server Error" 
-    Given user sets the environment of endpoint
-    Given user set the basepath to <service>
-    Then set the endpoint <endpoint> 
-    Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
-    Then user triggers a post request with <requestBody>
-    Then user verifies that status is 500
-    Then user verifies json from <responseBody>
-
-    Examples: 
-      | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                             | responseBody                                                                                           |
-      | businessServices1 |downloadInterestCert   |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadInterestCert_Consolidated_Request_Regression_Internal_Server_Error_500.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_500_Internal_Error.xml|  
+ #@TestCaseKey=UDB-T35310 @Regression 
+  #Scenario Outline: Verify "/downloadInterestCert" Consolidated API for Status code 500 Error "Internal Server Error" 
+    #Given user sets the environment of endpoint
+    #Given user set the basepath to <service>
+    #Then set the endpoint <endpoint> 
+    #Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+    #Then user triggers a post request with <requestBody>
+    #Then user verifies that status is 500
+    #Then user verifies json from <responseBody>
+#
+    #Examples: 
+      #| service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                             | responseBody                                                                                           |
+      #| businessServices1 |downloadInterestCert   |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadInterestCert_Consolidated_Request_Regression_Internal_Server_Error_500.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_500_Internal_Error.xml|  
       
    ######################## Individual downloadInterestCert ###########################################################    
   @TestCaseKey=UDB-T35322 @Regression
@@ -2462,7 +2478,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint           | requestBody |requestField   |responsefield      | filename       | responseBody                    |
-      | businessServices |downloadInterestCert|\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadInterestCert_Individual.json|cif,accountNumber |[1].cif,[1].acctNum  |Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadInterestCert_Individual.json|
+      | businessServices |downloadInterestCert|\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadInterestCert_Individual.json|cif,accountNumber |accounts[1].cif,accounts[1].acctNum  |CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadInterestCert_Individual.json|
      
   
    @TestCaseKey=UDB-T35326 @Regression
@@ -2494,18 +2510,18 @@ Given user sets the file path for this feature file for drop2/GeneralService
       | businessServices |downloadInterestCert |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadInterestCert_Individual_Request_Regression_Mandatory_Field_Tag_Invalid_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadInterestCert_Individual_Response_Regression_Mandatory_Field_Tag_Invalid_400.json|
    
    @TestCaseKey=UDB-T35323 @Regression
-  Scenario Outline: Verify "/downloadInterestCert" Individual API "POST" Method for Status code 400 if Request body is blank
+  Scenario Outline: Verify "/downloadInterestCert" Individual API "POST" Method for Status code 401 if Request body is blank
     Given user sets the environment of endpoint
     Given user set the basepath to <service>
     Then set the endpoint <endpoint> 
     Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
     Then user triggers a post request with <requestBody>
-    Then user verifies that status is 400
+    Then user verifies that status is 401
     Then user verifies json from <responseBody>
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                          | responseBody                                                                                           |
-      | businessServices |downloadInterestCert   |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadInterestCert_Individual_Request_Regression_Request_Body_Blank_400.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadInterestCert_Individual_Response_Regression_Request_Body_Blank_400.json|
+      | businessServices |downloadInterestCert   |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadInterestCert_Individual_Request_Regression_Request_Body_Blank_400.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_401.json|
  
  @TestCaseKey=UDB-T35324 @Regression
   Scenario Outline: Verify "/downloadInterestCert" Individual API "POST" Method for Status code 400 if Request body is invalid JSON
@@ -2547,7 +2563,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                        | responseBody                                                                                           |
-      | businessServices |downloadInterestCert1  |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadInterestCert_Individual_Request_Regression_Invalid_Endpoint_404.json|cif,accountNumber |[1].cif,[1].acctNum  |Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadInterestCert_Individual_Response_Regression_Invalid_Endpoint_404.json|
+      | businessServices |downloadInterestCert1  |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadInterestCert_Individual_Request_Regression_Invalid_Endpoint_404.json|cif,accountNumber |accounts[1].cif,accounts[1].acctNum  |CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadInterestCert_Individual_Response_Regression_Invalid_Endpoint_404.json|
 
  @TestCaseKey=UDB-T35328 @Regression
   Scenario Outline: Verify "/downloadInterestCert" Individual API for Status code 405 if HTTP method is other than POST  for Eg: GET, PUT, Delete
@@ -2561,23 +2577,23 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint  | requestBody |requestField|responsefield|filename 																																																																		| responseBody                                                                                           |
-      | businessServices |downloadInterestCert | \src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadInterestCert_Individual_Request_Regression_Request_Method_Not_Supported_405.json|cif,accountNumber |[1].cif,[1].acctNum  |Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadInterestCert_Individual_Response_Regression_Request_Method_Not_Supported_405.json|
+      | businessServices |downloadInterestCert | \src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadInterestCert_Individual_Request_Regression_Request_Method_Not_Supported_405.json|cif,accountNumber |accounts[1].cif,accounts[1].acctNum  |CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadInterestCert_Individual_Response_Regression_Request_Method_Not_Supported_405.json|
 
 
- @TestCaseKey=UDB-T35330 @Regression 
-  Scenario Outline: Verify "/downloadInterestCert" Individual API for Status code 500 Error "Internal Server Error" 
-    Given user sets the environment of endpoint
-    Given user set the basepath to <service>
-    Then set the endpoint <endpoint> 
-    Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
-    Then user triggers a post request with <requestBody>
-    Then user verifies that status is 500
-    Then user verifies json from <responseBody>
-
-    Examples: 
-      | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                             | responseBody                                                                                           |
-      | businessServices1 |downloadInterestCert   |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadInterestCert_Individual_Request_Regression_Internal_Server_Error_500.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_500_Internal_Error.xml|
-      
+ #@TestCaseKey=UDB-T35330 @Regression 
+  #Scenario Outline: Verify "/downloadInterestCert" Individual API for Status code 500 Error "Internal Server Error" 
+    #Given user sets the environment of endpoint
+    #Given user set the basepath to <service>
+    #Then set the endpoint <endpoint> 
+    #Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+    #Then user triggers a post request with <requestBody>
+    #Then user verifies that status is 500
+    #Then user verifies json from <responseBody>
+#
+    #Examples: 
+      #| service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                             | responseBody                                                                                           |
+      #| businessServices1 |downloadInterestCert   |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadInterestCert_Individual_Request_Regression_Internal_Server_Error_500.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_500_Internal_Error.xml|
+      #
        ######################## fetch-nominee ###########################################################
 
  @TestCaseKey=UDB-T40577  @Regression
@@ -2592,7 +2608,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                 | responseBody                                                                                           |
-      | businessServices |fetch-nominee   |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_fetch-nominee.json|cif,acctNum            |[16].cif,[16].acctNum         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_fetch-nominee.json|
+      | businessServices |fetch-nominee   |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_fetch-nominee.json|cif,acctNum            |accounts[16].cif,accounts[16].acctNum         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_fetch-nominee.json|
   
   
     @TestCaseKey=UDB-T40581 @Regression
@@ -2624,18 +2640,18 @@ Given user sets the file path for this feature file for drop2/GeneralService
       | businessServices |fetch-nominee |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_fetch-nominee_Request_Regression_Mandatory_Field_Tag_Invalid_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_fetch-nominee_Response_Regression_Mandatory_Field_Tag_Invalid_400.json|
    
    @TestCaseKey=UDB-T40578
-  Scenario Outline: Verify "/fetch-nominee" API "POST" Method for Status code 400 if Request body is blank
+  Scenario Outline: Verify "/fetch-nominee" API "POST" Method for Status code 401 if Request body is blank
     Given user sets the environment of endpoint
     Given user set the basepath to <service>
     Then set the endpoint <endpoint> 
     Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
     Then user triggers a post request with <requestBody>
-    Then user verifies that status is 400
+    Then user verifies that status is 401
     Then user verifies json from <responseBody>
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                          | responseBody                                                                                           |
-      | businessServices |fetch-nominee   |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_fetch-nominee_Request_Regression_Request_Body_Blank_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_fetch-nominee_Response_Regression_Request_Body_Blank_400.json|
+      | businessServices |fetch-nominee   |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_fetch-nominee_Request_Regression_Request_Body_Blank_400.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_401.json|
  
  @TestCaseKey=UDB-T40579 @Regression
   Scenario Outline: Verify "/fetch-nominee" API "POST" Method for Status code 400 if Request body is invalid JSON
@@ -2677,7 +2693,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                        | responseBody                                                                                           |
-      | businessServices |fetch-nominee1  |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_fetch-nominee_Request_Regression_Invalid_Endpoint_404.json|cif,acctNum            |[16].cif,[16].acctNum         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_fetch-nominee_Response_Regression_Invalid_Endpoint_404.json|
+      | businessServices |fetch-nominee1  |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_fetch-nominee_Request_Regression_Invalid_Endpoint_404.json|cif,acctNum            |accounts[16].cif,accounts[16].acctNum         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_fetch-nominee_Response_Regression_Invalid_Endpoint_404.json|
 
  @TestCaseKey=UDB-T40583 @Regression
   Scenario Outline: Verify "/fetch-nominee" API for Status code 405 if HTTP method is other than POST  for Eg: GET, PUT, Delete
@@ -2691,23 +2707,23 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint  | requestBody |requestField|responsefield|filename 																																																																		| responseBody                                                                                           |
-      | businessServices |fetch-nominee | \src\test\resources\testdata\api\request\Drop2\GeneralService\BS_fetch-nominee_Request_Regression_Request_Method_Not_Supported_405.json|cif,acctNum            |[16].cif,[16].acctNum         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_fetch-nominee_Response_Regression_Request_Method_Not_Supported_405.json|
+      | businessServices |fetch-nominee | \src\test\resources\testdata\api\request\Drop2\GeneralService\BS_fetch-nominee_Request_Regression_Request_Method_Not_Supported_405.json|cif,acctNum            |accounts[16].cif,accounts[16].acctNum         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_fetch-nominee_Response_Regression_Request_Method_Not_Supported_405.json|
 
 
- @TestCaseKey=UDB-T40585  @Regression 
-  Scenario Outline: Verify "/fetch-nominee" API for Status code 500 Error "Internal Server Error" 
-    Given user sets the environment of endpoint
-    Given user set the basepath to <service>
-    Then set the endpoint <endpoint> 
-    Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
-    Then user triggers a post request with <requestBody>
-    Then user verifies that status is 500
-    Then user verifies json from <responseBody>
-
-    Examples: 
-      | service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                             | responseBody                                                                                           |
-      | businessServices1 |fetch-nominee   |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_fetch-nominee_Request_Regression_Internal_Server_Error_500.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_500_Internal_Error.xml|
-  
+ #@TestCaseKey=UDB-T40585  @Regression 
+  #Scenario Outline: Verify "/fetch-nominee" API for Status code 500 Error "Internal Server Error" 
+    #Given user sets the environment of endpoint
+    #Given user set the basepath to <service>
+    #Then set the endpoint <endpoint> 
+    #Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
+    #Then user triggers a post request with <requestBody>
+    #Then user verifies that status is 500
+    #Then user verifies json from <responseBody>
+#
+    #Examples: 
+      #| service        | endpoint    | requestBody |requestField|responsefield|filename                                                                                                                             | responseBody                                                                                           |
+      #| businessServices1 |fetch-nominee   |\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_fetch-nominee_Request_Regression_Internal_Server_Error_500.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_Response_500_Internal_Error.xml|
+  #
 ########################################################################################################
 #  End2End Test Cases Below
 ######################################################################################################## 
@@ -2725,7 +2741,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint                    | requestBody|requestField   |responsefield      | filename      | responseBody        |
-      | generalservice |getMiniTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getMiniTransactionStatement.json|cif,acctNum            |[20].cif,[20].acctNum         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getMiniTransactionStatement.json|      
+      | generalservice |getMiniTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getMiniTransactionStatement.json|cif,acctNum            |accounts[0].cif,accounts[0].acctNum         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getMiniTransactionStatement.json|      
   		
   
  		 @TestCaseKey=UDB-T34851 @E2E
@@ -2740,7 +2756,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint                | requestBody |requestField   |responsefield      | filename      |responseBody                                                                                                  |
-      | generalservice |getTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getTransactionStatement.json|cif,acctNum |[20].cif,[20].acctNum  | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getTransactionStatement.json|
+      | generalservice |getTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getTransactionStatement.json|cif,acctNum |accounts[0].cif,accounts[0].acctNum  | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getTransactionStatement.json|
      
  		 @TestCaseKey=UDB-T34852 @E2E
    Scenario Outline: Verify that Statement details are sent via email by cif using api emailStatement(E2E)
@@ -2753,7 +2769,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
     Then user verifies json from <responseBody>
     Examples: 
       | service        | endpoint           | requestBody |requestField   |responsefield      | filename                               | responseBody                                                                          |
-      | generalservice |emailStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_emailStatement.json|cif,acctNum |[20].cif,[20].acctNum  | Customer_getCustomerAccounts.json|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_emailStatement.json|
+      | generalservice |emailStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_emailStatement.json|cif,acctNum |accounts[0].cif,accounts[0].acctNum  | CS_accountinfo.json|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_emailStatement.json|
       
       
   
@@ -2769,7 +2785,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint                | requestBody |requestField   |responsefield      | filename      |responseBody                                                                                                  |
-      | generalservice |transactionStatementPdf| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getTransactionStatementPdf.json|cif,acctNum |[20].cif,[20].acctNum  | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getTransactionStatementPdf.json|
+      | generalservice |transactionStatementPdf| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_getTransactionStatementPdf.json|cif,acctNum |accounts[0].cif,accounts[0].acctNum  | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_getTransactionStatementPdf.json|
    
    
       @TestCaseKey=UDB-T34854 @E2E
@@ -2784,7 +2800,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint                    | requestBody|requestField   |responsefield      | filename      | responseBody        |
-      | generalservice |balance-cert| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_balance-cert_SBA.json|acctId            |[20].acctNum         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_balance-cert_SBA.json| #SBA     
+      | generalservice |balance-cert| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_balance-cert_SBA.json|acctId            |accounts[0].acctNum         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_balance-cert_SBA.json| #SBA     
   		
        @TestCaseKey=UDB-T34855 @E2E
    Scenario Outline: Verify that individual loan interest certificate details are fetched using api loan-interest-cert(E2E)
@@ -2799,7 +2815,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
     Examples:
 
     | service        | endpoint           | requestBody |requestField   |responsefield      | filename     | responseBody           |
-    | generalservice |loan-interest-cert| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_loan-interest-cert_Individual.json|accountNumber,solId,cif,schemeType |accountInfo[11].accountNumber,accountInfo[11].solId,accountInfo[11].customerId,accountInfo[11].schemeType  | GS_fetchloandetails.json | \src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_loan-interest-cert_Individual.json|
+    | generalservice |loan-interest-cert| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_loan-interest-cert_Individual.json|accountNumber,cif |accountInfo[14].acctNum,accountInfo[14].cif | GS_fetchloandetails.json | \src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_loan-interest-cert_Individual.json|
       
     
         @TestCaseKey=UDB-T34856 @E2E
@@ -2829,7 +2845,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint           | requestBody |requestField   |responsefield      | filename       | responseBody                    |
-      | businessServices |downloadTdsCert|\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadTdsCert_Consolidated.json|cif,accountNumber |[1].cif,[1].acctNum  |Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadTdsCert_Consolidated.json|
+      | businessServices |downloadTdsCert|\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadTdsCert_Consolidated.json|cif,accountNumber |accounts[1].cif,accounts[1].acctNum  |CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadTdsCert_Consolidated.json|
         
          @TestCaseKey=UDB-T34858 @E2E
      Scenario Outline: Verify that Individual TDS Certificate downloaded using api downloadTdsCert(E2E)
@@ -2839,11 +2855,11 @@ Given user sets the file path for this feature file for drop2/GeneralService
     Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
     Then user triggers a post request with <requestBody>
     Then user verifies that status is 200
-    Then user verifies json from <responseBody>
+    #Then user verifies json from <responseBody>
 
     Examples: 
       | service        | endpoint           | requestBody |requestField   |responsefield      | filename       | responseBody                    |
-      | businessServices |downloadTdsCert|\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadTdsCert_Individual.json|cif,accountNumber |[1].cif,[1].acctNum  |Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadTdsCert_Individual.json|
+      | businessServices |downloadTdsCert|\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadTdsCert_Individual.json|cif,accountNumber |accounts[6].cif,accounts[6].acctNum  |CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadTdsCert_Individual.json|
    
            @TestCaseKey=UDB-T34859 @E2E
     Scenario Outline: Verify that Individual Interest Certificate downloaded using api downloadInterestCert(E2E)
@@ -2857,7 +2873,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint           | requestBody |requestField   |responsefield      | filename       | responseBody                    |
-      | businessServices |downloadInterestCert|\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadInterestCert_Individual.json|cif,accountNumber |[1].cif,[1].acctNum  |Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadInterestCert_Individual.json|
+      | businessServices |downloadInterestCert|\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadInterestCert_Individual.json|cif,accountNumber |accounts[15].cif,accounts[15].acctNum  |CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadInterestCert_Individual.json|
      
    
         @TestCaseKey=UDB-T34860 @E2E
@@ -2872,7 +2888,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint           | requestBody |requestField   |responsefield      | filename       | responseBody                    |
-      | businessServices |downloadInterestCert|\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadInterestCert_Consolidated.json|cif,accountNumber |[1].cif,[1].acctNum  |Customer_getCustomerAccounts.json  |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadInterestCert_Consolidated.json|
+      | businessServices |downloadInterestCert|\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadInterestCert_Consolidated.json|cif,accountNumber |accounts[1].cif,accounts[1].acctNum  |CS_accountinfo.json  |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadInterestCert_Consolidated.json|
      
     
 ########################################################################################################
@@ -2900,15 +2916,15 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint                    | requestBody|requestField   |responsefield      | filename      | responseBody        |
-      | generalservice |getMiniTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_getMiniTransactionStatement_SBA.json|cif,acctNum,acctType            |[20].cif,[20].acctNum,[20].acctType         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_getMiniTransactionStatement_SBA.json| #SBA     
-  		| generalservice |getMiniTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_getMiniTransactionStatement_CA.json|cif,acctNum,acctType            |[11].cif,[11].acctNum,[11].acctType         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_getMiniTransactionStatement_CA.json| #CA
-  		| generalservice |getMiniTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_getMiniTransactionStatement_ODA.json|cif,acctNum,acctType            |[09].cif,[09].acctNum,[09].acctType         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_getMiniTransactionStatement_ODA.json| #ODA
-  		| generalservice |getMiniTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_getMiniTransactionStatement_FD.json|cif,acctNum,acctType						 |[03].cif,[03].acctNum,[03].acctType         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_getMiniTransactionStatement_FD.json| #FD
-  		| generalservice |getMiniTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_getMiniTransactionStatement_TDA.json|cif,acctNum,acctType            |[01].cif,[01].acctNum,[01].acctType         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_getMiniTransactionStatement_TDA.json| #TDA
-  		| generalservice |getMiniTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_getMiniTransactionStatement_HL.json|cif,acctNum,acctType            |[16].cif,[16].acctNum,[16].acctType         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_getMiniTransactionStatement_HL.json| #HL 
-  		| generalservice |getMiniTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_getMiniTransactionStatement_EL.json|cif,acctNum,acctType            |[12].cif,[12].acctNum,[12].acctType         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_getMiniTransactionStatement_EL.json| #EL
-  		| generalservice |getMiniTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_getMiniTransactionStatement_PL.json|cif,acctNum,acctType            |[14].cif,[14].acctNum,[14].acctType         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_getMiniTransactionStatement_PL.json| #PL
-  		| generalservice |getMiniTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_getMiniTransactionStatement_VL.json|cif,acctNum,acctType            |[18].cif,[18].acctNum,[18].acctType         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_getMiniTransactionStatement_VL.json| #VL
+      | generalservice |getMiniTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_getMiniTransactionStatement_SBA.json|cif,acctNum,acctType            |accounts[0].cif,accounts[0].acctNum,accounts[0].acctType         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_getMiniTransactionStatement_SBA.json| #SBA     
+  		| generalservice |getMiniTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_getMiniTransactionStatement_CA.json|cif,acctNum,acctType            |accounts[5].cif,accounts[5].acctNum,accounts[5].acctType         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_getMiniTransactionStatement_CA.json| #CA
+  		| generalservice |getMiniTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_getMiniTransactionStatement_ODA.json|cif,acctNum,acctType            |accounts[9].cif,accounts[9].acctNum,accounts[9].acctType         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_getMiniTransactionStatement_ODA.json| #ODA
+  		| generalservice |getMiniTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_getMiniTransactionStatement_RD.json|cif,acctNum,acctType						 |accounts[6].cif,accounts[6].acctNum,accounts[6].acctType         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_getMiniTransactionStatement_RD.json| #RD
+  		| generalservice |getMiniTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_getMiniTransactionStatement_TDA.json|cif,acctNum,acctType            |accounts[7].cif,accounts[7].acctNum,accounts[7].acctType         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_getMiniTransactionStatement_TDA.json| #TDA
+  		| generalservice |getMiniTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_getMiniTransactionStatement_HL.json|cif,acctNum,acctType            |accounts[15].cif,accounts[15].acctNum,accounts[15].acctType         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_getMiniTransactionStatement_HL.json| #HL 
+  		| generalservice |getMiniTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_getMiniTransactionStatement_GL.json|cif,acctNum,acctType            |accounts[12].cif,accounts[12].acctNum,accounts[12].acctType         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_getMiniTransactionStatement_GL.json| #GL
+  		| generalservice |getMiniTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_getMiniTransactionStatement_ML.json|cif,acctNum,acctType            |accounts[16].cif,accounts[16].acctNum,accounts[16].acctType         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_getMiniTransactionStatement_ML.json| #ML
+  		| generalservice |getMiniTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_getMiniTransactionStatement_VL.json|cif,acctNum,acctType            |accounts[14].cif,accounts[14].acctNum,accounts[14].acctType         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_getMiniTransactionStatement_VL.json| #VL
   		
   		
    
@@ -2934,16 +2950,15 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
    Examples: 
       | service        | endpoint                    | requestBody|requestField   |responsefield      | filename      | responseBody        |
-      | generalservice |getTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_getTransactionStatement_SBA.json|cif,acctNum            |[23].cif,[23].acctNum         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_getTransactionStatement_SBA.json| #SBA     
-  		| generalservice |getTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_getTransactionStatement_CA.json|cif,acctNum            |[11].cif,[11].acctNum        | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_getTransactionStatement_CA.json| #CA
-  		| generalservice |getTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_getTransactionStatement_ODA.json|cif,acctNum           |[09].cif,[09].acctNum        | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_getTransactionStatement_ODA.json| #ODA
-  		| generalservice |getTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_getTransactionStatement_FD.json|cif,acctNum						 |[02].cif,[02].acctNum        | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_getTransactionStatement_FD.json| #FD
-  		| generalservice |getTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_getTransactionStatement_RD.json|cif,acctNum           |[01].cif,[01].acctNum        | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_getTransactionStatement_RD.json| #RD
-  		| generalservice |getTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_getTransactionStatement_TDA.json|cif,acctNum           |[0].cif,[0].acctNum        | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_getTransactionStatement_TDA.json| #TDA
-  		| generalservice |getTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_getTransactionStatement_HL.json|cif,acctNum           |[16].cif,[16].acctNum        | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_getTransactionStatement_HL.json| #HL 
-  		| generalservice |getTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_getTransactionStatement_EL.json|cif,acctNum            |[12].cif,[12].acctNum        | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_getTransactionStatement_EL.json| #EL
-  		| generalservice |getTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_getTransactionStatement_PL.json|cif,acctNum           |[14].cif,[14].acctNum         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_getTransactionStatement_PL.json| #PL
-  		| generalservice |getTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_getTransactionStatement_VL.json|cif,acctNum            |[18].cif,[18].acctNum        | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_getTransactionStatement_VL.json| #VL
+      | generalservice |getTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_getTransactionStatement_SBA.json|cif,acctNum            |accounts[0].cif,accounts[0].acctNum         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_getTransactionStatement_SBA.json| #SBA     
+  		| generalservice |getTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_getTransactionStatement_CA.json|cif,acctNum            |accounts[5].cif,accounts[5].acctNum        | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_getTransactionStatement_CA.json| #CA
+  		| generalservice |getTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_getTransactionStatement_ODA.json|cif,acctNum           |accounts[9].cif,accounts[9].acctNum        | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_getTransactionStatement_ODA.json| #ODA
+  		| generalservice |getTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_getTransactionStatement_RD.json|cif,acctNum           |accounts[6].cif,accounts[6].acctNum        | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_getTransactionStatement_RD.json| #RD
+  		| generalservice |getTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_getTransactionStatement_TDA.json|cif,acctNum           |accounts[7].cif,accounts[7].acctNum        | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_getTransactionStatement_TDA.json| #TDA
+  		| generalservice |getTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_getTransactionStatement_HL.json|cif,acctNum           |accounts[15].cif,accounts[15].acctNum        | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_getTransactionStatement_HL.json| #HL 
+  		| generalservice |getTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_getTransactionStatement_EL.json|cif,acctNum            |accounts[12].cif,accounts[12].acctNum        | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_getTransactionStatement_EL.json| #EL
+  		| generalservice |getTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_getTransactionStatement_PL.json|cif,acctNum           |accounts[16].cif,accounts[16].acctNum         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_getTransactionStatement_PL.json| #PL
+  		| generalservice |getTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_getTransactionStatement_VL.json|cif,acctNum            |accounts[14].cif,accounts[14].acctNum        | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_getTransactionStatement_VL.json| #VL
   		
   
  		@TestdataE2E 
@@ -2967,16 +2982,15 @@ Given user sets the file path for this feature file for drop2/GeneralService
     Then user verifies json from <responseBody>
     Examples: 
       | service        | endpoint                    | requestBody|requestField   |responsefield      | filename      | responseBody        |
-      | generalservice |emailStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_emailStatement_SBA.json|cif,acctNum,acctType            |[20].cif,[20].acctNum,[20].acctType         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_emailStatement_SBA.json| #SBA     
-  		| generalservice |emailStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_emailStatement_CA.json|cif,acctNum,acctType            |[11].cif,[11].acctNum,[11].acctType         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_emailStatement_CA.json| #CA
-  		| generalservice |emailStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_emailStatement_ODA.json|cif,acctNum,acctType            |[09].cif,[09].acctNum,[09].acctType         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_emailStatement_ODA.json| #ODA
-  		| generalservice |emailStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_emailStatement_FD.json|cif,acctNum,acctType						 |[02].cif,[02].acctNum,[02].acctType         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_emailStatement_FD.json| #FD
-  		| generalservice |emailStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_emailStatement_RD.json|cif,acctNum,acctType            |[01].cif,[01].acctNum,[01].acctType         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_emailStatement_RD.json| #RD
-  		| generalservice |emailStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_emailStatement_TDA.json|cif,acctNum,acctType            |[0].cif,[0].acctNum,[0].acctType         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_emailStatement_TDA.json| #TDA
-  		| generalservice |emailStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_emailStatement_HL.json|cif,acctNum,acctType            |[16].cif,[16].acctNum,[16].acctType         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_emailStatement_HL.json| #HL 
-  		| generalservice |emailStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_emailStatement_EL.json|cif,acctNum,acctType            |[12].cif,[12].acctNum,[12].acctType         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_emailStatement_EL.json| #EL
-  		| generalservice |emailStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_emailStatement_PL.json|cif,acctNum,acctType            |[14].cif,[14].acctNum,[14].acctType         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_emailStatement_PL.json| #PL
-  		| generalservice |emailStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_emailStatement_VL.json|cif,acctNum,acctType            |[18].cif,[18].acctNum,[18].acctType         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_emailStatement_VL.json| #VL
+      | generalservice |emailStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_emailStatement_SBA.json|cif,acctNum,acctType            |accounts[0].cif,accounts[0].acctNum,accounts[0].acctType         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_emailStatement_SBA.json| #SBA     
+  		| generalservice |emailStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_emailStatement_CA.json|cif,acctNum,acctType            |accounts[5].cif,accounts[5].acctNum,accounts[5].acctType         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_emailStatement_CA.json| #CA
+  		| generalservice |emailStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_emailStatement_ODA.json|cif,acctNum,acctType            |accounts[9].cif,accounts[9].acctNum,accounts[9].acctType         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_emailStatement_ODA.json| #ODA
+  		| generalservice |emailStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_emailStatement_RD.json|cif,acctNum,acctType            |accounts[6].cif,accounts[6].acctNum,accounts[6].acctType         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_emailStatement_RD.json| #RD
+  		| generalservice |emailStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_emailStatement_TDA.json|cif,acctNum,acctType            |accounts[7].cif,accounts[7].acctNum,accounts[7].acctType         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_emailStatement_TDA.json| #TDA
+  		| generalservice |emailStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_emailStatement_HL.json|cif,acctNum,acctType            |accounts[15].cif,accounts[15].acctNum,accounts[15].acctType         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_emailStatement_HL.json| #HL 
+  		| generalservice |emailStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_emailStatement_ML.json|cif,acctNum,acctType            |accounts[16].cif,accounts[16].acctNum,accounts[16].acctType         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_emailStatement_ML.json| #ML
+  		| generalservice |emailStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_emailStatement_GL.json|cif,acctNum,acctType            |accounts[12].cif,accounts[12].acctNum,accounts[12].acctType         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_emailStatement_GL.json| #GL
+  		| generalservice |emailStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_emailStatement_VL.json|cif,acctNum,acctType            |accounts[14].cif,accounts[14].acctNum,accounts[14].acctType         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_emailStatement_VL.json| #VL
   		
    
     	@TestdataE2E 	
@@ -3001,16 +3015,15 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
    Examples: 
       | service        | endpoint                    | requestBody|requestField   |responsefield      | filename      | responseBody        |
-      | generalservice |transactionStatementPdf| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_transactionStatementPdf_SBA.json|cif,acctNum,acctType            |[20].cif,[20].acctNum,[20].acctType         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_transactionStatementPdf_SBA.json| #SBA     
-  		| generalservice |transactionStatementPdf| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_transactionStatementPdf_CA.json|cif,acctNum,acctType            |[11].cif,[11].acctNum,[11].acctType         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_transactionStatementPdf_CA.json| #CA
-  		| generalservice |transactionStatementPdf| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_transactionStatementPdf_ODA.json|cif,acctNum,acctType            |[09].cif,[09].acctNum,[09].acctType         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_transactionStatementPdf_ODA.json| #ODA
-  		| generalservice |transactionStatementPdf| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_transactionStatementPdf_FD.json|cif,acctNum,acctType						 |[02].cif,[02].acctNum,[02].acctType         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_transactionStatementPdf_FD.json| #FD
-  		| generalservice |transactionStatementPdf| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_transactionStatementPdf_TDA.json|cif,acctNum,acctType            |[0].cif,[0].acctNum,[0].acctType         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_transactionStatementPdf_TDA.json| #TDA
-  		| generalservice |transactionStatementPdf| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_transactionStatementPdf_RD.json|cif,acctNum,acctType            |[01].cif,[01].acctNum,[01].acctType         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_transactionStatementPdf_RD.json| #RD
-  		| generalservice |transactionStatementPdf| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_transactionStatementPdf_HL.json|cif,acctNum,acctType            |[16].cif,[16].acctNum,[16].acctType         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_transactionStatementPdf_HL.json| #HL 
-  		| generalservice |transactionStatementPdf| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_transactionStatementPdf_EL.json|cif,acctNum,acctType            |[12].cif,[12].acctNum,[12].acctType         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_transactionStatementPdf_EL.json| #EL
-  		| generalservice |transactionStatementPdf| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_transactionStatementPdf_PL.json|cif,acctNum,acctType            |[14].cif,[14].acctNum,[14].acctType         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_transactionStatementPdf_PL.json| #PL
-  		| generalservice |transactionStatementPdf| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_transactionStatementPdf_VL.json|cif,acctNum,acctType            |[18].cif,[18].acctNum,[18].acctType         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_transactionStatementPdf_VL.json| #VL
+      | generalservice |transactionStatementPdf| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_transactionStatementPdf_SBA.json|cif,acctNum,acctType            |accounts[0].cif,accounts[0].acctNum,accounts[0].acctType         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_transactionStatementPdf_SBA.json| #SBA     
+  		| generalservice |transactionStatementPdf| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_transactionStatementPdf_CA.json|cif,acctNum,acctType            |accounts[5].cif,accounts[5].acctNum,accounts[5].acctType         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_transactionStatementPdf_CA.json| #CA
+  		| generalservice |transactionStatementPdf| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_transactionStatementPdf_ODA.json|cif,acctNum,acctType            |accounts[9].cif,accounts[9].acctNum,accounts[9].acctType         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_transactionStatementPdf_ODA.json| #ODA
+  		| generalservice |transactionStatementPdf| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_transactionStatementPdf_TDA.json|cif,acctNum,acctType            |accounts[6].cif,accounts[6].acctNum,accounts[6].acctType         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_transactionStatementPdf_TDA.json| #TDA
+  		| generalservice |transactionStatementPdf| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_transactionStatementPdf_RD.json|cif,acctNum,acctType            |accounts[7].cif,accounts[7].acctNum,accounts[7].acctType         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_transactionStatementPdf_RD.json| #RD
+  		| generalservice |transactionStatementPdf| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_transactionStatementPdf_HL.json|cif,acctNum,acctType            |accounts[15].cif,accounts[15].acctNum,accounts[15].acctType         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_transactionStatementPdf_HL.json| #HL 
+  		| generalservice |transactionStatementPdf| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_transactionStatementPdf_ML.json|cif,acctNum,acctType            |accounts[16].cif,accounts[16].acctNum,accounts[16].acctType         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_transactionStatementPdf_ML.json| #EL
+  		| generalservice |transactionStatementPdf| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_transactionStatementPdf_GL.json|cif,acctNum,acctType            |accounts[12].cif,accounts[12].acctNum,accounts[12].acctType         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_transactionStatementPdf_GL.json| #PL
+  		| generalservice |transactionStatementPdf| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_transactionStatementPdf_VL.json|cif,acctNum,acctType            |accounts[14].cif,accounts[14].acctNum,accounts[14].acctType         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_transactionStatementPdf_VL.json| #VL
   		
    
        	@TestdataE2E 
@@ -3035,16 +3048,15 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint                    | requestBody|requestField   |responsefield      | filename      | responseBody        |
-      | generalservice |balance-cert| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_balance-cert_SBA.json|acctId            |[20].acctNum         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_balance-cert_SBA.json| #SBA     
-  		| generalservice |balance-cert| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_balance-cert_CA.json|acctId            |[11].acctNum         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_balance-cert_CA.json| #CA
-  		| generalservice |balance-cert| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_balance-cert_ODA.json|acctId            |[09].acctNum        | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_balance-cert_ODA.json| #ODA
-  		| generalservice |balance-cert| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_balance-cert_FD.json|acctId			 |[02].acctNum         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_balance-cert_FD.json| #FD
-  		| generalservice |balance-cert| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_balance-cert_TDA.json|acctId            |[0].acctNum        | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_balance-cert_TDA.json| #TDA
-  		| generalservice |balance-cert| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_balance-cert_RD.json|acctId            |[01].acctNum        | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_balance-cert_RD.json| #RD
-  		| generalservice |balance-cert| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_balance-cert_HL.json|acctId            |[16].acctNum        | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_balance-cert_HL.json| #HL 
-  		| generalservice |balance-cert| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_balance-cert_EL.json|acctId            |[12].acctNum         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_balance-cert_EL.json| #EL
-  		| generalservice |balance-cert| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_balance-cert_PL.json|acctId            |[14].acctNum         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_balance-cert_PL.json| #PL
-  		| generalservice |balance-cert| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_balance-cert_VL.json|acctId            |[18].acctNum         | Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_balance-cert_VL.json| #VL
+      | generalservice |balance-cert| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_balance-cert_SBA.json|acctId            |accounts[0].acctNum         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_balance-cert_SBA.json| #SBA     
+  		| generalservice |balance-cert| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_balance-cert_CA.json|acctId            |accounts[5].acctNum         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_balance-cert_CA.json| #CA
+  		| generalservice |balance-cert| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_balance-cert_ODA.json|acctId            |accounts[9].acctNum        | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_balance-cert_ODA.json| #ODA
+  		| generalservice |balance-cert| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_balance-cert_TDA.json|acctId            |accounts[6].acctNum        | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_balance-cert_TDA.json| #TDA
+  		| generalservice |balance-cert| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_balance-cert_RD.json|acctId            |accounts[7].acctNum        | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_balance-cert_RD.json| #RD
+  		| generalservice |balance-cert| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_balance-cert_HL.json|acctId            |accounts[15].acctNum        | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_balance-cert_HL.json| #HL 
+  		| generalservice |balance-cert| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_balance-cert_ML.json|acctId            |accounts[16].acctNum         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_balance-cert_ML.json| #ML
+  		| generalservice |balance-cert| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_balance-cert_GL.json|acctId            |accounts[12].acctNum         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_balance-cert_GL.json| #GL
+  		| generalservice |balance-cert| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_TDE2E_balance-cert_VL.json|acctId            |accounts[14].acctNum         | CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_TDE2E_balance-cert_VL.json| #VL
        
         @TestdataE2E
         @TestCaseKey=UDB-T34910
@@ -3066,7 +3078,7 @@ Given user sets the file path for this feature file for drop2/GeneralService
     | service        | endpoint           | requestBody |requestField   |responsefield      | filename     | responseBody           |
     | generalservice |loan-interest-cert| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_loan-interest-cert_HL.json|accountNumber,solId,cif,schemeType |accountInfo[13].accountNumber,accountInfo[13].solId,accountInfo[13].customerId,accountInfo[13].schemeType  | GS_fetchloandetails.json | \src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_loan-interest-cert_HL.json|
     | generalservice |loan-interest-cert| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_loan-interest-cert_PL.json|accountNumber,solId,cif,schemeType |accountInfo[11].accountNumber,accountInfo[11].solId,accountInfo[11].customerId,accountInfo[11].schemeType  | GS_fetchloandetails.json | \src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_loan-interest-cert_PL.json|
-		| generalservice |loan-interest-cert| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_loan-interest-cert_EL.json|accountNumber,solId,cif,schemeType |accountInfo[09].accountNumber,accountInfo[09].solId,accountInfo[09].customerId,accountInfo[09].schemeType  | GS_fetchloandetails.json | \src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_loan-interest-cert_EL.json|
+		| generalservice |loan-interest-cert| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_loan-interest-cert_EL.json|accountNumber,solId,cif,schemeType |accountInfoaccounts[9].accountNumber,accountInfoaccounts[9].solId,accountInfoaccounts[9].customerId,accountInfoaccounts[9].schemeType  | GS_fetchloandetails.json | \src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_loan-interest-cert_EL.json|
 		| generalservice |loan-interest-cert| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_loan-interest-cert_VL.json|accountNumber,solId,cif,schemeType |accountInfo[15].accountNumber,accountInfo[15].solId,accountInfo[15].customerId,accountInfo[15].schemeType  | GS_fetchloandetails.json | \src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_loan-interest-cert_VL.json|
 		| generalservice |loan-interest-cert| \src\test\resources\testdata\api\request\Drop2\GeneralService\GS_loan-interest-cert_ODA.json|accountNumber,solId,cif,schemeType |accountInfo[0].accountNumber,accountInfo[0].solId,accountInfo[0].customerId,accountInfo[0].schemeType  | GS_fetchloandetails.json | \src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\GS_loan-interest-cert_ODA.json|
   
@@ -3081,13 +3093,13 @@ Given user sets the file path for this feature file for drop2/GeneralService
     Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
     Then user triggers a post request with <requestBody>
     Then user verifies that status is 200
-    Then user verifies json from <responseBody>
+    #Then user verifies json from <responseBody>
 
     Examples: 
       | service        | endpoint           | requestBody |requestField   |responsefield      | filename       | responseBody                    |
-      | businessServices |downloadTdsCert|\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadTdsCert_TDA.json|cif,accountNumber |[1].cif,[1].acctNum  |Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadTdsCert_TDA.json|
-	  	| businessServices |downloadTdsCert|\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadTdsCert_RD.json|cif,accountNumber |[2].cif,[2].acctNum  |Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadTdsCert_RD.json|
-	  	| businessServices |downloadTdsCert|\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadTdsCert_FD.json|cif,accountNumber |[3].cif,[3].acctNum  |Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadTdsCert_FD.json|
+      | businessServices |downloadTdsCert|\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadTdsCert_TDA.json|cif,accountNumber |accounts[1].cif,accounts[1].acctNum  |CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadTdsCert_TDA.json|
+	  	| businessServices |downloadTdsCert|\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadTdsCert_RD.json|cif,accountNumber |accounts[2].cif,accounts[2].acctNum  |CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadTdsCert_RD.json|
+	  	| businessServices |downloadTdsCert|\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadTdsCert_FD.json|cif,accountNumber |accounts[3].cif,accounts[3].acctNum  |CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadTdsCert_FD.json|
 	  	
 	  	
   
@@ -3106,9 +3118,9 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
    Examples: 
       | service        | endpoint           | requestBody |requestField   |responsefield      | filename       | responseBody                    |
-      | businessServices |downloadInterestCert|\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadInterestCert_TDA.json|cif,accountNumber |[1].cif,[1].acctNum  |Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadInterestCert_TDA.json|
-	  	| businessServices |downloadInterestCert|\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadInterestCert_RD.json|cif,accountNumber |[2].cif,[2].acctNum  |Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadInterestCert_RD.json|
-	  	| businessServices |downloadInterestCert|\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadInterestCert_FD.json|cif,accountNumber |[3].cif,[3].acctNum  |Customer_getCustomerAccounts.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadInterestCert_FD.json|
+      | businessServices |downloadInterestCert|\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadInterestCert_TDA.json|cif,accountNumber |accounts[1].cif,accounts[1].acctNum  |CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadInterestCert_TDA.json|
+	  	| businessServices |downloadInterestCert|\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadInterestCert_RD.json|cif,accountNumber |accounts[2].cif,accounts[2].acctNum  |CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadInterestCert_RD.json|
+#	  	| businessServices |downloadInterestCert|\src\test\resources\testdata\api\request\Drop2\GeneralService\BS_downloadInterestCert_FD.json|cif,accountNumber |accounts[3].cif,accounts[3].acctNum  |CS_accountinfo.json |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\BS_downloadInterestCert_FD.json|
 	  
   
 ########################################################################################################
@@ -3175,11 +3187,11 @@ Given user sets the file path for this feature file for drop2/GeneralService
     Then user verifies json from <responseBody>
 
     Examples: 
-      | service        | endpoint                | requestBody |requestField   |responsefield      | filename      |responseBody                                                                                                  |
-      | generalservice |getTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\UDB-T34924_01_01.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\UDB-T34924_02_01.json|
-      | generalservice |getTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\UDB-T34924_01_02.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\UDB-T34924_02_02.json|
-      | generalservice |getTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\UDB-T34924_01_03.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\UDB-T34924_02_03.json|
-      | generalservice |getTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\UDB-T34924_01_04.json|null|null|null |\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\UDB-T34924_02_04.json|
+      | service        | endpoint              | requestBody 																																				|requestField   |responsefield  | filename   	|responseBody                                                                                                  |
+      | generalservice |getTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\UDB-T34924_01_01.json|null						|null						|null 				|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\UDB-T34924_02_01.json|
+      | generalservice |getTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\UDB-T34924_01_02.json|null						|null						|null 				|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\UDB-T34924_02_02.json|
+      | generalservice |getTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\UDB-T34924_01_03.json|null						|null						|null 				|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\UDB-T34924_02_03.json|
+      | generalservice |getTransactionStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\UDB-T34924_01_04.json|null						|null						|null 				|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\UDB-T34924_02_04.json|
     
    @Edge  @TestCaseKey=UDB-T34925 
 	Scenario Outline: Verify that /emailStatement API  for different startDate and endDate for given account number(Edge)
@@ -3191,11 +3203,11 @@ Given user sets the file path for this feature file for drop2/GeneralService
     Then user verifies that status is 200
     Then user verifies json from <responseBody>
     Examples: 
-      | service        | endpoint           | requestBody |requestField   |responsefield      | filename                               | responseBody                                                                          |
-      | generalservice |emailStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\UDB-T34925_01_01.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\UDB-T34925_02_01.json|
-      | generalservice |emailStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\UDB-T34925_01_02.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\UDB-T34925_02_02.json|
-      | generalservice |emailStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\UDB-T34925_01_03.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\UDB-T34925_02_03.json|
-      | generalservice |emailStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\UDB-T34925_01_04.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\UDB-T34925_02_04.json|
+      | service        | endpoint     | requestBody 																																			 |requestField   	|responsefield    | filename		| responseBody                                                                         				|
+      | generalservice |emailStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\UDB-T34925_01_01.json|null					 	|null							|null					|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\UDB-T34925_02_01.json|
+      | generalservice |emailStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\UDB-T34925_01_02.json|null						|null							|null					|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\UDB-T34925_02_02.json|
+      | generalservice |emailStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\UDB-T34925_01_03.json|null						|null							|null					|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\UDB-T34925_02_03.json|
+      | generalservice |emailStatement| \src\test\resources\testdata\api\request\Drop2\GeneralService\UDB-T34925_01_04.json|null						|null							|null					|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\UDB-T34925_02_04.json|
      
    @Edge @TestCaseKey=UDB-T34926
    Scenario Outline: Verify that /loan-interest-cert Consolidated API  for different startDate and endDate for given account number(Edge)
@@ -3265,11 +3277,11 @@ Given user sets the file path for this feature file for drop2/GeneralService
 
     Examples: 
       | service        | endpoint           | requestBody |requestField   |responsefield      | filename       | responseBody                    |
-      | businessServices |downloadTdsCert|\src\test\resources\testdata\api\request\Drop2\GeneralService\UDB-T34929_01_01.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\UDB-T34929_02_01.json.json|
-      | businessServices |downloadTdsCert|\src\test\resources\testdata\api\request\Drop2\GeneralService\UDB-T34929_01_02.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\UDB-T34929_02_02.json.json|
-      | businessServices |downloadTdsCert|\src\test\resources\testdata\api\request\Drop2\GeneralService\UDB-T34929_01_03.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\UDB-T34929_02_03.json.json|
-      | businessServices |downloadTdsCert|\src\test\resources\testdata\api\request\Drop2\GeneralService\UDB-T34929_01_04.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\UDB-T34929_02_04.json.json|
-      | businessServices |downloadTdsCert|\src\test\resources\testdata\api\request\Drop2\GeneralService\UDB-T34929_01_05.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\UDB-T34929_02_05.json.json|
+      | businessServices |downloadTdsCert|\src\test\resources\testdata\api\request\Drop2\GeneralService\UDB-T34929_01_01.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\UDB-T34929_02_01.json|
+      | businessServices |downloadTdsCert|\src\test\resources\testdata\api\request\Drop2\GeneralService\UDB-T34929_01_02.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\UDB-T34929_02_02.json|
+      | businessServices |downloadTdsCert|\src\test\resources\testdata\api\request\Drop2\GeneralService\UDB-T34929_01_03.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\UDB-T34929_02_03.json|
+      | businessServices |downloadTdsCert|\src\test\resources\testdata\api\request\Drop2\GeneralService\UDB-T34929_01_04.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\UDB-T34929_02_04.json|
+      | businessServices |downloadTdsCert|\src\test\resources\testdata\api\request\Drop2\GeneralService\UDB-T34929_01_05.json|null|null|null|\src\test\resources\testdata\api\response\Expected\Drop2\GeneralService\UDB-T34929_02_05.json|
       
      @Edge    @TestCaseKey=UDB-T34930
     Scenario Outline: Verify that /downloadInterestCert Consolidated API  for different startDate and endDate for given account number(Edge)

@@ -1,13 +1,12 @@
 package com.ubi.testbase;
 
-import org.testng.Assert;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.text.similarity.LevenshteinDistance;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.fasterxml.jackson.core.exc.StreamReadException;
-
+import com.fasterxml.jackson.core.exc.StreamWriteException;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.DatabindException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
@@ -15,59 +14,36 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZoneOffset;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
-import java.util.Scanner;
-
-import com.fasterxml.jackson.core.JsonParser;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import java.util.stream.Collectors;
 import com.ubi.utils.FetchOTPTest;
-import com.ubi.utils.FileUtils;
-import com.ubi.utils.ReuseableSpecifications;
+
 import net.serenitybdd.rest.SerenityRest;
 import net.serenitybdd.core.Serenity;
-import io.cucumber.java.PendingException;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import net.serenitybdd.annotations.Step;
 import io.restassured.RestAssured;
-import io.restassured.config.SSLConfig;
 import io.restassured.response.Response;
-import io.restassured.response.ValidatableResponse;
-import org.apache.commons.text.similarity.LevenshteinDistance;
-import com.fasterxml.jackson.core.exc.StreamReadException;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.gson.Gson;
+import io.restassured.specification.RequestSpecification;
+
+
 import com.google.gson.JsonObject;
 
-import java.util.Base64;
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import com.ubi.testbase.JsonUpdater;
-import com.fasterxml.jackson.core.JsonParser;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.ubi.utils.FileUtils;
-import com.ubi.utils.ReuseableSpecifications;
-import net.serenitybdd.rest.SerenityRest;
-import net.serenitybdd.core.Serenity;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
-import net.serenitybdd.annotations.Step;
-import io.restassured.RestAssured;
-import io.restassured.config.SSLConfig;
-import io.restassured.response.Response;
-import io.restassured.response.ValidatableResponse;
+
 
 public class CommonRestUtils {
 
@@ -75,7 +51,7 @@ public class CommonRestUtils {
 	static String stringdbpSecret = formatStringforHeaders(AppConfig.getdbpSecret().trim());
 
 	public static String bearerTokenLocal;
-
+	public static String cookie ="";
 	public static String RequestBodyFolderName;
 	public static String BearerToken;
 	public static String bearerToken = "";
@@ -148,6 +124,7 @@ public class CommonRestUtils {
 						.body(encryptedRequestBody).post(RestAssured.baseURI);
 
 				String responseBody = response.then().extract().body().asString();
+				cookie = response.getHeader("Set-Cookie");
 				Serenity.setSessionVariable("response").to(response);
 				System.out.println("Response Body triggerPostRequestCommonRest: " + responseBody);
 
@@ -465,7 +442,7 @@ public class CommonRestUtils {
 			// Append other paths to the base directory
 
 			Path configFilePath = Paths.get(TestBase._baseDir, requestBody);
-			String jsonString = objectMapper.readTree(new File(configFilePath.toString())).toString();
+			String jsonString = objectMapper.readTree(new File(configFilePath.toString().replaceAll(" ", ""))).toString();
 			LOGGER.info("Request Body before encryption: " + jsonString);
 			// String bearerToken=BearerToken;
 
@@ -590,77 +567,78 @@ public class CommonRestUtils {
 	// Below Method is common method to get the 405 response and method not allowed
 	@Then("^user triggers a get request with (.+)$")
 	public void triggermethodnotallowRequestCommonRest(String requestBody) {
-		String environment = AppConfig.getRestUrl(TestBase._setEnvPath);
-		String xapikey = "";
+	    String environment = AppConfig.getRestUrl(TestBase._setEnvPath);
+	    String xapikey = "";
+	    boolean isDrop3 = StringUtils.containsIgnoreCase(requestBody, "Drop3");
 
-		if ((StringUtils.containsIgnoreCase(requestBody, "mvp") && StringUtils.containsIgnoreCase(environment, "uat"))
-				|| (StringUtils.containsIgnoreCase(requestBody, "Drop2")
-						&& StringUtils.containsIgnoreCase(environment, "uat"))) {
-			xapikey = AppConfig.rsaToken();
-		} else {
-			xapikey = AppConfig.xapikey();
-		}
+	    if (!isDrop3) {
+	        if ((StringUtils.containsIgnoreCase(requestBody, "mvp") && StringUtils.containsIgnoreCase(environment, "uat"))
+	                || (StringUtils.containsIgnoreCase(requestBody, "Drop2") && StringUtils.containsIgnoreCase(environment, "uat"))) {
+	            xapikey = AppConfig.rsaToken();
+	        } else {
+	            xapikey = AppConfig.xapikey();
+	        }
+	    }
 
-		ObjectMapper objectMapper = new ObjectMapper();
-		String fileName = fileHandlerToResponseFolder.extractFilename(requestBody);
-		try {
-			// Append other paths to the base directory
-			Path configFilePath = Paths.get(TestBase._baseDir, requestBody);
-			String jsonString = objectMapper.readTree(new File(configFilePath.toString())).toString();
-			System.out.println("Request Body before encryption: " + jsonString);
-			String bearerToken = BearerToken;
+	    ObjectMapper objectMapper = new ObjectMapper();
+	    String fileName = fileHandlerToResponseFolder.extractFilename(requestBody);
 
-			System.out.println("Request Body: " + requestBody);
-			// Encrypt the request body
-			String encryptedRequestBodywithoutdata = EncryptionUtil.encrypt(jsonString, xapikey);
-			String encryptedRequestBody = "{\"data\":\"" + encryptedRequestBodywithoutdata + "\"}";
-			System.out.println("Encrypted Request Body: " + encryptedRequestBody);
-			// Log the encrypted request in Serenity report
-			Serenity.recordReportData().withTitle("Decrypted Request Body").andContents(jsonString);
+	    try {
+	        Path configFilePath = Paths.get(TestBase._baseDir, requestBody);
+	        String jsonString = objectMapper.readTree(new File(configFilePath.toString())).toString();
+	        System.out.println("Request Body before encryption: " + jsonString);
+	        String bearerToken = BearerToken;
 
-			Response response = SerenityRest.given().header("Content-Type", "application/json")
-					.header("dbp-id", stringdbpID).header("dbp-secret", stringdbpSecret).header("x-api-key", xapikey)
-					.header("Authorization", "Bearer " + bearerToken) // Add any other
-																		// headers as
-																		// needed
-					.body(encryptedRequestBody).get(RestAssured.baseURI);
+	        RequestSpecification requestSpec = SerenityRest.given()
+	                .header("Content-Type", "application/json")
+	                .header("dbp-id", stringdbpID)
+	                .header("dbp-secret", stringdbpSecret)
+	                .header("Authorization", "Bearer " + bearerToken);
 
-			String responseBody = response.then().extract().body().asString();
-			Serenity.setSessionVariable("response").to(response);
-			System.out.println("Response Body triggerGetRequestCommonRest: " + responseBody);
+	        if (!isDrop3) {
+	            String encryptedRequestBody = EncryptionUtil.encrypt(jsonString, xapikey);
+	            requestSpec.queryParam("data", encryptedRequestBody);
+	            requestSpec.header("x-api-key", xapikey);
+	            System.out.println("Encrypted Request QueryParam: " + encryptedRequestBody);
+	        } else {
+	            // For Drop3, add each field as a query param
+	            JsonNode drop3Node = objectMapper.readTree(jsonString);
+	            drop3Node.fields().forEachRemaining(field -> {
+	                requestSpec.queryParam(field.getKey(), field.getValue().asText());
+	            });
+	            System.out.println("Drop3 Request QueryParams: " + jsonString);
+	        }
 
-			objectMapper = new ObjectMapper();
+	        Serenity.recordReportData().withTitle("Decrypted Request Body").andContents(jsonString);
 
-			// Parse JSON string to JsonNode
-			JsonNode rootNode = objectMapper.readTree(responseBody);
+	        Response response = requestSpec.get(RestAssured.baseURI);
+	        String responseBody = response.then().extract().body().asString();
+	        Serenity.setSessionVariable("response").to(response);
+	        System.out.println("Response Body: " + responseBody);
 
-			// Extract the value of the "data" field
-			String dataValue = rootNode.path("data").asText();
+	        JsonNode jsonNode;
+	        if (!isDrop3) {
+	            String encryptedData = objectMapper.readTree(responseBody).path("data").asText();
+	            String decryptedResponseBody = EncryptionUtil.decrypt(encryptedData, xapikey);
+	            Serenity.setSessionVariable("decryptedResponseBody").to(decryptedResponseBody);
+	            Serenity.recordReportData().withTitle("Decrypted Response").andContents(decryptedResponseBody);
+	            jsonNode = objectMapper.readTree(decryptedResponseBody);
+	        } else {
+	            jsonNode = objectMapper.readTree(responseBody);
+	        }
 
-			// Print the extracted value
-			System.out.println("Modified response: " + dataValue);
-			// Decrypt the response body
-			String decryptedResponseBody;
+	        fileHandlerToResponseFolder.writeJsonToFile(fileName, jsonNode);
 
-			decryptedResponseBody = EncryptionUtil.decrypt(dataValue, xapikey);
-			System.out.println("Decrypted Response Body: " + decryptedResponseBody);
-			Serenity.setSessionVariable("decryptedResponseBody").to(decryptedResponseBody);
-
-			// Log the decrypted response in Serenity report
-			Serenity.recordReportData().withTitle("Decrypted Response").andContents(decryptedResponseBody);
-
-			// Parse the decrypted response body string into a JsonNode
-			JsonNode jsonNode = objectMapper.readTree(decryptedResponseBody);
-			// Save the response body to a file using FileHandler
-			fileHandlerToResponseFolder.writeJsonToFile(fileName, jsonNode);
-		} catch (IOException e) {
-			System.err.println("IOException occurred: " + e.getMessage());
-			e.printStackTrace();
-		} catch (Exception e) {
-			System.err.println("Error during encryption/decryption or API request: " + e.getMessage());
-			e.printStackTrace();
-		}
+	    } catch (IOException e) {
+	        System.err.println("IOException occurred: " + e.getMessage());
+	        e.printStackTrace();
+	    } catch (Exception e) {
+	        System.err.println("Error during encryption/decryption or API request: " + e.getMessage());
+	        e.printStackTrace();
+	    }
 	}
+
+
 
 	// Approved method is added by Sachin for GeneralService
 	@Then("user triggers a post request to get customer accounts (.*)$")
@@ -791,7 +769,7 @@ public class CommonRestUtils {
 			System.out.println(RestAssured.baseURI);
 
 			Response response = SerenityRest.given().header("Content-Type", "application/json")
-					.header("dbp-id", stringdbpID).header("dbp-secret", stringdbpSecret)
+					.header("dbp-id", stringdbpID).header("dbp-secret", stringdbpSecret).header("Cookie",cookie)
 					// .header("Authorization","Bearer "+bearerToken)// Add any other headers as
 					// needed
 					.when().body(jsonString).post(RestAssured.baseURI);
@@ -817,9 +795,7 @@ public class CommonRestUtils {
 			System.out.println("Original request body: " + requestBodyJson);
 
 			// Read the data to be used for updates
-			JsonNode updateDataJson = fileHandlerToResponseFolder.readJson(fileNameOfSavedResponseData); // Adjust the
-																											// path as
-																											// needed
+			JsonNode updateDataJson = fileHandlerToResponseFolder.readJson(fileNameOfSavedResponseData); // Adjust the path as needed
 			System.out.println("Data for updates: " + updateDataJson);
 
 			// Iterate over the responsefieldList and requestFieldList
@@ -1106,7 +1082,7 @@ public class CommonRestUtils {
 			} else if ("Drop2/ChequeService".equalsIgnoreCase(Path)) {
 				filePath = AppConfig.getmbloginFolder() + "SIT_ChequeService.json";
 			} else if ("Drop2/bbps".equalsIgnoreCase(Path)) {
-				filePath = AppConfig.getmbloginFolder() + "BBPS.json";
+				filePath = AppConfig.getmbloginFolder() + "SIT_BBPS.json";
 			} else if ("Drop2/CreditCard".equalsIgnoreCase(Path)) {
 				filePath = AppConfig.getmbloginFolder() + "SIT_CreditCard.json";
 			} else if ("Drop2/DebitCard".equalsIgnoreCase(Path)) {
@@ -1114,7 +1090,9 @@ public class CommonRestUtils {
 			} else if ("drop2/GeneralService".equalsIgnoreCase(Path)) {
 				filePath = AppConfig.getmbloginFolder() + "SIT_BusinessService.json";
 			} else if ("drop2/GovtScheme".equalsIgnoreCase(Path)) {
-				filePath = AppConfig.getmbloginFolder() + "GovtScheme.json";
+				filePath = AppConfig.getmbloginFolder() + "SIT_GovtScheme.json";		
+			} else if ("drop2/LAD".equalsIgnoreCase(Path)) {
+				filePath = AppConfig.getmbloginFolder() + "SIT_LAD.json";
 			} else if ("Drop2/UPI".equalsIgnoreCase(Path)) {
 				filePath = AppConfig.getmbloginFolder() + "SIT_upi.json";
 			} else if ("Drop2/NCMC".equalsIgnoreCase(Path)) {
@@ -1125,13 +1103,20 @@ public class CommonRestUtils {
 			} else if ("Drop3/HomePage".equalsIgnoreCase(Path)) {
 				filePath = AppConfig.getmbloginFolder() + "SIT_HomePageMSME.json";
 			} else if ("Drop3/CurrentAccountEnquiry".equalsIgnoreCase(Path)) {
-				filePath = AppConfig.getmbloginFolder() + "SIT_CurrentAccountEnquiryMSME.json";
+                filePath = AppConfig.getmbloginFolder() + "SIT_CurrentAccountEnquiryMSME.json";
 			} else if ("Drop3/ARM".equalsIgnoreCase(Path)) {
 				filePath = AppConfig.getmbloginFolder() + "SIT_ARM_MSME.json";
+			}else if ("Drop3/Profile".equalsIgnoreCase(Path)) {
+					filePath = AppConfig.getmbloginFolder()+ "SIT_Profile_MSME.json";
 			} else if ("Drop3/mPOS".equalsIgnoreCase(Path)) {
 				filePath = AppConfig.getmbloginFolder() + "mPOS-SIT.json";
 			} else if ("Drop3/Borrowings".equalsIgnoreCase(Path)) {
 				filePath = AppConfig.getmbloginFolder() + "SIT_BorrowingsMSME.json";
+			} else if ("Drop3/LoginAndRegistration".equalsIgnoreCase(Path)) {
+				filePath = AppConfig.getmbloginFolder() + "SIT_mbloginMSME.json";
+			} else if ("Drop3/PaymentLink".equalsIgnoreCase(Path)) {
+				filePath = AppConfig.getmbloginFolder() + "SIT_PaymentLinkMSME.json";
+
 				// Drop1 SIT Mblogin URL's are below
 			} else if ("mvp/fdrd".equalsIgnoreCase(Path)) {
 				filePath = AppConfig.getmbloginFolder() + "mblogin-fdrd-sit.json";
@@ -1162,8 +1147,10 @@ public class CommonRestUtils {
 				filePath = AppConfig.getmbloginFolder() + "UAT_debitcard.json";
 			} else if ("drop2/GeneralService".equalsIgnoreCase(Path)) {
 				filePath = AppConfig.getmbloginFolder() + "UAT_BusinessService.json";
+			} else if ("drop2/POCService".equalsIgnoreCase(Path)) {
+				filePath = AppConfig.getmbloginFolder() + "UAT_BusinessService.json";
 			} else if ("drop2/GovtScheme".equalsIgnoreCase(Path)) {
-				filePath = AppConfig.getmbloginFolder() + "GovtScheme.json";
+				filePath = AppConfig.getmbloginFolder() + "GovtScheme_UAT.json";
 			} else if ("Drop2/UPI".equalsIgnoreCase(Path)) {
 				filePath = AppConfig.getmbloginFolder() + "UAT_upi.json";
 			} else if ("Drop2/NCMC".equalsIgnoreCase(Path)) {
@@ -1174,18 +1161,18 @@ public class CommonRestUtils {
 				filePath = AppConfig.getmbloginFolder() + "UAT_HomePageMSME.json";
 
 				// Drop1 UAT Mblogin URL's are below
-							} else if ("mvp/fdrd".equalsIgnoreCase(Path)) {
-								filePath = AppConfig.getmbloginFolder()+ "UAT-FDRD-mblogin.json";
-							} else if ("mvp/nps".equalsIgnoreCase(Path)) {
-								filePath = AppConfig.getmbloginFolder()+ "mbloginnps.json";
-							} else if ("mvp/ssa".equalsIgnoreCase(Path)) {
-								filePath = AppConfig.getmbloginFolder()+ "UAT_mbloginssa.json";
-							} else if ("mvp/ppf".equalsIgnoreCase(Path)) {
-								filePath = AppConfig.getmbloginFolder()+ "mbloginppf.json";
-							} else {
-								filePath = AppConfig.getmbloginFolder()+ "mblogin.json";
-							}
-							
+			} else if ("mvp/fdrd".equalsIgnoreCase(Path)) {
+				filePath = AppConfig.getmbloginFolder() + "UAT-FDRD-mblogin.json";
+			} else if ("mvp/nps".equalsIgnoreCase(Path)) {
+				filePath = AppConfig.getmbloginFolder() + "mbloginnps.json";
+			} else if ("mvp/ssa".equalsIgnoreCase(Path)) {
+				filePath = AppConfig.getmbloginFolder() + "UAT_mbloginssa.json";
+			} else if ("mvp/ppf".equalsIgnoreCase(Path)) {
+				filePath = AppConfig.getmbloginFolder() + "mbloginppf.json";
+			} else {
+				filePath = AppConfig.getmbloginFolder() + "mblogin.json";
+			}
+
 		}
 
 		return filePath;
@@ -1623,5 +1610,485 @@ public class CommonRestUtils {
 		Serenity.setSessionVariable("response").to(response);
 		System.out.println("Response Body: " + responseBody);
 	}
+	
+	public static class TdAccountInfo {
+	    public String accountNumber;
+	    public String schemeCategory;
+	    public String renewalFlg;
+	    public String maturityDate;
+	    public String tdName;
+	    public String schemeCode;
+	    public String depOpnDate;
+	    public String curDepositAmt;
+	    public String depositAmt;
+	    public String interestRate;
+	    public String branchFlg;
+	    public String ladPossibleTenure;
+	    public String solId;
+
+	    @Override
+	    public String toString() {
+	        return "Account: " + accountNumber + ", Maturity Date: " + maturityDate;
+	    }
+	}
+	
+	public class TdAccount{
+	public String sortEligibleTds1(String resfilePath, String Category, String Flag) {
+		String firstAccountNumber="";
+		String sCategory=Category;
+        String rFlag=Flag;
+        System.out.println("Scheme category: "+sCategory);
+        System.out.println("Renewal Flag: "+rFlag );
+        
+		try {
+			File file = Paths.get(resfilePath).toFile();
+            System.out.println("Filepath for elegible tds "+file);
+            ObjectMapper mapper = new ObjectMapper();
+            JsonNode root = mapper.readTree(file);
+            JsonNode tdList = root.path("tdAccountInfoList");
+
+            List<TdAccountInfo> accountList = mapper.readValue(tdList.traverse(),new TypeReference<List<TdAccountInfo>>() {});
+
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+            
+            List<TdAccountInfo> filteredSortedList = accountList.stream()
+            	    .filter(a -> sCategory.equals(a.schemeCategory) && rFlag.equals(a.renewalFlg))
+            	    .sorted(Comparator.comparing((TdAccountInfo a) -> 
+            	        LocalDate.parse(a.maturityDate, formatter)).reversed())
+            	    .collect(Collectors.toList());
+
+            System.out.println("Filtered and Sorted Accounts:");
+            filteredSortedList.forEach(System.out::println);
+            
+            if (!filteredSortedList.isEmpty()) {
+                firstAccountNumber = filteredSortedList.get(0).accountNumber;
+                System.out.println("Latest Account Number: " + firstAccountNumber);
+            }
+
+        } catch (Exception e) {
+           System.out.println("Exception occured "+e);
+        }
+		
+		return firstAccountNumber;
+	}
+	
+	}
+	
+	// Method to update JSON file with fdaccountno# fetch from eligibletds response 
+    public void updateJsonFileWithFdAccountRenew(String reqfilePath, String jsonKeyToUpdate, String schemeCategory, String renewFlag, String resfilePath) throws IOException {
+                
+    	TdAccount td = new TdAccount();
+        String AccountNumber= td.sortEligibleTds1(resfilePath, schemeCategory, renewFlag);
+    	
+        // Create an ObjectMapper to read and write JSON
+        ObjectMapper mapper = new ObjectMapper();
+        
+        // Load the JSON file into an ObjectNode
+        File jsonFile = new File(reqfilePath);
+        System.out.println("inside update json file with fdaccount");
+        ObjectNode jsonObject = (ObjectNode) mapper.readTree(jsonFile);
+       
+        // Update the JSON with the generated value for the specified key
+        jsonObject.put(jsonKeyToUpdate, AccountNumber);
+        
+        // Write the updated JSON back to the file
+        mapper.writerWithDefaultPrettyPrinter().writeValue(jsonFile, jsonObject);
+        
+        System.out.println("Updated JSON Request: " + jsonObject.toString());
+    }
+    
+    // method to sort as per FD number and overwrite LAD eligible-tds file which will have Scheme category as FDSC and RenewFlag as U 
+    public void EligibleTdsNewFile(String filePath, String Category, String Flag) throws IOException {
+    	String inputFilePath = "src/test/resources/responseFolder/"+filePath;
+        String outputFilePath = "src/test/resources/responseFolder/"+filePath;
+        String sCategory=Category;
+        String rFlag=Flag;
+        System.out.println("Inside EligibleTdsNewFile method");
+        System.out.println("Scheme category: "+sCategory);
+        System.out.println("Renewal Flag: "+rFlag );
+
+        try {
+        	 
+             // Reading eligible tds response JSON.
+        	File file = Paths.get(inputFilePath).toFile();
+        	System.out.println("Filepath for elegible tds: "+inputFilePath);
+        	System.out.println("Current directory: " + new File(".").getAbsolutePath());
+        	ObjectMapper mapper = new ObjectMapper();
+            JsonNode rootNode = mapper.readTree(new File(inputFilePath));
+            JsonNode tdListNode = rootNode.get("tdAccountInfoList");
+
+            // Converting tdAccountInfoList to List<TdAccountInfo>
+            List<TdAccountInfo> tdAccountList = mapper.convertValue(tdListNode, new TypeReference<List<TdAccountInfo>>() {
+            });
+              
+           // Filter and sorting the list by accountNumber in descending order
+            List<TdAccountInfo> filteredSortedList = tdAccountList.stream()
+                      .filter(td -> "FDSC".equals(td.schemeCategory) && "U".equals(td.renewalFlg))
+                      .sorted(Comparator.comparing((TdAccountInfo td) -> td.accountNumber).reversed())
+                      .collect(Collectors.toList());
+
+              // Replacing the tdAccountInfo List with the filtered values
+              ((ObjectNode) rootNode).replace("tdAccountInfoList", mapper.valueToTree(filteredSortedList));
+
+              // Storing to a new JSON file
+              mapper.writerWithDefaultPrettyPrinter().writeValue(new File(outputFilePath), rootNode);
+              System.out.println("tdAccountInfoList with renew flag as U is stored in " + outputFilePath);
+			
+		} catch (Exception e) {
+			System.out.println("Exception in EligibleTdsNewFile method: "+e);
+		}
+       
+    }
+    
+ // method is added by Vijay for LAD
+ 	@Then("user triggers a post request to get customer accounts (.*)$")
+ 	public void triggerPostRequestwithoutEncryption(String requestBody) throws IOException {
+ 		ObjectMapper objectMapper = new ObjectMapper();
+ 		String fileName = fileHandlerToResponseFolder.extractFilename(requestBody);
+ 		String environment = AppConfig.getRestUrl(TestBase._setEnvPath);
+ 		if (StringUtils.containsIgnoreCase(environment, "uat")) {
+ 			String xapikey = "";
+ 			String encryptdecryptKey = AppConfig.xapikey();
+
+ 			xapikey = AppConfig.rsaToken();
+
+ 			try {
+ 				// Append other paths to the base directory
+ 				Path configFilePath = Paths.get(TestBase._baseDir, requestBody);
+ 				String jsonString = objectMapper.readTree(new File(configFilePath.toString())).toString();
+ 				LOGGER.info("Request Body before encryption: " + jsonString);
+ 				// String bearerToken=BearerToken;
+ 				LOGGER.info("Request Body: " + requestBody);
+ 				// Encrypt the request body
+ 				String encryptedRequestBodywithoutdata = EncryptionUtil.encrypt(jsonString, encryptdecryptKey);
+ 				String encryptedRequestBody = "{\"data\":\"" + encryptedRequestBodywithoutdata + "\"}";
+ 				LOGGER.info("Encrypted Request Body: " + encryptedRequestBody);
+ 				// Log the encrypted request in Serenity report
+ 				Serenity.recordReportData().withTitle("Decrypted Request Body").andContents(jsonString);
+ 				Response response = SerenityRest.given().header("Content-Type", "application/json")
+ 						.header("dbp-id", stringdbpID).header("dbp-secret", stringdbpSecret)
+ 						.header("x-api-key", xapikey).header("Authorization", "Bearer " + BearerToken) // Add any other headers as needed
+ 						.body(encryptedRequestBody).post(RestAssured.baseURI);
+ 				String responseBody = response.then().extract().body().asString();
+ 				Serenity.setSessionVariable("response").to(response);
+ 				LOGGER.info("Response Body triggerPostRequestCommonRest: " + responseBody);
+ 				objectMapper = new ObjectMapper();
+ 				// Parse JSON string to JsonNode
+ 				JsonNode rootNode = objectMapper.readTree(responseBody);
+ 				// Extract the value of the "data" field
+ 				String dataValue = rootNode.path("data").asText();
+ 				// Print the extracted value
+ 				LOGGER.info("Modified response: " + dataValue);
+ 				// Decrypt the response body
+ 				String decryptedResponseBody;
+ 				decryptedResponseBody = EncryptionUtil.decrypt(dataValue, encryptdecryptKey);
+ 				LOGGER.info("Decrypted Response Body: " + decryptedResponseBody);
+ 				Serenity.setSessionVariable("decryptedResponseBody").to(decryptedResponseBody);
+ 				// Log the decrypted response in Serenity report
+ 				Serenity.recordReportData().withTitle("Decrypted Response").andContents(decryptedResponseBody);
+ 				// Parse the decrypted response body string into a JsonNode
+ 				JsonNode jsonNode = objectMapper.readTree(decryptedResponseBody);
+ 				// Save the response body to a file using FileHandler
+ 				fileHandlerToResponseFolder.writeJsonToFile(fileName, jsonNode);
+ 			} catch (IOException e) {
+ 				System.err.println("IOException occurred: " + e.getMessage());
+ 				e.printStackTrace();
+ 			} catch (Exception e) {
+ 				System.err.println("Error during encryption/decryption or API request: " + e.getMessage());
+ 				e.printStackTrace();
+ 			}
+ 		} else {
+ 			// Append other paths to the base directory
+ 			objectMapper = new ObjectMapper();
+ 			Path configFilePath = Paths.get(TestBase._baseDir, requestBody);
+ 			String jsonString = objectMapper.readTree(new File(configFilePath.toString())).toString();
+ 			LOGGER.info("Request Body before encryption: " + jsonString);
+ 			// String bearerToken=BearerToken;
+ 			LOGGER.info("Request Body: " + requestBody);
+ 			// Encrypt the request body
+ 			// String encryptedRequestBodywithoutdata = EncryptionUtil.encrypt(jsonString,
+ 			// xapikey);
+ 			// String encryptedRequestBody =
+ 			// "{\"data\":\""+encryptedRequestBodywithoutdata+"\"}";
+ 			// LOGGER.info("Encrypted Request Body: " + encryptedRequestBody);
+ 			// Log the encrypted request in Serenity report
+ 			Serenity.recordReportData().withTitle("Request Body").andContents(jsonString);
+ 			// String
+ 			// xapikeyRequestHeader="RvkjaDkgJoxNzngOddAwd5XEWpYkDKDxz6X/3mgIon0ataS2uIFsWHK9GZSRfWTfGil28jkCe/xvV0PBV7JMrATCpzFMYNdRbcc2Iz7nquh7aTj72i+qoetiBIN0OZSfOcdnvWqKYnop/IWPHtRR2ryXUgOgEHZ8dC0gQQWRV0s=";
+ 			Response response = SerenityRest.given().header("Content-Type", "application/json")
+ 					.header("dbp-id", stringdbpID).header("dbp-secret", stringdbpSecret)
+ 					// .header("x-api-key", xapikeyRequestHeader)
+ 					.header("Authorization", "Bearer " + BearerToken) // Add any other headers as needed
+ 					.body(jsonString).post(RestAssured.baseURI);
+ 			String responseBody = response.then().extract().body().asString();
+ 			Serenity.setSessionVariable("response").to(response);
+ 			LOGGER.info("Response Body triggerPostRequestCommonRest: " + responseBody);
+ 			objectMapper = new ObjectMapper();
+ 			// Parse JSON string to JsonNode
+ 			// JsonNode rootNode = objectMapper.readTree(responseBody);
+ 			// Extract the value of the "data" field
+ 			// String dataValue = rootNode.path("data").asText();
+ 			// Print the extracted value
+ 			// LOGGER.info("Modified response: " + dataValue);
+ 			// Decrypt the response body
+ 			// String decryptedResponseBody;
+ 			// decryptedResponseBody = EncryptionUtil.decrypt(dataValue, xapikey);
+ 			// LOGGER.info("Decrypted Response Body: " + decryptedResponseBody);
+ 			Serenity.setSessionVariable("ResponseBody").to(responseBody);
+ 			// Log the decrypted response in Serenity report
+ 			Serenity.recordReportData().withTitle("ResponseBody").andContents(responseBody);
+ 			// Parse the decrypted response body string into a JsonNode
+ 			JsonNode jsonNode = objectMapper.readTree(responseBody);
+ 			// Save the response body to a file using FileHandler
+ 			fileHandlerToResponseFolder.writeJsonToFile(fileName, jsonNode);
+ 		}
+ 	}
+ 	
+ 	
+ // method is added by Vijay for account info API in LAD
+  	@Then("user triggers a post request to get customer accounts (.*)$")
+  	public void triggerPostRequesAccountAPI(String requestBody) throws IOException {
+  		ObjectMapper objectMapper = new ObjectMapper();
+  		String fileName = fileHandlerToResponseFolder.extractFilename(requestBody);
+  		String environment = AppConfig.getRestUrl(TestBase._setEnvPath);
+  		if (StringUtils.containsIgnoreCase(environment, "uat")) {
+  			String xapikey = "";
+  			String encryptdecryptKey = AppConfig.xapikey();
+
+  			xapikey = AppConfig.rsaToken();
+
+  			try {
+  				// Append other paths to the base directory
+  				Path configFilePath = Paths.get(TestBase._baseDir, requestBody);
+  				String jsonString = objectMapper.readTree(new File(configFilePath.toString())).toString();
+  				LOGGER.info("Request Body before encryption: " + jsonString);
+  				// String bearerToken=BearerToken;
+  				LOGGER.info("Request Body: " + requestBody);
+  				// Encrypt the request body
+  				String encryptedRequestBodywithoutdata = EncryptionUtil.encrypt(jsonString, encryptdecryptKey);
+  				String encryptedRequestBody = "{\"data\":\"" + encryptedRequestBodywithoutdata + "\"}";
+  				LOGGER.info("Encrypted Request Body: " + encryptedRequestBody);
+  				// Log the encrypted request in Serenity report
+  				Serenity.recordReportData().withTitle("Decrypted Request Body").andContents(jsonString);
+  				Response response = SerenityRest.given().header("Content-Type", "application/json")
+  						.header("dbp-id", "018d83a55a507e6a978008b03ca1485d").header("dbp-secret", "018d84783a537d2d9a85d9342ca769d7")
+  						.header("x-api-key", xapikey).header("Authorization", "Bearer " + BearerToken) // Add any other headers as needed
+  						.body(encryptedRequestBody).post(RestAssured.baseURI);
+  				String responseBody = response.then().extract().body().asString();
+  				Serenity.setSessionVariable("response").to(response);
+  				LOGGER.info("Response Body triggerPostRequestCommonRest: " + responseBody);
+  				objectMapper = new ObjectMapper();
+  				// Parse JSON string to JsonNode
+  				JsonNode rootNode = objectMapper.readTree(responseBody);
+  				// Extract the value of the "data" field
+  				String dataValue = rootNode.path("data").asText();
+  				// Print the extracted value
+  				LOGGER.info("Modified response: " + dataValue);
+  				// Decrypt the response body
+  				String decryptedResponseBody;
+  				decryptedResponseBody = EncryptionUtil.decrypt(dataValue, encryptdecryptKey);
+  				LOGGER.info("Decrypted Response Body: " + decryptedResponseBody);
+  				Serenity.setSessionVariable("decryptedResponseBody").to(decryptedResponseBody);
+  				// Log the decrypted response in Serenity report
+  				Serenity.recordReportData().withTitle("Decrypted Response").andContents(decryptedResponseBody);
+  				// Parse the decrypted response body string into a JsonNode
+  				JsonNode jsonNode = objectMapper.readTree(decryptedResponseBody);
+  				// Save the response body to a file using FileHandler
+  				fileHandlerToResponseFolder.writeJsonToFile(fileName, jsonNode);
+  			} catch (IOException e) {
+  				System.err.println("IOException occurred: " + e.getMessage());
+  				e.printStackTrace();
+  			} catch (Exception e) {
+  				System.err.println("Error during encryption/decryption or API request: " + e.getMessage());
+  				e.printStackTrace();
+  			}
+  		} else {
+  			// Append other paths to the base directory
+  			objectMapper = new ObjectMapper();
+  			Path configFilePath = Paths.get(TestBase._baseDir, requestBody);
+  			String jsonString = objectMapper.readTree(new File(configFilePath.toString())).toString();
+  			LOGGER.info("Request Body before encryption: " + jsonString);
+  			// String bearerToken=BearerToken;
+  			LOGGER.info("Request Body: " + requestBody);
+  			// Encrypt the request body
+  			// String encryptedRequestBodywithoutdata = EncryptionUtil.encrypt(jsonString,
+  			// xapikey);
+  			// String encryptedRequestBody =
+  			// "{\"data\":\""+encryptedRequestBodywithoutdata+"\"}";
+  			// LOGGER.info("Encrypted Request Body: " + encryptedRequestBody);
+  			// Log the encrypted request in Serenity report
+  			Serenity.recordReportData().withTitle("Request Body").andContents(jsonString);
+  			// String
+  			// xapikeyRequestHeader="RvkjaDkgJoxNzngOddAwd5XEWpYkDKDxz6X/3mgIon0ataS2uIFsWHK9GZSRfWTfGil28jkCe/xvV0PBV7JMrATCpzFMYNdRbcc2Iz7nquh7aTj72i+qoetiBIN0OZSfOcdnvWqKYnop/IWPHtRR2ryXUgOgEHZ8dC0gQQWRV0s=";
+  			Response response = SerenityRest.given().header("Content-Type", "application/json")
+  					.header("dbp-id", "018d83a55a507e6a978008b03ca1485d").header("dbp-secret", "018d84783a537d2d9a85d9342ca769d7")
+  					// .header("x-api-key", xapikeyRequestHeader)
+  					.header("Authorization", "Bearer " + BearerToken) // Add any other headers as needed
+  					.body(jsonString).post(RestAssured.baseURI);
+  			String responseBody = response.then().extract().body().asString();
+  			Serenity.setSessionVariable("response").to(response);
+  			LOGGER.info("Response Body triggerPostRequestCommonRest: " + responseBody);
+  			objectMapper = new ObjectMapper();
+  			// Parse JSON string to JsonNode
+  			// JsonNode rootNode = objectMapper.readTree(responseBody);
+  			// Extract the value of the "data" field
+  			// String dataValue = rootNode.path("data").asText();
+  			// Print the extracted value
+  			// LOGGER.info("Modified response: " + dataValue);
+  			// Decrypt the response body
+  			// String decryptedResponseBody;
+  			// decryptedResponseBody = EncryptionUtil.decrypt(dataValue, xapikey);
+  			// LOGGER.info("Decrypted Response Body: " + decryptedResponseBody);
+  			Serenity.setSessionVariable("ResponseBody").to(responseBody);
+  			// Log the decrypted response in Serenity report
+  			Serenity.recordReportData().withTitle("ResponseBody").andContents(responseBody);
+  			// Parse the decrypted response body string into a JsonNode
+  			JsonNode jsonNode = objectMapper.readTree(responseBody);
+  			// Save the response body to a file using FileHandler
+  			fileHandlerToResponseFolder.writeJsonToFile(fileName, jsonNode);
+  		}
+  	}
+ 	
+ 	@When("^user updates the json request body (.*) with tags (.*) and cif (.*) for generating transactionID$")
+ 	public void generateTxnID(String requestBody,String tag,String cif) throws Exception
+ 	{
+ 	   // Generate current timestamp in required format
+ 	   String timestamp = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.nnnnnnnnn'Z'")
+ 	           .withZone(ZoneOffset.UTC)
+ 	           .format(Instant.now());
+ 	   // Build full path to input file
+ 	   Path configFilePath = Paths.get(TestBase._baseDir, requestBody);
+ 	   // Load JSON file
+ 	   ObjectMapper mapper = new ObjectMapper();
+ 	   JsonNode rootNode = mapper.readTree(configFilePath.toFile());
+ 	   // Create updated transactionId
+ 	   String updatedTransactionId = cif + "|" + timestamp;
+ 	   // Update the tag in JSON
+ 	    if (rootNode instanceof ObjectNode) {
+ 	       ((ObjectNode) rootNode).put(tag, updatedTransactionId);
+ 	   }
+ 	   // Convert to pretty JSON string
+ 	   String updatedJson = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(rootNode);
+ 	   System.out.println("Updated JSON:\n" + updatedJson);
+ 	   // Define output file path (same as input or custom, as needed)
+ 	   Path outputFilePath = configFilePath; // You can modify this if you want to write to a new file
+ 	   // Write updated JSON back to file
+ 	   mapper.writerWithDefaultPrettyPrinter().writeValue(outputFilePath.toFile(), rootNode);
+ 	   System.out.println("Updated request body saved to file: " + outputFilePath);
+ 	}
+ 
+ // method is added by Vijay for account info API in LAD
+ 	@Then("^sort (.*) file based on (.*) and (.*)$")
+ 	public void sortEligibleTds(String resfilePath, String Category, String Flag) throws Exception {
+        
+        String filePath = resfilePath;
+        String sCategory = Category;
+        String rFlag = Flag;
+
+        ObjectMapper mapper = new ObjectMapper();
+
+     // Reading JSON file      
+        Map<String, Object> jsonData = mapper.readValue(new File(filePath), new TypeReference<>() {});
+        
+     // Extract the tdAccountInfoList
+        List<Map<String, Object>> tdAccountInfoList = (List<Map<String, Object>>) jsonData.get("tdAccountInfoList");
+
+
+     // Sort using schemecategory and renew Flag
+        tdAccountInfoList.sort(Comparator.comparing(entry -> {
+            boolean isTarget = "FDSC".equals(entry.get("schemeCategory")) && "N".equals(entry.get("renewalFlg"));
+            return !isTarget; // false (comes first) if target
+        }));
+  
+     // Adding the sorted list
+        jsonData.put("tdAccountInfoList", tdAccountInfoList);
+
+    // Print sorted list
+        for (Map<String, Object> entry : tdAccountInfoList) {
+            System.out.println(entry.get("accountNumber") + " - " + entry.get("renewalFlg"));
+        }
+     
+      // Overwrite the JSON to a new file
+        mapper.writeValue(new File(filePath), jsonData);
+    }
+
+// method is added by Vijay for account info API in LAD
+ 	@Then("^user identifies (.*) account from accountInfo API$")
+ 	// below method written to fetch LAD account from account info and store it to a new file.
+ 	public void LoanAgainstDepostAccountList(String accType) throws StreamWriteException, DatabindException, IOException {
+ 	
+ 		// input array file and output array file
+        String inputFilePath = "src/test/resources/responseFolder/LAD_accountinfo.json";
+        String outputFilePath = "src/test/resources/responseFolder/LAD_accountinfo_output.json";
+        String accountType = accType;
+
+        ObjectMapper mapper = new ObjectMapper();
+
+        // Reading input file
+        JsonNode root = mapper.readTree(new File(inputFilePath));
+        ArrayNode accounts = (ArrayNode) root.path("accounts");
+
+        List<ObjectNode> ladAccounts = new ArrayList<>();
+        
+        // Sort by accountOpenDate
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        
+        for (JsonNode account : accounts) {
+            String acctType = account.path("acctType").asText();
+            String acctNum = account.path("acctNum").asText();
+            
+         // Filter for Loan Against Deposit accounts only
+            if (!"Loan Against Deposit".equals(acctType)) continue;
+            
+            String openDateStr = account.path("accountOpenDate").asText();
+            if (openDateStr == null || openDateStr.isEmpty()) continue;
+            
+         // Extract amount from acctBals with balTypeCode
+            String amount = null;
+            for (JsonNode bal : account.path("acctBals")) {
+                if ("SUMMATION".equals(bal.path("balTypeCode").asText())) {
+                    amount = bal.path("amount").asText();
+                    break;
+                }
+            }
+            if (amount == null) continue;
+            
+         // Build simplified node
+            ObjectNode simplified = mapper.createObjectNode();
+            simplified.put("acctNum", acctNum);
+            simplified.put("amount", amount);
+            simplified.put("acctType", acctType);
+            simplified.put("accountOpenDate", openDateStr);
+
+            ladAccounts.add(simplified);
+        }
+
+
+        ladAccounts.sort((a1, a2) -> {
+            String dateStr1 = a1.path("accountOpenDate").asText("");
+            String dateStr2 = a2.path("accountOpenDate").asText("");
+            if (dateStr1.isEmpty() || dateStr2.isEmpty()) return 0;
+
+            LocalDateTime date1 = LocalDateTime.parse(dateStr1, formatter);
+            LocalDateTime date2 = LocalDateTime.parse(dateStr2, formatter);
+            return date2.compareTo(date1);
+        });
+        
+     // Remove accountOpenDate and add to output array
+        ArrayNode resultArray = mapper.createArrayNode();
+        for (ObjectNode node : ladAccounts) {
+//            node.remove("accountOpenDate");
+            resultArray.add(node);
+        }
+
+        // Wrap into a new root object with accounts array
+        ObjectNode newRoot = mapper.createObjectNode();
+        newRoot.set("accounts", resultArray);
+
+        // Write to file
+        mapper.writerWithDefaultPrettyPrinter().writeValue(new File(outputFilePath), newRoot);
+
+        System.out.println("Filtered and sorted JSON written to " + outputFilePath);
+    }
 
 }

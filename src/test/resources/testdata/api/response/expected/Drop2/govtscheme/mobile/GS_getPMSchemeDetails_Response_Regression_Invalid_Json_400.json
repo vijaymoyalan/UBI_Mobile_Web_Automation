@@ -1,1 +1,15 @@
-{"errorId":"da56b203-8ded-43a4-a84a-b1250aecc591","errorAt":"2024-12-27T14:26:40.378631381","errorLocation":null,"error":null,"errors":[{"code":"BAD_REQUEST","message":"#: required key [channelId] not found","values":null,"origmesg":null,"errors":null}]}
+{
+  "errorId": "e73133ef-44a2-4ce6-b026-72a4b62720a8",
+  "errorAt": "2025-02-21T11:43:25.389024144",
+  "errorLocation": null,
+  "error": null,
+  "errors": [
+    {
+      "code": "BAD_REQUEST",
+      "message": "channelId: string [MthyB] does not match pattern ^(MB)$",
+      "values": null,
+      "origmesg": null,
+      "errors": null
+    }
+  ]
+}

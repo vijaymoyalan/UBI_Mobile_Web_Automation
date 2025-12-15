@@ -1,16 +1,1 @@
-{
-  "customerId": "919987829235",
-  "cif": "901218115",
-  "cid": "7798130861sadh1000000373",
-  "device": {
-    "app": "com.ibm.uboinpci",
-    "capability": "5245454545242454542454545445",
-    "geocode": "17.5,78.3",
-    "id": "cd2699c34e9b53e1",
-    "location": "<string>",
-    "mobile": "917999524046",
-    "os": "android",
-    "type": "MOB",
-    "ip": "10.0.0.0"
-  }
-}
+{"code":"00","result":"Success","errorDesc":null,"data":{"profileVpa":"awanish0493@unionbankofindia","isBlocked":"NO","listVpa":[{"vpa":"awanish0493@unionbankofindia","account":[{"name":"AWANISH YADAV SO KALIKA","mmid":"1234567","uidnum":null,"iin":"107110","aeba":"N","mbeba":"N","accRefNumber":"356002010030493","type":"SAVINGS","vpa":"awanish0493@unionbankofindia","status":"R","maskedAccnumber":"XXXX0493","ifsc":"UBIN0535605","partyId":null,"balance":null,"balTime":null,"atmpinFormat":"FORMAT3|FORMAT2","atmpinlength":"4","otpFormat":"NUM","otpLength":"6","lrn":null,"firconsentflag":null,"vpas":null,"isDefault":"Y","bankName":"Union Bank of India New","bankRefUrl":"https://10.1.27.133:443","dLength":"4","dType":"NUM"}],"upiNumber":[],"primary":true}]}}

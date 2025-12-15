@@ -1,9 +1,1 @@
-{
-  "errorId": "b78596b9-d87d-4195-8aee-6b0cd7cc19f1",
-  "errorAt": "2025-02-05T12:27:04.882567737",
-  "errors": {
-    "code": "404",
-    "result": "The requested URL path /msme/app/upi/api/v1/getlistVpadfd is not found",
-    "message": "404 NOT_FOUND"
-  }
-}
+{"errorId":"30f9a7ed-683d-45aa-aea7-19d1701d537d","errorAt":"2025-04-02T15:58:36.057322596","errorLocation":null,"error":null,"errors":[{"code":"METHOD_NOT_ALLOWED","title":"System Error","message":"Method Not Allowed","values":null,"origmesg":null,"errors":null}]}

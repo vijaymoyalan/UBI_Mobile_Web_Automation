@@ -66,6 +66,10 @@ public class AppConfig {
 		return environmentVariables.getProperty("ignoredFields");
 	}
 	
+	public static String sortKeys() {
+		return environmentVariables.getProperty("json.sort.keys");
+	}
+	
 	public static String testCycleKey() {
 		return environmentVariables.getProperty("testcyclekey");
 	}

@@ -7,11 +7,15 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
+import java.util.Optional;
 import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 import org.json.JSONException;
 import org.junit.Assert;
@@ -23,6 +27,7 @@ import com.fasterxml.jackson.core.exc.StreamReadException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.ubi.utils.FileUtils;
 import com.ubi.utils.LoggerSerenity;
@@ -85,7 +90,15 @@ public class JSONComparator {
 				// Normalize both actual and expected responses
 				normalizeJsonResponse(resultExpected, objectMapper);
 				normalizeJsonResponse(resultActual, objectMapper);
+				
+				
+				String keys = AppConfig.sortKeys(); 
+				List<String> sortKeys = Arrays.stream(keys.split(","))
+				                              .map(String::trim)
+				                              .collect(Collectors.toList());
 
+				sortJsonByKeysDeep(resultExpected, sortKeys);
+				sortJsonByKeysDeep(resultActual, sortKeys);
 				// Remove ignored fields (supports only Map type for simplicity in this method)
 //            if (resultExpected instanceof Map && resultActual instanceof Map) {
 //                removeIgnoredFields((Map<String, Object>) resultExpected, fieldsToIgnore, specificValuesToIgnore);
@@ -168,41 +181,68 @@ public class JSONComparator {
 	/**
 	 * Normalizes JSON responses by processing specific fields (e.g., errorMessage).
 	 */
-	private static void normalizeJsonResponse(Object json, ObjectMapper objectMapper) throws IOException {
-		if (json instanceof Map) {
-			Map<String, Object> map = (Map<String, Object>) json;
+	 private static final List<String> arrayFieldsToSort = Arrays.asList("tdAccountInfoList");
+	    private static final List<String> candidateSortKeys = Arrays.asList("depositAmt");
 
-//Normalize the "errorMessage" field if present
-			if (map.containsKey("errorMessage")) {
-				Object errorMessage = map.get("errorMessage");
-				if (errorMessage instanceof String) {
-					map.put("errorMessage", normalizeErrorMessage((String) errorMessage));
-				}
-			}
+	    public static void normalizeJsonResponse(Object json, ObjectMapper objectMapper) throws IOException {
+	        if (json instanceof Map) {
+	            Map<String, Object> map = (Map<String, Object>) json;
 
-//Recursively normalize nested structures
-			for (Map.Entry<String, Object> entry : map.entrySet()) {
-				if (entry.getValue() instanceof Map || entry.getValue() instanceof List) {
-					normalizeJsonResponse(entry.getValue(), objectMapper);
-				}
-			}
-		} else if (json instanceof List) {
-			List<Object> list = (List<Object>) json;
-			for (int i = 0; i < list.size(); i++) {
-				if (list.get(i) instanceof Map || list.get(i) instanceof List) {
-					normalizeJsonResponse(list.get(i), objectMapper);
-				}
-			}
+	            // Normalize the "errorMessage" or "errors" field if present
+	            if (map.containsKey("errorMessage")) {
+	                Object errorMessage = map.get("errorMessage");
+	                if (errorMessage instanceof String) {
+	                    map.put("errorMessage", normalizeErrorMessageKey((String) errorMessage));
+	                }
+	            } else if (map.containsKey("errors")) {
+	                Object errorMessage = map.get("errors");
+	                if (errorMessage instanceof String) {
+	                    map.put("errors", normalizeErrorMessageKey((String) errorMessage));
+	                }
+	            }
+
+	            // Sort known array fields
+	            for (String arrayField : arrayFieldsToSort) {
+	                if (map.containsKey(arrayField) && map.get(arrayField) instanceof List) {
+	                    List<Map<String, Object>> array = (List<Map<String, Object>>) map.get(arrayField);
+	                    Optional<String> sortKey = candidateSortKeys.stream()
+	                            .filter(key -> !array.isEmpty() && array.get(0).containsKey(key))
+	                            .findFirst();
+
+	                    if (sortKey.isPresent()) {
+	                        String keyToSortBy = sortKey.get();
+	                        array.sort(Comparator.comparing(item -> Objects.toString(item.getOrDefault(keyToSortBy, ""), "")));
+	                        map.put(arrayField, array);
+	                    }
+	                }
+	            }
+
+	            // Recursively normalize nested structures
+	            for (Map.Entry<String, Object> entry : map.entrySet()) {
+	                if (entry.getValue() instanceof Map || entry.getValue() instanceof List) {
+	                    normalizeJsonResponse(entry.getValue(), objectMapper);
+	                }
+	            }
+	        } else if (json instanceof List) {
+	            List<Object> list = (List<Object>) json;
+	            for (int i = 0; i < list.size(); i++) {
+	                Object item = list.get(i);
+	                if (item instanceof Map || item instanceof List) {
+	                    normalizeJsonResponse(item, objectMapper);
+	                }
+	            }
+	        }
+	    }
+
+	    private static String normalizeErrorMessage(String message) {
+	        // Customize normalization logic if needed
+	        return message.trim().toLowerCase();
+	    }
+	
+
+	    private static String normalizeErrorMessageKey(String errorMessage) {
+			return Arrays.stream(errorMessage.split(";")).map(String::trim).sorted().collect(Collectors.joining("; "));
 		}
-	}
-
-	/**
-	 * Normalizes the errorMessage field by splitting, trimming, and sorting its
-	 * contents.
-	 */
-	private static String normalizeErrorMessage(String errorMessage) {
-		return Arrays.stream(errorMessage.split(";")).map(String::trim).sorted().collect(Collectors.joining("; "));
-	}
 
 	private static void removeIgnoredFields(Map<String, Object> map, String[] fieldsToIgnore,
 			Map<String, String[]> specificValuesToIgnore) {
@@ -261,6 +301,10 @@ public class JSONComparator {
 			map.remove(key);
 		}
 	}
+	
+	
+
+
 
 	private static void findDifferences(Map<String, Object> expectedResult, Map<String, Object> actualResult) {
 		for (String key : expectedResult.keySet()) {
@@ -350,4 +394,43 @@ public class JSONComparator {
 		DocumentBuilder builder = factory.newDocumentBuilder();
 		return builder.parse(new InputSource(new StringReader(xmlContent)));
 	}
+	
+	@SuppressWarnings("unchecked")
+	public static void sortJsonByKeysDeep(Object node, List<String> sortKeys) {
+	    if (node instanceof Map<?, ?>) {
+	        Map<String, Object> map = (Map<String, Object>) node;
+	        for (Map.Entry<String, Object> entry : map.entrySet()) {
+	            Object value = entry.getValue();
+
+	            if (value instanceof List<?>) {
+	                List<Object> list = (List<Object>) value;
+
+	                if (!list.isEmpty() && list.get(0) instanceof Map) {
+	                    Map<String, Object> firstItem = (Map<String, Object>) list.get(0);
+
+	                    for (String sortKey : sortKeys) {
+	                        if (firstItem.containsKey(sortKey)) {
+	                            list.sort(Comparator.comparing(o -> {
+	                                Object val = ((Map<String, Object>) o).get(sortKey);
+	                                return val != null ? val.toString() : "";
+	                            }));
+	                            break; // Sort using the first matching key
+	                        }
+	                    }
+
+	                    for (Object item : list) {
+	                        sortJsonByKeysDeep(item, sortKeys);
+	                    }
+	                }
+	            } else {
+	                sortJsonByKeysDeep(value, sortKeys);
+	            }
+	        }
+	    } else if (node instanceof List<?>) {
+	        for (Object item : (List<Object>) node) {
+	            sortJsonByKeysDeep(item, sortKeys);
+	        }
+	    }
+	}
+
 }

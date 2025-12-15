@@ -1,15 +1,1 @@
-{
-    "opsStatus": "SUCCESS",
-    "transRefNumber": "300825172770",
-    "applicationFrmNum": "807033613056",
-    "entity": {
-        "depositStatus": "DRAFT",
-        "depositAmount": 90000,
-        "interestRate": 6.5,
-        "maturityAmount": 90000,
-        "maturityDate": null,
-        "interestPayoutType": "Maturity",
-        "interestPayoutAmount": 8.00
-    },
-    "errorMessage": null
-}
+{"opsStatus":"SUCCESS","transRefNumber":"660000058494","applicationFrmNum":"601012696841","entity":{"depositStatus":"PENDING","depositAmount":12500.00,"interestRate":6.75,"maturityAmount":12445.00,"maturityDate":"2024-08-23","interestPayoutType":"Maturity","interestPayoutAmount":248.00},"errorMessage":null}

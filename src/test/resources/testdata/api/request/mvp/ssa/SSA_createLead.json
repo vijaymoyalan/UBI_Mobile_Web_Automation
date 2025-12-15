@@ -1,10 +1,11 @@
+
 {
-    "cif": "60466771",
+    "cif": "634921889",
     "source": {
-        "acctNum": "59070SSA000000000041"
+        "acctNum": "35310SSA000000000017"
     },
     "customer": {
-        "cif": "60466771"
+        "cif": "634921889"
     },
     "channel": "DBP",
     "events": "TRANSFER"

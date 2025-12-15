@@ -1,4 +1,5 @@
 {
+    "correlationId": "1f9f2c28-2bc4-42de-91af-6127ba33e4d7_243356508",
     "code": "00",
     "result": "SUCCESS",
     "data": null,
@@ -10,12 +11,15 @@
     "beneRespCode": null,
     "remitterReversalRespCode": null,
     "beneReversalRespCode": null,
-    "txnId": "UBIe577b4fda7fe4de0bfa269775b290a36",
+    "txnId": "UBId4f5918e69134b824d0b49a490a14e24",
     "rrn": "411318004727",
     "amount": "59.00",
-    "remarks": "Investment",
+    "remarks": null,
     "orderId": null,
-    "txnDate": "2024-09-03T16:16:36.806352320",
-    "completeDateTime": null,
-    "expiryDateTime": null
+    "txnDate": "Thu Apr 03 17:08:46 IST 2025",
+    "completeDateTime": "2025-04-03T17:09:04.881136154",
+    "expiryDateTime": null,
+    "customerId": "916006259304",
+    "payerVpa": "6006259304@unionbankofindia",
+    "errorMessage": null
 }

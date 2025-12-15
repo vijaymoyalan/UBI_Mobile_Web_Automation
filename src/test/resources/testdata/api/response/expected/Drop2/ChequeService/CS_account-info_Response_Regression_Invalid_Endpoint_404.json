@@ -1,4 +1,8 @@
 {
-    "errorCode": null,
-    "errorMessage": "404 NOT_FOUND \"No static resource v1/cheque/account-info1.\""
+    "timestamp": "2025-05-22T12:57:14.318+00:00",
+    "path": "/v1/cheque/account-info1",
+    "status": 404,
+    "error": "Not Found",
+    "message": null,
+    "requestId": "00d512a1-742"
 }

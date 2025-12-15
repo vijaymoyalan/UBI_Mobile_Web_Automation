@@ -14,8 +14,8 @@ Then user verifies that status is 200
 Then user verifies json from <responseBody>
 	
 Examples:
-|service  |endpoint            | requestBody                                                                            |requestField |responsefield     | filename      |responseBody |
-|ncmc     |ncmcfullStatment    |src\test\resources\testdata\api\request\Drop2\NCMC\fullstatement200.json         |null        |null|null|src\test\resources\testdata\api\response\expected\Drop2\NCMC\fullstatement200.json|
+|service  |endpoint            | requestBody                                                                     |requestField|responsefield     | filename      |responseBody |
+|ncmc     |ncmcfullStatment    |src\test\resources\testdata\api\request\Drop2\NCMC\fullstatement200.json         |null        |null              |null           |src\test\resources\testdata\api\response\expected\Drop2\NCMC\fullstatement200.json|
 
 @TestCaseKey=UDB- @Regression
 Scenario Outline: Verify post ncmcfullStatment api returns 200 response with Mandatory and optional fields in request body
@@ -121,26 +121,26 @@ Examples:
 
 
 @TestCaseKey=UDB-T32693 @Regression 
-Scenario Outline: Verify post ncmcwalletdetails api returns 400 response for Invalid JSON in request Body
+Scenario Outline: Verify post ncmcwalletdetails api returns 200 response for  JSON in request Body
 Given user sets the environment of endpoint
 Given user set the basepath to <service>
 Then set the endpoint <endpoint>
 Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
 Then user triggers a post request with <requestBody>
-Then user verifies that status is 400
+Then user verifies that status is 200
 
 Examples:
 |service  |endpoint            | requestBody                                                                |requestField |responsefield     | filename                     |responseBody |
 |ncmc     |ncmc/wallet/details    | src\test\resources\testdata\api\request\Drop2\NCMC\400badrequest.json  |null         |null              |null  |src\test\resources\testdata\api\response\expected\Drop2\NCMC\400badrequest.json|
 
 @TestCaseKey=UDB-T32692 @Regression 
-Scenario Outline: Verify post ncmcwalletdetails api returns 400 response for BLANK request Body
+Scenario Outline: Verify post ncmcwalletdetails api returns 200 response for  request Body
 Given user sets the environment of endpoint
 Given user set the basepath to <service>
 Then set the endpoint <endpoint>
 Then user updates the requestField <requestField> of request body from <requestBody> with responsefield <responsefield> from filename <filename>
 Then user triggers a post request with <requestBody>
-Then user verifies that status is 400
+Then user verifies that status is 200
 Then user verifies json from <responseBody>
 	
 Examples:

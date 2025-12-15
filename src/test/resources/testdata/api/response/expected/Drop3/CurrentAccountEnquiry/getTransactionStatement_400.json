@@ -1,4 +1,1 @@
-{
-  "errorCode": null,
-  "errorMessage": "startDate: must not be null; cif: must not be null; acctNum: must not be null; endDate: must not be null"
-}
+{"errorId":"8e1df3a1-1a5b-4393-9eb5-8a40eaa568a1","errorAt":"2025-04-02T11:50:38.560210647","errorLocation":null,"error":null,"errors":[{"code":"BAD_REQUEST","title":null,"message":"400 BAD_REQUEST \"No request body\"","values":null,"origmesg":null,"errors":null}]}

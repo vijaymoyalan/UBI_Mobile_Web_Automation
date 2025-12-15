@@ -1,6 +1,1 @@
-{
-    "error": {
-        "errorCode": null,
-        "errorMessage": "Invalid cifID"
-    }
-}
+{"chequeLeafs":[{"chequeLeafNumber":"33117271","chequeStatus":"Stopped"},{"chequeLeafNumber":"33117272","chequeStatus":"Passed"},{"chequeLeafNumber":"33117273","chequeStatus":"Passed"},{"chequeLeafNumber":"33117274","chequeStatus":"Stopped"},{"chequeLeafNumber":"33117275","chequeStatus":"Stopped"},{"chequeLeafNumber":"33117276","chequeStatus":"Stopped"},{"chequeLeafNumber":"33117277","chequeStatus":"Stopped"},{"chequeLeafNumber":"33117278","chequeStatus":"Stopped"},{"chequeLeafNumber":"33117279","chequeStatus":"Stopped"},{"chequeLeafNumber":"33117280","chequeStatus":"Stopped"},{"chequeLeafNumber":"33117281","chequeStatus":"Stopped"},{"chequeLeafNumber":"33117282","chequeStatus":"Stopped"},{"chequeLeafNumber":"33117283","chequeStatus":"Stopped"},{"chequeLeafNumber":"33117284","chequeStatus":"Stopped"},{"chequeLeafNumber":"33117285","chequeStatus":"Stopped"},{"chequeLeafNumber":"33117286","chequeStatus":"Stopped"},{"chequeLeafNumber":"33117287","chequeStatus":"Stopped"},{"chequeLeafNumber":"33117288","chequeStatus":"Stopped"},{"chequeLeafNumber":"33117289","chequeStatus":"Stopped"},{"chequeLeafNumber":"33117290","chequeStatus":"Stopped"}]}

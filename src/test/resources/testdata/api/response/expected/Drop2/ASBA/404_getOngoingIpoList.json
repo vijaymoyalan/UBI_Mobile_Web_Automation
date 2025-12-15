@@ -1,9 +1,10 @@
 {
-  "errorId": "246987e9-1621-4b5b-b557-0ff86a111f93",
-  "errorAt": "2025-01-25T16:17:49.927754058",
-  "error": {
-    "code": "NOT_FOUND",
-    "title": "404 NOT_FOUND \"No static resource asbaservice/getOngoingIpoList123455.\"",
-    "description": null
-  }
+    
+        "timestamp": "2025-03-27T06:52:58.756+00:00",
+        "path": "/asbaservice/getOngoingIpoList123455",
+        "status": 404,
+        "error": "Not Found",
+        "message": null,
+        "requestId": "ad424b65-1219"
+    
 }

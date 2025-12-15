@@ -1,8 +1,1 @@
-{
-  "timestamp": "2025-02-06T12:05:18.133+00:00",
-  "path": "/msme/v1/businessServices/setPrimaryAccountDetails1",
-  "status": 404,
-  "error": "Not Found",
-  "message": null,
-  "requestId": "6c85f878-2438"
-}
+{"timestamp":"2025-04-02T09:25:11.287+00:00","path":"/msme/v1/businessServices/setPrimaryAccountDetails1","status":404,"error":"Not Found","message":null,"requestId":"6184e17c-1369"}

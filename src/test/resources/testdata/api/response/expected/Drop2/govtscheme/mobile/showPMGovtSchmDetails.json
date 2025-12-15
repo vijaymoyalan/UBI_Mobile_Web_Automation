@@ -1,1 +1,113 @@
-{"custName":"UMESH SINGH LUNTHI","fatherOrHusbandName":"RAM SINGH LUNTHI","dob":"1993-05-21","contactInfo":{"phoneNum1":"8591856866","phoneNum2":null,"emailAddr1":"SACHINVGHORPADE@GMAIL.COM","emailAddr2":null,"postalAddr":{"addrType":"Communication","addrLine1":"MAROL   ANDHERI","addrLine2":"NEAR SAGUN HOSPITAL","addrLine3":"MAROL","addrLine4":null,"pinCode":"275101","cityCode":"MUMBAI","stateCode":"MAHARASHTRA","countryCode":"INDIA"},"permAddr":{"addrType":"Permanent","addrLine1":"MAROL   ANDHERI","addrLine2":"NEAR SAGUN HOSPITAL","addrLine3":"MAROL","addrLine4":null,"pinCode":"275101","cityCode":"MUMBAI","stateCode":"MAHARASHTRA","countryCode":"INDIA"}},"accountBalanceResponse":[{"acctNum":"681302010001096","name":"UMESH SINGH LUNTHI","accStatusFlg":"I","nominee":[],"acctBals":null},{"acctNum":"9509829201","name":"UMESH SINGH LUNTHI","accStatusFlg":"D","nominee":[],"acctBals":null},{"acctNum":"7200167834","name":"UMESH SINGH LUNTHI","accStatusFlg":"D","nominee":[],"acctBals":null},{"acctNum":"7376806051","name":"UMESH SINGH LUNTHI","accStatusFlg":"D","nominee":[],"acctBals":null},{"acctNum":"7379465275","name":"UMESH SINGH LUNTHI","accStatusFlg":"D","nominee":[],"acctBals":null},{"acctNum":"760102010002101","name":"Sachin Vitthal Ghorpade","accStatusFlg":"A","nominee":[{"id":null,"fname":"NATHU RAM","mname":"","lname":"","shortname":null,"dob":null,"gender":null,"contactInfo":{"phoneNum1":null,"phoneNum2":null,"emailAddr1":null,"emailAddr2":null,"postalAddr":{"addrType":null,"addrLine1":"MEGHWALO KA BAAS JODHRAS","addrLine2":"KALAN NAGAUR RAJASTHAN","addrLine3":null,"addrLine4":null,"pinCode":"341510","cityCode":"NAGAU","stateCode":"RAJ","countryCode":"IN","city":"NAGAUR","state":"RAJASTHAN","country":"INDIA"}},"relationShip":"Father","cif":null,"sharePercentage":100,"relShipId":"001","reqNumber":"7601042786189","nomAmt":0,"guardian":{"id":null,"fname":"","mname":null,"lname":"","shortname":null,"dob":null,"gender":null,"contactInfo":null,"relShipId":null,"relationShip":null,"sameAddr":false},"minor":false,"sameAddr":false}],"acctBals":{"balTypeCode":"AVAIL","amount":7.28,"currencyCode":"INR"}},{"acctNum":"307102070000199","name":"SACHIN VITTHAL GHORPADE","accStatusFlg":"A","nominee":[{"id":null,"fname":"Manohar2","mname":"","lname":"","shortname":null,"dob":"1991-01-01","gender":null,"contactInfo":{"phoneNum1":null,"phoneNum2":null,"emailAddr1":null,"emailAddr2":null,"postalAddr":{"addrType":null,"addrLine1":"addr1","addrLine2":"addr2","addrLine3":null,"addrLine4":null,"pinCode":"400701","cityCode":"MUM","stateCode":"MAH","countryCode":"IN","city":"MUMBAI","state":"MAHARASHTRA","country":"INDIA"}},"relationShip":"Others","cif":null,"sharePercentage":100,"relShipId":"999","reqNumber":"3029019432124","nomAmt":0,"guardian":{"id":null,"fname":"","mname":null,"lname":"","shortname":null,"dob":null,"gender":null,"contactInfo":null,"relShipId":null,"relationShip":null,"sameAddr":false},"minor":false,"sameAddr":false}],"acctBals":{"balTypeCode":"AVAIL","amount":10427305.39,"currencyCode":"INR"}},{"acctNum":"441002010063745","name":"SACHIN VITTHAL GHORPADE","accStatusFlg":"A","nominee":[{"id":null,"fname":"Priyanka","mname":"","lname":"","shortname":null,"dob":"2000-01-01","gender":null,"contactInfo":{"phoneNum1":null,"phoneNum2":null,"emailAddr1":null,"emailAddr2":null,"postalAddr":{"addrType":null,"addrLine1":"Test2","addrLine2":"Test1","addrLine3":null,"addrLine4":null,"pinCode":"400074","cityCode":"DARM","stateCode":"ACCRA","countryCode":"IN","city":"DARMSTADT","state":"ACCRA","country":"INDIA"}},"relationShip":"Daughter","cif":null,"sharePercentage":100,"relShipId":"005","reqNumber":"4410019430077","nomAmt":0,"guardian":{"id":null,"fname":"","mname":null,"lname":"","shortname":null,"dob":null,"gender":null,"contactInfo":null,"relShipId":null,"relationShip":null,"sameAddr":false},"minor":false,"sameAddr":false}],"acctBals":{"balTypeCode":"AVAIL","amount":8310.00,"currencyCode":"INR"}},{"acctNum":"760102010005500","name":"UMESH SINGH LUNTHI","accStatusFlg":"A","nominee":[],"acctBals":null}],"governmentSchemeDetails":{"coverStartDate":"2024-12-27","coverEndDate":"2025-05-31","sumAssured":200000,"premium":213}}
+{
+  "custName": "SAHIL KUMAR JAISWAL",
+  "fatherOrHusbandName": "MANOJ",
+  "dob": "1997-07-24",
+  "contactInfo": {
+    "phoneNum1": "8830229929",
+    "phoneNum2": null,
+    "emailAddr1": "sahil.ramdas.andhere@ibm.COM",
+    "emailAddr2": null,
+    "postalAddr": {
+      "addrType": "Communication",
+      "addrLine1": "584/A,MUTTHIGANJ",
+      "addrLine2": "ALLAHABAD,ALLAHABAD",
+      "addrLine3": "",
+      "addrLine4": null,
+      "pinCode": "211003",
+      "cityCode": "ALLAH",
+      "stateCode": "UP",
+      "countryCode": "IN"
+    },
+    "permAddr": {
+      "addrType": "Permanent",
+      "addrLine1": "",
+      "addrLine2": "",
+      "addrLine3": "",
+      "addrLine4": null,
+      "pinCode": "",
+      "cityCode": "",
+      "stateCode": "",
+      "countryCode": ""
+    }
+  },
+  "accountBalanceResponse": [
+    {
+      "acctNum": "012622010000255",
+      "name": null,
+      "accStatusFlg": null,
+      "nominee": null,
+      "acctBals": null,
+      "joinType": null,
+      "scheme": null
+    },
+    {
+      "acctNum": "545902010013931",
+      "name": null,
+      "accStatusFlg": null,
+      "nominee": null,
+      "acctBals": null,
+      "joinType": null,
+      "scheme": null
+    },
+    {
+      "acctNum": "126810100031414",
+      "name": null,
+      "accStatusFlg": null,
+      "nominee": null,
+      "acctBals": null,
+      "joinType": null,
+      "scheme": null
+    },
+    {
+      "acctNum": "103810021003358",
+      "name": null,
+      "accStatusFlg": null,
+      "nominee": null,
+      "acctBals": null,
+      "joinType": null,
+      "scheme": null
+    },
+    {
+      "acctNum": "369302010002353",
+      "name": null,
+      "accStatusFlg": null,
+      "nominee": null,
+      "acctBals": null,
+      "joinType": null,
+      "scheme": null
+    },
+    {
+      "acctNum": "353202011012682",
+      "name": null,
+      "accStatusFlg": null,
+      "nominee": null,
+      "acctBals": null,
+      "joinType": null,
+      "scheme": null
+    },
+    {
+      "acctNum": "022122130000064",
+      "name": null,
+      "accStatusFlg": null,
+      "nominee": null,
+      "acctBals": null,
+      "joinType": null,
+      "scheme": null
+    },
+    {
+      "acctNum": "337502010122902",
+      "name": null,
+      "accStatusFlg": null,
+      "nominee": null,
+      "acctBals": null,
+      "joinType": null,
+      "scheme": null
+    }
+  ],
+  "governmentSchemeDetails": {
+    "coverStartDate": "2025-05-27",
+    "coverEndDate": "2026-05-31",
+    "sumAssured": 200000,
+    "premium": 106.5
+  }
+}

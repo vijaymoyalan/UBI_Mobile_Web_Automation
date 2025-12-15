@@ -10,11 +10,11 @@
     "acctBals": [
         {
             "balTypeCode": "EFFAVL",
-            "amount": 487785.00
+            "amount": 27201382.30
         },
         {
             "balTypeCode": "AVAIL",
-            "amount": 484852.30
+            "amount": 27199234.30
         },
         {
             "balTypeCode": "LEDGER",

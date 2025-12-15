@@ -1,14 +1,1 @@
-{
-  "errorId": "9c99a865-1873-48e5-91e3-1322fbba790b",
-  "errorAt": "2024-07-10T11:23:54.454659633",
-  "errorLocation": null,
-  "errors": [
-    {
-      "code": "400",
-      "message": "400 Bad Request from GET http://bbps-bill-management-service.biz-bbps-sit.svc.cluster.local:8080/bbps/getFutureBills/274309887",
-      "values": null,
-      "origmesg": null,
-      "errors": null
-    }
-  ]
-}
+{"errorId":"4be145b7-45b6-476e-bd42-bffc01d4d9c0","errorAt":"2025-04-22T18:38:03.642933071","errorLocation":null,"error":null,"errors":[{"code":"400","title":null,"message":"404 Not Found from GET http://bbps-bill-management-service.biz-bbps-sit.svc.cluster.local:8080/bbps/getCurrentNDueBills/","values":null,"origmesg":null,"errors":null}]}
