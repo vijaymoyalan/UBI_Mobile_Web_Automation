@@ -1,0 +1,8 @@
+{
+  "deviceid": "E626313E-AAAF-41B9-8B5D-64238FF9C84D",
+  "simdata": "E626313E-AAAF-41B9-8B5D-64238FF9C84D|0|1",
+  "loginwithbiometric": false,
+  "allowedfailure": 3,
+  "loginpinexpiry": 3600,
+  "loginpin": "2580"
+ }

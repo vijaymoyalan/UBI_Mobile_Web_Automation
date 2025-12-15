@@ -1,0 +1,15 @@
+{
+    "errorId": "d7d4ba9e-631f-4ca5-abeb-c51c8675556b",
+    "errorAt": "2025-02-18T12:00:34.063268097",
+    "errorLocation": null,
+    "error": null,
+    "errors": [
+        {
+            "code": "NO_ARM_TYPE",
+            "message": "Type should only be ARM",
+            "values": null,
+            "origmesg": null,
+            "errors": null
+        }
+    ]
+}

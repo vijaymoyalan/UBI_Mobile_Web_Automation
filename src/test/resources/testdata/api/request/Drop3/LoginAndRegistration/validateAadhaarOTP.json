@@ -1,0 +1,14 @@
+{
+    "rcif":"204536770",
+    "operation": "validateOtp",
+    "mobile": "8097578274",
+    "deviceid": "2a699493bff3a9b7",
+    "simdata": "2a699493bff3a9b702|0|2",
+    "signature": "seethagari",
+    "mail": "abcd@gmail.com",
+    "verifyAadharOtp": {
+        "otp": "669033",
+        "uid": "936891904100",
+        "txn": "000078"
+    }
+}

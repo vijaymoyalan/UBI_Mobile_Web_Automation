@@ -1,0 +1,30 @@
+[
+    {
+        "cif": "627449370",
+        "acctNum": "448901010230650",
+        "name": "RAJESH LAKHMAN AHIR",
+        "status": false,
+        "acctBals": [
+            {
+                "balTypeCode": "EFFAVL",
+                "amount": 3732.80,
+                "currencyCode": null
+            },
+            {
+                "balTypeCode": "AVAIL",
+                "amount": 3732.80,
+                "currencyCode": null
+            },
+            {
+                "balTypeCode": "LEDGER",
+                "amount": 3732.80,
+                "currencyCode": null
+            }
+        ],
+        "scheme": {
+            "code": "CAGEN",
+            "name": null,
+            "type": "CAA"
+        }
+    }
+]

@@ -1,0 +1,37 @@
+{
+  "deviceid": "<string>",
+  "mobile": "<string>",
+  "simdata": "<string>",
+  "corporateUsers": [
+    {
+      "corpId": "<string>",
+      "corpUserId": "<string>",
+      "corpCif": "<string>",
+      "mail": "<string>",
+      "corpConstitution": "<string>",
+      "corpConstitutionCode": "<string>",
+      "retailCif": "<string>"
+    },
+    {
+      "corpId": "<string>",
+      "corpUserId": "<string>",
+      "corpCif": "<string>",
+      "mail": "<string>",
+      "corpConstitution": "<string>",
+      "corpConstitutionCode": "<string>",
+      "retailCif": "<string>"
+    }
+  ],
+  "questions": [
+    {
+      "answer": "<string>",
+      "id": "<string>",
+      "question": "<string>"
+    },
+    {
+      "answer": "<string>",
+      "id": "<string>",
+      "question": "<string>"
+    }
+  ]
+}

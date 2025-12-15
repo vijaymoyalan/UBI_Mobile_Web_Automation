@@ -1,0 +1,9 @@
+{
+  "errorId": "8a736581-17f7-47b2-b954-1ea1f2c944ab",
+  "errorAt": "2025-03-06T13:02:53.127627544",
+  "error": {
+    "code": "BAD_REQUEST",
+    "title": "symbol: string [!@#] does not match pattern ^[a-zA-Z0-9]+$",
+    "description": null
+  }
+}

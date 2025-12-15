@@ -1,0 +1,7 @@
+{
+    "timestamp": 1746258652609,
+    "path": "/lad/v1/open-account",
+    "status": 500,
+    "error": "Internal Server Error",
+    "requestId": "d6469651-89"
+}

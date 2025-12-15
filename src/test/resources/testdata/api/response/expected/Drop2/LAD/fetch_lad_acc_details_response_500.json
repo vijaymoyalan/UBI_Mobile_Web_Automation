@@ -1,0 +1,16 @@
+{
+  "errorId": "00d9f234-3034-4146-bbc5-ef829adb246e",
+  "errorAt": "2025-05-08T14:58:59",
+  "errorLocation": null,
+  "error": null,
+  "errors": [
+    {
+      "code": "E0001",
+      "title": "System Error",
+      "message": "INTERNAL_SERVER_ERROR",
+      "values": null,
+      "origmesg": null,
+      "errors": null
+    }
+  ]
+}

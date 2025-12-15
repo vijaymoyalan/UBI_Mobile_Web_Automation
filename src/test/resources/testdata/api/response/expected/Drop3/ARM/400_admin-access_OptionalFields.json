@@ -1,0 +1,15 @@
+{
+    "errorId": "3f69e92a-b66a-4816-8a19-00889e773625",
+    "errorAt": "2025-02-20T15:25:48.750646618",
+    "errorLocation": null,
+    "error": null,
+    "errors": [
+        {
+            "code": "400",
+            "message": "mobile: must not be blank",
+            "values": null,
+            "origmesg": null,
+            "errors": null
+        }
+    ]
+}

@@ -1,0 +1,1 @@
+{"errorId":"0a168f5e-3b00-438d-b958-92745292d321","errorAt":"2025-04-03T13:53:06.838757","errorLocation":"bs-bff-mobile-service","error":null,"errors":[{"code":"ERR_BS_00105","title":"System Error","message":"Verification failed. Account name and Business name does not match.","values":null,"origmesg":"Account name does not match with Udyam business name","errors":null}]}

@@ -1,0 +1,8 @@
+{
+    "timestamp": "2025-02-05T09:49:44.421+00:00",
+    "path": "/app/login-registration/api/v1/checkCbRegistrationWithDeviceId.",
+    "status": 404,
+    "error": "Not Found",
+    "message": null,
+    "requestId": "ea56530e-18158"
+}

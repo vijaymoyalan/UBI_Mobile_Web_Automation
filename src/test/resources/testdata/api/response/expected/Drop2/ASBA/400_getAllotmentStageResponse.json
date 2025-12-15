@@ -1,0 +1,9 @@
+{
+  "errorId": "6e2bebc5-a82d-4e62-97fd-fb85a7faa11e",
+  "errorAt": "2025-03-25T18:34:43.12996095",
+  "error": {
+    "code": "400 BAD_REQUEST",
+    "title": null,
+    "description": "IPO DOES NOT EXIST FOR GIVEN APPLICATION/REFERENCE NUMBER"
+  }
+}

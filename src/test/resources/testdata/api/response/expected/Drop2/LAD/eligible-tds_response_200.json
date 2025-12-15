@@ -1,0 +1,136 @@
+{
+  "tdAccountInfoList": [
+    {
+      "accountNumber": "012623030001046",
+      "tdName": null,
+      "schemeCode": "TD003",
+      "schemeCategory": "FDSC",
+      "depOpnDate": "2025-06-18",
+      "maturityDate": "2027-06-18",
+      "curDepositAmt": 12477,
+      "depositAmt": 12477,
+      "renewalFlg": "N",
+      "interestRate": 6.6,
+      "branchFlg": "N",
+      "ladPossibleTenure": "12",
+      "solId": "01262"
+    },
+    {
+      "accountNumber": "545903040001359",
+      "tdName": null,
+      "schemeCode": "TD004",
+      "schemeCategory": "RDSC",
+      "depOpnDate": "2025-03-03",
+      "maturityDate": "2025-09-03",
+      "curDepositAmt": 30000,
+      "depositAmt": 30000,
+      "renewalFlg": "N",
+      "interestRate": 6.35,
+      "branchFlg": "N",
+      "ladPossibleTenure": "3",
+      "solId": "54590"
+    },
+    {
+      "accountNumber": "719103030000978",
+      "tdName": null,
+      "schemeCode": "TD003",
+      "schemeCategory": "FDSC",
+      "depOpnDate": "2025-05-03",
+      "maturityDate": "2026-06-06",
+      "curDepositAmt": 24547,
+      "depositAmt": 24547,
+      "renewalFlg": "U",
+      "interestRate": 7.25,
+      "branchFlg": "N",
+      "ladPossibleTenure": "12",
+      "solId": "71910"
+    },
+    {
+      "accountNumber": "719103030000980",
+      "tdName": null,
+      "schemeCode": "TD003",
+      "schemeCategory": "FDSC",
+      "depOpnDate": "2025-05-05",
+      "maturityDate": "2026-06-08",
+      "curDepositAmt": 21454,
+      "depositAmt": 21454,
+      "renewalFlg": "U",
+      "interestRate": 7.25,
+      "branchFlg": "N",
+      "ladPossibleTenure": "12",
+      "solId": "71910"
+    },
+    {
+      "accountNumber": "719103040000057",
+      "tdName": null,
+      "schemeCode": "TD004",
+      "schemeCategory": "RDSC",
+      "depOpnDate": "2025-04-23",
+      "maturityDate": "2025-10-23",
+      "curDepositAmt": 12000,
+      "depositAmt": 12000,
+      "renewalFlg": "N",
+      "interestRate": 6.35,
+      "branchFlg": "N",
+      "ladPossibleTenure": "5",
+      "solId": "71910"
+    },
+    {
+      "accountNumber": "719103030000982",
+      "tdName": null,
+      "schemeCode": "TD003",
+      "schemeCategory": "FDSC",
+      "depOpnDate": "2025-05-09",
+      "maturityDate": "2028-05-09",
+      "curDepositAmt": 200000,
+      "depositAmt": 200000,
+      "renewalFlg": "U",
+      "interestRate": 6.7,
+      "branchFlg": "N",
+      "ladPossibleTenure": "12",
+      "solId": "71910"
+    }
+  ],
+  "occupationCode": "SR008",
+  "loanEligibilityValue": "90",
+  "interestAdjustmentValue": "1",
+  "loanEligibilityUnit": "%",
+  "interestAdjustmentUnit": "%",
+  "ladEligibilityMinAmount": "900.0",
+  "ladEligibilityMaxAmount": "900000.0",
+  "ladEligibilityMinUnit": "INR",
+  "ladEligibilityMaxUnit": "INR",
+  "odSchemeEligibleForLad": [
+    "ODGEN",
+    "ODSTF"
+  ],
+  "eligibleCASAConfigs": [
+    {
+      "accountType": "SBA",
+      "constitutionCode": "1",
+      "modeOfOperation": "001"
+    },
+    {
+      "accountType": "CAA",
+      "constitutionCode": "1",
+      "modeOfOperation": "001"
+    },
+    {
+      "accountType": "CAA",
+      "constitutionCode": "9",
+      "modeOfOperation": "001"
+    },
+    {
+      "accountType": "ODA",
+      "constitutionCode": "1",
+      "modeOfOperation": "001"
+    },
+    {
+      "accountType": "ODA",
+      "constitutionCode": "9",
+      "modeOfOperation": "001"
+    }
+  ],
+  "successOrFailure": "Y",
+  "message": null
+}

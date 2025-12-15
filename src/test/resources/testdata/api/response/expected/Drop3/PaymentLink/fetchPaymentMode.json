@@ -1,0 +1,10 @@
+{
+    "paymentChannelControl": [
+        {
+            "channelType": "UPI",
+            "id": "5",
+            "selected": true
+        }
+    ],
+    "acceptScheduleCharges": false
+}

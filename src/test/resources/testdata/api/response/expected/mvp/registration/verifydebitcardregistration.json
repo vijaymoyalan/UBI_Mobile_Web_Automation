@@ -1,0 +1,10 @@
+{
+    "response": {
+        "message": "Perfect ! Your Customer Id is now verified.",
+        "accounts": [
+            "441002010063736"
+        ],
+        "cif": "634919447"
+    },
+    "respcode": "200"
+}

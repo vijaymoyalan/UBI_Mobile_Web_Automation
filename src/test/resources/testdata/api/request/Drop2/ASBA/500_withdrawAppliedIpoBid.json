@@ -1,0 +1,38 @@
+{
+  "cif": "258459119",
+  "scripid": "EQUITAS",
+  "category": "POL",
+  "bidtype": "1",
+  "maxBidPrice": "5",
+  "orderno": "1",
+  "priceRange": "1-5",
+  "lotSize": "1",
+  "applicantname": "BHAWANA KANYAL DO RAJENDRA SINGH KANYAL",
+  "depository": "CDSL",
+  "dpid": "0",
+  "clientbenfid": "1234567812545661",
+  "chequereceivedflag": "true",
+  "chequeamount": "15",
+  "panno": "DSJPK9933C",
+  "bankname": "0",
+  "location": "0",
+  "ifsccode": "UBIN0554588",
+  "applicationNo": "960001691",
+  "referenceno": "D270448498383",
+  "accountnumber_upiid": "658902070000001",
+  "asba_upiid": "true",
+  "previousAmount": "10",
+  "quantity": "3",
+  "bids": [
+    {
+      "bidid": "18337701",
+      "quantity": "3",
+      "rate": "5",
+      "cuttoffflag": "0",
+      "orderno": "1",
+      "actioncode": "m"
+    }
+  ],
+  "applicationNumber": "960001691",
+  "refernceId": "D850116554084"
+}

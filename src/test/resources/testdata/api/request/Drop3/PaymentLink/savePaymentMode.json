@@ -1,0 +1,13 @@
+{
+    "cif": "627449370",
+    "accountNumber": "448901010230650",
+    "cid": "9082717612jken1000661796",
+    "applicationFormNumber": "PL140225000001",
+    "paymentModes": {
+        "visa": "yes",
+        "upi": "yes",
+        "netbanking": "yes"
+    },
+    "declarationIndicator": true,
+    "socIndicator": true
+}

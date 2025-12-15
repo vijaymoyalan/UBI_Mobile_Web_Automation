@@ -1,0 +1,11 @@
+{
+  "debitAccount" : "681302010002716",
+  "cif" : "258459119",
+  "ccAccountId" : "0000010616917000",
+  "solId" : "68130",
+  "amount" : "1",
+  "remarks" : "credit card pay",
+  "transactionId" : "258459119|2025-11-12T06:48:44.662562900Z",
+  "debitAccountName" : "SAND-BOX",
+  "debitAccountType" : "SBA"
+}

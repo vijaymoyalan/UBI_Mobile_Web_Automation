@@ -1,0 +1,9 @@
+{
+  "errorId": "ddbaea3e-5c08-4da4-a9ad-8b7f54fdd6d5",
+  "errorAt": "2025-06-12T14:39:25.302138555",
+  "error": {
+    "code": "BAD_REQUEST",
+    "title": "pan: expected minLength: 1, actual: 0, pan: string [] does not match pattern ^[A-Z]{5}[0-9]{4}[A-Z]$",
+    "description": null
+  }
+}

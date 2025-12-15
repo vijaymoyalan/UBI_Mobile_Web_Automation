@@ -1,0 +1,15 @@
+{
+    "errorId": "8505af65-2b3a-40fe-9689-de8734d386b9",
+    "errorAt": null,
+    "errorLocation": null,
+    "error": null,
+    "errors": [
+        {
+            "code": "INVALID_CORPID_USERID",
+            "message": "Invalid CorpId or UserId",
+            "values": null,
+            "origmesg": null,
+            "errors": null
+        }
+    ]
+}

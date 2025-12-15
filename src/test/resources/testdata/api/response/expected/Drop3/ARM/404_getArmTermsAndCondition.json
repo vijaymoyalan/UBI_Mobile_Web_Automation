@@ -1,0 +1,8 @@
+{
+    "timestamp": "2025-02-18T06:57:59.533+00:00",
+    "path": "/app/arm/api/v1/users/getArmTermsAndCondition1",
+    "status": 404,
+    "error": "Not Found",
+    "message": null,
+    "requestId": "99d4e888-2319"
+}

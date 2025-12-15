@@ -1,0 +1,28 @@
+{
+  "cif": "612647375",
+  "operativeAccount": "369302010002353",
+  "loanAmount": 1011,
+  "depositAccounts": [
+    {
+      "accountNumber": "407103030141629"
+    }
+  ],
+  "sectorCode": "41",
+  "purposeofadvance": "Agri",
+  "applicationReferenceNumber": "LAD7102010022239",
+  "loanPeriodMonths": "12",
+  "agreementAccepted": true,
+  "occpCode": "OT002",
+  "districtCode": "",
+  "mobileNo": "8605405600",
+  "email": "vmoyalanubi@gmail.com",
+  "solId": "78240",
+  "loanRoi": 8.25,
+  "applicantName": "VIJAY JOSEPH MOYALAN",
+  "applicantAddress": {
+    "addressLine1": "MOHALLA",
+    "addressLine2": "TAL KHED",
+    "addressLine3": "",
+    "addressLine4": ""
+  }
+}

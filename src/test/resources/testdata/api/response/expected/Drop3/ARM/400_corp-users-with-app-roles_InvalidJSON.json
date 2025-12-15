@@ -1,0 +1,16 @@
+{
+    "errorId": "f7693e3a-c093-4534-b490-f126260bab8f",
+    "errorAt": null,
+    "errorLocation": null,
+    "error": null,
+    "errors": [
+        {
+            "code": "NO_RECORD_FOUND",
+            "title": null,
+            "message": "No records found for given input",
+            "values": null,
+            "origmesg": null,
+            "errors": null
+        }
+    ]
+}

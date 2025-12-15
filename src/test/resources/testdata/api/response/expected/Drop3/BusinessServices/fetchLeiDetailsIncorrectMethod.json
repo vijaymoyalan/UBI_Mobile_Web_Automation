@@ -1,0 +1,16 @@
+{
+    "errorId": "f914597b-fb0d-42c4-91da-e54f33f0ea43",
+    "errorAt": "2025-04-01T21:51:17.082793086",
+    "errorLocation": "bs-bff-mobile-service",
+    "error": null,
+    "errors": [
+        {
+            "code": "ERR_BS_00051",
+            "title": null,
+            "message": "We are unable to process your request at the moment. Please try again later.",
+            "values": null,
+            "origmesg": "Request method 'GET' is not supported.",
+            "errors": null
+        }
+    ]
+}

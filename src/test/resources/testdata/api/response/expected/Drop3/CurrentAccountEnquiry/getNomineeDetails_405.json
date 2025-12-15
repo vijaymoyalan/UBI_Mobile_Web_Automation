@@ -1,0 +1,16 @@
+{
+  "errorId": "a4717681-59c3-4005-9715-897ead804190",
+  "errorAt": "2025-04-02T15:59:02.646972023",
+  "errorLocation": null,
+  "error": null,
+  "errors": [
+    {
+      "code": "METHOD_NOT_ALLOWED",
+      "title": "System Error",
+      "message": "Method Not Allowed",
+      "values": null,
+      "origmesg": null,
+      "errors": null
+    }
+  ]
+}

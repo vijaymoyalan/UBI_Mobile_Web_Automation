@@ -1,0 +1,60 @@
+{
+  "brCountry": "INDIA",
+  "availableLimit": "0",
+  "amountPaidTillDate": "0",
+  "outstandingAmt": "-7906",
+  "tdDepositValue": "15000",
+  "tdAcnt": "407103030141629",
+  "sancLimit": "7906",
+  "brAddr1": "BHIMA ICE FACTORY ROAD",
+  "tdInvestedAmount": null,
+  "brCity": "CUTTACK",
+  "tdMaturityDate": "11-05-2026",
+  "drwgPower": "7906",
+  "amtDueForClosure": "-7906",
+  "brAddr2": "COLLEGE SQUARE,CUTTACK",
+  "interestAmt": "0",
+  "brName": "COLLEGE SQUARE - CUTTACK",
+  "brState": "ORISSA",
+  "brPIN": "753003",
+  "ladInterestRate": "8.25",
+  "tdInterestRate": "7.25",
+  "roi": null,
+  "tdClsDate": "",
+  "brAddr3": "",
+  "tdClsFlg": "N",
+  "tdInitialDepAmt": "15000",
+  "accountNumber": "407107030015563",
+  "tdRepaymentAccount": "407102010022239",
+  "odSchemeEligibleForLad": [
+    "ODGEN",
+    "ODSTF"
+  ],
+  "eligibleCASAConfigs": [
+    {
+      "accountType": "SBA",
+      "constitutionCode": "1",
+      "modeOfOperation": "001"
+    },
+    {
+      "accountType": "CAA",
+      "constitutionCode": "1",
+      "modeOfOperation": "001"
+    },
+    {
+      "accountType": "CAA",
+      "constitutionCode": "9",
+      "modeOfOperation": "001"
+    },
+    {
+      "accountType": "ODA",
+      "constitutionCode": "1",
+      "modeOfOperation": "001"
+    },
+    {
+      "accountType": "ODA",
+      "constitutionCode": "9",
+      "modeOfOperation": "001"
+    }
+  ]
+}

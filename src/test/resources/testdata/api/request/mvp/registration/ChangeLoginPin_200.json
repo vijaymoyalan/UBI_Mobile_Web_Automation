@@ -1,0 +1,9 @@
+{
+  "cif": "634743268",
+  "loginpin": "57fb0303e4a6845cd7a1484ee9773c218975e9c9a763114e668259498cad2f30",
+  "confirmloginpin": "57fb0303e4a6845cd7a1484ee9773c218975e9c9a763114e668259498cad2f30",
+  "loginpinhistorycount": 3,
+  "loginpinlength": 4,
+  "event": "ChangeLoginPin",
+  "oldloginpin": "ed946f65d2c785d90e827c5ffd879ce3b49c68d4c88013074176a7e73bc58bcf"
+}

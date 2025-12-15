@@ -1,0 +1,15 @@
+{
+    "errorId": "67b69b26-64c6-4f70-8a21-a174c03a3619",
+    "errorAt": null,
+    "errorLocation": null,
+    "error": null,
+    "errors": [
+        {
+            "code": "E00",
+            "message": "Enter All Fields",
+            "values": null,
+            "origmesg": null,
+            "errors": null
+        }
+    ]
+}

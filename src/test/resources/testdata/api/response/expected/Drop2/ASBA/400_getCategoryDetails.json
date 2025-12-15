@@ -1,0 +1,9 @@
+{
+  "errorId": "054ecbaa-afa4-4182-bbfe-eedfcb80d954",
+  "errorAt": "2025-02-24T06:41:30.308188789",
+  "error": {
+    "code": "BAD_REQUEST",
+    "title": "#: required key [category] not found, #: required key [symbol] not found",
+    "description": null
+  }
+}

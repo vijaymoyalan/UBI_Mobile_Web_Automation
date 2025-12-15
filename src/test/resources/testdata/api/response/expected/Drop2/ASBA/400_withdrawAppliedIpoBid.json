@@ -1,0 +1,9 @@
+{
+  "errorId": "deaf7aa4-4b22-43f3-9c52-de5e83dc36e4",
+  "errorAt": "2025-02-14T12:42:33.742897821",
+  "error": {
+    "code": "400 BAD_REQUEST",
+    "title": "BID FAILURE",
+    "description": "FAILED: BID PRICE IS GREATER THAN SPECIFIED FOR IPO"
+  }
+}

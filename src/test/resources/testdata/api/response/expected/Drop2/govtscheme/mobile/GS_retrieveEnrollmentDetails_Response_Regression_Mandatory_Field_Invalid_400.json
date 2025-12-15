@@ -1,0 +1,15 @@
+{
+    "errorId": "ab126552-7afb-442c-8bab-daf53918e7f9",
+    "errorAt": "2025-02-21T12:27:09.497819598",
+    "errorLocation": null,
+    "error": null,
+    "errors": [
+        {
+            "code": "BAD_REQUEST",
+            "message": "schemeCode: string [PM12JJBY] does not match pattern ^(PMJJBY|PMSBY)$",
+            "values": null,
+            "origmesg": null,
+            "errors": null
+        }
+    ]
+}

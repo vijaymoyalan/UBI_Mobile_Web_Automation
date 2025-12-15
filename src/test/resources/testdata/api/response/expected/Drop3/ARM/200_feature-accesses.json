@@ -1,0 +1,22 @@
+{
+    "journeyFeatureAccesses": [
+        {
+            "type": "Journey_Feature",
+            "trasactionType": "ALL",
+            "featureType": "ALL",
+            "product": "ALL",
+            "featureCode": "ALL",
+            "featureValue": "ALL",
+            "displayOrder": 1,
+            "level": 0,
+            "parent": "NA",
+            "accessFlags": {
+                "fullAccess": true,
+                "approver": true,
+                "initiator": false,
+                "viewer": true,
+                "admin": true
+            }
+        }
+    ]
+}

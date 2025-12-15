@@ -1,0 +1,17 @@
+[
+  {
+    "loanPurpose": "Agri",
+    "sectorCode": "41",
+    "purposeOfAdvance": "1101"
+  },
+  {
+    "loanPurpose": "Personal",
+    "sectorCode": "99",
+    "purposeOfAdvance": "95019"
+  },
+  {
+    "loanPurpose": "MSME/Others",
+    "sectorCode": "31",
+    "purposeOfAdvance": "52319"
+  }
+]

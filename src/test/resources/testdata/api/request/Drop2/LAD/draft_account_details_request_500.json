@@ -1,0 +1,29 @@
+{
+  "cif": "613763682",
+  "applicationReferenceNumber":"",
+  "date":"",
+  "applicantName": "",
+  "mobileNo": "",
+  "email": "",
+  "solId": "",
+  "nameOfRegulatedEntity": "",
+  "depositAccountDetail": [
+    {
+      "fdAccountNumber": "",
+      "investedAmount": 12454,
+      "currentValue": 12454,
+      "interestRate": 6.6,
+      "maturityDate": "",
+      "schemeCode": "",
+      "schemeCategory": ""
+    }
+  ],
+  "loanDetail": {
+    "loanType": "",
+    "loanAmount": 1011,
+    "loanCreditAccount": "",
+    "loanRoi": 7.6,
+    "loanPurpose": "",
+    "loanTenure": ""
+  }
+}

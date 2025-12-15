@@ -1,0 +1,13 @@
+{
+    "cif": "900986039",
+    "fromDate": "01/10/2024",
+    "toDate": "31/03/2025",
+    "periodType": "months",
+    "accountDetails": [
+    { "accountName": "GOVIND TEXFAB",
+   "accountNumber": "377001010536980",
+   "accountType": "CAA"
+       }
+    ],
+    "cid": "9768911985govi900986039"
+}

@@ -1,0 +1,8 @@
+{
+    "generateAadharOtpResp": {
+        "respCode": "00",
+        "respDesc": "Success",
+        "aadhaarId": "319961464260",
+        "txn": "000011"
+    }
+}

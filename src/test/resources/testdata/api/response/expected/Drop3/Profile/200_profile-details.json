@@ -1,0 +1,31 @@
+{
+    "name": "JYOTI",
+    "corpUserFirstname": "JYOTI",
+    "corpName": "BABA HARIDAS DAIRY FARM",
+    "accountName": "BABA HARIDAS DAIRY FARM",
+    "corpCif": "901250569",
+    "retailCif": "631563646",
+    "emailid": "varunmohata07@gmail.com",
+    "permEmailid": "varunmohata07@gmail.com",
+    "corpUserEmail": "varunmohata07@gmail.com",
+    "corpUserMobileNumber": "7700920434",
+    "mobileNumber": "7700920434",
+    "corpId": "BABA901250569",
+    "corpUserId": "JYOT0434",
+    "corpConstitution": "SOLE PROPRIETORSHIP",
+    "corpConstitutionCode": "009",
+    "leiNumber": "",
+    "udyamNumber": "",
+    "panGirNum": "FEEPM9025Q",
+    "nationalIdNum": "219858125104",
+    "retailCifPan": "FEEPM9025Q",
+    "rcifNationalIdNum": "",
+    "kycDetails": {
+        "ckyc": "60075100327516",
+        "pan": "FEEPM9025Q",
+        "aadhar": "219858125104",
+        "mobile": "7700920434",
+        "email": "varunmohata07@gmail.com",
+        "kycstatus": "Y"
+    }
+}

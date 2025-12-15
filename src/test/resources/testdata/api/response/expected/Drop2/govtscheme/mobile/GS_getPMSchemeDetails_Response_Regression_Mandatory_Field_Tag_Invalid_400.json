@@ -1,0 +1,15 @@
+{
+  "errorId": "570c6915-0497-4944-b0d3-ec9208c0ed8f",
+  "errorAt": "2025-02-21T01:55:13.987196875",
+  "errorLocation": null,
+  "error": null,
+  "errors": [
+    {
+      "code": "BAD_REQUEST",
+      "message": "#: required key [channelId] not found",
+      "values": null,
+      "origmesg": null,
+      "errors": null
+    }
+  ]
+}

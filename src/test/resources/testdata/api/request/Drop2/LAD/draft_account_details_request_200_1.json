@@ -1,0 +1,29 @@
+{
+  "cif": "613763682",
+  "applicationReferenceNumber": "",
+  "date": "2025-07-07T19:56:17.155Z",
+  "applicantName": "VIJAY JOSEPH MOYALAN",
+  "mobileNo": "8605405600",
+  "email": "vmoyalanubl@gmail.com",
+  "solId": "40710",
+  "nameOfRegulatedEntity": "Union Bank of India",
+  "depositAccountDetail": [
+    {
+      "fdAccountNumber": "719103030001020",
+      "investedAmount": "40000",
+      "currentValue": "40000",
+      "interestRate": "6.7",
+      "maturityDate": "2028-07-02",
+      "schemeCode": "TD003",
+      "schemeCategory": "FDSC"
+    }
+  ],
+  "loanDetail": {
+    "loanType": "Demand Loan",
+    "loanAmount": 6011,
+    "loanCreditAccount": "103810021003358",
+    "loanRoi": 7.6,
+    "loanPurpose": "Agri",
+    "loanTenure": "12"
+  }
+}

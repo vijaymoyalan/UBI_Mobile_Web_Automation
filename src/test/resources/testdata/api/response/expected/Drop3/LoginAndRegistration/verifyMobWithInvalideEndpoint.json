@@ -1,0 +1,8 @@
+{
+    "timestamp": "2025-02-19T08:22:31.867+00:00",
+    "path": "/app/login-registration/api/v1/verify-mobile1",
+    "status": 404,
+    "error": "Not Found",
+    "message": null,
+    "requestId": "52da354b-3011"
+}

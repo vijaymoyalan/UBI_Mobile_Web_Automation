@@ -1,0 +1,15 @@
+{
+    "errorId": "0227f90e-7337-472e-901f-c4c62bcb679d",
+    "errorAt": null,
+    "errorLocation": null,
+    "error": null,
+    "errors": [
+        {
+            "code": "ERR_LR_00103",
+            "message": "We could not find customer id linked to this phone number. If you are an existing customer please contact your nearest branch.",
+            "values": null,
+            "origmesg": null,
+            "errors": null
+        }
+    ]
+}

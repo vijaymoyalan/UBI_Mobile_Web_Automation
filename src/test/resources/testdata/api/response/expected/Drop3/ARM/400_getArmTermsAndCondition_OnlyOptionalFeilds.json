@@ -1,0 +1,15 @@
+{
+    "errorId": "f65f7335-e64f-4cba-9828-28da1f63d757",
+    "errorAt": "2025-02-18T11:25:28.29441365",
+    "errorLocation": null,
+    "error": null,
+    "errors": [
+        {
+            "code": "400",
+            "message": "cif: must not be blank, cif: must not be null",
+            "values": null,
+            "origmesg": null,
+            "errors": null
+        }
+    ]
+}

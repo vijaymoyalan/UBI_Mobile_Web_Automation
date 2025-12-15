@@ -1,0 +1,7 @@
+{
+    "response": {
+        "message": "Successfully return last login time.",
+        "lastLoginTime": "2025-04-11T11:25:46.120Z"
+    },
+    "respcode": "200"
+}

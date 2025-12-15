@@ -1,0 +1,9 @@
+{
+  "cif": "254061641",
+  "channel": "MOB",
+  "debitAccountNumber": "441002010058664",
+  "mode": "WITHINBANK",
+  "date": "2025-01-30",
+  "paymentTxnId": "669555611323",
+  "transactionStatus": "SUCCESS"
+}

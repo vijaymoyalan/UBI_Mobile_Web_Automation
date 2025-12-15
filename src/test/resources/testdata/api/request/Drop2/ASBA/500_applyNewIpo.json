@@ -1,0 +1,33 @@
+{
+  "cif": "258459119",
+  "ipoName": "EQUITAS HOLDING LIMITED",
+  "scripid": "EQUITAS",
+  "category": "POL",
+  "bidtype": "1",
+  "orderno": "1",
+  "priceRange": "1-5",
+  "lotSize": "1",
+  "applicantname": "Bhawana Kanyal",
+  "depository": "CDSL",
+  "dpid": "0",
+  "maxBidPrice": "5",
+  "clientbenfid": "3699633699669996",
+  "chequereceivedflag": "true",
+  "chequeamount": "200000.00",
+  "panno": "DSJPK9933C",
+  "bankname": "0",
+  "location": "0",
+  "accountnumber_upiid": "658902070000001",
+  "asba_upiid": "true",
+  "quantity": "200000",
+  "bids": [
+    {
+      "bidid": "",
+      "quantity": "200000",
+      "rate": "2",
+      "cuttoffflag": "0",
+      "orderno": "1",
+      "actioncode": "n"
+    }
+  ]
+}

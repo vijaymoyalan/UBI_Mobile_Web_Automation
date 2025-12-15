@@ -1,0 +1,15 @@
+{
+    "errorId": "b2758de2-0473-4cfa-bd12-a20e0b26e2d9",
+    "errorAt": null,
+    "errorLocation": null,
+    "error": null,
+    "errors": [
+        {
+            "code": "USERID NOT FOUND",
+            "message": "No records found for give user id",
+            "values": null,
+            "origmesg": null,
+            "errors": null
+        }
+    ]
+}

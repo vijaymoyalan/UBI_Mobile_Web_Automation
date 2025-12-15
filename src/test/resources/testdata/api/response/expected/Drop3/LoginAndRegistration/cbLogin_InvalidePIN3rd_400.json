@@ -1,0 +1,15 @@
+{
+    "errorId": "346ad1ea-e1fe-428e-a5e0-cf440e54b933",
+    "errorAt": null,
+    "errorLocation": null,
+    "error": null,
+    "errors": [
+        {
+            "code": "CB-E41",
+            "message": "Entered Login PIN is incorrect, you have exhausted all retries. Kindly try after 24 hours",
+            "values": null,
+            "origmesg": null,
+            "errors": null
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+  "errorId": "191e581f-adf1-46b2-a377-835293998f35",
+  "errorAt": "2025-02-13T12:49:05.146130688",
+  "error": {
+    "code": "400 BAD_REQUEST",
+    "title": "IPO_RESPONSE_ISSUE",
+    "description": "IPO OR CATEGORY IS NOT VALID"
+  }
+}

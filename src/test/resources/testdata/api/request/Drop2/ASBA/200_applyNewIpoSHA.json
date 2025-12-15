@@ -1,0 +1,32 @@
+{
+  "cif" : "258459119",
+  "ipoName" : "ABC LIMITED",
+  "scripid" : "ABC",
+  "category" : "SHA",
+  "bidtype" : "1",
+  "orderno" : "1",
+  "priceRange" : "280.00-300.00",
+  "lotSize" : "50",
+  "applicantname" : "BHAWANA KANYAL DO RAJENDRA SINGH KANYAL",
+  "depository" : "CDSL",
+  "dpid" : "0",
+  "maxBidPrice" : "300.00",
+  "clientbenfid" : "1234567812545661",
+  "chequereceivedflag" : "true",
+  "chequeamount" : "15000.00",
+  "panno" : "DSJPK9933C",
+  "bankname" : "0",
+  "location" : "0",
+  "accountnumber_upiid" : "681302010002716",
+  "asba_upiid" : "true",
+  "quantity" : "50",
+  "transactionId" : "258459119|2025-07-28T06:19:15.550153500Z",
+  "bids" : [ {
+    "bidid" : "",
+    "quantity" : "50",
+    "rate" : "300.00",
+    "cuttoffflag" : "0",
+    "orderno" : "1",
+    "actioncode" : "n"
+  } ]
+}

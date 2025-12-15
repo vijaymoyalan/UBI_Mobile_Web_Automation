@@ -1,0 +1,8 @@
+{
+    "timestamp": "2025-02-19T10:17:27.885+00:00",
+    "path": "/app/login-registration/api/v1/getEntityByMobileV",
+    "status": 404,
+    "error": "Not Found",
+    "message": null,
+    "requestId": "c1e2b248-3064"
+}

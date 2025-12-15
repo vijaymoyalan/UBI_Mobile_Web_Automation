@@ -1,0 +1,8 @@
+{
+  "corpid": "<string>",
+  "deviceid": "<string>",
+  "mobile": "<string>",
+  "signature": "<string>",
+  "simdata": "<string>",
+  "userid": "<string>"
+}

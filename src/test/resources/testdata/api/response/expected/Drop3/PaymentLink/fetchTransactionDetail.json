@@ -1,0 +1,22 @@
+{
+    "txn_id": "IPG000000023057",
+    "status": "Pending",
+    "paymentlink": "https://dcuat.mswipetech.co.in/pay-by-link/payment-options?TransID=UFI1dWp0RUdTbkpxWEJMb0ZMSzdYZz09",
+    "mobileNo": "9932090676",
+    "customerName": "JANGPANGI SO GANGA SINGH JANGPANGI",
+    "amount": 220,
+    "linkTransactionStatus": [
+        {
+            "status": "Collection Request raised",
+            "date": "2025-02-11"
+        },
+        {
+            "status": "Payment Link Resent",
+            "date": null
+        },
+        {
+            "status": "Pending",
+            "date": "2025-02-11"
+        }
+    ]
+}

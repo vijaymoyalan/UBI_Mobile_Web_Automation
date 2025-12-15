@@ -1,0 +1,19 @@
+{
+    "users": [
+        {
+            "corpId": "TARU901326461",
+            "userId": "KAVI3685",
+            "ecif": "901326461",
+            "rcif": null,
+            "name": "Kavita",
+            "entityName": "TARUN AND ASSOCIATES",
+            "corpConstitution": "SOLE PROPRIETORSHIP",
+            "corpConstitutionCode": "009",
+            "isAddedUser": true,
+            "isMPinSet": true,
+            "isTPinSet": true,
+            "isSecurityQueSet": true,
+            "isPassSet": false
+        }
+    ]
+}

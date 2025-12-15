@@ -1,0 +1,9 @@
+{
+  "corpid": "<string>",
+  "id": "<string>",
+  "mobile": "<string>",
+  "otp": "<string>",
+  "otphint": "<string>",
+  "allowedfailure": "<string>",
+  "blockinghours": "<string>"
+}

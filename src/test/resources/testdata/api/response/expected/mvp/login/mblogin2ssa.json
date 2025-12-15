@@ -1,0 +1,9 @@
+{
+   "deviceid": "6f7bf7a64a40b3f6",
+  "simdata": "6f7bf7a64a40b3f601|0|1",
+  "loginpin": "2580",
+  "sessionexpiry": 30,
+  "allowedfailure": 10,
+  "loginpinexpiry": 1000,
+  "loginwithbiometric": false
+}

@@ -1,0 +1,13 @@
+{
+    "remitterMobileNumber": "7400195265",
+    "remitterAccount": "441002010058664",
+    "remitterName": "Ankur Mishrat",
+    "beneficiaryIFSC": "SBIN0001594",
+    "beneficiaryAccountNumber": "123456041",
+    "amount": "60",
+    "debitAccountType": "SBA",
+    "remarks": "IMPS Transfer testing",
+    "beneficiaryName": "Ankur",
+    "cif": "254061641",
+    "quickTransfer": false
+}

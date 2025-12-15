@@ -1,0 +1,16 @@
+{
+  "errorId": "d17c30c5-0051-4a5f-a24a-b232a787ad18",
+  "errorAt": "2025-04-04T14:53:49",
+  "errorLocation": null,
+  "error": null,
+  "errors": [
+    {
+      "code": "Method Not Allowed",
+      "title": "System Error",
+      "message": "405 METHOD_NOT_ALLOWED \"Request method 'GET' is not supported.\"",
+      "values": null,
+      "origmesg": null,
+      "errors": null
+    }
+  ]
+}

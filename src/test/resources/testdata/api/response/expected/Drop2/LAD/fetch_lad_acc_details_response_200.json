@@ -1,0 +1,60 @@
+{
+  "brCountry": "INDIA",
+  "availableLimit": "0",
+  "amountPaidTillDate": "0",
+  "outstandingAmt": "-10249",
+  "tdDepositValue": "12541",
+  "tdAcnt": "719103030000981",
+  "sancLimit": "10247",
+  "brAddr1": "BISHUNPUR(CHAWK),BLK-",
+  "tdInvestedAmount": null,
+  "brCity": "JAUNPUR",
+  "tdMaturityDate": "11-06-2026",
+  "drwgPower": "10247",
+  "amtDueForClosure": "-10249",
+  "brAddr2": "KUTHAN,SHAHGANJ,",
+  "interestAmt": "2.32",
+  "brName": "BISHUNPUR",
+  "brState": "UTTAR PRADESH",
+  "brPIN": "223103",
+  "ladInterestRate": "8.25",
+  "tdInterestRate": "7.25",
+  "roi": null,
+  "tdClsDate": "",
+  "brAddr3": "",
+  "tdClsFlg": "N",
+  "tdInitialDepAmt": "12541",
+  "accountNumber": "719107030000145",
+  "tdRepaymentAccount": "369302010002353",
+  "odSchemeEligibleForLad": [
+    "ODGEN",
+    "ODSTF"
+  ],
+  "eligibleCASAConfigs": [
+    {
+      "accountType": "SBA",
+      "constitutionCode": "1",
+      "modeOfOperation": "001"
+    },
+    {
+      "accountType": "CAA",
+      "constitutionCode": "1",
+      "modeOfOperation": "001"
+    },
+    {
+      "accountType": "CAA",
+      "constitutionCode": "9",
+      "modeOfOperation": "001"
+    },
+    {
+      "accountType": "ODA",
+      "constitutionCode": "1",
+      "modeOfOperation": "001"
+    },
+    {
+      "accountType": "ODA",
+      "constitutionCode": "9",
+      "modeOfOperation": "001"
+    }
+  ]
+}

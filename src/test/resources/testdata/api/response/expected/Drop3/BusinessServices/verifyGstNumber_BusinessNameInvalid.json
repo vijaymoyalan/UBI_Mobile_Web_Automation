@@ -1,0 +1,1 @@
+{"errorId":"60defa95-cb66-4292-851b-934ea38a6d9c","errorAt":"2025-04-03T14:59:07.172152","errorLocation":"bs-bff-mobile-service","error":null,"errors":[{"code":"ERR_BS_00103","title":"System Error","message":"Verification failed. Account name and GST name does not match.","values":null,"origmesg":"Account name does not match with GST trade name","errors":null}]}

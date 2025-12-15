@@ -1,0 +1,9 @@
+{
+    "errorId": "70be7f4e-70d5-43a9-b673-d7c25ea85e65",
+    "errorAt": "2025-03-25T18:49:16.904508694",
+    "error": {
+        "code": "400 BAD_REQUEST",
+        "title": null,
+        "description": "INCORRECT IPO/CATEGORY"
+    }
+}

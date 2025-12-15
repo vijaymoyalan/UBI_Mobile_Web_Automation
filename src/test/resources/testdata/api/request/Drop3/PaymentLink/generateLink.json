@@ -1,0 +1,25 @@
+{
+    "cif": "627449370",
+    "cid":"9082717612jken1000661796",
+    "status": "Partial",
+    "linkName": "abca",
+    "amount": "250000",
+    "settleAccount": "448901010230650",
+    "expiryDate": "2025-1-30",
+    "mobileno":"9082717612",
+    "email_id":"abhi.shekjangpangi131@gmail.com",
+    "customerName":"ABHISHEK SINGH JANGPANGI SO GANGA SINGH JANGPANGI",
+     "hours":"02",
+    "minutes":"30",
+    "remarks":"rent paid",
+    "additionalDtl":[
+{
+ "purpose":"House Rent",
+"value": "250000"
+},
+{
+ "purpose":"House Rent",
+"value": "250000"
+}
+]
+}

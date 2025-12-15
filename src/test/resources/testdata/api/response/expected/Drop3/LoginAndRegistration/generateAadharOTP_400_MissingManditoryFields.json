@@ -1,0 +1,15 @@
+{
+    "errorId": "f04514f5-eaaa-41e7-ae40-bab8bc0a7a00",
+    "errorAt": "2025-02-19T22:36:05.601786177",
+    "errorLocation": null,
+    "error": null,
+    "errors": [
+        {
+            "code": "AADHAR_DEBIT_EMPTY",
+            "message": "Please provide either your Aadhaar number or Debit Card details to proceed",
+            "values": null,
+            "origmesg": null,
+            "errors": null
+        }
+    ]
+}

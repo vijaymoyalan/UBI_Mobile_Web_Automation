@@ -1,0 +1,15 @@
+{
+    "errorId": "f22ac69c-5c71-4680-ad48-ad087a923040",
+    "errorAt": "2025-02-20T13:21:01.586580908",
+    "errorLocation": null,
+    "error": null,
+    "errors": [
+        {
+            "code": "400",
+            "message": "userId: must not be blank, userId: must not be null",
+            "values": null,
+            "origmesg": null,
+            "errors": null
+        }
+    ]
+}

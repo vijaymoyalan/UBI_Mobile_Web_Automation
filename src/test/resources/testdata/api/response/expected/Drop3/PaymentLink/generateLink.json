@@ -1,0 +1,8 @@
+{
+    "success": "True",
+    "message": "Success",
+    "data": {
+        "paymentLink": "https://dcuat.mswipetech.co.in/pay-by-link/payment-options?TransID=cGhHMmhSNG5vWCt0N1djSkRQRlZEUT09",
+        "transaction_id": "IPG000000024182"
+    }
+}

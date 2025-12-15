@@ -1,0 +1,9 @@
+{
+  "errorId": "5b8523ad-9a30-431b-a38f-0e73e9e51c36",
+  "errorAt": "2025-02-13T10:20:24.74027595",
+  "error": {
+    "code": "METHOD_NOT_ALLOWED",
+    "title": "405 METHOD_NOT_ALLOWED \"Request method 'GET' is not supported.\"",
+    "description": null
+  }
+}

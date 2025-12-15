@@ -1,0 +1,1 @@
+{"errorId":"0e6f4549-8ac0-498e-a4ae-c4c9ab30a9fe","errorAt":"2025-04-03T12:48:15.071353","errorLocation":"bs-bff-mobile-service","error":null,"errors":[{"code":"ERR_BS_00104","title":"System Error","message":"Verification failed. Account name and LEI name does not match.","values":null,"origmesg":"Account name does not match with LEI legal name","errors":null}]}

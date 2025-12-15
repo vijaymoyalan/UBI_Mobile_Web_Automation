@@ -1,0 +1,1 @@
+{"errorId":"c1bbc0f0-7acf-42e9-860a-091598784555","errorAt":"2025-04-03T21:55:51.459225083","errorLocation":"bs-bff-mobile-service","error":null,"errors":[{"code":"ERR_BS_00051","title":null,"message":"We are unable to process your request at the moment. Please try again later.","values":null,"origmesg":"TRANSACTIONTYPE : MUST NOT BE EMPTY","errors":null}]}

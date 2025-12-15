@@ -1,0 +1,15 @@
+{
+    "errorId": "e3798155-4d7b-4247-a998-a253a7189c67",
+    "errorAt": null,
+    "errorLocation": null,
+    "error": null,
+    "errors": [
+        {
+            "code": "400",
+            "message": "Something went wrong. Please try again later.",
+            "values": null,
+            "origmesg": null,
+            "errors": null
+        }
+    ]
+}

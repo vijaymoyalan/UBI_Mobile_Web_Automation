@@ -1,0 +1,16 @@
+{
+    "amount": "44",
+    "channel": "MOB",
+    "cif": "254061641",
+    "creditAccountName": "Manohar Saho ",
+    "creditAccountNumber": "123456041",
+    "debitAccountName": "Harmanjit Saving Account",
+    "debitAccountNumber": "441002010058664",
+    "frequency": "MONTHLY",
+    "mode": "NEFT",
+    "numberOfTransfer": "2",
+    "remarks": "",
+    "scheduleType": "RECURRING",
+    "siEndDate": "2026-03-15T00:00:00.000Z",
+    "siStartDate": "2026-02-15T00:00:00.000Z"
+}

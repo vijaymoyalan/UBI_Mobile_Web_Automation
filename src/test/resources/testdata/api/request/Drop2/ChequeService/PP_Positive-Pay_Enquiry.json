@@ -1,0 +1,16 @@
+{
+  "cif": "264479335",
+  "isEncrypted": false,
+  "accNo": [
+    "307102070000199"
+  ],
+  "status": "All",
+  "fromAmount": "1000",
+  "toAmount": "10000000",
+  "fromChequeNo": "123210",
+  "toChequeNo": "123228",
+  "issueFromDate": "10/02/2025",
+  "issueToDate": "04/03/2025",
+  "accountNumberCount": true,
+  "channelName": "mobile"
+}

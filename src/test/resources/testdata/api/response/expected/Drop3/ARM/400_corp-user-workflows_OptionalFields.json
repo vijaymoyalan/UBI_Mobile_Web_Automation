@@ -1,0 +1,16 @@
+{
+    "errorId": "7bb34084-050e-4fa8-ae81-207a5228f071",
+    "errorAt": "2025-04-08T17:37:21.858913568",
+    "errorLocation": null,
+    "error": null,
+    "errors": [
+        {
+            "code": "BAD_REQUEST",
+            "title": "System Error",
+            "message": "Something went wrong. Please try again later.",
+            "values": null,
+            "origmesg": null,
+            "errors": null
+        }
+    ]
+}

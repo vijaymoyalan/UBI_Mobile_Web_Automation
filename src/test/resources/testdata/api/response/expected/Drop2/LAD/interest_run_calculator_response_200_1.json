@@ -1,0 +1,9 @@
+{
+  "availableBalance": null,
+  "ledgerBalance": null,
+  "userDefinedBalance": null,
+  "floatBalance": null,
+  "fdBalance": null,
+  "message": "Transaction not permitted to card holder",
+  "successOrFailure": "Failure"
+}

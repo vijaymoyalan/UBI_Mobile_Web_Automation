@@ -1,0 +1,29 @@
+{
+  "status": 200,
+  "code": 200,
+  "responseData": {
+    "message": "Issue Input saved successfully",
+    "referenceId": "114331408474",
+    "finalResponse": [
+      {
+        "institutionId": "1",
+        "issueInputId": "33rvr7vuh9s5",
+        "san": "123456",
+        "draweeBankName": "UNIONBANKOFINDIA",
+        "draweeBranchRoutingNumber": "123456789",
+        "accountNo": "307102070000199",
+        "paddedAccountNo": null,
+        "checkNo": "123220",
+        "checkNoNumeric": "123220",
+        "date": "3 Mar, 2025",
+        "amount": "200000",
+        "status": "Pending",
+        "payeeName": "UMESH SINGH LUNTHI",
+        "type": "Manual",
+        "channelName": "mobile",
+        "TransactionCodeType": "31",
+        "IFSCcode": null
+      }
+    ]
+  }
+}

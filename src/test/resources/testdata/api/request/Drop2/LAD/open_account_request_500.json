@@ -1,0 +1,26 @@
+{
+  "date": "",
+  "cif": "612647375",
+  "mobileNo": "",
+  "email": "",
+  "applicantName": "",
+  "nameOfRegulatedEntity": "",
+  "depositAccountDetail": [
+    {
+      "fdAccountNumber": "",
+      "investedAmount":,
+      "currentValue":,
+      "interestRate":,
+      "maturityDate": "",
+      "schemeCode": "",
+      "schemeCategory": ""
+    }
+  ],
+  "loanDetail": {
+    "loanType": "",
+    "loanAmount": "",
+    "loanCreditAccount": "",
+    "loanRoi":,
+    "loanTenure": ""
+  }
+}

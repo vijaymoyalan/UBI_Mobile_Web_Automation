@@ -1,0 +1,43 @@
+{
+    "photoDetails": [
+        {
+            "pictureName": "a",
+            "pictureType": "png",
+            "size": 0.0,
+            "referenceId": "22086548291668"
+        }
+    ],
+    "paymentChannelControl": {
+        "netbanking": "yes",
+        "upi": "yes",
+        "visa": "yes"
+    },
+    "bizaddress": {
+        "addrType": null,
+        "addrLine1": "null",
+        "addrLine2": "",
+        "addrLine3": "580 581 RAVECHI NAGAR",
+        "addrLine4": "SURVEY NO 18 MEGHPAR KUMBHARD",
+        "pinCode": "370110",
+        "cityCode": null,
+        "stateCode": null,
+        "countryCode": null,
+        "businessCity": "ANJAR",
+        "businessDistrictCode": null,
+        "businessDistrict": "null",
+        "businessState": "Gujrat"
+    },
+    "accountNumber": "448901010230650",
+    "panNumber": "AQCPA2305A",
+    "gstn": "24AQCPA2305A2Z1",
+    "merchantName": null,
+    "businessName": "RAJESH LAKHMAN AHIR",
+    "businessNature": "UNDERGRADUATE",
+    "mobileNumber": "9082717612",
+    "email": "tausifubi@gmail.com",
+    "erpFacilityFlag": false,
+    "vendorName": null,
+    "termsAndConditionAcceptanceFlag": true,
+    "scheduleOfChargesAcceptanceFlag": true,
+    "annualTurnOver": "less than 10"
+}

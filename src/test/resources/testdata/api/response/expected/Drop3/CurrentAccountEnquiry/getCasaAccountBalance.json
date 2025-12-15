@@ -1,0 +1,1 @@
+{"acctNum":null,"acctBals":[{"balTypeCode":"EFFAVL","amount":11001074.01},{"balTypeCode":"AVAIL","amount":11001074.01},{"balTypeCode":"LEDGER","amount":11002103.01}],"bankInfo":{"branchSolId":null,"branchId":"","branchName":"","address":null},"availableBalance":"11000045.01","lienAmount":"123","fundsInClearing":"906"}

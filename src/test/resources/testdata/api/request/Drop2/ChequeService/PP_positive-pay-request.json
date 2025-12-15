@@ -1,0 +1,19 @@
+{
+  "cif": "264479335",
+  "manualIssueInputList": [
+    {
+      "accountNo": "307102070000199",
+      "chequeNo": "123220",
+      "issueDate": "03/03/2025",
+      "amount": "200000",
+      "payeeName": "UMESH SINGH LUNTHI",
+      "status": "Pending",
+      "draweeBankName": "UNIONBANKOFINDIA",
+      "draweeBranchRoutingNumber": "123456789",
+      "transCode": "10",
+      "san": "123456",
+      "channelName": "mobile"
+    }
+  ],
+  "isEncrypted": false
+}
