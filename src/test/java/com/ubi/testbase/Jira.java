@@ -294,7 +294,7 @@ public class Jira {
             URL url = new URL(TOKEN_URL);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("POST");
-            connection.setRequestProperty("cookie", "");
+            connection.setRequestProperty("cookie", "ajs_anonymous_id");
             connection.setDoOutput(true);
 
             String urlParameters = "plugin-key=com.kanoah.test-manager" +
