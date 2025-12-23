@@ -160,6 +160,26 @@
 			"name": "ContinueButton",
 			"locator": "xpath",
 			"value": "//android.widget.Button[@content-desc=\"Continue\"]"
+		},
+		{
+			"name": "RIBLoginUsingPasword",
+			"locator": "xpath",
+			"value": "(//div[@class=\"access MuiBox-root css-0\"])[2]"
+		},
+		{
+			"name": "RIBLogin",
+			"locator": "xpath",
+			"value": "//input[@id=\"username\"]"
+		},
+		{
+			"name": "RIBPassword",
+			"locator": "xpath",
+			"value": "//input[@id=\"password\"]"
+		},
+		{
+			"name": "RIBLoginButton",
+			"locator": "xpath",
+			"value": "//button[normalize-space()=\"Login\"]"
 		}
 	],
 	"PermissionsPage": [
@@ -5468,7 +5488,7 @@
 			"value": "//android.widget.Button[@content-desc=\"Cancel\"]"
 		}
 	],
-	"RDDetailsPage": [
+"RDDetailsPage": [
 		{
 			"name": "EnterRDName",
 			"locator": "xpath",
@@ -10827,6 +10847,16 @@
 				"value": "(//p[@class=\"MuiTypography-root MuiTypography-body1 viewMore__viewMoreLabel css-9l3uo3\"])[1]"
 		},
 		{
+				"name": "Invest&InsureTab",
+				"locator": "xpath",
+				"value": "//button[normalize-space()=\"Invest & Insure\"]"
+		},
+		{
+				"name": "SSAaddAccountTab",
+				"locator": "xpath",
+				"value": "(//p[@class=\"MuiTypography-root MuiTypography-body1 menuicons__cardcontainer__section__card__text css-9l3uo3\"][normalize-space()=\"Sukanya Samriddhi Account\"])[3]"
+		},
+		{
 				"name": "RDTab",
 				"locator": "xpath",
 				"value": "(//button[contains(text(),\"Recurring Deposit\")])[1]"
@@ -10835,6 +10865,46 @@
 				"name": "ExistingRD",
 				"locator": "xpath",
 				"value": "(//button[contains(@class, \"balance-header__arrow\")])[1]"
+		},
+		{
+				"name": "AccountsTab",
+				"locator": "xpath",
+				"value": "(//span[normalize-space()=\"Accounts\"])[1]"
+		},
+		{
+				"name": "InvestmentTab",
+				"locator": "xpath",
+				"value": "(//button[normalize-space()=\"Investments\"])[1]"
+		},
+		{
+				"name": "InvestmentTabAddAccount",
+				"locator": "xpath",
+				"value": "(//button[normalize-space()=\"Add Account\"])[1]"
+		},
+		{
+				"name": "ExploreProductsSSA",
+				"locator": "xpath",
+				"value": "(//span[normalize-space()=\"Sukanya Samriddhi Account\"])[1]"
+		},
+		{
+				"name": "PendingServiceRequests",
+				"locator": "xpath",
+				"value": "//p[normalize-space()=\"Pending Service Requests\"]"
+		},
+		{
+				"name": "ServiceRequestViewAll",
+				"locator": "xpath",
+				"value": "(//p[@class=\"MuiTypography-root MuiTypography-body1 iconcards__maincontainer__bills__pendingbillstext__viewallbtn__text css-9l3uo3\"][normalize-space()=\"View All\"])[4]"
+		},
+		{
+				"name": "Invest&Insure",
+				"locator": "xpath",
+				"value": "(//p[@class=\"MuiTypography-root MuiTypography-body1 iconcards__cardcontainer__heading__title css-9l3uo3\"][normalize-space()=\"Invest & Insure\"])[1]"
+		},
+		{
+				"name": "Invest&InsureViewAll",
+				"locator": "xpath",
+				"value": "(//p[@class=\"MuiTypography-root MuiTypography-body1 iconcards__maincontainer__bills__pendingbillstext__viewallbtn__text css-9l3uo3\"][normalize-space()=\"View All\"])[3]"
 		}
 	],
 "RIB_FDPage":
@@ -10954,6 +11024,11 @@
 				"value": "//input[@id=\"rdName\"]"
 		},
 		{
+				"name": "BackButton",
+				"locator": "xpath",
+				"value": "(//a[@class=\"MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways breadcrumbs__backbutton false css-z4r21k\"])[1]"
+		},
+		{
 				"name": "AccountNameDropDown",
 				"locator": "xpath",
 				"value": "//button[@title=\"Open\"]//*[name()=\"svg\"]"
@@ -10984,9 +11059,19 @@
 				"value": "//span[normalize-space()=\"1 Year\"]"
 		},
 		{
+				"name": "SelectTenure2Year",
+				"locator": "xpath",
+				"value": "//span[normalize-space()=\"2 Year\"]"
+		},
+		{
 				"name": "SelectTenure3Year",
 				"locator": "xpath",
 				"value": "//span[normalize-space()=\"3 Years\"]"
+		},
+		{
+				"name": "SelectTenure6Months",
+				"locator": "xpath",
+				"value": "//span[normalize-space()=\"6 Months\"]"
 		},
 		{
 				"name": "SelectCustomeTenure",
@@ -10996,7 +11081,7 @@
 		{
 				"name": "ScheduleTransferDate",
 				"locator": "xpath",
-				"value": "(//div[contains(@class,\"textField__inputContainer__endAdornment_box\")])[1]"
+				"value": "(//div[contains(@class,\"textField__inputContainer__endAdornment_box\")])[3]"
 		},
 		{
 				"name": "SelectPeriod",
@@ -11016,7 +11101,7 @@
 		{
 				"name":"DOB",
 				"locator":"xpath",
-				"value":"(//div[contains(@class,\"textField__inputContainer__endAdornment_box\")])[2]"
+				"value":"(//div[contains(@class,\"textField__inputContainer__endAdornment_box\")])[5]"
 		},
 		{
 				"name":"ContinueButton",
@@ -11168,6 +11253,41 @@
 				"name":"CustomMonthErrorMessage",
 				"locator":"xpath",
 				"value":"(//span[@class=\"Tenure__card__content__custom__element__error\"])[1]"
+		},
+		{
+				"name":"ViewRateCard",
+				"locator":"xpath",
+				"value":"(//div[@class=\"Tenure__card__heading__endHead MuiBox-root css-0\"])[1]"
+		},
+		{
+				"name":"InterestRateCard",
+				"locator":"xpath",
+				"value":"(//div[@class=\"Tenure__card__heading__endHead MuiBox-root css-0\"])[1]"
+		},
+		{
+				"name":"BottomPage",
+				"locator":"xpath",
+				"value":"(//label[normalize-space()=\"> 5 Years to 10 Years\"])[1]"
+		},
+		{
+				"name":"DetailsPageProgress",
+				"locator":"xpath",
+				"value":"(//div[@class=\"customStepper__step__vstepper__circle\"])[1]"
+		},
+		{
+				"name":"ReviewPageProgress",
+				"locator":"xpath",
+				"value":"(//div[@class=\"customStepper__step__vstepper__circle\"])[2]"
+		},
+		{
+				"name":"TotalMaturityValue",
+				"locator":"xpath",
+				"value":"(//p[@class=\"MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom proportionCard__card__value css-4an0mh\"])[1]"
+		},
+		{
+				"name":"TotalInterestPayout",
+				"locator":"xpath",
+				"value":"(//p[@class=\"MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom proportionCard__card__value css-4an0mh\"])[2]"
 		}
 	],
 "RIB_ExistingRD":[
@@ -11305,6 +11425,358 @@
 				"name":"LastFinancialYear",
 				"locator":"xpath",
 				"value":"//button[normalize-space()=\"Last Financial year\"]"
+		},
+		{
+				"name":"TDSFinancialYrOption",
+				"locator":"xpath",
+				"value":"(//*[name()=\"svg\"][@aria-hidden=\"true\"])[9]"
+		},
+		{
+				"name":"TDSFY25-26",
+				"locator":"xpath",
+				"value":"//*[@id=\"Financial Year-option-0\"]"
+		},
+		{
+				"name":"TDSFY24-25",
+				"locator":"xpath",
+				"value":"//*[@id=\"Financial Year-option-1\"]"
+		},
+		{
+				"name":"TDSFY23-24",
+				"locator":"xpath",
+				"value":"//*[@id=\"Financial Year-option-2\"]"
+		},
+		{
+				"name":"BackIcon",
+				"locator":"xpath",
+				"value":"(//a[@class=\"MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways breadcrumbs__backbutton false css-z4r21k\"])[1]"
+		},
+		{
+				"name":"GenerateButton",
+				"locator":"xpath",
+				"value":"(//button[normalize-space()=\"Generate\"])[1]"
+		},
+		{
+				"name":"AccountName",
+				"locator":"xpath",
+				"value":"(//p[@class=\"MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom CustomerInformationCard__card__ivalue css-4an0mh\"])[1]"
+		},
+		{
+				"name":"AccountNumber",
+				"locator":"xpath",
+				"value":"(//p[normalize-space()=\"XXXXX XXXXX 01939\"])[1]"
+		}
+	],
+"RIB_SSAPage":
+	[
+		{
+				"name":"SSAText",
+				"locator":"xpath",
+				"value":"(//b[contains(text(),\"Sukanya Samriddhi Account\")])[2]"
+		},
+		{
+				"name":"ApplyNow",
+				"locator":"xpath",
+				"value":"(//button[normalize-space()=\"Apply Now\"])[1]"
+		},
+		{
+				"name":"EnterContributionAmount",
+				"locator":"xpath",
+				"value":"//input[@id=\"enteredAmount\"]"
+		},
+		{
+				"name":"ContributionAmountText",
+				"locator":"xpath",
+				"value":"//p[normalize-space()=\"Initial Contribution Amount\"]"
+		},
+		{
+				"name":"PreferredBranchAddress",
+				"locator":"xpath",
+				"value":"//div[normalize-space()=\"CUTTACK - ODISHA\"]"
+		},
+		{
+				"name":"PreferredBranchHours",
+				"locator":"xpath",
+				"value":"//div[normalize-space()=\"10:00am to 4:00pm\"]"
+		},
+		{
+				"name":"ContinueButton",
+				"locator":"xpath",
+				"value":"//button[normalize-space()=\"Continue\"]"
+		},
+		{
+				"name":"GirlChildName",
+				"locator":"xpath",
+				"value":"//input[@id=\"childName\"]"
+		},
+		{
+				"name":"GirlChildDOB",
+				"locator":"xpath",
+				"value":"(//div[contains(@class,\"textField__inputContainer__endAdornment_box\")])[2]"
+		},
+		{
+				"name":"RelationshipOption",
+				"locator":"xpath",
+				"value":"(//button[@title=\"Open\"])[1]"
+		},
+		{
+				"name":"RelationshipSelection",
+				"locator":"xpath",
+				"value":"//*[@id=\"relationship-option-0\"]"
+		},
+		{
+				"name":"RelationshipFather",
+				"locator":"xpath",
+				"value":"//*[@id=\"relationship-option-0\"]"
+		},
+		{
+				"name":"RelationshipMother",
+				"locator":"xpath",
+				"value":"//*[@id=\"relationship-option-1\"]"
+		},
+		{
+				"name":"RelationshipOthers",
+				"locator":"xpath",
+				"value":"//*[@id=\"relationship-option-2\"]"
+		},
+		{
+				"name":"BirthOrderOption",
+				"locator":"xpath",
+				"value":"(//button[@title=\"Open\"])[2]"
+		},
+		{
+				"name":"BirthOrderSelection",
+				"locator":"xpath",
+				"value":"//*[@id=\"birthOrder-option-0\"]"
+		},
+		{
+				"name":"BirthOrderFirst",
+				"locator":"xpath",
+				"value":"//*[@id=\"birthOrder-option-0\"]"
+		},
+		{
+				"name":"BirthOrderSecond",
+				"locator":"xpath",
+				"value":"//*[@id=\"birthOrder-option-1\"]"
+		},
+		{
+				"name":"BirthTypeOption",
+				"locator":"xpath",
+				"value":"(//button[@title=\"Open\"])[3]"
+		},
+		{
+				"name":"BirthTypeSelection",
+				"locator":"xpath",
+				"value":"//*[@id=\"birthType-option-0\"]/span"
+		},
+		{
+				"name":"BirthTypeSingle",
+				"locator":"xpath",
+				"value":"//*[@id=\"birthType-option-0\"]/span"
+		},
+		{
+				"name":"BirthTypeTwinFirst",
+				"locator":"xpath",
+				"value":"//*[@id=\"birthType-option-1\"]/span"
+		},
+		{
+				"name":"BirthTypeTwinSecond",
+				"locator":"xpath",
+				"value":"//*[@id=\"birthType-option-2\"]/span"
+		},
+		{
+				"name":"BirthTypeTripletFirst",
+				"locator":"xpath",
+				"value":"//*[@id=\"birthType-option-3\"]/span"
+		},
+		{
+				"name":"BirthTypeTripletSecond",
+				"locator":"xpath",
+				"value":"//*[@id=\"birthType-option-4\"]/span"
+		},
+		{
+				"name":"BirthTypeTripletThird",
+				"locator":"xpath",
+				"value":"//*[@id=\"birthType-option-5\"]/span"
+		},
+		{
+				"name":"TnC",
+				"locator":"xpath",
+				"value":"//p[@class=\"MuiTypography-root MuiTypography-body1 termsandcondition css-uovq3q\"]"
+		},
+		{
+				"name":"AgreeButton",
+				"locator":"xpath",
+				"value":"//button[normalize-space()=\"I Agree\"]"
+		},
+		{
+				"name":"SubmitButton",
+				"locator":"xpath",
+				"value":"//button[normalize-space()=\"Submit\"]"
+		},
+		{
+				"name":"TPIN",
+				"locator":"xpath",
+				"value":"//input[@id=\"tpassword\"]"
+		},
+		{
+				"name":"StartOverButton",
+				"locator":"xpath",
+				"value":"//button[normalize-space()=\"Start Over\"]"
+		},
+		{
+				"name": "AccountNameDropDown",
+				"locator": "xpath",
+				"value": "//button[@title=\"Open\"]//*[name()=\"svg\"]"
+		},
+		{
+				"name": "SavingAccountSelection",
+				"locator": "xpath",
+				"value": "//*[@id=\"accountNumberDropDown-option-0\"]/div"
+		},
+		{
+				"name": "CurrentAccountSelection",
+				"locator": "xpath",
+				"value": "//*[@id=\"accountNumberDropDown-option-1\"]/div"
+		},
+		{
+				"name": "OverdraftAccountSelection",
+				"locator": "xpath",
+				"value": "//*[@id=\"accountNumberDropDown-option-2\"]/div"
+		},
+		{
+				"name": "AccountSelected",
+				"locator": "xpath",
+				"value": "//div[@class=\"accountsAutoCompletion__TextField__inputContainer__selected--title\"]"
+		},
+		{
+				"name": "ChangeBranch",
+				"locator": "xpath",
+				"value": "(//a[normalize-space()=\"Change\"])[1]"
+		},
+		{
+				"name": "EnterBranchPincode",
+				"locator": "xpath",
+				"value": "(//input[@id=\"inputValBranch\"])[1]"
+		},
+		{
+				"name": "SelectDisplayedBranch",
+				"locator": "xpath",
+				"value": "//*[@id=\"inputValBranch-option-0\"]"
+		},
+		{
+				"name": "NoBranchErrorMessage",
+				"locator": "xpath",
+				"value": "(//p[@id=\"inputValBranch-helper-text\"])[1]"
+		},
+		{
+				"name": "GirlChildDetailsSection",
+				"locator": "xpath",
+				"value": "(//p[@id=\"inputValBranch-helper-text\"])[1]"
+		},
+		{
+				"name": "GirlChildNameError",
+				"locator": "xpath",
+				"value": "(//p[@id=\"childName-helper-text\"])[1]"
+		},
+		{
+				"name": "EnterDOBManually",
+				"locator": "xpath",
+				"value": "(//input[@id=\"dob\"])[1]"
+		},
+		{
+				"name": "GirlChildDOBError",
+				"locator": "xpath",
+				"value": "(//p[@id=\"dob-helper-text\"])[1]"
+		},
+		{
+				"name": "GirlChildAddressChange",
+				"locator": "xpath",
+				"value": "(//span[@class=\"MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-9l3uo3\"])[1]"
+		},
+		{
+				"name": "GirlChildAddressPincode",
+				"locator": "xpath",
+				"value": "(//input[@id=\"pincode\"])[1]"
+		},
+		{
+				"name": "GirlChildAddressCity",
+				"locator": "xpath",
+				"value": "(//input[@id=\"city\"])[1]"
+		},
+		{
+				"name": "GirlChildAddressState",
+				"locator": "xpath",
+				"value": "(//input[@id=\"state\"])[1]"
+		},
+		{
+				"name": "GirlChildAddressLine1",
+				"locator": "xpath",
+				"value": "(//input[@id=\"addressLine1\"])[1]"
+		},
+		{
+				"name": "GirlChildAddressLine2",
+				"locator": "xpath",
+				"value": "(//input[@id=\"addressLine2\"])[1]"
+		},
+		{
+				"name": "DownloadT&C",
+				"locator": "xpath",
+				"value": "(//button[normalize-space()=\"Download T&C\"])[1]"
+		},
+		{
+				"name": "ContributionAmountError",
+				"locator": "xpath",
+				"value": "(//p[@class=\"MuiTypography-root MuiTypography-body1 Custom_Currency_Text_Box_Error css-9l3uo3\"])[1]"
+		}
+	],
+"RIB_SSA_ReviewPage":
+	[
+		{
+				"name": "GirlChildInfoSection",
+				"locator": "xpath",
+				"value": "(//p[normalize-space()=\"Girl Child's Information\"])[1]"
+		},
+		{
+				"name": "GirlChildName",
+				"locator": "xpath",
+				"value": "(//div[@class=\"MuiBox-root css-0\"][normalize-space()=\"Supriya K\"])[1]"
+		},
+		{
+				"name": "GirlChildRelation",
+				"locator": "xpath",
+				"value": "(//div[contains(text(),\"Father\")])[1]"
+		},
+		{
+				"name": "GirlChildBirthOrder",
+				"locator": "xpath",
+				"value": "(//div[contains(text(),\"First Child\")])[1]"
+		},
+		{
+				"name": "GirlChildBirthType",
+				"locator": "xpath",
+				"value": "(//div[contains(text(),\"Single\")])[1]"
+		},
+		{
+				"name": "GirlChildAddress",
+				"locator": "xpath",
+				"value": "(//div[normalize-space()=\"CUT - ORI\"])[1]"
+		},
+		{
+				"name": "GirlChildBranchAddress",
+				"locator": "xpath",
+				"value": "(//div[normalize-space()=\"CUTTACK - ODISHA\"])[1]"
+		},
+		{
+				"name": "GirlChildInfoChangeOption",
+				"locator": "xpath",
+				"value": "(//a[@role='link'][normalize-space()=\"Change\"])[1]"
+		},
+		{
+				"name": "GirlChildBranchChangeOption",
+				"locator": "xpath",
+				"value": "(//a[@role='link'][normalize-space()=\"Change\"])[2]"
 		}
 	]
+		
 }

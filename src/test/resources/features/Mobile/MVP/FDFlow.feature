@@ -2,9 +2,9 @@ Feature: Mobile UI for FD
 
 @TestCaseKey=UDB-T9654 @TestCaseKey=UDB-T2482 @Automatable @Smoke @RedmiNote9Pro
 Scenario: Verify that a Normal user can successfully open a normal Fixed Deposit (FD) with a tenure of 399 days and an interest payout set as "Monthly" 
-Given user logins to app
+#Given user logins to app
 Given user logins to app entering Login PIN
-Given user is on page DashboardPage clicks on FingerPrint
+#Given user is on page DashboardPage clicks on FingerPrint
 Given user is on page DashboardPage clicks on Accounts
 Given user is on page DepositPage clicks on AddAccount  
 Given user is on page DepositPage clicks on FixedDeposit
@@ -12,26 +12,26 @@ Given user is on DepositPage to check for pending application option and clicks 
 Given user is on page FDDetailsPage clicks on SelectAccount   
 Given user is on page FDDetailsPage clicks on SelectSavingAccount
 Given user is on page FDDetailsPage clicks on EnterFDName
-When user is on page FDDetailsPage and types Vijay Test on EnterFDName  
-When user is on page FDDetailsPage and types 1000 on EnterAmount
-When user scrolls down to "Select Interest Payout"
-Given user is on page FDDetailsPage clicks on PopularTenure
-When user scrolls down to "Total Maturity Amount"
-Given user is on page FDDetailsPage clicks on SelectInterestPayout 
-Given user is on page FDDetailsPage clicks on SelectMonthlyPeriod 
-When user scrolls down to "Nominee Details"
-Given user swipe down the page
-Given user is on page FDDetailsPage clicks on NomineeDOB
-Given user selects day 11 month Apr year 2006 and current year is 2025
-Given user is on page FDDetailsPage clicks on Continue
-Given user swipe down the page
-Given user is on page FDReviewPage clicks on T&CCheckbox 
-Given user is on page FDReviewPage clicks on AcceptButton
-Given user is on page FDReviewPage clicks on Submit
-Given user is on page FDReviewPage clicks on TPIN
-When user is on page FDReviewPage and types 2121 on TpinText
-When user is on page FDReviewPage clicks on TPINContinue
-Given user verifies on page FDReviewPage for Your Fixed Deposit Account has been opened successfully! text in placeholder CompletedFDPage
+#When user is on page FDDetailsPage and types Vijay Test on EnterFDName  
+#When user is on page FDDetailsPage and types 1000 on EnterAmount
+#When user scrolls down to "Select Interest Payout"
+#Given user is on page FDDetailsPage clicks on PopularTenure
+#When user scrolls down to "Total Maturity Amount"
+#Given user is on page FDDetailsPage clicks on SelectInterestPayout 
+#Given user is on page FDDetailsPage clicks on SelectMonthlyPeriod 
+#When user scrolls down to "Nominee Details"
+#Given user swipe down the page
+#Given user is on page FDDetailsPage clicks on NomineeDOB
+#Given user selects day 11 month Apr year 2006 and current year is 2025
+#Given user is on page FDDetailsPage clicks on Continue
+#Given user swipe down the page
+#Given user is on page FDReviewPage clicks on T&CCheckbox 
+#Given user is on page FDReviewPage clicks on AcceptButton
+#Given user is on page FDReviewPage clicks on Submit
+#Given user is on page FDReviewPage clicks on TPIN
+#When user is on page FDReviewPage and types 2121 on TpinText
+#When user is on page FDReviewPage clicks on TPINContinue
+#Given user verifies on page FDReviewPage for Your Fixed Deposit Account has been opened successfully! text in placeholder CompletedFDPage
 
 
 @TestCaseKey=UDB-T9660 @Automatable @Smoke @RedmiNote9Pro

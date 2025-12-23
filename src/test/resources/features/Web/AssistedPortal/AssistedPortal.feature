@@ -38,7 +38,7 @@ Scenario: Verify the source should visible to the BM.
  Given user is on page AssistedPortalLogin and types Ubi@1234 on Password
  Given user is on page AssistedPortalLogin and clicks on LoginButton
  Given user is on page AssistedPortalDashboard and clicks on GovtScheme
- Then user verifies for toast message on page AssistedPortalDashboard as Branch text in placeholder SourceText
+ Then user verifies for message on page AssistedPortalDashboard as Branch text in placeholder SourceText
  
  
 @TestCaseKey=UDB-T9149 @web
@@ -48,7 +48,7 @@ Scenario: Verify the current application stage should visible to the BM.
  Given user is on page AssistedPortalLogin and types Ubi@1234 on Password
  Given user is on page AssistedPortalLogin and clicks on LoginButton
  Given user is on page AssistedPortalDashboard and clicks on GovtScheme
- #Then user verifies for toast message on page AssistedPortalDashboard as Funding text in placeholder ApplicationStatus
+ #Then user verifies for message on page AssistedPortalDashboard as Funding text in placeholder ApplicationStatus
  Then user is on page AssistedPortalDashboard to verify ApplicationStatus is Displayed
  
 @TestCaseKey=UDB-T9173 @web
@@ -84,14 +84,14 @@ Scenario: Verify that Zonal Officer to be able to reallocate applications within
  Given user is on page GovtSchemePage and clicks on SelectBO
  Given user is on page GovtSchemePage and types Medisetty Harshita on SelectBO
  Given user is on page GovtSchemePage and clicks on BODisplayed
- Then user verifies for toast message on page GovtSchemePage as successfully text in placeholder SuccessText
+ Then user verifies for message on page GovtSchemePage as successfully text in placeholder SuccessText
  Then user is on page GovtSchemePage clears the SelectBO
  Given user is on page GovtSchemePage and clicks on OkayButton
  Given user is on page GovtSchemePage and clicks on SelectApplication
  Given user is on page GovtSchemePage and clicks on SelectBO
  Given user is on page GovtSchemePage and types Nalagatla Anu on SelectBO
  Given user is on page GovtSchemePage and clicks on BODisplayed
- Then user verifies for toast message on page GovtSchemePage as successfully text in placeholder SuccessText
+ Then user verifies for message on page GovtSchemePage as successfully text in placeholder SuccessText
  
  
 @TestCaseKey=UDB-T8453 @web
@@ -115,14 +115,14 @@ Scenario: Verify that Operations Officer(DBM) to have the functionality for the 
  Given user is on page GovtSchemePage and clicks on SelectBO
  Given user is on page GovtSchemePage and types Medisetty Harshita on SelectBO
  Given user is on page GovtSchemePage and clicks on BODisplayed
- Then user verifies for toast message on page GovtSchemePage as successfully text in placeholder SuccessText
+ Then user verifies for message on page GovtSchemePage as successfully text in placeholder SuccessText
  Then user is on page GovtSchemePage clears the SelectBO
  Given user is on page GovtSchemePage and clicks on OkayButton
  Given user is on page GovtSchemePage and clicks on SelectApplication
  Given user is on page GovtSchemePage and clicks on SelectBO
  Given user is on page GovtSchemePage and types Nalagatla Anu on SelectBO
  Given user is on page GovtSchemePage and clicks on BODisplayed
- Then user verifies for toast message on page GovtSchemePage as successfully text in placeholder SuccessText
+ Then user verifies for message on page GovtSchemePage as successfully text in placeholder SuccessText
  
  
  @TestCaseKey=UDB-T8485 @web
@@ -189,7 +189,7 @@ Scenario: Verify that TPP dashboard should open.
  Given user is on page AssistedPortalLogin and types Ubi@1234 on Password
  Given user is on page AssistedPortalLogin and clicks on LoginButton
  Given user is on page AssistedPortalDashboard and clicks on AccessOverInternet
- Then user verifies for toast message on page AccessOverInternet as Access Over Internet text in placeholder AccessOverInternetHeader
+ Then user verifies for message on page AccessOverInternet as Access Over Internet text in placeholder AccessOverInternetHeader
 
 
 @TestCaseKey=UDB-T9115 @web
@@ -211,7 +211,7 @@ Scenario: Verify that Lending dashboard should open
  Given user is on page AssistedPortalLogin and clicks on LoginButton
  Then user waits for sometime
  Given user is on page AssistedPortalDashboard and clicks on LendingTab
- Then user verifies for toast message on page AssistedPortalDashboard as List of all lending applications text in placeholder TabHeaderName
+ Then user verifies for message on page AssistedPortalDashboard as List of all lending applications text in placeholder TabHeaderName
  
 @TestCaseKey=UDB-T9252 @web
 Scenario: Verify that Liability dashboard should open
@@ -220,7 +220,7 @@ Scenario: Verify that Liability dashboard should open
  Given user is on page AssistedPortalLogin and types Ubi@1234 on Password
  Given user is on page AssistedPortalLogin and clicks on LoginButton
  Given user is on page AssistedPortalDashboard and clicks on LiabilitiesTab
- Then user verifies for toast message on page AssistedPortalDashboard as List of all liability applications text in placeholder TabHeaderName
+ Then user verifies for message on page AssistedPortalDashboard as List of all liability applications text in placeholder TabHeaderName
  
  
 @TestCaseKey=UDB-T9154 @web
@@ -385,14 +385,14 @@ Scenario: Verify that BM should Re-assign the Digital Form  to another staff
  Given user is on page GovtSchemePage and clicks on SelectBO
  Given user is on page GovtSchemePage and types Medisetty Harshita on SelectBO
  Given user is on page GovtSchemePage and clicks on BODisplayed
- Then user verifies for toast message on page GovtSchemePage as successfully text in placeholder SuccessText
+ Then user verifies for message on page GovtSchemePage as successfully text in placeholder SuccessText
  Then user is on page GovtSchemePage clears the SelectBO
  Given user is on page GovtSchemePage and clicks on OkayButton
  Given user is on page GovtSchemePage and clicks on SelectApplication
  Given user is on page GovtSchemePage and clicks on SelectBO
  Given user is on page GovtSchemePage and types Bharadwaj on SelectBO
  Given user is on page GovtSchemePage and clicks on BODisplayed
- Then user verifies for toast message on page GovtSchemePage as successfully text in placeholder SuccessText
+ Then user verifies for message on page GovtSchemePage as successfully text in placeholder SuccessText
  
  
 @TestCaseKey=UDB-T9200 @web
@@ -408,14 +408,14 @@ Scenario: Verify that BM should Re-assign the Digital Form  to himself/herself
  Given user is on page GovtSchemePage and clicks on SelectBO
  Given user is on page GovtSchemePage and types Nalagatla on SelectBO
  Given user is on page GovtSchemePage and clicks on BODisplayed
- Then user verifies for toast message on page GovtSchemePage as successfully text in placeholder SuccessText
+ Then user verifies for message on page GovtSchemePage as successfully text in placeholder SuccessText
  Then user is on page GovtSchemePage clears the SelectBO
  Given user is on page GovtSchemePage and clicks on OkayButton
  Given user is on page GovtSchemePage and clicks on SelectApplication
  Given user is on page GovtSchemePage and clicks on SelectBO
  Given user is on page GovtSchemePage and types Bharadwaj on SelectBO
  Given user is on page GovtSchemePage and clicks on BODisplayed
- Then user verifies for toast message on page GovtSchemePage as successfully text in placeholder SuccessText
+ Then user verifies for message on page GovtSchemePage as successfully text in placeholder SuccessText
  
  
 @TestCaseKey=UDB-T9205 @web
@@ -428,7 +428,7 @@ Scenario: Verify  that BM should  view the preferred branch  selected by the cus
  Given user is on page AssistedPortalDashboard and types 889737264513 on GlobalSerachBox
  Then user clicks on Enter
  Then user is on page LiabilitiesPage to verify CustomerBranch is Displayed
- Then user verifies for toast message on page LiabilitiesPage as COLLEGE SQUARE text in placeholder CustomerBranch
+ Then user verifies for message on page LiabilitiesPage as COLLEGE SQUARE text in placeholder CustomerBranch
  
  
 @TestCaseKey=UDB-T9206 @web
@@ -452,7 +452,7 @@ Scenario: Verify  that BM should  allocate Application to himself
  Given user is on page GovtSchemePage and types Nalagatla on SelectBO
  Then user is on page GovtSchemePage to verify BODisplayed is Displayed
  #Given user is on page GovtSchemePage and clicks on BODisplayed
- #Then user verifies for toast message on page GovtSchemePage as successfully text in placeholder SuccessText
+ #Then user verifies for message on page GovtSchemePage as successfully text in placeholder SuccessText
  
  
 @TestCaseKey=UDB-T9207 @TestCaseKey=UDB-T9229 @web
@@ -468,14 +468,14 @@ Scenario: Verify  that BM should allocate Application to his staff
  Given user is on page GovtSchemePage and clicks on SelectBO
  Given user is on page GovtSchemePage and types Nalagatla on SelectBO
  Given user is on page GovtSchemePage and clicks on BODisplayed
- Then user verifies for toast message on page GovtSchemePage as successfully text in placeholder SuccessText
+ Then user verifies for message on page GovtSchemePage as successfully text in placeholder SuccessText
  Then user is on page GovtSchemePage clears the SelectBO
  Given user is on page GovtSchemePage and clicks on OkayButton
  Given user is on page GovtSchemePage and clicks on SelectApplication
  Given user is on page GovtSchemePage and clicks on SelectBO
  Given user is on page GovtSchemePage and types Bharadwaj on SelectBO
  Given user is on page GovtSchemePage and clicks on BODisplayed
- Then user verifies for toast message on page GovtSchemePage as successfully text in placeholder SuccessText
+ Then user verifies for message on page GovtSchemePage as successfully text in placeholder SuccessText
  
  
 @TestCaseKey=UDB-T9380 @web
@@ -593,8 +593,8 @@ Scenario: Verify that all applications that are completed that is either the dis
  Given user is on page LiabilitiesPage and clicks on CompletedStatus
  Then user is on page LiabilitiesPage to verify FilterApplyButton is Displayed
  Given user is on page LiabilitiesPage and clicks on FilterApplyButton
- Then user verifies for toast message on page LiabilitiesPage as Completed text in placeholder ApplicationStatus
- Then user verifies for toast message on page LiabilitiesPage as Account creation text in placeholder ApplicationStage
+ Then user verifies for message on page LiabilitiesPage as Completed text in placeholder ApplicationStatus
+ Then user verifies for message on page LiabilitiesPage as Account creation text in placeholder ApplicationStage
  
 
 @TestCaseKey=UDB-T9631 @web
@@ -700,14 +700,14 @@ Scenario: Verify that assigned applications to any branch user , can be reassign
  Given user is on page GovtSchemePage and clicks on SelectBO
  Given user is on page GovtSchemePage and types Medisetty Harshita on SelectBO
  Given user is on page GovtSchemePage and clicks on BODisplayed
- Then user verifies for toast message on page GovtSchemePage as successfully text in placeholder SuccessText
+ Then user verifies for message on page GovtSchemePage as successfully text in placeholder SuccessText
  Then user is on page GovtSchemePage clears the SelectBO
  Given user is on page GovtSchemePage and clicks on OkayButton
  Given user is on page GovtSchemePage and clicks on SelectApplication
  Given user is on page GovtSchemePage and clicks on SelectBO
  Given user is on page GovtSchemePage and types Nalagatla Anu on SelectBO
  Given user is on page GovtSchemePage and clicks on BODisplayed
- Then user verifies for toast message on page GovtSchemePage as successfully text in placeholder SuccessText
+ Then user verifies for message on page GovtSchemePage as successfully text in placeholder SuccessText
  
  
 @TestCaseKey=UDB-T9637 @web
@@ -759,7 +759,7 @@ Scenario: Verify that application with 'In Progress' status cannot be reassigned
  Given user is on page AssistedPortalDashboard and types 951855705998 on GlobalSerachBox
  Then user clicks on Enter
  Then user waits for sometime
- Then user verifies for toast message on page LiabilitiesPage as In-progress text in placeholder ApplicationStatus
+ Then user verifies for message on page LiabilitiesPage as In-progress text in placeholder ApplicationStatus
  Then user is on page LiabilitiesPage to verify DisabledRadioButton is Disabled
  
  
@@ -787,7 +787,7 @@ Scenario: Verify that Branch user to view Open status digital applications that 
  Given user is on page AssistedPortalLogin and clicks on LoginButton
  Then user waits for sometime
  Given user is on page AssistedPortalDashboard and clicks on LiabilitiesTab
- Then user verifies for toast message on page AssistedPortalDashboard as List of all liability applications text in placeholder TabHeaderName
+ Then user verifies for message on page AssistedPortalDashboard as List of all liability applications text in placeholder TabHeaderName
  Given user is on page LiabilitiesPage and clicks on FilterOption
  Given user is on page LiabilitiesPage and clicks on FilterApplicationStatus
  Given user is on page LiabilitiesPage and clicks on OpenStatus
@@ -892,7 +892,7 @@ Scenario: Verify that all applications that are mapped to the branch manager wil
  Given user is on page GovtSchemePage and clicks on OpenStatus
  Then user is on page GovtSchemePage to verify FilterApplyButton is Displayed
  Given user is on page GovtSchemePage and clicks on FilterApplyButton
- Then user verifies for toast message on page GovtSchemePage as Open text in placeholder ApplicationStatus
+ Then user verifies for message on page GovtSchemePage as Open text in placeholder ApplicationStatus
  
  
 @TestCaseKey=UDB-T8573 @web
@@ -904,7 +904,7 @@ Scenario: Verify that a Branch to be mapped directly to RO.
  Given user is on page AssistedPortalDashboard and clicks on OkayButton
  Given user is on page AssistedPortalDashboard and clicks on ProfileIcon
  Given user is on page AssistedPortalDashboard and clicks on ProfileOption
- Then user verifies for toast message on page AssistedPortalDashboard as R.O.MUMBAI SOUTH text in placeholder Branch
+ Then user verifies for message on page AssistedPortalDashboard as R.O.MUMBAI SOUTH text in placeholder Branch
  
  
 @TestCaseKey=UDB-T9349 @web
@@ -913,7 +913,7 @@ Scenario: Verify that Branch staff should view correct error message for Invalid
  Given user is on page AssistedPortalLogin and types VijayMoyalan on Username
  Given user is on page AssistedPortalLogin and types Ubi@1234 on Password
  Given user is on page AssistedPortalLogin and clicks on LoginButton
- Then user verifies for toast message on page AssistedPortalLogin as Authentication Error text in placeholder AuthenticationErrorAlert
+ Then user verifies for message on page AssistedPortalLogin as Authentication Error text in placeholder AuthenticationErrorAlert
  Given user is on page AssistedPortalLogin and clicks on AlertOkayButton
  
  
@@ -923,7 +923,7 @@ Scenario: Verify that Branch staff should view correct error message for Invalid
  Given user is on page AssistedPortalLogin and types DITIBMSVPULW on Username
  Given user is on page AssistedPortalLogin and types Ubi1234 on Password
  Given user is on page AssistedPortalLogin and clicks on LoginButton
- Then user verifies for toast message on page AssistedPortalLogin as Authentication Error text in placeholder AuthenticationErrorAlert
+ Then user verifies for message on page AssistedPortalLogin as Authentication Error text in placeholder AuthenticationErrorAlert
  Given user is on page AssistedPortalLogin and clicks on AlertOkayButton
  
  
@@ -933,7 +933,7 @@ Scenario: Verify that Branch staff should view correct error message for Invalid
  Given user is on page AssistedPortalLogin and types VijayMoyalan on Username
  Given user is on page AssistedPortalLogin and types Ubi1234 on Password
  Given user is on page AssistedPortalLogin and clicks on LoginButton
- Then user verifies for toast message on page AssistedPortalLogin as Authentication Error text in placeholder AuthenticationErrorAlert
+ Then user verifies for message on page AssistedPortalLogin as Authentication Error text in placeholder AuthenticationErrorAlert
  Given user is on page AssistedPortalLogin and clicks on AlertOkayButton
  
  
@@ -1003,7 +1003,7 @@ Scenario: Verify that BS should view text bleow the redribbon on left side as We
  Given user is on page AssistedPortalLogin and types DITDIGIBM004SBZ on Username
  Given user is on page AssistedPortalLogin and types Ubi@1234 on Password
  Given user is on page AssistedPortalLogin and clicks on LoginButton
- Then user verifies for toast message on page AssistedPortalDashboard as Welcome, Rohit text in placeholder LoginUserName
+ Then user verifies for message on page AssistedPortalDashboard as Welcome, Rohit text in placeholder LoginUserName
  Then user is on page AssistedPortalDashboard to verify TotalAssignedApplication is Displayed
  Then user is on page AssistedPortalDashboard verifies count in TotalApplicationCount
  Then user is on page AssistedPortalDashboard verifies count in UnassignedApplicationCount
@@ -1094,8 +1094,8 @@ Scenario: Verify that Account Creation stage is present for FD journey
  Given user is on page LiabilitiesPage and clicks on CompletedStatus
  Then user is on page LiabilitiesPage to verify FilterApplyButton is Displayed
  Given user is on page LiabilitiesPage and clicks on FilterApplyButton
- Then user verifies for toast message on page LiabilitiesPage as Completed text in placeholder ApplicationStatus
- Then user verifies for toast message on page LiabilitiesPage as Account creation text in placeholder ApplicationStage
+ Then user verifies for message on page LiabilitiesPage as Completed text in placeholder ApplicationStatus
+ Then user verifies for message on page LiabilitiesPage as Account creation text in placeholder ApplicationStage
  
  
 @TestCaseKey=UDB-T9365 @TestCaseKey=UDB-T9274 @web
@@ -1116,7 +1116,7 @@ Scenario: Verify that BS should view My application card with Category
  Given user is on page AssistedPortalLogin and clicks on LoginButton
  Then user is on page AssistedPortalDashboard scroll to webpage element MyApplication
  Then user is on page AssistedPortalDashboard to verify MyApplicationSection is Displayed
- Then user verifies for toast message on page AssistedPortalDashboard as Government Schemes text in placeholder AssignedApplicationCategory
+ Then user verifies for message on page AssistedPortalDashboard as Government Schemes text in placeholder AssignedApplicationCategory
  
  
 @TestCaseKey=UDB-T9367  @TestCaseKey=UDB-T9276 @web
@@ -1126,7 +1126,7 @@ Scenario: Verify that BS should view My application card with Open(count)
  Given user is on page AssistedPortalLogin and types Ubi@1234 on Password
  Given user is on page AssistedPortalLogin and clicks on LoginButton
  Then user is on page AssistedPortalDashboard scroll to webpage element MyApplication
- Then user verifies for toast message on page AssistedPortalDashboard as Open text in placeholder MyApplicationOpenStatus
+ Then user verifies for message on page AssistedPortalDashboard as Open text in placeholder MyApplicationOpenStatus
 
  
  
@@ -1137,7 +1137,7 @@ Scenario: Verify that BS should view My application card with In-progress(count)
  Given user is on page AssistedPortalLogin and types Ubi@1234 on Password
  Given user is on page AssistedPortalLogin and clicks on LoginButton
  Then user is on page AssistedPortalDashboard scroll to webpage element MyApplication
- Then user verifies for toast message on page AssistedPortalDashboard as In-progress text in placeholder MyApplicationInprogressStatus
+ Then user verifies for message on page AssistedPortalDashboard as In-progress text in placeholder MyApplicationInprogressStatus
  
  
 @TestCaseKey=UDB-T9369 @TestCaseKey=UDB-T9278 @web
@@ -1147,7 +1147,7 @@ Scenario: Verify that BS should view My application card with Completed(count)
  Given user is on page AssistedPortalLogin and types Ubi@1234 on Password
  Given user is on page AssistedPortalLogin and clicks on LoginButton
  Then user is on page AssistedPortalDashboard scroll to webpage element MyApplication
- Then user verifies for toast message on page AssistedPortalDashboard as In-progress text in placeholder MyApplicationInprogressStatus
+ Then user verifies for message on page AssistedPortalDashboard as In-progress text in placeholder MyApplicationInprogressStatus
  
 @TestCaseKey=UDB-T9121 @web
 Scenario: Verify that An appropriate message will be displayed if Branch user doesn't have access to DBP Assited Portal.
@@ -1155,7 +1155,7 @@ Scenario: Verify that An appropriate message will be displayed if Branch user do
  Given user is on page AssistedPortalLogin and types BranchPerson on Username
  Given user is on page AssistedPortalLogin and types Ubi@1234 on Password
  Given user is on page AssistedPortalLogin and clicks on LoginButton
- Then user verifies for toast message on page AssistedPortalLogin as Authentication Error text in placeholder AuthenticationErrorAlert
+ Then user verifies for message on page AssistedPortalLogin as Authentication Error text in placeholder AuthenticationErrorAlert
  Given user is on page AssistedPortalLogin and clicks on AlertOkayButton
  
  
@@ -1247,7 +1247,7 @@ Scenario: Verify that Application review page Stage is present for SSA
  Given user is on page AssistedPortalDashboard and types 102691523923 on GlobalSerachBox
  Then user clicks on Enter
  Then user waits for sometime
- Then user verifies for toast message on page LiabilitiesPage as Application review text in placeholder ApplicationStage
+ Then user verifies for message on page LiabilitiesPage as Application review text in placeholder ApplicationStage
  
  
 @TestCaseKey=UDB-T9609 @TestCaseKey=UDB-T9618 @web
@@ -1260,7 +1260,7 @@ Scenario: Verify that Application review page Stage is present for PPF
  Given user is on page AssistedPortalDashboard and types 211938022745 on GlobalSerachBox
  Then user clicks on Enter
  Then user waits for sometime
- Then user verifies for toast message on page LiabilitiesPage as Account Details text in placeholder ApplicationStage
+ Then user verifies for message on page LiabilitiesPage as Account Details text in placeholder ApplicationStage
  
  
 @TestCaseKey=UDB-T9610 @TestCaseKey=UDB-T9619 @web
@@ -1273,7 +1273,7 @@ Scenario: Verify that Application review page Stage is present for NPS
  Given user is on page AssistedPortalDashboard and types 871203616422 on GlobalSerachBox
  Then user clicks on Enter
  Then user waits for sometime
- Then user verifies for toast message on page LiabilitiesPage as Customer details text in placeholder ApplicationStage
+ Then user verifies for message on page LiabilitiesPage as Customer details text in placeholder ApplicationStage
  
  
 @TestCaseKey=UDB-T9190 @web

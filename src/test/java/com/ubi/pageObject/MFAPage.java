@@ -1,16 +1,18 @@
 package com.ubi.pageObject;
 
 import java.util.List;
-import org.openqa.selenium.WebElement;
 import com.ubi.base.ORPageModel;
 import com.ubi.testbase.CommonMethods;
+import com.ubi.testbase.CommonWebMethods;
 import com.ubi.testbase.TestBase;
-import io.appium.java_client.pagefactory.AndroidBy;
 
 public class MFAPage {
 	
 	List<ORPageModel> listofElements = TestBase._ORIntializater.get(MFAPage.class.getSimpleName());
 	CommonMethods common = new CommonMethods();
+	CommonWebMethods webCommon = new CommonWebMethods();
+	
+	
 	public ORPageModel SelectEnglish = common.findElement(listofElements,"SelectEnglish"); 
 	public ORPageModel ContinueButton = common.findElement(listofElements,"ContinueButton"); 
 	public ORPageModel Symbol = common.findElement(listofElements,"Symbol"); 
@@ -42,4 +44,5 @@ public class MFAPage {
 	public ORPageModel MSMEAllowSMS = common.findElement(listofElements,"MSMEAllowSMS");
 	public ORPageModel MSMEAllowLocation = common.findElement(listofElements,"MSMEAllowLocation");
 	public ORPageModel MSMETnCAgree = common.findElement(listofElements,"MSMETnCAgree");
+	
 }

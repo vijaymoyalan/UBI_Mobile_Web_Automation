@@ -2,6 +2,8 @@ package com.ubi.cucumber.steps.web;
 
 import org.junit.Assert;
 
+import com.ubi.pageObject.MFAPage;
+import com.ubi.testbase.AppConfig;
 import com.ubi.testbase.CommonWebMethods;
 
 import io.cucumber.java.en.And;
@@ -10,15 +12,19 @@ import io.cucumber.java.en.Then;
 
 
 public class CommonWebSteps{
-
+	
 	CommonWebMethods webCom = new CommonWebMethods();
-	
-	
-	@Given("^Browser is launched")
-	public void example() {
-		System.out.println("browser example test");
-
+		
+	@Given("^user is on page (.+) and Enters username (.+) and password (.+)$")
+	public void user_entersUsernamePasswordText(String pageName,String elementUserName,String elementPasswordName) {
+		webCom.waitTillElementDisplayed(pageName, elementUserName);
+		webCom.enterText_Web(pageName, elementUserName, AppConfig.getRIBUsername());
+		webCom.waitTillElementDisplayed(pageName, elementPasswordName);
+		webCom.enterText_Web(pageName, elementPasswordName, AppConfig.getRIBPassword());
 	}
+	
+	
+	
 	@Given("^user is on page (.+) and types (.+) on (.+)$")
 	public void user_entersText(String pageName, String text, String elementName) {
 		webCom.waitTillElementDisplayed(pageName, elementName);
@@ -63,7 +69,7 @@ public class CommonWebSteps{
 		webCom.actionVerification(pageName,action, elementName);	
 	}
 	
-	@Then("^user verifies for toast message on page (.+) as (.+) text in placeholder (.+)$")
+	@Then("^user verifies for message on page (.+) as (.+) text in placeholder (.+)$")
 	public void toastmsgVerification(String pageName, String toastMsg, String elementName) {
 		webCom.waitTillElementDisplayed(pageName,elementName);
 		webCom.verifyToastMessage(pageName, toastMsg, elementName);

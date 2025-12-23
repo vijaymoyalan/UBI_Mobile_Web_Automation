@@ -162,7 +162,7 @@ public class CommonWebMethods extends PageObject {
 	}
 	
 	public void enterText(ORPageModel element, String text) {
-		findElement(element).clear();
+		findElement(element).click();
 		findElement(element).sendKeys(text);
 	}
 	
@@ -171,7 +171,7 @@ public class CommonWebMethods extends PageObject {
 	}
 	
 	public void clickButton(ORPageModel element) throws InterruptedException {
-		Thread.sleep(3000);
+//		Thread.sleep(3000);
 		findElement(element).click();
 	}
 	

@@ -41,6 +41,10 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 		
 //		features = "src\\test\\resources\\features\\Mobile\\MSME\\MSME_BQR_Mobile.feature",
 //		glue = {"com.ubi.cucumber.steps.mobile.mvp","com.ubi.hooks.mobile"})
+		
+		
+//		features = "src\\test\\resources\\features\\Mobile\\MVP\\FDFlow.feature", tags="@TestCaseKey=UDB-T9654",
+//		glue = {"com.ubi.cucumber.steps.mobile.mvp","com.ubi.hooks.mobile"})
 
 
 
@@ -66,12 +70,12 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 //features = "src/test/resources/features/Web/AssistedPortal/Consent.feature",
 //glue = {"com.ubi.cucumber.steps.web","com.ubi.hooks.web"})
 
-features = "src/test/resources/features/Web/RIB/RIB_RD.feature", tags="@TestCaseKey=UDB-T899",
-glue = {"com.ubi.cucumber.steps.web","com.ubi.hooks.web"})
+//features = "src/test/resources/features/Web/RIB/RIB_SSA.feature", tags="@TestCaseKey=UDB-T71896",
+//glue = {"com.ubi.cucumber.steps.web","com.ubi.hooks.web"})
 		
+		features = "src/test/resources/features/Web/RIB/RIB_RD.feature", tags="@TestCaseKey=UDB-T68646",
+		glue = {"com.ubi.cucumber.steps.web","com.ubi.hooks.web"})
 		
-//		features = "src/test/resources/features/Web/AssistedPortal/BrowserLaunch.feature",
-//	        		   glue = {"com.ubi.cucumber.steps.web","com.ubi.hooks"})
 
 //features = "src\\test\\resources\\features\\Mobile\\MSME\\MSME_HomePage.feature", tags="@TestCaseKey=UDB-T52183",
 //glue = {"com.ubi.cucumber.steps.mobile.mvp","com.ubi.hooks.mobile"})	

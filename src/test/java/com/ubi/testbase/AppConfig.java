@@ -73,6 +73,15 @@ public class AppConfig {
 	public static String testCycleKey() {
 		return environmentVariables.getProperty("testcyclekey");
 	}
+	
+//	Below config is for RIB username
+	public static String getRIBUsername() {
+		return environmentVariables.getProperty("rib.username");
+	}
+//	Below config is for RIB password
+	public static String getRIBPassword() {
+		return environmentVariables.getProperty("rib.password");
+	}
 
 	// Below app config for Assisted portal
 	public static String getRestAssistedUrl(String env) {

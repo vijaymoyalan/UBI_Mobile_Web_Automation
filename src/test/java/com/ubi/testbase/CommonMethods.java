@@ -1027,7 +1027,7 @@ public class CommonMethods extends PageObject {
 // this method is used to handle the pop-up msg of Start Over and Resume during account creation
 	public void clickOnStartOver(ORPageModel element) throws InterruptedException {
 	    WebElement StartOver = null;
-	    androidDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	    androidDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 	    try {
 	        //find element
 	        StartOver = findElement(element);
