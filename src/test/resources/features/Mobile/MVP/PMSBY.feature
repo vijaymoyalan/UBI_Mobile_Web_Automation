@@ -87,7 +87,7 @@ Given user is on page PMSBY clicks on T&CAccept
 When user scrolls down to "State"
 Given user is on page PMSBY clicks on ChangeNominee
 Given user is on page PMJJBY clicks on NomineeDOB
-Given user selects day 12 month Apr year 2001 and current year is 2025
+Given user selects day 12 month Apr year 2001 and current year is 2026
 Given user is on page PMSBY clicks on Relationship
 Given user is on page PMSBY clicks on NomineeRelationship
 
@@ -137,7 +137,7 @@ When user scrolls down to "State"
 Given user is on page PMSBY clicks on ChangeNominee
 Given user is on page PMSBY and enters Test Script Value as NomineeName
 Given user is on page PMJJBY clicks on NomineeDOB
-Given user selects day 12 month Apr year 2001 and current year is 2025
+Given user selects day 12 month Apr year 2001 and current year is 2026
 Given user is on page PMSBY clicks on Relationship
 Given user is on page PMSBY clicks on NomineeRelationship
 Given user swipe down the page
@@ -270,7 +270,7 @@ When user scrolls down to "Nominee Details"
 Given user is on page PMSBY clicks on ChangeNominee
 Given user swipe down the page
 Given user is on page PMJJBY clicks on NomineeDOB
-Given user selects day 12 month Apr year 2001 and current year is 2025
+Given user selects day 12 month Apr year 2001 and current year is 2026
 Given user is on page PMSBY clicks on ChangeNomineeAddress
 Given user swipe down the page
 When user is on page PMSBY and types test address one on NomineeAdressLine1

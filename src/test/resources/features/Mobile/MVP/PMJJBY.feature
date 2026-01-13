@@ -43,8 +43,9 @@ Given user is on page PMJJBY clicks on Terms&Conditions
 #When user scrolls down to "State"
 Given user is on page PMJJBY clicks on ChangeNominee
 Given user is on page PMJJBY and enters Test Script Value as NomineeName
+Given user swipe down the page
 Given user is on page PMJJBY clicks on NomineeDOB
-Given user selects day 12 month Apr year 2006 and current year is 2025
+Given user selects day 12 month Apr year 2006 and current year is 2026
 Given user is on page PMJJBY clicks on Relationship
 Given user is on page PMJJBY clicks on NomineeRelationship
 
@@ -63,7 +64,7 @@ Given user is on page PMJJBY clicks on Terms&Conditions
 Given user is on page PMJJBY and enters vjm@gmail.com as EmailAddressTextBox
 When user scrolls down to "PMJJBY Details"
 Given user is on page PMJJBY clicks on NomineeDOB
-Given user selects day 12 month Apr year 2006 and current year is 2025
+Given user selects day 12 month Apr year 2006 and current year is 2026
 Given user is on page PMJJBY clicks on Submit
 When user scrolls down to "City"
 When user scrolls down to "Sum Assured"
@@ -105,7 +106,7 @@ Given user is on page PMJJBY clicks on Terms&Conditions
 Given user is on page PMJJBY and enters vjm@gmail.com as EmailAddressTextBox
 When user scrolls down to "PMJJBY Details"
 Given user is on page PMJJBY clicks on NomineeDOB
-Given user selects day 12 month Apr year 2006 and current year is 2025
+Given user selects day 12 month Apr year 2006 and current year is 2026
 Given user is on page PMJJBY clicks on Submit
 Then user verifies on page PMJJBY for VIJAY XXXXX 22239 (Savings Account) text in placeholder AccountName
 When user scrolls down to "City"
@@ -255,7 +256,7 @@ Given user is on page PMJJBY clicks on ChangeNominee
 When user scrolls down to "PMJJBY Details"
 Given user is on page PMJJBY and enters Test Script Value as NomineeName
 Given user is on page PMJJBY clicks on NomineeDOB
-Given user selects day 12 month Apr year 2006 and current year is 2025
+Given user selects day 12 month Apr year 2006 and current year is 2026
 Given user is on page PMJJBY clicks on Relationship
 Given user is on page PMJJBY clicks on NomineeRelationship
 
@@ -274,7 +275,7 @@ Given user is on page PMJJBY clicks on Terms&Conditions
 Given user is on page PMJJBY and enters vjm@gmail.com as EmailAddressTextBox
 When user scrolls down to "PMJJBY Details"
 Given user is on page PMJJBY clicks on NomineeDOB
-Given user selects day 12 month Apr year 2001 and current year is 2025
+Given user selects day 12 month Apr year 2001 and current year is 2026
 Given user is on page PMJJBY to check Submit is Enabled
 Given user is on page PMJJBY clicks on Submit
 When user scrolls down to "City"
@@ -301,7 +302,7 @@ Given user swipe down the page
 Given user is on page PMJJBY clicks on Submit
 Then user verifies on page PMJJBY for Please add nominee date of birth text in placeholder DOBValidationError
 Given user is on page PMJJBY clicks on NomineeDOB
-Given user selects day 12 month Apr year 2001 and current year is 2025
+Given user selects day 12 month Apr year 2001 and current year is 2026
 Given user is on page PMJJBY clicks on Submit
 
 #@TestCaseKey=UDB-T002	@Automatable @Smoke @RedmiNote9Pro
@@ -319,7 +320,7 @@ Given user is on page PMJJBY clicks on Submit
 #Given user is on page PMJJBY clicks on ChangeNominee
 #Given user is on page PMJJBY and enters Test Script Value as NomineeName
 #Given user is on page PMJJBY clicks on NomineeDOB
-#Given user selects day 12 month Apr year 2006 and current year is 2025
+#Given user selects day 12 month Apr year 2006 and current year is 2026
 #Given user is on page PMJJBY clicks on Relationship
 #Given user is on page PMJJBY clicks on NomineeRelationship
 #Given user is on page PMJJBY clicks on ChangeNomineeAddress

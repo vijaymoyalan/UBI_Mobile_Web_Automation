@@ -1,5 +1,7 @@
 package com.ubi.cucumber.steps.web;
 
+import java.io.IOException;
+
 import org.junit.Assert;
 
 import com.ubi.pageObject.MFAPage;
@@ -9,6 +11,7 @@ import com.ubi.testbase.CommonWebMethods;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 
 public class CommonWebSteps{
@@ -112,11 +115,10 @@ public class CommonWebSteps{
 	}
 	
 
-	@Then("^user verifies message on page (.+) is (.+) on (.+)$")
-	public void verifiesText(String pageName,String text, String elementName) {
+	@Then("^user is on (.+) verifies message as (.+) on element (.+)$")
+	public void textVerification(String pageName,String expectedtext, String elementName) {
 		webCom.waitTillElementDisplayed(pageName,elementName);
-		String actualText = webCom.getText(pageName, elementName);
-        Assert.assertEquals(actualText,text.replace("\"", "").trim());
+		webCom.compareStringValues(pageName, expectedtext, elementName);
 	}
 	
 	@Given("^user is on (.+) to check for pending application option and clicks on (.+)$")  
@@ -141,6 +143,11 @@ public class CommonWebSteps{
 		webCom.setCaptureResponses(true);
         Thread.sleep(30000);
     }
+	
+	@When("^user uploads file (.+)$")   // to upload a file
+	public void upload_document(String fileName) throws IOException {
+		webCom.fileToUpload(fileName);
+	}
 	
 	
 }

@@ -423,7 +423,7 @@
 		],
 	
 
-	"DashboardPage": [
+"DashboardPage": [
 		{
 			"name": "Accounts",
 			"locator": "xpath",
@@ -3053,7 +3053,7 @@
 		{
 			"name": "ConsumerID",
 			"locator": "xpath",
-			"value": "//android.view.ViewGroup[contains(@content-desc,\"Consumer id\")]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.EditText"
+			"value": "//android.widget.EditText[@resource-id=\"number\"]"
 		},
 		{
 			"name": "PendingBillsCheckBox",
@@ -4006,7 +4006,7 @@
 		{
 			"name": "MunicipalTaxes",
 			"locator": "xpath",
-			"value": "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[@content-desc=\"Municipal Taxes\"]"
+			"value": "//android.view.ViewGroup[@content-desc=\"Municipal Taxes\"]"
 		},
 		{
 			"name": "Search",
@@ -10805,7 +10805,7 @@
 		{
 				"name": "LoginUsingPassword",
 				"locator": "xpath",
-				"value": "(//div[@class=\"access MuiBox-root css-0\"])[2]"
+				"value": "(//span[@class=\"access MuiBox-root css-0\"])[2]"
 		},
 		{
 				"name": "UserID",
@@ -10829,7 +10829,7 @@
 		{
 				"name": "AddAccount",
 				"locator": "xpath",
-				"value": "//button[normalize-space()=\"+ Add Account\"]"
+				"value": "(//button[normalize-space()=\"+ Add New\"])[1]"
 		},
 		{
 				"name": "AddFD",
@@ -10849,7 +10849,7 @@
 		{
 				"name": "Invest&InsureTab",
 				"locator": "xpath",
-				"value": "//button[normalize-space()=\"Invest & Insure\"]"
+				"value": "//button[normalize-space()=\"Investments\"]"
 		},
 		{
 				"name": "SSAaddAccountTab",
@@ -10879,7 +10879,7 @@
 		{
 				"name": "InvestmentTabAddAccount",
 				"locator": "xpath",
-				"value": "(//button[normalize-space()=\"Add Account\"])[1]"
+				"value": "(//button[normalize-space()=\"+ Add New\"])[1]"
 		},
 		{
 				"name": "ExploreProductsSSA",
@@ -10905,6 +10905,31 @@
 				"name": "Invest&InsureViewAll",
 				"locator": "xpath",
 				"value": "(//p[@class=\"MuiTypography-root MuiTypography-body1 iconcards__maincontainer__bills__pendingbillstext__viewallbtn__text css-9l3uo3\"][normalize-space()=\"View All\"])[3]"
+		},
+		{
+				"name":"PPFaddAccountTab",
+				"locator":"xpath",
+				"value":"(//p[@class=\"MuiTypography-root MuiTypography-body1 menuicons__cardcontainer__section__card__text css-9l3uo3\"][normalize-space()=\"Public Provident Fund\"])[3]"						 
+		},
+		{
+				"name": "PMSBYOption",
+				"locator": "xpath",
+				"value": "(//p[normalize-space()=\"PMSBY Insurance\"])[2]"
+		},
+		{
+				"name": "PMSBY",
+				"locator": "xpath",
+				"value": "(//p[normalize-space()=\"PMSBY Insurance\"])[1]"
+		},
+		{
+				"name": "PMJJBYOption",
+				"locator": "xpath",
+				"value": "(//p[normalize-space()=\"PMJJBY Insurance\"])[2]"
+		},
+		{
+				"name": "PMJJBY",
+				"locator": "xpath",
+				"value": "(//p[normalize-space()=\"PMJJBY Insurance\"])[1]"
 		}
 	],
 "RIB_FDPage":
@@ -11512,7 +11537,7 @@
 		{
 				"name":"GirlChildDOB",
 				"locator":"xpath",
-				"value":"(//div[contains(@class,\"textField__inputContainer__endAdornment_box\")])[2]"
+				"value":"(//div[contains(@class,\"textField__inputContainer__endAdornment_box\")])[1]"
 		},
 		{
 				"name":"RelationshipOption",
@@ -11598,26 +11623,6 @@
 				"name":"BirthTypeTripletThird",
 				"locator":"xpath",
 				"value":"//*[@id=\"birthType-option-5\"]/span"
-		},
-		{
-				"name":"TnC",
-				"locator":"xpath",
-				"value":"//p[@class=\"MuiTypography-root MuiTypography-body1 termsandcondition css-uovq3q\"]"
-		},
-		{
-				"name":"AgreeButton",
-				"locator":"xpath",
-				"value":"//button[normalize-space()=\"I Agree\"]"
-		},
-		{
-				"name":"SubmitButton",
-				"locator":"xpath",
-				"value":"//button[normalize-space()=\"Submit\"]"
-		},
-		{
-				"name":"TPIN",
-				"locator":"xpath",
-				"value":"//input[@id=\"tpassword\"]"
 		},
 		{
 				"name":"StartOverButton",
@@ -11728,6 +11733,21 @@
 				"name": "ContributionAmountError",
 				"locator": "xpath",
 				"value": "(//p[@class=\"MuiTypography-root MuiTypography-body1 Custom_Currency_Text_Box_Error css-9l3uo3\"])[1]"
+		},
+		{
+				"name": "UploadCertificate",
+				"locator": "xpath",
+				"value": "(//label[@aria-label=\"Upload Girl Child's Birth Certificate (Optional) uploadicon\"])[1]"
+		},
+		{
+				"name": "UploadedFileContent",
+				"locator": "xpath",
+				"value": "(//div[@class=\"upload__innerContainer__wrapper__content__uploaded\"])[1]"
+		},
+		{
+				"name": "UploadedFileError",
+				"locator": "xpath",
+				"value": "(//div[@class=\"upload__innerContainer__wrapper__content__error\"])[1]"
 		}
 	],
 "RIB_SSA_ReviewPage":
@@ -11776,6 +11796,845 @@
 				"name": "GirlChildBranchChangeOption",
 				"locator": "xpath",
 				"value": "(//a[@role='link'][normalize-space()=\"Change\"])[2]"
+		},
+		{
+				"name":"TnC",
+				"locator":"xpath",
+				"value":"//p[@class=\"MuiTypography-root MuiTypography-body1 termsandcondition css-uovq3q\"]"
+		},
+		{
+				"name":"AgreeButton",
+				"locator":"xpath",
+				"value":"//button[normalize-space()=\"I Agree\"]"
+		},
+		{
+				"name":"SubmitButton",
+				"locator":"xpath",
+				"value":"//button[normalize-space()=\"Submit\"]"
+		},
+		{
+				"name":"TPIN",
+				"locator":"xpath",
+				"value":"//input[@id=\"tpassword\"]"
+		},
+		{
+				"name": "DownloadT&C",
+				"locator": "xpath",
+				"value": "(//button[normalize-space()=\"Download T&C\"])[1]"
+		},
+		{
+				"name":"ContinueButton",
+				"locator":"xpath",
+				"value":"//button[normalize-space()=\"Continue\"]"
+		},
+		{
+				"name":"UseVirtualKeyboard",
+				"locator":"xpath",
+				"value":"(//span[normalize-space()=\"Use Virtual Keyboard\"])[1]"
+		},
+		{
+				"name":"VirtualKeyboard",
+				"locator":"xpath",
+				"value":"(//span[@class=\"MuiTypography-root MuiTypography-body1 tc-heading css-9l3uo3\"])[1]"
+		},
+		{
+				"name":"CloseIcon",
+				"locator":"xpath",
+				"value":"//button[@type=\"button\" and @aria-label=\"close\"]"
+		},
+		{
+				"name":"HomeButton",
+				"locator":"xpath",
+				"value":"//button[normalize-space()=\"Home\"]"
+		}
+	],
+"RIB_SSA_AcknowledgementPage":[
+		{
+				"name":"ApplicationNumber",
+				"locator":"xpath",
+				"value":"(//p[@class=\"MuiTypography-root MuiTypography-body1 SsyAcknowledgement__stepscard__application__number css-9l3uo3\"])[1]"
+		},
+		{
+				"name":"Step1Section",
+				"locator":"xpath",
+				"value":"(//h6[normalize-space()=\"Step 1: Visit Branch\"])[1]"
+		},
+		{
+				"name":"Step2Section",
+				"locator":"xpath",
+				"value":"(//h6[normalize-space()=\"Step 2: Submit Documents\"])[1]"
+		},
+		{
+				"name":"Step3Section",
+				"locator":"xpath",
+				"value":"(//p[@class=\"MuiTypography-root MuiTypography-body1 SsyAcknowledgement__stepscard__step__title css-9l3uo3\"])[1]"
+		},
+		{
+				"name":"ContributionAmount",
+				"locator":"xpath",
+				"value":"(//p[@class=\"MuiTypography-root MuiTypography-body1 SsyAcknowledgement__stepscard__paymentamount css-9l3uo3\"])[1]"
+		},
+		{
+				"name":"BirthCertificateDoc",
+				"locator":"xpath",
+				"value":"(//p[normalize-space()=\"Birth Certificate\"])[1]"
+		},
+		{
+				"name":"AcknowledgementLetterSection",
+				"locator":"xpath",
+				"value":"(//p[@class=\"MuiTypography-root MuiTypography-body1 SsyAcknowledgement__stepscard__acknowledgement__title css-9l3uo3\"])[1]"
+		},
+		{
+				"name":"AcknowledgementLetter",
+				"locator":"xpath",
+				"value":"(//div[@class=\"MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 SsyAcknowledgement__stepscard__filecard css-aoeo82\"])[1]"
+		},
+		{
+				"name":"DownloadAcknowledgementLetter",
+				"locator":"xpath",
+				"value":"//button[contains(@class,\"SsyAcknowledgement__stepscard__filecard__icon\")]"
+		},
+		{
+				"name":"HomeButton",
+				"locator":"xpath",
+				"value":"(//button[@type=\"submit\"])[1]"
+		},
+		{
+				"name":"OkayButton",
+				"locator":"xpath",
+				"value":"(//button[normalize-space()=\"Okay\"])[1]"
+		}
+
+	],
+"RIB_PPFPage":[
+		{
+				"name":"PPFaddAccountTab",
+				"locator":"xpath",
+				"value":"(//p[@class=\"MuiTypography-root MuiTypography-body1 menuicons__cardcontainer__section__card__text css-9l3uo3'][normalize-space()='Public Provident Fund\"])[3]"
+		},
+		{
+				"name": "ExploreProductsPPF",
+				"locator": "xpath",
+				"value": "(//span[normalize-space()=\"Public Provident Fund Account\"])[1]"
+		},
+		{
+				"name":"PPFText",
+				"locator":"xpath",
+				"value":"(//b[normalize-space()=\"Public Provident Fund\"])[1]"
+		},
+		{
+				"name":"ApplyNow",
+				"locator":"xpath",
+				"value":"(//button[normalize-space()=\"Apply Now\"])[1]"
+		},
+		{
+				"name":"StartOverButton",
+				"locator":"xpath",
+				"value":"//button[normalize-space()=\"Start Over\"]"
+		},
+		{
+				"name":"EnterContributionAmount",
+				"locator":"xpath",
+				"value":"(//input[@id=\"contributionAmount\"])[1]"
+		},
+		{
+				"name":"ContinueButton",
+				"locator":"xpath",
+				"value":"//button[normalize-space()=\"Continue\"]"
+		},
+		{
+				"name":"NomineeDOB",
+				"locator":"xpath",
+				"value":"(//div[contains(@class,\"textField__inputContainer__endAdornment_box\")])[1]"
+		},
+		{
+				"name":"NomineeName",
+				"locator":"xpath",
+				"value":"(//input[@id=\"nominees[0].nomineeName\"])[1]"
+		},
+		{
+				"name":"RelationshipOption",
+				"locator":"xpath",
+				"value":"(//button[@title=\"Open\"])[2]"
+		},
+		{
+				"name":"RelationshipSelection",
+				"locator":"xpath",
+				"value":"//*[@id=\"nominees[0].nomineeRelationship-option-0\"]/span"
+		},
+		{
+				"name":"TnC",
+				"locator":"xpath",
+				"value":"//p[@class=\"MuiTypography-root MuiTypography-body1 termsandcondition css-uovq3q\"]"
+		},
+		{
+				"name":"AgreeButton",
+				"locator":"xpath",
+				"value":"//button[normalize-space()=\"I Agree\"]"
+		},
+		{
+				"name":"SubmitButton",
+				"locator":"xpath",
+				"value":"//button[normalize-space()=\"Submit\"]"
+		},
+		{
+				"name":"TPIN",
+				"locator":"xpath",
+				"value":"//input[@id=\"tpassword\"]"
+		},
+		{
+				"name": "DownloadT&C",
+				"locator": "xpath",
+				"value": "(//button[normalize-space()=\"Download T&C\"])[1]"
+		},
+		{
+				"name": "Remarks",
+				"locator": "xpath",
+				"value": "(//input[@id=\"remarks\"])[1]"
+		},
+		{
+				"name": "PayButton",
+				"locator": "xpath",
+				"value": "(//button[normalize-space()=\"Pay\"])[1]"
+		},
+		{
+				"name":"UseVirtualKeyboard",
+				"locator":"xpath",
+				"value":"(//span[normalize-space()=\"Use Virtual Keyboard\"])[1]"
+		},
+		{
+				"name":"VirtualKeyboard",
+				"locator":"xpath",
+				"value":"(//span[@class=\"MuiTypography-root MuiTypography-body1 tc-heading css-9l3uo3\"])[1]"
+		},
+		{
+				"name":"CloseIcon",
+				"locator":"xpath",
+				"value":"//button[@type=\"button\" and @aria-label=\"close\"]"
+		},
+		{
+				"name": "AccountNameDropDown",
+				"locator": "xpath",
+				"value": "//button[@title=\"Open\"]//*[name()=\"svg\"]"
+		},
+		{
+				"name": "SavingAccountSelection",
+				"locator": "xpath",
+				"value": "//*[@id=\"accountNumberDropDown-option-0\"]/div"
+		},
+		{
+				"name": "CurrentAccountSelection",
+				"locator": "xpath",
+				"value": "//*[@id=\"accountNumberDropDown-option-1\"]/div"
+		},
+		{
+				"name": "OverdraftAccountSelection",
+				"locator": "xpath",
+				"value": "//*[@id=\"accountNumberDropDown-option-1\"]/div"
+		},
+		{
+				"name": "ContributionAmountError",
+				"locator": "xpath",
+				"value": "(//p[@class=\"MuiTypography-root MuiTypography-body1 Custom_Currency_Text_Box_Error css-9l3uo3\"])[1]"
+		},
+		{
+				"name": "DebitAccountDetails",
+				"locator": "xpath",
+				"value": "(//div[@class=\"accountsAutoCompletion__TextField__inputContainer__selected--title\"])[1]"
+		},
+		{
+				"name": "AmountDetails",
+				"locator": "xpath",
+				"value": "(//p[@class=\"MuiTypography-root MuiTypography-body1 amount-words disabled css-9l3uo3\"])[1]"
+		},
+		{
+				"name": "PreferrechBranchDisplayed",
+				"locator": "xpath",
+				"value": "(//div[normalize-space()=\"CUTTACK - ORISSA\"])[1]"
+		},
+		{
+				"name": "PreferrechBranchAddress",
+				"locator": "xpath",
+				"value": "(//p[@class=\"MuiTypography-root MuiTypography-body2 css-16alnpn\"])[1]"
+		},
+		{
+				"name": "ChangeBranch",
+				"locator": "xpath",
+				"value": "(//a[normalize-space()=\"Change\"])[1]"
+		},
+		{
+				"name": "EnterBranchPincode",
+				"locator": "xpath",
+				"value": "(//input[@id=\"inputValBranch\"])[1]"
+		},
+		{
+				"name": "SelectDisplayedBranch",
+				"locator": "xpath",
+				"value": "//*[@id=\"inputValBranch-option-0\"]"
+		},
+		{
+				"name": "NoBranchErrorMessage",
+				"locator": "xpath",
+				"value": "(//p[@id=\"inputValBranch-helper-text\"])[1]"
+		},
+		{
+				"name": "DOBErrorMessage",
+				"locator": "xpath",
+				"value": "(//p[@id=\"nominees[0].nomineeDob-helper-text\"])[1]"
+		},
+		{
+				"name":"NomineeDOBTextBox",
+				"locator":"xpath",
+				"value":"(//input[@id=\"nominees[0].nomineeDob\"])[1]"
+		},
+		{
+				"name":"NomineeAddressChange",
+				"locator":"xpath",
+				"value":"(//span[@class=\"MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-9l3uo3\"])[1]"
+		},
+		{
+				"name":"NomineeAddressPincode",
+				"locator":"xpath",
+				"value":"(//input[@id=\"nominees[0].nomineePincode\"])[1]"
+		},
+		{
+				"name":"NomineeCity",
+				"locator":"xpath",
+				"value":"(//input[@id=\":r3g:\"])[1]"
+		},
+		{
+				"name":"NomineeState",
+				"locator":"xpath",
+				"value":"(//input[@id=\":r3h:\"])[1]"
+		},
+		{
+				"name":"NomineeAddressLine1",
+				"locator":"xpath",
+				"value":"(//input[@id=\":r3u:\"])[1]"
+		},
+		{
+				"name":"NomineeAddressLine2",
+				"locator":"xpath",
+				"value":"(//input[@id=\":r3v:\"])[1]"
+		},
+		{
+				"name":"AddNominee",
+				"locator":"xpath",
+				"value":"(//button[normalize-space()=\"+ Add Nominee\"])[1]"
+		},
+		{
+				"name":"AdditionalNomineeName",
+				"locator":"xpath",
+				"value":"(//input[@id=\"nominees[1].nomineeName\"])[1]"
+		},
+		{
+				"name":"AdditionalNomineeDOB",
+				"locator":"xpath",
+				"value":"(//div[contains(@class,\"textField__inputContainer__endAdornment_box\")])[2]"
+		},
+		{
+				"name":"AdditionalNomineeRelationshipOption",
+				"locator":"xpath",
+				"value":"(//button[@title=\"Open\"])[3]"
+		},
+		{
+				"name":"AdditionalNomineeRelationshipSelection",
+				"locator":"xpath",
+				"value":"//*[@id=\"nominees[0].nomineeRelationship-option-0\"]/span"
+		},
+		{
+				"name":"GuardianName",
+				"locator":"xpath",
+				"value":"(//input[@id=\"nominees[0].guardianName\"])[1]"
+		},
+		{
+				"name":"GuardianRelationshipOption",
+				"locator":"xpath",
+				"value":"(//button[@title=\"Open\"])[3]"
+		},
+		{
+				"name":"GuardianRelationshipSelection",
+				"locator":"xpath",
+				"value":"//*[@id=\"nominees[0].guardianRelationship-option-0\"]/span"			 
+		},
+		{
+				"name":"GuardianDOB",
+				"locator":"xpath",
+				"value":"(//div[contains(@class,\"textField__inputContainer__endAdornment_box\")])[2]"
+		},
+		{
+				"name":"GuardianDefaultAddress",
+				"locator":"xpath",
+				"value":"(//textarea[@id=\"textarea-box\"])[2]"
+		},
+		{
+				"name":"GuardianRelationship",
+				"locator":"xpath",
+				"value":"(//input[@id=\"nominees[0].guardianRelationship\"])[1]"
+		},
+		{
+				"name":"Nominee2Header",
+				"locator":"xpath",
+				"value":"(//h5[normalize-space()=\"Nominee 2\"])[1]"
+		},
+		{
+				"name":"Nominee1Header",
+				"locator":"xpath",
+				"value":"(//h5[normalize-space()=\"Nominee 1\"])[1]"
+		},
+		{
+				"name":"CancelAddNominee",
+				"locator":"xpath",
+				"value":"(//button[@type='button'][normalize-space()=\"Cancel\"])[2]"
+		}
+	],
+"RIB_PPFReviewPage":[
+		{
+				"name":"CustomerNameDisplayed",
+				"locator":"xpath",
+				"value":"(//div[contains(text(),\"VIJAY JOSEPH MOYALAN\")])[1]"
+		},
+		{
+				"name":"AccountNumberDisplayed",
+				"locator":"xpath",
+				"value":"(//div[contains(text(),\"40710 20100 22239\")])[1]"
+		},
+		{
+				"name":"ContributionAmountDisplayed",
+				"locator":"xpath",
+				"value":"(//div[contains(text(),\"Rs. 800\")])[1]"
+		},
+		{
+				"name":"UpdatedAmountDisplayed",
+				"locator":"xpath",
+				"value":"(//div[contains(text(),\"Rs. 1000\")])[1]"
+		},
+		{
+				"name":"CustomerCityDisplayed",
+				"locator":"xpath",
+				"value":"(//div[@class=\"MuiTypography-root MuiTypography-body1 PpfReviewDetails__box__content__box__primaryAddress css-9l3uo3\"][normalize-space()=\"CUT - ORI\"])[1]"
+		},
+		{
+				"name":"BankBranchDisplayed",
+				"locator":"xpath",
+				"value":"(//div[contains(text(),\"CUTTACK - ORISSA\")])[1]"
+		},
+		{
+				"name":"NomineeNameDisplayed",
+				"locator":"xpath",
+				"value":"(//div[contains(text(),\"Supriya K\")])[1]"
+		},
+		{
+				"name":"NomineeRelationshipDisplayed",
+				"locator":"xpath",
+				"value":"(//div[contains(text(),\"Father\")])[1]"
+		},
+		{
+				"name":"NomineeDOBDisplayed",
+				"locator":"xpath",
+				"value":"(//div[contains(text(),\"4 April 2001\")])[1]"
+		},
+		{
+				"name":"NomineeCityDisplayed",
+				"locator":"xpath",
+				"value":"(//div[@class=\"MuiTypography-root MuiTypography-body1 PpfReviewDetails__box__content__box__primaryAddress css-9l3uo3\"][normalize-space()=\"CUT - ORI\"])[2]"
+		},
+		{
+				"name":"NomineePercentageDisplayed",
+				"locator":"xpath",
+				"value":"(//div[contains(text(),\"100%\")])[1]"
+		},
+		{
+				"name":"CustomerDetailsChange",
+				"locator":"xpath",
+				"value":"(//a[@role=\"link\"][normalize-space()=\"Change\"])[1]"
+		},
+		{
+				"name":"PreferredBranchChange",
+				"locator":"xpath",
+				"value":"(//a[@role=\"link\"][normalize-space()=\"Change\"])[2]"
+		},
+		{
+				"name":"NomineeInfoChange",
+				"locator":"xpath",
+				"value":"(//a[@role=\"link\"][normalize-space()=\"Change\"])[3]"
+		}
+
+	],
+"RIB_PMSBYPage":[
+		{
+				"name":"ApplyNow",
+				"locator":"xpath",
+				"value":"(//button[normalize-space()=\"Apply Now\"])[1]"
+		},
+		{
+				"name":"IAgree",
+				"locator":"xpath",
+				"value":"(//button[normalize-space()=\"I Agree\"])[1]"
+		},
+		{
+				"name":"DownloadT&C",
+				"locator":"xpath",
+				"value":"(//button[normalize-space()=\"Download T&C\"])[1]"
+		},
+		{
+				"name": "AccountNameDropDown",
+				"locator": "xpath",
+				"value": "(//div[@class=\"accountsAutoCompletion__TextField__inputContainer__selected--label\"])[1]"
+		},
+		{
+				"name": "SavingAccountSelection",
+				"locator": "xpath",
+				"value": "//*[@id=\"accountNumberDropDown-option-0\"]/div"
+		},
+		{
+				"name": "OverdraftAccountSelection",
+				"locator": "xpath",
+				"value": "//*[@id=\"accountNumberDropDown-option-1\"]/div"
+		},
+		{
+				"name": "EmailID",
+				"locator": "xpath",
+				"value": "(//input[@id=\"email\"])[1]"
+		},
+		{
+				"name": "DisabledText",
+				"locator": "xpath",
+				"value": "(//p[normalize-space()=\"Are you specially abled?\"])[1]"
+		},
+		{
+				"name": "DisabledYES",
+				"locator": "xpath",
+				"value": "(//label[@class=\"MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd PmsbyNomineeDetails__radioGroup__row__radio-label PmsbyNomineeDetails__radioGroup__row__radio-label__unchecked css-1jaw3da\"])[1]"
+		},
+		{
+				"name": "DisabledNO",
+				"locator": "xpath",
+				"value": "(//label[@class=\"MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd PmsbyNomineeDetails__radioGroup__row__radio-label PmsbyNomineeDetails__radioGroup__row__radio-label__unchecked css-1jaw3da\"])[2]"
+		},
+		{
+				"name": "DebitAccountDetails",
+				"locator": "xpath",
+				"value": "(//div[@class=\"accountsAutoCompletion__TextField__inputContainer__selected--title\"])[1]"
+		},
+		{
+				"name": "CustomerNameDisplayed",
+				"locator": "xpath",
+				"value": "(//div[@class=\"card_content MuiBox-root css-0\"])[1]//div[contains(@class,\"CustomerInformationCard__card\")]//p[contains(@class,\"CustomerInformationCard__card__ivalue\")]"
+		},
+		{
+				"name": "CustomerDOBDisplayed",
+				"locator": "xpath",
+				"value": "//div[contains(@class,\"CustomerInformationCard__card\")]//div[normalize-space()=\"Date of Birth\"]/following::p[1]"
+		},
+		{
+				"name": "FatherNameTextBox",
+				"locator": "xpath",
+				"value": "(//input[@id=\"fatherName\"])[1]"
+		},
+		{
+				"name": "NomineeName",
+				"locator": "xpath",
+				"value": "(//div[contains(text(),\"ANAND JOSEPH MOYALAN\")])[1]"
+		},
+		{
+				"name": "NomineeRelation",
+				"locator": "xpath",
+				"value": "(//div[contains(text(),\"Brother\")])[1]"
+		},
+		{
+				"name": "NomineeAddress",
+				"locator": "xpath",
+				"value": "//div[@class=\"MuiCardContent-root css-xyhcgp\"]//div[4]//li[1]//div[2]//p[1]//div[1]"
+		},
+		{
+				"name": "ChangeNominee",
+				"locator": "xpath",
+				"value": "(//a[normalize-space()=\"Change\"])[1]"
+		},
+		{
+				"name": "ChangeNomineeName",
+				"locator": "xpath",
+				"value": "(//input[@id=\"nominees[0].nomineeName\"])[1]"
+		},
+		{
+				"name": "ChangeNomineeDOB",
+				"locator": "xpath",
+				"value": "(//div[contains(@class,\"textField__inputContainer__endAdornment_box\")])[1]"
+		},
+		{
+				"name": "ChangeNomineeRelation",
+				"locator": "xpath",
+				"value": "(//input[@id=\"nominees[0].nomineeRelationship\"])[1]"
+		},
+		{
+				"name": "NomineeRelationSelection",
+				"locator": "xpath",
+				"value": "//*[@id=\"nominees[0].nomineeRelationship-option-0\"]/span"
+		},
+		{
+				"name": "iIcon",
+				"locator": "xpath",
+				"value": "//span[@aria-label=\"Are you physically challenged?\"]"
+		},
+		{
+				"name": "SubmitButton",
+				"locator": "xpath",
+				"value": "(//button[normalize-space()=\"Submit\"])[1]"
+		},
+		{
+				"name": "eMailIDError",
+				"locator": "xpath",
+				"value": "(//p[@id=\"email-helper-text\"])[1]"
+		},
+		{
+				"name": "DisabledError",
+				"locator": "xpath",
+				"value": "(//span[@class=\"PmsbyNomineeDetails__radioGroup__row__error\"])[1]"
+		},
+		{
+				"name": "DOBError",
+				"locator": "xpath",
+				"value": "(//p[@id=\"dob-helper-text\"])[1]"
+		},
+		{
+				"name": "Confirm&PayButton",
+				"locator": "xpath",
+				"value": "(//button[normalize-space()=\"Confirm & Pay\"])[1]"
+		},
+		{
+				"name": "TPin",
+				"locator": "xpath",
+				"value": "(//input[@id=\"tpassword\"])[1]"
+		},
+		{
+				"name": "TPINTextBox",
+				"locator": "xpath",
+				"value": "(//p[@class=\"MuiTypography-root MuiTypography-body1 dialogBox__main__titleRoot__title css-9l3uo3\"])[1]"
+		},
+		{
+				"name": "EyeIcon",
+				"locator": "xpath",
+				"value": "(//*[name()=\"svg\"][@aria-hidden=\"false\"])[1]"
+		},
+		{
+				"name": "ContinueButton",
+				"locator": "xpath",
+				"value": "(//button[normalize-space()=\"Continue\"])[1]"
+		}
+	],
+"RIB_PMJJBYPage":[
+		{
+				"name":"ApplyNow",
+				"locator":"xpath",
+				"value":"(//button[normalize-space()=\"Apply Now\"])[1]"
+		},
+		{
+				"name":"IAgree",
+				"locator":"xpath",
+				"value":"(//button[normalize-space()=\"I Agree\"])[1]"
+		},
+		{
+				"name":"DownloadT&C",
+				"locator":"xpath",
+				"value":"(//button[normalize-space()=\"Download T&C\"])[1]"
+		},
+		{
+				"name": "AccountNameDropDown",
+				"locator": "xpath",
+				"value": "//button[@title=\"Open\"]//*[name()=\"svg\"]"
+		},
+		{
+				"name": "SavingAccountSelection",
+				"locator": "xpath",
+				"value": "//*[@id=\"accountNumberDropDown-option-0\"]/div"
+		},
+		{
+				"name": "OverdraftAccountSelection",
+				"locator": "xpath",
+				"value": "//*[@id=\"accountNumberDropDown-option-1\"]/div"
+		},
+		{
+				"name": "EmailID",
+				"locator": "xpath",
+				"value": "(//input[@id=\"email\"])[1]"
+		},
+		{
+				"name": "DisabledText",
+				"locator": "xpath",
+				"value": "(//p[normalize-space()=\"Are you specially abled?\"])[1]"
+		},
+		{
+				"name": "DisabledYES",
+				"locator": "xpath",
+				"value": "(//label[@class=\"MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd PmsbyNomineeDetails__radioGroup__row__radio-label PmsbyNomineeDetails__radioGroup__row__radio-label__unchecked css-1jaw3da\"])[1]"
+		},
+		{
+				"name": "DisabledNO",
+				"locator": "xpath",
+				"value": "(//label[@class=\"MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd PmsbyNomineeDetails__radioGroup__row__radio-label PmsbyNomineeDetails__radioGroup__row__radio-label__unchecked css-1jaw3da\"])[2]"
+		},
+		{
+				"name": "DebitAccountDetails",
+				"locator": "xpath",
+				"value": "(//div[@class=\"accountsAutoCompletion__TextField__inputContainer__selected--title\"])[1]"
+		},
+		{
+				"name": "CustomerNameDisplayed",
+				"locator": "xpath",
+				"value": "(//div[@class=\"card_content MuiBox-root css-0\"])[1]//div[contains(@class,\"CustomerInformationCard__card\")]//p[contains(@class,\"CustomerInformationCard__card__ivalue\")]"
+		},
+		{
+				"name": "CustomerDOBDisplayed",
+				"locator": "xpath",
+				"value": "//div[contains(@class,\"CustomerInformationCard__card\")]//div[normalize-space()=\"Date of Birth\"]/following::p[1]"
+		},
+		{
+				"name": "FatherNameTextBox",
+				"locator": "xpath",
+				"value": "(//input[@id=\"fatherName\"])[1]"
+		},
+		{
+				"name": "NomineeName",
+				"locator": "xpath",
+				"value": "(//div[contains(text(),\"ANAND JOSEPH MOYALAN\")])[1]"
+		},
+		{
+				"name": "NomineeRelation",
+				"locator": "xpath",
+				"value": "(//div[contains(text(),\"Brother\")])[1]"
+		},
+		{
+				"name": "NomineeAddress",
+				"locator": "xpath",
+				"value": "//div[@class=\"MuiCardContent-root css-xyhcgp\"]//div[4]//li[1]//div[2]//p[1]//div[1]"
+		},
+		{
+				"name": "ChangeNominee",
+				"locator": "xpath",
+				"value": "(//a[normalize-space()=\"Change\"])[1]"
+		},
+		{
+				"name": "ChangeNomineeName",
+				"locator": "xpath",
+				"value": "(//input[@id=\"nominees[0].nomineeName\"])[1]"
+		},
+		{
+				"name": "ChangeNomineeDOB",
+				"locator": "xpath",
+				"value": "(//div[contains(@class,\"textField__inputContainer__endAdornment_box\")])[1]"
+		},
+		{
+				"name": "ChangeNomineeRelation",
+				"locator": "xpath",
+				"value": "(//input[@id=\"nominees[0].nomineeRelationship\"])[1]"
+		},
+		{
+				"name": "NomineeRelationSelection",
+				"locator": "xpath",
+				"value": "//*[@id=\"nominees[0].nomineeRelationship-option-0\"]/span"
+		},
+		{
+				"name": "iIcon",
+				"locator": "xpath",
+				"value": "//span[@aria-label=\"Are you physically challenged?\"]"
+		},
+		{
+				"name": "SubmitButton",
+				"locator": "xpath",
+				"value": "(//button[normalize-space()=\"Submit\"])[1]"
+		},
+		{
+				"name": "eMailIDError",
+				"locator": "xpath",
+				"value": "(//p[@id=\"email-helper-text\"])[1]"
+		},
+		{
+				"name": "DisabledError",
+				"locator": "xpath",
+				"value": "(//span[@class=\"PmsbyNomineeDetails__radioGroup__row__error\"])[1]"
+		},
+		{
+				"name": "DOBError",
+				"locator": "xpath",
+				"value": "(//p[@id=\"dob-helper-text\"])[1]"
+		},
+		{
+				"name": "Confirm&PayButton",
+				"locator": "xpath",
+				"value": "(//button[normalize-space()=\"Confirm & Pay\"])[1]"
+		},
+		{
+				"name": "TPin",
+				"locator": "xpath",
+				"value": "(//input[@id=\"tpassword\"])[1]"
+		},
+		{
+				"name": "TPINTextBox",
+				"locator": "xpath",
+				"value": "(//p[@class=\"MuiTypography-root MuiTypography-body1 dialogBox__main__titleRoot__title css-9l3uo3\"])[1]"
+		},
+		{
+				"name": "EyeIcon",
+				"locator": "xpath",
+				"value": "(//*[name()=\"svg\"][@aria-hidden=\"false\"])[1]"
+		},
+		{
+				"name": "ContinueButton",
+				"locator": "xpath",
+				"value": "(//button[normalize-space()=\"Continue\"])[1]"
+		},
+		{
+				"name": "AccountBalanceField",
+				"locator": "xpath",
+				"value": "(//div[@class=\"accountsAutoCompletion__TextField__inputContainer__selected--balance\"])[1]"
+		},
+		{
+				"name": "CoverStartDateText",
+				"locator": "xpath",
+				"value": "(//div[normalize-space()=\"Cover Start Date\"])[1]"
+		},
+		{
+				"name": "CoverEndDateText",
+				"locator": "xpath",
+				"value": "(//div[normalize-space()=\"Cover End Date\"])[1]"
+		},
+		{
+				"name": "SumAssuredText",
+				"locator": "xpath",
+				"value": "(//div[normalize-space()=\"Sum Assured\"])[1]"
+		},
+		{
+				"name": "PremiumText",
+				"locator": "xpath",
+				"value": "(//div[normalize-space()=\"Premium\"])[1]"
+		},
+		{
+				"name": "CoverStartDateValue",
+				"locator": "xpath",
+				"value": "(//div[@class=\"CustomerInformationCard__card first MuiBox-root css-0\"]//p[@class=\"MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom CustomerInformationCard__card__ivalue css-4an0mh\"])[2]"
+		},
+		{
+				"name": "CoverEndDateValue",
+				"locator": "xpath",
+				"value": "(//p[@class=\"MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom CustomerInformationCard__card__value css-4an0mh\"])[2]"
+		},
+		{
+				"name": "SumAssuredValue",
+				"locator": "xpath",
+				"value": "//div[@class=\"CustomerInformationCard__card third MuiBox-root css-0\"]//p[@class=\"MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom CustomerInformationCard__card__value css-4an0mh\"]"
+		},
+		{
+				"name": "PremiumValue",
+				"locator": "xpath",
+				"value": "//div[@class=\"CustomerInformationCard__card fourth MuiBox-root css-0\"]//p[@class=\"MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom CustomerInformationCard__card__value css-4an0mh\"]"
+		}
+	],
+"TechnicalError":[
+		{
+				"name": "OkayButton",
+				"locator": "xpath",
+				"value": "(//button[normalize-space()=\"Okay\"])[1]"
 		}
 	]
 		

@@ -27,7 +27,7 @@ Scenario: Validate that user should be able to see the Download button inster of
  Given user is on page RIB_RDPage and clicks on NomineeName
  Given user is on page RIB_RDPage and types SupriyaTest on NomineeName
  Given user is on page RIB_RDPage and clicks on DOB
- Given user selects day 12 month Apr year 2001 and current year is 2025
+ Given user selects day 12 month Apr year 2001 and current year is 2026
  Then user is on page RIB_RDPage scroll to webpage element ContinueButton
  Then user is on page RIB_RDPage to verify ContinueButton is Displayed
  Given user is on page RIB_RDPage and clicks on ContinueButton
@@ -64,7 +64,7 @@ Scenario: Validate that Post journey user should be able to edit/delete nominee 
  Given user is on page RIB_RDPage and clicks on NomineeName
  Given user is on page RIB_RDPage and types SupriyaTest on NomineeName
  Given user is on page RIB_RDPage and clicks on DOB
- Given user selects day 12 month Apr year 2001 and current year is 2025
+ Given user selects day 12 month Apr year 2001 and current year is 2026
  Then user is on page RIB_RDPage scroll to webpage element ContinueButton
  Given user is on page RIB_RDPage and clicks on ChangeNomineeAddress
  Then user is on page RIB_RDPage scroll to webpage element ContinueButton
@@ -104,7 +104,7 @@ Scenario: Validate that user should be able to see the Amount in words which are
  Given user is on page RIB_RDPage and clicks on NomineeName
  Given user is on page RIB_RDPage and types SupriyaTest on NomineeName
  Given user is on page RIB_RDPage and clicks on DOB
- Given user selects day 12 month Apr year 2001 and current year is 2025
+ Given user selects day 12 month Apr year 2001 and current year is 2026
  Then user is on page RIB_RDPage scroll to webpage element ContinueButton
  Then user is on page RIB_RDPage to verify ContinueButton is Displayed
  Given user is on page RIB_RDPage and clicks on ContinueButton
@@ -138,7 +138,7 @@ Scenario: Verify Negative testing for Address field for Nominee
  Given user is on page RIB_RDPage and clicks on NomineeName
  Given user is on page RIB_RDPage and types SupriyaTest on NomineeName
  Given user is on page RIB_RDPage and clicks on DOB
- Given user selects day 12 month Apr year 2001 and current year is 2025
+ Given user selects day 12 month Apr year 2001 and current year is 2026
  Then user is on page RIB_RDPage scroll to webpage element ContinueButton
  Given user is on page RIB_RDPage and clicks on ChangeNomineeAddress
  Then user is on page RIB_RDPage scroll to webpage element ContinueButton
@@ -370,7 +370,7 @@ Scenario: Verify that ETB customers age within 18 to 30 should open recurring de
  Given user is on page RIB_RDPage and clicks on NomineeName
  Given user is on page RIB_RDPage and types SupriyaTest on NomineeName
  Given user is on page RIB_RDPage and clicks on DOB
- Given user selects day 12 month Apr year 2001 and current year is 2025
+ Given user selects day 12 month Apr year 2001 and current year is 2026
  Then user is on page RIB_RDPage scroll to webpage element ContinueButton
  Then user is on page RIB_RDPage to verify ContinueButton is Displayed
  Given user is on page RIB_RDPage and clicks on ContinueButton
@@ -411,7 +411,7 @@ Scenario: Verify that the address of the nominee has been changed successfully
  Given user is on page RIB_RDPage and clicks on NomineeName
  Given user is on page RIB_RDPage and types SupriyaTest on NomineeName
  Given user is on page RIB_RDPage and clicks on DOB
- Given user selects day 12 month Apr year 2001 and current year is 2025
+ Given user selects day 12 month Apr year 2001 and current year is 2026
  Then user is on page RIB_RDPage scroll to webpage element ContinueButton
  Given user is on page RIB_RDPage and clicks on ChangeNomineeAddress
  Then user is on page RIB_RDPage scroll to webpage element ContinueButton
@@ -590,9 +590,9 @@ Scenario: Verify user should be able to download statement pdf through custom op
  Given user is on page RIB_HomePage and clicks on ExistingRD
  Given user is on page RIB_ExistingRD and clicks on StatementTab
  Given user is on page RIB_ExistingRD and clicks on CustomStartDate
- Given user selects day 4 month Dec year 2024 and current year is 2025
+ Given user selects day 4 month Dec year 2024 and current year is 2026
  Given user is on page RIB_ExistingRD and clicks on CustomEndDate
- Given user selects day 1 month Dec year 2025 and current year is 2025
+ Given user selects day 1 month Dec year 2025 and current year is 2026
  
 
 @TestCaseKey=UDB-T900 @web
@@ -719,7 +719,7 @@ Scenario: Verify that if user entered age of nominee is less than 18 Years
  Given user is on page RIB_RDPage and clicks on NomineeName
  Given user is on page RIB_RDPage and types SupriyaTest on NomineeName
  Given user is on page RIB_RDPage and clicks on DOB
- Given user selects day 12 month Apr year 2020 and current year is 2025
+ Given user selects day 12 month Apr year 2020 and current year is 2026
  
  
 @TestCaseKey=UDB-T917 @web
@@ -749,7 +749,7 @@ Scenario: Validate if the terms and conditions T&C  document link present on RD 
  Given user is on page RIB_RDPage and clicks on NomineeName
  Given user is on page RIB_RDPage and types SupriyaTest on NomineeName
  Given user is on page RIB_RDPage and clicks on DOB
- Given user selects day 12 month Apr year 2001 and current year is 2025
+ Given user selects day 12 month Apr year 2001 and current year is 2026
  Then user is on page RIB_RDPage scroll to webpage element ContinueButton
  Given user is on page RIB_RDPage and clicks on ContinueButton
  Then user is on page RIB_RDPage scroll to webpage element SubmitButton
@@ -804,7 +804,7 @@ Scenario: Validate Customer can download RD certificate/RD advice from summary p
  Given user is on page RIB_RDPage and clicks on NomineeName
  Given user is on page RIB_RDPage and types SupriyaTest on NomineeName
  Given user is on page RIB_RDPage and clicks on DOB
- Given user selects day 12 month Apr year 2001 and current year is 2025
+ Given user selects day 12 month Apr year 2001 and current year is 2026
  Then user is on page RIB_RDPage scroll to webpage element ContinueButton
  Then user is on page RIB_RDPage to verify ContinueButton is Displayed
  Given user is on page RIB_RDPage and clicks on ContinueButton
@@ -846,7 +846,7 @@ Scenario: Validate the Progress bar to be available for all the RD account onboa
  Given user is on page RIB_RDPage and clicks on NomineeName
  Given user is on page RIB_RDPage and types SupriyaTest on NomineeName
  Given user is on page RIB_RDPage and clicks on DOB
- Given user selects day 12 month Apr year 2001 and current year is 2025
+ Given user selects day 12 month Apr year 2001 and current year is 2026
  Then user is on page RIB_RDPage scroll to webpage element ContinueButton
  Given user is on page RIB_RDPage and clicks on ContinueButton
  Then user is on page RIB_RDPage to verify ReviewPageProgress is Displayed
@@ -880,7 +880,7 @@ Scenario: Validate that T&C toggle button should be pre-selected as 'not accepte
  Given user is on page RIB_RDPage and clicks on NomineeName
  Given user is on page RIB_RDPage and types SupriyaTest on NomineeName
  Given user is on page RIB_RDPage and clicks on DOB
- Given user selects day 12 month Apr year 2001 and current year is 2025
+ Given user selects day 12 month Apr year 2001 and current year is 2026
  Then user is on page RIB_RDPage scroll to webpage element ContinueButton
  Given user is on page RIB_RDPage and clicks on ContinueButton
  Then user is on page RIB_RDPage scroll to webpage element TnC
@@ -1063,7 +1063,7 @@ Scenario: Validate the ETB User want to open the RD Account with 1 Year as tenur
  Given user is on page RIB_RDPage and clicks on NomineeName
  Given user is on page RIB_RDPage and types SupriyaTest on NomineeName
  Given user is on page RIB_RDPage and clicks on DOB
- Given user selects day 12 month Apr year 2001 and current year is 2025
+ Given user selects day 12 month Apr year 2001 and current year is 2026
  Then user is on page RIB_RDPage scroll to webpage element ContinueButton
  Then user is on page RIB_RDPage to verify ContinueButton is Displayed
  Given user is on page RIB_RDPage and clicks on ContinueButton
@@ -1104,7 +1104,7 @@ Scenario: Validate the ETB User want to open the RD Account with 2 Year as tenur
  Given user is on page RIB_RDPage and clicks on NomineeName
  Given user is on page RIB_RDPage and types SupriyaTest on NomineeName
  Given user is on page RIB_RDPage and clicks on DOB
- Given user selects day 12 month Apr year 2001 and current year is 2025
+ Given user selects day 12 month Apr year 2001 and current year is 2026
  Then user is on page RIB_RDPage scroll to webpage element ContinueButton
  Then user is on page RIB_RDPage to verify ContinueButton is Displayed
  Given user is on page RIB_RDPage and clicks on ContinueButton
@@ -1145,7 +1145,7 @@ Scenario: Validate the ETB user open the RD Account and on Review page user see 
  Given user is on page RIB_RDPage and clicks on NomineeName
  Given user is on page RIB_RDPage and types SupriyaTest on NomineeName
  Given user is on page RIB_RDPage and clicks on DOB
- Given user selects day 12 month Apr year 2001 and current year is 2025
+ Given user selects day 12 month Apr year 2001 and current year is 2026
  Then user is on page RIB_RDPage scroll to webpage element ContinueButton
  Given user is on page RIB_RDPage and clicks on ContinueButton
  Then user is on page RIB_RDPage scroll to webpage element TnC
@@ -1179,7 +1179,7 @@ Scenario: Validate the ETB user open the RD Account and on Review page user see 
  Given user is on page RIB_RDPage and clicks on NomineeName
  Given user is on page RIB_RDPage and types SupriyaTest on NomineeName
  Given user is on page RIB_RDPage and clicks on DOB
- Given user selects day 12 month Apr year 2001 and current year is 2025
+ Given user selects day 12 month Apr year 2001 and current year is 2026
  Then user is on page RIB_RDPage scroll to webpage element ContinueButton
  Given user is on page RIB_RDPage and clicks on ContinueButton
  Then user is on page RIB_RDPage scroll to webpage element TnC
@@ -1212,7 +1212,7 @@ Scenario: Validate the ETB user open the RD Account and on Review page user clic
  Given user is on page RIB_RDPage and clicks on NomineeName
  Given user is on page RIB_RDPage and types SupriyaTest on NomineeName
  Given user is on page RIB_RDPage and clicks on DOB
- Given user selects day 12 month Apr year 2001 and current year is 2025
+ Given user selects day 12 month Apr year 2001 and current year is 2026
  Then user is on page RIB_RDPage scroll to webpage element ContinueButton
  Given user is on page RIB_RDPage and clicks on ContinueButton
  Then user is on page RIB_RDPage scroll to webpage element BackButton
@@ -1244,7 +1244,7 @@ Scenario: Validate the ETB user open the RD Account and on Review page user clic
  Given user is on page RIB_RDPage and clicks on NomineeName
  Given user is on page RIB_RDPage and types SupriyaTest on NomineeName
  Given user is on page RIB_RDPage and clicks on DOB
- Given user selects day 12 month Apr year 2001 and current year is 2025
+ Given user selects day 12 month Apr year 2001 and current year is 2026
  Then user is on page RIB_RDPage scroll to webpage element ContinueButton
  Given user is on page RIB_RDPage and clicks on ContinueButton
  Then user is on page RIB_RDPage scroll to webpage element BackButton
@@ -1281,7 +1281,7 @@ Scenario: Validate ETB user with age between 18 to 30 opens the RD account succe
  Given user is on page RIB_RDPage and clicks on NomineeName
  Given user is on page RIB_RDPage and types SupriyaTest on NomineeName
  Given user is on page RIB_RDPage and clicks on DOB
- Given user selects day 12 month Apr year 2001 and current year is 2025
+ Given user selects day 12 month Apr year 2001 and current year is 2026
  Then user is on page RIB_RDPage scroll to webpage element ContinueButton
  Then user is on page RIB_RDPage to verify ContinueButton is Displayed
  Given user is on page RIB_RDPage and clicks on ContinueButton
@@ -1322,7 +1322,7 @@ Scenario: Verify that ETB customers age between 18 to 30 should open recurring d
  Given user is on page RIB_RDPage and clicks on NomineeName
  Given user is on page RIB_RDPage and types SupriyaTest on NomineeName
  Given user is on page RIB_RDPage and clicks on DOB
- Given user selects day 12 month Apr year 2001 and current year is 2025
+ Given user selects day 12 month Apr year 2001 and current year is 2026
  Then user is on page RIB_RDPage scroll to webpage element ContinueButton
  Then user is on page RIB_RDPage to verify ContinueButton is Displayed
  Given user is on page RIB_RDPage and clicks on ContinueButton
@@ -1365,7 +1365,7 @@ Scenario: Verify that ETB customers between age 18 to 30 should open recurring d
  Given user is on page RIB_RDPage and clicks on NomineeName
  Given user is on page RIB_RDPage and types SupriyaTest on NomineeName
  Given user is on page RIB_RDPage and clicks on DOB
- Given user selects day 12 month Apr year 2001 and current year is 2025
+ Given user selects day 12 month Apr year 2001 and current year is 2026
  Then user is on page RIB_RDPage scroll to webpage element ContinueButton
  Then user is on page RIB_RDPage to verify ContinueButton is Displayed
  Given user is on page RIB_RDPage and clicks on ContinueButton

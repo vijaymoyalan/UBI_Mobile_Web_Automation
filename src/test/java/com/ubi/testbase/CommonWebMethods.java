@@ -2,6 +2,8 @@ package com.ubi.testbase;
 
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
@@ -47,6 +49,7 @@ import com.ubi.pageObject.MFAPage;
 
 import net.serenitybdd.annotations.Managed;
 import net.serenitybdd.core.pages.PageObject;
+import net.serenitybdd.screenplay.waits.Wait;
 import net.thucydides.core.webdriver.ThucydidesWebDriverSupport;
 import net.thucydides.core.webdriver.WebDriverFacade;
 
@@ -352,6 +355,7 @@ public class CommonWebMethods extends PageObject {
 	// for radioButton: select or notselected
 	// for element: displayed or notdisplayed
 	// for text field: NotNull
+	// for text box as Blank
 		
 		switch (status) {
 		case "Disabled":
@@ -427,6 +431,13 @@ public class CommonWebMethods extends PageObject {
 			if (elementText != null) {
 			    verification.verificationConditionFalse(elementText.contains("-"), "Text should not contain hyphen");
 			}
+			break;
+			
+		case "Null":
+			WebElement NullTextBox = findElement(element);
+			String NullText = NullTextBox.getAttribute("value");
+			System.out.println("Text value "+ NullText);
+			verification.verificationEquals(NullText,"","Textbox contains value");
 			break;
 		default:
 			break;
@@ -600,6 +611,37 @@ public class CommonWebMethods extends PageObject {
 		} catch (Exception e) {
 			System.out.println("Could not find yesterday's date element: " + e.getMessage());
 		}
+	}
+	
+	
+	public void fileToUpload(String fileName) throws IOException {
+	    try {
+	    	System.out.println("inside fileUpload method");
+	    	String filePath = System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\RIB\\"+fileName+".pdf";
+	    	System.out.println("File Path: "+filePath);
+	        File localFile = new File(filePath); // path of PNG file on project structure to be uploaded
+	        if (!localFile.exists()) {
+	            throw new FileNotFoundException("File not found: " + localFile);
+	        }	        
+//	        WebElement fileInput = driver.findElement(By.xpath("(//input[@type='file'])[1]"));
+	        WebElement fileInput = webDriver.findElement(By.xpath("(//input[@type='file'])[1]"));
+	        fileInput.sendKeys(filePath);
+	        System.out.println("file is pushed");
+		} catch (Exception e) {
+			System.out.println("Exception occured "+e);
+		}
+	}
+	
+	public void compareStringValues(String pageName, String expectedText, String elementname) {
+		System.out.println("inside compareStringValues mathod to find element menthod");
+		compareStringValues(findElement(TestBase._ORIntializater.get(pageName), elementname), expectedText);
+	}
+	
+	public void compareStringValues(ORPageModel element, String expectedText) {
+		WebElement textRetrived = findElement(element);
+		String actualText = textRetrived.getAttribute("defaultValue");
+		System.out.println("Text value "+ actualText);
+		verification.verificationEquals(actualText,expectedText,"Text Matched");
 	}
 	
 		private boolean captureResponses = false; 		

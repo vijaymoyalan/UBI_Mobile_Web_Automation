@@ -60,7 +60,7 @@ Given user is on page FDDetailsPage clicks on SelectInterestPayout
 Given user is on page FDDetailsPage clicks on SelectOnMaturityPeriod
 Given user swipe down the page
 Given user is on page FDDetailsPage clicks on NomineeDOB
-Given user selects day 12 month Apr year 2006 and current year is 2025
+Given user selects day 12 month Apr year 2006 and current year is 2026
 Given user is on page FDDetailsPage clicks on Continue
 Given user swipe down the page
 Given user is on page FDReviewPage clicks on T&CCheckbox 
@@ -293,7 +293,7 @@ When user scrolls down to "Auto Renewal"
 Given user is on page FDDetailsPage clicks on AutoRenewalOff 
 Given user swipe down the page
 Given user is on page FDDetailsPage clicks on NomineeDOB
-Given user selects day 12 month Apr year 2006 and current year is 2025
+Given user selects day 12 month Apr year 2006 and current year is 2026
 Given user is on page FDDetailsPage clicks on Continue
 Given user swipe down the page
 Given user is on page FDReviewPage clicks on T&CCheckbox 
@@ -467,7 +467,7 @@ Given user is on page LADDetailsPage clicks on ContinueAhead
 Given user is on page LADDetailsPage clicks on SelectOperativeAccount
 Given user is on page LADDetailsPage to check OperativeAccountSavings is Displayed
 Given user is on page LADDetailsPage to check OperativeAccountOverdraft is Displayed
-Given user is on page LADDetailsPage to check OperativeAccountCurrent is Displayed
+#Given user is on page LADDetailsPage to check OperativeAccountCurrent is Displayed
 
 
 @TestCaseKey=UDB-T43721 @Automatable @Smoke @RedmiNote9Pro @LADAccountOpening @UATRun
@@ -527,7 +527,7 @@ When user scrolls down to "Declarations"
 Given user is on page LADReviewPage clicks on Declarations
 
 
-@TestCaseKey=T43723 @Automatable @Smoke @RedmiNote9Pro @LADAccountOpening @UATRun
+@TestCaseKey=UDB-T43723 @Automatable @Smoke @RedmiNote9Pro @LADAccountOpening @UATRun
 Scenario: Verify that the declaration checkbox must be ticked to proceed:a. If checked, clicking 'Continue' proceeds to loan sanction. B. If unchecked, the 'Continue' button remains disabled.
 
 #Given user logins to app

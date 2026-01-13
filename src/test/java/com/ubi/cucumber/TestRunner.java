@@ -27,10 +27,10 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 //		features = "src\\test\\resources\\features\\Mobile\\MVP\\PMJJBY.feature",
 //		glue = {"com.ubi.cucumber.steps.mobile.mvp","com.ubi.hooks.mobile"})
 
-//		features = "src\\test\\resources\\features\\Mobile\\MVP\\LAD.feature", 
+//		features = "src\\test\\resources\\features\\Mobile\\MVP\\LAD.feature",
 //		glue = {"com.ubi.cucumber.steps.mobile.mvp","com.ubi.hooks.mobile"})
 
-//		features = "src\\test\\resources\\features\\Mobile\\MVP\\BBPS.feature",
+//		features = "src\\test\\resources\\features\\Mobile\\MVP\\BBPS.feature", tags="@TestCaseKey=UDB-T28227 or @TestCaseKey=UDB-T28212 or @TestCaseKey=UDB-T28186 or @TestCaseKey=UDB-T28107 or @TestCaseKey=UDB-T28268 or @TestCaseKey=UDB-T28091",
 //		glue = {"com.ubi.cucumber.steps.mobile.mvp","com.ubi.hooks.mobile"})
 		
 //		features = "src\\test\\resources\\features\\Mobile\\MSME\\Help&Support.feature",
@@ -70,14 +70,24 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 //features = "src/test/resources/features/Web/AssistedPortal/Consent.feature",
 //glue = {"com.ubi.cucumber.steps.web","com.ubi.hooks.web"})
 
-//features = "src/test/resources/features/Web/RIB/RIB_SSA.feature", tags="@TestCaseKey=UDB-T71896",
+//features = "src/test/resources/features/Web/RIB/RIB_SSA_New.feature",tags="@TestCaseKey=UDB-T71884",
+//glue = {"com.ubi.cucumber.steps.web","com.ubi.hooks.web"})
+
+//features = "src/test/resources/features/Web/RIB/RIB_PPF_New.feature", tags="@TestCaseKey=UDB-T72034 or @TestCaseKey=UDB-T72035",
 //glue = {"com.ubi.cucumber.steps.web","com.ubi.hooks.web"})
 		
-		features = "src/test/resources/features/Web/RIB/RIB_RD.feature", tags="@TestCaseKey=UDB-T68646",
+//		features = "src/test/resources/features/Web/RIB/RIB_RD.feature", tags="@TestCaseKey=UDB-T68646",
+//		glue = {"com.ubi.cucumber.steps.web","com.ubi.hooks.web"})
+
+
+//features = "src/test/resources/features/Web/RIB/RIB_PMSBY.feature",
+//glue = {"com.ubi.cucumber.steps.web","com.ubi.hooks.web"})
+		
+		features = "src/test/resources/features/Web/RIB/RIB_PMJJBY.feature",
 		glue = {"com.ubi.cucumber.steps.web","com.ubi.hooks.web"})
 		
 
-//features = "src\\test\\resources\\features\\Mobile\\MSME\\MSME_HomePage.feature", tags="@TestCaseKey=UDB-T52183",
+//features = "src\\test\\resources\\features\\Mobile\\MSME\\MSME_HomePage.feature", tags="@TestCaseKey=UDB-T78895",
 //glue = {"com.ubi.cucumber.steps.mobile.mvp","com.ubi.hooks.mobile"})	
 		
 //		features = "src\\test\\resources\\features\\Mobile\\MSME\\MSME_HomePage.feature")
