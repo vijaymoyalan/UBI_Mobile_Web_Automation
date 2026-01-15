@@ -18,8 +18,8 @@ Scenario: Validate that user should be able to see the Download button inster of
  Given user is on page RIB_RDPage and types VijayTest on RDName
  Given user is on page RIB_RDPage and clicks on DepositAmount
  Given user is on page RIB_RDPage and types 2000 on DepositAmount
- Then user is on page RIB_RDPage scroll to webpage element SelectTenure3Year
- Given user is on page RIB_RDPage and clicks on SelectTenure3Year
+ Then user is on page RIB_RDPage scroll to webpage element SelectTenure2Year
+ Given user is on page RIB_RDPage and clicks on SelectTenure2Year
  Then user is on page RIB_RDPage scroll to webpage element ScheduleTransferDate
  Given user is on page RIB_RDPage and clicks on ScheduleTransferDate
  Then user selects yesterday's date
@@ -55,8 +55,8 @@ Scenario: Validate that Post journey user should be able to edit/delete nominee 
  Given user is on page RIB_RDPage and types VijayTest on RDName
  Given user is on page RIB_RDPage and clicks on DepositAmount
  Given user is on page RIB_RDPage and types 2000 on DepositAmount
- Then user is on page RIB_RDPage scroll to webpage element SelectTenure3Year
- Given user is on page RIB_RDPage and clicks on SelectTenure3Year
+ Then user is on page RIB_RDPage scroll to webpage element SelectTenure2Year
+ Given user is on page RIB_RDPage and clicks on SelectTenure2Year
  Then user is on page RIB_RDPage scroll to webpage element ScheduleTransferDate
  Given user is on page RIB_RDPage and clicks on ScheduleTransferDate
  Then user selects yesterday's date
@@ -95,8 +95,8 @@ Scenario: Validate that user should be able to see the Amount in words which are
  Given user is on page RIB_RDPage and types VijayTest on RDName
  Given user is on page RIB_RDPage and clicks on DepositAmount
  Given user is on page RIB_RDPage and types 2000 on DepositAmount
- Then user is on page RIB_RDPage scroll to webpage element SelectTenure3Year
- Given user is on page RIB_RDPage and clicks on SelectTenure3Year
+ Then user is on page RIB_RDPage scroll to webpage element SelectTenure2Year
+ Given user is on page RIB_RDPage and clicks on SelectTenure2Year
  Then user is on page RIB_RDPage scroll to webpage element ScheduleTransferDate
  Given user is on page RIB_RDPage and clicks on ScheduleTransferDate
  Then user selects yesterday's date
@@ -129,8 +129,8 @@ Scenario: Verify Negative testing for Address field for Nominee
  Given user is on page RIB_RDPage and types VijayTest on RDName
  Given user is on page RIB_RDPage and clicks on DepositAmount
  Given user is on page RIB_RDPage and types 2000 on DepositAmount
- Then user is on page RIB_RDPage scroll to webpage element SelectTenure3Year
- Given user is on page RIB_RDPage and clicks on SelectTenure3Year
+ Then user is on page RIB_RDPage scroll to webpage element SelectTenure2Year
+ Given user is on page RIB_RDPage and clicks on SelectTenure2Year
  Then user is on page RIB_RDPage scroll to webpage element ScheduleTransferDate
  Given user is on page RIB_RDPage and clicks on ScheduleTransferDate
  Then user selects yesterday's date
@@ -166,8 +166,8 @@ Scenario: Verify Negative testing for Age field for Nominee
  Given user is on page RIB_RDPage and types VijayTest on RDName
  Given user is on page RIB_RDPage and clicks on DepositAmount
  Given user is on page RIB_RDPage and types 2000 on DepositAmount
- Then user is on page RIB_RDPage scroll to webpage element SelectTenure3Year
- Given user is on page RIB_RDPage and clicks on SelectTenure3Year
+ Then user is on page RIB_RDPage scroll to webpage element SelectTenure2Year
+ Given user is on page RIB_RDPage and clicks on SelectTenure2Year
  Then user is on page RIB_RDPage scroll to webpage element ScheduleTransferDate
  Given user is on page RIB_RDPage and clicks on ScheduleTransferDate
  Then user selects yesterday's date
@@ -198,8 +198,8 @@ Scenario: Verify Negative testing for Nominee fields Name
  Given user is on page RIB_RDPage and types VijayTest on RDName
  Given user is on page RIB_RDPage and clicks on DepositAmount
  Given user is on page RIB_RDPage and types 2000 on DepositAmount
- Then user is on page RIB_RDPage scroll to webpage element SelectTenure3Year
- Given user is on page RIB_RDPage and clicks on SelectTenure3Year
+ Then user is on page RIB_RDPage scroll to webpage element SelectTenure2Year
+ Given user is on page RIB_RDPage and clicks on SelectTenure2Year
  Then user is on page RIB_RDPage scroll to webpage element ScheduleTransferDate
  Given user is on page RIB_RDPage and clicks on ScheduleTransferDate
  Then user selects yesterday's date
@@ -229,8 +229,8 @@ Scenario: Verify Negative testing for Nominee fields Name
  Given user is on page RIB_RDPage and types VijayTest on RDName
  Given user is on page RIB_RDPage and clicks on DepositAmount
  Given user is on page RIB_RDPage and types 2000 on DepositAmount
- Then user is on page RIB_RDPage scroll to webpage element SelectTenure3Year
- Given user is on page RIB_RDPage and clicks on SelectTenure3Year
+ Then user is on page RIB_RDPage scroll to webpage element SelectTenure2Year
+ Given user is on page RIB_RDPage and clicks on SelectTenure2Year
  Then user is on page RIB_RDPage scroll to webpage element ScheduleTransferDate
  Given user is on page RIB_RDPage and clicks on ScheduleTransferDate
  Then user selects yesterday's date
@@ -361,8 +361,8 @@ Scenario: Verify that ETB customers age within 18 to 30 should open recurring de
  Given user is on page RIB_RDPage and types VijayTest on RDName
  Given user is on page RIB_RDPage and clicks on DepositAmount
  Given user is on page RIB_RDPage and types 2000 on DepositAmount
- Then user is on page RIB_RDPage scroll to webpage element SelectTenure3Year
- Given user is on page RIB_RDPage and clicks on SelectTenure3Year
+ Then user is on page RIB_RDPage scroll to webpage element SelectTenure2Year
+ Given user is on page RIB_RDPage and clicks on SelectTenure2Year
  Then user is on page RIB_RDPage scroll to webpage element ScheduleTransferDate
  Given user is on page RIB_RDPage and clicks on ScheduleTransferDate
  Then user selects yesterday's date
@@ -402,8 +402,8 @@ Scenario: Verify that the address of the nominee has been changed successfully
  Given user is on page RIB_RDPage and types VijayTest on RDName
  Given user is on page RIB_RDPage and clicks on DepositAmount
  Given user is on page RIB_RDPage and types 2000 on DepositAmount
- Then user is on page RIB_RDPage scroll to webpage element SelectTenure3Year
- Given user is on page RIB_RDPage and clicks on SelectTenure3Year
+ Then user is on page RIB_RDPage scroll to webpage element SelectTenure2Year
+ Given user is on page RIB_RDPage and clicks on SelectTenure2Year
  Then user is on page RIB_RDPage scroll to webpage element ScheduleTransferDate
  Given user is on page RIB_RDPage and clicks on ScheduleTransferDate
  Then user selects yesterday's date
@@ -710,8 +710,8 @@ Scenario: Verify that if user entered age of nominee is less than 18 Years
  Given user is on page RIB_RDPage and types VijayTest on RDName
  Given user is on page RIB_RDPage and clicks on DepositAmount
  Given user is on page RIB_RDPage and types 2000 on DepositAmount
- Then user is on page RIB_RDPage scroll to webpage element SelectTenure3Year
- Given user is on page RIB_RDPage and clicks on SelectTenure3Year
+ Then user is on page RIB_RDPage scroll to webpage element SelectTenure2Year
+ Given user is on page RIB_RDPage and clicks on SelectTenure2Year
  Then user is on page RIB_RDPage scroll to webpage element ScheduleTransferDate
  Given user is on page RIB_RDPage and clicks on ScheduleTransferDate
  Then user selects yesterday's date
@@ -740,8 +740,8 @@ Scenario: Validate if the terms and conditions T&C  document link present on RD 
  Given user is on page RIB_RDPage and types VijayTest on RDName
  Given user is on page RIB_RDPage and clicks on DepositAmount
  Given user is on page RIB_RDPage and types 2000 on DepositAmount
- Then user is on page RIB_RDPage scroll to webpage element SelectTenure3Year
- Given user is on page RIB_RDPage and clicks on SelectTenure3Year
+ Then user is on page RIB_RDPage scroll to webpage element SelectTenure2Year
+ Given user is on page RIB_RDPage and clicks on SelectTenure2Year
  Then user is on page RIB_RDPage scroll to webpage element ScheduleTransferDate
  Given user is on page RIB_RDPage and clicks on ScheduleTransferDate
  Then user selects yesterday's date
@@ -795,8 +795,8 @@ Scenario: Validate Customer can download RD certificate/RD advice from summary p
  Given user is on page RIB_RDPage and types VijayTest on RDName
  Given user is on page RIB_RDPage and clicks on DepositAmount
  Given user is on page RIB_RDPage and types 2000 on DepositAmount
- Then user is on page RIB_RDPage scroll to webpage element SelectTenure3Year
- Given user is on page RIB_RDPage and clicks on SelectTenure3Year
+ Then user is on page RIB_RDPage scroll to webpage element SelectTenure2Year
+ Given user is on page RIB_RDPage and clicks on SelectTenure2Year
  Then user is on page RIB_RDPage scroll to webpage element ScheduleTransferDate
  Given user is on page RIB_RDPage and clicks on ScheduleTransferDate
  Then user selects yesterday's date
@@ -837,8 +837,8 @@ Scenario: Validate the Progress bar to be available for all the RD account onboa
  Given user is on page RIB_RDPage and types VijayTest on RDName
  Given user is on page RIB_RDPage and clicks on DepositAmount
  Given user is on page RIB_RDPage and types 2000 on DepositAmount
- Then user is on page RIB_RDPage scroll to webpage element SelectTenure3Year
- Given user is on page RIB_RDPage and clicks on SelectTenure3Year
+ Then user is on page RIB_RDPage scroll to webpage element SelectTenure2Year
+ Given user is on page RIB_RDPage and clicks on SelectTenure2Year
  Then user is on page RIB_RDPage scroll to webpage element ScheduleTransferDate
  Given user is on page RIB_RDPage and clicks on ScheduleTransferDate
  Then user selects yesterday's date
@@ -871,8 +871,8 @@ Scenario: Validate that T&C toggle button should be pre-selected as 'not accepte
  Given user is on page RIB_RDPage and types VijayTest on RDName
  Given user is on page RIB_RDPage and clicks on DepositAmount
  Given user is on page RIB_RDPage and types 2000 on DepositAmount
- Then user is on page RIB_RDPage scroll to webpage element SelectTenure3Year
- Given user is on page RIB_RDPage and clicks on SelectTenure3Year
+ Then user is on page RIB_RDPage scroll to webpage element SelectTenure2Year
+ Given user is on page RIB_RDPage and clicks on SelectTenure2Year
  Then user is on page RIB_RDPage scroll to webpage element ScheduleTransferDate
  Given user is on page RIB_RDPage and clicks on ScheduleTransferDate
  Then user selects yesterday's date
@@ -1136,8 +1136,8 @@ Scenario: Validate the ETB user open the RD Account and on Review page user see 
  Given user is on page RIB_RDPage and types VijayTest on RDName
  Given user is on page RIB_RDPage and clicks on DepositAmount
  Given user is on page RIB_RDPage and types 2000 on DepositAmount
- Then user is on page RIB_RDPage scroll to webpage element SelectTenure3Year
- Given user is on page RIB_RDPage and clicks on SelectTenure3Year
+ Then user is on page RIB_RDPage scroll to webpage element SelectTenure2Year
+ Given user is on page RIB_RDPage and clicks on SelectTenure2Year
  Then user is on page RIB_RDPage scroll to webpage element ScheduleTransferDate
  Given user is on page RIB_RDPage and clicks on ScheduleTransferDate
  Then user selects yesterday's date
@@ -1170,8 +1170,8 @@ Scenario: Validate the ETB user open the RD Account and on Review page user see 
  Given user is on page RIB_RDPage and types VijayTest on RDName
  Given user is on page RIB_RDPage and clicks on DepositAmount
  Given user is on page RIB_RDPage and types 2000 on DepositAmount
- Then user is on page RIB_RDPage scroll to webpage element SelectTenure3Year
- Given user is on page RIB_RDPage and clicks on SelectTenure3Year
+ Then user is on page RIB_RDPage scroll to webpage element SelectTenure2Year
+ Given user is on page RIB_RDPage and clicks on SelectTenure2Year
  Then user is on page RIB_RDPage scroll to webpage element ScheduleTransferDate
  Given user is on page RIB_RDPage and clicks on ScheduleTransferDate
  Then user selects yesterday's date
@@ -1206,8 +1206,8 @@ Scenario: Validate the ETB user open the RD Account and on Review page user clic
  Given user is on page RIB_RDPage and types VijayTest on RDName
  Given user is on page RIB_RDPage and clicks on DepositAmount
  Given user is on page RIB_RDPage and types 2000 on DepositAmount
- Then user is on page RIB_RDPage scroll to webpage element SelectTenure3Year
- Given user is on page RIB_RDPage and clicks on SelectTenure3Year
+ Then user is on page RIB_RDPage scroll to webpage element SelectTenure2Year
+ Given user is on page RIB_RDPage and clicks on SelectTenure2Year
  Then user is on page RIB_RDPage scroll to webpage element AddNomineeText
  Given user is on page RIB_RDPage and clicks on NomineeName
  Given user is on page RIB_RDPage and types SupriyaTest on NomineeName
@@ -1238,8 +1238,8 @@ Scenario: Validate the ETB user open the RD Account and on Review page user clic
  Given user is on page RIB_RDPage and types VijayTest on RDName
  Given user is on page RIB_RDPage and clicks on DepositAmount
  Given user is on page RIB_RDPage and types 2000 on DepositAmount
- Then user is on page RIB_RDPage scroll to webpage element SelectTenure3Year
- Given user is on page RIB_RDPage and clicks on SelectTenure3Year
+ Then user is on page RIB_RDPage scroll to webpage element SelectTenure2Year
+ Given user is on page RIB_RDPage and clicks on SelectTenure2Year
  Then user is on page RIB_RDPage scroll to webpage element AddNomineeText
  Given user is on page RIB_RDPage and clicks on NomineeName
  Given user is on page RIB_RDPage and types SupriyaTest on NomineeName
@@ -1272,8 +1272,8 @@ Scenario: Validate ETB user with age between 18 to 30 opens the RD account succe
  Given user is on page RIB_RDPage and types VijayTest on RDName
  Given user is on page RIB_RDPage and clicks on DepositAmount
  Given user is on page RIB_RDPage and types 2000 on DepositAmount
- Then user is on page RIB_RDPage scroll to webpage element SelectTenure3Year
- Given user is on page RIB_RDPage and clicks on SelectTenure3Year
+ Then user is on page RIB_RDPage scroll to webpage element SelectTenure2Year
+ Given user is on page RIB_RDPage and clicks on SelectTenure2Year
  Then user is on page RIB_RDPage scroll to webpage element ScheduleTransferDate
  Given user is on page RIB_RDPage and clicks on ScheduleTransferDate
  Then user selects yesterday's date
@@ -1313,7 +1313,7 @@ Scenario: Verify that ETB customers age between 18 to 30 should open recurring d
  Given user is on page RIB_RDPage and types VijayTest on RDName
  Given user is on page RIB_RDPage and clicks on DepositAmount
  Given user is on page RIB_RDPage and types 500 on DepositAmount
- Then user is on page RIB_RDPage scroll to webpage element SelectTenure3Year
+ Then user is on page RIB_RDPage scroll to webpage element SelectTenure2Year
  Given user is on page RIB_RDPage and clicks on SelectTenure6Months
  Then user is on page RIB_RDPage scroll to webpage element ScheduleTransferDate
  Given user is on page RIB_RDPage and clicks on ScheduleTransferDate
@@ -1354,7 +1354,7 @@ Scenario: Verify that ETB customers between age 18 to 30 should open recurring d
  Given user is on page RIB_RDPage and types VijayTest on RDName
  Given user is on page RIB_RDPage and clicks on DepositAmount
  Given user is on page RIB_RDPage and types 500 on DepositAmount
- Then user is on page RIB_RDPage scroll to webpage element SelectTenure3Year
+ Then user is on page RIB_RDPage scroll to webpage element SelectTenure2Year
  Then user is on page RIB_RDPage scroll to webpage element SelectCustomeTenure
  Given user is on page RIB_RDPage and clicks on SelectCustomeTenure
  Given user is on page RIB_RDPage and types 110 on CustomMonthTextBox
@@ -1377,6 +1377,10 @@ Scenario: Verify that ETB customers between age 18 to 30 should open recurring d
  Given user is on page RIB_RDPage and clicks on TPIN
  Given user is on page RIB_RDPage and types 123456 on TPIN
  Given user is on page RIB_RDPage and clicks on ContinueButton
+ Then user verifies for message on page RIB_RDPage as Your Recurring Deposit Account text in placeholder SuccessMessage
+ Then user is on page RIB_RDPage to verify RDAccountNo is Displayed
+ Then user is on page RIB_RDPage scroll to webpage element HomeButton
+ Then user is on page RIB_RDPage to verify SubmitButton is HomeButton
  
  
 @TestCaseKey=UDB-T68642 @web
@@ -1454,3 +1458,539 @@ Scenario: Verify blue chip shown on page TDS Certificate for Depost
  Then user is on page RIB_ExistingRD to verify AccountName is Displayed
  Then user is on page RIB_ExistingRD to verify AccountNumber is Displayed
  
+ 
+@TestCaseKey=UDB-T68648 @web
+Scenario: Verify values show  in field of blue chip shown on page TDS Certificate for Depost  if interest is not credited
+ Given user is on page RIB_LoginPage and clicks on LoginUsingPassword
+ Given user is on page RIB_LoginPage and Enters username UserID and password Password
+ #Then user waits for sometime
+ #Then user waits for sometime
+ Given user is on page RIB_LoginPage and clicks on LoginButton
+ Then user waits for sometime
+ Given user is on page RIB_HomePage and clicks on DepositTabViewMore
+ Given user is on page RIB_HomePage and clicks on RDTab
+ Given user is on page RIB_HomePage and clicks on ExistingRD
+ Given user is on page RIB_ExistingRD and clicks on RequestTab
+ Given user is on page RIB_ExistingRD and clicks on DownloadTDS
+ Given user is on page RIB_ExistingRD and clicks on GenerateButton
+ Then user is on page RIB_DownloadTDSCertPage verifies amount in InterestAmountDebit
+ And user is on page RIB_DownloadTDSCertPage verifies amount in InterestAmountCredit
+
+@TestCaseKey=UDB-T68649 @web
+Scenario: Verify share button on page TDS Certificate for Depost  if interest is not credited
+ Given user is on page RIB_LoginPage and clicks on LoginUsingPassword
+ Given user is on page RIB_LoginPage and Enters username UserID and password Password
+ #Then user waits for sometime
+ #Then user waits for sometime
+ Given user is on page RIB_LoginPage and clicks on LoginButton
+ Then user waits for sometime
+ Given user is on page RIB_HomePage and clicks on DepositTabViewMore
+ Given user is on page RIB_HomePage and clicks on RDTab
+ Given user is on page RIB_HomePage and clicks on ExistingRD
+ Given user is on page RIB_ExistingRD and clicks on RequestTab
+ Given user is on page RIB_ExistingRD and clicks on DownloadTDS
+ Given user is on page RIB_ExistingRD and clicks on GenerateButton
+ Given user is on page RIB_DownloadTDSCertPage and clicks on DownloadButton
+ 
+ @TestCaseKey=UDB-T68651 @web
+Scenario: Verify Download button on page TDS Certificate for Depost  if interest is not credited
+ Given user is on page RIB_LoginPage and clicks on LoginUsingPassword
+ Given user is on page RIB_LoginPage and Enters username UserID and password Password
+ #Then user waits for sometime
+ #Then user waits for sometime
+ Given user is on page RIB_LoginPage and clicks on LoginButton
+ Then user waits for sometime
+  Then user waits for sometime
+ Given user is on page RIB_HomePage and clicks on DepositTabViewMore
+ Given user is on page RIB_HomePage and clicks on RDTab
+Given user is on page RIB_HomePage and clicks on ExistingRD
+ Given user is on page RIB_ExistingRD and clicks on RequestTab
+ Given user is on page RIB_ExistingRD and clicks on DownloadTDS
+ Given user is on page RIB_ExistingRD and clicks on GenerateButton
+ Given user is on page RIB_DownloadTDSCertPage and clicks on DepositTabViewMore
+ Given user is on page RIB_DownloadTDSCertPage and clicks on DownloadButton
+ 
+  @TestCaseKey=UDB-T68652 @web
+Scenario: Verify Downloaded TDS Certificate is password protected
+ Given user is on page RIB_LoginPage and clicks on LoginUsingPassword
+ Given user is on page RIB_LoginPage and Enters username UserID and password Password
+ #Then user waits for sometime
+ #Then user waits for sometime
+ Given user is on page RIB_LoginPage and clicks on LoginButton
+ Then user waits for sometime
+  Then user waits for sometime
+ Given user is on page RIB_HomePage and clicks on DepositTabViewMore
+ Given user is on page RIB_HomePage and clicks on RDTab
+Given user is on page RIB_HomePage and clicks on ExistingRD
+ Given user is on page RIB_ExistingRD and clicks on RequestTab
+ Given user is on page RIB_ExistingRD and clicks on DownloadTDS
+ Given user is on page RIB_ExistingRD and clicks on GenerateButton 
+Given user is on page RIB_DownloadTDSCertPage and clicks on DownloadButton
+
+@TestCaseKey=UDB-T68653 @web
+Scenario:Verify data in Downloaded TDS Certificate
+ Given user is on page RIB_LoginPage and clicks on LoginUsingPassword
+ Given user is on page RIB_LoginPage and Enters username UserID and password Password
+ #Then user waits for sometime
+ #Then user waits for sometime
+ Given user is on page RIB_LoginPage and clicks on LoginButton
+ Then user waits for sometime
+ Given user is on page RIB_HomePage and clicks on DepositTabViewMore
+ Given user is on page RIB_HomePage and clicks on RDTab
+ Given user is on page RIB_HomePage and clicks on ExistingRD
+ Given user is on page RIB_ExistingRD and clicks on RequestTab
+ Given user is on page RIB_ExistingRD and clicks on DownloadTDS
+ Given user is on page RIB_ExistingRD and clicks on GenerateButton 
+ Given user is on page RIB_DownloadTDSCertPage and clicks on DownloadButton
+
+
+@TestCaseKey=UDB-T68654 @web
+Scenario: Verify Interest Certificate option  under Request tab
+ Given user is on page RIB_LoginPage and clicks on LoginUsingPassword
+ Given user is on page RIB_LoginPage and Enters username UserID and password Password
+ #Then user waits for sometime
+ #Then user waits for sometime
+ Given user is on page RIB_LoginPage and clicks on LoginButton
+ Then user waits for sometime
+ Given user is on page RIB_HomePage and clicks on DepositTabViewMore
+ Given user is on page RIB_HomePage and clicks on RDTab
+ Given user is on page RIB_HomePage and clicks on ExistingRD
+ Given user is on page RIB_ExistingRD and clicks on RequestTab
+ Given user is on page RIB_InterestCertificatePage and clicks on DownloadInterestCertificate
+  
+@TestCaseKey=UDB-T68655 @web
+Scenario: Verify page Interest Certificate for Deposit
+ Given user is on page RIB_LoginPage and clicks on LoginUsingPassword
+ Given user is on page RIB_LoginPage and Enters username UserID and password Password
+ #Then user waits for sometime
+ #Then user waits for sometime
+ Given user is on page RIB_LoginPage and clicks on LoginButton
+ Then user waits for sometime
+ Given user is on page RIB_HomePage and clicks on DepositTabViewMore
+ Given user is on page RIB_HomePage and clicks on RDTab
+ Given user is on page RIB_HomePage and clicks on ExistingRD
+ Given user is on page RIB_ExistingRD and clicks on RequestTab
+ Given user is on page RIB_InterestCertificatePage and clicks on DownloadInterestCertificate
+ Then user is on page RIB_InterestCertificatePage to verify CurrentFinancialYear is Displayed
+ Then user is on page RIB_InterestCertificatePage to verify GenerateButtoniousFinancialYear is Displayed
+ Then user is on page RIB_InterestCertificatePage to verify Custom is Displayed
+  
+  
+@TestCaseKey=UDB-T68657 @web
+Scenario: Verify user selects Current Financial year and clicks on  Generate button  on page Interest Certificate for Deposit
+ Given user is on page RIB_LoginPage and clicks on LoginUsingPassword
+ Given user is on page RIB_LoginPage and Enters username UserID and password Password
+ #Then user waits for sometime
+ #Then user waits for sometime
+ Given user is on page RIB_LoginPage and clicks on LoginButton
+ Then user waits for sometime
+ Given user is on page RIB_HomePage and clicks on DepositTabViewMore
+ Given user is on page RIB_HomePage and clicks on RDTab
+ Given user is on page RIB_HomePage and clicks on ExistingRD  
+ Given user is on page RIB_ExistingRD and clicks on RequestTab
+ Given user is on page RIB_InterestCertificatePage and clicks on DownloadInterestCertificate
+ Given user is on page RIB_InterestCertificatePage and clicks on CurrentFinancialYear
+ Given user is on page RIB_InterestCertificatePage and clicks on GenerateButton
+ Then user is on page RIB_InterestCertificatePage to verify FinancialYear is Displayed
+ Then user is on page RIB_InterestCertificatePage to verify DownloadButton is Displayed
+ Then user is on page RIB_InterestCertificatePage to verify HomeButton is Displayed
+ 
+ @TestCaseKey=UDB-T68660 @web
+Scenario: Verify blue chip shown on  page Interest Certificate for Deposit (Current Financial year)
+ Given user is on page RIB_LoginPage and clicks on LoginUsingPassword
+ Given user is on page RIB_LoginPage and Enters username UserID and password Password
+ #Then user waits for sometime
+ #Then user waits for sometime
+ Given user is on page RIB_LoginPage and clicks on LoginButton
+ Then user waits for sometime
+ Given user is on page RIB_HomePage and clicks on DepositTabViewMore
+ Given user is on page RIB_HomePage and clicks on RDTab
+ Given user is on page RIB_HomePage and clicks on ExistingRD  
+ Given user is on page RIB_ExistingRD and clicks on RequestTab
+ Given user is on page RIB_InterestCertificatePage and clicks on DownloadInterestCertificate
+ Given user is on page RIB_InterestCertificatePage and clicks on CurrentFinancialYear
+ Given user is on page RIB_InterestCertificatePage and clicks on GenerateButton
+ Then user is on page RIB_InterestCertificatePage to verify AccountName is Displayed
+ Then user is on page RIB_InterestCertificatePage to verify AccountNumber is Displayed
+ Then user is on page RIB_InterestCertificatePage to verify InterestAmountDebit is Displayed
+ Then user is on page RIB_InterestCertificatePage to verify InterestAmountCredit is Displayed
+ 
+@TestCaseKey=UDB-T68662 @web
+Scenario: Verify values show  in field of blue chip shown on  page Interest Certificate for Deposit (Current Financial year),  if interest is not credited
+ Given user is on page RIB_LoginPage and clicks on LoginUsingPassword
+ Given user is on page RIB_LoginPage and Enters username UserID and password Password
+ #Then user waits for sometime
+ #Then user waits for sometime
+ Given user is on page RIB_LoginPage and clicks on LoginButton
+ Then user waits for sometime
+ Given user is on page RIB_HomePage and clicks on DepositTabViewMore
+ Given user is on page RIB_HomePage and clicks on RDTab
+ Given user is on page RIB_HomePage and clicks on ExistingRD  
+ Given user is on page RIB_ExistingRD and clicks on RequestTab
+ Given user is on page RIB_InterestCertificatePage and clicks on DownloadInterestCertificate
+ Given user is on page RIB_InterestCertificatePage and clicks on CurrentFinancialYear
+ Given user is on page RIB_InterestCertificatePage and clicks on GenerateButton
+ Then user is on page RIB_InterestCertificatePage verifies amount in InterestAmountDebit
+ And user is on page RIB_InterestCertificatePage verifies amount in InterestAmountCredit
+
+
+@TestCaseKey=UDB-T68668 @web
+Scenario: Verify user selects GenerateButtonious Financial year and clicks on  Generate button  on page Interest Certificate for Deposit
+ Given user is on page RIB_LoginPage and clicks on LoginUsingPassword
+ Given user is on page RIB_LoginPage and Enters username UserID and password Password
+ #Then user waits for sometime
+ #Then user waits for sometime
+ Given user is on page RIB_LoginPage and clicks on LoginButton
+ Then user waits for sometime
+ Given user is on page RIB_HomePage and clicks on DepositTabViewMore
+ Given user is on page RIB_HomePage and clicks on RDTab
+ Given user is on page RIB_HomePage and clicks on ExistingRD  
+ Given user is on page RIB_ExistingRD and clicks on RequestTab
+ Given user is on page RIB_InterestCertificatePage and clicks on DownloadInterestCertificate
+ Given user is on page RIB_InterestCertificatePage and clicks on GenerateButtoniousFinancialYear
+ Given user is on page RIB_InterestCertificatePage and clicks on GenerateButton
+ Then user is on page RIB_InterestCertificatePage to verify FinancialYear is Displayed
+ Then user is on page RIB_InterestCertificatePage to verify DownloadButton is Displayed
+ Then user is on page RIB_InterestCertificatePage to verify HomeButton is Displayed
+ 
+@TestCaseKey=UDB-T68669 @web
+Scenario: Verify Financial year field  on  page Interest Certificate for Deposit (GenerateButtonious Financial year)
+ Given user is on page RIB_LoginPage and clicks on LoginUsingPassword
+ Given user is on page RIB_LoginPage and Enters username UserID and password Password
+ #Then user waits for sometime
+ #Then user waits for sometime
+ Given user is on page RIB_LoginPage and clicks on LoginButton
+ Then user waits for sometime
+ Given user is on page RIB_HomePage and clicks on DepositTabViewMore
+ Given user is on page RIB_HomePage and clicks on RDTab
+ Given user is on page RIB_HomePage and clicks on ExistingRD  
+ Given user is on page RIB_ExistingRD and clicks on RequestTab
+ Given user is on page RIB_InterestCertificatePage and clicks on DownloadInterestCertificate
+ Given user is on page RIB_InterestCertificatePage and clicks on PreviousFinancialYear
+ Given user is on page RIB_InterestCertificatePage and clicks on GenerateButton
+ 
+ 
+@TestCaseKey=UDB-T68671 @web
+Scenario: Verify blue chip shown on  page Interest Certificate for Deposit (Previous Financial year)
+ Given user is on page RIB_LoginPage and clicks on LoginUsingPassword
+ Given user is on page RIB_LoginPage and Enters username UserID and password Password
+ #Then user waits for sometime
+ #Then user waits for sometime
+ Given user is on page RIB_LoginPage and clicks on LoginButton
+ Then user waits for sometime
+ Given user is on page RIB_HomePage and clicks on DepositTabViewMore
+ Given user is on page RIB_HomePage and clicks on RDTab
+ Given user is on page RIB_HomePage and clicks on ExistingRD  
+ Given user is on page RIB_ExistingRD and clicks on RequestTab
+ Given user is on page RIB_InterestCertificatePage and clicks on DownloadInterestCertificate
+ Given user is on page RIB_InterestCertificatePage and clicks on PreviousFinancialYear
+ Given user is on page RIB_InterestCertificatePage and clicks on GenerateButton
+ Then user is on page RIB_InterestCertificatePage to verify AccountName is Displayed
+ Then user is on page RIB_InterestCertificatePage to verify AccountNumber is Displayed
+ Then user is on page RIB_InterestCertificatePage to verify InterestAmountDebit is Displayed
+ Then user is on page RIB_InterestCertificatePage to verify InterestAmountCredit is Displayed
+ 
+@TestCaseKey=UDB-T68673 @web
+Scenario: Verify values show  in field of blue chip shown on  page Interest Certificate for Deposit (Previous Financial year),  if interest is not credited
+ Given user is on page RIB_LoginPage and clicks on LoginUsingPassword
+ Given user is on page RIB_LoginPage and Enters username UserID and password Password
+ #Then user waits for sometime
+ #Then user waits for sometime
+ Given user is on page RIB_LoginPage and clicks on LoginButton
+ Then user waits for sometime
+ Given user is on page RIB_HomePage and clicks on DepositTabViewMore
+ Given user is on page RIB_HomePage and clicks on RDTab
+ Given user is on page RIB_HomePage and clicks on ExistingRD  
+ Given user is on page RIB_ExistingRD and clicks on RequestTab
+ Given user is on page RIB_InterestCertificatePage and clicks on DownloadInterestCertificate
+ Given user is on page RIB_InterestCertificatePage and clicks on PreviousFinancialYear
+ Given user is on page RIB_InterestCertificatePage and clicks on GenerateButton
+ Then user is on page RIB_InterestCertificatePage verifies amount in InterestAmountDebit
+ And user is on page RIB_InterestCertificatePage verifies amount in InterestAmountCredit
+
+@TestCaseKey=UDB-T68676 @web
+Scenario:Verify Download button on  page Interest Certificate for Deposit (Previous Financial year),  if interest is not credited
+ Given user is on page RIB_LoginPage and clicks on LoginUsingPassword
+ Given user is on page RIB_LoginPage and Enters username UserID and password Password
+ #Then user waits for sometime
+ #Then user waits for sometime
+ Given user is on page RIB_LoginPage and clicks on LoginButton
+ Then user waits for sometime
+ Given user is on page RIB_HomePage and clicks on DepositTabViewMore
+ Given user is on page RIB_HomePage and clicks on RDTab
+ Given user is on page RIB_HomePage and clicks on ExistingRD  
+ Given user is on page RIB_ExistingRD and clicks on RequestTab
+ Given user is on page RIB_InterestCertificatePage and clicks on DownloadInterestCertificate
+ Given user is on page RIB_InterestCertificatePage and clicks on PreviousFinancialYear
+ Then user is on page RIB_InterestCertificatePage to verify RIB_InterestCertificatn is Displayed
+ Given user is on page RIB_InterestCertificatePage and clicks on GenerateButton
+ 
+@TestCaseKey=UDB-T68679 @web
+Scenario:Verify Custom field on page Interest Certificate for Deposit
+ Given user is on page RIB_LoginPage and clicks on LoginUsingPassword
+ Given user is on page RIB_LoginPage and Enters username UserID and password Password
+ #Then user waits for sometime
+ #Then user waits for sometime
+ Given user is on page RIB_LoginPage and clicks on LoginButton
+ Then user waits for sometime
+ Given user is on page RIB_HomePage and clicks on DepositTabViewMore
+ Given user is on page RIB_HomePage and clicks on RDTab
+ Given user is on page RIB_HomePage and clicks on ExistingRD  
+ Given user is on page RIB_ExistingRD and clicks on RequestTab
+ Given user is on page RIB_InterestCertificatePage and clicks on DownloadInterestCertificate
+ Given user is on page RIB_InterestCertificatePage and clicks on CustomDate
+ Given user is on page RIB_InterestCertificatePage and clicks on GenerateButton
+ 
+@TestCaseKey=UDB-T68680 @web
+Scenario:Verify user can manualy enter values in Custom field on page Interest Certificate for Deposit
+ Given user is on page RIB_LoginPage and clicks on LoginUsingPassword
+ Given user is on page RIB_LoginPage and Enters username UserID and password Password
+ #Then user waits for sometime
+ #Then user waits for sometime
+ Given user is on page RIB_LoginPage and clicks on LoginButton
+ Then user waits for sometime
+ Given user is on page RIB_HomePage and clicks on DepositTabViewMore
+ Given user is on page RIB_HomePage and clicks on RDTab
+ Given user is on page RIB_HomePage and clicks on ExistingRD  
+ Given user is on page RIB_ExistingRD and clicks on RequestTab
+ Given user is on page RIB_InterestCertificatePage and clicks on DownloadInterestCertificate
+ Given user is on page RIB_InterestCertificatePage and clicks on CustomDate
+ Given user is on page RIB_InterestCertificatePage and clicks on GenerateButton
+ 
+@TestCaseKey=UDB-T68681 @web
+Scenario:Verify Custom field allows user to select max 1 year dates
+ Given user is on page RIB_LoginPage and clicks on LoginUsingPassword
+ Given user is on page RIB_LoginPage and Enters username UserID and password Password
+ #Then user waits for sometime
+ #Then user waits for sometime
+ Given user is on page RIB_LoginPage and clicks on LoginButton
+ Then user waits for sometime
+ Given user is on page RIB_HomePage and clicks on DepositTabViewMore
+ Given user is on page RIB_HomePage and clicks on RDTab
+ Given user is on page RIB_HomePage and clicks on ExistingRD  
+ Given user is on page RIB_ExistingRD and clicks on RequestTab
+ Given user is on page RIB_InterestCertificatePage and clicks on DownloadInterestCertificate
+ Given user is on page RIB_InterestCertificatePage and clicks on CustomDate
+ Given user is on page RIB_InterestCertificatePage and clicks on GenerateButton
+ 
+ 
+ 
+@TestCaseKey=UDB-T68682 @web
+Scenario: Verify user selects Custom year and clicks on  Generate button  on page Interest Certificate for Deposit
+ Given user is on page RIB_LoginPage and clicks on LoginUsingPassword
+ Given user is on page RIB_LoginPage and Enters username UserID and password Password
+ #Then user waits for sometime
+ #Then user waits for sometime
+ Given user is on page RIB_LoginPage and clicks on LoginButton
+ Then user waits for sometime
+ Given user is on page RIB_HomePage and clicks on DepositTabViewMore
+ Given user is on page RIB_HomePage and clicks on RDTab
+ Given user is on page RIB_HomePage and clicks on ExistingRD  
+ Given user is on page RIB_ExistingRD and clicks on RequestTab
+ Given user is on page RIB_InterestCertificatePage and clicks on DownloadInterestCertificate
+ Given user is on page RIB_InterestCertificatePage and clicks on CustomDate
+ Given user is on page RIB_InterestCertificatePage and clicks on GenerateButton
+ Then user is on page RIB_InterestCertificatePage to verify FinancialYear is Displayed
+ Then user is on page RIB_InterestCertificatePage to verify DownloadButton is Displayed
+ Then user is on page RIB_InterestCertificatePage to verify HomeButton is Displayed
+ 
+@TestCaseKey=UDB-T68679 @web
+Scenario: Verify Custom field on page Interest Certificate for Deposit
+ Given user is on page RIB_LoginPage and clicks on LoginUsingPassword
+ Given user is on page RIB_LoginPage and Enters username UserID and password Password
+ #Then user waits for sometime
+ #Then user waits for sometime
+ Given user is on page RIB_LoginPage and clicks on LoginButton
+ Then user waits for sometime
+ Given user is on page RIB_HomePage and clicks on DepositTabViewMore
+ Given user is on page RIB_HomePage and clicks on RDTab
+ Given user is on page RIB_HomePage and clicks on ExistingRD  
+ Given user is on page RIB_ExistingRD and clicks on RequestTab
+ Given user is on page RIB_InterestCertificatePage and clicks on DownloadInterestCertificate
+ Given user is on page RIB_InterestCertificatePage and clicks on CustomDate
+ Then user is on page RIB_InterestCertificatePage to verify StartDate is NotClickable
+ Then user is on page RIB_InterestCertificatePage to verify EndDate is NotClickable
+ Given user is on page RIB_InterestCertificatePage and clicks on GenerateButton
+  
+@TestCaseKey=UDB-T68683 @web
+Scenario: Verify Financial year field  on  page Interest Certificate for Deposit (Custom year)
+ Given user is on page RIB_LoginPage and clicks on LoginUsingPassword
+ Given user is on page RIB_LoginPage and Enters username UserID and password Password
+ #Then user waits for sometime
+ #Then user waits for sometime
+ Given user is on page RIB_LoginPage and clicks on LoginButton
+ Then user waits for sometime
+ Given user is on page RIB_HomePage and clicks on DepositTabViewMore
+ Given user is on page RIB_HomePage and clicks on RDTab
+ Given user is on page RIB_HomePage and clicks on ExistingRD  
+ Given user is on page RIB_ExistingRD and clicks on RequestTab
+ Given user is on page RIB_InterestCertificatePage and clicks on DownloadInterestCertificate
+ Given user is on page RIB_InterestCertificatePage and clicks on CustomDate
+ Given user is on page RIB_InterestCertificatePage and clicks on GenerateButton
+  
+@TestCaseKey=UDB-T68684 @web
+Scenario: Verify value in Financial year field  on  page Interest Certificate for Deposit (Custom year)
+ Given user is on page RIB_LoginPage and clicks on LoginUsingPassword
+ Given user is on page RIB_LoginPage and Enters username UserID and password Password
+ #Then user waits for sometime
+ #Then user waits for sometime
+ Given user is on page RIB_LoginPage and clicks on LoginButton
+ Then user waits for sometime
+ Given user is on page RIB_HomePage and clicks on DepositTabViewMore
+ Given user is on page RIB_HomePage and clicks on RDTab
+ Given user is on page RIB_HomePage and clicks on ExistingRD  
+ Given user is on page RIB_ExistingRD and clicks on RequestTab
+ Given user is on page RIB_InterestCertificatePage and clicks on DownloadInterestCertificate
+ Given user is on page RIB_InterestCertificatePage and clicks on CustomDate
+ Given user is on page RIB_InterestCertificatePage and clicks on GenerateButton
+ Then user is on page RIB_InterestCertificatePage to verify StartDate is Displayed
+ Then user is on page RIB_InterestCertificatePage to verify EndDate is Displayed
+ 
+@TestCaseKey=UDB-T68685 @web
+Scenario: Verify blue chip shown on  page Interest Certificate for Deposit (Custom year)
+ Given user is on page RIB_LoginPage and clicks on LoginUsingPassword
+ Given user is on page RIB_LoginPage and Enters username UserID and password Password
+ #Then user waits for sometime
+ #Then user waits for sometime
+ Given user is on page RIB_LoginPage and clicks on LoginButton
+ Then user waits for sometime
+ Given user is on page RIB_HomePage and clicks on DepositTabViewMore
+ Given user is on page RIB_HomePage and clicks on RDTab
+ Given user is on page RIB_HomePage and clicks on ExistingRD  
+ Given user is on page RIB_ExistingRD and clicks on RequestTab
+ Given user is on page RIB_InterestCertificatePage and clicks on DownloadInterestCertificate
+ Given user is on page RIB_InterestCertificatePage and clicks on CustomDate
+ Given user is on page RIB_InterestCertificatePage and clicks on GenerateButton
+ Then user is on page RIB_InterestCertificatePage to verify AccountName is Displayed
+ Then user is on page RIB_InterestCertificatePage to verify AccountNumber is Displayed
+ Then user is on page RIB_InterestCertificatePage to verify InterestAmountDebit is Displayed
+ Then user is on page RIB_InterestCertificatePage to verify InterestAmountCredit is Displayed
+ 
+ 
+@TestCaseKey=UDB-T68687 @web
+Scenario: Verify values show  in field of blue chip shown on  page Interest Certificate for Deposit (Custom year),  if interest is not credited
+ Given user is on page RIB_LoginPage and clicks on LoginUsingPassword
+ Given user is on page RIB_LoginPage and Enters username UserID and password Password
+ #Then user waits for sometime
+ #Then user waits for sometime
+ Given user is on page RIB_LoginPage and clicks on LoginButton
+ Then user waits for sometime
+ Given user is on page RIB_HomePage and clicks on DepositTabViewMore
+ Given user is on page RIB_HomePage and clicks on RDTab
+ Given user is on page RIB_HomePage and clicks on ExistingRD  
+ Given user is on page RIB_ExistingRD and clicks on RequestTab
+ Given user is on page RIB_InterestCertificatePage and clicks on DownloadInterestCertificate
+ Given user is on page RIB_InterestCertificatePage and clicks on CustomDate
+ Given user is on page RIB_InterestCertificatePage and clicks on GenerateButton
+ Then user is on page RIB_InterestCertificatePage verifies amount in InterestAmountDebit
+ And user is on page RIB_InterestCertificatePage verifies amount in InterestAmountCredit
+
+@TestCaseKey=UDB-T68690 @web
+Scenario:Verify Download button on  page Interest Certificate for Deposit (Custom year),  if interest is not credited
+ Given user is on page RIB_LoginPage and clicks on LoginUsingPassword
+ Given user is on page RIB_LoginPage and Enters username UserID and password Password
+ #Then user waits for sometime
+ #Then user waits for sometime
+ Given user is on page RIB_LoginPage and clicks on LoginButton
+ Then user waits for sometime
+ Given user is on page RIB_HomePage and clicks on DepositTabViewMore
+ Given user is on page RIB_HomePage and clicks on RDTab
+ Given user is on page RIB_HomePage and clicks on ExistingRD  
+ Given user is on page RIB_ExistingRD and clicks on RequestTab
+ Given user is on page RIB_InterestCertificatePage and clicks on DownloadInterestCertificate
+ Given user is on page RIB_InterestCertificatePage and clicks on CustomDate
+ Given user is on page RIB_InterestCertificatePage and clicks on DownloadButton
+ 
+
+@TestCaseKey=UDB-T1032 @web
+Scenario: Verify user age between 18 to 30 should be able to view details of RD balance and interest earned.
+
+ Given user is on page RIB_LoginPage and clicks on LoginUsingPassword
+ Given user is on page RIB_LoginPage and Enters username UserID and password Password
+ #Then user waits for sometime
+ #Then user waits for sometime
+ Given user is on page RIB_LoginPage and clicks on LoginButton
+ Then user waits for sometime
+ Given user is on page RIB_HomePage and clicks on DepositTabViewMore
+ Given user is on page RIB_HomePage and clicks on RDTab
+ Given user is on page RIB_HomePage and clicks on ExistingRD
+ Given user is on page RIB_ExistingRD and clicks on DetailsTab
+ Then user is on page RIB_ExistingRD to verify RDAccountBalance is Displayed
+ Then user is on page RIB_ExistingRD to verify RDInterestRate is Displayed
+ 
+ 
+@TestCaseKey=UDB-T961 @web
+Scenario: Validate on RD landing Page  mandatory fields are available
+
+ Given user is on page RIB_LoginPage and clicks on LoginUsingPassword
+ Given user is on page RIB_LoginPage and Enters username UserID and password Password
+ Then user waits for sometime
+ Then user waits for sometime
+ Given user is on page RIB_LoginPage and clicks on LoginButton
+ Then user waits for sometime
+ Given user is on page RIB_HomePage and clicks on AddAccount
+ Given user is on page RIB_HomePage and clicks on AddRD
+ Given user is on RIB_RDPage to check for pending application option and clicks on StartOverButton
+ Then user verifies for message on page RIB_RDPage as Account Name text in placeholder AccountSelectionLabel
+ Then user verifies for message on page RIB_RDPage as Name your Recurring Deposit text in placeholder CustomerNameLabel
+ Then user verifies for message on page RIB_RDPage as Deposit Amount text in placeholder DepositAmountLabel
+ Then user is on page RIB_RDPage scroll to webpage element TenureCustomeLabel
+ Then user verifies for message on page RIB_RDPage as Custom text in placeholder TenureCustomeLabel
+ Then user is on page RIB_RDPage scroll to webpage element InterestPayoutLabel
+ Then user verifies for message on page RIB_RDPage as Total Maturity Value text in placeholder MaturityValueLabel
+ Then user verifies for message on page RIB_RDPage as Total Interest Payout text in placeholder InterestPayoutLabel
+ Then user is on page RIB_RDPage scroll to webpage element AddNomineeLabel
+ Then user verifies for message on page RIB_RDPage as Nominee text in placeholder AddNomineeLabel
+ 
+ 
+@TestCaseKey=UDB-T962 @TestCaseKey=UDB-T963 @web
+Scenario: Verify on RD Account Opening Success Page below fields are available and are not editable
+
+ Given user is on page RIB_LoginPage and clicks on LoginUsingPassword
+ Given user is on page RIB_LoginPage and Enters username UserID and password Password
+ Then user waits for sometime
+ Then user waits for sometime
+ Given user is on page RIB_LoginPage and clicks on LoginButton
+ Then user waits for sometime
+ Given user is on page RIB_HomePage and clicks on AddAccount
+ Given user is on page RIB_HomePage and clicks on AddRD
+ Given user is on RIB_RDPage to check for pending application option and clicks on StartOverButton
+ Given user is on page RIB_RDPage and clicks on AccountNameDropDown
+ Given user is on page RIB_RDPage and clicks on SavingAccountSelection
+ Given user is on page RIB_RDPage and clicks on RDName
+ Given user is on page RIB_RDPage and types VijayTest on RDName
+ Given user is on page RIB_RDPage and clicks on DepositAmount
+ Given user is on page RIB_RDPage and types 500 on DepositAmount
+ Then user is on page RIB_RDPage scroll to webpage element SelectTenure2Year
+ Then user is on page RIB_RDPage scroll to webpage element SelectCustomeTenure
+ Given user is on page RIB_RDPage and clicks on SelectCustomeTenure
+ Given user is on page RIB_RDPage and types 110 on CustomMonthTextBox
+ Then user is on page RIB_RDPage scroll to webpage element ScheduleTransferDate
+ Given user is on page RIB_RDPage and clicks on ScheduleTransferDate
+ Then user selects yesterday's date
+ Then user is on page RIB_RDPage scroll to webpage element AddNomineeText
+ Given user is on page RIB_RDPage and clicks on NomineeName
+ Given user is on page RIB_RDPage and types SupriyaTest on NomineeName
+ Given user is on page RIB_RDPage and clicks on DOB
+ Given user selects day 12 month Apr year 2001 and current year is 2026
+ Then user is on page RIB_RDPage scroll to webpage element ContinueButton
+ Then user is on page RIB_RDPage to verify ContinueButton is Displayed
+ Given user is on page RIB_RDPage and clicks on ContinueButton
+ Then user is on page RIB_RDPage scroll to webpage element TnC
+ Given user is on page RIB_RDPage and clicks on TnC
+ Given user is on page RIB_RDPage and clicks on AgreeButton
+ Then user is on page RIB_RDPage to verify SubmitButton is Displayed
+ Given user is on page RIB_RDPage and clicks on SubmitButton
+ Given user is on page RIB_RDPage and clicks on TPIN
+ Given user is on page RIB_RDPage and types 123456 on TPIN
+ Given user is on page RIB_RDPage and clicks on ContinueButton
+ Then user verifies for message on page RIB_RDPage as Your Recurring Deposit Account text in placeholder SuccessMessage
+ Then user is on page RIB_RDPage to verify RDAccountNo is Displayed
+ Then user is on page RIB_RDPage to verify DepositAmountValue is Displayed
+ Then user is on page RIB_RDPage to verify TenureValue is Displayed
+ Then user is on page RIB_RDPage to verify InterestRateValue is Displayed
+ Then user is on page RIB_RDPage to verify MaturityAmountValue is Displayed
+ Then user is on page RIB_RDPage to verify MaturityDateValue is Displayed
+ Then user is on page RIB_RDPage to verify SIDateValue is Displayed
+ Then user is on page RIB_RDPage scroll to webpage element HomeButton
+ Then user is on page RIB_RDPage to verify HomeButton is Displayed

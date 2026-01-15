@@ -10909,7 +10909,7 @@
 		{
 				"name":"PPFaddAccountTab",
 				"locator":"xpath",
-				"value":"(//p[@class=\"MuiTypography-root MuiTypography-body1 menuicons__cardcontainer__section__card__text css-9l3uo3\"][normalize-space()=\"Public Provident Fund\"])[3]"						 
+				"value":"(//p[normalize-space()=\"Public Provident Fund\"])[1]"						 
 		},
 		{
 				"name": "PMSBYOption",
@@ -10930,6 +10930,26 @@
 				"name": "PMJJBY",
 				"locator": "xpath",
 				"value": "(//p[normalize-space()=\"PMJJBY Insurance\"])[1]"
+		},
+		{
+				"name": "QuickTaskSendMoney",
+				"locator": "xpath",
+				"value": "(//p[@class=\"MuiTypography-root MuiTypography-body1 menuicons__cardcontainer__section__card__text css-9l3uo3\"][normalize-space()=\"Send Money\"])[1]"
+		},
+		{
+				"name": "PaymentsSideMenu",
+				"locator": "xpath",
+				"value": "(//span[@class=\"MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-yb0lig\"][normalize-space()=\"Payments\"])[1]"
+		},
+		{
+				"name": "PaymentsQuickTransfer",
+				"locator": "xpath",
+				"value": "(//div[@class=\"PaymentDashboard__dashboardcontainer__dashboardcardleft__transferbuttons__transferbuttonscontainer MuiBox-root css-0\"]//span[normalize-space()=\"Quick\"])[1]"
+		},
+		{
+				"name": "PPFTab",
+				"locator": "xpath",
+				"value": "(//button[contains(text(),\"Public Provident Fund\")])[1]"
 		}
 	],
 "RIB_FDPage":
@@ -11313,6 +11333,86 @@
 				"name":"TotalInterestPayout",
 				"locator":"xpath",
 				"value":"(//p[@class=\"MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom proportionCard__card__value css-4an0mh\"])[2]"
+		},
+		{
+				"name":"SuccessMessage",
+				"locator":"xpath",
+				"value":"(//span[@class=\"RdSuccessPage__box__receipt__content__heading__span\"])[1]"
+		},
+		{
+				"name":"HomeButton",
+				"locator":"xpath",
+				"value":"(//button[contains(text(),\"Home\")])[1]"
+		},
+		{
+				"name":"RDAccountNo",
+				"locator":"xpath",
+				"value":"(//div[@class=\"MuiListItemText-root ListRib__ListTextView css-1tsvksn\"]//p[@class=\"MuiTypography-root MuiTypography-body2 css-12258qr\"])[1]"
+		},
+		{
+				"name":"CustomerNameLabel",
+				"locator":"xpath",
+				"value":"(//label[normalize-space()=\"Name your Recurring Deposit (optional)\"])[1]"
+		},
+		{
+				"name":"DepositAmountLabel",
+				"locator":"xpath",
+				"value":"(//label[normalize-space()=\"Deposit Amount\"])[1]"
+		},
+		{
+				"name":"TenureCustomeLabel",
+				"locator":"xpath",
+				"value":"(//span[normalize-space()=\"Custom\"])[1]"
+		},
+		{
+				"name":"MaturityValueLabel",
+				"locator":"xpath",
+				"value":"(//div[normalize-space()=\"Total Maturity Value\"])[1]"
+		},
+		{
+				"name":"InterestPayoutLabel",
+				"locator":"xpath",
+				"value":"(//div[normalize-space()=\"Total Interest Payout\"])[1]"
+		},
+		{
+				"name":"AddNomineeLabel",
+				"locator":"xpath",
+				"value":"(//strong[normalize-space()=\"Nominee?\"])[1]"
+		},
+		{
+				"name":"AccountSelectionLabel",
+				"locator":"xpath",
+				"value":"(//div[@class=\"accountsAutoCompletion__TextField__inputContainer__selected--label\"])[1]"
+		},
+		{
+				"name":"DepositAmountValue",
+				"locator":"xpath",
+				"value":"(//div[@class=\"MuiListItemText-root ListRib__ListTextView css-1tsvksn\"]//p[@class=\"MuiTypography-root MuiTypography-body2 css-12258qr\"])[2]"
+		},
+		{
+				"name":"TenureValue",
+				"locator":"xpath",
+				"value":"(//div[@class=\"MuiListItemText-root ListRib__ListTextView css-1tsvksn\"]//p[@class=\"MuiTypography-root MuiTypography-body2 css-12258qr\"])[3]"
+		},
+		{
+				"name":"InterestRateValue",
+				"locator":"xpath",
+				"value":"(//div[@class=\"MuiListItemText-root ListRib__ListTextView css-1tsvksn\"]//p[@class=\"MuiTypography-root MuiTypography-body2 css-12258qr\"])[4]"
+		},
+		{
+				"name":"MaturityAmountValue",
+				"locator":"xpath",
+				"value":"(//div[@class=\"MuiListItemText-root ListRib__ListTextView css-1tsvksn\"]//p[@class=\"MuiTypography-root MuiTypography-body2 css-12258qr\"])[5]"
+		},
+		{
+				"name":"MaturityDateValue",
+				"locator":"xpath",
+				"value":"(//div[@class=\"MuiListItemText-root ListRib__ListTextView css-1tsvksn\"]//p[@class=\"MuiTypography-root MuiTypography-body2 css-12258qr\"])[6]"
+		},
+		{
+				"name":"SIDateValue",
+				"locator":"xpath",
+				"value":"(//div[@class=\"MuiListItemText-root ListRib__ListTextView css-1tsvksn\"]//p[@class=\"MuiTypography-root MuiTypography-body2 css-12258qr\"])[9]"
 		}
 	],
 "RIB_ExistingRD":[
@@ -11490,6 +11590,140 @@
 				"name":"AccountNumber",
 				"locator":"xpath",
 				"value":"(//p[normalize-space()=\"XXXXX XXXXX 01939\"])[1]"
+		},
+		{
+				"name":"RDAccountBalance",
+				"locator":"xpath",
+				"value":"(//div[@class=\"DetailsInfoCardContainer__info-card\"]//p)[1]"
+		},
+		{
+				"name":"RDInterestRate",
+				"locator":"xpath",
+				"value":"(//div[@class=\"DetailsInfoCardContainer__info-card\"]//p)[3]"
+		}
+	],
+"RIB_DownloadTDSCertPage": [
+		{
+			"name": "AccountName",
+			"locator": "xpath",
+			"value": "//div[normalize-space()=\"Account Name\"]"
+		},
+		{
+			"name": "AccountNumber",
+			"locator": "xpath",
+			"value": "//div[normalize-space()=\"Account Number\"]"
+		},
+		{
+			"name": "InterestAmountDebit",
+			"locator": "xpath",
+			"value": "//div[normalize-space()=\"Interest Amount Debit\"]"
+		},
+		{
+			"name": "IntereFstAmountCredit",
+			"locator": "xpath",
+			"value": "//div[normalize-space()=\"Interest Amount Credit\"]"
+		},
+		{
+			"name": "InterestAmountDebit",
+			"locator": "xpath",
+			"value": "//p[normalize-space()=\"0.00 Dr\"]"
+		},
+		{
+			"name": "InterestAmountCredit",
+			"locator": "xpath",
+			"value": "//p[normalize-space()=\"0.00 Cr]\"]"
+		},
+		{
+			"name": "DownloadButton",
+			"locator": "xpath",
+			"value": "//button[normalize-space()=\"Download\"]"
+		}
+	],
+"RIB_InterestCertificatePage": [
+		{
+			"name": "DownloadInterestCertificate",
+			"locator": "xpath",
+			"value": "//p[normalize-space()=\"Download Interest Certificate\"]"
+		},
+		{
+			"name": "CurrentFinancialYear",
+			"locator": "xpath",
+			"value": "//span[contains(text(),\"Current Financial Year\")]"
+		},
+		{
+			"name": "PreviousFinancialYear",
+			"locator": "xpath",
+			"value": "//span[contains(text(),\"Previous Financial Year\")]"
+		},
+		{
+			"name": "Custom",
+			"locator": "xpath",
+			"value": "//span[contains(text(),\"Custom\")]"
+		},
+		{
+			"name": "GenerateButtom",
+			"locator": "xpath",
+			"value": "//button[@type=\"submit\"]"
+		},
+		{
+			"name": " FinancialYear",
+			"locator": "xpath",
+			"value": "//label[@id=\"Financial Year-label\"]"
+		},
+		{
+			"name": "DownloadButton",
+			"locator": "xpath",
+			"value": "//button[normalize-space()=\"Download\"]"
+		},
+		{
+			"name": "HomeButton",
+			"locator": "xpath",
+			"value": "//button[contains(text(),\"Home\")]"
+		},
+		{
+			"name": "AccountName",
+			"locator": "xpath",
+			"value": "//div[normalize-space()=\"Account Name\"]"
+		},
+		{
+			"name": "AccountNumber",
+			"locator": "xpath",
+			"value": "//div[normalize-space()=\"Account Number\"]"
+		},
+		{
+			"name": "InterestAmountDebit",
+			"locator": "xpath",
+			"value": "//div[normalize-space()=\"Interest Amount Debit\"]"
+		},
+		{
+			"name": "IntereFstAmountCredit",
+			"locator": "xpath",
+			"value": "//div[normalize-space()=\"Interest Amount Credit\"]"
+		},
+		{
+			"name": "InterestAmountDebit",
+			"locator": "xpath",
+			"value": "//p[contains(text(),\"â‚¹0.00 D\")]"
+		},
+		{
+			"name": "PreviousFinancialYear",
+			"locator": "xpath",
+			"value": "//input[@value=\"Previous Financial Year\"]"
+		},
+		{
+			"name": "CustomDate",
+			"locator": "xpath",
+			"value": "//span[normalize-space()=\"Custom\"]"
+		},
+		{
+			"name": "StartDate",
+			"locator": "xpath",
+			"value": "//label[@id=\"startdate-label\"]"
+		},
+		{
+			"name": "EndDate",
+			"locator": "xpath",
+			"value": "//label[@id=\"enddate-label\"]"
 		}
 	],
 "RIB_SSAPage":
@@ -12186,6 +12420,16 @@
 				"name":"CancelAddNominee",
 				"locator":"xpath",
 				"value":"(//button[@type='button'][normalize-space()=\"Cancel\"])[2]"
+		},
+		{
+				"name":"PFAccountExist",
+				"locator":"xpath",
+				"value":"(//p[@class=\"MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom css-hnu75q\"])[1]"
+		},
+		{
+				"name":"OkayButton",
+				"locator":"xpath",
+				"value":"(//button[normalize-space()=\"Okay\"])[1]"
 		}
 	],
 "RIB_PPFReviewPage":[
@@ -12628,6 +12872,257 @@
 				"name": "PremiumValue",
 				"locator": "xpath",
 				"value": "//div[@class=\"CustomerInformationCard__card fourth MuiBox-root css-0\"]//p[@class=\"MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom CustomerInformationCard__card__value css-4an0mh\"]"
+		}
+	],
+"RIB_SendMoneyPage":[
+		{
+				"name": "ToAccountName",
+				"locator": "xpath",
+				"value": "(//input[@id=\"accountNumberDropDown\"])[2]"
+		},
+		{
+				"name": "PayeeSelection",
+				"locator": "xpath",
+				"value": "//*[@id=\"accountNumberDropDown-option-0\"]/div"
+		},
+		{
+				"name": "EnterAmountTextBox",
+				"locator": "xpath",
+				"value": "//div[@class=\"MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl textField__inputContainer css-1h777u5\"]//input[contains(@id,\":r\")]"
+		},
+		{
+				"name": "PaymentModeIMPS",
+				"locator": "xpath",
+				"value": "(//span[contains(text(),\"IMPS\")])[1]"
+		},
+		{
+				"name": "PaymentModeNEFT",
+				"locator": "xpath",
+				"value": "(//span[contains(text(),\"NEFT\")])[1]"
+		},
+		{
+				"name": "PaymentModeRTGS",
+				"locator": "xpath",
+				"value": "(//span[contains(text(),\"RTGS\")])[1]"
+		},
+		{
+				"name": "PaymentRemarks",
+				"locator": "xpath",
+				"value": "(//button[normalize-space()=\"Rent\"])[1]"
+		},
+		{
+				"name": "PayButton",
+				"locator": "xpath",
+				"value": "(//button[normalize-space()=\"Pay\"])[1]"
+		},
+		{
+				"name": "ConfirmButton",
+				"locator": "xpath",
+				"value": "(//button[normalize-space()=\"Confirm\"])[1]"
+		},
+		{
+				"name": "SubmitButton",
+				"locator": "xpath",
+				"value": "(//button[normalize-space()=\"Submit\"])[1]"
+		},
+		{
+				"name":"EnterOTP",
+				"locator":"xpath",
+				"value":"(//input[@type=\"text\"])[1]"
+				
+		},
+		{
+				"name":"OTPSubmitButton",
+				"locator":"xpath",
+				"value":"(//button[@type=\"submit\"])[1]"
+				
+		},
+		{
+				"name":"TPIN",
+				"locator":"xpath",
+				"value":"//input[@id=\"tpassword\"]"
+				
+		},
+		{
+				"name":"ContinueButton",
+				"locator":"xpath",
+				"value":"(//button[normalize-space()=\"Continue\"])[1]"
+				
+		},
+		{
+				"name":"WithInBankPayee",
+				"locator":"xpath",
+				"value":"(//button[normalize-space()=\"Within Bank Payee\"])[1]"
+				
+		},
+		{
+				"name":"OtherBankPayee",
+				"locator":"xpath",
+				"value":"(//button[normalize-space()=\"Other Bank Payee\"])[1]"
+				
+		},
+		{
+				"name":"EnterAccountNumber",
+				"locator":"xpath",
+				"value":"(//input[@id=\"acNumber\"])[1]"
+				
+		}
+	],
+"RIB_ExistingPPF":[
+		{
+				"name":"ExistingPPFAccount",
+				"locator":"xpath",
+				"value":"(//p[@class=\"MuiTypography-root MuiTypography-body1 InvestmentAccountBox__container__title css-9l3uo3\"][normalize-space()=\"Public Provident Fund\"])[1]"	
+		},
+		{
+				"name":"StatementsTab",
+				"locator":"xpath",
+				"value":"(//button[normalize-space()=\"Statements\"])[1]"	
+		},
+		{
+				"name":"TransactTab",
+				"locator":"xpath",
+				"value":"(//button[normalize-space()=\"Transact\"])[1]"	
+		},
+		{
+				"name":"DetailsTab",
+				"locator":"xpath",
+				"value":"(//button[normalize-space()=\"Details\"])[1]"	
+		},
+		{
+				"name":"RequestsTab",
+				"locator":"xpath",
+				"value":"(//button[normalize-space()=\"Requests\"])[1]"	
+		},
+		{
+				"name":"DownloadStatement",
+				"locator":"xpath",
+				"value":"(//div[@class=\"transfer-buttons-container MuiBox-root css-0\"]//span[normalize-space()=\"Download\"])[1]"	
+		},
+		{
+				"name":"FinancialYearDropdown",
+				"locator":"xpath",
+				"value":"//*[@id=\"financialYear\"]"	
+		},
+		{
+				"name":"FinancialYear2025-2026",
+				"locator":"xpath",
+				"value":"//*[@id=\"financialYear-option-0\"]"	
+		},
+		{
+				"name":"DownloadButton",
+				"locator":"xpath",
+				"value":"(//button[normalize-space()=\"Download\"])[1]"	
+		},
+		{
+				"name":"EmailButton",
+				"locator":"xpath",
+				"value":"(//button[normalize-space()=\"Email\"])[1]"	
+		},
+		{
+				"name":"WithdrawalButton",
+				"locator":"xpath",
+				"value":"(//span[normalize-space()=\"Withdrawal\"])[1]"	
+		},
+		{
+				"name":"ExtendAccountButton",
+				"locator":"xpath",
+				"value":"(//span[normalize-space()=\"Extend Account\"])[1]"	
+		},
+		{
+				"name":"ManageNomineeButton",
+				"locator":"xpath",
+				"value":"(//span[normalize-space()=\"Manage Nominee\"])[1]"	
+		},
+		{
+				"name":"TransferToBankButton",
+				"locator":"xpath",
+				"value":"(//div[@class=\"transfer-buttons-container MuiBox-root css-0\"])[5]"	
+		},
+		{
+				"name":"ChangeBranchButton",
+				"locator":"xpath",
+				"value":"(//span[normalize-space()=\"Change Branch\"])[1]"	
+		},
+		{
+				"name":"DownloadT&CButton",
+				"locator":"xpath",
+				"value":"(//span[normalize-space()=\"Download T&C\"])[1]"	
+		},
+		{
+				"name":"DownloadCertificateButton",
+				"locator":"xpath",
+				"value":"(//span[normalize-space()=\"Download PPF\"])[1]"	
+		},
+		{
+				"name":"PPFAccountBalanceLabel",
+				"locator":"xpath",
+				"value":"(//h2[normalize-space()=\"Account Balance\"])[1]"	
+		},
+		{
+				"name":"PPFAccountBalanceValue",
+				"locator":"xpath",
+				"value":"//p[contains(text(),\"₹\")]"	
+		},
+		{
+				"name":"AccountInfoSection",
+				"locator":"xpath",
+				"value":"(//h3[normalize-space()=\"Account Information\"])[1]"	
+		},
+		{
+				"name":"NomineeInfoSection",
+				"locator":"xpath",
+				"value":"(//h3[normalize-space()=\"Nominee Information\"])[1]"	
+		},
+		{
+				"name":"BranchInfoSection",
+				"locator":"xpath",
+				"value":"(//h3[normalize-space()=\"Branch Information\"])[1]"	
+		},
+		{
+				"name":"ClosePPFAccountButton",
+				"locator":"xpath",
+				"value":"(//button[normalize-space()=\"Close PPF Account\"])[1]"	
+		},
+		{
+				"name":"ContributionAccountTextBox",
+				"locator":"xpath",
+				"value":"(//input[contains(@class,\"MuiFilledInput-input\") and @type=\"text\"])[1]"	
+		},
+		{
+				"name":"RemarkTextBox",
+				"locator":"xpath",
+				"value":"(//input[contains(@class,\"MuiFilledInput-input\") and @type=\"text\"])[2]"	
+		},
+		{
+				"name":"PayButton",
+				"locator":"xpath",
+				"value":"(//button[normalize-space()=\"Pay\"])[1]"	
+		},
+		{
+				"name":"TPIN",
+				"locator":"xpath",
+				"value":"//input[@id=\"tpassword\"]"
+		},
+		{
+				"name":"ContinueButton",
+				"locator":"xpath",
+				"value":"//button[normalize-space()=\"Continue\"]"
+		},
+		{
+				"name":"PFAccountName",
+				"locator":"xpath",
+				"value":"(//p[normalize-space()=\"SUPRIYA (XXXXX 00158)\"])[1]"
+		},
+		{
+				"name":"PFAccountDisplayed",
+				"locator":"xpath",
+				"value":"(//span[@class=\"account-name\"])[1]"
+		},
+		{
+				"name":"PFMaturityDate",
+				"locator":"xpath",
+				"value":"(//p[normalize-space()=\"Maturity Date 2041-04-01\"])[1]"
 		}
 	],
 "TechnicalError":[

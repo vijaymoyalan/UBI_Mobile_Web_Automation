@@ -76,15 +76,21 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 //features = "src/test/resources/features/Web/RIB/RIB_PPF_New.feature", tags="@TestCaseKey=UDB-T72034 or @TestCaseKey=UDB-T72035",
 //glue = {"com.ubi.cucumber.steps.web","com.ubi.hooks.web"})
 		
-//		features = "src/test/resources/features/Web/RIB/RIB_RD.feature", tags="@TestCaseKey=UDB-T68646",
+//		features = "src/test/resources/features/Web/RIB/RIB_PPF_Existing.feature", tags="@TestCaseKey=UDB-T72062",
 //		glue = {"com.ubi.cucumber.steps.web","com.ubi.hooks.web"})
+		
+//		features = "src/test/resources/features/Web/RIB/RIB_RD.feature", tags="@TestCaseKey=UDB-T76007",
+//		glue = {"com.ubi.cucumber.steps.web","com.ubi.hooks.web"})
+		
+		features = "src/test/resources/features/Web/RIB/RIB_FundTransfer.feature", tags="@TestCaseKey=UDB-T76008",
+		glue = {"com.ubi.cucumber.steps.web","com.ubi.hooks.web"})
 
 
 //features = "src/test/resources/features/Web/RIB/RIB_PMSBY.feature",
 //glue = {"com.ubi.cucumber.steps.web","com.ubi.hooks.web"})
 		
-		features = "src/test/resources/features/Web/RIB/RIB_PMJJBY.feature",
-		glue = {"com.ubi.cucumber.steps.web","com.ubi.hooks.web"})
+//		features = "src/test/resources/features/Web/RIB/RIB_PMJJBY.feature",
+//		glue = {"com.ubi.cucumber.steps.web","com.ubi.hooks.web"})
 		
 
 //features = "src\\test\\resources\\features\\Mobile\\MSME\\MSME_HomePage.feature", tags="@TestCaseKey=UDB-T78895",

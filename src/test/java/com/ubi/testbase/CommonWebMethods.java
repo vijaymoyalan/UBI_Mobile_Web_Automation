@@ -137,7 +137,11 @@ public class CommonWebMethods extends PageObject {
 		while (attempts < 3) {
 			try {
 				WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(20));
-				wait.until(ExpectedConditions.visibilityOf(findElement(element)));
+				wait.until(ExpectedConditions.or(
+					    ExpectedConditions.visibilityOf(findElement(element)),
+					    ExpectedConditions.elementToBeClickable(findElement(element)),
+					    ExpectedConditions.elementToBeSelected(findElement(element))
+					));
 				System.out.println("inside wait till elements try block");
 				break;
 			} catch (StaleElementReferenceException | NoSuchElementException e) {
@@ -639,7 +643,10 @@ public class CommonWebMethods extends PageObject {
 	
 	public void compareStringValues(ORPageModel element, String expectedText) {
 		WebElement textRetrived = findElement(element);
-		String actualText = textRetrived.getAttribute("defaultValue");
+//		String actualText = textRetrived.getAttribute("defaultValue");
+		String actualText = (textRetrived.getText() != null && !textRetrived.getText().trim().isEmpty())
+		        ? textRetrived.getText()
+		        : textRetrived.getAttribute("defaultValue");
 		System.out.println("Text value "+ actualText);
 		verification.verificationEquals(actualText,expectedText,"Text Matched");
 	}
